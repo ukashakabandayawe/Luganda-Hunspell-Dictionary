@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashSet;
@@ -12,8 +13,10 @@ public class LugandaDictionaryUpdaterGUI {
 
         // 1️⃣ Choose existing clean .txt (optional)
         File existingTxt = chooseFile(
-                "Select existing clean .txt dictionary (Cancel if none)",
-                JFileChooser.OPEN_DIALOG
+            "Select existing clean .txt dictionary (Cancel if none)",
+            JFileChooser.OPEN_DIALOG,
+            "Text files",
+            "txt"
         );
         if (existingTxt != null) {
             loadSimpleWordList(existingTxt, words);
@@ -21,8 +24,10 @@ public class LugandaDictionaryUpdaterGUI {
 
         // 2️⃣ Choose existing .dic (optional)
         File existingDic = chooseFile(
-                "Select existing .dic dictionary (Cancel if none)",
-                JFileChooser.OPEN_DIALOG
+            "Select existing .dic dictionary (Cancel if none)",
+            JFileChooser.OPEN_DIALOG,
+            "Dic files",
+            "dic"
         );
         if (existingDic != null) {
             loadHunspellDic(existingDic, words);
@@ -30,8 +35,11 @@ public class LugandaDictionaryUpdaterGUI {
 
         // 3️⃣ Choose new raw dictionary (required) i.e a disorganized dictionary
         File rawFile = chooseFile(
-                "Select NEW raw Luganda dictionary (required)",
-                JFileChooser.OPEN_DIALOG
+            "Select NEW raw Luganda dictionary (required)",
+            JFileChooser.OPEN_DIALOG,
+            "Supported",
+            "txt",
+            "dic"
         );
         if (rawFile == null) {
             JOptionPane.showMessageDialog(null, "No raw dictionary selected. Exiting.");
@@ -41,20 +49,32 @@ public class LugandaDictionaryUpdaterGUI {
 
         // 4️⃣ Choose where to save updated .txt
         File saveTxt = chooseFile(
-                "Save updated .txt dictionary",
-                JFileChooser.SAVE_DIALOG
+            "Save updated .txt dictionary",
+            JFileChooser.SAVE_DIALOG,
+            "Text files",
+            "txt"
         );
         if (saveTxt != null) {
+            if (!saveTxt.getName().toLowerCase().endsWith(".txt")) {
+                saveTxt = new File(saveTxt.getAbsolutePath() + ".txt");
+            }
             writeTxt(saveTxt, words);
+            JOptionPane.showMessageDialog(null, "Saved .txt to:\n" + saveTxt.getAbsolutePath());
         }
 
         // 5️⃣ Choose where to save updated .dic
         File saveDic = chooseFile(
-                "Save updated .dic dictionary",
-                JFileChooser.SAVE_DIALOG
+            "Save updated .dic dictionary",
+            JFileChooser.SAVE_DIALOG,
+            "Dic files",
+            "dic"
         );
         if (saveDic != null) {
+            if (!saveDic.getName().toLowerCase().endsWith(".dic")) {
+                saveDic = new File(saveDic.getAbsolutePath() + ".dic");
+            }
             writeDic(saveDic, words);
+            JOptionPane.showMessageDialog(null, "Saved .dic to:\n" + saveDic.getAbsolutePath());
         }
 
         JOptionPane.showMessageDialog(null, "✔ Dictionary update completed successfully");
@@ -62,10 +82,16 @@ public class LugandaDictionaryUpdaterGUI {
 
     // ---------------- File chooser ----------------
 
-    private static File chooseFile(String title, int mode) {
+    private static File chooseFile(String title, int mode, String filterDesc, String... extensions) {
         JFileChooser chooser = new JFileChooser();
         chooser.setDialogTitle(title);
         chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+
+        if (extensions != null && extensions.length > 0) {
+            FileNameExtensionFilter filter = new FileNameExtensionFilter(filterDesc, extensions);
+            chooser.addChoosableFileFilter(filter);
+            chooser.setAcceptAllFileFilterUsed(false);
+        }
 
         int result = (mode == JFileChooser.SAVE_DIALOG)
                 ? chooser.showSaveDialog(null)
