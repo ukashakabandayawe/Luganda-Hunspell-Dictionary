@@ -1,6 +1,0 @@
-''' powershell -NoProfile -ExecutionPolicy Bypass -File "e:\Luganda Hunspell Dictionary\scripts\clean_dict.ps1" '''
-
-# TO-DO: Using "eby'", or "eby" "Ow'", "Ey'" as a rule in the .aff and also adding the apostrophe as a valid character
-
-
-
