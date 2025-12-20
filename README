@@ -1,0 +1,1 @@
+''' powershell -NoProfile -ExecutionPolicy Bypass -File "e:\Luganda Hunspell Dictionary\scripts\clean_dict.ps1" '''
