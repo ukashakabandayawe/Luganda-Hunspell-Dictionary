@@ -1,0 +1,124 @@
+FLAG long
+
+# I think the rules below should apply to roots like lya, lidde, lilya, liisa, liisizza, liliisa 
+PFX P Y 62 
+PFX P 0 tu .
+PFX P 0 otu .
+PFX P 0 ka .
+PFX P 0 aka .
+PFX P 0 a .
+PFX P 0 e .
+PFX P 0 o .
+PFX P 0 ki .
+PFX P 0 eki .
+PFX P 0 gu .
+PFX P 0 ogu .
+PFX P 0 bu .
+PFX P 0 obu .
+PFX P 0 ba .
+PFX P 0 aba .
+PFX P 0 bi .
+PFX P 0 ebi .
+PFX P 0 ga .
+PFX P 0 aga .
+PFX P 0 gi .
+PFX P 0 egi .
+PFX P 0 twaa .
+PFX P 0 otwaa .
+PFX P 0 kaa .
+PFX P 0 akaa .
+PFX P 0 ya .
+PFX P 0 eya .
+PFX P 0 kyaa .
+PFX P 0 ekyaa .
+PFX P 0 gwaa .
+PFX P 0 ogwaa .
+PFX P 0 bwaa .
+PFX P 0 obwaa .
+PFX P 0 baa .
+PFX P 0 abaa .
+PFX P 0 byaa .
+PFX P 0 ebyaa .
+PFX P 0 gaa .
+PFX P 0 agaa .
+PFX P 0 gyaa .
+PFX P 0 egyaa .
+PFX P 0 tuli .
+PFX P 0 otuli .
+PFX P 0 kali .
+PFX P 0 akali .
+PFX P 0 li .
+PFX P 0 ali .
+PFX P 0 kili .
+PFX P 0 ekili .
+PFX P 0 guli .
+PFX P 0 oguli .
+PFX P 0 buli .
+PFX P 0 obuli .
+PFX P 0 bali .
+PFX P 0 abali .
+PFX P 0 bili .
+PFX P 0 ebili .
+PFX P 0 gali .
+PFX P 0 agali .
+PFX P 0 gili .
+PFX P 0 egili .
+PFX P 0 mu .
+PFX P 0 omu .
+PFX P 0 emu .
+PFX P 0 amu .
+PFX P 0 ndi .
+PFX P 0 na .
+PFX P 0 tu .
+PFX P 0 etu .
+PFX P 0 wa .
+PFX P 0 mwaa .
+PFX P 0 li .
+PFX P 0 oli .
+
+# # I think the rules below should apply to roots like dde 
+# # TO-DO: Change the flag
+# I de activated these because the next rule solves what this one was solving
+# PFX P Y 62 
+# PFX P 0 otu .
+# PFX P 0 ka .
+# PFX P 0 aka .
+# PFX P 0 a .
+# PFX P 0 e .
+# PFX P 0 o .
+# PFX P 0 ki .
+# PFX P 0 eki .
+# PFX P 0 ogu .
+# PFX P 0 bu .
+# PFX P 0 obu .
+# PFX P 0 ba .
+# PFX P 0 aba .
+# PFX P 0 bi .
+# PFX P 0 ebi .
+# PFX P 0 ga .
+# PFX P 0 aga .
+# PFX P 0 ya .
+# PFX P 0 tuli .
+# PFX P 0 otuli .
+# PFX P 0 kali .
+# PFX P 0 akali .
+# PFX P 0 ali .
+# PFX P 0 kili .
+# PFX P 0 ekili .
+# PFX P 0 guli .
+# PFX P 0 oguli .
+# PFX P 0 obuli .
+# PFX P 0 bali .
+# PFX P 0 abali .
+# PFX P 0 bili .
+# PFX P 0 ebili .
+# PFX P 0 gali .
+# PFX P 0 agali .
+# PFX P 0 egili .
+# PFX P 0 ndi .
+
+# I think this works for laba, luka, labuka, lya, leka, laluka, (o)lidde
+# TO-DO: Change the flag
+PFX P Y 2
+PFX P l nd .
+PFX P l end .
