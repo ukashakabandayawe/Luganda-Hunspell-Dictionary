@@ -315,6 +315,7 @@ public class LugandaGeneratorApp extends Application {
         Button back = new Button("Back");
         Button clearErrors = new Button("Clear All Errors");
         Button refresh = new Button("Refresh from .aff");
+        Button errorTable = new Button("Error Table");
         
         clearErrors.setOnMouseClicked(e -> {
             for (Result r : filteredRows) {
@@ -336,7 +337,9 @@ public class LugandaGeneratorApp extends Application {
             }
         });
         
-        HBox h = new HBox(8, back, save, clearErrors, refresh);
+        errorTable.setOnAction(e -> showErrorTable(allRows, roots));
+        
+        HBox h = new HBox(8, back, save, clearErrors, refresh, errorTable);
         h.setPadding(new Insets(8));
 
         VBox topBox = new VBox(searchBox, h);
@@ -380,6 +383,159 @@ public class LugandaGeneratorApp extends Application {
         });
 
         stage.setScene(scene);
+    }
+
+    private void showErrorTable(ObservableList<Result> allRows, List<String> roots) {
+        Stage errorStage = new Stage();
+        errorStage.setTitle("Error Words Table");
+        
+        // Collect error words per root
+        Map<String, List<String>> errorsByRoot = new LinkedHashMap<>();
+        for (String root : roots) {
+            errorsByRoot.put(root, new ArrayList<>());
+        }
+        
+        // Gather all error words for each root
+        for (Result r : allRows) {
+            for (String root : roots) {
+                if (r.isError(root)) {
+                    String word = r.getWordsByRoot().getOrDefault(root, "");
+                    if (!word.isEmpty()) {
+                        errorsByRoot.get(root).add(word);
+                    }
+                }
+            }
+        }
+        
+        // Find max number of errors across all roots
+        int maxErrors = 0;
+        for (List<String> errors : errorsByRoot.values()) {
+            maxErrors = Math.max(maxErrors, errors.size());
+        }
+        
+        // Create rows with error words aligned by index
+        ObservableList<Map<String, String>> errorRows = FXCollections.observableArrayList();
+        for (int i = 0; i < maxErrors; i++) {
+            Map<String, String> row = new LinkedHashMap<>();
+            for (String root : roots) {
+                List<String> errors = errorsByRoot.get(root);
+                if (i < errors.size()) {
+                    row.put(root, errors.get(i));
+                } else {
+                    row.put(root, "");
+                }
+            }
+            errorRows.add(row);
+        }
+        
+        TableView<Map<String, String>> errorTable = new TableView<>();
+        
+        // Add row number column
+        TableColumn<Map<String, String>, String> noCol = new TableColumn<>("No.");
+        noCol.setPrefWidth(50);
+        noCol.setCellValueFactory(cellData -> {
+            int index = errorTable.getItems().indexOf(cellData.getValue()) + 1;
+            return new javafx.beans.property.SimpleStringProperty(String.valueOf(index));
+        });
+        noCol.setStyle("-fx-alignment: CENTER;");
+        errorTable.getColumns().add(noCol);
+        
+        // Add columns for each root
+        for (String root : roots) {
+            final String r = root;
+            TableColumn<Map<String, String>, String> col = new TableColumn<>(r);
+            col.setPrefWidth(150);
+            col.setCellValueFactory(cellData -> {
+                String word = cellData.getValue().getOrDefault(r, "");
+                return new javafx.beans.property.SimpleStringProperty(word);
+            });
+            
+            // Style error cells
+            col.setCellFactory(column -> new TableCell<Map<String, String>, String>() {
+                @Override
+                protected void updateItem(String item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (empty || item == null || item.isEmpty()) {
+                        setText(null);
+                        setStyle("");
+                    } else {
+                        setText(item);
+                        setStyle("-fx-background-color: #ffcccc;");
+                    }
+                }
+            });
+            
+            errorTable.getColumns().add(col);
+        }
+        
+        errorTable.setItems(errorRows);
+        
+        // Statistics panel
+        VBox statsPanel = new VBox(8);
+        statsPanel.setPadding(new Insets(12));
+        Label statsTitle = new Label("Error Summary");
+        statsTitle.setStyle("-fx-font-weight: bold; -fx-font-size: 14px;");
+        statsPanel.getChildren().add(statsTitle);
+        statsPanel.getChildren().add(new Separator());
+        
+        for (String root : roots) {
+            int errorCount = errorsByRoot.get(root).size();
+            Label label = new Label(root + ": " + errorCount + " errors");
+            statsPanel.getChildren().add(label);
+        }
+        
+        Label totalLabel = new Label("Total Rows: " + maxErrors);
+        totalLabel.setStyle("-fx-font-weight: bold; -fx-padding: 10 0 0 0;");
+        statsPanel.getChildren().add(new Separator());
+        statsPanel.getChildren().add(totalLabel);
+        
+        Button exportErrors = new Button("Export Errors CSV");
+        exportErrors.setOnAction(e -> {
+            FileChooser fc = new FileChooser();
+            fc.setTitle("Save errors as CSV");
+            fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV files", "*.csv"));
+            File f = fc.showSaveDialog(errorStage);
+            if (f != null) {
+                try (BufferedWriter bw = java.nio.file.Files.newBufferedWriter(f.toPath(), StandardCharsets.UTF_8)) {
+                    // Write header
+                    for (String root : roots) {
+                        bw.write(escapeCsv(root));
+                        if (roots.indexOf(root) < roots.size() - 1) {
+                            bw.write(',');
+                        }
+                    }
+                    bw.write('\n');
+                    
+                    // Write error rows
+                    for (Map<String, String> row : errorRows) {
+                        for (String root : roots) {
+                            bw.write(escapeCsv(row.getOrDefault(root, "")));
+                            if (roots.indexOf(root) < roots.size() - 1) {
+                                bw.write(',');
+                            }
+                        }
+                        bw.write('\n');
+                    }
+                } catch (IOException ex) {
+                    showError("Failed to save errors CSV: " + ex.getMessage());
+                }
+            }
+        });
+        
+        Button closeBtn = new Button("Close");
+        closeBtn.setOnAction(e -> errorStage.close());
+        
+        HBox buttonBox = new HBox(8, closeBtn, exportErrors);
+        buttonBox.setPadding(new Insets(8));
+        
+        BorderPane bp = new BorderPane();
+        bp.setCenter(errorTable);
+        bp.setRight(statsPanel);
+        bp.setBottom(buttonBox);
+        
+        Scene scene = new Scene(bp, 1000, 520);
+        errorStage.setScene(scene);
+        errorStage.show();
     }
 
     private void updateStatistics(List<String> roots, ObservableList<Result> rows, Map<String, Label> statsLabels) {
