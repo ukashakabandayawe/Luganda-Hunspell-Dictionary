@@ -32,11 +32,13 @@ public class LugandaGeneratorApp extends Application {
     public static class Result {
         private final Map<String, String> wordsByRoot; // root -> generated word
         private final String flag;
+        private final String affix;
         private final Map<String, Boolean> errorsByRoot; // root -> is error
 
-        public Result(Map<String, String> wordsByRoot, String flag) {
+        public Result(Map<String, String> wordsByRoot, String flag, String affix) {
             this.wordsByRoot = wordsByRoot;
             this.flag = flag;
+            this.affix = affix;
             this.errorsByRoot = new LinkedHashMap<>();
             // Initialize all as non-errors
             for (String root : wordsByRoot.keySet()) {
@@ -45,6 +47,7 @@ public class LugandaGeneratorApp extends Application {
         }
 
         public String getFlag() { return flag; }
+        public String getAffix() { return affix; }
         public Map<String, String> getWordsByRoot() { return wordsByRoot; }
         public boolean isError(String root) { return errorsByRoot.getOrDefault(root, false); }
         public void toggleError(String root) { 
@@ -167,6 +170,16 @@ public class LugandaGeneratorApp extends Application {
         });
         noCol.setStyle("-fx-alignment: CENTER;");
         table.getColumns().add(noCol);
+        
+        // Add affix column
+        TableColumn<Result, String> affixCol = new TableColumn<>("AFX");
+        affixCol.setPrefWidth(80);
+        affixCol.setCellValueFactory(cellData -> {
+            String affix = cellData.getValue().getAffix();
+            return new javafx.beans.property.SimpleStringProperty(affix);
+        });
+        affixCol.setStyle("-fx-alignment: CENTER;");
+        table.getColumns().add(affixCol);
 
         // Add columns for each root
         for (String root : roots) {
@@ -232,7 +245,8 @@ public class LugandaGeneratorApp extends Application {
                         wordsByRoot.put(root, "");
                     }
                 }
-                rows.add(new Result(wordsByRoot, flag));
+                String affixDisplay = ae.affix.isEmpty() ? "0" : ae.affix;
+                rows.add(new Result(wordsByRoot, flag, affixDisplay));
             }
         }
 
@@ -241,7 +255,7 @@ public class LugandaGeneratorApp extends Application {
         for (String root : roots) {
             bareRoots.put(root, root);
         }
-        rows.add(new Result(bareRoots, "ROOT"));
+        rows.add(new Result(bareRoots, "ROOT", ""));
 
         // Create filtered list for search
         ObservableList<Result> allRows = FXCollections.observableArrayList(rows);
