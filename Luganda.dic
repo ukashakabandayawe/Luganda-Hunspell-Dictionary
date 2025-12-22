@@ -1,4 +1,4 @@
-2910
+2895
 abeeka
 abiri
 abooluganda
@@ -120,6 +120,7 @@ amalaalo
 amalusu
 amambuka
 amanda
+amannya
 amanzaali
 amasanginzira
 amasannyalaze
@@ -219,12 +220,6 @@ bulaaza
 bulangiti
 bulawuzi
 buli
-kaseera
-kimu
-kiseera
-lwe
-wantu
-wonna
 bulijjo
 bulungi
 bulyomu
@@ -233,6 +228,7 @@ busa
 buuka
 buulira
 buusabuusa
+byendo
 buuza
 buzaabuza
 bwe
@@ -1100,6 +1096,7 @@ gaaya
 gaba
 gabana
 gabanya
+gabalema
 gabi
 gabira
 gabula
@@ -1244,6 +1241,7 @@ kanga
 kangavvula
 kanya
 kasambula
+kaseera
 kasita
 kasooli
 kasuka
@@ -1275,6 +1273,8 @@ kiggala
 kiki
 kikkirizibwa
 kiko
+kimu
+kinyonyi
 kikye
 kima
 kinaana
@@ -1494,6 +1494,8 @@ lwana
 lwanagana
 lwanyisa
 lwaza
+lya/VBVNVG
+lwe
 lya/VERBVTNVTG
 lyamu
 lyoka
@@ -1571,7 +1573,6 @@ munnakibiina
 munnakibuga
 munnakyalo
 munnakyemalira
-nnakyemalira
 munnakyewa
 munnamagoye
 munnamagwanga
@@ -1627,6 +1628,7 @@ ngi
 nkaaga
 nnaabakyala
 nnaalongo
+nnakyemalira
 nnabaana
 nnabbubi
 nnabi
@@ -1689,6 +1691,7 @@ obubaane
 obubaka
 obuyozayoza
 obubbi
+obubudamu
 obubeerevu
 obubeezi
 obubonero
@@ -1893,7 +1896,6 @@ okukukusa
 okulabikirwa
 okulambula
 okuli
-okulmwa
 okulonda
 okulumwa
 okusinziira
@@ -1948,7 +1950,6 @@ olukujjukujju
 olukumi
 olukung'ng'aana
 olukusa
-olukusenes
 olukuta
 olukuubo
 olukwe
@@ -1958,7 +1959,6 @@ olulira
 olumbe
 olumu
 olumuli
-olunako
 olunaku
 olunwe
 Olunyankole
@@ -2051,7 +2051,6 @@ omugejjo
 omugenyi
 omugenzi
 omuggo
-gabalema
 omugirimani
 omugoba
 omugoberezi
@@ -2093,12 +2092,10 @@ omuko
 omukolo
 omukono
 omukozi
-noun
 omukubi
 omukugu
 omukukusa
 omukukusi
-njaga
 omukulembeze
 omukulisitu
 omukulu
@@ -2132,7 +2129,6 @@ omuli
 omuligito
 omulimu
 omuliraanwa
-neighbor
 omuliro
 omulirwaano
 omulokole
@@ -2157,23 +2153,19 @@ omumiro
 omumisiri
 omumuli
 omumwa
-kinyonyi
 omunaala
+omunnabi
 omunazi
 omungereza
 omunnyo
 omunoonyi
-obubudamu
 omuntandisi
 omuntu
-anyone
 omuntumulamu
-person
 omunwe
 omunya
 omunyaguluzi
 omunyakuzi
-thief
 omunyolo
 omupakasi
 omupiira
@@ -2191,7 +2183,6 @@ omusanvu
 omusasi
 omusava
 omusawo
-amannya
 omusazi
 omuseegu
 omusege
@@ -2208,7 +2199,6 @@ omusino
 omusipi
 omusiraamu
 omusiri
-plantations
 omusiru
 omusisi
 omusomaali
@@ -2223,21 +2213,16 @@ omusota
 omusu
 omusubbaawa
 omusujja
-byendo
 omusulo
 omusumba
 omusumeeno
 omusuubuzi
-merchant
 omusuwa
 omuswaaki
-teeth
 omutabufu
 omutwe
 omutaka
 omutala
-two
-distance
 omutamiivu
 omutango
 omutawaana
@@ -2302,7 +2287,6 @@ omuzinzi
 omuzira
 omuziro
 omuziziko
-of
 omuzizo
 omuzungu
 omuzzukulu
@@ -2629,7 +2613,7 @@ tokosa
 toloka
 tolotooma
 tomera
-tomereganaa
+tomeregana
 tonda
 tongoza
 tonnya
@@ -2726,6 +2710,7 @@ wanda
 wandiika
 wangi
 wangu
+wantu
 wanguka
 wangula
 wanika
@@ -2771,6 +2756,7 @@ womba
 wombeefu
 wona
 wonya
+wonna
 woolera
 wooma
 woomera
