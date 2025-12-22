@@ -6,81 +6,79 @@ TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 # I think the rules below should apply to roots like Actives: lya, lidde, lilya, Causatives: liisa, liisizza, Passives: liibwa, liisibbwa, liisiddwa, liibwa e.g akalya, ekilya, ebilya, alya, alidde, abaalya
 #TO-DO: Review the . and the Y to prevent the dictionary from exploding
 #TO-DO: Dont forget to make the Luganda letter as in "Ngoma", "Ngombe" to be valid in hunspell
-PFX VERB N 72 
-PFX VERB 0 tu .
-PFX VERB 0 otu .
-PFX VERB 0 ka .
-PFX VERB 0 aka .
-PFX VERB 0 a .
-PFX VERB 0 e .
-PFX VERB 0 o .
-PFX VERB 0 ki .
-PFX VERB 0 eki .
-PFX VERB 0 gu .
-PFX VERB 0 ogu .
-PFX VERB 0 bu .
-PFX VERB 0 obu .
-PFX VERB 0 ba .
-PFX VERB 0 aba .
-PFX VERB 0 bi .
-PFX VERB 0 ebi .
-PFX VERB 0 ga .
-PFX VERB 0 aga .
-PFX VERB 0 gi .
-PFX VERB 0 egi .
-PFX VERB 0 twaa .
-PFX VERB 0 otwaa .
-PFX VERB 0 kaa .
-PFX VERB 0 akaa .
-PFX VERB 0 ya .
-PFX VERB 0 eya .
-PFX VERB 0 kyaa .
-PFX VERB 0 ekyaa .
-PFX VERB 0 gwaa .
-PFX VERB 0 ogwaa .
-PFX VERB 0 bwaa .
-PFX VERB 0 obwaa .
-PFX VERB 0 baa .
-PFX VERB 0 abaa .
-PFX VERB 0 byaa .
-PFX VERB 0 ebyaa .
-PFX VERB 0 gaa .
-PFX VERB 0 agaa .
-PFX VERB 0 gyaa .
-PFX VERB 0 egyaa .
-PFX VERB 0 tuli .
-PFX VERB 0 otuli .
-PFX VERB 0 kali .
-PFX VERB 0 akali .
-PFX VERB 0 li .
-PFX VERB 0 ali .
-PFX VERB 0 kili .
-PFX VERB 0 ekili .
-PFX VERB 0 guli .
-PFX VERB 0 oguli .
-PFX VERB 0 buli .
-PFX VERB 0 obuli .
-PFX VERB 0 bali .
-PFX VERB 0 abali .
-PFX VERB 0 bili .
-PFX VERB 0 ebili .
-PFX VERB 0 gali .
-PFX VERB 0 agali .
-PFX VERB 0 gili .
-PFX VERB 0 egili .
-PFX VERB 0 mu .
-PFX VERB 0 omu .
-PFX VERB 0 emu .
-PFX VERB 0 amu .
-PFX VERB 0 ndi .
-PFX VERB 0 na .
-PFX VERB 0 tu .
-PFX VERB 0 etu .
-PFX VERB 0 wa .
-PFX VERB 0 mwaa .
-PFX VERB 0 li .
-PFX VERB 0 oli .
-PFX VERB 0 .
+PFX VB N 72
+PFX VB 0 tu .
+PFX VB 0 otu .
+PFX VB 0 ka .
+PFX VB 0 aka .
+PFX VB 0 a .
+PFX VB 0 e .
+PFX VB 0 o .
+PFX VB 0 ki .
+PFX VB 0 eki .
+PFX VB 0 gu .
+PFX VB 0 ogu .
+PFX VB 0 bu .
+PFX VB 0 obu .
+PFX VB 0 ba .
+PFX VB 0 aba .
+PFX VB 0 bi .
+PFX VB 0 ebi .
+PFX VB 0 ga .
+PFX VB 0 aga .
+PFX VB 0 gi .
+PFX VB 0 egi .
+PFX VB 0 twaa .
+PFX VB 0 otwaa .
+PFX VB 0 kaa .
+PFX VB 0 akaa .
+PFX VB 0 ya .
+PFX VB 0 eya .
+PFX VB 0 kyaa .
+PFX VB 0 ekyaa .
+PFX VB 0 gwaa .
+PFX VB 0 ogwaa .
+PFX VB 0 bwaa .
+PFX VB 0 obwaa .
+PFX VB 0 baa .
+PFX VB 0 abaa .
+PFX VB 0 byaa .
+PFX VB 0 ebyaa .
+PFX VB 0 gaa .
+PFX VB 0 agaa .
+PFX VB 0 gyaa .
+PFX VB 0 egyaa .
+PFX VB 0 tuli .
+PFX VB 0 otuli .
+PFX VB 0 kali .
+PFX VB 0 akali .
+PFX VB 0 li .
+PFX VB 0 ali .
+PFX VB 0 kili .
+PFX VB 0 ekili .
+PFX VB 0 guli .
+PFX VB 0 oguli .
+PFX VB 0 buli .
+PFX VB 0 obuli .
+PFX VB 0 bali .
+PFX VB 0 abali .
+PFX VB 0 bili .
+PFX VB 0 ebili .
+PFX VB 0 gali .
+PFX VB 0 agali .
+PFX VB 0 gili .
+PFX VB 0 egili .
+PFX VB 0 mu .
+PFX VB 0 omu .
+PFX VB 0 emu .
+PFX VB 0 amu .
+PFX VB 0 ndi .
+PFX VB 0 na .
+PFX VB 0 etu .
+PFX VB 0 wa .
+PFX VB 0 mwaa .
+PFX VB 0 oli .
+PFX VB 0 .
 
 # TO-DO: We also need to implement negative verbs 
 
@@ -127,21 +125,21 @@ PFX VERB 0 .
 
 # I think this works for laba, luka, labuka, lya, leka, laluka, (o)lidde
 # TO-DO: Change the flag
-PFX VERB1 Y 2
-PFX VERB1 l nd .
-PFX VERB1 l end .
+PFX V1 Y 2
+PFX V1 l nd .
+PFX V1 l end .
 
 # Turning a verb into a common noun e.g okulya --> Omuli, okusomesa --> omusomesa
 # TO-DO: Change the flag
 # TO-DO: Dont forget to add the root for creating a noun from a verb in the Luganda.dic
-PFX VTN Y 2 
-PFX VTN 0 omu .
-PFX VTN 0 mu .
+PFX VN Y 2 
+PFX VN 0 omu .
+PFX VN 0 mu .
 
 # Creating a gerund e.g lya --> okulya, liisa --> okweelisa, liibwa --> okuliibwa
 # TO-DO: Change the flag
 
-PFX VTG Y 3 
-PFX VTG 0 ku .
-PFX VTG 0 oku .
-PFX VTG 0 kwee .
+PFX VG Y 3 
+PFX VG 0 ku .
+PFX VG 0 oku .
+PFX VG 0 kwee .
