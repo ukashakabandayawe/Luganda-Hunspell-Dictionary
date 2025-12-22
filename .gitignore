@@ -1,0 +1,74 @@
+# -----------------
+# Java Compiled Files
+# -----------------
+*.class
+
+# -----------------
+# Logs
+# -----------------
+*.log
+
+# -----------------
+# BlueJ files
+# -----------------
+*.ctxt
+
+# -----------------
+# Mobile Tools for Java (J2ME)
+# -----------------
+.mtj.tmp/
+
+# -----------------
+# Package Files
+# -----------------
+
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# -----------------
+# JVM Crash Logs
+# -----------------
+hs_err_pid*
+replay_pid*
+
+# -----------------
+# VS Code Settings
+# -----------------
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# -----------------
+# Build Directories
+# -----------------
+bin/
+build/
+out/
+target/
+
+# -----------------
+# Gradle (exclude only generated files)
+# -----------------
+.gradle/
+build/
+!gradlew
+!gradlew.bat
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!settings.gradle
+!settings.gradle.kts
+!build.gradle
+!build.gradle.kts
+!gradle.properties
+
+# -----------------
+# Maven (exclude only generated files)
+# -----------------
+target/
+dependency-reduced-pom.xml
+release.properties
+!pom.xml
