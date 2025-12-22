@@ -158,6 +158,16 @@ public class LugandaGeneratorApp extends Application {
             statsPanel.getChildren().add(label);
         }
 
+        // Add row number column
+        TableColumn<Result, String> noCol = new TableColumn<>("No.");
+        noCol.setPrefWidth(50);
+        noCol.setCellValueFactory(cellData -> {
+            int index = table.getItems().indexOf(cellData.getValue()) + 1;
+            return new javafx.beans.property.SimpleStringProperty(String.valueOf(index));
+        });
+        noCol.setStyle("-fx-alignment: CENTER;");
+        table.getColumns().add(noCol);
+
         // Add columns for each root
         for (String root : roots) {
             final String r = root;
