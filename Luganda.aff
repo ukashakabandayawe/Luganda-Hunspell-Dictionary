@@ -3,7 +3,7 @@ SET UTF8
 TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 
 #to-do review "TRY" to use letters based on frequency
-# I think the rules below should apply to roots like Actives: lya, lidde, lilya, Causatives: liisa, liisizza, Passives: liibwa, liisibbwa, liisiddwa, liibwa e.g akalya, ekilya, ebilya, alya, alidde, abaalya
+# I think the rules below should apply to roots like Actives: lya, lidde, lilya, Causatives: liisa, liisizza, Passives: liibwa, liisibbwa, liisiddwa, e.g akalya, ekilya, ebilya, alya, alidde, abaalya
 #TO-DO: Review the . and the Y to prevent the dictionary from exploding
 #TO-DO: Dont forget to make the Luganda letter as in "Ngoma", "Ngombe" to be valid in hunspell
 PFX VB Y 267
