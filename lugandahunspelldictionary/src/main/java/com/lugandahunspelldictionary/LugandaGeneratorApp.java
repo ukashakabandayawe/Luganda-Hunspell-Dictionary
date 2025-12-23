@@ -7,6 +7,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -33,12 +34,14 @@ public class LugandaGeneratorApp extends Application {
         private final Map<String, String> wordsByRoot; // root -> generated word
         private final String flag;
         private final String affix;
+        private final LugandaAffParser.AffixEntry affixEntry;
         private final Map<String, Boolean> errorsByRoot; // root -> is error
 
-        public Result(Map<String, String> wordsByRoot, String flag, String affix) {
+        public Result(Map<String, String> wordsByRoot, String flag, String affix, LugandaAffParser.AffixEntry affixEntry) {
             this.wordsByRoot = wordsByRoot;
             this.flag = flag;
             this.affix = affix;
+            this.affixEntry = affixEntry;
             this.errorsByRoot = new LinkedHashMap<>();
             // Initialize all as non-errors
             for (String root : wordsByRoot.keySet()) {
@@ -48,6 +51,7 @@ public class LugandaGeneratorApp extends Application {
 
         public String getFlag() { return flag; }
         public String getAffix() { return affix; }
+        public LugandaAffParser.AffixEntry getAffixEntry() { return affixEntry; }
         public Map<String, String> getWordsByRoot() { return wordsByRoot; }
         public boolean isError(String root) { return errorsByRoot.getOrDefault(root, false); }
         public void toggleError(String root) { 
@@ -246,7 +250,7 @@ public class LugandaGeneratorApp extends Application {
                     }
                 }
                 String affixDisplay = ae.affix.isEmpty() ? "0" : ae.affix;
-                rows.add(new Result(wordsByRoot, flag, affixDisplay));
+                rows.add(new Result(wordsByRoot, flag, affixDisplay, ae));
             }
         }
 
@@ -255,7 +259,7 @@ public class LugandaGeneratorApp extends Application {
         for (String root : roots) {
             bareRoots.put(root, root);
         }
-        rows.add(new Result(bareRoots, "ROOT", ""));
+        rows.add(new Result(bareRoots, "ROOT", "", null));
 
         // Create filtered list for search
         ObservableList<Result> allRows = FXCollections.observableArrayList(rows);
@@ -330,6 +334,7 @@ public class LugandaGeneratorApp extends Application {
         Button clearErrors = new Button("Clear All Errors");
         Button refresh = new Button("Refresh from .aff");
         Button errorTable = new Button("Error Table");
+        Button generateRules = new Button("Generate Rules");
         
         clearErrors.setOnMouseClicked(e -> {
             for (Result r : filteredRows) {
@@ -352,8 +357,9 @@ public class LugandaGeneratorApp extends Application {
         });
         
         errorTable.setOnAction(e -> showErrorTable(allRows, roots));
+        generateRules.setOnAction(e -> showRuleGenerator(allRows, roots));
         
-        HBox h = new HBox(8, back, save, clearErrors, refresh, errorTable);
+        HBox h = new HBox(8, back, save, clearErrors, refresh, errorTable, generateRules);
         h.setPadding(new Insets(8));
 
         VBox topBox = new VBox(searchBox, h);
@@ -550,6 +556,276 @@ public class LugandaGeneratorApp extends Application {
         Scene scene = new Scene(bp, 1000, 520);
         errorStage.setScene(scene);
         errorStage.show();
+    }
+
+    public static class ProposedRule {
+        private final String root;
+        private final char type; // 'P' or 'S'
+        private String flag; // editable
+        private final String strip;
+        private final String affix;
+        private final String condition;
+
+        public ProposedRule(String root, char type, String flag, String strip, String affix, String condition) {
+            this.root = root;
+            this.type = type;
+            this.flag = flag == null ? "" : flag;
+            this.strip = strip == null ? "" : strip;
+            this.affix = affix == null ? "" : affix;
+            this.condition = condition == null ? "." : condition;
+        }
+
+        public String getRoot() { return root; }
+        public String getTypeStr() { return type == 'S' ? "SFX" : "PFX"; }
+        public char getType() { return type; }
+        public String getFlag() { return flag; }
+        public void setFlag(String flag) { this.flag = flag == null ? "" : flag.trim(); }
+        public String getStrip() { return strip; }
+        public String getAffix() { return affix; }
+        public String getCondition() { return condition; }
+    }
+
+    private void showRuleGenerator(ObservableList<Result> allRows, List<String> roots) {
+        Stage rulesStage = new Stage();
+        rulesStage.setTitle("Generate Rules from Non-Errors");
+
+        // Build proposed rules grouped by root
+        Map<String, List<ProposedRule>> rulesByRoot = new LinkedHashMap<>();
+        for (String root : roots) {
+            rulesByRoot.put(root, new ArrayList<>());
+        }
+        for (Result r : allRows) {
+            LugandaAffParser.AffixEntry ae = r.getAffixEntry();
+            if (ae == null) continue; // skip ROOT row
+            for (String root : roots) {
+                String word = r.getWordsByRoot().getOrDefault(root, "");
+                if (word != null && !word.isEmpty() && !r.isError(root)) {
+                    rulesByRoot.get(root).add(new ProposedRule(root, ae.type, r.getFlag(), ae.strip, ae.affix, ae.condition));
+                }
+            }
+        }
+
+        // Align into rows by index across roots
+        int maxRows = 0;
+        for (List<ProposedRule> list : rulesByRoot.values()) {
+            maxRows = Math.max(maxRows, list.size());
+        }
+        ObservableList<Map<String, String>> alignedRows = FXCollections.observableArrayList();
+        for (int i = 0; i < maxRows; i++) {
+            Map<String, String> row = new LinkedHashMap<>();
+            for (String root : roots) {
+                List<ProposedRule> list = rulesByRoot.get(root);
+                if (i < list.size()) {
+                    ProposedRule pr = list.get(i);
+                    row.put("type." + root, pr.getTypeStr());
+                    row.put("flag." + root, pr.getFlag());
+                    row.put("root." + root, pr.getAffix()); // show affix under the root-named column
+                    row.put("cond." + root, pr.getCondition());
+                } else {
+                    row.put("type." + root, "");
+                    row.put("flag." + root, "");
+                    row.put("root." + root, "");
+                    row.put("cond." + root, "");
+                }
+            }
+            alignedRows.add(row);
+        }
+
+        TableView<Map<String, String>> tv = new TableView<>(alignedRows);
+        tv.setEditable(true);
+
+        TableColumn<Map<String, String>, String> noCol = new TableColumn<>("No.");
+        noCol.setPrefWidth(50);
+        noCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(String.valueOf(tv.getItems().indexOf(cd.getValue()) + 1)));
+        noCol.setStyle("-fx-alignment: CENTER;");
+        tv.getColumns().add(noCol);
+
+        // Add 4 columns per root: Type | Flag | <root> | Condition
+        for (String root : roots) {
+            TableColumn<Map<String, String>, String> typeCol = new TableColumn<>("Type");
+            typeCol.setPrefWidth(70);
+            typeCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(cd.getValue().getOrDefault("type." + root, "")));
+            typeCol.setStyle("-fx-alignment: CENTER;");
+
+            TableColumn<Map<String, String>, String> flagCol = new TableColumn<>("Flag");
+            flagCol.setPrefWidth(70);
+            flagCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(cd.getValue().getOrDefault("flag." + root, "")));
+            flagCol.setCellFactory(TextFieldTableCell.forTableColumn());
+            flagCol.setOnEditCommit(ev -> {
+                int rowIndex = ev.getTablePosition().getRow();
+                String newVal = ev.getNewValue() == null ? "" : ev.getNewValue();
+                ev.getRowValue().put("flag." + root, newVal);
+                List<ProposedRule> list = rulesByRoot.get(root);
+                if (list != null && rowIndex >= 0 && rowIndex < list.size()) {
+                    list.get(rowIndex).setFlag(newVal);
+                }
+            });
+
+            TableColumn<Map<String, String>, String> rootCol = new TableColumn<>(root);
+            rootCol.setPrefWidth(120);
+            rootCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(cd.getValue().getOrDefault("root." + root, "")));
+
+            TableColumn<Map<String, String>, String> condCol = new TableColumn<>("Condition");
+            condCol.setPrefWidth(100);
+            condCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(cd.getValue().getOrDefault("cond." + root, "")));
+
+            tv.getColumns().addAll(typeCol, flagCol, rootCol, condCol);
+        }
+
+        // Controls: per-root flag entry
+        VBox flagControls = new VBox(8);
+        flagControls.setPadding(new Insets(8));
+        Label flagLabel = new Label("Set Flags:");
+        flagLabel.setStyle("-fx-font-weight: bold;");
+        flagControls.getChildren().add(flagLabel);
+        
+        // Create a text field and apply button for each root
+        Map<String, TextField> flagFields = new LinkedHashMap<>();
+        for (String root : roots) {
+            HBox rootFlagBox = new HBox(8);
+            Label rootLabel = new Label(root + ":");
+            rootLabel.setPrefWidth(80);
+            TextField flagField = new TextField();
+            flagField.setPromptText("flag");
+            flagField.setPrefWidth(80);
+            flagFields.put(root, flagField);
+            
+            Button applyRoot = new Button("Apply");
+            applyRoot.setOnAction(e -> {
+                String flag = flagField.getText();
+                if (flag == null) flag = "";
+                List<ProposedRule> list = rulesByRoot.get(root);
+                if (list != null) {
+                    for (ProposedRule pr : list) {
+                        pr.setFlag(flag);
+                    }
+                    // reflect in table
+                    for (int i = 0; i < list.size() && i < alignedRows.size(); i++) {
+                        alignedRows.get(i).put("flag." + root, flag);
+                    }
+                    tv.refresh();
+                }
+            });
+            
+            rootFlagBox.getChildren().addAll(rootLabel, flagField, applyRoot);
+            flagControls.getChildren().add(rootFlagBox);
+        }
+        
+        // Global apply to all roots
+        HBox globalBox = new HBox(8);
+        Label globalLabel = new Label("All roots:");
+        globalLabel.setPrefWidth(80);
+        TextField defaultFlag = new TextField();
+        defaultFlag.setPromptText("flag for all");
+        defaultFlag.setPrefWidth(80);
+        Button applyAll = new Button("Apply to All");
+        applyAll.setOnAction(e -> {
+            String df = defaultFlag.getText();
+            if (df == null) df = "";
+            // Update all root flag fields
+            for (TextField field : flagFields.values()) {
+                field.setText(df);
+            }
+            // Apply to all rules
+            for (Map.Entry<String, List<ProposedRule>> entry : rulesByRoot.entrySet()) {
+                List<ProposedRule> list = entry.getValue();
+                for (ProposedRule pr : list) {
+                    pr.setFlag(df);
+                }
+            }
+            // reflect in table
+            for (int i = 0; i < alignedRows.size(); i++) {
+                Map<String, String> row = alignedRows.get(i);
+                for (String root : roots) {
+                    List<ProposedRule> list = rulesByRoot.get(root);
+                    if (list != null && i < list.size()) {
+                        row.put("flag." + root, df);
+                    }
+                }
+            }
+            tv.refresh();
+        });
+        globalBox.getChildren().addAll(globalLabel, defaultFlag, applyAll);
+        flagControls.getChildren().add(new Separator());
+        flagControls.getChildren().add(globalBox);
+
+        Button confirm = new Button("Confirm Append to .aff");
+        confirm.setStyle("-fx-font-weight: bold;");
+        confirm.setOnAction(e -> {
+            // Flatten and validate flags
+            List<ProposedRule> allRules = new ArrayList<>();
+            for (List<ProposedRule> list : rulesByRoot.values()) allRules.addAll(list);
+            if (allRules.isEmpty()) {
+                Alert info = new Alert(Alert.AlertType.INFORMATION, "No rules to append.", ButtonType.OK);
+                info.showAndWait();
+                return;
+            }
+            for (ProposedRule pr : allRules) {
+                if (pr.getFlag() == null || pr.getFlag().trim().isEmpty()) {
+                    showError("Every rule must have a flag before append.");
+                    return;
+                }
+            }
+
+            Alert a = new Alert(Alert.AlertType.CONFIRMATION, "Append " + allRules.size() + " rules to " + defaultAffPath.toAbsolutePath() + "?", ButtonType.OK, ButtonType.CANCEL);
+            a.setHeaderText("Confirm updating Luganda.aff");
+            a.showAndWait();
+            if (a.getResult() != ButtonType.OK) return;
+
+            try (java.io.BufferedWriter bw = java.nio.file.Files.newBufferedWriter(defaultAffPath, StandardCharsets.UTF_8, java.nio.file.StandardOpenOption.APPEND)) {
+                // Group by root, then by (type, flag) within each root
+                Map<String, Map<String, List<ProposedRule>>> groupsByRootAndKey = new LinkedHashMap<>();
+                for (ProposedRule pr : allRules) {
+                    String root = pr.getRoot();
+                    String key = pr.getTypeStr() + " " + pr.getFlag();
+                    groupsByRootAndKey.computeIfAbsent(root, k -> new LinkedHashMap<>())
+                            .computeIfAbsent(key, k2 -> new ArrayList<>()).add(pr);
+                }
+
+                bw.write("\n\n# Generated rules on " + java.time.LocalDate.now() + "\n");
+                for (Map.Entry<String, Map<String, List<ProposedRule>>> rootEntry : groupsByRootAndKey.entrySet()) {
+                    String root = rootEntry.getKey();
+                    for (Map.Entry<String, List<ProposedRule>> typeEntry : rootEntry.getValue().entrySet()) {
+                        String[] parts = typeEntry.getKey().split(" ", 2);
+                        String typeStr = parts[0];
+                        String flag = parts.length > 1 ? parts[1] : "";
+                        List<ProposedRule> list = typeEntry.getValue();
+                        bw.write("# Rules for root '" + root + "'\n");
+                        bw.write(typeStr + " " + flag + " Y " + list.size() + "\n");
+                        for (ProposedRule pr : list) {
+                            String strip = pr.getStrip().isEmpty() ? "0" : pr.getStrip();
+                            String aff = pr.getAffix().isEmpty() ? "0" : pr.getAffix();
+                            String cond = (pr.getCondition() == null || pr.getCondition().isEmpty()) ? "." : pr.getCondition();
+                            bw.write(typeStr + " " + flag + " " + strip + " " + aff + " " + cond + "\n");
+                        }
+                        bw.write("\n");
+                    }
+                }
+            } catch (IOException ex) {
+                showError("Failed to append rules: " + ex.getMessage());
+                return;
+            }
+
+            Alert ok = new Alert(Alert.AlertType.INFORMATION, "Rules appended successfully.", ButtonType.OK);
+            ok.setHeaderText(null);
+            ok.showAndWait();
+            rulesStage.close();
+        });
+
+        Button cancel = new Button("Close");
+        cancel.setOnAction(e -> rulesStage.close());
+
+        HBox bottom = new HBox(8, cancel, confirm);
+        bottom.setPadding(new Insets(8));
+
+        BorderPane bp = new BorderPane();
+        bp.setLeft(flagControls);
+        bp.setCenter(tv);
+        bp.setBottom(bottom);
+
+        Scene scene = new Scene(bp, 1200, 600);
+        rulesStage.setScene(scene);
+        rulesStage.show();
     }
 
     private void updateStatistics(List<String> roots, ObservableList<Result> rows, Map<String, Label> statsLabels) {
