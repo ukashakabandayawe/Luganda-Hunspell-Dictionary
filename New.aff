@@ -2,16 +2,21 @@
 SET UTF8
 TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 
-
+# Key principle: Never mix tense flags
+# In your .dic file, create separate entries:
+# lya/[present tense flag][other flags]      # Present tense: produces "bagulya", "gubalya", etc.
+# lya/[past tense flag][other flags]        # Near past tense: produces "baagulya", "gubalya", etc.
+# This prevents "babaagulya" from being generated because tense flags will never combine on the same word.
 
 # Lets first apply the 1st, 2nd and 3rd person prefixes both singular and plural
-PFX A Y 6
-PFX A 0 n .
-PFX A 0 o .
-PFX A 0 a .
-PFX A 0 tu .
-PFX A 0 mu .
-PFX A 0 ba .
+# Commented this out and combined them with subject markers
+# PFX A Y 6
+# PFX A 0 n .
+# PFX A 0 o .
+# PFX A 0 a .
+# PFX A 0 tu .
+# PFX A 0 mu .
+# PFX A 0 ba .
 
 # Reflexive verb form
 PFX B Y 6
@@ -40,8 +45,16 @@ PFX D 0 tetwe .
 PFX D 0 temwe .
 PFX D 0 tebee .
 
-# Verb prefixes for subjects
-PFX E Y 19
+# subjects markers in present and very near past tense 
+PFX E Y 25
+PFX E 0 n [^b]
+PFX E 0 m [b]
+PFX E 0 o .
+PFX E l nd [l]
+PFX E 0 a .
+PFX E 0 tu .
+PFX E 0 mu .
+PFX E 0 ba .
 PFX E 0 a [^aeiou]
 PFX E 0 ba .
 PFX E 0 gu .
@@ -60,8 +73,134 @@ PFX E 0 ku .
 PFX E 0 ga .
 PFX E 0 tu .
 
-# Verb prefixes for objects
-PFX F Y 17
+# subject markers in near past tense
+PFX G Y 19
+PFX G 0 nna .
+PFX G 0 wa .
+PFX G 0 ya .
+PFX G 0 twa .
+PFX G 0 mwa .
+PFX G 0 baa .
+PFX G 0 gwa .
+PFX G 0 gya .
+PFX G 0 zaa .
+PFX G 0 kyaa .
+PFX G 0 byaa .
+PFX G 0 lyaa .
+PFX G 0 gaa .
+PFX G 0 kaa .
+PFX G 0 bw .
+PFX G 0 lwa .
+PFX G 0 kwaa .
+PFX G 0 gaa .
+PFX G 0 twaa .
+
+# subject markers for the distant past tense
+PFX J Y 20
+PFX J 0 nn .
+PFX J 0 wa .
+PFX J 0 ya .
+PFX J 0 twa .
+PFX J 0 mwa .
+PFX J 0 baa .
+PFX J 0 gwa .
+PFX J 0 gya .
+PFX J 0 zaa .
+PFX J 0 kya .
+PFX J 0 bya .
+PFX J 0 lya .
+PFX J 0 gaa .
+PFX J 0 kaa .
+PFX J 0 bwa .
+PFX J 0 lwaa .
+PFX J 0 zaa .
+PFX J 0 kwaa .
+PFX J 0 gaa .
+PFX J 0 twa .
+
+# Subject markers for the near future
+PFX K Y 23
+PFX K 0 naa .
+PFX K 0 munaa
+PFX K 0 onoo .
+PFX K 0 onaa .
+PFX K 0 anaa .
+PFX K 0 tunaa .
+PFX K 0 munaa .
+PFX K 0 banaa .
+PFX K 0 gunaa .
+PFX K 0 ginaa .
+PFX K 0 enaa
+PFX K 0 zinaa .
+PFX K 0 kinaa .
+PFX K 0 binaa .
+PFX K 0 linaa .
+PFX K 0 ganaa .
+PFX K 0 kanaa .
+PFX K 0 bunaa .
+PFX K 0 lunaa .
+PFX K 0 zinaa .
+PFX K 0 kunaa .
+PFX K 0 ganaa .
+PFX K 0 tunaa .
+
+# Subject markers for the far future tense
+PFX L Y 23
+PFX L 0 ndi
+PFX L 0 oli .
+PFX L 0 ali .
+PFX L 0 tuli .
+PFX L 0 muli .
+PFX L 0 bali .
+PFX L 0 ali
+PFX L 0 bali .
+PFX L 0 guli .
+PFX L 0 gili .
+PFX L 0 eli .
+PFX L 0 zili .
+PFX L 0 kili .
+PFX L 0 bili .
+PFX L 0 lili .
+PFX L 0 gali .
+PFX L 0 kali .
+PFX L 0 buli .
+PFX L 0 luli .
+PFX L 0 zili .
+PFX L 0 kuli .
+PFX L 0 gali .
+PFX L 0 tuli .
+
+# Subject markers for the far future tense in reflexive verbs
+# TO-DO Examine "ndibeetaaga" and ndyeetaaga to see whether "Okweetaga" exists in both reflexive and non-reflexive verbs
+PFX M Y 21
+PFX M 0 ndye
+PFX M 0 olye .
+PFX M 0 alye .
+PFX M 0 tulye .
+PFX M 0 mulye .
+PFX M 0 balye .
+PFX M 0 gulye .
+PFX M 0 gilye .
+PFX M 0 elye
+PFX M 0 zilye .
+PFX M 0 kilye .
+PFX M 0 bilye .
+PFX M 0 lilye .
+PFX M 0 galye .
+PFX M 0 kalye .
+PFX M 0 bulye .
+PFX M 0 lulye .
+PFX M 0 zilye .
+PFX M 0 kulye .
+PFX M 0 galye .
+PFX M 0 tulye .
+
+# object markers
+PFX F Y 19
+PFX F 0 n .
+PFX F l nd [l]
+PFX F w mp [w]
+PFX F 0 mu .
 PFX F 0 ba .
 PFX F 0 gu .
 PFX F 0 gi .
@@ -78,20 +217,41 @@ PFX F 0 ku .
 PFX F 0 ga .
 PFX F 0 tu .
 
-# The very near past tense
-SFX I Y 1
-SFX I a ye [bmpn]a
+# A special group of object markers in words like A"mwe"kutte Ba"gwe"wadde, Baa"ke"fumbidde
+# In the .dic file, they should be implemented multiple times to cover all tenses and other cases
+PFX H Y 15
+PFX H 0 bee .
+PFX H 0 gwe .
+PFX H 0 gye .
+PFX H 0 ze .
+PFX H 0 kye .
+PFX H 0 bye .
+PFX H 0 lye .
+PFX H 0 ge .
+PFX H 0 ke .
+PFX H 0 bwe .
+PFX H 0 lwe .
+PFX H 0 ze .
+PFX H 0 kwe .
+PFX H 0 ge .
+PFX H 0 twe .
+
+# Commented out and considered using modified stems in the .dic file       
+# # The very near past tense
+# SFX I Y 1
+# SFX I a ye [bmpn]a
 
 # TO-DO: Implement tense conjugution for the verb "okuba" (to be) for all the 3 persons
 # TO-DO: Implement tense conjugution for the verb "obutaba" (to not be) for all the 3 persons
 
 # Optional vowels at the begining of words
-PFX a Y 1
-PFX a 0 a [^aeiou]
+# Commented out because they may increase room for error, I will consider modifying subject markers to handle the optional vowels
+# PFX a Y 1
+# PFX a 0 a [^aeiou]
 
-PFX e Y 1
-PFX e 0 e [^aeiou]
+# PFX e Y 1
+# PFX e 0 e [^aeiou]
 
-PFX o Y 1
-PFX o 0 o [^aeiou]
+# PFX o Y 1
+# PFX o 0 o [^aeiou]
 
