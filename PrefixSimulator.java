@@ -1,7 +1,6 @@
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
-import java.util.stream.*;
 
 public class PrefixSimulator {
     // Simple parser for PFX lines in a Hunspell .aff (handles the style in your Luganda.aff)
