@@ -1,0 +1,97 @@
+#FLAG long
+SET UTF8
+TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
+
+
+
+# Lets first apply the 1st, 2nd and 3rd person prefixes both singular and plural
+PFX A Y 6
+PFX A 0 n .
+PFX A 0 o .
+PFX A 0 a .
+PFX A 0 tu .
+PFX A 0 mu .
+PFX A 0 ba .
+
+# Reflexive verb form
+PFX B Y 6
+PFX B 0 nee .
+PFX B 0 wee .
+PFX B 0 yee .
+PFX B 0 twe .
+PFX B 0 mwe .
+PFX B 0 bee .
+
+# Negating the verb
+PFX C Y 6 
+PFX C 0 si .
+PFX C 0 to .
+PFX C 0 ta .
+PFX C 0 tetu .
+PFX C 0 temu .
+PFX C 0 teba .
+
+# Negating the reflexive verb form
+PFX D Y 6
+PFX D 0 see .
+PFX D 0 tewee .
+PFX D 0 teyee .
+PFX D 0 tetwe .
+PFX D 0 temwe .
+PFX D 0 tebee .
+
+# Verb prefixes for subjects
+PFX E Y 19
+PFX E 0 a [^aeiou]
+PFX E 0 ba .
+PFX E 0 gu .
+PFX E 0 gi .
+PFX E 0 e [^aeiou]
+PFX E 0 zi .
+PFX E 0 ki .
+PFX E 0 bi .
+PFX E 0 li .
+PFX E 0 ga .
+PFX E 0 ka .
+PFX E 0 bu .
+PFX E 0 lu .
+PFX E 0 zi .
+PFX E 0 ku .
+PFX E 0 ga .
+PFX E 0 tu .
+
+# Verb prefixes for objects
+PFX F Y 17
+PFX F 0 ba .
+PFX F 0 gu .
+PFX F 0 gi .
+PFX F 0 zi .
+PFX F 0 ki .
+PFX F 0 bi .
+PFX F 0 li .
+PFX F 0 ga .
+PFX F 0 ka .
+PFX F 0 bu .
+PFX F 0 lu .
+PFX F 0 zi .
+PFX F 0 ku .
+PFX F 0 ga .
+PFX F 0 tu .
+
+# The very near past tense
+SFX I Y 1
+SFX I a ye [bmpn]a
+
+# TO-DO: Implement tense conjugution for the verb "okuba" (to be) for all the 3 persons
+# TO-DO: Implement tense conjugution for the verb "obutaba" (to not be) for all the 3 persons
+
+# Optional vowels at the begining of words
+PFX a Y 1
+PFX a 0 a [^aeiou]
+
+PFX e Y 1
+PFX e 0 e [^aeiou]
+
+PFX o Y 1
+PFX o 0 o [^aeiou]
+
