@@ -3,10 +3,12 @@ SET UTF8
 TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 
 #to-do review "TRY" to use letters based on frequency
-# I think the rules below should apply to roots like Actives: lya, lidde, lilya, Causatives: liisa, liisizza, Passives: liibwa, liisibbwa, liisiddwa, e.g akalya, ekilya, ebilya, alya, alidde, abaalya
+# I think the rules below should apply to roots like Actives: lya, lidde, Causatives: liisa, liisizza, Passives: liibwa, liilibbwa, liiliddwa, liisibwa, liisibbwa, liisiddwa, e.g akalya, ekilya, ebilya, alya, alidde, abaalya
+# More roots: liira, ngulya
+# TO-DO: The prepositional, Yet
 #TO-DO: Review the . and the Y to prevent the dictionary from exploding
-#TO-DO: Dont forget to make the Luganda letter as in "Ngoma", "Ngombe" to be valid in hunspell
-PFX VB Y 267
+#TO-DO: Dont forget to make the Luganda letter ŋ as in "Ngoma", "Ngombe" to be valid in hunspell
+PFX VB Y 344
 PFX VB 0 0 .
 PFX VB 0 tu .
 PFX VB 0 otu .
@@ -241,6 +243,86 @@ PFX VB 0 gilyee .
 PFX VB 0 egilyee .
 PFX VB 0 ndyee .
 PFX VB 0 mulyee .
+PFX VB 0 bakyee .
+PFX VB 0 abakyee .
+PFX VB 0 tuli .
+PFX VB 0 otuli .
+PFX VB 0 kali .
+PFX VB 0 akali .
+PFX VB 0 ali .
+PFX VB 0 eli .
+PFX VB 0 oli .
+PFX VB 0 kili .
+PFX VB 0 ekili .
+PFX VB 0 guli .
+PFX VB 0 oguli .
+PFX VB 0 buli .
+PFX VB 0 obuli .
+PFX VB 0 bali .
+PFX VB 0 abali .
+PFX VB 0 bili .
+PFX VB 0 ebili .
+PFX VB 0 gali .
+PFX VB 0 agali .
+PFX VB 0 gili .
+PFX VB 0 egili .
+PFX VB 0 twaali .
+PFX VB 0 otwaali .
+PFX VB 0 kaali .
+PFX VB 0 akaali .
+PFX VB 0 yali .
+PFX VB 0 eyali .
+PFX VB 0 kyaali .
+PFX VB 0 ekyaali .
+PFX VB 0 gwaali .
+PFX VB 0 ogwaali .
+PFX VB 0 bwaali .
+PFX VB 0 obwaali .
+PFX VB 0 baali .
+PFX VB 0 abaali .
+PFX VB 0 byaali .
+PFX VB 0 ebyaali .
+PFX VB 0 gaali .
+PFX VB 0 agaali .
+PFX VB 0 gyaali .
+PFX VB 0 egyaali .
+PFX VB 0 tulili .
+PFX VB 0 otulili .
+PFX VB 0 kalili .
+PFX VB 0 akalili .
+PFX VB 0 lili .
+PFX VB 0 alili .
+PFX VB 0 kilili .
+PFX VB 0 ekilili .
+PFX VB 0 gulili .
+PFX VB 0 ogulili .
+PFX VB 0 bulili .
+PFX VB 0 obulili .
+PFX VB 0 balili .
+PFX VB 0 abalili .
+PFX VB 0 bilili .
+PFX VB 0 ebilili .
+PFX VB 0 galili .
+PFX VB 0 agalili .
+PFX VB 0 gilili .
+PFX VB 0 egilili .
+PFX VB 0 muli .
+PFX VB 0 ndili .
+PFX VB 0 nali .
+PFX VB 0 wali .
+PFX VB 0 mwaali .
+PFX VB 0 olili .
+PFX VB 0 zili .
+PFX VB 0 ezili .
+PFX VB 0 zaali .
+PFX VB 0 ezaali .
+PFX VB 0 zilili .
+PFX VB 0 ezilili .
+PFX VB 0 elili .
+PFX VB 0 mulili .
+PFX VB 0 waa .
+PFX VB 0 mba .
+PFX VB 0 ngu .
 
 
 
@@ -259,10 +341,18 @@ PFX VN Y 2
 PFX VN 0 omu .
 PFX VN 0 mu .
 
-# Creating a gerund e.g lya --> okulya, liisa --> okweelisa, liibwa --> okuliibwa
+# Creating a gerund or creating the infininitive e.g lya --> okulya, liisa --> okweelisa, liibwa --> okuliibwa
 # TO-DO: Change the flag
 
-PFX VG Y 3 
+PFX VG Y 5 
 PFX VG 0 ku .
 PFX VG 0 oku .
 PFX VG 0 kwee .
+PFX VG 0 kuli .
+PFX VG 0 okuli .
+
+# Generated rules on 2025-12-23
+# Rules for root 'lilya'
+
+
+
