@@ -19,6 +19,7 @@ TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 # PFX A 0 ba .
 
 # Reflexive verb form
+# TO-DO: Implement for all the 10 classes
 PFX B Y 6
 PFX B 0 nee .
 PFX B 0 wee .
@@ -27,7 +28,8 @@ PFX B 0 twe .
 PFX B 0 mwe .
 PFX B 0 bee .
 
-# Negating the verb
+# Negating the verb in present tense
+# TO-DO: Implement for all the 10 classes
 PFX C Y 6 
 PFX C 0 si .
 PFX C 0 to .
@@ -37,6 +39,7 @@ PFX C 0 temu .
 PFX C 0 teba .
 
 # Negating the reflexive verb form
+# TO-DO: Implement for all the 10 classes
 PFX D Y 6
 PFX D 0 see .
 PFX D 0 tewee .
@@ -46,77 +49,123 @@ PFX D 0 temwe .
 PFX D 0 tebee .
 
 # subjects markers in present and very near past tense 
-PFX E Y 25
-PFX E 0 n [^b]
-PFX E 0 m [b]
-PFX E 0 o .
-PFX E l nd [l]
-PFX E 0 a .
-PFX E 0 tu .
-PFX E 0 mu .
-PFX E 0 ba .
+PFX E Y 40
+PFX E 0 n [^b] # Person marker
+PFX E 0 m [b] # Person marker
+PFX E 0 o . # Person marker
+PFX E l nd [l] # Person marker
+PFX E 0 a . # Person marker
+PFX E 0 tu . # Person marker
+PFX E 0 mu . # Person marker
+PFX E 0 ba . # Person marker
 PFX E 0 a [^aeiou]
 PFX E 0 ba .
+PFX E 0 aba .
 PFX E 0 gu .
+PFX E 0 ogu .
 PFX E 0 gi .
+PFX E 0 egi .
 PFX E 0 e [^aeiou]
 PFX E 0 zi .
+PFX E 0 ezi .
 PFX E 0 ki .
+PFX E 0 eki .
 PFX E 0 bi .
+PFX E 0 ebi .
 PFX E 0 li .
+PFX E 0 eli .
 PFX E 0 ga .
+PFX E 0 aga .
 PFX E 0 ka .
+PFX E 0 aka .
 PFX E 0 bu .
+PFX E 0 obu .
 PFX E 0 lu .
+PFX E 0 olu .
 PFX E 0 zi .
+PFX E 0 ezi .
 PFX E 0 ku .
+PFX E 0 oku .
 PFX E 0 ga .
+PFX E 0 aga .
 PFX E 0 tu .
+PFX E 0 otu .
 
 # subject markers in near past tense
-PFX G Y 19
+PFX G Y 34
 PFX G 0 nna .
 PFX G 0 wa .
 PFX G 0 ya .
+PFX G 0 eya .
 PFX G 0 twa .
 PFX G 0 mwa .
 PFX G 0 baa .
+PFX G 0 abaa .
 PFX G 0 gwa .
+PFX G 0 ogwa .
 PFX G 0 gya .
+PFX G 0 egya .
 PFX G 0 zaa .
+PFX G 0 ezaa .
 PFX G 0 kyaa .
+PFX G 0 ekyaa .
 PFX G 0 byaa .
+PFX G 0 ebyaa .
 PFX G 0 lyaa .
+PFX G 0 elyaa .
 PFX G 0 gaa .
+PFX G 0 agaa .
 PFX G 0 kaa .
+PFX G 0 akaa .
 PFX G 0 bw .
+PFX G 0 obwa .
 PFX G 0 lwa .
+PFX G 0 olwa .
 PFX G 0 kwaa .
+PFX G 0 okwaa .
 PFX G 0 gaa .
+PFX G 0 agaa .
 PFX G 0 twaa .
+PFX G 0 otwaa .
 
 # subject markers for the distant past tense
-PFX J Y 20
+PFX J Y 36 
 PFX J 0 nn .
 PFX J 0 wa .
 PFX J 0 ya .
+PFX J 0 eya .
 PFX J 0 twa .
 PFX J 0 mwa .
 PFX J 0 baa .
+PFX J 0 abaa .
 PFX J 0 gwa .
+PFX J 0 ogwa .
 PFX J 0 gya .
+PFX J 0 egya .
 PFX J 0 zaa .
+PFX J 0 ezaa .
 PFX J 0 kya .
+PFX J 0 ekya .
 PFX J 0 bya .
+PFX J 0 ebya .
 PFX J 0 lya .
+PFX J 0 elya .
 PFX J 0 gaa .
+PFX J 0 ogwa .
 PFX J 0 kaa .
+PFX J 0 akaa .
 PFX J 0 bwa .
+PFX J 0 obwa .
 PFX J 0 lwaa .
+PFX J 0 olwaa .
 PFX J 0 zaa .
+PFX J 0 ezaa .
 PFX J 0 kwaa .
+PFX J 0 okwaa .
 PFX J 0 gaa .
+PFX J 0 agaa .
 PFX J 0 twa .
+PFX J 0 otwa .
 
 # Subject markers for the near future
 PFX K Y 23
@@ -128,21 +177,36 @@ PFX K 0 anaa .
 PFX K 0 tunaa .
 PFX K 0 munaa .
 PFX K 0 banaa .
+PFX K 0 abanaa .
 PFX K 0 gunaa .
+PFX K 0 ogunaa .
 PFX K 0 ginaa .
-PFX K 0 enaa
+PFX K 0 eginaa .
+PFX K 0 enaa .
 PFX K 0 zinaa .
+PFX K 0 ezinaa .
 PFX K 0 kinaa .
+PFX K 0 ekinaa .
 PFX K 0 binaa .
+PFX K 0 ebinaa .
 PFX K 0 linaa .
+PFX K 0 elinaa .
 PFX K 0 ganaa .
+PFX K 0 aganaa .
 PFX K 0 kanaa .
+PFX K 0 akanaa .
 PFX K 0 bunaa .
+PFX K 0 obunaa .
 PFX K 0 lunaa .
+PFX K 0 olunaa .
 PFX K 0 zinaa .
+PFX K 0 ezinaa .
 PFX K 0 kunaa .
+PFX K 0 okunaa .
 PFX K 0 ganaa .
+PFX K 0 ogunaa .
 PFX K 0 tunaa .
+PFX K 0 otunaa .
 
 # Subject markers for the far future tense
 PFX L Y 23
@@ -152,23 +216,39 @@ PFX L 0 ali .
 PFX L 0 tuli .
 PFX L 0 muli .
 PFX L 0 bali .
+PFX L 0 abali .
 PFX L 0 ali
 PFX L 0 bali .
+PFX L 0 abali .
 PFX L 0 guli .
+PFX L 0 oguli .
 PFX L 0 gili .
+PFX L 0 egili .
 PFX L 0 eli .
 PFX L 0 zili .
+PFX L 0 ezili .
 PFX L 0 kili .
+PFX L 0 ekili .
 PFX L 0 bili .
+PFX L 0 ebili .
 PFX L 0 lili .
+PFX L 0 elili .
 PFX L 0 gali .
+PFX L 0 agali .
 PFX L 0 kali .
+PFX L 0 akali .
 PFX L 0 buli .
+PFX L 0 obuli .
 PFX L 0 luli .
+PFX L 0 oluli .
 PFX L 0 zili .
+PFX L 0 ezili .
 PFX L 0 kuli .
+PFX L 0 okuli .
+PFX L 0 gali .
 PFX L 0 gali .
 PFX L 0 tuli .
+PFX L 0 otuli .
 
 # Subject markers for the far future tense in reflexive verbs
 # TO-DO Examine "ndibeetaaga" and ndyeetaaga to see whether "Okweetaga" exists in both reflexive and non-reflexive verbs
@@ -179,21 +259,36 @@ PFX M 0 alye .
 PFX M 0 tulye .
 PFX M 0 mulye .
 PFX M 0 balye .
+PFX M 0 abalye .
 PFX M 0 gulye .
+PFX M 0 ogulye .
 PFX M 0 gilye .
+PFX M 0 egilye .
 PFX M 0 elye
 PFX M 0 zilye .
+PFX M 0 ezilye .
 PFX M 0 kilye .
+PFX M 0 ekilye .
 PFX M 0 bilye .
+PFX M 0 ebilye .
 PFX M 0 lilye .
+PFX M 0 elilye .
 PFX M 0 galye .
+PFX M 0 agalye .
 PFX M 0 kalye .
+PFX M 0 akalye .
 PFX M 0 bulye .
+PFX M 0 obulye .
 PFX M 0 lulye .
+PFX M 0 olulye .
 PFX M 0 zilye .
+PFX M 0 ezilye .
 PFX M 0 kulye .
+PFX M 0 okulye .
 PFX M 0 galye .
+PFX M 0 agalye .
 PFX M 0 tulye .
+PFX M 0 otulye .
 
 # object markers
 PFX F Y 19
@@ -204,7 +299,7 @@ PFX F 0 mu .
 PFX F 0 ba .
 PFX F 0 gu .
 PFX F 0 gi .
-PFX F 0 zi .
+PFX F 0 zi . 
 PFX F 0 ki .
 PFX F 0 bi .
 PFX F 0 li .
