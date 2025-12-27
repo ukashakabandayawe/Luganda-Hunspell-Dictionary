@@ -19,6 +19,7 @@ TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 # PFX A 0 ba .
 
 # Reflexive verb form, subject markers in present tense
+# I think these can also work for the very near past, near and distant past tenses e.g beezimbira, beezimbidde
 PFX B Y 35
 PFX B 0 nee .
 PFX B 0 wee .
@@ -249,7 +250,8 @@ PFX d 0 tunee .
 PFX d 0 otunee .
 
 # Reflexive verb form, subject markers in the far future tense
-PFX e Y 34
+# TO-DO Examine "ndibeetaaga" and ndyeetaaga to see whether "Okweetaga" exists in both reflexive and non-reflexive verbs
+PFX e Y 36
 PFX e 0 ndye .
 PFX e 0 olye .
 PFX e 0 alye .
@@ -261,6 +263,7 @@ PFX e 0 gulye .
 PFX e 0 ogulye .
 PFX e 0 gilye .
 PFX e 0 egilye .
+PFX e 0 elye .
 PFX e 0 zilye .
 PFX e 0 ezilye .
 PFX e 0 kilye .
@@ -507,46 +510,6 @@ PFX L 0 gali .
 PFX L 0 gali .
 PFX L 0 tuli .
 PFX L 0 otuli .
-
-# Subject markers for the far future tense in reflexive verbs
-# TO-DO Examine "ndibeetaaga" and ndyeetaaga to see whether "Okweetaga" exists in both reflexive and non-reflexive verbs
-PFX M Y 36
-PFX M 0 ndye
-PFX M 0 olye .
-PFX M 0 alye .
-PFX M 0 tulye .
-PFX M 0 mulye .
-PFX M 0 balye .
-PFX M 0 abalye .
-PFX M 0 gulye .
-PFX M 0 ogulye .
-PFX M 0 gilye .
-PFX M 0 egilye .
-PFX M 0 elye
-PFX M 0 zilye .
-PFX M 0 ezilye .
-PFX M 0 kilye .
-PFX M 0 ekilye .
-PFX M 0 bilye .
-PFX M 0 ebilye .
-PFX M 0 lilye .
-PFX M 0 elilye .
-PFX M 0 galye .
-PFX M 0 agalye .
-PFX M 0 kalye .
-PFX M 0 akalye .
-PFX M 0 bulye .
-PFX M 0 obulye .
-PFX M 0 lulye .
-PFX M 0 olulye .
-PFX M 0 zilye .
-PFX M 0 ezilye .
-PFX M 0 kulye .
-PFX M 0 okulye .
-PFX M 0 galye .
-PFX M 0 agalye .
-PFX M 0 tulye .
-PFX M 0 otulye .
 
 # object markers
 PFX F Y 18

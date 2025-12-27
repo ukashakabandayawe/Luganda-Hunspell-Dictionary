@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Copy New.aff/New.dic to LanguageTool hunspell",
+      "label": "Copy Luganda.aff/Luganda.dic to LanguageTool hunspell",
       "type": "process",
       "command": "powershell.exe",
       "args": [
@@ -10,7 +10,7 @@
         "-ExecutionPolicy",
         "Bypass",
         "-Command",
-        "& { $ErrorActionPreference = 'Stop'; $src = '${workspaceFolder}'; $dest = 'E:\\languagetool\\languagetool-language-modules\\lg\\src\\main\\resources\\org\\languagetool\\resource\\lg\\hunspell'; New-Item -ItemType Directory -Force -Path $dest | Out-Null; Copy-Item -Force -Path (Join-Path $src 'New.aff'), (Join-Path $src 'New.dic') -Destination $dest }"
+        "& { $ErrorActionPreference = 'Stop'; $src = '${workspaceFolder}'; $dest = 'E:\\languagetool\\languagetool-language-modules\\lg\\src\\main\\resources\\org\\languagetool\\resource\\lg\\hunspell'; New-Item -ItemType Directory -Force -Path $dest | Out-Null; Copy-Item -Force -Path (Join-Path $src 'Luganda.aff'), (Join-Path $src 'Luganda.dic') -Destination $dest }"
       ],
       "problemMatcher": []
     }
