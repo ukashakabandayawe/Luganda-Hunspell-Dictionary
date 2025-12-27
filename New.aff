@@ -18,29 +18,43 @@ TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 # PFX A 0 mu .
 # PFX A 0 ba .
 
-# Reflexive verb form
-# TO-DO: Implement for all the 10 classes
-PFX B Y 20
+# Reflexive verb form, subject markers in present tense
+PFX B Y 35
 PFX B 0 nee .
 PFX B 0 wee .
 PFX B 0 yee .
 PFX B 0 twe .
 PFX B 0 mwe .
 PFX B 0 bee .
+PFX B 0 abee .
 PFX B 0 gwe .
+PFX B 0 ogwe .
 PFX B 0 gye .
+PFX B 0 egye .
 PFX B 0 zee .
+PFX B 0 ezee .
 PFX B 0 kye .
+PFX B 0 ekye .
 PFX B 0 bye .
+PFX B 0 ebye .
 PFX B 0 lye .
+PFX B 0 elye .
 PFX B 0 gee .
+PFX B 0 agee .
 PFX B 0 kee .
+PFX B 0 akee .
 PFX B 0 bwe .
+PFX B 0 obwe .
 PFX B 0 lwe .
+PFX B 0 olwe .
 PFX B 0 zee .
+PFX B 0 ezee .
 PFX B 0 kwe .
+PFX B 0 okwe .
 PFX B 0 gee .
+PFX B 0 agee .
 PFX B 0 twe .
+PFX B 0 otwe .
 
 # present and very near past tense negative subject marker
 PFX C Y 33  
@@ -164,7 +178,7 @@ PFX c 0 tetuli .
 PFX c 0 temuli .
 PFX c 0 tebali .
 PFX c 0 abatali .
-PFX c 0 atali
+PFX c 0 atali .
 PFX c 0 tebali .
 PFX c 0 abatali .
 PFX c 0 teguli .
@@ -197,6 +211,80 @@ PFX c 0 agatali .
 PFX c 0 tetuli .
 PFX c 0 otutali .
 
+# Reflexive verb form, subject markers in the near future tense
+PFX d Y 34
+PFX d 0 nne .
+PFX d 0 onee .
+PFX d 0 anee .
+PFX d 0 tunee .
+PFX d 0 munee .
+PFX d 0 banee .
+PFX d 0 gunee .
+PFX d 0 ogunee .
+PFX d 0 ginee .
+PFX d 0 eginee .
+PFX d 0 zinee .
+PFX d 0 ezinee .
+PFX d 0 kinee .
+PFX d 0 ekinee .
+PFX d 0 binee .
+PFX d 0 ebinee .
+PFX d 0 linee .
+PFX d 0 elinee .
+PFX d 0 ganee .
+PFX d 0 aganee .
+PFX d 0 kanee .
+PFX d 0 akanee .
+PFX d 0 bunee .
+PFX d 0 obunee .
+PFX d 0 lunee .
+PFX d 0 olunee .
+PFX d 0 zinee .
+PFX d 0 ezinee .
+PFX d 0 kunee .
+PFX d 0 okunee .
+PFX d 0 ganee .
+PFX d 0 aganee .
+PFX d 0 tunee .
+PFX d 0 otunee .
+
+# Reflexive verb form, subject markers in the far future tense
+PFX e Y 34
+PFX e 0 ndye .
+PFX e 0 olye .
+PFX e 0 alye .
+PFX e 0 tulye .
+PFX e 0 mulye .
+PFX e 0 balye .
+PFX e 0 abalye .
+PFX e 0 gulye .
+PFX e 0 ogulye .
+PFX e 0 gilye .
+PFX e 0 egilye .
+PFX e 0 zilye .
+PFX e 0 ezilye .
+PFX e 0 kilye .
+PFX e 0 ekilye .
+PFX e 0 bilye .
+PFX e 0 ebilye .
+PFX e 0 lilye .
+PFX e 0 elilye .
+PFX e 0 galye .
+PFX e 0 agalye .
+PFX e 0 kalye .
+PFX e 0 akalye .
+PFX e 0 bulye .
+PFX e 0 obulye .
+PFX e 0 lulye .
+PFX e 0 olulye .
+PFX e 0 zilye .
+PFX e 0 ezilye .
+PFX e 0 kulye .
+PFX e 0 okulye .
+PFX e 0 galye .
+PFX e 0 agalye .
+PFX e 0 tulye .
+PFX e 0 otulye .
 
 # Negating the reflexive verb form
 PFX D Y 20
@@ -222,8 +310,9 @@ PFX D 0 tegee .
 PFX D 0 tetwe .
 
 # subjects markers in present and very near past tense 
-PFX E Y 36
-PFX E 0 n [^bnmlhprxq] # Person marker
+PFX E Y 37
+PFX E j n jj # It handles the word "nja" 
+PFX E 0 n [^jbnmlhprxq] # Person marker
 PFX E 0 m [b] # Person marker
 PFX E 0 o . # Person marker
 PFX E l nd [l] # Person marker
