@@ -72,3 +72,8 @@ target/
 dependency-reduced-pom.xml
 release.properties
 !pom.xml
+
+# Non Luganda Dictionaries
+en_US License
+en_US.aff
+en_US.dic
