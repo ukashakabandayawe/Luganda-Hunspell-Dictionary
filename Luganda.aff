@@ -8,7 +8,7 @@ TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 # TO-DO: The prepositional, Yet
 #TO-DO: Review the . and the Y to prevent the dictionary from exploding
 #TO-DO: Dont forget to make the Luganda letter ŋ as in "Ngoma", "Ngombe" to be valid in hunspell
-PFX VB Y 344
+PFX VB Y 314
 PFX VB 0 0 .
 PFX VB 0 tu .
 PFX VB 0 otu .
