@@ -1,6 +1,8 @@
 #FLAG long
 SET UTF8
 TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
+#BREAK ' 
+WORDCHARS '
 
 # Key principle: Never mix tense flags
 # In your .dic file, create separate entries:
@@ -18,7 +20,7 @@ TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 # PFX A 0 mu .
 # PFX A 0 ba .
 
-# Reflexive verb form, subject markers in present tense
+# Reflexive verb form, subject markers in present tense 
 # I think these can also work for the very near past, near and distant past tenses e.g beezimbira, beezimbidde
 PFX B Y 35
 PFX B 0 nee .
@@ -289,7 +291,60 @@ PFX e 0 agalye .
 PFX e 0 tulye .
 PFX e 0 otulye .
 
-# Negating the reflexive verb form
+# Reflexive Negative Subject markers for the far future tense
+# e.g silyeliisa, tolyeliisa, temulyewalana, tebalyeluma
+PFX f Y 39
+PFX f 0 silye .
+PFX f 0 tolye .
+PFX f 0 talye .
+PFX f 0 tetulye .
+PFX f 0 temulye .
+PFX f 0 tebalye .
+PFX f 0 abatalye .
+PFX f 0 atalye .
+PFX f 0 tebalye .
+PFX f 0 abatalye .
+PFX f 0 tegulye .
+PFX f 0 ogutalye .
+PFX f 0 tegilye .
+PFX f 0 egitalye .
+PFX f 0 telye .
+PFX f 0 tezilye .
+PFX f 0 ezitalye .
+PFX f 0 tekilye .
+PFX f 0 ekitalye .
+PFX f 0 tebilye .
+PFX f 0 ebitalye .
+PFX f 0 telilye .
+PFX f 0 elitalye .
+PFX f 0 tegalye .
+PFX f 0 agatalye .
+PFX f 0 tekalye .
+PFX f 0 akatalye .
+PFX f 0 tebulye .
+PFX f 0 obutalye .
+PFX f 0 telulye .
+PFX f 0 olutalye .
+PFX f 0 tezilye .
+PFX f 0 ezitalye .
+PFX f 0 tekulye .
+PFX f 0 okutalye .
+PFX f 0 tegalye .
+PFX f 0 agatalye .
+PFX f 0 tetulye .
+PFX f 0 otutalye .
+
+# Creating the infinitive from stems non-reflexive verbs e.g oku+lya
+PFX g Y 2
+PFX g 0 oku .
+PFX g 0 ku .
+
+# Creating the infinitive from stems reflexive verbs e.g okwee+naaza
+PFX h Y 2 
+PFX h 0 okwee .
+PFX h 0 kwee .
+
+# Negating the reflexive verb form e.g seetaaga in Present tense
 PFX D Y 20
 PFX D 0 see .
 PFX D 0 tewee .
@@ -555,6 +610,133 @@ PFX H 0 ze .
 PFX H 0 kwe .
 PFX H 0 ge .
 PFX H 0 twe .
+
+# Class I nouns 
+PFX n Y 5
+PFX n o   0   om
+PFX n omu aba omu
+PFX n omu ba  omu
+PFX n omw aba omw
+PFX n omw ba  omw
+
+# Class II nouns 
+PFX p Y 5
+PFX p o   0   om.[wu]
+PFX p omu emi omu
+PFX p omu mi  omu
+PFX p omw emy omw
+PFX p omw my  omw
+
+# Class III nouns 
+PFX q Y 2
+PFX q e  0 e
+PFX q em 0 em # e.g emmayiro
+
+# Class IV nouns 
+PFX r Y 6
+PFX r e   0   eki
+PFX r e   0   eky
+PFX r eki ebi eki
+PFX r eki bi  eki
+PFX r eky eby eky
+PFX r eky by  eky
+
+# Class V nouns 
+PFX s Y 10
+PFX s e 0     e.^r
+PFX s e ama   e.^r  # eggi
+PFX s e ma    e.^r
+PFX s eri ama er # erinnyo
+PFX s eri ma  e
+PFX s ejj ama ejj # ejjuuni
+PFX s ejj ma  ejj 
+PFX s ery am  ery # eryenvu 
+PFX s ery m   ery 
+PFX s er  l   er # lyenvu 
+
+# Class VI nouns 
+PFX t Y 11
+PFX t a   0    aka
+PFX t aka obu  aka[^mn]
+PFX t aka bu   aka[^mn]
+PFX t aka obwa akamb
+PFX t aka bwa  akamb
+PFX t aka obwa akan[aeiou]
+PFX t aka bwa  akan[aeiou]
+PFX t aka obu  akam[^b]
+PFX t aka bu   akam[^b]
+PFX t aka obu  akan[^aeiou]
+PFX t aka bu   akan[^aeiou]
+
+# Class VII nouns 
+PFX u Y 11
+PFX u o    0    ol[wu]
+PFX u olul enn  olul    # olulimi-->ennimi
+PFX u olul n    olul
+PFX u olu  en   olu.[^mn]
+PFX u olu  n    olu.[^mn]
+PFX u olu  em   olu[bp] # olubuto-->embuto
+PFX u olu  m    olu[bp] # mpapula
+PFX u olu  enzi oluggi  # Enziggi
+PFX u olu  nzi  oluggi
+PFX u olw  enny olwendo 
+PFX u olw  nny  olwendo
+
+# Class VIII nouns (large stuff)
+PFX v Y 6
+PFX v omu ogu omu # omuntu --> oguntu
+PFX v omu gu  omu
+PFX v omw ogw omw
+PFX v omw gw  omw 
+PFX v omu aga omu 
+PFX v omu ga  omu
+
+# Class IX nouns 
+PFX w Y 3
+PFX w o   0   oku # okutu --> kutu
+PFX w oku ama oku # okutu --> amatu
+PFX w oku ma  oku # okugulu --> magulu
+
+# Class X nouns
+PFX x Y 1
+PFX x o 0 ot[uw]
+
+# The possessive prefix
+PFX y Y 34 
+PFX y 0 w' [aeiou] 
+PFX y 0 ow' [aeiou] 
+PFX y 0 b' [aeiou] 
+PFX y 0 ab' [aeiou] 
+PFX y 0 gw' [aeiou] 
+PFX y 0 ogw' [aeiou] 
+PFX y 0 gy' [aeiou] 
+PFX y 0 egy' [aeiou] 
+PFX y 0 y' [aeiou] 
+PFX y 0 ey' [aeiou] 
+PFX y 0 z' [aeiou] 
+PFX y 0 ez' [aeiou] 
+PFX y 0 ky' [aeiou] 
+PFX y 0 eky' [aeiou] 
+PFX y 0 by' [aeiou] 
+PFX y 0 eby' [aeiou] 
+PFX y 0 ly' [aeiou] 
+PFX y 0 ely' [aeiou] 
+PFX y 0 g' [aeiou] 
+PFX y 0 ag' [aeiou] 
+PFX y 0 k' [aeiou] 
+PFX y 0 ak' [aeiou] 
+PFX y 0 bw' [aeiou] 
+PFX y 0 obw' [aeiou] 
+PFX y 0 lw' [aeiou] 
+PFX y 0 olw' [aeiou] 
+PFX y 0 z' [aeiou] 
+PFX y 0 ez' [aeiou] 
+PFX y 0 kw' [aeiou] 
+PFX y 0 okw' [aeiou] 
+PFX y 0 g' [aeiou] 
+PFX y 0 ag' [aeiou] 
+PFX y 0 tw' [aeiou] 
+PFX y 0 otw' [aeiou]  
 
 # Commented out and considered using modified stems in the .dic file       
 # # The very near past tense
