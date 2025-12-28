@@ -1,9 +1,19 @@
-SET UTF8
-TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
-#BREAK ' 
-WORDCHARS '’
-INCONV 1
-INCONV  ’ '
+# Copyright (C) 2025 Ukasha Kabanda Yawe
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
 
 # Key principle: Never mix tense flags
 # In your .dic file, create separate entries:
@@ -150,19 +160,12 @@ INCONV  ’ '
 # z = Size-based noun prefixes (e.g. akamotoka, obumotoka, olwana)
 ################# END OF DESCRIPTION OF FLAGS ##########################
 
-
-
-
-
-# Lets first apply the 1st, 2nd and 3rd person prefixes both singular and plural
-# Commented this out and combined them with subject markers
-# PFX A Y 6
-# PFX A 0 n .
-# PFX A 0 o .
-# PFX A 0 a .
-# PFX A 0 tu .
-# PFX A 0 mu .
-# PFX A 0 ba .
+SET UTF8
+TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
+#BREAK ' 
+WORDCHARS '’
+INCONV 1
+INCONV  ’ '
 
 # Reflexive verb form, subject markers in present tense 
 # I think these can also work for the very near past, near and distant past tenses e.g beezimbira, beezimbidde
