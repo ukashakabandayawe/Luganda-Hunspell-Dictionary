@@ -126,7 +126,29 @@ INCONV  ’ '
 #
 # NOUNS:
 #   taata/n    -> noun-class prefixes (e.g. pluralization like ba+taata depending on the noun class rules)
-#
+# n  = Class I noun prefixes (omu-/omw- → aba-/ba-, plus some bare stems → ba-)
+#      e.g. omuntu → abantu; omwana → abaana; taata → bataata
+# p  = Class II noun prefixes (omu-/omw- → emi-/mi-)
+#      e.g. omuti → emiti; omwezi → emyezi
+# q  = Class III noun prefixes (e-/em-)
+#      e.g. mayiro → emmayiro
+# r  = Class IV noun prefixes (eki-/eky- → ebi-/eby-)
+#      e.g. ekitabo → ebitabo; ekyuma → ebyuma
+# s  = Class V noun prefixes (e-, eri-, ejj-, ery- → ama-/ma-)
+#      e.g. eggi → amagi; erinnyo → amannyo
+# t  = Class VI noun prefixes (aka- → obu-/bu-)
+#      e.g. akatabo → obutabo
+# u  = Class VII noun prefixes (olu-/olul-/olw- → en-/em-/enn-/enny- etc.)
+#      e.g. olulimi → ennimi; olubuto → embuto; olwendo → ennyendo; oluggi → enziggi
+# v  = Class VIII noun prefixes (large stuff: omu-/omw- → ogu-/ogw-; some variants → aga-)
+#      e.g. omuntu → oguntu
+# w  = Class IX noun prefixes (oku- nouns: oku- may drop, or pluralize with ama-/ma-)
+#      e.g. okutu → kutu; okutu → amatu; okugulu → magulu
+# x  = Class X noun prefixes (otw-/otu- nouns; this rule encodes the allowed alternation)
+#      e.g. otulo → tulo
+# y = Impersonal possessive prefix (e.g. ekitabo ky'abaana, eby'abaana)
+# z = Size-based noun prefixes (e.g. akamotoka, obumotoka, olwana)
+################# END OF DESCRIPTION OF FLAGS ##########################
 
 
 
