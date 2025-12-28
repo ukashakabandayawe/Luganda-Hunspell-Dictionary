@@ -780,8 +780,7 @@ PFX z eki aka eki
 PFX z eki ogu eki 
 PFX z eki aga eki 
 PFX z eki eki eki 
-PFX z eki ebi eki 
-# Class V
+PFX z eki ebi eki # Class V below
 PFX z e otu e.[^rdj] 
 PFX z e obu e.[^rdj]  
 PFX z e olu e.[^rdj]   
@@ -845,8 +844,7 @@ PFX z ejj akay ejj
 PFX z ejj oguy ejj 
 PFX z ejj agay ejj 
 PFX z ejj ekiy ejj 
-PFX z ejj ebiy ejj 
-# Class VII
+PFX z ejj ebiy ejj # Class VII below
 PFX z olu otu olu 
 PFX z olu obu olu 
 PFX z olu olu olu  
@@ -862,8 +860,7 @@ PFX z olw ak olw
 PFX z olw og olw 
 PFX z olw ag olw 
 PFX z olw eky olw 
-PFX z olw eby olw 
-# Class IX
+PFX z olw eby olw # Class IX below
 PFX z oku otu oku 
 PFX z oku obu oku 
 PFX z oku olu oku  
