@@ -1,4 +1,3 @@
-#FLAG long
 SET UTF8
 TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 #BREAK ' 
@@ -11,6 +10,127 @@ INCONV  ’ '
 # lya/[present tense flag][other flags]      # Present tense: produces "bagulya", "gubalya", etc.
 # lya/[past tense flag][other flags]        # Near past tense: produces "baagulya", "gubalya", etc.
 # This prevents "babaagulya" from being generated because tense flags will never combine on the same word.
+
+################# DESCRIPTION OF FLAGS ##########################
+
+# This file uses Hunspell flags: flags are case-sensitive.
+# In the .dic file, a word/lemma uses flags like:
+#   lemma/EF   (multiple flags are concatenated; no spaces)
+# Example:
+#   lya/E      -> present/very-near-past subject markers (affirmative)
+#   lya/GF     -> near-past subject+object (if you want the generated cross-product forms)
+#
+# Key principle: Never mix tense flags on the same .dic entry.
+# Put each tense on a separate entry so they don't combine and generate impossible forms.
+#
+# ------------------------- VERBS (building blocks) -------------------------
+# E  = Subject markers (affirmative): present + very near past 
+# G  = Subject markers (affirmative): near past
+# J  = Subject markers (affirmative): distant past
+# K  = Subject markers (affirmative): near future
+# L  = Subject markers (affirmative): far future
+#
+# F  = Object markers (basic)
+# H  = Special reflexive object markers used in constructions like "-mwe-", "-gwe-", etc.
+#
+# B  = Reflexive verb form subject markers: present (also usable for some past forms)
+# d  = Reflexive verb form subject markers: near future
+# e  = Reflexive verb form subject markers: far future
+#
+# C  = Negative subject markers: present + very near past
+# a  = Negative subject markers: near + distant past
+# b  = Negative subject markers: near future
+# c  = Negative subject markers: far future
+#
+# D  = Negation for reflexive verb forms in present/very-near past (e.g. seetaaga/te-...)
+# f  = Reflexive negative subject markers: far future
+#
+# g  = Infinitive prefix for non-reflexive verbs (oku-/ku- plus agreement variants)
+# h  = Infinitive prefix for reflexive verbs (okwee-/kwee- plus agreement variants)
+#
+# ---------------------- VERBS (generated cross-products) -------------------
+# These are pre-generated “subject+object chaining” prefixes to avoid multi-step chaining.
+# (They are produced by scripts; see the nearby “Cross product ...” blocks.)
+#
+# N  = Cross product E x F (present/very-near-past subject + basic object)
+# P  = Cross product G x F (near-past subject + basic object)
+# Q  = Cross product K x F (near-future subject + basic object)
+# R  = Cross product L x F (far-future subject + basic object)
+#
+# S  = Cross product C x F (present/very-near-past negative subject + basic object)
+# I  = Cross product a x F (past negative subject + basic object)
+# W  = Cross product b x F (near-future negative subject + basic object)
+# T  = Cross product c x F (far-future negative subject + basic object)
+#
+# M  = Cross product g x F (infinitive + basic object)
+#
+# U  = Cross product E x H (present/very-near-past subject + special reflexive object)
+# V  = Cross product G x H (near-past subject + special reflexive object)
+# X  = Cross product J x H (distant-past subject + special reflexive object)
+# Y  = Cross product K x H (near-future subject + special reflexive object)
+# Z  = Cross product L x H (far-future subject + special reflexive object)
+#
+# --------------------------- NOUNS (noun classes) --------------------------
+# n  = Class I nouns prefixes
+# p  = Class II nouns prefixes
+# q  = Class III nouns prefixes
+# r  = Class IV nouns prefixes
+# s  = Class V nouns prefixes
+# t  = Class VI nouns prefixes
+# u  = Class VII nouns prefixes
+# v  = Class VIII nouns prefixes (large stuff)
+# w  = Class IX nouns prefixes
+# x  = Class X nouns prefixes
+#
+# y  = Impersonal possessive prefix
+# z  = Size-based noun prefixes (aka-/obu-/ebya-/etc.)
+
+# ------------------------------ QUICK EXAMPLES -----------------------------
+# Example .dic entries (illustrative):
+#   NOTE: these examples assume the stem exists in your .dic and matches the rule conditions.
+#   NOTE: avoid mixing tense flags on one entry; use separate entries per tense.
+#
+# VERBS (affirmative, subject-only):
+#   lya/E      -> present/very-near-past subject prefixes + lya (e.g. ndya, olya, alya, tulya, mulya, balya, ...)
+#   lidde/E    -> present/very-near-past subject prefixes + lidde (e.g. ndidde, olidde, alidde, tulidde, mulidde, balidde, ...)
+#   lya/G      -> near-past subject prefixes + lya (e.g. nna+lya, wa+lya, ya+lya, baa+lya, ...)
+#   lya/J      -> distant-past subject prefixes + lya (e.g. nna+lya, wa+lya, ya+lya, baa+lya, ...)
+#   lya/K      -> near-future subject prefixes + lya (e.g. naa+lya, munaa+lya, onaa+lya, banaa+lya, ...)
+#   lya/L      -> far-future subject prefixes + lya (e.g. ndi+lya, oli+lya, ali+lya, tuli+lya, muli+lya, bali+lya, ...)
+#
+# VERBS (negative, subject-only):
+#   lya/C      -> present/very-near-past negatives (e.g. si+lya, to+lya, ta+lya, tetu+lya, temu+lya, teba+lya, ...)
+#   lidde/C    -> present/very-near-past negatives (e.g. si+lidde, to+lidde, ta+lidde, tetu+lidde, temu+lidde, teba+lidde, ...)
+#   lya/a      -> distant past negatives (e.g. saalya, tewalya, teyalya, tetwalya, temwalya, tebaalya, ...)
+#   lidde/a    -> near past negatives (e.g. saalidde, tewalidde, teyalidde, tetwalidde, temwalidde, tebaalidde, ...)
+#   lye/b      -> near-future negatives (e.g. siilye, temuulye, toolye, taalye, tetuulye, temuulye, tebaalye, ...)
+#   lya/c      -> far-future negatives (e.g. sililya, tolilya, talilya, tetulilya, temulilya, tebalilya, ...)
+#
+# VERBS (infinitives):
+#   lya/g      -> infinitive forms (oku+lya, ku+lya, and possessives like ow'oku+lya, ...)
+#   naaza/h    -> reflexive infinitive forms (okwee+naaza, kwee+naaza, and possessives like ow'okwee+naaza, ...)
+#
+# VERBS (subject+object chaining):
+#   Use the generated cross-product flags when you want subject+object without relying on multi-step prefix chaining.
+#   lya/N               -> present/very-near-past subject+basic-object (E x F) e.g. mbilya, tuzilya, zitulya, abilidde, zibilidde
+#   lidde/P             -> near-past subject+basic-object (G x F) e.g.  wabilidde, nnakilidde, gwaakilidde
+#   lya/Q               -> near-future subject+basic-object (K x F) e.g. munaakilya, onaakilya, abanakilya
+#   lya/R               -> far-future subject+basic-object (L x F) e.g. olikalya, mulibilya, balikalya
+#   lya/S or lidde/S    -> present/very-near-past negative subject+basic-object (C x F) e.g. obutagulya, sibilidde
+#   lya/M                -> infinitive+basic-object (g x F) e.g. okuzilya, okubulya
+#
+# VERBS (special reflexive object markers like -mwe-/-gwe-):
+#   kutte/U or liisa     -> present/very-near-past subject + special reflexive object (E x H) e.g. ngwekutte, nzeeliisa, olwekutte
+#   kwata/V or kutte     -> near-past and far past subject + special reflexive object (G x H) e.g. nnabeekwata, nnabeekutte
+#   liisa/Z                -> far-future subject + special reflexive object (L x H)e.g ndikeeliisa, olikeeliisa
+#
+# NOUNS:
+#   taata/n    -> noun-class prefixes (e.g. pluralization like ba+taata depending on the noun class rules)
+#
+
+
+
+
 
 # Lets first apply the 1st, 2nd and 3rd person prefixes both singular and plural
 # Commented this out and combined them with subject markers
@@ -19986,600 +20106,6 @@ PFX M 0 otw'okulu .
 PFX M 0 otw'okuku .
 PFX M 0 otw'okutu .
 
-# Cross product C x F
-#present and very near past tense negative subject marker (C) X object marker (F)
-PFX A Y 590
-PFX A 0 simu .
-PFX A 0 siba .
-PFX A 0 sigu .
-PFX A 0 sigi .
-PFX A 0 sizi .
-PFX A 0 siki .
-PFX A 0 sibi .
-PFX A 0 sili .
-PFX A 0 siga .
-PFX A 0 sika .
-PFX A 0 sibu .
-PFX A 0 silu .
-PFX A 0 siku .
-PFX A 0 situ .
-PFX A 0 ton [^lmn]
-PFX A l tond l.[^mn]
-PFX A l tonn l.[mn]
-PFX A w tomp [w]
-PFX A 0 tomu .
-PFX A 0 toba .
-PFX A 0 togu .
-PFX A 0 togi .
-PFX A 0 tozi .
-PFX A 0 toki .
-PFX A 0 tobi .
-PFX A 0 toli .
-PFX A 0 toga .
-PFX A 0 toka .
-PFX A 0 tobu .
-PFX A 0 tolu .
-PFX A 0 toku .
-PFX A 0 totu .
-PFX A 0 tan [^lmn]
-PFX A l tand l.[^mn]
-PFX A l tann l.[mn]
-PFX A w tamp [w]
-PFX A 0 tamu .
-PFX A 0 taba .
-PFX A 0 tagu .
-PFX A 0 tagi .
-PFX A 0 tazi .
-PFX A 0 taki .
-PFX A 0 tabi .
-PFX A 0 tali .
-PFX A 0 taga .
-PFX A 0 taka .
-PFX A 0 tabu .
-PFX A 0 talu .
-PFX A 0 taku .
-PFX A 0 tatu .
-PFX A 0 tetun [^lmn]
-PFX A l tetund l.[^mn]
-PFX A l tetunn l.[mn]
-PFX A w tetump [w]
-PFX A 0 tetumu .
-PFX A 0 tetuba .
-PFX A 0 tetugu .
-PFX A 0 tetugi .
-PFX A 0 tetuzi .
-PFX A 0 tetuki .
-PFX A 0 tetubi .
-PFX A 0 tetuli .
-PFX A 0 tetuga .
-PFX A 0 tetuka .
-PFX A 0 tetubu .
-PFX A 0 tetulu .
-PFX A 0 tetuku .
-PFX A 0 tetutu .
-PFX A 0 temun [^lmn]
-PFX A l temund l.[^mn]
-PFX A l temunn l.[mn]
-PFX A w temump [w]
-PFX A 0 temumu .
-PFX A 0 temuba .
-PFX A 0 temugu .
-PFX A 0 temugi .
-PFX A 0 temuzi .
-PFX A 0 temuki .
-PFX A 0 temubi .
-PFX A 0 temuli .
-PFX A 0 temuga .
-PFX A 0 temuka .
-PFX A 0 temubu .
-PFX A 0 temulu .
-PFX A 0 temuku .
-PFX A 0 temutu .
-PFX A 0 teban [^lmn]
-PFX A l teband l.[^mn]
-PFX A l tebann l.[mn]
-PFX A w tebamp [w]
-PFX A 0 tebamu .
-PFX A 0 tebaba .
-PFX A 0 tebagu .
-PFX A 0 tebagi .
-PFX A 0 tebazi .
-PFX A 0 tebaki .
-PFX A 0 tebabi .
-PFX A 0 tebali .
-PFX A 0 tebaga .
-PFX A 0 tebaka .
-PFX A 0 tebabu .
-PFX A 0 tebalu .
-PFX A 0 tebaku .
-PFX A 0 tebatu .
-PFX A 0 abatan [^lmn]
-PFX A l abatand l.[^mn]
-PFX A l abatann l.[mn]
-PFX A w abatamp [w]
-PFX A 0 abatamu .
-PFX A 0 abataba .
-PFX A 0 abatagu .
-PFX A 0 abatagi .
-PFX A 0 abatazi .
-PFX A 0 abataki .
-PFX A 0 abatabi .
-PFX A 0 abatali .
-PFX A 0 abataga .
-PFX A 0 abataka .
-PFX A 0 abatabu .
-PFX A 0 abatalu .
-PFX A 0 abataku .
-PFX A 0 abatatu .
-PFX A 0 tegun [^lmn]
-PFX A l tegund l.[^mn]
-PFX A l tegunn l.[mn]
-PFX A w tegump [w]
-PFX A 0 tegumu .
-PFX A 0 teguba .
-PFX A 0 tegugu .
-PFX A 0 tegugi .
-PFX A 0 teguzi .
-PFX A 0 teguki .
-PFX A 0 tegubi .
-PFX A 0 teguli .
-PFX A 0 teguga .
-PFX A 0 teguka .
-PFX A 0 tegubu .
-PFX A 0 tegulu .
-PFX A 0 teguku .
-PFX A 0 tegutu .
-PFX A 0 ogutan [^lmn]
-PFX A l ogutand l.[^mn]
-PFX A l ogutann l.[mn]
-PFX A w ogutamp [w]
-PFX A 0 ogutamu .
-PFX A 0 ogutaba .
-PFX A 0 ogutagu .
-PFX A 0 ogutagi .
-PFX A 0 ogutazi .
-PFX A 0 ogutaki .
-PFX A 0 ogutabi .
-PFX A 0 ogutali .
-PFX A 0 ogutaga .
-PFX A 0 ogutaka .
-PFX A 0 ogutabu .
-PFX A 0 ogutalu .
-PFX A 0 ogutaku .
-PFX A 0 ogutatu .
-PFX A 0 tegin [^lmn]
-PFX A l tegind l.[^mn]
-PFX A l teginn l.[mn]
-PFX A w tegimp [w]
-PFX A 0 tegimu .
-PFX A 0 tegiba .
-PFX A 0 tegigu .
-PFX A 0 tegigi .
-PFX A 0 tegizi .
-PFX A 0 tegiki .
-PFX A 0 tegibi .
-PFX A 0 tegili .
-PFX A 0 tegiga .
-PFX A 0 tegika .
-PFX A 0 tegibu .
-PFX A 0 tegilu .
-PFX A 0 tegiku .
-PFX A 0 tegitu .
-PFX A 0 egitan [^lmn]
-PFX A l egitand l.[^mn]
-PFX A l egitann l.[mn]
-PFX A w egitamp [w]
-PFX A 0 egitamu .
-PFX A 0 egitaba .
-PFX A 0 egitagu .
-PFX A 0 egitagi .
-PFX A 0 egitazi .
-PFX A 0 egitaki .
-PFX A 0 egitabi .
-PFX A 0 egitali .
-PFX A 0 egitaga .
-PFX A 0 egitaka .
-PFX A 0 egitabu .
-PFX A 0 egitalu .
-PFX A 0 egitaku .
-PFX A 0 egitatu .
-PFX A 0 ten [^lmn]
-PFX A l tend l.[^mn]
-PFX A l tenn l.[mn]
-PFX A w temp [w]
-PFX A 0 temu .
-PFX A 0 teba .
-PFX A 0 tegu .
-PFX A 0 tegi .
-PFX A 0 tezi .
-PFX A 0 teki .
-PFX A 0 tebi .
-PFX A 0 teli .
-PFX A 0 tega .
-PFX A 0 teka .
-PFX A 0 tebu .
-PFX A 0 telu .
-PFX A 0 teku .
-PFX A 0 tetu .
-PFX A 0 eten [^lmn]
-PFX A l etend l.[^mn]
-PFX A l etenn l.[mn]
-PFX A w etemp [w]
-PFX A 0 etemu .
-PFX A 0 eteba .
-PFX A 0 etegu .
-PFX A 0 etegi .
-PFX A 0 etezi .
-PFX A 0 eteki .
-PFX A 0 etebi .
-PFX A 0 eteli .
-PFX A 0 etega .
-PFX A 0 eteka .
-PFX A 0 etebu .
-PFX A 0 etelu .
-PFX A 0 eteku .
-PFX A 0 etetu .
-PFX A 0 tezin [^lmn]
-PFX A l tezind l.[^mn]
-PFX A l tezinn l.[mn]
-PFX A w tezimp [w]
-PFX A 0 tezimu .
-PFX A 0 teziba .
-PFX A 0 tezigu .
-PFX A 0 tezigi .
-PFX A 0 tezizi .
-PFX A 0 teziki .
-PFX A 0 tezibi .
-PFX A 0 tezili .
-PFX A 0 teziga .
-PFX A 0 tezika .
-PFX A 0 tezibu .
-PFX A 0 tezilu .
-PFX A 0 teziku .
-PFX A 0 tezitu .
-PFX A 0 ezitan [^lmn]
-PFX A l ezitand l.[^mn]
-PFX A l ezitann l.[mn]
-PFX A w ezitamp [w]
-PFX A 0 ezitamu .
-PFX A 0 ezitaba .
-PFX A 0 ezitagu .
-PFX A 0 ezitagi .
-PFX A 0 ezitazi .
-PFX A 0 ezitaki .
-PFX A 0 ezitabi .
-PFX A 0 ezitali .
-PFX A 0 ezitaga .
-PFX A 0 ezitaka .
-PFX A 0 ezitabu .
-PFX A 0 ezitalu .
-PFX A 0 ezitaku .
-PFX A 0 ezitatu .
-PFX A 0 tekin [^lmn]
-PFX A l tekind l.[^mn]
-PFX A l tekinn l.[mn]
-PFX A w tekimp [w]
-PFX A 0 tekimu .
-PFX A 0 tekiba .
-PFX A 0 tekigu .
-PFX A 0 tekigi .
-PFX A 0 tekizi .
-PFX A 0 tekiki .
-PFX A 0 tekibi .
-PFX A 0 tekili .
-PFX A 0 tekiga .
-PFX A 0 tekika .
-PFX A 0 tekibu .
-PFX A 0 tekilu .
-PFX A 0 tekiku .
-PFX A 0 tekitu .
-PFX A 0 ekitan [^lmn]
-PFX A l ekitand l.[^mn]
-PFX A l ekitann l.[mn]
-PFX A w ekitamp [w]
-PFX A 0 ekitamu .
-PFX A 0 ekitaba .
-PFX A 0 ekitagu .
-PFX A 0 ekitagi .
-PFX A 0 ekitazi .
-PFX A 0 ekitaki .
-PFX A 0 ekitabi .
-PFX A 0 ekitali .
-PFX A 0 ekitaga .
-PFX A 0 ekitaka .
-PFX A 0 ekitabu .
-PFX A 0 ekitalu .
-PFX A 0 ekitaku .
-PFX A 0 ekitatu .
-PFX A 0 tebin [^lmn]
-PFX A l tebind l.[^mn]
-PFX A l tebinn l.[mn]
-PFX A w tebimp [w]
-PFX A 0 tebimu .
-PFX A 0 tebiba .
-PFX A 0 tebigu .
-PFX A 0 tebigi .
-PFX A 0 tebizi .
-PFX A 0 tebiki .
-PFX A 0 tebibi .
-PFX A 0 tebili .
-PFX A 0 tebiga .
-PFX A 0 tebika .
-PFX A 0 tebibu .
-PFX A 0 tebilu .
-PFX A 0 tebiku .
-PFX A 0 tebitu .
-PFX A 0 ebitan [^lmn]
-PFX A l ebitand l.[^mn]
-PFX A l ebitann l.[mn]
-PFX A w ebitamp [w]
-PFX A 0 ebitamu .
-PFX A 0 ebitaba .
-PFX A 0 ebitagu .
-PFX A 0 ebitagi .
-PFX A 0 ebitazi .
-PFX A 0 ebitaki .
-PFX A 0 ebitabi .
-PFX A 0 ebitali .
-PFX A 0 ebitaga .
-PFX A 0 ebitaka .
-PFX A 0 ebitabu .
-PFX A 0 ebitalu .
-PFX A 0 ebitaku .
-PFX A 0 ebitatu .
-PFX A 0 telin [^lmn]
-PFX A l telind l.[^mn]
-PFX A l telinn l.[mn]
-PFX A w telimp [w]
-PFX A 0 telimu .
-PFX A 0 teliba .
-PFX A 0 teligu .
-PFX A 0 teligi .
-PFX A 0 telizi .
-PFX A 0 teliki .
-PFX A 0 telibi .
-PFX A 0 telili .
-PFX A 0 teliga .
-PFX A 0 telika .
-PFX A 0 telibu .
-PFX A 0 telilu .
-PFX A 0 teliku .
-PFX A 0 telitu .
-PFX A 0 elitan [^lmn]
-PFX A l elitand l.[^mn]
-PFX A l elitann l.[mn]
-PFX A w elitamp [w]
-PFX A 0 elitamu .
-PFX A 0 elitaba .
-PFX A 0 elitagu .
-PFX A 0 elitagi .
-PFX A 0 elitazi .
-PFX A 0 elitaki .
-PFX A 0 elitabi .
-PFX A 0 elitali .
-PFX A 0 elitaga .
-PFX A 0 elitaka .
-PFX A 0 elitabu .
-PFX A 0 elitalu .
-PFX A 0 elitaku .
-PFX A 0 elitatu .
-PFX A 0 tegan [^lmn]
-PFX A l tegand l.[^mn]
-PFX A l tegann l.[mn]
-PFX A w tegamp [w]
-PFX A 0 tegamu .
-PFX A 0 tegaba .
-PFX A 0 tegagu .
-PFX A 0 tegagi .
-PFX A 0 tegazi .
-PFX A 0 tegaki .
-PFX A 0 tegabi .
-PFX A 0 tegali .
-PFX A 0 tegaga .
-PFX A 0 tegaka .
-PFX A 0 tegabu .
-PFX A 0 tegalu .
-PFX A 0 tegaku .
-PFX A 0 tegatu .
-PFX A 0 agatan [^lmn]
-PFX A l agatand l.[^mn]
-PFX A l agatann l.[mn]
-PFX A w agatamp [w]
-PFX A 0 agatamu .
-PFX A 0 agataba .
-PFX A 0 agatagu .
-PFX A 0 agatagi .
-PFX A 0 agatazi .
-PFX A 0 agataki .
-PFX A 0 agatabi .
-PFX A 0 agatali .
-PFX A 0 agataga .
-PFX A 0 agataka .
-PFX A 0 agatabu .
-PFX A 0 agatalu .
-PFX A 0 agataku .
-PFX A 0 agatatu .
-PFX A 0 tekan [^lmn]
-PFX A l tekand l.[^mn]
-PFX A l tekann l.[mn]
-PFX A w tekamp [w]
-PFX A 0 tekamu .
-PFX A 0 tekaba .
-PFX A 0 tekagu .
-PFX A 0 tekagi .
-PFX A 0 tekazi .
-PFX A 0 tekaki .
-PFX A 0 tekabi .
-PFX A 0 tekali .
-PFX A 0 tekaga .
-PFX A 0 tekaka .
-PFX A 0 tekabu .
-PFX A 0 tekalu .
-PFX A 0 tekaku .
-PFX A 0 tekatu .
-PFX A 0 akatan [^lmn]
-PFX A l akatand l.[^mn]
-PFX A l akatann l.[mn]
-PFX A w akatamp [w]
-PFX A 0 akatamu .
-PFX A 0 akataba .
-PFX A 0 akatagu .
-PFX A 0 akatagi .
-PFX A 0 akatazi .
-PFX A 0 akataki .
-PFX A 0 akatabi .
-PFX A 0 akatali .
-PFX A 0 akataga .
-PFX A 0 akataka .
-PFX A 0 akatabu .
-PFX A 0 akatalu .
-PFX A 0 akataku .
-PFX A 0 akatatu .
-PFX A 0 tebun [^lmn]
-PFX A l tebund l.[^mn]
-PFX A l tebunn l.[mn]
-PFX A w tebump [w]
-PFX A 0 tebumu .
-PFX A 0 tebuba .
-PFX A 0 tebugu .
-PFX A 0 tebugi .
-PFX A 0 tebuzi .
-PFX A 0 tebuki .
-PFX A 0 tebubi .
-PFX A 0 tebuli .
-PFX A 0 tebuga .
-PFX A 0 tebuka .
-PFX A 0 tebubu .
-PFX A 0 tebulu .
-PFX A 0 tebuku .
-PFX A 0 tebutu .
-PFX A 0 obutan [^lmn]
-PFX A l obutand l.[^mn]
-PFX A l obutann l.[mn]
-PFX A w obutamp [w]
-PFX A 0 obutamu .
-PFX A 0 obutaba .
-PFX A 0 obutagu .
-PFX A 0 obutagi .
-PFX A 0 obutazi .
-PFX A 0 obutaki .
-PFX A 0 obutabi .
-PFX A 0 obutali .
-PFX A 0 obutaga .
-PFX A 0 obutaka .
-PFX A 0 obutabu .
-PFX A 0 obutalu .
-PFX A 0 obutaku .
-PFX A 0 obutatu .
-PFX A 0 telun [^lmn]
-PFX A l telund l.[^mn]
-PFX A l telunn l.[mn]
-PFX A w telump [w]
-PFX A 0 telumu .
-PFX A 0 teluba .
-PFX A 0 telugu .
-PFX A 0 telugi .
-PFX A 0 teluzi .
-PFX A 0 teluki .
-PFX A 0 telubi .
-PFX A 0 teluli .
-PFX A 0 teluga .
-PFX A 0 teluka .
-PFX A 0 telubu .
-PFX A 0 telulu .
-PFX A 0 teluku .
-PFX A 0 telutu .
-PFX A 0 olutan [^lmn]
-PFX A l olutand l.[^mn]
-PFX A l olutann l.[mn]
-PFX A w olutamp [w]
-PFX A 0 olutamu .
-PFX A 0 olutaba .
-PFX A 0 olutagu .
-PFX A 0 olutagi .
-PFX A 0 olutazi .
-PFX A 0 olutaki .
-PFX A 0 olutabi .
-PFX A 0 olutali .
-PFX A 0 olutaga .
-PFX A 0 olutaka .
-PFX A 0 olutabu .
-PFX A 0 olutalu .
-PFX A 0 olutaku .
-PFX A 0 olutatu .
-PFX A 0 tekun [^lmn]
-PFX A l tekund l.[^mn]
-PFX A l tekunn l.[mn]
-PFX A w tekump [w]
-PFX A 0 tekumu .
-PFX A 0 tekuba .
-PFX A 0 tekugu .
-PFX A 0 tekugi .
-PFX A 0 tekuzi .
-PFX A 0 tekuki .
-PFX A 0 tekubi .
-PFX A 0 tekuli .
-PFX A 0 tekuga .
-PFX A 0 tekuka .
-PFX A 0 tekubu .
-PFX A 0 tekulu .
-PFX A 0 tekuku .
-PFX A 0 tekutu .
-PFX A 0 okutan [^lmn]
-PFX A l okutand l.[^mn]
-PFX A l okutann l.[mn]
-PFX A w okutamp [w]
-PFX A 0 okutamu .
-PFX A 0 okutaba .
-PFX A 0 okutagu .
-PFX A 0 okutagi .
-PFX A 0 okutazi .
-PFX A 0 okutaki .
-PFX A 0 okutabi .
-PFX A 0 okutali .
-PFX A 0 okutaga .
-PFX A 0 okutaka .
-PFX A 0 okutabu .
-PFX A 0 okutalu .
-PFX A 0 okutaku .
-PFX A 0 okutatu .
-PFX A 0 tetun [^lmn]
-PFX A l tetund l.[^mn]
-PFX A l tetunn l.[mn]
-PFX A w tetump [w]
-PFX A 0 tetumu .
-PFX A 0 tetuba .
-PFX A 0 tetugu .
-PFX A 0 tetugi .
-PFX A 0 tetuzi .
-PFX A 0 tetuki .
-PFX A 0 tetubi .
-PFX A 0 tetuli .
-PFX A 0 tetuga .
-PFX A 0 tetuka .
-PFX A 0 tetubu .
-PFX A 0 tetulu .
-PFX A 0 tetuku .
-PFX A 0 tetutu .
-PFX A 0 otutan [^lmn]
-PFX A l otutand l.[^mn]
-PFX A l otutann l.[mn]
-PFX A w otutamp [w]
-PFX A 0 otutamu .
-PFX A 0 otutaba .
-PFX A 0 otutagu .
-PFX A 0 otutagi .
-PFX A 0 otutazi .
-PFX A 0 otutaki .
-PFX A 0 otutabi .
-PFX A 0 otutali .
-PFX A 0 otutaga .
-PFX A 0 otutaka .
-PFX A 0 otutabu .
-PFX A 0 otutalu .
-PFX A 0 otutaku .
-PFX A 0 otutatu .
-
 # Cross product a x F
 PFX I Y 590
 PFX I 0 saamu .
@@ -21839,6 +21365,7 @@ PFX W 0 otutaaku .
 PFX W 0 otutaatu .
 
 # Cross product c x F
+# Negative far future subject markers + object markers
 PFX T Y 698
 PFX T 0 silimu .
 PFX T 0 siliba .
