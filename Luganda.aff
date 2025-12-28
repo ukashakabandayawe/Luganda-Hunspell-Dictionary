@@ -2,7 +2,9 @@
 SET UTF8
 TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
 #BREAK ' 
-WORDCHARS '
+WORDCHARS '’
+INCONV 1
+INCONV  ’ '
 
 # Key principle: Never mix tense flags
 # In your .dic file, create separate entries:
