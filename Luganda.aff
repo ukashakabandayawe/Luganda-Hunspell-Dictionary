@@ -701,7 +701,7 @@ PFX w oku ma  oku # okugulu --> magulu
 PFX x Y 1
 PFX x o 0 ot[uw]
 
-# The possessive prefix
+# The impersonal possessive prefix
 PFX y Y 34 
 PFX y 0 w' [aeiou] 
 PFX y 0 ow' [aeiou] 
@@ -737,6 +737,141 @@ PFX y 0 g' [aeiou]
 PFX y 0 ag' [aeiou] 
 PFX y 0 tw' [aeiou] 
 PFX y 0 otw' [aeiou]  
+
+# Prefixes of nouns based on size e.g akaana, obwaana, ebyaana
+# This rule is explosive, so I missed some words, knowingly and unknowingly
+PFX z Y 128
+PFX z omu otu omu # omusajja-->otusajja
+PFX z omu obu omu # omusajja-->obusajja
+PFX z omu olu omu # omusajja-->olusajja
+PFX z omu aka omu # omusajja-->akasajja
+PFX z omu ogu omu # omusajja-->ogusajja
+PFX z omu aga omu # omusajja-->agasajja
+PFX z omu eki omu # omusajja-->ekisajja
+PFX z omu ebi omu # omusajja-->ebisajja
+PFX z omw olw omw # omwana-->olwana
+PFX z omw aka omw # omwana-->akaana
+PFX z omw otw omw # omwana-->otwana
+PFX z omw obw omw # omwana-->obwana
+PFX z omw ogw omw # omwana-->ogwana
+PFX z omw aga omw # omwana-->agaana
+PFX z omw eky omw # omwana-->ekyana
+PFX z omw eby omw # omwana-->ebyana
+PFX z en  otu en # ente-->otute
+PFX z em  otu em # embuzi-->otubuzi
+PFX z en  obu en # ente-->obute
+PFX z em  obu em # embuzi-->obubuzi
+PFX z en  olu en
+PFX z em  olu em
+PFX z en  aka en
+PFX z em  aka em
+PFX z en  ogu en
+PFX z em  ogu em
+PFX z en  aga en
+PFX z em  aga em
+PFX z en  eki en
+PFX z em  eki em
+PFX z en  ebi en
+PFX z em  ebi em
+PFX z eki otu eki 
+PFX z eki obu eki 
+PFX z eki olu eki  
+PFX z eki aka eki 
+PFX z eki ogu eki 
+PFX z eki aga eki 
+PFX z eki eki eki 
+PFX z eki ebi eki 
+# Class V
+PFX z e otu e.[^rdj] 
+PFX z e obu e.[^rdj]  
+PFX z e olu e.[^rdj]   
+PFX z e aka e.[^rdj]  
+PFX z e ogu e.[^rdj]  
+PFX z e aga e.[^rdj]  
+PFX z e eki e.[^rdj]  
+PFX z e ebi e.[^rdj] 
+PFX z ery otw ery 
+PFX z ery obw ery 
+PFX z ery olw ery  
+PFX z ery ak ery 
+PFX z ery ogw ery 
+PFX z ery ag ery 
+PFX z ery eky ery 
+PFX z ery eby ery 
+PFX z eri otu eri 
+PFX z eri obu eri 
+PFX z eri olu eri  
+PFX z eri aka eri 
+PFX z eri ogu eri 
+PFX z eri aga eri 
+PFX z eri eki eri 
+PFX z eri ebi eri 
+PFX z erii otuu erii 
+PFX z erii obuu erii 
+PFX z erii oluu erii  
+PFX z erii akaa erii 
+PFX z erii oguu erii 
+PFX z erii agaa erii 
+PFX z erii ekii erii 
+PFX z erii ebii erii 
+PFX z eb otu eb 
+PFX z eb obu eb 
+PFX z eb olu eb  
+PFX z eb aka eb 
+PFX z eb ogu eb 
+PFX z eb aga eb 
+PFX z eb eki eb 
+PFX z eb ebi eb 
+PFX z edd otul edd[^i] 
+PFX z edd obul edd[^i] 
+PFX z edd olul edd[^i]  
+PFX z edd akal edd[^i]
+PFX z edd ogul edd[^i] 
+PFX z edd agal edd[^i] 
+PFX z edd ekil edd[^i] 
+PFX z edd ebil edd[^i]
+PFX z ed otu edd[i] 
+PFX z ed obu edd[i] 
+PFX z ed olu edd[i]  
+PFX z ed aka edd[i] 
+PFX z ed ogu edd[i] 
+PFX z ed aga edd[i] 
+PFX z ed eki edd[i] 
+PFX z ed ebi edd[i] 
+PFX z ejj otuy ejj 
+PFX z ejj obuy ejj 
+PFX z ejj oluy ejj  
+PFX z ejj akay ejj 
+PFX z ejj oguy ejj 
+PFX z ejj agay ejj 
+PFX z ejj ekiy ejj 
+PFX z ejj ebiy ejj 
+# Class VII
+PFX z olu otu olu 
+PFX z olu obu olu 
+PFX z olu olu olu  
+PFX z olu aka olu 
+PFX z olu ogu olu 
+PFX z olu aga olu 
+PFX z olu eki olu 
+PFX z olu ebi olu 
+PFX z olw otw olw 
+PFX z olw obw olw 
+PFX z olw olw olw  
+PFX z olw ak olw 
+PFX z olw og olw 
+PFX z olw ag olw 
+PFX z olw eky olw 
+PFX z olw eby olw 
+# Class IX
+PFX z oku otu oku 
+PFX z oku obu oku 
+PFX z oku olu oku  
+PFX z oku aka oku 
+PFX z oku ogu oku 
+PFX z oku aga oku 
+PFX z oku eki oku 
+PFX z oku ebi oku 
 
 # Commented out and considered using modified stems in the .dic file       
 # # The very near past tense
