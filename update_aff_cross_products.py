@@ -3,10 +3,9 @@ import os
 
 AFF_FILE = r"e:\Luganda Hunspell Dictionary\Luganda.aff"
 
-# Configuration for the 9 cross products
+# Configuration for the cross products
 TRANSFORMATIONS = [
     # Source 1 (Subj), Source 2 (Obj), Target Flag, Filter Logic
-    {'s': 'C', 'o': 'F', 't': 'A', 'filter': '1st_person'},
     {'s': 'a', 'o': 'F', 't': 'I', 'filter': '1st_person'},
     {'s': 'b', 'o': 'F', 't': 'W', 'filter': '1st_person'},
     {'s': 'c', 'o': 'F', 't': 'T', 'filter': '1st_person'},
