@@ -58,7 +58,7 @@ def update_noun_rules(lines, y_rules):
     Iterates through noun class rules (n-x), generates cross-product rules with y,
     and updates the file content.
     """
-    noun_flags = ['n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x']
+    noun_flags = ['n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'g', 'h']
     
     # First pass: Parse existing noun blocks
     blocks = {}
