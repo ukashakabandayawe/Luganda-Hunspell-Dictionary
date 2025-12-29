@@ -23,8 +23,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class LugandaGeneratorApp extends Application {
 
@@ -334,6 +336,7 @@ public class LugandaGeneratorApp extends Application {
         Button clearErrors = new Button("Clear All Errors");
         Button refresh = new Button("Refresh from .aff");
         Button errorTable = new Button("Error Table");
+        Button flagTable = new Button("Words by Flag");
         Button generateRules = new Button("Generate Rules");
         
         clearErrors.setOnMouseClicked(e -> {
@@ -357,9 +360,10 @@ public class LugandaGeneratorApp extends Application {
         });
         
         errorTable.setOnAction(e -> showErrorTable(allRows, roots));
+        flagTable.setOnAction(e -> showWordsByFlagTable(allRows, roots));
         generateRules.setOnAction(e -> showRuleGenerator(allRows, roots));
         
-        HBox h = new HBox(8, back, save, clearErrors, refresh, errorTable, generateRules);
+        HBox h = new HBox(8, back, save, clearErrors, refresh, errorTable, flagTable, generateRules);
         h.setPadding(new Insets(8));
 
         VBox topBox = new VBox(searchBox, h);
@@ -556,6 +560,116 @@ public class LugandaGeneratorApp extends Application {
         Scene scene = new Scene(bp, 1000, 520);
         errorStage.setScene(scene);
         errorStage.show();
+    }
+
+    private void showWordsByFlagTable(ObservableList<Result> allRows, List<String> roots) {
+        Stage flagStage = new Stage();
+        flagStage.setTitle("Words by Flag");
+
+        // Determine flags (in encounter order), excluding ROOT
+        List<String> flags = new ArrayList<>();
+        for (Result r : allRows) {
+            String flag = r.getFlag();
+            if (flag == null) continue;
+            if ("ROOT".equalsIgnoreCase(flag)) continue;
+            if (!flags.contains(flag)) {
+                flags.add(flag);
+            }
+        }
+
+        // root -> flag -> unique words (preserve encounter order)
+        Map<String, Map<String, Set<String>>> wordsByRootFlag = new LinkedHashMap<>();
+        for (String root : roots) {
+            Map<String, Set<String>> byFlag = new LinkedHashMap<>();
+            for (String flag : flags) {
+                byFlag.put(flag, new LinkedHashSet<>());
+            }
+            wordsByRootFlag.put(root, byFlag);
+        }
+
+        for (Result r : allRows) {
+            String flag = r.getFlag();
+            if (flag == null) continue;
+            if ("ROOT".equalsIgnoreCase(flag)) continue;
+            for (String root : roots) {
+                String word = r.getWordsByRoot().getOrDefault(root, "");
+                if (word != null && !word.isEmpty()) {
+                    Map<String, Set<String>> byFlag = wordsByRootFlag.get(root);
+                    if (byFlag != null) {
+                        byFlag.computeIfAbsent(flag, k -> new LinkedHashSet<>()).add(word);
+                    }
+                }
+            }
+        }
+
+        // Compute maximum number of words across all (root, flag) buckets
+        int maxRows = 0;
+        for (String root : roots) {
+            Map<String, Set<String>> byFlag = wordsByRootFlag.get(root);
+            if (byFlag == null) continue;
+            for (Set<String> set : byFlag.values()) {
+                maxRows = Math.max(maxRows, set.size());
+            }
+        }
+
+        // Build aligned rows
+        ObservableList<Map<String, String>> tableRows = FXCollections.observableArrayList();
+        for (int i = 0; i < maxRows; i++) {
+            Map<String, String> row = new LinkedHashMap<>();
+            for (String root : roots) {
+                Map<String, Set<String>> byFlag = wordsByRootFlag.get(root);
+                if (byFlag == null) continue;
+                for (String flag : flags) {
+                    Set<String> set = byFlag.get(flag);
+                    String key = root + "|" + flag;
+                    if (set == null || set.isEmpty()) {
+                        row.put(key, "");
+                    } else {
+                        List<String> list = new ArrayList<>(set);
+                        row.put(key, i < list.size() ? list.get(i) : "");
+                    }
+                }
+            }
+            tableRows.add(row);
+        }
+
+        TableView<Map<String, String>> tv = new TableView<>(tableRows);
+
+        TableColumn<Map<String, String>, String> noCol = new TableColumn<>("No.");
+        noCol.setPrefWidth(50);
+        noCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(String.valueOf(tv.getItems().indexOf(cd.getValue()) + 1)));
+        noCol.setStyle("-fx-alignment: CENTER;");
+        tv.getColumns().add(noCol);
+
+        // Nested columns: root -> flags
+        for (String root : roots) {
+            TableColumn<Map<String, String>, String> rootCol = new TableColumn<>(root);
+            for (String flag : flags) {
+                final String key = root + "|" + flag;
+                TableColumn<Map<String, String>, String> flagCol = new TableColumn<>(flag);
+                flagCol.setPrefWidth(140);
+                flagCol.setStyle("-fx-alignment: CENTER;");
+                flagCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(cd.getValue().getOrDefault(key, "")));
+                rootCol.getColumns().add(flagCol);
+            }
+            tv.getColumns().add(rootCol);
+        }
+
+        Label info = new Label("Grouped by root and flag (duplicates removed).");
+        info.setStyle("-fx-font-size: 11px; -fx-text-fill: #666;");
+        Button closeBtn = new Button("Close");
+        closeBtn.setOnAction(e -> flagStage.close());
+        HBox bottom = new HBox(8, closeBtn);
+        bottom.setPadding(new Insets(8));
+
+        BorderPane bp = new BorderPane();
+        bp.setTop(new VBox(6, info, new Separator()));
+        bp.setCenter(tv);
+        bp.setBottom(bottom);
+
+        Scene scene = new Scene(bp, 1200, 600);
+        flagStage.setScene(scene);
+        flagStage.show();
     }
 
     public static class ProposedRule {
