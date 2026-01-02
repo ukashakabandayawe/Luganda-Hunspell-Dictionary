@@ -1,63 +1,63 @@
 import re
 
-# Raw content of Rule E (Subjects) from your file
+# Raw content of Rule SD (Subjects) from your file
 # I have removed duplicates and organized them
 rule_e_raw = """
-PFX E 0 n [^bnmlhprxq]
-PFX E 0 m [b]
-PFX E 0 o .
-PFX E l nd [l]
-PFX E 0 a .
-PFX E 0 tu .
-PFX E 0 mu .
-PFX E 0 ba .
-PFX E 0 aba .
-PFX E 0 gu .
-PFX E 0 ogu .
-PFX E 0 gi .
-PFX E 0 egi .
-PFX E 0 e [^aeiou]
-PFX E 0 zi .
-PFX E 0 ezi .
-PFX E 0 ki .
-PFX E 0 eki .
-PFX E 0 bi .
-PFX E 0 ebi .
-PFX E 0 li .
-PFX E 0 eli .
-PFX E 0 ga .
-PFX E 0 aga .
-PFX E 0 ka .
-PFX E 0 aka .
-PFX E 0 bu .
-PFX E 0 obu .
-PFX E 0 lu .
-PFX E 0 olu .
-PFX E 0 ku .
-PFX E 0 oku .
-PFX E 0 otu .
+PFX SD 0 n [^bnmlhprxq]
+PFX SD 0 m [b]
+PFX SD 0 o .
+PFX SD l nd [l]
+PFX SD 0 a .
+PFX SD 0 tu .
+PFX SD 0 mu .
+PFX SD 0 ba .
+PFX SD 0 aba .
+PFX SD 0 gu .
+PFX SD 0 ogu .
+PFX SD 0 gi .
+PFX SD 0 egi .
+PFX SD 0 e [^aeiou]
+PFX SD 0 zi .
+PFX SD 0 ezi .
+PFX SD 0 ki .
+PFX SD 0 eki .
+PFX SD 0 bi .
+PFX SD 0 ebi .
+PFX SD 0 li .
+PFX SD 0 eli .
+PFX SD 0 ga .
+PFX SD 0 aga .
+PFX SD 0 ka .
+PFX SD 0 aka .
+PFX SD 0 bu .
+PFX SD 0 obu .
+PFX SD 0 lu .
+PFX SD 0 olu .
+PFX SD 0 ku .
+PFX SD 0 oku .
+PFX SD 0 otu .
 """
 
-# Raw content of Rule F (Objects) from your file
+# Raw content of Rule Ob (Objects) from your file
 rule_f_raw = """
-PFX F 0 n .
-PFX F l nd l.[^mn]
-PFX F l nn l.[mn]
-PFX F w mp [w]
-PFX F 0 mu .
-PFX F 0 ba .
-PFX F 0 gu .
-PFX F 0 gi .
-PFX F 0 zi . 
-PFX F 0 ki .
-PFX F 0 bi .
-PFX F 0 li .
-PFX F 0 ga .
-PFX F 0 ka .
-PFX F 0 bu .
-PFX F 0 lu .
-PFX F 0 ku .
-PFX F 0 tu .
+PFX Ob 0 n .
+PFX Ob l nd l.[^mn]
+PFX Ob l nn l.[mn]
+PFX Ob w mp [w]
+PFX Ob 0 mu .
+PFX Ob 0 ba .
+PFX Ob 0 gu .
+PFX Ob 0 gi .
+PFX Ob 0 zi . 
+PFX Ob 0 ki .
+PFX Ob 0 bi .
+PFX Ob 0 li .
+PFX Ob 0 ga .
+PFX Ob 0 ka .
+PFX Ob 0 bu .
+PFX Ob 0 lu .
+PFX Ob 0 ku .
+PFX Ob 0 tu .
 """
 
 def parse_rules(raw_text):
@@ -120,6 +120,6 @@ for sub in subjects:
             new_rules.append(new_entry)
 
 # Output the result
-print(f"PFX N Y {len(new_rules)}")
+print(f"PFX NN Y {len(new_rules)}")
 for r in new_rules:
-    print(f"PFX N {r['strip']} {r['add']} {r['cond']}")
+    print(f"PFX NN {r['strip']} {r['add']} {r['cond']}")
