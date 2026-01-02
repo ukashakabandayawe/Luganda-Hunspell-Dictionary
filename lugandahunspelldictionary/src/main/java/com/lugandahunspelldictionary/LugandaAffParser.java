@@ -4,9 +4,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class LugandaAffParser {
 
@@ -70,24 +72,30 @@ public class LugandaAffParser {
      * Generate words for a single root using the parsed affix map.
      */
     public static List<String> generateFromRoot(String root, Map<String, List<AffixEntry>> affMap) {
-        List<String> out = new ArrayList<>();
-        if (root == null) return out;
+        if (root == null || root.isEmpty()) {
+            return new ArrayList<>();
+        }
+        if (affMap == null || affMap.isEmpty()) {
+            List<String> out = new ArrayList<>();
+            out.add(root);
+            return out;
+        }
+
+        // Preserve encounter order but avoid duplicates.
+        Set<String> out = new LinkedHashSet<>();
         out.add(root); // include bare root
 
-        for (Map.Entry<String, List<AffixEntry>> e : affMap.entrySet()) {
-            for (AffixEntry ae : e.getValue()) {
-                if (ae.strip.isEmpty()) {
-                    out.add(ae.affix + root);
-                } else {
-                    if (root.startsWith(ae.strip)) {
-                        String remainder = root.substring(ae.strip.length());
-                        out.add(ae.affix + remainder);
-                    }
+        for (List<AffixEntry> entries : affMap.values()) {
+            if (entries == null) continue;
+            for (AffixEntry ae : entries) {
+                String generated = apply(ae, root);
+                if (generated != null && !generated.isEmpty()) {
+                    out.add(generated);
                 }
             }
         }
 
-        return out;
+        return new ArrayList<>(out);
     }
 
     public static String apply(AffixEntry entry, String root) {

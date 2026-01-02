@@ -19,8 +19,10 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Collections;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -31,6 +33,13 @@ import java.util.Set;
 public class LugandaGeneratorApp extends Application {
 
     private Path defaultAffPath = Paths.get("Luganda.aff");
+    private Path defaultDicPath = Paths.get("Luganda.dic");
+
+    private enum HunspellFlagMode {
+        DEFAULT,
+        LONG,
+        NUM
+    }
 
     public static class Result {
         private final Map<String, String> wordsByRoot; // root -> generated word
@@ -641,12 +650,31 @@ public class LugandaGeneratorApp extends Application {
         noCol.setStyle("-fx-alignment: CENTER;");
         tv.getColumns().add(noCol);
 
+        // Flag selection controls: root -> selected flags
+        Map<String, Set<String>> selectedFlagsByRoot = new LinkedHashMap<>();
+        for (String root : roots) {
+            selectedFlagsByRoot.put(root, new LinkedHashSet<>());
+        }
+
         // Nested columns: root -> flags
         for (String root : roots) {
             TableColumn<Map<String, String>, String> rootCol = new TableColumn<>(root);
             for (String flag : flags) {
                 final String key = root + "|" + flag;
-                TableColumn<Map<String, String>, String> flagCol = new TableColumn<>(flag);
+                // Header checkbox lets user select this flag for this root
+                CheckBox headerCheck = new CheckBox(flag);
+                headerCheck.setOnAction(e -> {
+                    Set<String> set = selectedFlagsByRoot.getOrDefault(root, new LinkedHashSet<>());
+                    if (headerCheck.isSelected()) {
+                        set.add(flag);
+                    } else {
+                        set.remove(flag);
+                    }
+                    selectedFlagsByRoot.put(root, set);
+                });
+
+                TableColumn<Map<String, String>, String> flagCol = new TableColumn<>();
+                flagCol.setGraphic(headerCheck);
                 flagCol.setPrefWidth(140);
                 flagCol.setStyle("-fx-alignment: CENTER;");
                 flagCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(cd.getValue().getOrDefault(key, "")));
@@ -655,11 +683,72 @@ public class LugandaGeneratorApp extends Application {
             tv.getColumns().add(rootCol);
         }
 
-        Label info = new Label("Grouped by root and flag (duplicates removed).");
+        Label info = new Label("Grouped by root and flag (duplicates removed). Select flags in headers, then Apply to update Luganda.dic.");
         info.setStyle("-fx-font-size: 11px; -fx-text-fill: #666;");
+
+        Button applyBtn = new Button("Apply to Luganda.dic");
+        applyBtn.setStyle("-fx-font-weight: bold;");
+        applyBtn.setOnAction(e -> {
+            Map<String, Set<String>> toApply = new LinkedHashMap<>();
+            for (Map.Entry<String, Set<String>> entry : selectedFlagsByRoot.entrySet()) {
+                if (entry.getValue() != null && !entry.getValue().isEmpty()) {
+                    toApply.put(entry.getKey(), new LinkedHashSet<>(entry.getValue()));
+                }
+            }
+
+            if (toApply.isEmpty()) {
+                Alert a = new Alert(Alert.AlertType.INFORMATION, "No flags selected.", ButtonType.OK);
+                a.setHeaderText(null);
+                a.showAndWait();
+                return;
+            }
+
+            StringBuilder summary = new StringBuilder();
+            for (Map.Entry<String, Set<String>> entry : toApply.entrySet()) {
+                summary.append(entry.getKey()).append(": ");
+                summary.append(String.join(", ", entry.getValue()));
+                summary.append("\n");
+            }
+
+            Alert confirm = new Alert(
+                    Alert.AlertType.CONFIRMATION,
+                    "Apply these flags to stems in " + defaultDicPath.toAbsolutePath() + "?\n\n" + summary,
+                    ButtonType.OK,
+                    ButtonType.CANCEL
+            );
+            confirm.setHeaderText("Confirm updating Luganda.dic");
+            confirm.showAndWait();
+            if (confirm.getResult() != ButtonType.OK) {
+                return;
+            }
+
+            try {
+                HunspellFlagMode mode = detectFlagMode(defaultAffPath);
+                ApplyResult result = applyFlagsToDic(defaultDicPath, toApply, mode);
+                Alert ok = new Alert(Alert.AlertType.INFORMATION, result.toUserMessage(), ButtonType.OK);
+                ok.setHeaderText("Luganda.dic updated");
+                ok.showAndWait();
+                // Clear UI selections after success
+                for (TableColumn<Map<String, String>, ?> top : tv.getColumns()) {
+                    if (top == noCol) continue;
+                    for (TableColumn<Map<String, String>, ?> sub : top.getColumns()) {
+                        javafx.scene.Node graphic = sub.getGraphic();
+                        if (graphic instanceof CheckBox) {
+                            ((CheckBox) graphic).setSelected(false);
+                        }
+                    }
+                }
+                for (String root : roots) {
+                    selectedFlagsByRoot.put(root, new LinkedHashSet<>());
+                }
+            } catch (Exception ex) {
+                showError("Failed to update Luganda.dic: " + ex.getMessage());
+            }
+        });
+
         Button closeBtn = new Button("Close");
         closeBtn.setOnAction(e -> flagStage.close());
-        HBox bottom = new HBox(8, closeBtn);
+        HBox bottom = new HBox(8, closeBtn, applyBtn);
         bottom.setPadding(new Insets(8));
 
         BorderPane bp = new BorderPane();
@@ -670,6 +759,195 @@ public class LugandaGeneratorApp extends Application {
         Scene scene = new Scene(bp, 1200, 600);
         flagStage.setScene(scene);
         flagStage.show();
+    }
+
+    private static class ApplyResult {
+        private final int totalMatchedLines;
+        private final int totalChangedLines;
+        private final Map<String, Integer> matchedByRoot;
+        private final Map<String, Integer> changedByRoot;
+
+        private ApplyResult(int totalMatchedLines, int totalChangedLines, Map<String, Integer> matchedByRoot, Map<String, Integer> changedByRoot) {
+            this.totalMatchedLines = totalMatchedLines;
+            this.totalChangedLines = totalChangedLines;
+            this.matchedByRoot = matchedByRoot;
+            this.changedByRoot = changedByRoot;
+        }
+
+        private String toUserMessage() {
+            StringBuilder sb = new StringBuilder();
+            sb.append("Matched lines: ").append(totalMatchedLines).append("\n");
+            sb.append("Updated lines: ").append(totalChangedLines).append("\n\n");
+            for (String root : matchedByRoot.keySet()) {
+                int m = matchedByRoot.getOrDefault(root, 0);
+                int c = changedByRoot.getOrDefault(root, 0);
+                sb.append(root).append(": ").append(c).append("/").append(m).append(" updated\n");
+            }
+            return sb.toString().trim();
+        }
+    }
+
+    private static HunspellFlagMode detectFlagMode(Path affPath) {
+        if (affPath == null) return HunspellFlagMode.DEFAULT;
+        try {
+            for (String raw : Files.readAllLines(affPath)) {
+                if (raw == null) continue;
+                String line = raw.trim();
+                if (line.isEmpty()) continue;
+                if (line.startsWith("#")) continue;
+                if (!line.toUpperCase().startsWith("FLAG")) continue;
+                String[] toks = line.split("\\s+");
+                if (toks.length < 2) return HunspellFlagMode.DEFAULT;
+                String mode = toks[1].trim().toLowerCase();
+                if ("long".equals(mode)) return HunspellFlagMode.LONG;
+                if ("num".equals(mode)) return HunspellFlagMode.NUM;
+                return HunspellFlagMode.DEFAULT;
+            }
+        } catch (IOException ignored) {
+            // fall back
+        }
+        return HunspellFlagMode.DEFAULT;
+    }
+
+    private static ApplyResult applyFlagsToDic(Path dicPath, Map<String, Set<String>> flagsToAddByRoot, HunspellFlagMode mode) throws IOException {
+        if (dicPath == null) throw new IllegalArgumentException("dicPath is null");
+        if (flagsToAddByRoot == null || flagsToAddByRoot.isEmpty()) {
+            return new ApplyResult(0, 0, Collections.emptyMap(), Collections.emptyMap());
+        }
+
+        List<String> lines = Files.readAllLines(dicPath, StandardCharsets.UTF_8);
+        Map<String, Integer> matchedByRoot = new LinkedHashMap<>();
+        Map<String, Integer> changedByRoot = new LinkedHashMap<>();
+        for (String root : flagsToAddByRoot.keySet()) {
+            matchedByRoot.put(root, 0);
+            changedByRoot.put(root, 0);
+        }
+
+        int totalMatched = 0;
+        int totalChanged = 0;
+
+        for (int i = 0; i < lines.size(); i++) {
+            String line = lines.get(i);
+            if (line == null) continue;
+            if (i == 0) continue; // count line
+
+            String trimmed = line.trim();
+            if (trimmed.isEmpty()) continue;
+            if (trimmed.startsWith("#")) continue;
+
+            int firstWs = indexOfWhitespace(line);
+            String wordFlagsToken = firstWs >= 0 ? line.substring(0, firstWs) : line;
+            String rest = firstWs >= 0 ? line.substring(firstWs) : "";
+
+            int slashIdx = wordFlagsToken.indexOf('/');
+            String stem = slashIdx >= 0 ? wordFlagsToken.substring(0, slashIdx) : wordFlagsToken;
+            String existingFlagsRaw = slashIdx >= 0 ? wordFlagsToken.substring(slashIdx + 1) : "";
+
+            Set<String> toAdd = flagsToAddByRoot.get(stem);
+            if (toAdd == null || toAdd.isEmpty()) continue;
+
+            matchedByRoot.put(stem, matchedByRoot.getOrDefault(stem, 0) + 1);
+            totalMatched++;
+
+            String merged = mergeFlags(existingFlagsRaw, toAdd, mode);
+            boolean changed = !merged.equals(existingFlagsRaw);
+            String newToken = stem + (merged.isEmpty() ? "" : "/" + merged);
+            String newLine = newToken + rest;
+            if (changed) {
+                lines.set(i, newLine);
+                changedByRoot.put(stem, changedByRoot.getOrDefault(stem, 0) + 1);
+                totalChanged++;
+            }
+        }
+
+        Files.write(dicPath, lines, StandardCharsets.UTF_8);
+        return new ApplyResult(totalMatched, totalChanged, matchedByRoot, changedByRoot);
+    }
+
+    private static int indexOfWhitespace(String s) {
+        if (s == null) return -1;
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.isWhitespace(s.charAt(i))) return i;
+        }
+        return -1;
+    }
+
+    private static String mergeFlags(String existingFlagsRaw, Set<String> flagsToAdd, HunspellFlagMode mode) {
+        if (existingFlagsRaw == null) existingFlagsRaw = "";
+        if (flagsToAdd == null || flagsToAdd.isEmpty()) return existingFlagsRaw;
+
+        if (mode == HunspellFlagMode.LONG) return mergeLongFlags(existingFlagsRaw, flagsToAdd);
+        if (mode == HunspellFlagMode.NUM) return mergeNumFlags(existingFlagsRaw, flagsToAdd);
+        return mergeDefaultFlags(existingFlagsRaw, flagsToAdd);
+    }
+
+    private static String mergeLongFlags(String existingFlagsRaw, Set<String> flagsToAdd) {
+        LinkedHashSet<String> tokens = new LinkedHashSet<>();
+        tokens.addAll(splitLongFlags(existingFlagsRaw));
+        for (String f : flagsToAdd) {
+            if (f == null) continue;
+            String t = f.trim();
+            if (t.isEmpty()) continue;
+            // For FLAG long, each token must be exactly 2 chars.
+            // If user-selected flag isn't 2 chars, append as-is (best effort).
+            tokens.add(t);
+        }
+        return String.join("", tokens);
+    }
+
+    private static List<String> splitLongFlags(String flagsRaw) {
+        if (flagsRaw == null) return Collections.emptyList();
+        String s = flagsRaw.trim();
+        if (s.isEmpty()) return Collections.emptyList();
+        List<String> out = new ArrayList<>();
+        for (int i = 0; i < s.length(); i += 2) {
+            int end = Math.min(i + 2, s.length());
+            out.add(s.substring(i, end));
+        }
+        return out;
+    }
+
+    private static String mergeNumFlags(String existingFlagsRaw, Set<String> flagsToAdd) {
+        // Hunspell numeric flags are comma-separated numbers.
+        LinkedHashSet<String> tokens = new LinkedHashSet<>();
+        String s = existingFlagsRaw == null ? "" : existingFlagsRaw.trim();
+        if (!s.isEmpty()) {
+            for (String part : s.split(",")) {
+                String t = part.trim();
+                if (!t.isEmpty()) tokens.add(t);
+            }
+        }
+        for (String f : flagsToAdd) {
+            if (f == null) continue;
+            String t = f.trim();
+            if (!t.isEmpty()) tokens.add(t);
+        }
+        return String.join(",", tokens);
+    }
+
+    private static String mergeDefaultFlags(String existingFlagsRaw, Set<String> flagsToAdd) {
+        // Default hunspell flags are single characters concatenated.
+        LinkedHashSet<String> tokens = new LinkedHashSet<>();
+        String s = existingFlagsRaw == null ? "" : existingFlagsRaw;
+        for (int i = 0; i < s.length(); i++) {
+            tokens.add(String.valueOf(s.charAt(i)));
+        }
+        for (String f : flagsToAdd) {
+            if (f == null) continue;
+            String t = f.trim();
+            if (t.isEmpty()) continue;
+            // Best-effort: if longer than 1 char, add each char.
+            if (t.length() == 1) {
+                tokens.add(t);
+            } else {
+                for (int i = 0; i < t.length(); i++) {
+                    tokens.add(String.valueOf(t.charAt(i)));
+                }
+            }
+        }
+        StringBuilder out = new StringBuilder();
+        for (String tok : tokens) out.append(tok);
+        return out.toString();
     }
 
     public static class ProposedRule {
