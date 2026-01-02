@@ -3,63 +3,63 @@ import os
 
 AFF_FILE = r"e:\Luganda Hunspell Dictionary\New.aff"
 
-# Rule K (Future Tense Subjects)
+# Rule SE (Near-future Tense Subjects)
 # Cleaned up duplicates and fixed formatting (added missing dots)
 rule_k_raw = """
-PFX K 0 naa .
-PFX K 0 munaa .
-PFX K 0 onoo .
-PFX K 0 onaa .
-PFX K 0 anaa .
-PFX K 0 tunaa .
-PFX K 0 banaa .
-PFX K 0 abanaa .
-PFX K 0 gunaa .
-PFX K 0 ogunaa .
-PFX K 0 ginaa .
-PFX K 0 eginaa .
-PFX K 0 enaa .
-PFX K 0 zinaa .
-PFX K 0 ezinaa .
-PFX K 0 kinaa .
-PFX K 0 ekinaa .
-PFX K 0 binaa .
-PFX K 0 ebinaa .
-PFX K 0 linaa .
-PFX K 0 elinaa .
-PFX K 0 ganaa .
-PFX K 0 aganaa .
-PFX K 0 kanaa .
-PFX K 0 akanaa .
-PFX K 0 bunaa .
-PFX K 0 obunaa .
-PFX K 0 lunaa .
-PFX K 0 olunaa .
-PFX K 0 kunaa .
-PFX K 0 okunaa .
-PFX K 0 otunaa .
+PFX SE 0 naa .
+PFX SE 0 munaa .
+PFX SE 0 onoo .
+PFX SE 0 onaa .
+PFX SE 0 anaa .
+PFX SE 0 tunaa .
+PFX SE 0 banaa .
+PFX SE 0 abanaa .
+PFX SE 0 gunaa .
+PFX SE 0 ogunaa .
+PFX SE 0 ginaa .
+PFX SE 0 eginaa .
+PFX SE 0 enaa .
+PFX SE 0 zinaa .
+PFX SE 0 ezinaa .
+PFX SE 0 kinaa .
+PFX SE 0 ekinaa .
+PFX SE 0 binaa .
+PFX SE 0 ebinaa .
+PFX SE 0 linaa .
+PFX SE 0 elinaa .
+PFX SE 0 ganaa .
+PFX SE 0 aganaa .
+PFX SE 0 kanaa .
+PFX SE 0 akanaa .
+PFX SE 0 bunaa .
+PFX SE 0 obunaa .
+PFX SE 0 lunaa .
+PFX SE 0 olunaa .
+PFX SE 0 kunaa .
+PFX SE 0 okunaa .
+PFX SE 0 otunaa .
 """
 
-# Rule F (Objects)
+# Rule Ob (Objects)
 rule_f_raw = """
-PFX F 0 n .
-PFX F l nd l.[^mn]
-PFX F l nn l.[mn]
-PFX F w mp [w]
-PFX F 0 mu .
-PFX F 0 ba .
-PFX F 0 gu .
-PFX F 0 gi .
-PFX F 0 zi . 
-PFX F 0 ki .
-PFX F 0 bi .
-PFX F 0 li .
-PFX F 0 ga .
-PFX F 0 ka .
-PFX F 0 bu .
-PFX F 0 lu .
-PFX F 0 ku .
-PFX F 0 tu .
+PFX Ob 0 n .
+PFX Ob l nd l.[^mn]
+PFX Ob l nn l.[mn]
+PFX Ob w mp [w]
+PFX Ob 0 mu .
+PFX Ob 0 ba .
+PFX Ob 0 gu .
+PFX Ob 0 gi .
+PFX Ob 0 zi . 
+PFX Ob 0 ki .
+PFX Ob 0 bi .
+PFX Ob 0 li .
+PFX Ob 0 ga .
+PFX Ob 0 ka .
+PFX Ob 0 bu .
+PFX Ob 0 lu .
+PFX Ob 0 ku .
+PFX Ob 0 tu .
 """
 
 def parse_rules(raw_text):
@@ -110,9 +110,9 @@ def generate_q_block():
                 new_rules.append(new_entry)
 
     output = []
-    output.append(f"PFX Q Y {len(new_rules)}")
+    output.append(f"PFX QQ Y {len(new_rules)}")
     for r in new_rules:
-        output.append(f"PFX Q {r['strip']} {r['add']} {r['cond']}")
+        output.append(f"PFX QQ {r['strip']} {r['add']} {r['cond']}")
     return "\n".join(output) + "\n"
 
 def main():
@@ -127,8 +127,8 @@ def main():
     with open(AFF_FILE, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-    # Remove existing PFX Q lines to avoid duplicates
-    new_lines = [line for line in lines if not line.strip().startswith("PFX Q ")]
+    # Remove existing PFX QQ lines to avoid duplicates
+    new_lines = [line for line in lines if not line.strip().startswith("PFX QQ ")]
 
     # Ensure the file ends with a newline before appending
     if new_lines and not new_lines[-1].endswith('\n'):

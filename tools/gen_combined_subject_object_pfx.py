@@ -38,19 +38,23 @@ def read_adds(aff_text: str, flag: str) -> list[str]:
 def main() -> None:
     aff = AFF_PATH.read_text(encoding="utf-8")
 
-    subjects = read_adds(aff, "E")
-    objects = read_adds(aff, "F")
+    # Long-flag mode mappings (see Luganda.aff comments):
+    #   E -> SD (present/very-near-past subject markers)
+    #   F -> Ob (object markers)
+    #   N -> NN (combined subject×object)
+    subjects = read_adds(aff, "SD")
+    objects = read_adds(aff, "Ob")
 
     total = len(subjects) * len(objects)
 
     out: list[str] = []
     out.append("# Auto-generated combined subject×object prefixes")
     out.append("# NOTE: This generator ignores real strip+condition behavior and forces: strip=0, cond=.")
-    out.append(f"PFX N Y {total}")
+    out.append(f"PFX NN Y {total}")
 
     for s in subjects:
         for o in objects:
-            out.append(f"PFX N 0 {s}{o} .")
+            out.append(f"PFX NN 0 {s}{o} .")
 
     print("\n".join(out))
 

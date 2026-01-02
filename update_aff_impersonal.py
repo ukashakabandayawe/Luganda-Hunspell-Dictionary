@@ -46,7 +46,8 @@ def get_y_rules(lines):
     """Extracts all rules for the impersonal prefix (PFX y)."""
     y_rules = []
     for i, line in enumerate(lines):
-        if line.strip().startswith("PFX y Y"):
+        # Long-flag mode: y -> yy
+        if line.strip().startswith("PFX yy Y"):
             rules, _ = parse_pfx_block(lines, i)
             for r in rules:
                 y_rules.append({'add': r['add'], 'cond': r['cond']})
@@ -58,7 +59,10 @@ def update_noun_rules(lines, y_rules):
     Iterates through noun class rules (n-x), generates cross-product rules with y,
     and updates the file content.
     """
-    noun_flags = ['n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'g', 'h']
+    # Long-flag mode mappings (see Luganda.aff comments):
+    #   n..x -> Na..Nj
+    #   g/h  -> gg/hh
+    noun_flags = ['Na', 'Nb', 'Nc', 'Nd', 'Ne', 'Nf', 'Ng', 'Nh', 'Ni', 'Nj', 'gg', 'hh']
     
     # First pass: Parse existing noun blocks
     blocks = {}

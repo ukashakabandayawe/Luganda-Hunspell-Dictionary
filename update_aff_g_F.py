@@ -80,18 +80,21 @@ def main():
     print(f"Reading {AFF_FILE}...")
     lines = read_aff(AFF_FILE)
     
-    g_rules = parse_pfx_block(lines, 'g')
-    f_rules = parse_pfx_block(lines, 'F')
+    # Long-flag mode mappings:
+    #   g -> gg (infinitive)
+    #   F -> Ob (object)
+    g_rules = parse_pfx_block(lines, 'gg')
+    f_rules = parse_pfx_block(lines, 'Ob')
     
     print(f"Found {len(g_rules)} rules for g (Infinitive) and {len(f_rules)} for F (Object).")
     
     new_rules = generate_cross_product(g_rules, f_rules)
-    new_flag = 'M'
+    new_flag = 'MM'
     
     print(f"Generated {len(new_rules)} combined rules under new flag '{new_flag}'.")
     
     with open(AFF_FILE, 'a', encoding='utf-8') as f:
-        f.write(f"\n# Cross product of Infinitive (g) and Object (F)\n")
+        f.write(f"\n# Cross product of Infinitive (gg) and Object (Ob)\n")
         f.write(f"PFX {new_flag} Y {len(new_rules)}\n")
         for r in new_rules:
             f.write(f"PFX {new_flag} {r['strip']} {r['add']} {r['cond']}\n")

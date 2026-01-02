@@ -3,17 +3,22 @@ import os
 
 AFF_FILE = r"e:\Luganda Hunspell Dictionary\Luganda.aff"
 
-# Configuration for the cross products
+# Configuration for the cross products (FLAG long)
 TRANSFORMATIONS = [
     # Source 1 (Subj), Source 2 (Obj), Target Flag, Filter Logic
-    {'s': 'a', 'o': 'F', 't': 'I', 'filter': '1st_person'},
-    {'s': 'b', 'o': 'F', 't': 'W', 'filter': '1st_person'},
-    {'s': 'c', 'o': 'F', 't': 'T', 'filter': '1st_person'},
-    {'s': 'E', 'o': 'H', 't': 'U', 'filter': None},
-    {'s': 'G', 'o': 'H', 't': 'V', 'filter': None},
-    {'s': 'J', 'o': 'H', 't': 'X', 'filter': None},
-    {'s': 'K', 'o': 'H', 't': 'Y', 'filter': None},
-    {'s': 'L', 'o': 'H', 't': 'Z', 'filter': None},
+    # a/b/c were negative subjects; F was object; H was special reflexive-object.
+    # New long flags (see Luganda.aff comments):
+    #   C->ps, a->np, b->nf, c->ff, E->SD, G->SB, J->SA, K->SE, L->SF, F->Ob, H->OR
+    #   I->II, W->WW, T->TT, U->UU, V->VV, X->XX, Y->YY, Z->ZZ
+    {'s': 'ps', 'o': 'Ob', 't': 'SS', 'filter': '1st_person'},
+    {'s': 'np', 'o': 'Ob', 't': 'II', 'filter': '1st_person'},
+    {'s': 'nf', 'o': 'Ob', 't': 'WW', 'filter': '1st_person'},
+    {'s': 'ff', 'o': 'Ob', 't': 'TT', 'filter': '1st_person'},
+    {'s': 'SD', 'o': 'OR', 't': 'UU', 'filter': None},
+    {'s': 'SB', 'o': 'OR', 't': 'VV', 'filter': None},
+    {'s': 'SA', 'o': 'OR', 't': 'XX', 'filter': None},
+    {'s': 'SE', 'o': 'OR', 't': 'YY', 'filter': None},
+    {'s': 'SF', 'o': 'OR', 't': 'ZZ', 'filter': None},
 ]
 
 def read_aff(file_path):

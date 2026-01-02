@@ -3,62 +3,62 @@ import os
 
 AFF_FILE = r"e:\Luganda Hunspell Dictionary\New.aff"
 
-# Rule L (Far Future Tense Subjects)
+# Rule SF (Far Future Tense Subjects) (was flag L)
 # Cleaned up duplicates and normalized
 rule_l_raw = """
-PFX L 0 ndi .
-PFX L 0 oli .
-PFX L 0 ali .
-PFX L 0 tuli .
-PFX L 0 muli .
-PFX L 0 bali .
-PFX L 0 abali .
-PFX L 0 guli .
-PFX L 0 oguli .
-PFX L 0 gili .
-PFX L 0 egili .
-PFX L 0 eli .
-PFX L 0 zili .
-PFX L 0 ezili .
-PFX L 0 kili .
-PFX L 0 ekili .
-PFX L 0 bili .
-PFX L 0 ebili .
-PFX L 0 lili .
-PFX L 0 elili .
-PFX L 0 gali .
-PFX L 0 agali .
-PFX L 0 kali .
-PFX L 0 akali .
-PFX L 0 buli .
-PFX L 0 obuli .
-PFX L 0 luli .
-PFX L 0 oluli .
-PFX L 0 kuli .
-PFX L 0 okuli .
-PFX L 0 otuli .
+PFX SF 0 ndi .
+PFX SF 0 oli .
+PFX SF 0 ali .
+PFX SF 0 tuli .
+PFX SF 0 muli .
+PFX SF 0 bali .
+PFX SF 0 abali .
+PFX SF 0 guli .
+PFX SF 0 oguli .
+PFX SF 0 gili .
+PFX SF 0 egili .
+PFX SF 0 eli .
+PFX SF 0 zili .
+PFX SF 0 ezili .
+PFX SF 0 kili .
+PFX SF 0 ekili .
+PFX SF 0 bili .
+PFX SF 0 ebili .
+PFX SF 0 lili .
+PFX SF 0 elili .
+PFX SF 0 gali .
+PFX SF 0 agali .
+PFX SF 0 kali .
+PFX SF 0 akali .
+PFX SF 0 buli .
+PFX SF 0 obuli .
+PFX SF 0 luli .
+PFX SF 0 oluli .
+PFX SF 0 kuli .
+PFX SF 0 okuli .
+PFX SF 0 otuli .
 """
 
-# Rule F (Objects)
+# Rule Ob (Objects) (was flag F)
 rule_f_raw = """
-PFX F 0 n .
-PFX F l nd l.[^mn]
-PFX F l nn l.[mn]
-PFX F w mp [w]
-PFX F 0 mu .
-PFX F 0 ba .
-PFX F 0 gu .
-PFX F 0 gi .
-PFX F 0 zi . 
-PFX F 0 ki .
-PFX F 0 bi .
-PFX F 0 li .
-PFX F 0 ga .
-PFX F 0 ka .
-PFX F 0 bu .
-PFX F 0 lu .
-PFX F 0 ku .
-PFX F 0 tu .
+PFX Ob 0 n .
+PFX Ob l nd l.[^mn]
+PFX Ob l nn l.[mn]
+PFX Ob w mp [w]
+PFX Ob 0 mu .
+PFX Ob 0 ba .
+PFX Ob 0 gu .
+PFX Ob 0 gi .
+PFX Ob 0 zi . 
+PFX Ob 0 ki .
+PFX Ob 0 bi .
+PFX Ob 0 li .
+PFX Ob 0 ga .
+PFX Ob 0 ka .
+PFX Ob 0 bu .
+PFX Ob 0 lu .
+PFX Ob 0 ku .
+PFX Ob 0 tu .
 """
 
 def parse_rules(raw_text):
@@ -114,9 +114,10 @@ def generate_r_block():
                 new_rules.append(new_entry)
 
     output = []
-    output.append(f"PFX R Y {len(new_rules)}")
+    # RR is the long-flag replacement for R (SF x Ob)
+    output.append(f"PFX RR Y {len(new_rules)}")
     for r in new_rules:
-        output.append(f"PFX R {r['strip']} {r['add']} {r['cond']}")
+        output.append(f"PFX RR {r['strip']} {r['add']} {r['cond']}")
     return "\n".join(output) + "\n"
 
 def main():
@@ -131,8 +132,8 @@ def main():
     with open(AFF_FILE, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-    # Remove existing PFX R lines to avoid duplicates
-    new_lines = [line for line in lines if not line.strip().startswith("PFX R ")]
+    # Remove existing PFX RR lines to avoid duplicates
+    new_lines = [line for line in lines if not line.strip().startswith("PFX RR ")]
 
     # Ensure the file ends with a newline before appending
     if new_lines and not new_lines[-1].endswith('\n'):
