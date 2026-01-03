@@ -77,3 +77,6 @@ release.properties
 en_US License
 en_US.aff
 en_US.dic
+
+# py cache__
+__pycache__/
