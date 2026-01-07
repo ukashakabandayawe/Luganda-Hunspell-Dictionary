@@ -4,6 +4,10 @@ from dataclasses import dataclass
 from typing import List, Optional
 
 
+_AFF_LINES_CACHE: dict[str, tuple[float, List[str]]] = {}
+_AFF_FLAG_DESC_CACHE: dict[tuple[str, float, str], Optional[str]] = {}
+
+
 @dataclass(frozen=True)
 class PfxRule:
     strip: str
@@ -14,6 +18,93 @@ class PfxRule:
 def read_aff_lines(file_path: str) -> List[str]:
     with open(file_path, "r", encoding="utf-8") as f:
         return f.readlines()
+
+
+def _get_cached_aff_lines(aff_file: str) -> tuple[float, List[str]]:
+    mtime = os.path.getmtime(aff_file)
+    cached = _AFF_LINES_CACHE.get(aff_file)
+    if cached and cached[0] == mtime:
+        return cached
+    lines = read_aff_lines(aff_file)
+    _AFF_LINES_CACHE[aff_file] = (mtime, lines)
+    return mtime, lines
+
+
+def _extract_flag_description_from_lines(lines: List[str], flag: str) -> Optional[str]:
+    # 1) Prefer the canonical definitions near the top: `# XX = ...`
+    eq_re = re.compile(rf"^\s*#\s*{re.escape(flag)}\s*=\s*(.+?)\s*$")
+    for raw in lines[:2000]:
+        m = eq_re.match(raw)
+        if m:
+            return m.group(1).strip()
+
+    # 2) Otherwise, use the descriptive comment block immediately above the first PFX header.
+    header_re = re.compile(rf"^\s*PFX\s+{re.escape(flag)}\s+[YN]\s+\d+")
+    header_index: Optional[int] = None
+    for i, raw in enumerate(lines):
+        if header_re.match(raw):
+            header_index = i
+            break
+    if header_index is None:
+        return None
+
+    comment_lines: List[str] = []
+    j = header_index - 1
+    while j >= 0:
+        t = lines[j].strip()
+        if not t:
+            break
+        if not t.startswith("#"):
+            break
+
+        s = t.lstrip("#").strip()
+        # Strip inline example fragments.
+        for marker in (" e.g.", " E.g.", " for example:", " For example:"):
+            if marker in s:
+                s = s.split(marker, 1)[0].rstrip(" :")
+        # Drop examples / implementation notes; keep the definition.
+        if s and not s.lower().startswith(("e.g.", "for example:", "since ")):
+            comment_lines.append(s)
+        j -= 1
+
+    comment_lines.reverse()
+    if not comment_lines:
+        return None
+
+    # Prefer the most definition-like lines.
+    preferred_prefixes = (
+        "subject markers",
+        "subjects markers",
+        "negative subject markers",
+        "reflexive",
+        "negating",
+        "these are objects",
+        "negative subject",
+    )
+    preferred = [c for c in comment_lines if c.lower().startswith(preferred_prefixes)]
+    picked = preferred if preferred else comment_lines
+
+    return " ".join(picked[:2]).strip() or None
+
+
+def describe_flag(aff_file: str, flag: str) -> Optional[str]:
+    mtime, lines = _get_cached_aff_lines(aff_file)
+    key = (aff_file, mtime, flag)
+    if key in _AFF_FLAG_DESC_CACHE:
+        return _AFF_FLAG_DESC_CACHE[key]
+
+    desc = _extract_flag_description_from_lines(lines, flag)
+    _AFF_FLAG_DESC_CACHE[key] = desc
+    return desc
+
+
+def make_cross_product_comment(aff_file: str, subject_flag: str, object_flag: str, target_flag: str) -> str:
+    s_desc = describe_flag(aff_file, subject_flag)
+    o_desc = describe_flag(aff_file, object_flag)
+
+    s_part = f"{subject_flag} ({s_desc})" if s_desc else subject_flag
+    o_part = f"{object_flag} ({o_desc})" if o_desc else object_flag
+    return f"# Cross product {s_part} x {o_part} -> {target_flag}\n"
 
 
 def parse_all_pfx_blocks(lines: List[str], flag: str) -> List[PfxRule]:
@@ -176,6 +267,17 @@ def upsert_pfx_block(
             old_count = 0
 
         if not inserted:
+            # If the line immediately above the target header is a legacy minimal
+            # cross-product comment, upgrade it in-place.
+            k = len(final_lines) - 1
+            while k >= 0 and not final_lines[k].strip():
+                k -= 1
+            if k >= 0:
+                prev = final_lines[k].strip()
+                if prev.startswith("# Cross product") and "(" not in prev:
+                    final_lines[k] = make_cross_product_comment(
+                        aff_file, subject_flag, object_flag, target_flag
+                    )
             final_lines.extend(new_block)
             inserted = True
 
@@ -197,12 +299,13 @@ def upsert_pfx_block(
         if final_lines and not final_lines[-1].endswith("\n"):
             final_lines[-1] += "\n"
         final_lines.append("\n")
-        if comment:
-            if not comment.endswith("\n"):
-                comment += "\n"
-            final_lines.append(comment)
-        else:
-            final_lines.append(f"# Cross product {subject_flag} x {object_flag} (generated flag {target_flag})\n")
+        # If scripts passed an old minimal comment (e.g. "# Cross product ob x DP -> BG"),
+        # replace it with a richer one derived from Luganda.aff flag documentation.
+        if (not comment) or ("(" not in comment):
+            comment = make_cross_product_comment(aff_file, subject_flag, object_flag, target_flag)
+        if not comment.endswith("\n"):
+            comment += "\n"
+        final_lines.append(comment)
         final_lines.extend(new_block)
 
     with open(aff_file, "w", encoding="utf-8") as f:
