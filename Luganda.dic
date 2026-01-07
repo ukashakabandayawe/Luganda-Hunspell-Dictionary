@@ -1,21 +1,39 @@
-3001
-ab'
+2996
+
+# Copyright (C) 2025 Ukasha Kabanda Yawe
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+
+ab
 aba
 abiri
 # --- faayo --- #
-faayo
-fiirayo
+faayo/psnpffggPSDPNFFFPPppIPkomu
+faa/ykPSDP
 feeyo
-fuddeyoo
+feeyoo
+fiirayo/RPpsnpffRnRFrfgghhrpPSVPDPNFFFPPppJJjjIPipRI
 fuddeyo
+fuddeyoo/koPS
 # --- faako --- #
-ag'
-ag'
+ag
 aga
-aga
-ak'
+ak
 aka
-akaalo
+akaalo/Nf
 akaama
 akaana
 akaato
@@ -60,11 +78,11 @@ akalondoozi
 akalulu
 akalulwe
 akambe
-akambe/NfNfyyyy
+akambe/Nfyy
 akamogo
 akamunye
 akamwa
-akamwa/NfNfyyyy
+akamwa/Nfyy
 akamwenyumwenyu
 akamyu
 akantu/NfNfyyyy
@@ -169,7 +187,7 @@ ate
 ateera
 awaka
 awo
-b'
+b
 ba
 ba
 baaba
@@ -201,7 +219,6 @@ bbululu
 beera
 bega
 bejjagala
-belittle
 bendera
 bi
 bibiri
@@ -251,11 +268,11 @@ buulira
 buusabuusa
 buuza
 buzaabuza
-bw'
+bw
 bwa
 bwe
 bwino
-by'
+by
 bya
 byendo
 byombi
@@ -347,7 +364,7 @@ ebula
 ebungulula
 ebuvanjuba
 ebweru
-eby'
+eby
 ebya
 ebyafaayo/yyyy
 eccupa
@@ -403,7 +420,7 @@ eggwanga
 eggwanika
 eggwolu
 egomba
-egy'
+egy
 egya
 ejjambiya
 ejjeerera
@@ -645,7 +662,7 @@ ekwasa
 ekwata
 ekweka
 ekwekula
-eky'
+eky
 eky'okunywa
 eky'omu
 ekya
@@ -688,7 +705,7 @@ ekyombo
 ekyoto
 ekyoya
 ekyuma
-ely'
+ely
 elya
 emala
 emalirira
@@ -1051,7 +1068,7 @@ ewulira
 ewunya
 ewuunyisa
 ewuzi
-ey'
+ey
 eya
 eyagala
 eyagaliza
@@ -1067,8 +1084,8 @@ eyo
 eyokya
 eyongera
 eyunya
-ez'
-ez'
+ez
+ez
 eza
 eza
 eziike
@@ -1076,7 +1093,7 @@ ezziga
 fa
 faako
 faanana
-faayo
+faayo/psnpffggPSDPNFFFPPppIPko
 famire
 fayiro
 feeba
@@ -1122,8 +1139,7 @@ fuula
 fuuwa
 fuuweeta
 fuuyira
-g'
-g'
+g
 ga
 ga
 gaana
@@ -1210,13 +1226,13 @@ gunda
 gundi
 gundiivu
 gunjula
-gw'
+gw
 gwa
 gwa
 gwanyiza
 gwe
 gwira
-gy'
+gy
 gya
 gya(mu)
 gye
@@ -1227,8 +1243,7 @@ jangu
 jeema
 jeemu
 jinga
-jja
-jja/SSrppsps
+jja/NAPS
 jjaamu
 jjajja
 jjajjange
@@ -1243,7 +1258,7 @@ jolonga
 jooga
 julira
 juliza
-k'
+k
 ka
 kaaba
 kaabuyonjo
@@ -1417,7 +1432,7 @@ kuusa
 kuuta
 kuutira
 kuza
-kw'
+kw
 kwa
 kwafu
 kwana
@@ -1428,7 +1443,7 @@ kwatirira
 kweka
 kwekula
 kwekweta
-ky'
+ky
 ky'obutonde
 kya
 kya
@@ -1539,7 +1554,7 @@ lutaggwa
 luubiragana
 luubirira
 luula
-lw'
+lw
 lwa
 lwa
 lwaaki
@@ -1551,19 +1566,19 @@ lwanagana
 lwanyisa
 lwaza
 lwe
-ly'
+ly
 lya # This is an impersonal possessive 
 # --- lya--- #
 lya/SSrpNNNNGGGGQQQQRRRRpspsSSSSNPNPggggMMMMAAAAOOOO
 lidde
 liira
 liisa
-liibwa
+liibwa/NA
 liilibbwa
 liiliddwa
 liisiddwa
-omuli/ZZZZ
-lye/nfnf
+omuli/ZZ
+lye/nfob 
 # --- lyoka --- #
 lyoka
 # --- maama --- #
@@ -1924,7 +1939,7 @@ obuzibu
 obuzigu
 obuzito
 obuzzi
-obw'
+obw
 obw'omunda
 obwa
 obwagazi
@@ -1949,7 +1964,7 @@ obwogi
 obwomu
 obwongo
 odii
-ogw'
+ogw
 ogwa
 ogwekumi
 ogwekumin'ebiri
@@ -1982,7 +1997,7 @@ okutu
 okutuusa
 okuva
 okuzanyisa
-okw'
+okw
 okwa
 okwagala
 okwanjula
@@ -2086,7 +2101,7 @@ oluyimba
 oluyombo
 oluzungu
 oluzzi
-olw'
+olw
 olwa
 olwa
 olwaasa
@@ -2404,11 +2419,11 @@ otulo
 otulo/NjNjyyyy
 otuta
 otuzzi
-otw'
+otw
 otwa
 otwenge/NjNjyyyy
 ovaceddo
-ow'
+ow
 ow'eggonjebwa
 ow'ejoogo
 ow'endali
@@ -2753,7 +2768,7 @@ tuula
 tuuma
 tuuyana
 tuuza
-tw'
+tw
 twa
 twala
 twalira
@@ -2779,7 +2794,7 @@ vuunika
 vuuvuuma
 vvoola
 vvuunula
-w'
+w
 wa
 wa
 waaba
@@ -2885,7 +2900,7 @@ wunzika
 wuuba
 wuubaala
 wuuma
-y'
+y
 ya
 yaayaanira
 yaba
@@ -2972,8 +2987,8 @@ yungula
 yunivasite
 yuuguuma
 yuza
-z'
-z'
+z
+z
 za
 za
 zaabu
