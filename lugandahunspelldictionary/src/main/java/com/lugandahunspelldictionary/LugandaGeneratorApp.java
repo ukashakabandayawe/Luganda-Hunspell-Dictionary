@@ -147,13 +147,31 @@ public class LugandaGeneratorApp extends Application {
     }
 
     private void showResultsScene(Stage stage, List<String> roots) throws IOException {
-        Map<String, List<LugandaAffParser.AffixEntry>> affMap = LugandaAffParser.parseAff(defaultAffPath);
+        Map<String, LugandaAffParser.AffixGroup> affMap = LugandaAffParser.parseAffWithMeta(defaultAffPath);
         
-        // Count total rules
+        // Count total rules (including combinable prefix+suffix cross-application)
         int totalRules = 0;
-        for (List<LugandaAffParser.AffixEntry> entries : affMap.values()) {
-            totalRules += entries.size();
+        List<LugandaAffParser.AffixGroup> combinablePrefixes = new ArrayList<>();
+        List<LugandaAffParser.AffixGroup> combinableSuffixes = new ArrayList<>();
+
+        for (LugandaAffParser.AffixGroup grp : affMap.values()) {
+            if (grp == null) continue;
+            totalRules += grp.entries.size();
+            if (grp.combinable && grp.type == 'P') {
+                combinablePrefixes.add(grp);
+            } else if (grp.combinable && grp.type == 'S') {
+                combinableSuffixes.add(grp);
+            }
         }
+
+        // Estimated number of combo rules (prefix then suffix) for stats display
+        int comboRules = 0;
+        for (LugandaAffParser.AffixGroup p : combinablePrefixes) {
+            for (LugandaAffParser.AffixGroup s : combinableSuffixes) {
+                comboRules += p.entries.size() * s.entries.size();
+            }
+        }
+        totalRules += comboRules;
 
         TableView<Result> table = new TableView<>();
 
@@ -248,9 +266,10 @@ public class LugandaGeneratorApp extends Application {
         ObservableList<Result> rows = FXCollections.observableArrayList();
 
         // For each flag and each affix, create one row with all roots applied
-        for (Map.Entry<String, List<LugandaAffParser.AffixEntry>> flagEntry : affMap.entrySet()) {
+        for (Map.Entry<String, LugandaAffParser.AffixGroup> flagEntry : affMap.entrySet()) {
             String flag = flagEntry.getKey();
-            for (LugandaAffParser.AffixEntry ae : flagEntry.getValue()) {
+            LugandaAffParser.AffixGroup group = flagEntry.getValue();
+            for (LugandaAffParser.AffixEntry ae : group.entries) {
                 Map<String, String> wordsByRoot = new LinkedHashMap<>();
                 for (String root : roots) {
                     String word = LugandaAffParser.apply(ae, root);
@@ -262,6 +281,25 @@ public class LugandaGeneratorApp extends Application {
                 }
                 String affixDisplay = ae.affix.isEmpty() ? "0" : ae.affix;
                 rows.add(new Result(wordsByRoot, flag, affixDisplay, ae));
+            }
+        }
+
+        // Add combinable prefix+suffix cross-products (Hunspell "Y" headers): prefix then suffix only
+        for (LugandaAffParser.AffixGroup pGroup : combinablePrefixes) {
+            for (LugandaAffParser.AffixGroup sGroup : combinableSuffixes) {
+                for (LugandaAffParser.AffixEntry pAe : pGroup.entries) {
+                    for (LugandaAffParser.AffixEntry sAe : sGroup.entries) {
+                        Map<String, String> wordsByRoot = new LinkedHashMap<>();
+                        for (String root : roots) {
+                            String mid = LugandaAffParser.apply(pAe, root);
+                            String finalWord = mid == null ? null : LugandaAffParser.apply(sAe, mid);
+                            wordsByRoot.put(root, finalWord == null ? "" : finalWord);
+                        }
+                        String affixDisplay = (pAe.affix.isEmpty() ? "0" : pAe.affix) + " + " + (sAe.affix.isEmpty() ? "0" : sAe.affix);
+                        String flagDisplay = pAe.flag + "+" + sAe.flag;
+                        rows.add(new Result(wordsByRoot, flagDisplay, affixDisplay, null));
+                    }
+                }
             }
         }
 
