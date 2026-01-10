@@ -3,7 +3,9 @@ from __future__ import annotations
 from pathlib import Path
 import re
 
-AFF_PATH = Path(r"e:\Luganda Hunspell Dictionary\New.aff")
+# Resolve affix file from repository root regardless of clone path
+REPO_ROOT = Path(__file__).resolve().parents[1]
+AFF_PATH = REPO_ROOT / "New.aff"
 
 # Matches: PFX <flag> <strip> <add> <cond> [continuation...]
 PFX_LINE_RE = re.compile(
