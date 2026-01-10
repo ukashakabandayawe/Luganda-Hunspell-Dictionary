@@ -729,8 +729,19 @@ public class LugandaGeneratorApp extends Application {
         applyBtn.setOnAction(e -> {
             Map<String, Set<String>> toApply = new LinkedHashMap<>();
             for (Map.Entry<String, Set<String>> entry : selectedFlagsByRoot.entrySet()) {
-                if (entry.getValue() != null && !entry.getValue().isEmpty()) {
-                    toApply.put(entry.getKey(), new LinkedHashSet<>(entry.getValue()));
+                Set<String> sel = entry.getValue();
+                if (sel == null || sel.isEmpty()) continue;
+                LinkedHashSet<String> flat = new LinkedHashSet<>();
+                for (String f : sel) {
+                    if (f == null) continue;
+                    String[] parts = f.split("\\+");
+                    for (String p : parts) {
+                        String t = p == null ? "" : p.trim();
+                        if (!t.isEmpty()) flat.add(t);
+                    }
+                }
+                if (!flat.isEmpty()) {
+                    toApply.put(entry.getKey(), flat);
                 }
             }
 
@@ -924,18 +935,21 @@ public class LugandaGeneratorApp extends Application {
         tokens.addAll(splitLongFlags(existingFlagsRaw));
         for (String f : flagsToAdd) {
             if (f == null) continue;
-            String t = f.trim();
-            if (t.isEmpty()) continue;
-            // For FLAG long, each token must be exactly 2 chars.
-            // If user-selected flag isn't 2 chars, append as-is (best effort).
-            tokens.add(t);
+            String[] parts = f.split("\\+");
+            for (String part : parts) {
+                String t = part == null ? "" : part.trim();
+                if (t.isEmpty()) continue;
+                // For FLAG long, each token should be exactly 2 chars.
+                // If user-selected flag isn't 2 chars, keep as-is (best effort).
+                tokens.add(t);
+            }
         }
         return String.join("", tokens);
     }
 
     private static List<String> splitLongFlags(String flagsRaw) {
         if (flagsRaw == null) return Collections.emptyList();
-        String s = flagsRaw.trim();
+        String s = flagsRaw.trim().replace("+", "");
         if (s.isEmpty()) return Collections.emptyList();
         List<String> out = new ArrayList<>();
         for (int i = 0; i < s.length(); i += 2) {
@@ -948,7 +962,7 @@ public class LugandaGeneratorApp extends Application {
     private static String mergeNumFlags(String existingFlagsRaw, Set<String> flagsToAdd) {
         // Hunspell numeric flags are comma-separated numbers.
         LinkedHashSet<String> tokens = new LinkedHashSet<>();
-        String s = existingFlagsRaw == null ? "" : existingFlagsRaw.trim();
+        String s = existingFlagsRaw == null ? "" : existingFlagsRaw.trim().replace("+", "");
         if (!s.isEmpty()) {
             for (String part : s.split(",")) {
                 String t = part.trim();
@@ -957,8 +971,11 @@ public class LugandaGeneratorApp extends Application {
         }
         for (String f : flagsToAdd) {
             if (f == null) continue;
-            String t = f.trim();
-            if (!t.isEmpty()) tokens.add(t);
+            String[] parts = f.split("\\+");
+            for (String part : parts) {
+                String t = part == null ? "" : part.trim();
+                if (!t.isEmpty()) tokens.add(t);
+            }
         }
         return String.join(",", tokens);
     }
@@ -968,18 +985,23 @@ public class LugandaGeneratorApp extends Application {
         LinkedHashSet<String> tokens = new LinkedHashSet<>();
         String s = existingFlagsRaw == null ? "" : existingFlagsRaw;
         for (int i = 0; i < s.length(); i++) {
-            tokens.add(String.valueOf(s.charAt(i)));
+            char ch = s.charAt(i);
+            if (ch == '+') continue; // strip buggy delimiter
+            tokens.add(String.valueOf(ch));
         }
         for (String f : flagsToAdd) {
             if (f == null) continue;
-            String t = f.trim();
-            if (t.isEmpty()) continue;
-            // Best-effort: if longer than 1 char, add each char.
-            if (t.length() == 1) {
-                tokens.add(t);
-            } else {
-                for (int i = 0; i < t.length(); i++) {
-                    tokens.add(String.valueOf(t.charAt(i)));
+            String[] parts = f.split("\\+");
+            for (String part : parts) {
+                String t = part == null ? "" : part.trim();
+                if (t.isEmpty()) continue;
+                // Best-effort: if longer than 1 char, add each char.
+                if (t.length() == 1) {
+                    tokens.add(t);
+                } else {
+                    for (int i = 0; i < t.length(); i++) {
+                        tokens.add(String.valueOf(t.charAt(i)));
+                    }
                 }
             }
         }
