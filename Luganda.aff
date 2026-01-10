@@ -187,15 +187,17 @@ SFX yk 0 yooko [aeiou]
 SFX yo Y 1
 SFX yo 0 yo [aeiou]
 
-# vowels at the end of possesives e.g. we ab ke in sentence like abaana bo
+# vowels at the end of possesives e.g. "we" "abe" ke in sentence like abaana bo
 SFX ae Y 3
-SFX ae 0 a [aeiou]
-SFX ae 0 e [aeiou]
-SFX ae 0 o [aeiou]
+SFX ae 0 a [^aeiou]
+SFX ae 0 e [^aeiou]
+SFX ae 0 o [^aeiou]
 
 # A person who does an act e.g. omuli, omukubi, omwambazi
+# It can also be used like the Luganda equivalent of English's "just"
+# e.g. okulaba obulabi, kulya buli
 # Was using flag o but now uses oo
-PFX oo Y 37
+PFX oo Y 38
 PFX oo o 0 om[uw]
 PFX oo omu ba omu
 PFX oo omu aba omu
@@ -219,7 +221,7 @@ PFX oo omu ebi omu
 PFX oo omw by omw
 PFX oo omw eby omw
 PFX oo omul dd omul
-PFX oo omul edd omul #omulamuoi-->eddamuoi
+PFX oo omul edd omul #omulamuoi-->eddamuzi
 PFX oo omu ek omuk # omukubi-->ekkubi
 PFX oo omw emy omw #e.g. omwambazi-->emyambazi
 PFX oo omu ma om[uw]
@@ -228,7 +230,8 @@ PFX oo omu ka omu
 PFX oo omu aka omu
 PFX oo omw ka omw
 PFX oo omw aka omw
-PFX oo om ob om[uw] # omuli-->obuli
+PFX oo om ob om[uw] # omuli-->obuli, omwambazi-->obwambazi
+PFX oo om b  om[uw]
 PFX oo om lu om[uw]
 PFX oo om olu om[uw]
 PFX oo om ok om[uw]
@@ -276,6 +279,7 @@ PFX RP 0 twe .
 PFX RP 0 otwe .
 
 # present simple tense and very near past tense negative subject marker
+# It also handles imperative negative e.g togenda!
 # Was using flag sd but  now uses ps
 PFX ps Y 34
 PFX ps 0 si .
@@ -677,27 +681,44 @@ PFX hh 0 butee .
 
 # Negating the reflexive verb form e.g seetaaga in Present simple tense
 # Was using flag rd but now uses rp
-PFX rp Y 20
+PFX rp Y 37
 PFX rp 0 see .
 PFX rp 0 tewee .
 PFX rp 0 teyee .
+PFX rp 0 atee .
 PFX rp 0 tetwe .
 PFX rp 0 temwe .
+PFX rp 0 mutee .
 PFX rp 0 tebee .
+PFX rp 0 abatee .
 PFX rp 0 tegwe .
+PFX rp 0 ogutee .
 PFX rp 0 tegye .
+PFX rp 0 egitee .
 PFX rp 0 tezee .
+PFX rp 0 ezitee .
 PFX rp 0 tekye .
+PFX rp 0 ekitee .
 PFX rp 0 tebye .
+PFX rp 0 ebitee .
 PFX rp 0 telye .
+PFX rp 0 elitee .
 PFX rp 0 tegee .
+PFX rp 0 agatee .
 PFX rp 0 tekee .
+PFX rp 0 akatee .
 PFX rp 0 tebwe .
+PFX rp 0 obutee .
 PFX rp 0 telwe .
+PFX rp 0 olutee .
 PFX rp 0 tezee .
+PFX rp 0 ezitee .
 PFX rp 0 tekwe .
+PFX rp 0 okutee .
 PFX rp 0 tegee .
+PFX rp 0 agatee .
 PFX rp 0 tetwe .
+PFX rp 0 otutee .
 
 # Negating the reflexive verb form for relative pronoun words e.g zeseetaaga, kyemuteetaaga in Present simple tense
 PFX rP Y 20
@@ -725,12 +746,16 @@ PFX rP 0 tutee .
 
 # subjects markers in present simple tense 
 # This used flag E formally but changed to SD and then to PS (present simple tense)
-PFX PS Y 37
+PFX PS Y 41
+PFX PS j nzi jj # It creates nzija from stem "jja"
+PFX PS z nzi zze # It creates nzize
 PFX PS j n jj # It handles the word "nja" (the singular of tujja) so, Luganda.dic should have "jja" entry with NEEDAFFIX flag plus other flags
 PFX PS 0 n [^jbnmlhprxq] # Person marker
-PFX PS 0 m [b] # Person marker
+PFX PS 0 m b # Person marker: buuka-->mbuuka
 PFX PS 0 o . # Person marker
-PFX PS l nd [l] # Person marker
+PFX PS l nd l.[^mn] # Person marker: lya-->ndya
+PFX PS l nn l.[mn] # Person marker: luma-->nnuma
+PFX PS w mp w # Person marker: wandiika --> mpandiika
 PFX PS 0 a . # Person marker
 PFX PS 0 tu . # Person marker
 PFX PS 0 mu . # Person marker
@@ -1306,11 +1331,491 @@ PFX ri 0 telwakee .
 PFX ri 0 tekwakee .
 PFX ri 0 tetwakee .
 
+# Using the adverb "yet" e.g. sinnalya, tabannanaaba
+PFX YT Y 37
+PFX YT 0 sinna .
+PFX YT 0 tonna .
+PFX YT 0 tanna .
+PFX YT 0 tetunna .
+PFX YT 0 temunna .
+PFX YT 0 tebanna .
+PFX YT 0 abatanna .
+PFX YT 0 atanna .
+PFX YT 0 tegunna .
+PFX YT 0 ogutanna .
+PFX YT 0 teginna .
+PFX YT 0 egitanna .
+PFX YT 0 tenna .
+PFX YT 0 tezinna .
+PFX YT 0 ezitanna .
+PFX YT 0 tekinna .
+PFX YT 0 ekitanna .
+PFX YT 0 tebinna .
+PFX YT 0 ebitanna .
+PFX YT 0 telinna .
+PFX YT 0 elitanna .
+PFX YT 0 teganna .
+PFX YT 0 agatanna .
+PFX YT 0 tekanna .
+PFX YT 0 akatanna .
+PFX YT 0 tebunna .
+PFX YT 0 obutanna .
+PFX YT 0 telunna .
+PFX YT 0 olutanna .
+PFX YT 0 tezinna .
+PFX YT 0 ezitanna .
+PFX YT 0 tekunna .
+PFX YT 0 okutanna .
+PFX YT 0 teganna .
+PFX YT 0 agatanna .
+PFX YT 0 tetunna .
+PFX YT 0 otutanna .
+
+# Using the adverb "yet" in reflexive verbs e.g. sinneebaka, tabanneevuga
+PFX yt Y 37
+PFX yt 0 sinne .
+PFX yt 0 tonne .
+PFX yt 0 tanne .
+PFX yt 0 tetunne .
+PFX yt 0 temunne .
+PFX yt 0 tebanne .
+PFX yt 0 abatanne .
+PFX yt 0 atanne .
+PFX yt 0 tegunne .
+PFX yt 0 ogutanne .
+PFX yt 0 teginne .
+PFX yt 0 egitanne .
+PFX yt 0 tenne .
+PFX yt 0 tezinne .
+PFX yt 0 ezitanne .
+PFX yt 0 tekinne .
+PFX yt 0 ekitanne .
+PFX yt 0 tebinne .
+PFX yt 0 ebitanne .
+PFX yt 0 telinne .
+PFX yt 0 elitanne .
+PFX yt 0 teganne .
+PFX yt 0 agatanne .
+PFX yt 0 tekanne .
+PFX yt 0 akatanne .
+PFX yt 0 tebunne .
+PFX yt 0 obutanne .
+PFX yt 0 telunne .
+PFX yt 0 olutanne .
+PFX yt 0 tezinne .
+PFX yt 0 ezitanne .
+PFX yt 0 tekunne .
+PFX yt 0 okutanne .
+PFX yt 0 teganne .
+PFX yt 0 agatanne .
+PFX yt 0 tetunne .
+PFX yt 0 otutanne .
+
+# subject markers of the adverb "yet" to be used with relative pronouns especially after a cross product with rule ob
+PFX yT Y 19
+PFX yT 0 ssinna .
+PFX yT 0 otonna .
+PFX yT 0 atanna .
+PFX yT 0 tutanna .
+PFX yT 0 mutanna .
+PFX yT 0 batanna .
+PFX yT 0 gutanna .
+PFX yT 0 gitanna .
+PFX yT 0 etenna .
+PFX yT 0 zitanna .
+PFX yT 0 kitanna .
+PFX yT 0 bitanna .
+PFX yT 0 litanna .
+PFX yT 0 gatanna .
+PFX yT 0 katanna .
+PFX yT 0 butanna .
+PFX yT 0 lutanna .
+PFX yT 0 kutanna .
+PFX yT 0 tutanna .
+
+# subordinating conjunction "when" glued to subjects markers in present simple and very near past tense 
+# e.g. wemuba muzannya, wenfuna sente, 
+# It befits to add lemma "ba", "badde" to Luganda.dic to handle wemuba, weziba, wetuba, webabadde etc 
+PFX SC Y 19
+PFX SC j wenzi jj # It creates wenzija from stem "jja"
+PFX SC 0 wen [^jbnmlhprxq] # Person marker
+PFX SC 0 wem [b] # Person marker
+PFX SC l wend [l] # Person marker
+PFX SC 0 wetu . # Person marker
+PFX SC 0 wemu . # Person marker
+PFX SC 0 weba . # Person marker
+PFX SC 0 wegu .
+PFX SC 0 wegi .
+PFX SC 0 wezi .
+PFX SC 0 weki .
+PFX SC 0 webi .
+PFX SC 0 weli .
+PFX SC 0 wega .
+PFX SC 0 weka .
+PFX SC 0 webu .
+PFX SC 0 welu .
+PFX SC 0 weku .
+PFX SC 0 wetu .
+
+# subordinating conjunction "when" glued to negative subjects markers in present simple and very near past tense 
+# e.g. wemutazannya, wessifuna sente, 
+PFX sc Y 19
+PFX sc 0 wessi .
+PFX sc 0 oto .
+PFX sc 0 ata .
+PFX sc 0 wetuta .
+PFX sc 0 wemuta .
+PFX sc 0 webata .
+PFX sc 0 weguta .
+PFX sc 0 wegita .
+PFX sc 0 ete .
+PFX sc 0 wezita .
+PFX sc 0 wekita .
+PFX sc 0 webita .
+PFX sc 0 welita .
+PFX sc 0 wegata .
+PFX sc 0 wekata .
+PFX sc 0 webuta .
+PFX sc 0 weluta .
+PFX sc 0 wekuta .
+PFX sc 0 wetuta .
+
+# subordinating conjunction "when" glued to subjects markers in near and distant past tense 
+# e.g. wemwali muzannya, wennafunye sente, 
+PFX WN Y 19
+PFX WN 0 wenna .
+PFX WN 0 wewa .
+PFX WN 0 weya .
+PFX WN 0 wetwa .
+PFX WN 0 wemwa .
+PFX WN 0 webaa .
+PFX WN 0 wegwa .
+PFX WN 0 wegya .
+PFX WN 0 wezaa .
+PFX WN 0 wekyaa .
+PFX WN 0 webyaa .
+PFX WN 0 welyaa .
+PFX WN 0 wegaa .
+PFX WN 0 wekaa .
+PFX WN 0 webwa .
+PFX WN 0 welwa .
+PFX WN 0 wekwa .
+PFX WN 0 wegaa .
+PFX WN 0 wetwa .
+
+# subordinating conjunction "when" glued to negative subjects markers in near and distant past tense 
+# e.g. wemutaazannye, wessaafuna sente, 
+PFX wn Y 19
+PFX wn 0 wessaa .
+PFX wn 0 otaa .
+PFX wn 0 ataa .
+PFX wn 0 tutaa .
+PFX wn 0 wemutaa .
+PFX wn 0 webataa .
+PFX wn 0 wegutaa .
+PFX wn 0 wegitaa .
+PFX wn 0 etaa .
+PFX wn 0 wezitaa .
+PFX wn 0 wekitaa .
+PFX wn 0 webitaa .
+PFX wn 0 welitaa .
+PFX wn 0 wegataa .
+PFX wn 0 wekataa .
+PFX wn 0 webutaa .
+PFX wn 0 welutaa .
+PFX wn 0 wekutaa .
+PFX wn 0 wetutaa .
+
+# subordinating conjunction "when" glued to subjects markers in near future tense 
+# e.g. wemunaaba muzannya, wennaafunna sente, 
+PFX WM Y 23
+PFX WM 0 wennaa .
+PFX WM 0 wemunaa .
+PFX WM 0 onoo .
+PFX WM 0 onaa .
+PFX WM 0 anaa .
+PFX WM 0 wetunaa .
+PFX WM 0 wemunaa .
+PFX WM 0 webanaa .
+PFX WM 0 wegunaa .
+PFX WM 0 weginaa .
+PFX WM 0 enaa .
+PFX WM 0 wezinaa .
+PFX WM 0 wekinaa .
+PFX WM 0 webinaa .
+PFX WM 0 welinaa .
+PFX WM 0 weganaa .
+PFX WM 0 wekanaa .
+PFX WM 0 webunaa .
+PFX WM 0 welunaa .
+PFX WM 0 wezinaa .
+PFX WM 0 wekunaa .
+PFX WM 0 weganaa .
+PFX WM 0 wetunaa .
+
+# subordinating conjunction "when" glued to negative subjects markers in near future tense 
+# e.g. wemutaazannye, wessiifune sente, 
+PFX wm Y 19
+PFX wm 0 wessii .
+PFX wm 0 otoo .
+PFX wm 0 ataa .
+PFX wm 0 wetutaa .
+PFX wm 0 wemutaa .
+PFX wm 0 webataa .
+PFX wm 0 wegutaa .
+PFX wm 0 wegitaa .
+PFX wm 0 etaa .
+PFX wm 0 wezitaa .
+PFX wm 0 wekitaa .
+PFX wm 0 webitaa .
+PFX wm 0 welitaa .
+PFX wm 0 wegataa .
+PFX wm 0 wekataa .
+PFX wm 0 webutaa .
+PFX wm 0 welutaa .
+PFX wm 0 wekutaa .
+PFX wm 0 wetutaa .
+
+# subordinating conjunction "when" glued to subjects markers in far future tense 
+# e.g. wemuliba muzannya, wendifunna sente, 
+PFX WF Y 16
+PFX WF 0 wendi . 
+PFX WF 0 wetuli . 
+PFX WF 0 wemuli . 
+PFX WF 0 webali . 
+PFX WF 0 weguli .
+PFX WF 0 wegili .
+PFX WF 0 wezili .
+PFX WF 0 wekili .
+PFX WF 0 webili .
+PFX WF 0 welili .
+PFX WF 0 wegali .
+PFX WF 0 wekali .
+PFX WF 0 webuli .
+PFX WF 0 weluli .
+PFX WF 0 wekuli .
+PFX WF 0 wetuli .
+
+# subordinating conjunction "when" glued to subjects markers in the far future tense 
+# e.g. wemutalifuna, wessilifuna, 
+PFX wf Y 19
+PFX wf 0 wessili .
+PFX wf 0 otoli .
+PFX wf 0 atali .
+PFX wf 0 wetutali .
+PFX wf 0 wemutali .
+PFX wf 0 webatali .
+PFX wf 0 wegutali .
+PFX wf 0 wegitali .
+PFX wf 0 eteli .
+PFX wf 0 wezitali .
+PFX wf 0 wekitali .
+PFX wf 0 webitali .
+PFX wf 0 welitali .
+PFX wf 0 wegatali .
+PFX wf 0 wekatali .
+PFX wf 0 webutali .
+PFX wf 0 welutali .
+PFX wf 0 wekutali .
+PFX wf 0 wetutali .
+
+# subordinating conjunction "when" glued to reflexive subjects markers in present simple tense and the past tenses
+# e.g. wenneetaaga, weyeetwala, wetwebasse 
+PFX WG Y 20
+PFX WG 0 wennee .
+PFX WG 0 wewee .
+PFX WG 0 weyee .
+PFX WG 0 wetwe .
+PFX WG 0 wemwe .
+PFX WG 0 webee .
+PFX WG 0 wegwe .
+PFX WG 0 wegye .
+PFX WG 0 wezee .
+PFX WG 0 wekye .
+PFX WG 0 webye .
+PFX WG 0 welye .
+PFX WG 0 wegee .
+PFX WG 0 wekee .
+PFX WG 0 webwe .
+PFX WG 0 welwe .
+PFX WG 0 wezee .
+PFX WG 0 wekwe .
+PFX WG 0 wegee .
+PFX WG 0 wetwe .
+
+# subordinating conjunction "when" glued to reflexive negative subjects markers in present simple tense and the past tenses
+# e.g. wesseefumbira, webateebaka, webateefumbidde
+PFX wg Y 19
+PFX wg 0 wessee .
+PFX wg 0 otee .
+PFX wg 0 atee .
+PFX wg 0 wetutee .
+PFX wg 0 wemutee .
+PFX wg 0 webatee .
+PFX wg 0 wegutee .
+PFX wg 0 wegitee .
+PFX wg 0 etee .
+PFX wg 0 wezitee .
+PFX wg 0 wekitee .
+PFX wg 0 webitee .
+PFX wg 0 welitee .
+PFX wg 0 wegatee .
+PFX wg 0 wekatee .
+PFX wg 0 webutee .
+PFX wg 0 welutee .
+PFX wg 0 wekutee .
+PFX wg 0 wetutee .
+
+# subordinating conjunction "when" glued to reflexive subjects markers in near future tense 
+# e.g. wetuneebaka, wemuneetaaga, 
+PFX WH Y 23
+PFX WH 0 wennee .
+PFX WH 0 wemunee .
+PFX WH 0 onee .
+PFX WH 0 onee .
+PFX WH 0 anee .
+PFX WH 0 wetunee .
+PFX WH 0 wemunee .
+PFX WH 0 webanee .
+PFX WH 0 wegunee .
+PFX WH 0 weginee .
+PFX WH 0 enee .
+PFX WH 0 wezinee .
+PFX WH 0 wekinee .
+PFX WH 0 webinee .
+PFX WH 0 welinee .
+PFX WH 0 weganee .
+PFX WH 0 wekanee .
+PFX WH 0 webunee .
+PFX WH 0 welunee .
+PFX WH 0 wezinee .
+PFX WH 0 wekunee .
+PFX WH 0 weganee .
+PFX WH 0 wetunee .
+
+# subordinating conjunction "when" glued to reflexive negative subjects markers in near future tense 
+# e.g. wemuteebake, wemuteekwate, 
+PFX wh Y 19
+PFX wh 0 wessee .
+PFX wh 0 otee .
+PFX wh 0 atee .
+PFX wh 0 wetutee .
+PFX wh 0 wemutee .
+PFX wh 0 webatee .
+PFX wh 0 wegutee .
+PFX wh 0 wegitee .
+PFX wh 0 etee .
+PFX wh 0 wezitee .
+PFX wh 0 wekitee .
+PFX wh 0 webitee .
+PFX wh 0 welitee .
+PFX wh 0 wegatee .
+PFX wh 0 wekatee .
+PFX wh 0 webutee .
+PFX wh 0 welutee .
+PFX wh 0 wekutee .
+PFX wh 0 wetutee .
+
+# subordinating conjunction "when" glued to reflexive subjects markers in far future tense 
+# e.g. wendyetaaga, wendyegulira, 
+PFX WJ Y 16
+PFX WJ 0 wendye . 
+PFX WJ 0 wetulye . 
+PFX WJ 0 wemulye . 
+PFX WJ 0 webalye . 
+PFX WJ 0 wegulye .
+PFX WJ 0 wegilye .
+PFX WJ 0 wezilye .
+PFX WJ 0 wekilye .
+PFX WJ 0 webilye .
+PFX WJ 0 welilye .
+PFX WJ 0 wegalye .
+PFX WJ 0 wekalye .
+PFX WJ 0 webulye .
+PFX WJ 0 welulye .
+PFX WJ 0 wekulye .
+PFX WJ 0 wetulye .
+
+# subordinating conjunction "when" glued to relexive negative subjects markers in the far future tense 
+# e.g. wemutalyefuga, wessilyetaaga 
+PFX wj Y 19
+PFX wj 0 wessilye .
+PFX wj 0 otolye .
+PFX wj 0 atalye .
+PFX wj 0 wetutalye .
+PFX wj 0 wemutalye .
+PFX wj 0 webatalye .
+PFX wj 0 wegutalye .
+PFX wj 0 wegitalye .
+PFX wj 0 etelye .
+PFX wj 0 wezitalye .
+PFX wj 0 wekitalye .
+PFX wj 0 webitalye .
+PFX wj 0 welitalye .
+PFX wj 0 wegatalye .
+PFX wj 0 wekatalye .
+PFX wj 0 webutalye .
+PFX wj 0 welutalye .
+PFX wj 0 wekutalye .
+PFX wj 0 wetutalye .
+
+# The permission subjunctive e.g. kantuule, kanfumbe
+PFX SB Y 11
+PFX SB j kanzi jj # It creates kanzije from stem "jje"
+PFX SB 0 kan [^jbnmlhprxq] # fumba-->fumbe-->kanfumbe
+PFX SB 0 kam b # stems that start with "B"
+PFX SB 0 o . 
+PFX SB l kand l.[^mn] # Handles non nasalized stems that start with "L" e.g. lya-->lye-->Kandye
+PFX SB l kann l.[mn] # Handles nasalized stems that start with "L" e.g. luma-->lume-->Kannume
+PFX SB w kamp w # Handles stems that start with "W" e.g. wandiika-->wandiike-->kampaandiike
+PFX SB 0 a . 
+PFX SB 0 katu . 
+PFX SB 0 kamu . 
+PFX SB 0 kaba . 
+
+# Counterfactual conditions: nnandikoze, bandilidde
+PFX CC Y 36
+PFX CC 0 nnandi .
+PFX CC 0 wandi .
+PFX CC 0 yandi .
+PFX CC 0 eyandi .
+PFX CC 0 twandi .
+PFX CC 0 mwandi .
+PFX CC 0 bandi .
+PFX CC 0 abandi .
+PFX CC 0 gwandi .
+PFX CC 0 ogwandi .
+PFX CC 0 gyandi .
+PFX CC 0 egyandi .
+PFX CC 0 zandi .
+PFX CC 0 ezandi .
+PFX CC 0 kyandi .
+PFX CC 0 ekyandi .
+PFX CC 0 byandi .
+PFX CC 0 ebyandi .
+PFX CC 0 lyandi .
+PFX CC 0 elyandi .
+PFX CC 0 gandi .
+PFX CC 0 ogwandi .
+PFX CC 0 kandi .
+PFX CC 0 akandi .
+PFX CC 0 bwandi .
+PFX CC 0 obwandi .
+PFX CC 0 lwandi .
+PFX CC 0 olwandi .
+PFX CC 0 zandi .
+PFX CC 0 ezandi .
+PFX CC 0 kwandi .
+PFX CC 0 okwandi .
+PFX CC 0 gandi .
+PFX CC 0 agandi .
+PFX CC 0 twandi .
+PFX CC 0 otwandi .
 
 # object markers
 # Formally used F but now using Ob
 PFX Ob Y 18
-PFX Ob 0 n [^lmn]
+PFX Ob 0 n [^lmnb]
 PFX Ob l nd l.[^mn]
 PFX Ob l nn l.[mn]
 PFX Ob w mp [w]
@@ -1328,10 +1833,6 @@ PFX Ob 0 bu .
 PFX Ob 0 lu .
 PFX Ob 0 ku .
 PFX Ob 0 tu .
-
-# Subject + Object Combinations (Cross Product of PS and Ob)
-# Generated via script to handle chaining (e.g., Bazilya)
-# TO-DO: Run the generation script and replace the line below with the output
 
 # A special group of object markers in words like A"mwe"kutte, Amwekwata, yamwekutte, yamwekwata, anaamwekwata, alimwekwata Ba"gwe"wadde, Baa"ke"fumbidde
 # These markers are reflexive
@@ -1375,7 +1876,225 @@ PFX ob 0 kwe [^aeiou]
 PFX ob 0 ge [^aeiou]
 PFX ob 0 twe [^aeiou]
 
+# Adjectives
+PFX Ad Y 69
+PFX Ad 0 n [^jbnmlhprxq] # funda-->nfunda
+PFX Ad 0 en [^jbnmlhprxq]
+PFX Ad 0 m b # bi-->mbi
+PFX Ad 0 em b
+PFX Ad l nd l.[^mn] #  lalu-->ndalu
+PFX Ad l end l.[^mn]
+PFX Ad l nn l.[mn] #  lungi-->nnungi
+PFX Ad l enn l.[mn]
+PFX Ad w mp w # e.g. wanvu-->mpanvu
+PFX Ad w emp w
+PFX Ad 0 nj [aeiou] # e.g. eru-->njeru
+PFX Ad 0 ma .
+PFX Ad 0 ama .
+PFX Ad 0 m [aeiou]
+PFX Ad 0 am [aeiou]
+PFX Ad 0 mu . 
+PFX Ad 0 omu .
+PFX Ad 0 mw [aeiou] # eru-->mweru
+PFX Ad 0 omw [aeiou]
+PFX Ad 0 mi .
+PFX Ad 0 emi . # kulu-->emikulu
+PFX Ad 0 my [aeiou] # eru-->myeru
+PFX Ad 0 emy [aeiou]
+PFX Ad 0 ba . 
+PFX Ad 0 aba .
+PFX Ad 0 gu .
+PFX Ad 0 ogu .
+PFX Ad 0 gi .
+PFX Ad 0 egi .
+PFX Ad l dd l
+PFX Ad l edd l
+PFX Ad 0 zi .
+PFX Ad 0 ezi .
+PFX Ad 0 ki .
+PFX Ad 0 eki .
+PFX Ad 0 ky  [^aeiou] #eru-->kyeru
+PFX Ad 0 eky [^aeiou]
+PFX Ad 0 bi .
+PFX Ad 0 ebi .
+PFX Ad 0 by [aeiou] # eru-->byeru
+PFX Ad 0 eby [aeiou]
+PFX Ad 0 li .
+PFX Ad 0 eli .
+PFX Ad 0 ly [aeiou]
+PFX Ad 0 ely [aeiou]
+PFX Ad 0 ga .
+PFX Ad 0 aga .
+PFX Ad 0 g [aeiou]
+PFX Ad 0 ag [aeiou]
+PFX Ad 0 ka .
+PFX Ad 0 aka .
+PFX Ad 0 k [aeiou]
+PFX Ad 0 ak [aeiou]
+PFX Ad 0 bu .
+PFX Ad 0 obu .
+PFX Ad 0 bw [aeiou]
+PFX Ad 0 obw [aeiou]
+PFX Ad 0 lu .
+PFX Ad 0 olu .
+PFX Ad 0 lw [aeiou]
+PFX Ad 0 olw [aeiou]
+PFX Ad 0 ku .
+PFX Ad 0 oku .
+PFX Ad 0 kw [aeiou]
+PFX Ad 0 okw [aeiou]
+PFX Ad 0 tu .
+PFX Ad 0 otu .
+PFX Ad 0 tw [aeiou]
+PFX Ad 0 otw [aeiou]
 
+# The adverb "still" e.g. nkyasoma
+PFX St Y 34
+PFX St 0 nkya .
+PFX St 0 okya . 
+PFX St 0 akya . 
+PFX St 0 tukya . 
+PFX St 0 mukya . 
+PFX St 0 bakya . 
+PFX St 0 akya .
+PFX St 0 bakya . 
+PFX St 0 abakya .
+PFX St 0 gukya .
+PFX St 0 ogukya .
+PFX St 0 gikya .
+PFX St 0 egikya .
+PFX St 0 ekya .
+PFX St 0 zikya .
+PFX St 0 ezikya .
+PFX St 0 kikya .
+PFX St 0 ekikya .
+PFX St 0 bikya .
+PFX St 0 ebikya .
+PFX St 0 likya .
+PFX St 0 elikya .
+PFX St 0 gakya .
+PFX St 0 agakya .
+PFX St 0 kakya .
+PFX St 0 akakya .
+PFX St 0 bukya .
+PFX St 0 obukya .
+PFX St 0 lukya .
+PFX St 0 olukya .
+PFX St 0 kukya .
+PFX St 0 okukya .
+PFX St 0 tukya .
+PFX St 0 otukya .
+
+# Negating the adverb "still" e.g. takyasoma
+PFX st Y 34
+PFX st 0 sikya .
+PFX st 0 tokya .
+PFX st 0 takya .
+PFX st 0 atakya .
+PFX st 0 tetukya .
+PFX st 0 temukya .
+PFX st 0 tebakya .
+PFX st 0 abatakya .
+PFX st 0 tegukya .
+PFX st 0 ogutakya .
+PFX st 0 tegikya .
+PFX st 0 egitakya .
+PFX st 0 tekya .
+PFX st 0 etekya .
+PFX st 0 tezikya .
+PFX st 0 ezitakya .
+PFX st 0 tekikya .
+PFX st 0 ekitakya .
+PFX st 0 tebikya .
+PFX st 0 ebitakya .
+PFX st 0 telikya .
+PFX st 0 elitakya .
+PFX st 0 tegakya .
+PFX st 0 agatakya .
+PFX st 0 tekakya .
+PFX st 0 akatakya .
+PFX st 0 tebukya .
+PFX st 0 obutakya .
+PFX st 0 telukya .
+PFX st 0 olutakya .
+PFX st 0 tekukya .
+PFX st 0 okutakya .
+PFX st 0 tetukya .
+PFX st 0 otutakya .
+
+# The adverb "Still" as used with reflexive verbs e.g. nkyetaaga 
+PFX ST Y 34
+PFX ST 0 nkye .
+PFX ST 0 okye . 
+PFX ST 0 akye . 
+PFX ST 0 tukye . 
+PFX ST 0 mukye . 
+PFX ST 0 bakye . 
+PFX ST 0 akye .
+PFX ST 0 bakye . 
+PFX ST 0 abakye .
+PFX ST 0 gukye .
+PFX ST 0 ogukye .
+PFX ST 0 gikye .
+PFX ST 0 egikye .
+PFX ST 0 ekye .
+PFX ST 0 zikye .
+PFX ST 0 ezikye .
+PFX ST 0 kikye .
+PFX ST 0 ekikye .
+PFX ST 0 bikye .
+PFX ST 0 ebikye .
+PFX ST 0 likye .
+PFX ST 0 elikye .
+PFX ST 0 gakye .
+PFX ST 0 agakye .
+PFX ST 0 kakye .
+PFX ST 0 akakye .
+PFX ST 0 bukye .
+PFX ST 0 obukye .
+PFX ST 0 lukye .
+PFX ST 0 olukye .
+PFX ST 0 kukye .
+PFX ST 0 okukye .
+PFX ST 0 tukye .
+PFX ST 0 otukye .
+
+# Negating the adverb "still" as used with reflexive verbs e.g. takyetaaga
+PFX sT Y 34
+PFX sT 0 sikye .
+PFX sT 0 tokye .
+PFX sT 0 takye .
+PFX sT 0 atakye .
+PFX sT 0 tetukye .
+PFX sT 0 temukye .
+PFX sT 0 tebakye .
+PFX sT 0 abatakye .
+PFX sT 0 tegukye .
+PFX sT 0 ogutakye .
+PFX sT 0 tegikye .
+PFX sT 0 egitakye .
+PFX sT 0 tekye .
+PFX sT 0 etekye .
+PFX sT 0 tezikye .
+PFX sT 0 ezitakye .
+PFX sT 0 tekikye .
+PFX sT 0 ekitakye .
+PFX sT 0 tebikye .
+PFX sT 0 ebitakye .
+PFX sT 0 telikye .
+PFX sT 0 elitakye .
+PFX sT 0 tegakye .
+PFX sT 0 agatakye .
+PFX sT 0 tekakye .
+PFX sT 0 akatakye .
+PFX sT 0 tebukye .
+PFX sT 0 obutakye .
+PFX sT 0 telukye .
+PFX sT 0 olutakye .
+PFX sT 0 tekukye .
+PFX sT 0 okutakye .
+PFX sT 0 tetukye .
+PFX sT 0 otutakye .
 
 # Class I nouns 
 # formally used flag n but now uses Na
