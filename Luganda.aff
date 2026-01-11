@@ -1842,17 +1842,17 @@ PFX OR Y 15
 PFX OR 0 bee .
 PFX OR 0 gwe .
 PFX OR 0 gye .
-PFX OR 0 ze .
+PFX OR 0 zee .
 PFX OR 0 kye .
 PFX OR 0 bye .
 PFX OR 0 lye .
-PFX OR 0 ge .
-PFX OR 0 ke .
+PFX OR 0 gee .
+PFX OR 0 kee .
 PFX OR 0 bwe .
 PFX OR 0 lwe .
-PFX OR 0 ze .
+PFX OR 0 zee .
 PFX OR 0 kwe .
-PFX OR 0 ge .
+PFX OR 0 gee .
 PFX OR 0 twe .
 
 # These are objects as used in relative pronouns
@@ -1985,7 +1985,7 @@ PFX St 0 okukya .
 PFX St 0 tukya .
 PFX St 0 otukya .
 
-# Negating the adverb "still" e.g. takyasoma
+# Negating the adverb "still" to "no longer" e.g. takyasoma
 PFX st Y 34
 PFX st 0 sikya .
 PFX st 0 tokya .
@@ -2059,7 +2059,7 @@ PFX ST 0 okukye .
 PFX ST 0 tukye .
 PFX ST 0 otukye .
 
-# Negating the adverb "still" as used with reflexive verbs e.g. takyetaaga
+# Negating the adverb "still" to "no longer" as used with reflexive verbs e.g. takyetaaga
 PFX sT Y 34
 PFX sT 0 sikye .
 PFX sT 0 tokye .
@@ -2095,6 +2095,63 @@ PFX sT 0 tekukye .
 PFX sT 0 okutakye .
 PFX sT 0 tetukye .
 PFX sT 0 otutakye .
+
+# The adverbs "like this" and "Like that" in present simple tense and very near past
+PFX LT Y 53
+PFX LT j bwenzi jj # It creates bwenzija from stem "jja"
+PFX LT z bwenzi zze # It creates bwenzize from "zze"
+PFX LT j bwen jj # It handles the word "bwenja" (the singular of bwetujja) so, Luganda.dic should have "jja" entry with NEEDAFFIX flag plus other flags
+PFX LT 0 bwen [^jbnmlhprxq] # bwentyo bwenfumba
+PFX LT 0 bwem b #  buuka-->bwembuuka
+PFX LT 0 o . # tyo-->otyo
+PFX LT l bwend l.[^mn] #  lya-->bwendya
+PFX LT l bwenn l.[mn] # luma-->bwennuma
+PFX LT l bwend li
+PFX LT w bwemp w #  wandiika --> bwempandiika
+PFX LT 0 a . # tyo--atyo
+PFX LT 0 bwetu . # bwetutyo
+PFX LT 0 bwemu . 
+PFX LT 0 bweba . 
+PFX LT 0 bweba .
+PFX LT 0 bwegu .
+PFX LT 0 bwegi .
+PFX LT 0 e [^aeiou]
+PFX LT 0 bwezi .
+PFX LT 0 bweki .
+PFX LT 0 bwebi .
+PFX LT 0 bweli .
+PFX LT 0 bwega .
+PFX LT 0 bweka .
+PFX LT 0 bwebu .
+PFX LT 0 bwelu .
+PFX LT 0 bweku .
+PFX LT 0 bwetu .    
+PFX LT j wenzi jj # It creates wenzija from stem "jja"
+PFX LT z wenzi zze # It creates wenzize from "zze"
+PFX LT j wen jj # It handles the word "wenja" (the singular of wetujja) so, Luganda.dic should have "jja" entry with NEEDAFFIX flag plus other flags
+PFX LT 0 wen [^jbnmlhprxq] # wentyo wenfumba
+PFX LT 0 wem b #  buuka-->wembuuka
+PFX LT l wend l.[^mn] #  lya-->wendya
+PFX LT l wenn l.[mn] # luma-->wennuma
+PFX LT l wend li
+PFX LT w wemp w #  wandiika --> wempandiika
+PFX LT 0 wetu . # wetutyo
+PFX LT 0 wemu . 
+PFX LT 0 weba . 
+PFX LT 0 weba .
+PFX LT 0 wegu .
+PFX LT 0 wegi .
+PFX LT 0 wezi .
+PFX LT 0 weki .
+PFX LT 0 webi .
+PFX LT 0 weli .
+PFX LT 0 wega .
+PFX LT 0 weka .
+PFX LT 0 webu .
+PFX LT 0 welu .
+PFX LT 0 weku .
+PFX LT 0 wetu .
+
 
 # Class I nouns 
 # formally used flag n but now uses Na
