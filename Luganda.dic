@@ -1,4 +1,4 @@
-3003
+3004
 
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -1517,7 +1517,7 @@ lemala
 lemaza
 lemesa
 lemesebwa
-li/SSrppspsDP
+li/SSrppspsDPLT
 lidde/SSrpNNNNGGGGQQQQSSSSNPNP
 liigi
 liisa
@@ -1581,7 +1581,7 @@ lwe
 ly
 lya # This is an impersonal possessive 
 # --- lya--- #
-lya/SSrpNNGGQQRRpsSSNPggMMAAOO
+lya/SSrpNNGGQQRRpsSSNPggMMAAOOLT
 lidde
 liira
 liisa
@@ -2788,6 +2788,7 @@ twa
 twala
 twalira
 tya
+tyo/LT
 tyoboola
 va
 vaawo
