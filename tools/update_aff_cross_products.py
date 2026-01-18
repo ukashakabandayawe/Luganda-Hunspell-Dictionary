@@ -122,95 +122,52 @@ def generate_rules(subj_rules, obj_rules, filter_type):
 
 def main():
     if not os.path.exists(AFF_FILE):
-        print(f"Error: {AFF_FILE} not found")
+        print(f"Error: {AFF_FILE} not found.")
         return
-        
-    print(f"Reading {AFF_FILE}...")
-    lines = read_aff(AFF_FILE)
+
+    out_flag, block = generate_block()
     
-    # --- 1. Generate all new blocks and store them in a dictionary ---
-    parsed_cache = {}
-    new_blocks = {}
-    all_target_flags = {t['t'] for t in TRANSFORMATIONS}
+    with open(AFF_FILE, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
 
-    for t in TRANSFORMATIONS:
-        s_flag, o_flag, target = t['s'], t['o'], t['t']
-        
-        if s_flag not in parsed_cache: parsed_cache[s_flag] = parse_pfx_block(lines, s_flag)
-        if o_flag not in parsed_cache: parsed_cache[o_flag] = parse_pfx_block(lines, o_flag)
-        s_rules = parsed_cache[s_flag]
-        o_rules = parsed_cache[o_flag]
-        
-        if not s_rules or not o_rules:
-            print(f"Skipping {target} ({s_flag} x {o_flag}): Source rules not found.")
-            continue
-            
-        print(f"Generating {target} from {s_flag} ({len(s_rules)}) x {o_flag} ({len(o_rules)})...")
-        new_rules = generate_rules(s_rules, o_rules, t['filter'])
-        
-        block_content = []
-        block_content.append(f"PFX {target} Y {len(new_rules)}\n")
-        for r in new_rules:
-            block_content.append(f"PFX {target} {r['strip']} {r['add']} {r['cond']}\n")
-        new_blocks[target] = block_content
-
-    # --- 2. Build the new file content by replacing blocks in-place ---
-    final_lines = []
-    line_idx = 0
-    processed_flags = set()
-
-    while line_idx < len(lines):
-        line = lines[line_idx]
+    # Find existing block for this flag (comment + PFX lines)
+    first_flag_idx = None
+    last_flag_idx = None
+    
+    for i, line in enumerate(lines):
         stripped = line.strip()
-        
-        is_header = False
-        target_flag = None
-        old_rule_count = 0
-        if stripped.startswith("PFX"):
-            parts = stripped.split()
-            if len(parts) >= 4 and parts[1] in new_blocks and parts[2] in ['Y', 'N']:
-                is_header = True
-                target_flag = parts[1]
-                old_rule_count = int(parts[3])
-
-        if is_header:
-            # Found a block to replace. Add the new block content.
-            final_lines.extend(new_blocks[target_flag])
-            processed_flags.add(target_flag)
-            
-            # Advance line_idx to skip the old block's PFX lines
-            line_idx += 1 # Skip the header
-            rules_found = 0
-            while line_idx < len(lines) and rules_found < old_rule_count:
-                current_line = lines[line_idx].strip()
-                if not current_line or current_line.startswith('#'):
-                    line_idx += 1
-                    continue
-                
-                if current_line.startswith(f"PFX {target_flag} "):
-                    rules_found += 1
-                else:
-                    break
-                line_idx += 1
+        if stripped.startswith(f"PFX {out_flag} "):
+            if first_flag_idx is None:
+                first_flag_idx = i
+            last_flag_idx = i
+    
+    # Check if there's a comment line right before the first flag line
+    if first_flag_idx is not None and first_flag_idx > 0:
+        prev_line = lines[first_flag_idx - 1].strip()
+        if prev_line.startswith("# Cross product"):
+            start_idx = first_flag_idx - 1
         else:
-            # Not a header to replace, just copy the line
-            final_lines.append(line)
-            line_idx += 1
+            start_idx = first_flag_idx
+    elif first_flag_idx is not None:
+        start_idx = first_flag_idx
+    else:
+        start_idx = None
 
-    # --- 3. Append any completely new blocks that weren't found for replacement ---
-    for target, block_lines in new_blocks.items():
-        if target not in processed_flags:
-            s_flag = [t['s'] for t in TRANSFORMATIONS if t['t'] == target][0]
-            o_flag = [t['o'] for t in TRANSFORMATIONS if t['t'] == target][0]
-            final_lines.append(f"\n# Cross product {s_flag} x {o_flag}\n")
-            final_lines.extend(block_lines)
+    # Replace block in place or append at end
+    if start_idx is not None and last_flag_idx is not None:
+        # Replace existing block in place
+        new_lines = lines[:start_idx] + [block] + lines[last_flag_idx + 1:]
+    else:
+        # Append at end
+        new_lines = lines
+        if new_lines and not new_lines[-1].endswith(chr(10)):
+            new_lines[-1] += chr(10)
+        new_lines.append(block)
 
-    # --- 4. Write the final content ---
-    print("Updating file content...")
     with open(AFF_FILE, 'w', encoding='utf-8') as f:
-        f.writelines(final_lines)
-            
-    print("Done! Luganda.aff updated.")
+        f.writelines(new_lines)
 
-if __name__ == "__main__":
+    print(f"{out_flag}: updated in place.")
+
+if __name__ == '__main__':
     main()
