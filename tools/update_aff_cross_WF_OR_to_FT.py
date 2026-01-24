@@ -31,7 +31,8 @@ PFX WF 0 wetuli .
 """
 
 rule_right_raw = """
-PFX OR Y 15
+PFX OR Y 16
+PFX OR 0 mwe .
 PFX OR 0 bee .
 PFX OR 0 gwe .
 PFX OR 0 gye .
