@@ -15,6 +15,8 @@ DEFAULT_DESCRIPTIONS = {
     "YT": "Using the adverb yet",
     "yT": "Subject markers of adverb yet for relative pronouns",
     "ob": "Objects used in relative pronouns",
+    "Ob": "Object markers",
+    "OR": "Special reflexive object markers",
     "SC": "Subordinating conjunction when with subjects in present simple tense",
     "sc": "Subordinating conjunction when with negative subjects in present simple tense",
     "WN": "Subordinating conjunction when with subjects in near and distant past tense",
@@ -26,21 +28,34 @@ DEFAULT_DESCRIPTIONS = {
     "SB": "Permission subjunctive",
     "CC": "Counterfactual conditions",
     "St": "Adverb still",
+    "st": "Negating adverb still to no longer",
+    "LT": "Adverbs like this and like that in present simple tense",
+    "PS": "Present simple tense subject markers",
+    "IM": "Impersonal subject markers",
+    "IP": "Impersonal subject markers for relative pronouns",
+    "ip": "Impersonal subject markers for relative pronouns (lowercase)",
+    "RP": "Reflexive subject markers for passive voice",
+    "rP": "Reflexive subject markers for passive voice (lowercase)",
 }
 
-TEMPLATE = Template("""import re
+TEMPLATE = Template('''import re
 import os
 from pathlib import Path
 
-# Auto-generated cross-product script: $left_flag x $right_flag -> $out_flag
-# Hardcoded rule blocks captured from Luganda.aff at generation time.
+# Cross product generator: $left_flag x $right_flag => $out_flag
+# Description:
+# - Left block `$left_flag`: $left_desc
+# - Right block `$right_flag`: $right_desc
+# - Output flag `$out_flag`: Cross-product prefixes for $left_flag x $right_flag
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 AFF_FILE = REPO_ROOT / "Luganda.aff"
 
-rule_left_raw = $rule_left_repr
+rule_left_raw = """
+$rule_left"""
 
-rule_right_raw = $rule_right_repr
+rule_right_raw = """
+$rule_right"""
 
 FLAG_DESCRIPTIONS = {
     "$left_flag": "$left_desc",
@@ -142,7 +157,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-""")
+''')
 
 def extract_block(flag: str) -> str:
     if not AFF_FILE.exists():
@@ -161,8 +176,8 @@ def build_script(left_flag: str, right_flag: str, out_flag: str, out_path: Path,
         left_flag=left_flag,
         right_flag=right_flag,
         out_flag=out_flag,
-        rule_left_repr=repr(rule_left.rstrip('\n')),
-        rule_right_repr=repr(rule_right.rstrip('\n')),
+        rule_left=rule_left.rstrip('\n'),
+        rule_right=rule_right.rstrip('\n'),
         left_desc=left_desc,
         right_desc=right_desc,
     )
