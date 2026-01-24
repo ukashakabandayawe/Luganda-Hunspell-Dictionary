@@ -8,9 +8,51 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 AFF_FILE = REPO_ROOT / "Luganda.aff"
 
-rule_left_raw = 'PFX IM Y 22\nPFX IM 0 nnandi [^mn]\n PFX IM 0 nnandi mu\n PFX IM 0 wandi .\nPFX IM 0 yandi .\nPFX IM 0 twandi .\nPFX IM 0 mwandi .\nPFX IM 0 bandi .\nPFX IM 0 gwandi .\nPFX IM 0 ogwandi .\nPFX IM 0 gyandi .\nPFX IM 0 zandi .\nPFX IM 0 kyandi .\nPFX IM 0 byandi .\nPFX IM 0 lyandi .\nPFX IM 0 gandi .\nPFX IM 0 kandi .\nPFX IM 0 bwandi .\nPFX IM 0 lwandi .\nPFX IM 0 zandi .\nPFX IM 0 kwandi .\nPFX IM 0 gandi .\nPFX IM 0 twandi .'
+rule_left_raw = """
+PFX IM Y 22
+PFX IM 0 nnandi [^mn]
+PFX IM 0 nnandi mu
+PFX IM 0 wandi .
+PFX IM 0 yandi .
+PFX IM 0 twandi .
+PFX IM 0 mwandi .
+PFX IM 0 bandi .
+PFX IM 0 gwandi .
+PFX IM 0 ogwandi .
+PFX IM 0 gyandi .
+PFX IM 0 zandi .
+PFX IM 0 kyandi .
+PFX IM 0 byandi .
+PFX IM 0 lyandi .
+PFX IM 0 gandi .
+PFX IM 0 kandi .
+PFX IM 0 bwandi .
+PFX IM 0 lwandi .
+PFX IM 0 zandi .
+PFX IM 0 kwandi .
+PFX IM 0 gandi .
+PFX IM 0 twandi ."""
 
-rule_right_raw = 'PFX Ob Y 18\nPFX Ob 0 n [^lmnb]\nPFX Ob l nd l.[^mn]\nPFX Ob l nn l.[mn]\nPFX Ob w mp [w]\nPFX Ob 0 mu .\nPFX Ob 0 ba .\nPFX Ob 0 gu .\nPFX Ob 0 gi .\nPFX Ob 0 zi .\nPFX Ob 0 ki .\nPFX Ob 0 bi .\nPFX Ob 0 li .\nPFX Ob 0 ga .\nPFX Ob 0 ka .\nPFX Ob 0 bu .\nPFX Ob 0 lu .\nPFX Ob 0 ku .\nPFX Ob 0 tu .'
+rule_right_raw = """
+PFX Ob Y 18
+PFX Ob 0 n [^lmnb]
+PFX Ob l nd l.[^mn]
+PFX Ob l nn l.[mn]
+PFX Ob w mp [w]
+PFX Ob 0 mu .
+PFX Ob 0 ba .
+PFX Ob 0 gu .
+PFX Ob 0 gi .
+PFX Ob 0 zi .
+PFX Ob 0 ki .
+PFX Ob 0 bi .
+PFX Ob 0 li .
+PFX Ob 0 ga .
+PFX Ob 0 ka .
+PFX Ob 0 bu .
+PFX Ob 0 lu .
+PFX Ob 0 ku .
+PFX Ob 0 tu ."""
 
 FLAG_DESCRIPTIONS = {
     "IM": "IM",

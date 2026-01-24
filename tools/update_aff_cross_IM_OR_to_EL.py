@@ -8,9 +8,48 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 AFF_FILE = REPO_ROOT / "Luganda.aff"
 
-rule_left_raw = 'PFX IM Y 21\nPFX IM 0 nnandi .\nPFX IM 0 wandi .\nPFX IM 0 yandi .\nPFX IM 0 twandi .\nPFX IM 0 mwandi .\nPFX IM 0 bandi .\nPFX IM 0 gwandi .\nPFX IM 0 ogwandi .\nPFX IM 0 gyandi .\nPFX IM 0 zandi .\nPFX IM 0 kyandi .\nPFX IM 0 byandi .\nPFX IM 0 lyandi .\nPFX IM 0 gandi .\nPFX IM 0 kandi .\nPFX IM 0 bwandi .\nPFX IM 0 lwandi .\nPFX IM 0 zandi .\nPFX IM 0 kwandi .\nPFX IM 0 gandi .\nPFX IM 0 twandi .'
+rule_left_raw = """
+PFX IM Y 21
+PFX IM 0 nnandi .
+PFX IM 0 wandi .
+PFX IM 0 yandi .
+PFX IM 0 twandi .
+PFX IM 0 mwandi .
+PFX IM 0 bandi .
+PFX IM 0 gwandi .
+PFX IM 0 ogwandi .
+PFX IM 0 gyandi .
+PFX IM 0 zandi .
+PFX IM 0 kyandi .
+PFX IM 0 byandi .
+PFX IM 0 lyandi .
+PFX IM 0 gandi .
+PFX IM 0 kandi .
+PFX IM 0 bwandi .
+PFX IM 0 lwandi .
+PFX IM 0 zandi .
+PFX IM 0 kwandi .
+PFX IM 0 gandi .
+PFX IM 0 twandi ."""
 
-rule_right_raw = 'PFX OR Y 16\nPFX OR 0 mwe .\n PFX OR 0 bee .\nPFX OR 0 gwe .\nPFX OR 0 gye .\nPFX OR 0 zee .\nPFX OR 0 kye .\nPFX OR 0 bye .\nPFX OR 0 lye .\nPFX OR 0 gee .\nPFX OR 0 kee .\nPFX OR 0 bwe .\nPFX OR 0 lwe .\nPFX OR 0 zee .\nPFX OR 0 kwe .\nPFX OR 0 gee .\nPFX OR 0 twe .'
+rule_right_raw = """
+PFX OR Y 16
+PFX OR 0 mwe .
+PFX OR 0 bee .
+PFX OR 0 gwe .
+PFX OR 0 gye .
+PFX OR 0 zee .
+PFX OR 0 kye .
+PFX OR 0 bye .
+PFX OR 0 lye .
+PFX OR 0 gee .
+PFX OR 0 kee .
+PFX OR 0 bwe .
+PFX OR 0 lwe .
+PFX OR 0 zee .
+PFX OR 0 kwe .
+PFX OR 0 gee .
+PFX OR 0 twe ."""
 
 FLAG_DESCRIPTIONS = {
     "IM": "IM",
