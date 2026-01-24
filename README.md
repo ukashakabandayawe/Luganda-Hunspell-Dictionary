@@ -119,6 +119,15 @@ The project includes:
    hunspell -d Luganda test_file.txt
    ```
 
+### ⚖️ Important: GPL v3 License
+
+By using this software, you agree to the GPL v3 license terms. If you intend to:
+- **Distribute** this dictionary (modified or unmodified)
+- **Integrate** it into an application you're sharing
+- **Build** commercial tools with it
+
+...you **MUST** open-source your work under GPL v3 or a compatible open-source license. See [License](#license) section for details.
+
 ## Dictionary Files
 
 ### Luganda.aff (Affix File)
@@ -271,6 +280,16 @@ Contributions are welcome! Areas where help is needed:
 4. Test thoroughly
 5. Submit a pull request with a description of changes
 
+### GPL Compliance for Contributors
+
+When you contribute to this project:
+- Your contributions will be licensed under GPL v3
+- You agree that others can use and modify your contributions under GPL v3 terms
+- Your work benefits the open-source Luganda community
+- Any derivative works must remain open-source
+
+By submitting a pull request, you confirm that your contribution is your own work and you grant the project the right to distribute it under GPL v3.
+
 ### Reporting Issues
 
 Please report bugs and suggest improvements via GitHub Issues. Include:
@@ -283,7 +302,59 @@ Please report bugs and suggest improvements via GitHub Issues. Include:
 
 This project is licensed under the **GNU General Public License v3.0** - see the [LICENSE](LICENSE) file for details.
 
-The Luganda Hunspell Dictionary is free software: you can redistribute it and/or modify it under the terms of the GPL v3 as published by the Free Software Foundation.
+### GNU GPL v3 - Key Points
+
+The Luganda Hunspell Dictionary is **free and open-source software**. Under the GPL v3, you have important rights and responsibilities:
+
+#### Your Rights ✅
+- **Freedom to Use** - Use this software for any purpose, commercial or non-commercial
+- **Freedom to Study** - Examine the source code to understand how it works
+- **Freedom to Modify** - Change and improve the software to suit your needs
+- **Freedom to Distribute** - Share the software with others
+
+#### Your Responsibilities ⚠️
+
+**If you distribute this software or any modifications to it, you MUST:**
+
+1. **Release Under GPL v3** - Any modified versions must also be released under GPL v3
+   - You cannot convert this to a proprietary license
+   - All derivative works must remain open-source
+
+2. **Include Source Code** - Provide access to the complete source code
+   - If you distribute binaries or compiled versions, source code must be available
+   - Users can request source code from you
+
+3. **Preserve License** - Keep all GPL license notices and attribution
+   - Include the LICENSE file with any distribution
+   - Clearly indicate what modifications you made
+
+4. **Maintain Copyright** - Acknowledge original authors while adding your own copyright
+
+### Copyleft Protection
+
+GPL v3 is a **copyleft license**, meaning:
+- Any software that uses this dictionary must also be open-source (under compatible licenses)
+- This protects the project from being incorporated into proprietary software without sharing improvements
+- Ensures the Luganda community benefits from all improvements
+
+### Examples of GPL Compliance
+
+✅ **Compliant:**
+- You modify the dictionary and distribute it → Release your version under GPL v3 with source available
+- You create a spell-checker using this dictionary → Release your tool under GPL v3 (or compatible license)
+- You integrate with LanguageTool → Must comply with LanguageTool's license compatibility requirements
+
+❌ **Non-Compliant:**
+- You use this dictionary in a proprietary application without open-sourcing it
+- You distribute modified versions under a different license
+- You remove GPL notices and license information
+
+### Questions About GPL Compliance?
+
+- Read the [full GPL v3 text](LICENSE)
+- Visit [gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
+- See [opensource.org GPL FAQ](https://opensource.org/faq#gpl)
+- Contact the project maintainers with specific compliance questions
 
 ## Citation
 
