@@ -4,12 +4,13 @@ from pathlib import Path
 
 # Resolve New.aff from repository root
 REPO_ROOT = Path(__file__).resolve().parents[1]
-AFF_FILE = REPO_ROOT / "New.aff"
+AFF_FILE = REPO_ROOT / "Luganda.aff"
 
 # Rule SE (Near-future Tense Subjects)
 # Cleaned up duplicates and fixed formatting (added missing dots)
 rule_k_raw = """
-PFX SE 0 naa .
+PFX SE 0 naa [^mn]
+PFX SE 0 naa mu
 PFX SE 0 munaa .
 PFX SE 0 onoo .
 PFX SE 0 onaa .
