@@ -188,6 +188,10 @@ SFX yk yo yooko yo # faayo-->faayooko
 SFX yo Y 1
 SFX yo 0 yo [aeiou]
 
+# suffix "wo" e.g. tunulawo
+SFX wo Y 1
+SFX wo 0 wo [aeiou]
+
 # vowels at the end of possesives e.g. "we" "abe" ke in sentence like abaana bo
 SFX ae Y 3
 SFX ae 0 a [^aeiou]
@@ -3108,12 +3112,7 @@ PFX NN 0 otutu .
 # Cross product of near past tense subject markers (NP) and object markers (Ob)
 # Generated via script to handle chaining (e.g., Baazilidde)
 # Was using flag PP but now uses GG
-PFX GG Y 576
-PFX GG 0 nnan [^lmn]
-PFX GG l nnand l.[^mn]
-PFX GG l nnann l.[mn]
-PFX GG w nnamp [w]
-PFX GG 0 nnamu .
+PFX GG Y 608
 PFX GG 0 nnaba .
 PFX GG 0 nnagu .
 PFX GG 0 nnagi .
@@ -3127,7 +3126,8 @@ PFX GG 0 nnabu .
 PFX GG 0 nnalu .
 PFX GG 0 nnaku .
 PFX GG 0 nnatu .
-PFX GG 0 wan [^lmn]
+PFX GG 0 nnamu .
+PFX GG 0 wan [^lmnb]
 PFX GG l wand l.[^mn]
 PFX GG l wann l.[mn]
 PFX GG w wamp [w]
@@ -3145,7 +3145,7 @@ PFX GG 0 wabu .
 PFX GG 0 walu .
 PFX GG 0 waku .
 PFX GG 0 watu .
-PFX GG 0 yan [^lmn]
+PFX GG 0 yan [^lmnb]
 PFX GG l yand l.[^mn]
 PFX GG l yann l.[mn]
 PFX GG w yamp [w]
@@ -3163,7 +3163,7 @@ PFX GG 0 yabu .
 PFX GG 0 yalu .
 PFX GG 0 yaku .
 PFX GG 0 yatu .
-PFX GG 0 eyan [^lmn]
+PFX GG 0 eyan [^lmnb]
 PFX GG l eyand l.[^mn]
 PFX GG l eyann l.[mn]
 PFX GG w eyamp [w]
@@ -3181,7 +3181,7 @@ PFX GG 0 eyabu .
 PFX GG 0 eyalu .
 PFX GG 0 eyaku .
 PFX GG 0 eyatu .
-PFX GG 0 twan [^lmn]
+PFX GG 0 twan [^lmnb]
 PFX GG l twand l.[^mn]
 PFX GG l twann l.[mn]
 PFX GG w twamp [w]
@@ -3199,7 +3199,7 @@ PFX GG 0 twabu .
 PFX GG 0 twalu .
 PFX GG 0 twaku .
 PFX GG 0 twatu .
-PFX GG 0 mwan [^lmn]
+PFX GG 0 mwan [^lmnb]
 PFX GG l mwand l.[^mn]
 PFX GG l mwann l.[mn]
 PFX GG w mwamp [w]
@@ -3217,7 +3217,7 @@ PFX GG 0 mwabu .
 PFX GG 0 mwalu .
 PFX GG 0 mwaku .
 PFX GG 0 mwatu .
-PFX GG 0 baan [^lmn]
+PFX GG 0 baan [^lmnb]
 PFX GG l baand l.[^mn]
 PFX GG l baann l.[mn]
 PFX GG w baamp [w]
@@ -3235,7 +3235,7 @@ PFX GG 0 baabu .
 PFX GG 0 baalu .
 PFX GG 0 baaku .
 PFX GG 0 baatu .
-PFX GG 0 abaan [^lmn]
+PFX GG 0 abaan [^lmnb]
 PFX GG l abaand l.[^mn]
 PFX GG l abaann l.[mn]
 PFX GG w abaamp [w]
@@ -3253,7 +3253,7 @@ PFX GG 0 abaabu .
 PFX GG 0 abaalu .
 PFX GG 0 abaaku .
 PFX GG 0 abaatu .
-PFX GG 0 gwan [^lmn]
+PFX GG 0 gwan [^lmnb]
 PFX GG l gwand l.[^mn]
 PFX GG l gwann l.[mn]
 PFX GG w gwamp [w]
@@ -3271,7 +3271,7 @@ PFX GG 0 gwabu .
 PFX GG 0 gwalu .
 PFX GG 0 gwaku .
 PFX GG 0 gwatu .
-PFX GG 0 ogwan [^lmn]
+PFX GG 0 ogwan [^lmnb]
 PFX GG l ogwand l.[^mn]
 PFX GG l ogwann l.[mn]
 PFX GG w ogwamp [w]
@@ -3289,7 +3289,7 @@ PFX GG 0 ogwabu .
 PFX GG 0 ogwalu .
 PFX GG 0 ogwaku .
 PFX GG 0 ogwatu .
-PFX GG 0 gyan [^lmn]
+PFX GG 0 gyan [^lmnb]
 PFX GG l gyand l.[^mn]
 PFX GG l gyann l.[mn]
 PFX GG w gyamp [w]
@@ -3307,7 +3307,7 @@ PFX GG 0 gyabu .
 PFX GG 0 gyalu .
 PFX GG 0 gyaku .
 PFX GG 0 gyatu .
-PFX GG 0 egyan [^lmn]
+PFX GG 0 egyan [^lmnb]
 PFX GG l egyand l.[^mn]
 PFX GG l egyann l.[mn]
 PFX GG w egyamp [w]
@@ -3325,7 +3325,7 @@ PFX GG 0 egyabu .
 PFX GG 0 egyalu .
 PFX GG 0 egyaku .
 PFX GG 0 egyatu .
-PFX GG 0 zaan [^lmn]
+PFX GG 0 zaan [^lmnb]
 PFX GG l zaand l.[^mn]
 PFX GG l zaann l.[mn]
 PFX GG w zaamp [w]
@@ -3343,7 +3343,7 @@ PFX GG 0 zaabu .
 PFX GG 0 zaalu .
 PFX GG 0 zaaku .
 PFX GG 0 zaatu .
-PFX GG 0 ezaan [^lmn]
+PFX GG 0 ezaan [^lmnb]
 PFX GG l ezaand l.[^mn]
 PFX GG l ezaann l.[mn]
 PFX GG w ezaamp [w]
@@ -3361,7 +3361,7 @@ PFX GG 0 ezaabu .
 PFX GG 0 ezaalu .
 PFX GG 0 ezaaku .
 PFX GG 0 ezaatu .
-PFX GG 0 kyaa [^lmn]
+PFX GG 0 kyaan [^lmnb]
 PFX GG l kyaand l.[^mn]
 PFX GG l kyaann l.[mn]
 PFX GG w kyaamp [w]
@@ -3379,7 +3379,7 @@ PFX GG 0 kyaabu .
 PFX GG 0 kyaalu .
 PFX GG 0 kyaaku .
 PFX GG 0 kyaatu .
-PFX GG 0 ekyaan [^lmn]
+PFX GG 0 ekyaan [^lmnb]
 PFX GG l ekyaand l.[^mn]
 PFX GG l ekyaann l.[mn]
 PFX GG w ekyaamp [w]
@@ -3397,7 +3397,7 @@ PFX GG 0 ekyaabu .
 PFX GG 0 ekyaalu .
 PFX GG 0 ekyaaku .
 PFX GG 0 ekyaatu .
-PFX GG 0 byaan [^lmn]
+PFX GG 0 byaan [^lmnb]
 PFX GG l byaand l.[^mn]
 PFX GG l byaann l.[mn]
 PFX GG w byaamp [w]
@@ -3415,7 +3415,7 @@ PFX GG 0 byaabu .
 PFX GG 0 byaalu .
 PFX GG 0 byaaku .
 PFX GG 0 byaatu .
-PFX GG 0 ebyaan [^lmn]
+PFX GG 0 ebyaan [^lmnb]
 PFX GG l ebyaand l.[^mn]
 PFX GG l ebyaann l.[mn]
 PFX GG w ebyaamp [w]
@@ -3433,7 +3433,7 @@ PFX GG 0 ebyaabu .
 PFX GG 0 ebyaalu .
 PFX GG 0 ebyaaku .
 PFX GG 0 ebyaatu .
-PFX GG 0 lyaan [^lmn]
+PFX GG 0 lyaan [^lmnb]
 PFX GG l lyaand l.[^mn]
 PFX GG l lyaann l.[mn]
 PFX GG w lyaamp [w]
@@ -3451,7 +3451,7 @@ PFX GG 0 lyaabu .
 PFX GG 0 lyaalu .
 PFX GG 0 lyaaku .
 PFX GG 0 lyaatu .
-PFX GG 0 elyaan [^lmn]
+PFX GG 0 elyaan [^lmnb]
 PFX GG l elyaand l.[^mn]
 PFX GG l elyaann l.[mn]
 PFX GG w elyaamp [w]
@@ -3469,7 +3469,7 @@ PFX GG 0 elyaabu .
 PFX GG 0 elyaalu .
 PFX GG 0 elyaaku .
 PFX GG 0 elyaatu .
-PFX GG 0 gaan [^lmn]
+PFX GG 0 gaan [^lmnb]
 PFX GG l gaand l.[^mn]
 PFX GG l gaann l.[mn]
 PFX GG w gaamp [w]
@@ -3487,7 +3487,7 @@ PFX GG 0 gaabu .
 PFX GG 0 gaalu .
 PFX GG 0 gaaku .
 PFX GG 0 gaatu .
-PFX GG 0 agaan [^lmn]
+PFX GG 0 agaan [^lmnb]
 PFX GG l agaand l.[^mn]
 PFX GG l agaann l.[mn]
 PFX GG w agaamp [w]
@@ -3505,7 +3505,7 @@ PFX GG 0 agaabu .
 PFX GG 0 agaalu .
 PFX GG 0 agaaku .
 PFX GG 0 agaatu .
-PFX GG 0 kaan [^lmn]
+PFX GG 0 kaan [^lmnb]
 PFX GG l kaand l.[^mn]
 PFX GG l kaann l.[mn]
 PFX GG w kaamp [w]
@@ -3523,7 +3523,7 @@ PFX GG 0 kaabu .
 PFX GG 0 kaalu .
 PFX GG 0 kaaku .
 PFX GG 0 kaatu .
-PFX GG 0 akaan [^lmn]
+PFX GG 0 akaan [^lmnb]
 PFX GG l akaand l.[^mn]
 PFX GG l akaann l.[mn]
 PFX GG w akaamp [w]
@@ -3541,7 +3541,7 @@ PFX GG 0 akaabu .
 PFX GG 0 akaalu .
 PFX GG 0 akaaku .
 PFX GG 0 akaatu .
-PFX GG 0 bwan [^lmn]
+PFX GG 0 bwan [^lmnb]
 PFX GG l bwand l.[^mn]
 PFX GG l bwann l.[mn]
 PFX GG w bwamp [w]
@@ -3559,7 +3559,7 @@ PFX GG 0 bwabu .
 PFX GG 0 bwalu .
 PFX GG 0 bwaku .
 PFX GG 0 bwatu .
-PFX GG 0 obwan [^lmn]
+PFX GG 0 obwan [^lmnb]
 PFX GG l obwand l.[^mn]
 PFX GG l obwann l.[mn]
 PFX GG w obwamp [w]
@@ -3577,7 +3577,7 @@ PFX GG 0 obwabu .
 PFX GG 0 obwalu .
 PFX GG 0 obwaku .
 PFX GG 0 obwatu .
-PFX GG 0 lwan [^lmn]
+PFX GG 0 lwan [^lmnb]
 PFX GG l lwand l.[^mn]
 PFX GG l lwann l.[mn]
 PFX GG w lwamp [w]
@@ -3595,7 +3595,7 @@ PFX GG 0 lwabu .
 PFX GG 0 lwalu .
 PFX GG 0 lwaku .
 PFX GG 0 lwatu .
-PFX GG 0 olwan [^lmn]
+PFX GG 0 olwan [^lmnb]
 PFX GG l olwand l.[^mn]
 PFX GG l olwann l.[mn]
 PFX GG w olwamp [w]
@@ -3613,7 +3613,7 @@ PFX GG 0 olwabu .
 PFX GG 0 olwalu .
 PFX GG 0 olwaku .
 PFX GG 0 olwatu .
-PFX GG 0 kwaan [^lmn]
+PFX GG 0 kwaan [^lmnb]
 PFX GG l kwaand l.[^mn]
 PFX GG l kwaann l.[mn]
 PFX GG w kwaamp [w]
@@ -3631,7 +3631,7 @@ PFX GG 0 kwaabu .
 PFX GG 0 kwaalu .
 PFX GG 0 kwaaku .
 PFX GG 0 kwaatu .
-PFX GG 0 okwaan [^lmn]
+PFX GG 0 okwaan [^lmnb]
 PFX GG l okwaand l.[^mn]
 PFX GG l okwaann l.[mn]
 PFX GG w okwaamp [w]
@@ -3649,7 +3649,43 @@ PFX GG 0 okwaabu .
 PFX GG 0 okwaalu .
 PFX GG 0 okwaaku .
 PFX GG 0 okwaatu .
-PFX GG 0 twaan [^lmn]
+PFX GG 0 gaan [^lmnb]
+PFX GG l gaand l.[^mn]
+PFX GG l gaann l.[mn]
+PFX GG w gaamp [w]
+PFX GG 0 gaamu .
+PFX GG 0 gaaba .
+PFX GG 0 gaagu .
+PFX GG 0 gaagi .
+PFX GG 0 gaazi .
+PFX GG 0 gaaki .
+PFX GG 0 gaabi .
+PFX GG 0 gaali .
+PFX GG 0 gaaga .
+PFX GG 0 gaaka .
+PFX GG 0 gaabu .
+PFX GG 0 gaalu .
+PFX GG 0 gaaku .
+PFX GG 0 gaatu .
+PFX GG 0 agaan [^lmnb]
+PFX GG l agaand l.[^mn]
+PFX GG l agaann l.[mn]
+PFX GG w agaamp [w]
+PFX GG 0 agaamu .
+PFX GG 0 agaaba .
+PFX GG 0 agaagu .
+PFX GG 0 agaagi .
+PFX GG 0 agaazi .
+PFX GG 0 agaaki .
+PFX GG 0 agaabi .
+PFX GG 0 agaali .
+PFX GG 0 agaaga .
+PFX GG 0 agaaka .
+PFX GG 0 agaabu .
+PFX GG 0 agaalu .
+PFX GG 0 agaaku .
+PFX GG 0 agaatu .
+PFX GG 0 twaan [^lmnb]
 PFX GG l twaand l.[^mn]
 PFX GG l twaann l.[mn]
 PFX GG w twaamp [w]
@@ -3667,7 +3703,7 @@ PFX GG 0 twaabu .
 PFX GG 0 twaalu .
 PFX GG 0 twaaku .
 PFX GG 0 twaatu .
-PFX GG 0 otwaan [^lmn]
+PFX GG 0 otwaan [^lmnb]
 PFX GG l otwaand l.[^mn]
 PFX GG l otwaann l.[mn]
 PFX GG w otwaamp [w]
@@ -3689,12 +3725,7 @@ PFX GG 0 otwaatu .
 # Cross product of future tense subject markers (NF) and object markers (Ob)
 # Generated via script to handle chaining
 # Was using flag Q but now uses QQ
-PFX QQ Y 576
-PFX QQ 0 naan [^lmn]
-PFX QQ l naand l.[^mn]
-PFX QQ l naann l.[mn]
-PFX QQ w naamp [w]
-PFX QQ 0 naamu .
+PFX QQ Y 680
 PFX QQ 0 naaba .
 PFX QQ 0 naagu .
 PFX QQ 0 naagi .
@@ -3708,7 +3739,8 @@ PFX QQ 0 naabu .
 PFX QQ 0 naalu .
 PFX QQ 0 naaku .
 PFX QQ 0 naatu .
-PFX QQ 0 munaan [^lmn]
+PFX QQ 0 naamu .
+PFX QQ 0 munaan [^lmnb]
 PFX QQ l munaand l.[^mn]
 PFX QQ l munaann l.[mn]
 PFX QQ w munaamp [w]
@@ -3726,7 +3758,7 @@ PFX QQ 0 munaabu .
 PFX QQ 0 munaalu .
 PFX QQ 0 munaaku .
 PFX QQ 0 munaatu .
-PFX QQ 0 onoon [^lmn]
+PFX QQ 0 onoon [^lmnb]
 PFX QQ l onoond l.[^mn]
 PFX QQ l onoonn l.[mn]
 PFX QQ w onoomp [w]
@@ -3744,7 +3776,7 @@ PFX QQ 0 onoobu .
 PFX QQ 0 onoolu .
 PFX QQ 0 onooku .
 PFX QQ 0 onootu .
-PFX QQ 0 onaan [^lmn]
+PFX QQ 0 onaan [^lmnb]
 PFX QQ l onaand l.[^mn]
 PFX QQ l onaann l.[mn]
 PFX QQ w onaamp [w]
@@ -3762,7 +3794,7 @@ PFX QQ 0 onaabu .
 PFX QQ 0 onaalu .
 PFX QQ 0 onaaku .
 PFX QQ 0 onaatu .
-PFX QQ 0 anaan [^lmn]
+PFX QQ 0 anaan [^lmnb]
 PFX QQ l anaand l.[^mn]
 PFX QQ l anaann l.[mn]
 PFX QQ w anaamp [w]
@@ -3780,7 +3812,7 @@ PFX QQ 0 anaabu .
 PFX QQ 0 anaalu .
 PFX QQ 0 anaaku .
 PFX QQ 0 anaatu .
-PFX QQ 0 tunaan [^lmn]
+PFX QQ 0 tunaan [^lmnb]
 PFX QQ l tunaand l.[^mn]
 PFX QQ l tunaann l.[mn]
 PFX QQ w tunaamp [w]
@@ -3798,7 +3830,25 @@ PFX QQ 0 tunaabu .
 PFX QQ 0 tunaalu .
 PFX QQ 0 tunaaku .
 PFX QQ 0 tunaatu .
-PFX QQ 0 banaan [^lmn]
+PFX QQ 0 munaan [^lmnb]
+PFX QQ l munaand l.[^mn]
+PFX QQ l munaann l.[mn]
+PFX QQ w munaamp [w]
+PFX QQ 0 munaamu .
+PFX QQ 0 munaaba .
+PFX QQ 0 munaagu .
+PFX QQ 0 munaagi .
+PFX QQ 0 munaazi .
+PFX QQ 0 munaaki .
+PFX QQ 0 munaabi .
+PFX QQ 0 munaali .
+PFX QQ 0 munaaga .
+PFX QQ 0 munaaka .
+PFX QQ 0 munaabu .
+PFX QQ 0 munaalu .
+PFX QQ 0 munaaku .
+PFX QQ 0 munaatu .
+PFX QQ 0 banaan [^lmnb]
 PFX QQ l banaand l.[^mn]
 PFX QQ l banaann l.[mn]
 PFX QQ w banaamp [w]
@@ -3816,7 +3866,7 @@ PFX QQ 0 banaabu .
 PFX QQ 0 banaalu .
 PFX QQ 0 banaaku .
 PFX QQ 0 banaatu .
-PFX QQ 0 abanaan [^lmn]
+PFX QQ 0 abanaan [^lmnb]
 PFX QQ l abanaand l.[^mn]
 PFX QQ l abanaann l.[mn]
 PFX QQ w abanaamp [w]
@@ -3834,7 +3884,7 @@ PFX QQ 0 abanaabu .
 PFX QQ 0 abanaalu .
 PFX QQ 0 abanaaku .
 PFX QQ 0 abanaatu .
-PFX QQ 0 gunaan [^lmn]
+PFX QQ 0 gunaan [^lmnb]
 PFX QQ l gunaand l.[^mn]
 PFX QQ l gunaann l.[mn]
 PFX QQ w gunaamp [w]
@@ -3852,7 +3902,7 @@ PFX QQ 0 gunaabu .
 PFX QQ 0 gunaalu .
 PFX QQ 0 gunaaku .
 PFX QQ 0 gunaatu .
-PFX QQ 0 ogunaan [^lmn]
+PFX QQ 0 ogunaan [^lmnb]
 PFX QQ l ogunaand l.[^mn]
 PFX QQ l ogunaann l.[mn]
 PFX QQ w ogunaamp [w]
@@ -3870,7 +3920,7 @@ PFX QQ 0 ogunaabu .
 PFX QQ 0 ogunaalu .
 PFX QQ 0 ogunaaku .
 PFX QQ 0 ogunaatu .
-PFX QQ 0 ginaan [^lmn]
+PFX QQ 0 ginaan [^lmnb]
 PFX QQ l ginaand l.[^mn]
 PFX QQ l ginaann l.[mn]
 PFX QQ w ginaamp [w]
@@ -3888,7 +3938,7 @@ PFX QQ 0 ginaabu .
 PFX QQ 0 ginaalu .
 PFX QQ 0 ginaaku .
 PFX QQ 0 ginaatu .
-PFX QQ 0 eginaan [^lmn]
+PFX QQ 0 eginaan [^lmnb]
 PFX QQ l eginaand l.[^mn]
 PFX QQ l eginaann l.[mn]
 PFX QQ w eginaamp [w]
@@ -3906,7 +3956,7 @@ PFX QQ 0 eginaabu .
 PFX QQ 0 eginaalu .
 PFX QQ 0 eginaaku .
 PFX QQ 0 eginaatu .
-PFX QQ 0 enaan [^lmn]
+PFX QQ 0 enaan [^lmnb]
 PFX QQ l enaand l.[^mn]
 PFX QQ l enaann l.[mn]
 PFX QQ w enaamp [w]
@@ -3924,7 +3974,7 @@ PFX QQ 0 enaabu .
 PFX QQ 0 enaalu .
 PFX QQ 0 enaaku .
 PFX QQ 0 enaatu .
-PFX QQ 0 zinaan [^lmn]
+PFX QQ 0 zinaan [^lmnb]
 PFX QQ l zinaand l.[^mn]
 PFX QQ l zinaann l.[mn]
 PFX QQ w zinaamp [w]
@@ -3942,7 +3992,7 @@ PFX QQ 0 zinaabu .
 PFX QQ 0 zinaalu .
 PFX QQ 0 zinaaku .
 PFX QQ 0 zinaatu .
-PFX QQ 0 ezinaan [^lmn]
+PFX QQ 0 ezinaan [^lmnb]
 PFX QQ l ezinaand l.[^mn]
 PFX QQ l ezinaann l.[mn]
 PFX QQ w ezinaamp [w]
@@ -3960,7 +4010,7 @@ PFX QQ 0 ezinaabu .
 PFX QQ 0 ezinaalu .
 PFX QQ 0 ezinaaku .
 PFX QQ 0 ezinaatu .
-PFX QQ 0 kinaan [^lmn]
+PFX QQ 0 kinaan [^lmnb]
 PFX QQ l kinaand l.[^mn]
 PFX QQ l kinaann l.[mn]
 PFX QQ w kinaamp [w]
@@ -3978,7 +4028,7 @@ PFX QQ 0 kinaabu .
 PFX QQ 0 kinaalu .
 PFX QQ 0 kinaaku .
 PFX QQ 0 kinaatu .
-PFX QQ 0 ekinaan [^lmn]
+PFX QQ 0 ekinaan [^lmnb]
 PFX QQ l ekinaand l.[^mn]
 PFX QQ l ekinaann l.[mn]
 PFX QQ w ekinaamp [w]
@@ -3996,7 +4046,7 @@ PFX QQ 0 ekinaabu .
 PFX QQ 0 ekinaalu .
 PFX QQ 0 ekinaaku .
 PFX QQ 0 ekinaatu .
-PFX QQ 0 binaan [^lmn]
+PFX QQ 0 binaan [^lmnb]
 PFX QQ l binaand l.[^mn]
 PFX QQ l binaann l.[mn]
 PFX QQ w binaamp [w]
@@ -4014,7 +4064,7 @@ PFX QQ 0 binaabu .
 PFX QQ 0 binaalu .
 PFX QQ 0 binaaku .
 PFX QQ 0 binaatu .
-PFX QQ 0 ebinaan [^lmn]
+PFX QQ 0 ebinaan [^lmnb]
 PFX QQ l ebinaand l.[^mn]
 PFX QQ l ebinaann l.[mn]
 PFX QQ w ebinaamp [w]
@@ -4032,7 +4082,7 @@ PFX QQ 0 ebinaabu .
 PFX QQ 0 ebinaalu .
 PFX QQ 0 ebinaaku .
 PFX QQ 0 ebinaatu .
-PFX QQ 0 linaan [^lmn]
+PFX QQ 0 linaan [^lmnb]
 PFX QQ l linaand l.[^mn]
 PFX QQ l linaann l.[mn]
 PFX QQ w linaamp [w]
@@ -4050,7 +4100,7 @@ PFX QQ 0 linaabu .
 PFX QQ 0 linaalu .
 PFX QQ 0 linaaku .
 PFX QQ 0 linaatu .
-PFX QQ 0 elinaan [^lmn]
+PFX QQ 0 elinaan [^lmnb]
 PFX QQ l elinaand l.[^mn]
 PFX QQ l elinaann l.[mn]
 PFX QQ w elinaamp [w]
@@ -4068,7 +4118,7 @@ PFX QQ 0 elinaabu .
 PFX QQ 0 elinaalu .
 PFX QQ 0 elinaaku .
 PFX QQ 0 elinaatu .
-PFX QQ 0 ganaan [^lmn]
+PFX QQ 0 ganaan [^lmnb]
 PFX QQ l ganaand l.[^mn]
 PFX QQ l ganaann l.[mn]
 PFX QQ w ganaamp [w]
@@ -4086,7 +4136,7 @@ PFX QQ 0 ganaabu .
 PFX QQ 0 ganaalu .
 PFX QQ 0 ganaaku .
 PFX QQ 0 ganaatu .
-PFX QQ 0 aganaan [^lmn]
+PFX QQ 0 aganaan [^lmnb]
 PFX QQ l aganaand l.[^mn]
 PFX QQ l aganaann l.[mn]
 PFX QQ w aganaamp [w]
@@ -4104,7 +4154,7 @@ PFX QQ 0 aganaabu .
 PFX QQ 0 aganaalu .
 PFX QQ 0 aganaaku .
 PFX QQ 0 aganaatu .
-PFX QQ 0 kanaan [^lmn]
+PFX QQ 0 kanaan [^lmnb]
 PFX QQ l kanaand l.[^mn]
 PFX QQ l kanaann l.[mn]
 PFX QQ w kanaamp [w]
@@ -4122,7 +4172,7 @@ PFX QQ 0 kanaabu .
 PFX QQ 0 kanaalu .
 PFX QQ 0 kanaaku .
 PFX QQ 0 kanaatu .
-PFX QQ 0 akanaan [^lmn]
+PFX QQ 0 akanaan [^lmnb]
 PFX QQ l akanaand l.[^mn]
 PFX QQ l akanaann l.[mn]
 PFX QQ w akanaamp [w]
@@ -4140,7 +4190,7 @@ PFX QQ 0 akanaabu .
 PFX QQ 0 akanaalu .
 PFX QQ 0 akanaaku .
 PFX QQ 0 akanaatu .
-PFX QQ 0 bunaan [^lmn]
+PFX QQ 0 bunaan [^lmnb]
 PFX QQ l bunaand l.[^mn]
 PFX QQ l bunaann l.[mn]
 PFX QQ w bunaamp [w]
@@ -4158,7 +4208,7 @@ PFX QQ 0 bunaabu .
 PFX QQ 0 bunaalu .
 PFX QQ 0 bunaaku .
 PFX QQ 0 bunaatu .
-PFX QQ 0 obunaan [^lmn]
+PFX QQ 0 obunaan [^lmnb]
 PFX QQ l obunaand l.[^mn]
 PFX QQ l obunaann l.[mn]
 PFX QQ w obunaamp [w]
@@ -4176,7 +4226,7 @@ PFX QQ 0 obunaabu .
 PFX QQ 0 obunaalu .
 PFX QQ 0 obunaaku .
 PFX QQ 0 obunaatu .
-PFX QQ 0 lunaan [^lmn]
+PFX QQ 0 lunaan [^lmnb]
 PFX QQ l lunaand l.[^mn]
 PFX QQ l lunaann l.[mn]
 PFX QQ w lunaamp [w]
@@ -4194,7 +4244,7 @@ PFX QQ 0 lunaabu .
 PFX QQ 0 lunaalu .
 PFX QQ 0 lunaaku .
 PFX QQ 0 lunaatu .
-PFX QQ 0 olunaan [^lmn]
+PFX QQ 0 olunaan [^lmnb]
 PFX QQ l olunaand l.[^mn]
 PFX QQ l olunaann l.[mn]
 PFX QQ w olunaamp [w]
@@ -4212,7 +4262,43 @@ PFX QQ 0 olunaabu .
 PFX QQ 0 olunaalu .
 PFX QQ 0 olunaaku .
 PFX QQ 0 olunaatu .
-PFX QQ 0 kunaan [^lmn]
+PFX QQ 0 zinaan [^lmnb]
+PFX QQ l zinaand l.[^mn]
+PFX QQ l zinaann l.[mn]
+PFX QQ w zinaamp [w]
+PFX QQ 0 zinaamu .
+PFX QQ 0 zinaaba .
+PFX QQ 0 zinaagu .
+PFX QQ 0 zinaagi .
+PFX QQ 0 zinaazi .
+PFX QQ 0 zinaaki .
+PFX QQ 0 zinaabi .
+PFX QQ 0 zinaali .
+PFX QQ 0 zinaaga .
+PFX QQ 0 zinaaka .
+PFX QQ 0 zinaabu .
+PFX QQ 0 zinaalu .
+PFX QQ 0 zinaaku .
+PFX QQ 0 zinaatu .
+PFX QQ 0 ezinaan [^lmnb]
+PFX QQ l ezinaand l.[^mn]
+PFX QQ l ezinaann l.[mn]
+PFX QQ w ezinaamp [w]
+PFX QQ 0 ezinaamu .
+PFX QQ 0 ezinaaba .
+PFX QQ 0 ezinaagu .
+PFX QQ 0 ezinaagi .
+PFX QQ 0 ezinaazi .
+PFX QQ 0 ezinaaki .
+PFX QQ 0 ezinaabi .
+PFX QQ 0 ezinaali .
+PFX QQ 0 ezinaaga .
+PFX QQ 0 ezinaaka .
+PFX QQ 0 ezinaabu .
+PFX QQ 0 ezinaalu .
+PFX QQ 0 ezinaaku .
+PFX QQ 0 ezinaatu .
+PFX QQ 0 kunaan [^lmnb]
 PFX QQ l kunaand l.[^mn]
 PFX QQ l kunaann l.[mn]
 PFX QQ w kunaamp [w]
@@ -4230,9 +4316,9 @@ PFX QQ 0 kunaabu .
 PFX QQ 0 kunaalu .
 PFX QQ 0 kunaaku .
 PFX QQ 0 kunaatu .
-PFX QQ 0 okunaan [^lmn]
+PFX QQ 0 okunaan [^lmnb]
 PFX QQ l okunaand l.[^mn]
-PFX QQ l okunann l.[mn]
+PFX QQ l okunaann l.[mn]
 PFX QQ w okunaamp [w]
 PFX QQ 0 okunaamu .
 PFX QQ 0 okunaaba .
@@ -4248,7 +4334,61 @@ PFX QQ 0 okunaabu .
 PFX QQ 0 okunaalu .
 PFX QQ 0 okunaaku .
 PFX QQ 0 okunaatu .
-PFX QQ 0 otunaan [^lmn]
+PFX QQ 0 ganaan [^lmnb]
+PFX QQ l ganaand l.[^mn]
+PFX QQ l ganaann l.[mn]
+PFX QQ w ganaamp [w]
+PFX QQ 0 ganaamu .
+PFX QQ 0 ganaaba .
+PFX QQ 0 ganaagu .
+PFX QQ 0 ganaagi .
+PFX QQ 0 ganaazi .
+PFX QQ 0 ganaaki .
+PFX QQ 0 ganaabi .
+PFX QQ 0 ganaali .
+PFX QQ 0 ganaaga .
+PFX QQ 0 ganaaka .
+PFX QQ 0 ganaabu .
+PFX QQ 0 ganaalu .
+PFX QQ 0 ganaaku .
+PFX QQ 0 ganaatu .
+PFX QQ 0 ogunaan [^lmnb]
+PFX QQ l ogunaand l.[^mn]
+PFX QQ l ogunaann l.[mn]
+PFX QQ w ogunaamp [w]
+PFX QQ 0 ogunaamu .
+PFX QQ 0 ogunaaba .
+PFX QQ 0 ogunaagu .
+PFX QQ 0 ogunaagi .
+PFX QQ 0 ogunaazi .
+PFX QQ 0 ogunaaki .
+PFX QQ 0 ogunaabi .
+PFX QQ 0 ogunaali .
+PFX QQ 0 ogunaaga .
+PFX QQ 0 ogunaaka .
+PFX QQ 0 ogunaabu .
+PFX QQ 0 ogunaalu .
+PFX QQ 0 ogunaaku .
+PFX QQ 0 ogunaatu .
+PFX QQ 0 tunaan [^lmnb]
+PFX QQ l tunaand l.[^mn]
+PFX QQ l tunaann l.[mn]
+PFX QQ w tunaamp [w]
+PFX QQ 0 tunaamu .
+PFX QQ 0 tunaaba .
+PFX QQ 0 tunaagu .
+PFX QQ 0 tunaagi .
+PFX QQ 0 tunaazi .
+PFX QQ 0 tunaaki .
+PFX QQ 0 tunaabi .
+PFX QQ 0 tunaali .
+PFX QQ 0 tunaaga .
+PFX QQ 0 tunaaka .
+PFX QQ 0 tunaabu .
+PFX QQ 0 tunaalu .
+PFX QQ 0 tunaaku .
+PFX QQ 0 tunaatu .
+PFX QQ 0 otunaan [^lmnb]
 PFX QQ l otunaand l.[^mn]
 PFX QQ l otunaann l.[mn]
 PFX QQ w otunaamp [w]
