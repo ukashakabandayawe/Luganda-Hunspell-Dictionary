@@ -1,4 +1,4 @@
-3008
+3007
 
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -19,30 +19,12 @@
 
 # --- abo --- #
 abo
-# --- abiri--- #
+# --- abiri --- #
 abiri
-# --- faayo --- #
-faayo/psnpffggPSDPNFFFPPppIPipykYTSCscWNwnWMwmWFwfStstLT
-feeyo/NAykwmSBOb
-fiirayo/NARPpsnpffRnRFrfgghhrpPSVPDPNFFFPPppJJjjIPipRIYTytSCscWNWMWFwgWGWHWJwjIMStstSTsTLT
-fuddeyo/NAPSyknpVPNPSCwnCCLT
-fuddeeyo/ykpsscWN
-# --- faako --- #
-faako/RPpsnpffRnRFrfgghhrpPSDPFFRIriYTytSCscWNWGwgWHWJwjiMSTsTRRNNGGSSMMIITTkkvvxxHHttllBGBIBSBKBVBFBQBWBDBHBRBEBXEHEDFCFDEBEFFEFSFVFMFGFAEK
-feeko/NARPnfrpPSscwnwmwgwhSBWWBXFXFPEM
-fiirako/NAgghhPSNPFFNFDPYTSCscWNwnWMWFwfWGwgWHwhWJIMiMStstSTLTNNGGRRSSMMIITTQQvvxxBGBIBSBKBFBDBHBRBPBLBNBUBEBXFYFZEHEDEJFCFDFIFJEBEFFEFSFVFMFWFTFPFNFRFGFHFAFBEKELEM
-fiireko/NARPnfrpPSFFwmwhSBNNWWUUBVBXFXFPFREM
-fiiriddeko/NARPnpPSNPSCwgCCcCIMiMstLTNNGGMMIIUUVVBGBFBDBEFYFZEHEJFDFIFHFKFLEKELEM
-fiiriddeeko/NApsrfrpscWNwmSSBSBVBRFR
-fuddeko/NARPnprpPSNPSCwgWGwhcCiMsTLTNNGGIIBGBFBDBEBXFYEHFDEFFHEKEM
-fuddeeko/NApsrpFEFMFG
 ag
 aga
 ak
 aka
-akaalo/Nf
-akaama
-akaana
 akaato
 akaayo
 akabakko
@@ -676,11 +658,11 @@ eky'okunywa
 eky'omu
 ekya
 ekyaabwe
-ekyaalo
+ekyaalo/Nd
+ekyaama/Nd
 ekyaasa
 ekyaffe
 ekyalaani
-ekyama
 ekyamaguzi
 ekyamazzi
 ekyambalo
@@ -985,14 +967,14 @@ erigomba
 eriiso
 erindaazi
 erinnya
-erinnya/NeNeyyyy
+erinnya/Neyy
 erinnyo
 eronda
 erondalonda
 erumika
 erumya
 eryanda
-eryato
+eryato/Nezz
 eryenvu
 eryenvu/NeNeyyyy
 esammula
@@ -1101,6 +1083,21 @@ eziike
 ezziga
 fa
 faanana
+# --- faako --- #
+faako/RPpsnpffRnRFrfgghhrpPSDPFFRIriYTytSCscWNWGwgWHWJwjiMSTsTRRNNGGSSMMIITTkkvvxxHHttllBGBIBSBKBVBFBQBWBDBHBRBEBXEHEDFCFDEBEFFEFSFVFMFGFAEK
+feeko/NARPnfrpPSscwnwmwgwhSBWWBXFXFPEM
+fiirako/NAgghhPSNPFFNFDPYTSCscWNwnWMWFwfWGwgWHwhWJIMiMStstSTLTNNGGRRSSMMIITTQQvvxxBGBIBSBKBFBDBHBRBPBLBNBUBEBXFYFZEHEDEJFCFDFIFJEBEFFEFSFVFMFWFTFPFNFRFGFHFAFBEKELEM
+fiireko/NARPnfrpPSFFwmwhSBNNWWUUBVBXFXFPFREM
+fiiriddeko/NARPnpPSNPSCwgCCcCIMiMstLTNNGGMMIIUUVVBGBFBDBEFYFZEHEJFDFIFHFKFLEKELEM
+fiiriddeeko/NApsrfrpscWNwmSSBSBVBRFR
+fuddeko/NARPnprpPSNPSCwgWGwhcCiMsTLTNNGGIIBGBFBDBEBXFYEHFDEFFHEKEM
+fuddeeko/NApsrpFEFMFG
+# --- faayo --- #
+faayo/psnpffggPSDPNFFFPPppIPipykYTSCscWNwnWMwmWFwfStstLT
+feeyo/NAykwmSBOb
+fiirayo/NARPpsnpffRnRFrfgghhrpPSVPDPNFFFPPppJJjjIPipRIYTytSCscWNWMWFwgWGWHWJwjIMStstSTsTLT
+fuddeyo/NAPSyknpVPNPSCwnCCLT
+fuddeeyo/ykpsscWN
 famire
 fayiro
 feeba
@@ -1110,7 +1107,7 @@ ffala
 ffe
 ffena
 ffenne
-ffenne/NaNa
+ffenne/Na
 ffiga
 fiira
 fiirwa
@@ -1584,8 +1581,8 @@ lwe
 ly
 lya # This is an impersonal possessive 
 # --- lya--- #
-lya/SSrpNNGGQQRRpsSSNPggMMAAOOLTko
-lidde
+lya/SSrpNNGGQQRRpsSSNPggMMAAOOLTkoYTFASt
+lidde/PS
 liira
 liisa
 liibwa/NA
@@ -2417,8 +2414,11 @@ omwaka
 omwala
 omwalo
 omwami
-omwana
+# --- omwana --- #
+omwana/Nazz
+# --- omwasirizi --- #
 omwasirizi
+# --- omwavu --- #
 omwavu
 omwenge
 omwenkanonkano
