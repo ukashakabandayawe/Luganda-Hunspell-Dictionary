@@ -2279,17 +2279,21 @@ PFX Nc em 0 em # e.g emmayiro
 
 # Class IV nouns 
 # Was using flag r but now uses Nd
-PFX Nd Y 6
+PFX Nd Y 10
 PFX Nd e 0 eki
 PFX Nd e 0 eky
 PFX Nd eki ebi eki
 PFX Nd eki bi eki
 PFX Nd eky eby eky
 PFX Nd eky by eky
+PFX Nd eky ak eky  # ekyaalo-->akaalo
+PFX Nd eky k eky
+PFX Nd eky obw eky  # ekyaalo-->obwaalo 
+PFX Nd eky bw eky
 
 # Class V nouns 
 # Was using flag s and now uses flag Ne
-PFX Ne Y 10
+PFX Ne Y 13
 PFX Ne e 0 e.^r
 PFX Ne e ama e.^r # eggi
 PFX Ne e ma e.^r
@@ -2300,6 +2304,9 @@ PFX Ne ejj ma ejj
 PFX Ne ery am ery # eryenvu 
 PFX Ne ery m ery
 PFX Ne er l er # lyenvu 
+PFX Ne ery ama erya # eryato-->amaato
+PFX Ne ery ma erya
+PFX Ne ery lya er # eryato-->lyaato
 
 # Class VI nouns 
 # Was using flag t and now uses Nf
@@ -2394,7 +2401,7 @@ PFX yy 0 otw' [aeiou]
 # Prefixes of nouns based on size e.g akaana, obwaana, ebyaana
 # This rule is explosive, so I missed some words, knowingly and unknowingly
 # Was using flag z but now uses zz
-PFX zz Y 136
+PFX zz Y 152
 PFX zz omu otu omu # omusajja-->otusajja
 PFX zz omu obu omu # omusajja-->obusajja
 PFX zz omu olu omu # omusajja-->olusajja
@@ -2404,13 +2411,21 @@ PFX zz omu aga omu # omusajja-->agasajja
 PFX zz omu eki omu # omusajja-->ekisajja
 PFX zz omu ebi omu # omusajja-->ebisajja
 PFX zz omw olw omw # omwana-->olwana
+PFX zz omw lw  omw
 PFX zz omw aka omw # omwana-->akaana
+PFX zz omw ka  omw
 PFX zz omw otw omw # omwana-->otwana
+PFX zz omw tw  omw 
 PFX zz omw obw omw # omwana-->obwana
+PFX zz omw bw  omw 
 PFX zz omw ogw omw # omwana-->ogwana
+PFX zz omw gw  omw
 PFX zz omw aga omw # omwana-->agaana
+PFX zz omw ga  omw
 PFX zz omw eky omw # omwana-->ekyana
+PFX zz omw ky  omw
 PFX zz omw eby omw # omwana-->ebyana
+PFX zz omw by  omw
 PFX zz en otu en # ente-->otute
 PFX zz em otu em # embuzi-->otubuzi
 PFX zz en obu en # ente-->obute
@@ -2452,13 +2467,21 @@ PFX zz e aga e.[^rdj]
 PFX zz e eki e.[^rdj]
 PFX zz e ebi e.[^rdj]
 PFX zz ery otw ery
+PFX zz ery tw  ery
 PFX zz ery obw ery
+PFX zz ery bw  ery
 PFX zz ery olw ery
-PFX zz ery ak ery
+PFX zz ery lw  ery
+PFX zz ery ak  ery
+PFX zz ery k   ery
 PFX zz ery ogw ery
-PFX zz ery ag ery
+PFX zz ery gw  ery
+PFX zz ery ag  ery
+PFX zz ery g   ery
 PFX zz ery eky ery
+PFX zz ery ky  ery
 PFX zz ery eby ery
+PFX zz ery by  ery
 PFX zz eri otu eri
 PFX zz eri obu eri
 PFX zz eri olu eri
