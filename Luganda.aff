@@ -2293,27 +2293,61 @@ PFX Nd eky bw eky
 
 # Class V nouns 
 # Was using flag s and now uses flag Ne
-PFX Ne Y 13
-PFX Ne e 0 e.^r
-PFX Ne e ama e.^r # eggi
-PFX Ne e ma e.^r
-PFX Ne eri ama er # erinnyo
-PFX Ne eri ma e
-PFX Ne ejj ama ejj # ejjuuni
-PFX Ne ejj ma ejj
-PFX Ne ery am ery # eryenvu 
-PFX Ne ery m ery
-PFX Ne er l er # lyenvu 
-PFX Ne ery ama erya # eryato-->amaato
-PFX Ne ery ma erya
-PFX Ne ery lya er # eryato-->lyaato
+PFX Ne Y 47
+PFX Ne e   0    ebb
+PFX Ne e   0    edd
+PFX Ne e   0    eff
+PFX Ne e   0    egg
+PFX Ne e   0    ejj
+PFX Ne e   0    ekk
+PFX Ne e   0    ess
+PFX Ne e   0    ett
+PFX Ne e   0    evv
+PFX Ne e   0    ezz
+PFX Ne eb  ama  ebb
+PFX Ne eb  ma   ebb
+PFX Ne ed  ama  edd[i] #eddiini --> amadiini
+PFX Ne ed  ma   edd[i]
+PFX Ne edd amal edd[^i] #eddwaliro --> amalwaliro
+PFX Ne ef  ama  eff
+PFX Ne ef  ma   eff
+PFX Ne eg  ama  egg
+PFX Ne eg  ma   egg
+PFX Ne egg ama  eggw #eggwanga--amawanga
+PFX Ne egg ma   eggw
+PFX Ne ejj amay ejj.[n] # ejjanzi-->amayanzi,ejjinja
+PFX Ne ejj may  ejj.[n]
+PFX Ne ej  ama  ejj.[^n] # ejjambiya-->amajambiya
+PFX Ne ej  ma   ejj.[^n]
+PFX Ne ek  ama  ekk # ekkubo-->amakubo
+PFX Ne ek  ma   ekk
+PFX Ne es  ama  ess # essasi-->amasasi
+PFX Ne es  ma   ess
+PFX Ne et  ama  ett # ettama-->amatama
+PFX Ne et  ma   ett
+PFX Ne ev  ama  evv # evviivi-->amaviivi
+PFX Ne ev  ma   evv
+PFX Ne ez  ama  ezz # Ezziga-->amaziga
+PFX Ne ez  ma   ezz                      # Commented out # PFX Ne e   ama  e[^r] # eggi # PFX Ne e   ma   e[^r]
+PFX Ne eri ama  er # erinnyo
+PFX Ne eri ma   e
+PFX Ne ejj ama  ejj # ejjuuni
+PFX Ne ejj ma   ejj
+PFX Ne ery am   ery[^a] # eryenvu 
+PFX Ne ery m    ery[^a]
+PFX Ne er  l    erye # lyenvu 
+PFX Ne ery ama  erya # eryato-->amaato
+PFX Ne ery ma   erya
+PFX Ne ery lya  er   # eryato-->lyaato
+PFX Ne ery aka  erya # eryato-->akaato
+PFX Ne ery ka   erya
 
 # Class VI nouns 
 # Was using flag t and now uses Nf
 PFX Nf Y 11
 PFX Nf a   0   aka
-PFX Nf aka obu aka[^mn]
-PFX Nf aka bu aka[^mn]
+PFX Nf aka obu aka[^mnaeiou]
+PFX Nf aka bu aka[^mnaeiou]
 PFX Nf aka obwa akamb
 PFX Nf aka bwa akamb
 PFX Nf aka obwa akan[aeiou]
@@ -2401,7 +2435,7 @@ PFX yy 0 otw' [aeiou]
 # Prefixes of nouns based on size e.g akaana, obwaana, ebyaana
 # This rule is explosive, so I missed some words, knowingly and unknowingly
 # Was using flag z but now uses zz
-PFX zz Y 152
+PFX zz Y 168
 PFX zz omu otu omu # omusajja-->otusajja
 PFX zz omu obu omu # omusajja-->obusajja
 PFX zz omu olu omu # omusajja-->olusajja
@@ -2458,30 +2492,46 @@ PFX zz eki ogu eki
 PFX zz eki aga eki
 PFX zz eki eki eki
 PFX zz eki ebi eki # Class V below
-PFX zz e otu e.[^rdj]
-PFX zz e obu e.[^rdj]
-PFX zz e olu e.[^rdj]
-PFX zz e aka e.[^rdj]
-PFX zz e ogu e.[^rdj]
-PFX zz e aga e.[^rdj]
-PFX zz e eki e.[^rdj]
-PFX zz e ebi e.[^rdj]
-PFX zz ery otw ery
-PFX zz ery tw  ery
-PFX zz ery obw ery
-PFX zz ery bw  ery
-PFX zz ery olw ery
-PFX zz ery lw  ery
-PFX zz ery ak  ery
-PFX zz ery k   ery
-PFX zz ery ogw ery
-PFX zz ery gw  ery
-PFX zz ery ag  ery
-PFX zz ery g   ery
-PFX zz ery eky ery
-PFX zz ery ky  ery
-PFX zz ery eby ery
-PFX zz ery by  ery
+PFX zz e otu e[^rdj]
+PFX zz e obu e[^rdj]
+PFX zz e olu e[^rdj]
+PFX zz e aka e[^rdj]
+PFX zz e ogu e[^rdj]
+PFX zz e aga e[^rdj]
+PFX zz e eki e[^rdj]
+PFX zz e ebi e[^rdj]
+PFX zz ery otwa erya
+PFX zz ery twa  erya
+PFX zz ery obwa erya
+PFX zz ery bwa  erya
+PFX zz ery olwa erya
+PFX zz ery lwa  erya
+PFX zz ery aka  erya
+PFX zz ery ka   erya
+PFX zz ery ogwa erya
+PFX zz ery gwa  erya
+PFX zz ery aga  erya
+PFX zz ery ga   erya
+PFX zz ery ekya erya
+PFX zz ery kya  erya
+PFX zz ery ebya erya
+PFX zz ery bya  erya
+PFX zz ery otw ery[^a]
+PFX zz ery tw  ery[^a]
+PFX zz ery obw ery[^a]
+PFX zz ery bw  ery[^a]
+PFX zz ery olw ery[^a]
+PFX zz ery lw  ery[^a]
+PFX zz ery ak  ery[^a]
+PFX zz ery k   ery[^a]
+PFX zz ery ogw ery[^a]
+PFX zz ery gw  ery[^a]
+PFX zz ery ag  ery[^a]
+PFX zz ery g   ery[^a]
+PFX zz ery eky ery[^a]
+PFX zz ery ky  ery[^a]
+PFX zz ery eby ery[^a]
+PFX zz ery by  ery[^a]
 PFX zz eri otu eri
 PFX zz eri obu eri
 PFX zz eri olu eri
