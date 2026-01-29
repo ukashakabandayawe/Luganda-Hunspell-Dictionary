@@ -169,6 +169,7 @@ INCONV 1
 INCONV  ’ '
 NEEDAFFIX NA
 
+# Optional vowels at the begining of words e.g. akajanja-->kajanja 
 PFX ea Y 3
 PFX ea a 0 [aeiou]
 PFX ea e 0 [aeiou]
@@ -2270,7 +2271,7 @@ PFX Na 0 bi ffenne
 # Class II nouns 
 # Used flag p but now uses Nb
 PFX Nb Y 5
-PFX Nb o 0 om.[wu]
+PFX Nb o 0 om[wu]
 PFX Nb omu emi omu
 PFX Nb omu mi omu
 PFX Nb omw emy omw
@@ -2362,6 +2363,11 @@ PFX Nf aka bu akam[^b]
 PFX Nf aka obu akan[^aeiou]
 PFX Nf aka bu akan[^aeiou]
 
+# Special class VI nouns e.g. bukamunye
+PFX bu Y 2
+PFX bu 0 bu [^a]
+PFX bu a bu a
+
 # Class VII nouns 
 # Was using flag u and now uses Ng 
 PFX Ng Y 11
@@ -2440,7 +2446,7 @@ PFX yy 0 otw' [aeiou]
 # Prefixes of nouns based on size e.g akaana, obwaana, ebyaana
 # This rule is explosive, so I missed some words, knowingly and unknowingly
 # Was using flag z but now uses zz
-PFX zz Y 336
+PFX zz Y 391
 PFX zz omu otu omu # omusajja-->otusajja
 PFX zz omu tu  omu
 PFX zz omu obu omu # omusajja-->obusajja
@@ -2472,47 +2478,71 @@ PFX zz omw ga  omw
 PFX zz omw eky omw # omwana-->ekyana
 PFX zz omw ky  omw
 PFX zz omw eby omw # omwana-->ebyana
-PFX zz omw by  omw
-PFX zz en  otu en # ente-->otute
-PFX zz en  tu  en
+PFX zz omw by  omw # CLASS III is below
+PFX zz en  otu en[^d] # ente-->otute
+PFX zz en  tu  en[^d]
+PFX zz end otul en[d]
+PFX zz end tul  en[d]
 PFX zz em  otu em # embuzi-->otubuzi
 PFX zz em  tu  em
-PFX zz en  obu en # ente-->obute
-PFX zz en  bu  en
+PFX zz en  obu en[^d] # ente-->obute
+PFX zz en  bu  en[^d]
+PFX zz end obul en[d]
+PFX zz end bul  en[d]
 PFX zz em  obu em # embuzi-->obubuzi
 PFX zz em  bu  em
-PFX zz en  olu en
-PFX zz en  lu  en
+PFX zz en  olu en[^d]
+PFX zz en  lu  en[^d]
+PFX zz end olul en[d]
+PFX zz end lul  en[d]
 PFX zz em  olu em
 PFX zz em  lu  em
-PFX zz en  aka en
-PFX zz en  ka  en
+PFX zz en  aka en[^d]
+PFX zz en  ka  en[^d]
+PFX zz end akal en[d]
+PFX zz end kal  en[d]
 PFX zz em  aka em
 PFX zz em  ka  em
-PFX zz en  ogu en
-PFX zz en  gu  en
+PFX zz en  ogu en[^d]
+PFX zz en  gu  en[^d]
+PFX zz end ogul en[d]
+PFX zz end gul  en[d]
 PFX zz em  ogu em
 PFX zz em  gu  em
-PFX zz en  aga en
-PFX zz en  ga  en
+PFX zz en  aga en[^d]
+PFX zz en  ga  en[^d]
+PFX zz end agal en[d]
+PFX zz end gal  en[d]
 PFX zz em  aga em
 PFX zz em  ga  em
-PFX zz en  eki en
-PFX zz en  ki  en
+PFX zz en  eki en[^d]
+PFX zz en  ki  en[^d]
+PFX zz end ekil en[d]
+PFX zz end kil  en[d]
 PFX zz em  eki em
 PFX zz em  ki  em
-PFX zz en  ebi en
-PFX zz en  bi  en
+PFX zz en  ebi en[^d]
+PFX zz en  bi  en[^d]
+PFX zz end ebil en[d]
+PFX zz end bil  en[d] # Class IV below
 PFX zz em  ebi em
 PFX zz em  bi  em
 PFX zz eky otw eky
+PFX zz eky tw  eky
 PFX zz eky obw eky
+PFX zz eky bw  eky
 PFX zz eky olw eky
+PFX zz eky lw  eky
 PFX zz eky ak  eky
+PFX zz eky k   eky
 PFX zz eky ogw eky
+PFX zz eky gw  eky
 PFX zz eky ag  eky
+PFX zz eky g   eky
 PFX zz eky eky eky
+PFX zz eky ky  eky
 PFX zz eky ebya eky
+PFX zz eky bya eky
 PFX zz eki otu eki
 PFX zz eki tu  eki
 PFX zz eki obu eki
@@ -2752,23 +2782,54 @@ PFX zz ejj akay ejj
 PFX zz ejj oguy ejj
 PFX zz ejj agay ejj
 PFX zz ejj ekiy ejj
-PFX zz ejj ebiy ejj # Class VII below
-PFX zz olu otu olu
+PFX zz ejj ebiy ejj # Class VI below
+PFX zz aka otu aka
+PFX zz aka tu  aka
+PFX zz aka obu aka
+PFX zz aka bu  aka
+PFX zz aka olu aka
+PFX zz aka lu  aka
+PFX zz aka aka aka
+PFX zz aka ka  aka
+PFX zz aka ogu aka
+PFX zz aka gu  aka
+PFX zz aka aga aka
+PFX zz aka ga  aka
+PFX zz aka eki aka
+PFX zz aka ki  aka
+PFX zz aka ebi aka
+PFX zz aka bi  aka
+PFX zz olu otu olu # Class VII below
+PFX zz olu tu  olu
 PFX zz olu obu olu
+PFX zz olu bu  olu
 PFX zz olu olu olu
+PFX zz olu lu  olu
 PFX zz olu aka olu
+PFX zz olu ka  olu
 PFX zz olu ogu olu
+PFX zz olu gu  olu
 PFX zz olu aga olu
+PFX zz olu ga  olu
 PFX zz olu eki olu
+PFX zz olu ki  olu
 PFX zz olu ebi olu
+PFX zz olu bi  olu
 PFX zz olw otw olw
+PFX zz olw tw  olw
 PFX zz olw obw olw
+PFX zz olw bw  olw
 PFX zz olw olw olw
-PFX zz olw ak olw
-PFX zz olw og olw
-PFX zz olw ag olw
+PFX zz olw lw  olw
+PFX zz olw ak  olw
+PFX zz olw k   olw
+PFX zz olw og  olw
+PFX zz olw g   olw
+PFX zz olw ag  olw
 PFX zz olw eky olw
-PFX zz olw eby olw # Class IX below
+PFX zz olw ky  olw
+PFX zz olw eby olw
+PFX zz olw by  olw # Class IX below
 PFX zz oku otu oku
 PFX zz oku obu oku
 PFX zz oku olu oku
