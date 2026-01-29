@@ -1,4 +1,4 @@
-2995
+2989
 
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -17,9 +17,7 @@
 
 
 
-# --- abo --- #
-abo
-# --- abiri --- #
+abo/ea
 abiri
 ag/ea
 aga/ea
@@ -37,35 +35,27 @@ akabondo/Nf
 akabonero/Nf
 akaduukulu/Nf
 akajanja/ea
-akakadde
-akakiiko
-akakisa
-akakodyo
-akakofiira
-akakofu
-akakongovvule
-akakookola
-akakowekowe
-akakukufa
-akakulwe
-akaleega
-akalevu
-akaliga
-akalo
-akalogoyi
-akalondoozi
-akalulu
-akalulwe
-akambe
-akambe/Nfyy
-akamogo
-akamunye
-akamwa
-akamwa/Nfyy
-akamwenyumwenyu
-akamyu
-akantu/NfNfyyyy
-akapiira
+akakadde/Nf
+akakiiko/Nf
+akakodyo/Nf
+akakokola/Nf
+akakongovvule/Nf
+akakookolo/Nfzz
+akakoowekoowe/Nf
+akakukufa/Nf
+akakulwe/NF
+akaleega/Nf
+akalevu/Nfzz
+akalo/Nf
+akalondoozi/Nf
+akalulu/Nf
+akalulwe/Nf
+akamogo/Nf
+akamunye/eabu
+akamwa/Nfzz
+akamwenyumwenyu/Nf
+akamyu/Nfzz
+akapiira/Nfzz
 akapusi
 akasaale
 akasale
@@ -659,6 +649,7 @@ ekyalaani
 ekyamaguzi
 ekyamazzi
 ekyambalo
+ekyambe/Ndzz
 ekyambuka
 ekyammwe
 ekyange
@@ -772,9 +763,9 @@ endali
 endasi
 endere
 endiba
-endiga
+endiga/Nczz
 endiima
-endogoyi
+endogoyi/Nczz
 endoko
 endokwa
 endongo
@@ -842,11 +833,12 @@ enkerebwe
 enkima
 enkizi
 enkizo
-enkofiira
+enkofu
 enkoko
 enkolagana
 enkomerero
 enkonge
+enkoofiira/Nczz
 enkovu
 enku
 enkuba
@@ -2192,7 +2184,7 @@ omukenenya
 omukessi
 omukinjaagi
 omukira
-omukisa
+omukisa/Nbzz
 omukka
 omukkiriza
 omuko
@@ -2209,6 +2201,7 @@ omukulu
 omukungu
 omukungubazi
 omukutu
+omukuufu/Nbzz
 omukuumi
 omukwano
 omukwasi
@@ -2268,8 +2261,7 @@ omunnabi
 omunnyo
 omunoonyi
 omuntandisi
-omuntu
-omuntu/NaNayyyy
+omuntu/Nazz
 omuntumulamu
 omunwe
 omunya
