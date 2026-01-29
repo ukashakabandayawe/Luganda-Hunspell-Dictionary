@@ -1,4 +1,4 @@
-3006
+2995
 
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -21,31 +21,22 @@
 abo
 # --- abiri --- #
 abiri
-ag
-aga
-ak
-aka
+ag/ea
+aga/ea
+ak/ea
+aka/ea
 akaayo/Nf
 akabakko/Nf
 akabalagala/Nf
-akabangirizi
-akabasa
-akabenje
-akabi
-akabiite
-akabina
-akabondo
-akabonero
-akabuvubuka
-akabwa
-akaduukulu
-akafumu
-akagaali
-akagere
-akagga
-akaggo
-akajanja
-akakaaya
+akabangirizi/Nf
+akabasa/ea
+akabenje/Nf
+akabi/Nf
+akabina/Nf
+akabondo/Nf
+akabonero/Nf
+akaduukulu/Nf
+akajanja/ea
 akakadde
 akakiiko
 akakisa
@@ -385,11 +376,11 @@ effitina
 effujjo
 effumbe
 effumbiro
-effumu
+effumu/Nezz
 efiiriza
 efuula
 efuulira
-egaali
+eggaali/Nczz
 egatta
 egayirira
 egazaanya
@@ -468,10 +459,9 @@ ekifaananyi
 ekifo
 ekifuba
 ekifulukwa
-ekigaali
 ekigambo
 ekigendererwa
-ekigere
+ekigere/Ndzz
 ekigezo
 ekiggo
 ekiggwa
@@ -486,6 +476,7 @@ ekijjukizo
 ekijjulo
 ekijuujuulu
 ekika
+ekikaaya/Ndzz
 ekikajjo
 ekikapu
 ekikere
@@ -721,7 +712,7 @@ emboozi
 embuga
 embuyaga
 embuzi
-embwa
+embwa/Nczz
 emeeri
 eminyira
 emirannamiro
@@ -1144,9 +1135,6 @@ fuula
 fuuwa
 fuuweeta
 fuuyira
-g
-ga
-ga
 gaana
 gaaya
 gaba
@@ -1266,9 +1254,8 @@ jolonga
 jooga
 julira
 juliza
-k
-ka
 kaaba
+kaabuvubuka
 kaabuyonjo
 kaabya
 kaakati
@@ -1278,6 +1265,7 @@ kaasi
 kaawa
 kaayana
 kabaka
+kabiite
 kadde
 kafuumuulampawu
 kaka
@@ -2168,7 +2156,8 @@ omugaso
 omugejjo
 omugenyi
 omugenzi
-omuggo
+omugga/Nbzz
+omuggo/Nbzz
 omugirimani
 omugoba
 omugoberezi
