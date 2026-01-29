@@ -1,4 +1,4 @@
-3007
+3006
 
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -25,10 +25,9 @@ ag
 aga
 ak
 aka
-akaato
-akaayo
-akabakko
-akabalagala
+akaayo/Nf
+akabakko/Nf
+akabalagala/Nf
 akabangirizi
 akabasa
 akabenje
@@ -399,7 +398,10 @@ egendereza
 eggama
 eggana
 eggego
-eggi
+# --- eggi --- #
+eggi/Ne
+egi/NAzz
+# ------------ #
 eggolu
 eggombolola
 eggonjebwa
@@ -975,8 +977,7 @@ erumika
 erumya
 eryanda
 eryato/Nezz
-eryenvu
-eryenvu/NeNeyyyy
+eryenvu/Neyy
 esammula
 esiga
 esigwa
@@ -995,7 +996,7 @@ essabo
 essafaali
 essanga
 essanyu
-essasi
+essasi/Ne
 essaza
 essigiri
 essimu
