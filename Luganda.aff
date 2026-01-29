@@ -169,6 +169,11 @@ INCONV 1
 INCONV  ’ '
 NEEDAFFIX NA
 
+PFX ea Y 3
+PFX ea a 0 [aeiou]
+PFX ea e 0 [aeiou]
+PFX ea o 0 [aeiou]
+
 # suffix "ko" in words like okulyako, okulabako, fumbako
 # Was using flag A but now uses ko
 SFX ko Y 1
@@ -2275,7 +2280,7 @@ PFX Nb omw my omw
 # Was using flag q but now uses Nc
 PFX Nc Y 2
 PFX Nc e 0 e
-PFX Nc em 0 em # e.g emmayiro
+PFX Nc em 0 emm # e.g emmayiro
 
 # Class IV nouns 
 # Was using flag r but now uses Nd
@@ -2435,15 +2440,23 @@ PFX yy 0 otw' [aeiou]
 # Prefixes of nouns based on size e.g akaana, obwaana, ebyaana
 # This rule is explosive, so I missed some words, knowingly and unknowingly
 # Was using flag z but now uses zz
-PFX zz Y 168
+PFX zz Y 336
 PFX zz omu otu omu # omusajja-->otusajja
+PFX zz omu tu  omu
 PFX zz omu obu omu # omusajja-->obusajja
+PFX zz omu bu  omu
 PFX zz omu olu omu # omusajja-->olusajja
+PFX zz omu lu  omu
 PFX zz omu aka omu # omusajja-->akasajja
+PFX zz omu ka  omu
 PFX zz omu ogu omu # omusajja-->ogusajja
+PFX zz omu gu  omu
 PFX zz omu aga omu # omusajja-->agasajja
+PFX zz omu ga  omu
 PFX zz omu eki omu # omusajja-->ekisajja
+PFX zz omu ki  omu
 PFX zz omu ebi omu # omusajja-->ebisajja
+PFX zz omu bi  omu
 PFX zz omw olw omw # omwana-->olwana
 PFX zz omw lw  omw
 PFX zz omw aka omw # omwana-->akaana
@@ -2460,46 +2473,206 @@ PFX zz omw eky omw # omwana-->ekyana
 PFX zz omw ky  omw
 PFX zz omw eby omw # omwana-->ebyana
 PFX zz omw by  omw
-PFX zz en otu en # ente-->otute
-PFX zz em otu em # embuzi-->otubuzi
-PFX zz en obu en # ente-->obute
-PFX zz em obu em # embuzi-->obubuzi
-PFX zz en olu en
-PFX zz em olu em
-PFX zz en aka en
-PFX zz em aka em
-PFX zz en ogu en
-PFX zz em ogu em
-PFX zz en aga en
-PFX zz em aga em
-PFX zz en eki en
-PFX zz em eki em
-PFX zz en ebi en
-PFX zz em ebi em
+PFX zz en  otu en # ente-->otute
+PFX zz en  tu  en
+PFX zz em  otu em # embuzi-->otubuzi
+PFX zz em  tu  em
+PFX zz en  obu en # ente-->obute
+PFX zz en  bu  en
+PFX zz em  obu em # embuzi-->obubuzi
+PFX zz em  bu  em
+PFX zz en  olu en
+PFX zz en  lu  en
+PFX zz em  olu em
+PFX zz em  lu  em
+PFX zz en  aka en
+PFX zz en  ka  en
+PFX zz em  aka em
+PFX zz em  ka  em
+PFX zz en  ogu en
+PFX zz en  gu  en
+PFX zz em  ogu em
+PFX zz em  gu  em
+PFX zz en  aga en
+PFX zz en  ga  en
+PFX zz em  aga em
+PFX zz em  ga  em
+PFX zz en  eki en
+PFX zz en  ki  en
+PFX zz em  eki em
+PFX zz em  ki  em
+PFX zz en  ebi en
+PFX zz en  bi  en
+PFX zz em  ebi em
+PFX zz em  bi  em
 PFX zz eky otw eky
 PFX zz eky obw eky
 PFX zz eky olw eky
-PFX zz eky ak eky
+PFX zz eky ak  eky
 PFX zz eky ogw eky
-PFX zz eky ag eky
+PFX zz eky ag  eky
 PFX zz eky eky eky
 PFX zz eky ebya eky
 PFX zz eki otu eki
+PFX zz eki tu  eki
 PFX zz eki obu eki
+PFX zz eki bu  eki
 PFX zz eki olu eki
+PFX zz eki lu  eki
 PFX zz eki aka eki
+PFX zz eki ka  eki
 PFX zz eki ogu eki
+PFX zz eki gu  eki
 PFX zz eki aga eki
+PFX zz eki ga  eki
 PFX zz eki eki eki
-PFX zz eki ebi eki # Class V below
-PFX zz e otu e[^rdj]
-PFX zz e obu e[^rdj]
-PFX zz e olu e[^rdj]
-PFX zz e aka e[^rdj]
-PFX zz e ogu e[^rdj]
-PFX zz e aga e[^rdj]
-PFX zz e eki e[^rdj]
-PFX zz e ebi e[^rdj]
+PFX zz eki ki  eki
+PFX zz eki ebi  eki
+PFX zz eki bi eki # Class V below
+PFX zz ef  otu eff
+PFX zz ef  tu  eff
+PFX zz ef  obu eff
+PFX zz ef  bu  eff
+PFX zz ef  olu eff
+PFX zz ef  lu  eff
+PFX zz ef  aka eff
+PFX zz ef  ka  eff
+PFX zz ef  ogu eff
+PFX zz ef  gu  eff
+PFX zz ef  aga eff
+PFX zz ef  ga  eff
+PFX zz ef  eki eff
+PFX zz ef  ki  eff
+PFX zz ef  ebi eff
+PFX zz ef  bi  eff
+PFX zz eg  otu egg
+PFX zz eg  tu  egg
+PFX zz eg  obu egg
+PFX zz eg  bu  egg
+PFX zz eg  olu egg
+PFX zz eg  lu  egg
+PFX zz eg  aka egg
+PFX zz eg  ka  egg
+PFX zz eg  ogu egg
+PFX zz eg  gu  egg
+PFX zz eg  aga egg
+PFX zz eg  ga  egg
+PFX zz eg  eki egg
+PFX zz eg  ki  egg
+PFX zz eg  ebi egg
+PFX zz eg  bi  egg
+PFX zz ej  otu ejj.[^n]
+PFX zz ej  tu  ejj.[^n]
+PFX zz ej  obu ejj.[^n]
+PFX zz ej  bu  ejj.[^n]
+PFX zz ej  olu ejj.[^n]
+PFX zz ej  lu  ejj.[^n]
+PFX zz ej  aka ejj.[^n]
+PFX zz ej  ka  ejj.[^n]
+PFX zz ej  ogu ejj.[^n]
+PFX zz ej  gu  ejj.[^n]
+PFX zz ej  aga ejj.[^n]
+PFX zz ej  ga  ejj.[^n]
+PFX zz ej  eki ejj.[^n]
+PFX zz ej  ki  ejj.[^n]
+PFX zz ej  ebi ejj.[^n]
+PFX zz ej  bi  ejj.[^n]
+PFX zz ejj otuy ejj.[n]
+PFX zz ejj tuy  ejj.[n]
+PFX zz ejj obuy ejj.[n]
+PFX zz ejj buy  ejj.[n]
+PFX zz ejj oluy ejj.[n]
+PFX zz ejj luy  ejj.[n]
+PFX zz ejj akay ejj.[n]
+PFX zz ejj kay  ejj.[n]
+PFX zz ejj oguy ejj.[n]
+PFX zz ejj guy  ejj.[n]
+PFX zz ejj agay ejj.[n]
+PFX zz ejj gay  ejj.[n]
+PFX zz ejj ekiy ejj.[n]
+PFX zz ejj kiy  ejj.[n]
+PFX zz ejj ebiy ejj.[n]
+PFX zz ejj biy  ejj.[n]
+PFX zz ek  otu ekk
+PFX zz ek  tu  ekk
+PFX zz ek  obu ekk
+PFX zz ek  bu  ekk
+PFX zz ek  olu ekk
+PFX zz ek  lu  ekk
+PFX zz ek  aka ekk
+PFX zz ek  ka  ekk
+PFX zz ek  ogu ekk
+PFX zz ek  gu  ekk
+PFX zz ek  aga ekk
+PFX zz ek  ga  ekk
+PFX zz ek  eki ekk
+PFX zz ek  ki  ekk
+PFX zz ek  ebi ekk
+PFX zz ek  bi  ekk
+PFX zz es  otu ess
+PFX zz es  tu  ess
+PFX zz es  obu ess
+PFX zz es  bu  ess
+PFX zz es  olu ess
+PFX zz es  lu  ess
+PFX zz es  aka ess
+PFX zz es  ka  ess
+PFX zz es  ogu ess
+PFX zz es  gu  ess
+PFX zz es  aga ess
+PFX zz es  ga  ess
+PFX zz es  eki ess
+PFX zz es  ki  ess
+PFX zz es  ebi ess
+PFX zz es  bi  ess
+PFX zz et  otu ett
+PFX zz et  tu  ett
+PFX zz et  obu ett
+PFX zz et  bu  ett
+PFX zz et  olu ett
+PFX zz et  lu  ett
+PFX zz et  aka ett
+PFX zz et  ka  ett
+PFX zz et  ogu ett
+PFX zz et  gu  ett
+PFX zz et  aga ett
+PFX zz et  ga  ett
+PFX zz et  eki ett
+PFX zz et  ki  ett
+PFX zz et  ebi ett
+PFX zz et  bi  ett
+PFX zz ev  otu evv
+PFX zz ev  tu  evv
+PFX zz ev  obu evv
+PFX zz ev  bu  evv
+PFX zz ev  olu evv
+PFX zz ev  lu  evv
+PFX zz ev  aka evv
+PFX zz ev  ka  evv
+PFX zz ev  ogu evv
+PFX zz ev  gu  evv
+PFX zz ev  aga evv
+PFX zz ev  ga  evv
+PFX zz ev  eki evv
+PFX zz ev  ki  evv
+PFX zz ev  ebi evv
+PFX zz ev  bi  evv
+PFX zz ez  otu ezz
+PFX zz ez  tu  ezz
+PFX zz ez  obu ezz
+PFX zz ez  bu  ezz
+PFX zz ez  olu ezz
+PFX zz ez  lu  ezz
+PFX zz ez  aka ezz
+PFX zz ez  ka  ezz
+PFX zz ez  ogu ezz
+PFX zz ez  gu  ezz
+PFX zz ez  aga ezz
+PFX zz ez  ga  ezz
+PFX zz ez  eki ezz
+PFX zz ez  ki  ezz
+PFX zz ez  ebi ezz
+PFX zz ez  bi  ezz
 PFX zz ery otwa erya
 PFX zz ery twa  erya
 PFX zz ery obwa erya
@@ -2612,17 +2785,6 @@ PFX zz oku ebi oku
 
 # TO-DO: Implement tense conjugution for the verb "okuba" (to be) for all the 3 persons
 # TO-DO: Implement tense conjugution for the verb "obutaba" (to not be) for all the 3 persons
-
-# Optional vowels at the begining of words
-# Commented out because they may increase room for error, I will consider modifying subject markers to handle the optional vowels
-# PFX a Y 1
-# PFX a 0 a [^aeiou]
-
-# PFX e Y 1
-# PFX e 0 e [^aeiou]
-
-# PFX o Y 1
-# PFX o 0 o [^aeiou]
 
 #Cross product of subject markers (PS) and object markers (Ob) in present and very near past tense
 # Generated via script to handle chaining 
