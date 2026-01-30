@@ -2271,17 +2271,40 @@ PFX Na 0 bi ffenne
 # Class II nouns 
 # Used flag p but now uses Nb
 PFX Nb Y 5
-PFX Nb o 0 om[wu]
+PFX Nb o   0   om[wu]
 PFX Nb omu emi omu
-PFX Nb omu mi omu
+PFX Nb omu mi  omu
 PFX Nb omw emy omw
-PFX Nb omw my omw
+PFX Nb omw my  omw
 
 # Class III nouns 
 # Was using flag q but now uses Nc
-PFX Nc Y 2
-PFX Nc e 0 e
-PFX Nc em 0 emm # e.g emmayiro
+PFX Nc Y 5
+PFX Nc e   0   e[^n][^n]
+PFX Nc en  0   enn
+PFX Nc em  0   emm # e.g emmayiro
+PFX Nc enn ama ennyumba
+PFX Nc enn ma  ennyumba
+
+# Handles class III nouns like ennyumba, ennyimba, ennyondo 
+# without disrupting enyonyi, ennamba
+PFX nc Y 16
+PFX nc enn  otu enn
+PFX nc enn  tu  enn
+PFX nc enn  obu enn
+PFX nc enn  bu  enn
+PFX nc enn  olu enn
+PFX nc enn  lu  enn
+PFX nc enn  aka enn
+PFX nc enn  ka  enn
+PFX nc enn  ogu enn
+PFX nc enn  gu  enn
+PFX nc enn  aga enn
+PFX nc enn  ga  enn
+PFX nc enn  eki enn
+PFX nc enn  ki  enn
+PFX nc enn  ebi enn
+PFX nc enn  bi  enn
 
 # Class IV nouns 
 # Was using flag r but now uses Nd
@@ -2350,18 +2373,20 @@ PFX Ne ery ka   erya
 
 # Class VI nouns 
 # Was using flag t and now uses Nf
-PFX Nf Y 11
-PFX Nf a   0   aka
-PFX Nf aka obu aka[^mnaeiou]
-PFX Nf aka bu aka[^mnaeiou]
+PFX Nf Y 13
+PFX Nf a   0    ak
+PFX Nf aka obu  aka[^mnaeiou]
+PFX Nf aka bu   aka[^mnaeiou]
 PFX Nf aka obwa akamb
-PFX Nf aka bwa akamb
+PFX Nf aka bwa  akamb
 PFX Nf aka obwa akan[aeiou]
-PFX Nf aka bwa akan[aeiou]
-PFX Nf aka obu akam[^b]
-PFX Nf aka bu akam[^b]
-PFX Nf aka obu akan[^aeiou]
-PFX Nf aka bu akan[^aeiou]
+PFX Nf aka bwa  akan[aeiou]
+PFX Nf aka obu  akam[^b]
+PFX Nf aka bu   akam[^b]
+PFX Nf aka obu  akan[^aeiou]
+PFX Nf aka bu   akan[^aeiou]
+PFX Nf ak  obw  akee
+PFX Nf ak  bw   akee
 
 # Special class VI nouns e.g. bukamunye
 PFX bu Y 2
@@ -2371,17 +2396,17 @@ PFX bu a bu a
 # Class VII nouns 
 # Was using flag u and now uses Ng 
 PFX Ng Y 11
-PFX Ng o 0 ol[wu]
-PFX Ng olul enn olul # olulimi-->ennimi
-PFX Ng olul n olul
-PFX Ng olu en olu.[^mn]
-PFX Ng olu n olu.[^mn]
-PFX Ng olu em olu[bp] # olubuto-->embuto
-PFX Ng olu m olu[bp] # mpapula
-PFX Ng olu enzi oluggi # Enziggi
-PFX Ng olu nzi oluggi
-PFX Ng olw enny olwendo
-PFX Ng olw nny olwendo
+PFX Ng o    0    ol[wu]
+PFX Ng olul enn  olul # olulimi-->ennimi
+PFX Ng olul n    olul
+PFX Ng olu  en   olu.[^mn]
+PFX Ng olu  n    olu.[^mn]
+PFX Ng olu  em   olu[bp] # olubuto-->embuto
+PFX Ng olu  m    olu[bp] # mpapula
+PFX Ng olu  enzi oluggi # Enziggi
+PFX Ng olu  nzi  oluggi
+PFX Ng olw  enny olwendo
+PFX Ng olw  nny  olwendo
 
 # Class VIII nouns (large stuff)
 # Was using flag v and now uses Nh
