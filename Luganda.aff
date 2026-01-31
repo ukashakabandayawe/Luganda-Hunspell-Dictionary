@@ -1493,7 +1493,7 @@ PFX sc 0 wetuta .
 
 # subordinating conjunction "when" glued to subjects markers in near and distant past tense 
 # e.g. wemwali muzannya, wennafunye sente, 
-PFX WN Y 19
+PFX WN Y 22
 PFX WN 0 wenna .
 PFX WN 0 wewa .
 PFX WN 0 weya .
@@ -1513,6 +1513,10 @@ PFX WN 0 welwa .
 PFX WN 0 wekwa .
 PFX WN 0 wegaa .
 PFX WN 0 wetwa .
+PFX WN 0 bwenna .
+PFX WN 0 bwewa .
+PFX WN 0 bweya .
+
 
 # subordinating conjunction "when" glued to negative subjects markers in near and distant past tense 
 # e.g. wemutaazannye, wessaafuna sente, 
@@ -1774,6 +1778,296 @@ PFX wj 0 webutalye .
 PFX wj 0 welutalye .
 PFX wj 0 wekutalye .
 PFX wj 0 wetutalye .
+
+
+# subordinating conjunction "when" glued to subjects markers in near and distant past tense 
+# e.g. bwemwali muzannya, bwennafunye sente, 
+PFX GB Y 22
+PFX GB 0 bwenna .
+PFX GB 0 bwewa .
+PFX GB 0 bweya .
+PFX GB 0 bwetwa .
+PFX GB 0 bwemwa .
+PFX GB 0 bwebaa .
+PFX GB 0 bwegwa .
+PFX GB 0 bwegya .
+PFX GB 0 bwezaa .
+PFX GB 0 bwekyaa .
+PFX GB 0 bwebyaa .
+PFX GB 0 bwelyaa .
+PFX GB 0 bwegaa .
+PFX GB 0 bwekaa .
+PFX GB 0 bwebwa .
+PFX GB 0 bwelwa .
+PFX GB 0 bwekwa .
+PFX GB 0 bwegaa .
+PFX GB 0 bwetwa .
+PFX GB 0 bwenna .
+PFX GB 0 bwewa .
+PFX GB 0 bweya .
+
+
+# subordinating conjunction "when" glued to negative subjects markers in near and distant past tense 
+# e.g. bwemutaazannye, bwessaafuna sente, 
+PFX GC Y 20
+PFX GC 0 bwessaa .
+PFX GC 0 otaa .
+PFX GC 0 ataa .
+PFX GC 0 bwetutaa .
+PFX GC 0 bwemutaa .
+PFX GC 0 bwebataa .
+PFX GC 0 bwegutaa .
+PFX GC 0 bwegitaa .
+PFX GC 0 etaa .
+PFX GC 0 bwezitaa .
+PFX GC 0 bwekitaa .
+PFX GC 0 bwebitaa .
+PFX GC 0 bwelitaa .
+PFX GC 0 bwegataa .
+PFX GC 0 bwekataa .
+PFX GC 0 bwebutaa .
+PFX GC 0 bwelutaa .
+PFX GC 0 bwekutaa .
+PFX GC 0 bwetutaa .
+PFX GC 0 bwessaa .
+
+
+# subordinating conjunction "when" glued to subjects markers in near future tense 
+# e.g. bwemunaaba muzannya, bwennaafunna sente, 
+PFX GD Y 23
+PFX GD 0 bwennaa .
+PFX GD 0 bwemunaa .
+PFX GD 0 onoo .
+PFX GD 0 onaa .
+PFX GD 0 anaa .
+PFX GD 0 bwetunaa .
+PFX GD 0 bwemunaa .
+PFX GD 0 bwebanaa .
+PFX GD 0 bwegunaa .
+PFX GD 0 bweginaa .
+PFX GD 0 enaa .
+PFX GD 0 bwezinaa .
+PFX GD 0 bwekinaa .
+PFX GD 0 bwebinaa .
+PFX GD 0 bwelinaa .
+PFX GD 0 bweganaa .
+PFX GD 0 bwekanaa .
+PFX GD 0 bwebunaa .
+PFX GD 0 bwelunaa .
+PFX GD 0 bwezinaa .
+PFX GD 0 bwekunaa .
+PFX GD 0 bweganaa .
+PFX GD 0 bwetunaa .
+
+# subordinating conjunction "when" glued to negative subjects markers in near future tense 
+# e.g. bwemutaazannye, bwessiifune sente, 
+PFX GE Y 20
+PFX GE 0 bwessii .
+PFX GE 0 otoo .
+PFX GE 0 ataa .
+PFX GE 0 bwetutaa .
+PFX GE 0 bwemutaa .
+PFX GE 0 bwebataa .
+PFX GE 0 bwegutaa .
+PFX GE 0 bwegitaa .
+PFX GE 0 etaa .
+PFX GE 0 bwezitaa .
+PFX GE 0 bwekitaa .
+PFX GE 0 bwebitaa .
+PFX GE 0 bwelitaa .
+PFX GE 0 bwegataa .
+PFX GE 0 bwekataa .
+PFX GE 0 bwebutaa .
+PFX GE 0 bwelutaa .
+PFX GE 0 bwekutaa .
+PFX GE 0 bwetutaa .
+PFX GE 0 bwessii .
+
+
+# subordinating conjunction "when" glued to subjects markers in far future tense 
+# e.g. bwemuliba muzannya, bwendifunna sente, 
+PFX GF Y 16
+PFX GF 0 bwendi . 
+PFX GF 0 bwetuli . 
+PFX GF 0 bwemuli . 
+PFX GF 0 bwebali . 
+PFX GF 0 bweguli .
+PFX GF 0 bwegili .
+PFX GF 0 bwezili .
+PFX GF 0 bwekili .
+PFX GF 0 bwebili .
+PFX GF 0 bwelili .
+PFX GF 0 bwegali .
+PFX GF 0 bwekali .
+PFX GF 0 bwebuli .
+PFX GF 0 bweluli .
+PFX GF 0 bwekuli .
+PFX GF 0 bwetuli .
+
+
+# subordinating conjunction "when" glued to subjects markers in the far future tense 
+# e.g. bwemutalifuna, bwessilifuna, 
+PFX GH Y 19
+PFX GH 0 bwessili .
+PFX GH 0 otoli .
+PFX GH 0 atali .
+PFX GH 0 bwetutali .
+PFX GH 0 bwemutali .
+PFX GH 0 bwebatali .
+PFX GH 0 bwegutali .
+PFX GH 0 bwegitali .
+PFX GH 0 eteli .
+PFX GH 0 bwezitali .
+PFX GH 0 bwekitali .
+PFX GH 0 bwebitali .
+PFX GH 0 bwelitali .
+PFX GH 0 bwegatali .
+PFX GH 0 bwekatali .
+PFX GH 0 bwebutali .
+PFX GH 0 bwelutali .
+PFX GH 0 bwekutali .
+PFX GH 0 bwetutali .
+
+# subordinating conjunction "when" glued to reflexive subjects markers in present simple tense and the past tenses
+# e.g. bwenneetaaga, bweyeetwala, bwetwebasse 
+PFX GJ Y 20
+PFX GJ 0 bwennee .
+PFX GJ 0 bwewee .
+PFX GJ 0 bweyee .
+PFX GJ 0 bwetwe .
+PFX GJ 0 bwemwe .
+PFX GJ 0 bwebee .
+PFX GJ 0 bwegwe .
+PFX GJ 0 bwegye .
+PFX GJ 0 bwezee .
+PFX GJ 0 bwekye .
+PFX GJ 0 bwebye .
+PFX GJ 0 bwelye .
+PFX GJ 0 bwegee .
+PFX GJ 0 bwekee .
+PFX GJ 0 bwebwe .
+PFX GJ 0 bwelwe .
+PFX GJ 0 bwezee .
+PFX GJ 0 bwekwe .
+PFX GJ 0 bwegee .
+PFX GJ 0 bwetwe .
+
+# subordinating conjunction "when" glued to reflexive negative subjects markers in present simple tense and the past tenses
+# e.g. bwesseefumbira, bwebateebaka, bwebateefumbidde
+PFX GK Y 19
+PFX GK 0 bwessee .
+PFX GK 0 otee .
+PFX GK 0 atee .
+PFX GK 0 bwetutee .
+PFX GK 0 bwemutee .
+PFX GK 0 bwebatee .
+PFX GK 0 bwegutee .
+PFX GK 0 bwegitee .
+PFX GK 0 etee .
+PFX GK 0 bwezitee .
+PFX GK 0 bwekitee .
+PFX GK 0 bwebitee .
+PFX GK 0 bwelitee .
+PFX GK 0 bwegatee .
+PFX GK 0 bwekatee .
+PFX GK 0 bwebutee .
+PFX GK 0 bwelutee .
+PFX GK 0 bwekutee .
+PFX GK 0 bwetutee .
+
+# subordinating conjunction "when" glued to reflexive subjects markers in near future tense 
+# e.g. bwetuneebaka, bwemuneetaaga, 
+PFX GL Y 23
+PFX GL 0 bwennee .
+PFX GL 0 bwemunee .
+PFX GL 0 onee .
+PFX GL 0 onee .
+PFX GL 0 anee .
+PFX GL 0 bwetunee .
+PFX GL 0 bwemunee .
+PFX GL 0 bwebanee .
+PFX GL 0 bwegunee .
+PFX GL 0 bweginee .
+PFX GL 0 enee .
+PFX GL 0 bwezinee .
+PFX GL 0 bwekinee .
+PFX GL 0 bwebinee .
+PFX GL 0 bwelinee .
+PFX GL 0 bweganee .
+PFX GL 0 bwekanee .
+PFX GL 0 bwebunee .
+PFX GL 0 bwelunee .
+PFX GL 0 bwezinee .
+PFX GL 0 bwekunee .
+PFX GL 0 bweganee .
+PFX GL 0 bwetunee .
+
+# subordinating conjunction "when" glued to reflexive negative subjects markers in near future tense 
+# e.g. bwemuteebake, bwemuteekwate, 
+PFX GM Y 19
+PFX GM 0 bwessee .
+PFX GM 0 otee .
+PFX GM 0 atee .
+PFX GM 0 bwetutee .
+PFX GM 0 bwemutee .
+PFX GM 0 bwebatee .
+PFX GM 0 bwegutee .
+PFX GM 0 bwegitee .
+PFX GM 0 etee .
+PFX GM 0 bwezitee .
+PFX GM 0 bwekitee .
+PFX GM 0 bwebitee .
+PFX GM 0 bwelitee .
+PFX GM 0 bwegatee .
+PFX GM 0 bwekatee .
+PFX GM 0 bwebutee .
+PFX GM 0 bwelutee .
+PFX GM 0 bwekutee .
+PFX GM 0 bwetutee .
+
+# subordinating conjunction "when" glued to reflexive subjects markers in far future tense 
+# e.g. bwendyetaaga, bwendyegulira, 
+PFX GN Y 16
+PFX GN 0 bwendye . 
+PFX GN 0 bwetulye . 
+PFX GN 0 bwemulye . 
+PFX GN 0 bwebalye . 
+PFX GN 0 bwegulye .
+PFX GN 0 bwegilye .
+PFX GN 0 bwezilye .
+PFX GN 0 bwekilye .
+PFX GN 0 bwebilye .
+PFX GN 0 bwelilye .
+PFX GN 0 bwegalye .
+PFX GN 0 bwekalye .
+PFX GN 0 bwebulye .
+PFX GN 0 bwelulye .
+PFX GN 0 bwekulye .
+PFX GN 0 bwetulye .
+
+# subordinating conjunction "when" glued to relexive negative subjects markers in the far future tense 
+# e.g. bwemutalyefuga, bwessilyetaaga 
+PFX GP Y 19
+PFX GP 0 bwessilye .
+PFX GP 0 otolye .
+PFX GP 0 atalye .
+PFX GP 0 bwetutalye .
+PFX GP 0 bwemutalye .
+PFX GP 0 bwebatalye .
+PFX GP 0 bwegutalye .
+PFX GP 0 bwegitalye .
+PFX GP 0 etelye .
+PFX GP 0 bwezitalye .
+PFX GP 0 bwekitalye .
+PFX GP 0 bwebitalye .
+PFX GP 0 bwelitalye .
+PFX GP 0 bwegatalye .
+PFX GP 0 bwekatalye .
+PFX GP 0 bwebutalye .
+PFX GP 0 bwelutalye .
+PFX GP 0 bwekutalye .
+PFX GP 0 bwetutalye .
+
 
 # The permission subjunctive e.g. kantuule, kanfumbe
 PFX SB Y 11
