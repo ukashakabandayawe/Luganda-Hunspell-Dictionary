@@ -70,9 +70,9 @@ PFX LT 0 wetu .
 rule_right_raw = """
 PFX Ob Y 18
 PFX Ob 0 n [^lmnb]
-PFX Ob 0 nd l.[^mn]
-PFX Ob 0 nn l.[mn]
-PFX Ob 0 mp w
+PFX Ob l nd l.[^mn]
+PFX Ob l nn l.[mn]
+PFX Ob w mp w
 PFX Ob 0 mu .
 PFX Ob 0 ba .
 PFX Ob 0 gu .
