@@ -765,7 +765,7 @@ PFX PS 0 n [^jbnmlhprxq] # Person marker
 PFX PS 0 m b # Person marker: buuka-->mbuuka
 PFX PS 0 o . # Person marker
 PFX PS l nd l.[^mn] # Person marker: lya-->ndya
-PFX PS l nn l.[mn] # Person marker: luma-->nnuma
+PFX PS l nn l.[mn][^u] # Person marker: luma-->nnuma
 PFX PS w mp w # Person marker: wandiika --> mpandiika
 PFX PS 0 a . # Person marker
 PFX PS 0 tu . # Person marker
@@ -2209,7 +2209,7 @@ PFX LT 0 bwen [^jbnmlhprxq] # bwentyo bwenfumba
 PFX LT 0 bwem b #  buuka-->bwembuuka
 PFX LT 0 o . # tyo-->otyo
 PFX LT l bwend l.[^mn] #  lya-->bwendya
-PFX LT l bwenn l.[mn] # luma-->bwennuma
+PFX LT l bwenn l.[mn][^u] # luma-->bwennuma
 PFX LT l bwend li
 PFX LT w bwemp w #  wandiika --> bwempandiika
 PFX LT 0 a . # tyo--atyo
@@ -24508,9 +24508,9 @@ PFX EH 0 bwemba .
 PFX EH 0 bwembi .
 PFX EH 0 bwembu .
 PFX EH 0 on [^lmnb]
-PFX EH 0 ond l.[^mn]
-PFX EH 0 onn l.[mn]
-PFX EH 0 omp w
+PFX EH l ond l.[^mn]
+PFX EH l onn l.[mn]
+PFX EH w omp w
 PFX EH 0 omu .
 PFX EH 0 oba .
 PFX EH 0 ogu .
@@ -24527,9 +24527,9 @@ PFX EH 0 oku .
 PFX EH 0 otu .
 PFX EH 0 bwendi .
 PFX EH 0 an [^lmnb]
-PFX EH 0 and l.[^mn]
-PFX EH 0 ann l.[mn]
-PFX EH 0 amp w
+PFX EH l and l.[^mn]
+PFX EH l ann l.[mn]
+PFX EH w amp w
 PFX EH 0 amu .
 PFX EH 0 aba .
 PFX EH 0 agu .
@@ -24545,9 +24545,9 @@ PFX EH 0 alu .
 PFX EH 0 aku .
 PFX EH 0 atu .
 PFX EH 0 bwetun [^lmnb]
-PFX EH 0 bwetund l.[^mn]
-PFX EH 0 bwetunn l.[mn]
-PFX EH 0 bwetump w
+PFX EH l bwetund l.[^mn]
+PFX EH l bwetunn l.[mn]
+PFX EH w bwetump w
 PFX EH 0 bwetumu .
 PFX EH 0 bwetuba .
 PFX EH 0 bwetugu .
@@ -24563,9 +24563,9 @@ PFX EH 0 bwetulu .
 PFX EH 0 bwetuku .
 PFX EH 0 bwetutu .
 PFX EH 0 bwemun [^lmnb]
-PFX EH 0 bwemund l.[^mn]
-PFX EH 0 bwemunn l.[mn]
-PFX EH 0 bwemump w
+PFX EH l bwemund l.[^mn]
+PFX EH l bwemunn l.[mn]
+PFX EH w bwemump w
 PFX EH 0 bwemumu .
 PFX EH 0 bwemuba .
 PFX EH 0 bwemugu .
@@ -24581,9 +24581,9 @@ PFX EH 0 bwemulu .
 PFX EH 0 bwemuku .
 PFX EH 0 bwemutu .
 PFX EH 0 bweban [^lmnb]
-PFX EH 0 bweband l.[^mn]
-PFX EH 0 bwebann l.[mn]
-PFX EH 0 bwebamp w
+PFX EH l bweband l.[^mn]
+PFX EH l bwebann l.[mn]
+PFX EH w bwebamp w
 PFX EH 0 bwebamu .
 PFX EH 0 bwebaba .
 PFX EH 0 bwebagu .
@@ -24599,9 +24599,9 @@ PFX EH 0 bwebalu .
 PFX EH 0 bwebaku .
 PFX EH 0 bwebatu .
 PFX EH 0 bweban [^lmnb]
-PFX EH 0 bweband l.[^mn]
-PFX EH 0 bwebann l.[mn]
-PFX EH 0 bwebamp w
+PFX EH l bweband l.[^mn]
+PFX EH l bwebann l.[mn]
+PFX EH w bwebamp w
 PFX EH 0 bwebamu .
 PFX EH 0 bwebaba .
 PFX EH 0 bwebagu .
@@ -24617,9 +24617,9 @@ PFX EH 0 bwebalu .
 PFX EH 0 bwebaku .
 PFX EH 0 bwebatu .
 PFX EH 0 bwegun [^lmnb]
-PFX EH 0 bwegund l.[^mn]
-PFX EH 0 bwegunn l.[mn]
-PFX EH 0 bwegump w
+PFX EH l bwegund l.[^mn]
+PFX EH l bwegunn l.[mn]
+PFX EH w bwegump w
 PFX EH 0 bwegumu .
 PFX EH 0 bweguba .
 PFX EH 0 bwegugu .
@@ -24635,9 +24635,9 @@ PFX EH 0 bwegulu .
 PFX EH 0 bweguku .
 PFX EH 0 bwegutu .
 PFX EH 0 bwegin [^lmnb]
-PFX EH 0 bwegind l.[^mn]
-PFX EH 0 bweginn l.[mn]
-PFX EH 0 bwegimp w
+PFX EH l bwegind l.[^mn]
+PFX EH l bweginn l.[mn]
+PFX EH w bwegimp w
 PFX EH 0 bwegimu .
 PFX EH 0 bwegiba .
 PFX EH 0 bwegigu .
@@ -24653,9 +24653,9 @@ PFX EH 0 bwegilu .
 PFX EH 0 bwegiku .
 PFX EH 0 bwegitu .
 PFX EH 0 en [^lmnb]
-PFX EH 0 end l.[^mn]
-PFX EH 0 enn l.[mn]
-PFX EH 0 emp w
+PFX EH l end l.[^mn]
+PFX EH l enn l.[mn]
+PFX EH w emp w
 PFX EH 0 emu .
 PFX EH 0 eba .
 PFX EH 0 egu .
@@ -24671,9 +24671,9 @@ PFX EH 0 elu .
 PFX EH 0 eku .
 PFX EH 0 etu .
 PFX EH 0 bwezin [^lmnb]
-PFX EH 0 bwezind l.[^mn]
-PFX EH 0 bwezinn l.[mn]
-PFX EH 0 bwezimp w
+PFX EH l bwezind l.[^mn]
+PFX EH l bwezinn l.[mn]
+PFX EH w bwezimp w
 PFX EH 0 bwezimu .
 PFX EH 0 bweziba .
 PFX EH 0 bwezigu .
@@ -24689,9 +24689,9 @@ PFX EH 0 bwezilu .
 PFX EH 0 bweziku .
 PFX EH 0 bwezitu .
 PFX EH 0 bwekin [^lmnb]
-PFX EH 0 bwekind l.[^mn]
-PFX EH 0 bwekinn l.[mn]
-PFX EH 0 bwekimp w
+PFX EH l bwekind l.[^mn]
+PFX EH l bwekinn l.[mn]
+PFX EH w bwekimp w
 PFX EH 0 bwekimu .
 PFX EH 0 bwekiba .
 PFX EH 0 bwekigu .
@@ -24707,9 +24707,9 @@ PFX EH 0 bwekilu .
 PFX EH 0 bwekiku .
 PFX EH 0 bwekitu .
 PFX EH 0 bwebin [^lmnb]
-PFX EH 0 bwebind l.[^mn]
-PFX EH 0 bwebinn l.[mn]
-PFX EH 0 bwebimp w
+PFX EH l bwebind l.[^mn]
+PFX EH l bwebinn l.[mn]
+PFX EH w bwebimp w
 PFX EH 0 bwebimu .
 PFX EH 0 bwebiba .
 PFX EH 0 bwebigu .
@@ -24725,9 +24725,9 @@ PFX EH 0 bwebilu .
 PFX EH 0 bwebiku .
 PFX EH 0 bwebitu .
 PFX EH 0 bwelin [^lmnb]
-PFX EH 0 bwelind l.[^mn]
-PFX EH 0 bwelinn l.[mn]
-PFX EH 0 bwelimp w
+PFX EH l bwelind l.[^mn]
+PFX EH l bwelinn l.[mn]
+PFX EH w bwelimp w
 PFX EH 0 bwelimu .
 PFX EH 0 bweliba .
 PFX EH 0 bweligu .
@@ -24743,9 +24743,9 @@ PFX EH 0 bwelilu .
 PFX EH 0 bweliku .
 PFX EH 0 bwelitu .
 PFX EH 0 bwegan [^lmnb]
-PFX EH 0 bwegand l.[^mn]
-PFX EH 0 bwegann l.[mn]
-PFX EH 0 bwegamp w
+PFX EH l bwegand l.[^mn]
+PFX EH l bwegann l.[mn]
+PFX EH w bwegamp w
 PFX EH 0 bwegamu .
 PFX EH 0 bwegaba .
 PFX EH 0 bwegagu .
@@ -24761,9 +24761,9 @@ PFX EH 0 bwegalu .
 PFX EH 0 bwegaku .
 PFX EH 0 bwegatu .
 PFX EH 0 bwekan [^lmnb]
-PFX EH 0 bwekand l.[^mn]
-PFX EH 0 bwekann l.[mn]
-PFX EH 0 bwekamp w
+PFX EH l bwekand l.[^mn]
+PFX EH l bwekann l.[mn]
+PFX EH w bwekamp w
 PFX EH 0 bwekamu .
 PFX EH 0 bwekaba .
 PFX EH 0 bwekagu .
@@ -24779,9 +24779,9 @@ PFX EH 0 bwekalu .
 PFX EH 0 bwekaku .
 PFX EH 0 bwekatu .
 PFX EH 0 bwebun [^lmnb]
-PFX EH 0 bwebund l.[^mn]
-PFX EH 0 bwebunn l.[mn]
-PFX EH 0 bwebump w
+PFX EH l bwebund l.[^mn]
+PFX EH l bwebunn l.[mn]
+PFX EH w bwebump w
 PFX EH 0 bwebumu .
 PFX EH 0 bwebuba .
 PFX EH 0 bwebugu .
@@ -24797,9 +24797,9 @@ PFX EH 0 bwebulu .
 PFX EH 0 bwebuku .
 PFX EH 0 bwebutu .
 PFX EH 0 bwelun [^lmnb]
-PFX EH 0 bwelund l.[^mn]
-PFX EH 0 bwelunn l.[mn]
-PFX EH 0 bwelump w
+PFX EH l bwelund l.[^mn]
+PFX EH l bwelunn l.[mn]
+PFX EH w bwelump w
 PFX EH 0 bwelumu .
 PFX EH 0 bweluba .
 PFX EH 0 bwelugu .
@@ -24815,9 +24815,9 @@ PFX EH 0 bwelulu .
 PFX EH 0 bweluku .
 PFX EH 0 bwelutu .
 PFX EH 0 bwekun [^lmnb]
-PFX EH 0 bwekund l.[^mn]
-PFX EH 0 bwekunn l.[mn]
-PFX EH 0 bwekump w
+PFX EH l bwekund l.[^mn]
+PFX EH l bwekunn l.[mn]
+PFX EH w bwekump w
 PFX EH 0 bwekumu .
 PFX EH 0 bwekuba .
 PFX EH 0 bwekugu .
@@ -24833,9 +24833,9 @@ PFX EH 0 bwekulu .
 PFX EH 0 bwekuku .
 PFX EH 0 bwekutu .
 PFX EH 0 bwetun [^lmnb]
-PFX EH 0 bwetund l.[^mn]
-PFX EH 0 bwetunn l.[mn]
-PFX EH 0 bwetump w
+PFX EH l bwetund l.[^mn]
+PFX EH l bwetunn l.[mn]
+PFX EH w bwetump w
 PFX EH 0 bwetumu .
 PFX EH 0 bwetuba .
 PFX EH 0 bwetugu .
@@ -24863,9 +24863,9 @@ PFX EH 0 wembi .
 PFX EH 0 wembu .
 PFX EH 0 wendi .
 PFX EH 0 wetun [^lmnb]
-PFX EH 0 wetund l.[^mn]
-PFX EH 0 wetunn l.[mn]
-PFX EH 0 wetump w
+PFX EH l wetund l.[^mn]
+PFX EH l wetunn l.[mn]
+PFX EH w wetump w
 PFX EH 0 wetumu .
 PFX EH 0 wetuba .
 PFX EH 0 wetugu .
@@ -24881,9 +24881,9 @@ PFX EH 0 wetulu .
 PFX EH 0 wetuku .
 PFX EH 0 wetutu .
 PFX EH 0 wemun [^lmnb]
-PFX EH 0 wemund l.[^mn]
-PFX EH 0 wemunn l.[mn]
-PFX EH 0 wemump w
+PFX EH l wemund l.[^mn]
+PFX EH l wemunn l.[mn]
+PFX EH w wemump w
 PFX EH 0 wemumu .
 PFX EH 0 wemuba .
 PFX EH 0 wemugu .
@@ -24899,9 +24899,9 @@ PFX EH 0 wemulu .
 PFX EH 0 wemuku .
 PFX EH 0 wemutu .
 PFX EH 0 weban [^lmnb]
-PFX EH 0 weband l.[^mn]
-PFX EH 0 webann l.[mn]
-PFX EH 0 webamp w
+PFX EH l weband l.[^mn]
+PFX EH l webann l.[mn]
+PFX EH w webamp w
 PFX EH 0 webamu .
 PFX EH 0 webaba .
 PFX EH 0 webagu .
@@ -24917,9 +24917,9 @@ PFX EH 0 webalu .
 PFX EH 0 webaku .
 PFX EH 0 webatu .
 PFX EH 0 weban [^lmnb]
-PFX EH 0 weband l.[^mn]
-PFX EH 0 webann l.[mn]
-PFX EH 0 webamp w
+PFX EH l weband l.[^mn]
+PFX EH l webann l.[mn]
+PFX EH w webamp w
 PFX EH 0 webamu .
 PFX EH 0 webaba .
 PFX EH 0 webagu .
@@ -24935,9 +24935,9 @@ PFX EH 0 webalu .
 PFX EH 0 webaku .
 PFX EH 0 webatu .
 PFX EH 0 wegun [^lmnb]
-PFX EH 0 wegund l.[^mn]
-PFX EH 0 wegunn l.[mn]
-PFX EH 0 wegump w
+PFX EH l wegund l.[^mn]
+PFX EH l wegunn l.[mn]
+PFX EH w wegump w
 PFX EH 0 wegumu .
 PFX EH 0 weguba .
 PFX EH 0 wegugu .
@@ -24953,9 +24953,9 @@ PFX EH 0 wegulu .
 PFX EH 0 weguku .
 PFX EH 0 wegutu .
 PFX EH 0 wegin [^lmnb]
-PFX EH 0 wegind l.[^mn]
-PFX EH 0 weginn l.[mn]
-PFX EH 0 wegimp w
+PFX EH l wegind l.[^mn]
+PFX EH l weginn l.[mn]
+PFX EH w wegimp w
 PFX EH 0 wegimu .
 PFX EH 0 wegiba .
 PFX EH 0 wegigu .
@@ -24971,9 +24971,9 @@ PFX EH 0 wegilu .
 PFX EH 0 wegiku .
 PFX EH 0 wegitu .
 PFX EH 0 wezin [^lmnb]
-PFX EH 0 wezind l.[^mn]
-PFX EH 0 wezinn l.[mn]
-PFX EH 0 wezimp w
+PFX EH l wezind l.[^mn]
+PFX EH l wezinn l.[mn]
+PFX EH w wezimp w
 PFX EH 0 wezimu .
 PFX EH 0 weziba .
 PFX EH 0 wezigu .
@@ -24989,9 +24989,9 @@ PFX EH 0 wezilu .
 PFX EH 0 weziku .
 PFX EH 0 wezitu .
 PFX EH 0 wekin [^lmnb]
-PFX EH 0 wekind l.[^mn]
-PFX EH 0 wekinn l.[mn]
-PFX EH 0 wekimp w
+PFX EH l wekind l.[^mn]
+PFX EH l wekinn l.[mn]
+PFX EH w wekimp w
 PFX EH 0 wekimu .
 PFX EH 0 wekiba .
 PFX EH 0 wekigu .
@@ -25007,9 +25007,9 @@ PFX EH 0 wekilu .
 PFX EH 0 wekiku .
 PFX EH 0 wekitu .
 PFX EH 0 webin [^lmnb]
-PFX EH 0 webind l.[^mn]
-PFX EH 0 webinn l.[mn]
-PFX EH 0 webimp w
+PFX EH l webind l.[^mn]
+PFX EH l webinn l.[mn]
+PFX EH w webimp w
 PFX EH 0 webimu .
 PFX EH 0 webiba .
 PFX EH 0 webigu .
@@ -25025,9 +25025,9 @@ PFX EH 0 webilu .
 PFX EH 0 webiku .
 PFX EH 0 webitu .
 PFX EH 0 welin [^lmnb]
-PFX EH 0 welind l.[^mn]
-PFX EH 0 welinn l.[mn]
-PFX EH 0 welimp w
+PFX EH l welind l.[^mn]
+PFX EH l welinn l.[mn]
+PFX EH w welimp w
 PFX EH 0 welimu .
 PFX EH 0 weliba .
 PFX EH 0 weligu .
@@ -25043,9 +25043,9 @@ PFX EH 0 welilu .
 PFX EH 0 weliku .
 PFX EH 0 welitu .
 PFX EH 0 wegan [^lmnb]
-PFX EH 0 wegand l.[^mn]
-PFX EH 0 wegann l.[mn]
-PFX EH 0 wegamp w
+PFX EH l wegand l.[^mn]
+PFX EH l wegann l.[mn]
+PFX EH w wegamp w
 PFX EH 0 wegamu .
 PFX EH 0 wegaba .
 PFX EH 0 wegagu .
@@ -25061,9 +25061,9 @@ PFX EH 0 wegalu .
 PFX EH 0 wegaku .
 PFX EH 0 wegatu .
 PFX EH 0 wekan [^lmnb]
-PFX EH 0 wekand l.[^mn]
-PFX EH 0 wekann l.[mn]
-PFX EH 0 wekamp w
+PFX EH l wekand l.[^mn]
+PFX EH l wekann l.[mn]
+PFX EH w wekamp w
 PFX EH 0 wekamu .
 PFX EH 0 wekaba .
 PFX EH 0 wekagu .
@@ -25079,9 +25079,9 @@ PFX EH 0 wekalu .
 PFX EH 0 wekaku .
 PFX EH 0 wekatu .
 PFX EH 0 webun [^lmnb]
-PFX EH 0 webund l.[^mn]
-PFX EH 0 webunn l.[mn]
-PFX EH 0 webump w
+PFX EH l webund l.[^mn]
+PFX EH l webunn l.[mn]
+PFX EH w webump w
 PFX EH 0 webumu .
 PFX EH 0 webuba .
 PFX EH 0 webugu .
@@ -25097,9 +25097,9 @@ PFX EH 0 webulu .
 PFX EH 0 webuku .
 PFX EH 0 webutu .
 PFX EH 0 welun [^lmnb]
-PFX EH 0 welund l.[^mn]
-PFX EH 0 welunn l.[mn]
-PFX EH 0 welump w
+PFX EH l welund l.[^mn]
+PFX EH l welunn l.[mn]
+PFX EH w welump w
 PFX EH 0 welumu .
 PFX EH 0 weluba .
 PFX EH 0 welugu .
@@ -25115,9 +25115,9 @@ PFX EH 0 welulu .
 PFX EH 0 weluku .
 PFX EH 0 welutu .
 PFX EH 0 wekun [^lmnb]
-PFX EH 0 wekund l.[^mn]
-PFX EH 0 wekunn l.[mn]
-PFX EH 0 wekump w
+PFX EH l wekund l.[^mn]
+PFX EH l wekunn l.[mn]
+PFX EH w wekump w
 PFX EH 0 wekumu .
 PFX EH 0 wekuba .
 PFX EH 0 wekugu .
@@ -25133,9 +25133,9 @@ PFX EH 0 wekulu .
 PFX EH 0 wekuku .
 PFX EH 0 wekutu .
 PFX EH 0 wetun [^lmnb]
-PFX EH 0 wetund l.[^mn]
-PFX EH 0 wetunn l.[mn]
-PFX EH 0 wetump w
+PFX EH l wetund l.[^mn]
+PFX EH l wetunn l.[mn]
+PFX EH w wetump w
 PFX EH 0 wetumu .
 PFX EH 0 wetuba .
 PFX EH 0 wetugu .
