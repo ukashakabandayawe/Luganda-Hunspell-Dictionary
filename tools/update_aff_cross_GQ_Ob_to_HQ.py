@@ -12,8 +12,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 AFF_FILE = REPO_ROOT / "Luganda.aff"
 
 rule_left_raw = """
-PFX GQ Y 22
-PFX GQ 0 lwenna .
+PFX GQ Y 23
+PFX GQ 0 lwenna [^mn]
+PFX GQ 0 lwenna mu
 PFX GQ 0 lwewa .
 PFX GQ 0 lweya .
 PFX GQ 0 lwetwa .

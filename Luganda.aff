@@ -36984,12 +36984,7 @@ PFX EM 0 otulu .
 PFX EM 0 otuku .
 PFX EM 0 otutu .
 # Cross product of GB (GB) and Ob (Object markers) to HB
-PFX HB Y 396
-PFX HB 0 bwennan [^lmnb]
-PFX HB l bwennand l.[^mn]
-PFX HB l bwennann l.[mn]
-PFX HB w bwennamp [w]
-PFX HB 0 bwennamu .
+PFX HB Y 392
 PFX HB 0 bwennaba .
 PFX HB 0 bwennagu .
 PFX HB 0 bwennagi .
@@ -37003,6 +36998,7 @@ PFX HB 0 bwennabu .
 PFX HB 0 bwennalu .
 PFX HB 0 bwennaku .
 PFX HB 0 bwennatu .
+PFX HB 0 bwennamu .
 PFX HB 0 bwewan [^lmnb]
 PFX HB l bwewand l.[^mn]
 PFX HB l bwewann l.[mn]
@@ -38420,12 +38416,7 @@ PFX HE 0 bwessaakwe .
 PFX HE 0 bwessaagee .
 PFX HE 0 bwessaatwe .
 # Cross product of GD (GD) and Ob (Object markers) to HF
-PFX HF Y 414
-PFX HF 0 bwennaan [^lmnb]
-PFX HF l bwennaand l.[^mn]
-PFX HF l bwennaann l.[mn]
-PFX HF w bwennaamp [w]
-PFX HF 0 bwennaamu .
+PFX HF Y 410
 PFX HF 0 bwennaaba .
 PFX HF 0 bwennaagu .
 PFX HF 0 bwennaagi .
@@ -38439,6 +38430,7 @@ PFX HF 0 bwennaabu .
 PFX HF 0 bwennaalu .
 PFX HF 0 bwennaaku .
 PFX HF 0 bwennaatu .
+PFX HF 0 bwennaamu .
 PFX HF 0 bwemunaan [^lmnb]
 PFX HF l bwemunaand l.[^mn]
 PFX HF l bwemunaann l.[mn]
@@ -39206,12 +39198,7 @@ PFX HG 0 bwetunaakwe .
 PFX HG 0 bwetunaagee .
 PFX HG 0 bwetunaatwe .
 # Cross product of GE (GE) and Ob (Object markers) to HJ
-PFX HJ Y 360
-PFX HJ 0 bwessiin [^lmnb]
-PFX HJ l bwessiind l.[^mn]
-PFX HJ l bwessiinn l.[mn]
-PFX HJ w bwessiimp [w]
-PFX HJ 0 bwessiimu .
+PFX HJ Y 356
 PFX HJ 0 bwessiiba .
 PFX HJ 0 bwessiigu .
 PFX HJ 0 bwessiigi .
@@ -39225,6 +39212,7 @@ PFX HJ 0 bwessiibu .
 PFX HJ 0 bwessiilu .
 PFX HJ 0 bwessiiku .
 PFX HJ 0 bwessiitu .
+PFX HJ 0 bwessiimu .
 PFX HJ 0 otoon [^lmnb]
 PFX HJ l otoond l.[^mn]
 PFX HJ l otoonn l.[mn]
@@ -39890,12 +39878,7 @@ PFX HK 0 bwessiikwe .
 PFX HK 0 bwessiigee .
 PFX HK 0 bwessiitwe .
 # Cross product of GF (GF) and Ob (Object markers) to HL
-PFX HL Y 288
-PFX HL 0 bwendin [^lmnb]
-PFX HL l bwendind l.[^mn]
-PFX HL l bwendinn l.[mn]
-PFX HL w bwendimp [w]
-PFX HL 0 bwendimu .
+PFX HL Y 284
 PFX HL 0 bwendiba .
 PFX HL 0 bwendigu .
 PFX HL 0 bwendigi .
@@ -39909,6 +39892,7 @@ PFX HL 0 bwendibu .
 PFX HL 0 bwendilu .
 PFX HL 0 bwendiku .
 PFX HL 0 bwenditu .
+PFX HL 0 bwendimu .
 PFX HL 0 bwetulin [^lmnb]
 PFX HL l bwetulind l.[^mn]
 PFX HL l bwetulinn l.[mn]
@@ -40438,12 +40422,7 @@ PFX HM 0 bwetulikwe .
 PFX HM 0 bwetuligee .
 PFX HM 0 bwetulitwe .
 # Cross product of GH (GH) and Ob (Object markers) to HN
-PFX HN Y 342
-PFX HN 0 bwessilin [^lmnb]
-PFX HN l bwessilind l.[^mn]
-PFX HN l bwessilinn l.[mn]
-PFX HN w bwessilimp [w]
-PFX HN 0 bwessilimu .
+PFX HN Y 338
 PFX HN 0 bwessiliba .
 PFX HN 0 bwessiligu .
 PFX HN 0 bwessiligi .
@@ -40457,6 +40436,7 @@ PFX HN 0 bwessilibu .
 PFX HN 0 bwessililu .
 PFX HN 0 bwessiliku .
 PFX HN 0 bwessilitu .
+PFX HN 0 bwessilimu .
 PFX HN 0 otolin [^lmnb]
 PFX HN l otolind l.[^mn]
 PFX HN l otolinn l.[mn]
@@ -41088,12 +41068,7 @@ PFX HP 0 bwetutalikwe .
 PFX HP 0 bwetutaligee .
 PFX HP 0 bwetutalitwe .
 # Cross product of GQ (GQ) and Ob (Object markers) to HQ
-PFX HQ Y 396
-PFX HQ 0 lwennan [^lmnb]
-PFX HQ l lwennand l.[^mn]
-PFX HQ l lwennann l.[mn]
-PFX HQ w lwennamp [w]
-PFX HQ 0 lwennamu .
+PFX HQ Y 392
 PFX HQ 0 lwennaba .
 PFX HQ 0 lwennagu .
 PFX HQ 0 lwennagi .
@@ -41107,6 +41082,7 @@ PFX HQ 0 lwennabu .
 PFX HQ 0 lwennalu .
 PFX HQ 0 lwennaku .
 PFX HQ 0 lwennatu .
+PFX HQ 0 lwennamu .
 PFX HQ 0 lwewan [^lmnb]
 PFX HQ l lwewand l.[^mn]
 PFX HQ l lwewann l.[mn]
@@ -41840,12 +41816,7 @@ PFX HR 0 bweyakwe .
 PFX HR 0 bweyagee .
 PFX HR 0 bweyatwe .
 # Cross product of GR (GR) and Ob (Object markers) to HS
-PFX HS Y 360
-PFX HS 0 lwessaan [^lmnb]
-PFX HS l lwessaand l.[^mn]
-PFX HS l lwessaann l.[mn]
-PFX HS w lwessaamp [w]
-PFX HS 0 lwessaamu .
+PFX HS Y 356
 PFX HS 0 lwessaaba .
 PFX HS 0 lwessaagu .
 PFX HS 0 lwessaagi .
@@ -41859,6 +41830,7 @@ PFX HS 0 lwessaabu .
 PFX HS 0 lwessaalu .
 PFX HS 0 lwessaaku .
 PFX HS 0 lwessaatu .
+PFX HS 0 lwessaamu .
 PFX HS 0 otaan [^lmnb]
 PFX HS l otaand l.[^mn]
 PFX HS l otaann l.[mn]
@@ -42524,12 +42496,7 @@ PFX HT 0 bwessaakwe .
 PFX HT 0 bwessaagee .
 PFX HT 0 bwessaatwe .
 # Cross product of GS (GS) and Ob (Object markers) to HU
-PFX HU Y 414
-PFX HU 0 lwennaan [^lmnb]
-PFX HU l lwennaand l.[^mn]
-PFX HU l lwennaann l.[mn]
-PFX HU w lwennaamp [w]
-PFX HU 0 lwennaamu .
+PFX HU Y 410
 PFX HU 0 lwennaaba .
 PFX HU 0 lwennaagu .
 PFX HU 0 lwennaagi .
@@ -42543,6 +42510,7 @@ PFX HU 0 lwennaabu .
 PFX HU 0 lwennaalu .
 PFX HU 0 lwennaaku .
 PFX HU 0 lwennaatu .
+PFX HU 0 lwennaamu .
 PFX HU 0 lwemunaan [^lmnb]
 PFX HU l lwemunaand l.[^mn]
 PFX HU l lwemunaann l.[mn]
@@ -43310,12 +43278,7 @@ PFX HV 0 lwetunaakwe .
 PFX HV 0 lwetunaagee .
 PFX HV 0 lwetunaatwe .
 # Cross product of GT (GT) and Ob (Object markers) to HW
-PFX HW Y 360
-PFX HW 0 lwessiin [^lmnb]
-PFX HW l lwessiind l.[^mn]
-PFX HW l lwessiinn l.[mn]
-PFX HW w lwessiimp [w]
-PFX HW 0 lwessiimu .
+PFX HW Y 356
 PFX HW 0 lwessiiba .
 PFX HW 0 lwessiigu .
 PFX HW 0 lwessiigi .
@@ -43329,6 +43292,7 @@ PFX HW 0 lwessiibu .
 PFX HW 0 lwessiilu .
 PFX HW 0 lwessiiku .
 PFX HW 0 lwessiitu .
+PFX HW 0 lwessiimu .
 PFX HW 0 otoon [^lmnb]
 PFX HW l otoond l.[^mn]
 PFX HW l otoonn l.[mn]
@@ -43994,12 +43958,7 @@ PFX HX 0 bwessiikwe .
 PFX HX 0 bwessiigee .
 PFX HX 0 bwessiitwe .
 # Cross product of GU (GU) and Ob (Object markers) to HY
-PFX HY Y 288
-PFX HY 0 lwendin [^lmnb]
-PFX HY l lwendind l.[^mn]
-PFX HY l lwendinn l.[mn]
-PFX HY w lwendimp [w]
-PFX HY 0 lwendimu .
+PFX HY Y 284
 PFX HY 0 lwendiba .
 PFX HY 0 lwendigu .
 PFX HY 0 lwendigi .
@@ -44013,6 +43972,7 @@ PFX HY 0 lwendibu .
 PFX HY 0 lwendilu .
 PFX HY 0 lwendiku .
 PFX HY 0 lwenditu .
+PFX HY 0 lwendimu .
 PFX HY 0 lwetulin [^lmnb]
 PFX HY l lwetulind l.[^mn]
 PFX HY l lwetulinn l.[mn]
