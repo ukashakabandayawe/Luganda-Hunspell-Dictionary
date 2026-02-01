@@ -2068,6 +2068,293 @@ PFX GP 0 bwelutalye .
 PFX GP 0 bwekutalye .
 PFX GP 0 bwetutalye .
 
+# subordinating conjunction "when" glued to subjects markers in near and distant past tense 
+# e.g. lwemwali muzannya, lwennafunye sente, 
+PFX GQ Y 22
+PFX GQ 0 lwenna .
+PFX GQ 0 lwewa .
+PFX GQ 0 lweya .
+PFX GQ 0 lwetwa .
+PFX GQ 0 lwemwa .
+PFX GQ 0 lwebaa .
+PFX GQ 0 lwegwa .
+PFX GQ 0 lwegya .
+PFX GQ 0 lwezaa .
+PFX GQ 0 lwekyaa .
+PFX GQ 0 lwebyaa .
+PFX GQ 0 lwelyaa .
+PFX GQ 0 lwegaa .
+PFX GQ 0 lwekaa .
+PFX GQ 0 lwebwa .
+PFX GQ 0 lwelwa .
+PFX GQ 0 lwekwa .
+PFX GQ 0 lwegaa .
+PFX GQ 0 lwetwa .
+PFX GQ 0 bwenna .
+PFX GQ 0 bwewa .
+PFX GQ 0 bweya .
+
+
+# subordinating conjunction "when" glued to negative subjects markers in near and distant past tense 
+# e.g. lwemutaazannye, lwessaafuna sente, 
+PFX GR Y 20
+PFX GR 0 lwessaa .
+PFX GR 0 otaa .
+PFX GR 0 ataa .
+PFX GR 0 lwetutaa .
+PFX GR 0 lwemutaa .
+PFX GR 0 lwebataa .
+PFX GR 0 lwegutaa .
+PFX GR 0 lwegitaa .
+PFX GR 0 etaa .
+PFX GR 0 lwezitaa .
+PFX GR 0 lwekitaa .
+PFX GR 0 lwebitaa .
+PFX GR 0 lwelitaa .
+PFX GR 0 lwegataa .
+PFX GR 0 lwekataa .
+PFX GR 0 lwebutaa .
+PFX GR 0 lwelutaa .
+PFX GR 0 lwekutaa .
+PFX GR 0 lwetutaa .
+PFX GR 0 bwessaa .
+
+
+# subordinating conjunction "when" glued to subjects markers in near future tense 
+# e.g. lwemunaaba muzannya, lwennaafunna sente, 
+PFX GS Y 23
+PFX GS 0 lwennaa .
+PFX GS 0 lwemunaa .
+PFX GS 0 onoo .
+PFX GS 0 onaa .
+PFX GS 0 anaa .
+PFX GS 0 lwetunaa .
+PFX GS 0 lwemunaa .
+PFX GS 0 lwebanaa .
+PFX GS 0 lwegunaa .
+PFX GS 0 lweginaa .
+PFX GS 0 enaa .
+PFX GS 0 lwezinaa .
+PFX GS 0 lwekinaa .
+PFX GS 0 lwebinaa .
+PFX GS 0 lwelinaa .
+PFX GS 0 lweganaa .
+PFX GS 0 lwekanaa .
+PFX GS 0 lwebunaa .
+PFX GS 0 lwelunaa .
+PFX GS 0 lwezinaa .
+PFX GS 0 lwekunaa .
+PFX GS 0 lweganaa .
+PFX GS 0 lwetunaa .
+
+# subordinating conjunction "when" glued to negative subjects markers in near future tense 
+# e.g. lwemutaazannye, lwessiifune sente, 
+PFX GT Y 20
+PFX GT 0 lwessii .
+PFX GT 0 otoo .
+PFX GT 0 ataa .
+PFX GT 0 lwetutaa .
+PFX GT 0 lwemutaa .
+PFX GT 0 lwebataa .
+PFX GT 0 lwegutaa .
+PFX GT 0 lwegitaa .
+PFX GT 0 etaa .
+PFX GT 0 lwezitaa .
+PFX GT 0 lwekitaa .
+PFX GT 0 lwebitaa .
+PFX GT 0 lwelitaa .
+PFX GT 0 lwegataa .
+PFX GT 0 lwekataa .
+PFX GT 0 lwebutaa .
+PFX GT 0 lwelutaa .
+PFX GT 0 lwekutaa .
+PFX GT 0 lwetutaa .
+PFX GT 0 bwessii .
+
+
+# subordinating conjunction "when" glued to subjects markers in far future tense 
+# e.g. lwemuliba muzannya, lwendifunna sente, 
+PFX GU Y 16
+PFX GU 0 lwendi . 
+PFX GU 0 lwetuli . 
+PFX GU 0 lwemuli . 
+PFX GU 0 lwebali . 
+PFX GU 0 lweguli .
+PFX GU 0 lwegili .
+PFX GU 0 lwezili .
+PFX GU 0 lwekili .
+PFX GU 0 lwebili .
+PFX GU 0 lwelili .
+PFX GU 0 lwegali .
+PFX GU 0 lwekali .
+PFX GU 0 lwebuli .
+PFX GU 0 lweluli .
+PFX GU 0 lwekuli .
+PFX GU 0 lwetuli .
+
+
+# subordinating conjunction "when" glued to subjects markers in the far future tense 
+# e.g. lwemutalifuna, lwessilifuna, 
+PFX GV Y 19
+PFX GV 0 lwessili .
+PFX GV 0 otoli .
+PFX GV 0 atali .
+PFX GV 0 lwetutali .
+PFX GV 0 lwemutali .
+PFX GV 0 lwebatali .
+PFX GV 0 lwegutali .
+PFX GV 0 lwegitali .
+PFX GV 0 eteli .
+PFX GV 0 lwezitali .
+PFX GV 0 lwekitali .
+PFX GV 0 lwebitali .
+PFX GV 0 lwelitali .
+PFX GV 0 lwegatali .
+PFX GV 0 lwekatali .
+PFX GV 0 lwebutali .
+PFX GV 0 lwelutali .
+PFX GV 0 lwekutali .
+PFX GV 0 lwetutali .
+
+# subordinating conjunction "when" glued to reflexive subjects markers in present simple tense and the past tenses
+# e.g. lwenneetaaga, lweyeetwala, lwetwebasse 
+PFX GW Y 20
+PFX GW 0 lwennee .
+PFX GW 0 lwewee .
+PFX GW 0 lweyee .
+PFX GW 0 lwetwe .
+PFX GW 0 lwemwe .
+PFX GW 0 lwebee .
+PFX GW 0 lwegwe .
+PFX GW 0 lwegye .
+PFX GW 0 lwezee .
+PFX GW 0 lwekye .
+PFX GW 0 lwebye .
+PFX GW 0 lwelye .
+PFX GW 0 lwegee .
+PFX GW 0 lwekee .
+PFX GW 0 lwebwe .
+PFX GW 0 lwelwe .
+PFX GW 0 lwezee .
+PFX GW 0 lwekwe .
+PFX GW 0 lwegee .
+PFX GW 0 lwetwe .
+
+# subordinating conjunction "when" glued to reflexive negative subjects markers in present simple tense and the past tenses
+# e.g. lwesseefumbira, lwebateebaka, lwebateefumbidde
+PFX GX Y 19
+PFX GX 0 lwessee .
+PFX GX 0 otee .
+PFX GX 0 atee .
+PFX GX 0 lwetutee .
+PFX GX 0 lwemutee .
+PFX GX 0 lwebatee .
+PFX GX 0 lwegutee .
+PFX GX 0 lwegitee .
+PFX GX 0 etee .
+PFX GX 0 lwezitee .
+PFX GX 0 lwekitee .
+PFX GX 0 lwebitee .
+PFX GX 0 lwelitee .
+PFX GX 0 lwegatee .
+PFX GX 0 lwekatee .
+PFX GX 0 lwebutee .
+PFX GX 0 lwelutee .
+PFX GX 0 lwekutee .
+PFX GX 0 lwetutee .
+
+# subordinating conjunction "when" glued to reflexive subjects markers in near future tense 
+# e.g. lwetuneebaka, lwemuneetaaga, 
+PFX GY Y 23
+PFX GY 0 lwennee .
+PFX GY 0 lwemunee .
+PFX GY 0 onee .
+PFX GY 0 onee .
+PFX GY 0 anee .
+PFX GY 0 lwetunee .
+PFX GY 0 lwemunee .
+PFX GY 0 lwebanee .
+PFX GY 0 lwegunee .
+PFX GY 0 lweginee .
+PFX GY 0 enee .
+PFX GY 0 lwezinee .
+PFX GY 0 lwekinee .
+PFX GY 0 lwebinee .
+PFX GY 0 lwelinee .
+PFX GY 0 lweganee .
+PFX GY 0 lwekanee .
+PFX GY 0 lwebunee .
+PFX GY 0 lwelunee .
+PFX GY 0 lwezinee .
+PFX GY 0 lwekunee .
+PFX GY 0 lweganee .
+PFX GY 0 lwetunee .
+
+# subordinating conjunction "when" glued to reflexive negative subjects markers in near future tense 
+# e.g. lwemuteebake, lwemuteekwate, 
+PFX GZ Y 19
+PFX GZ 0 lwessee .
+PFX GZ 0 otee .
+PFX GZ 0 atee .
+PFX GZ 0 lwetutee .
+PFX GZ 0 lwemutee .
+PFX GZ 0 lwebatee .
+PFX GZ 0 lwegutee .
+PFX GZ 0 lwegitee .
+PFX GZ 0 etee .
+PFX GZ 0 lwezitee .
+PFX GZ 0 lwekitee .
+PFX GZ 0 lwebitee .
+PFX GZ 0 lwelitee .
+PFX GZ 0 lwegatee .
+PFX GZ 0 lwekatee .
+PFX GZ 0 lwebutee .
+PFX GZ 0 lwelutee .
+PFX GZ 0 lwekutee .
+PFX GZ 0 lwetutee .
+
+# subordinating conjunction "when" glued to reflexive subjects markers in far future tense 
+# e.g. lwendyetaaga, lwendyegulira, 
+PFX GI Y 16
+PFX GI 0 lwendye . 
+PFX GI 0 lwetulye . 
+PFX GI 0 lwemulye . 
+PFX GI 0 lwebalye . 
+PFX GI 0 lwegulye .
+PFX GI 0 lwegilye .
+PFX GI 0 lwezilye .
+PFX GI 0 lwekilye .
+PFX GI 0 lwebilye .
+PFX GI 0 lwelilye .
+PFX GI 0 lwegalye .
+PFX GI 0 lwekalye .
+PFX GI 0 lwebulye .
+PFX GI 0 lwelulye .
+PFX GI 0 lwekulye .
+PFX GI 0 lwetulye .
+
+# subordinating conjunction "when" glued to relexive negative subjects markers in the far future tense 
+# e.g. lwemutalyefuga, lwessilyetaaga 
+PFX GO Y 19
+PFX GO 0 lwessilye .
+PFX GO 0 otolye .
+PFX GO 0 atalye .
+PFX GO 0 lwetutalye .
+PFX GO 0 lwemutalye .
+PFX GO 0 lwebatalye .
+PFX GO 0 lwegutalye .
+PFX GO 0 lwegitalye .
+PFX GO 0 etelye .
+PFX GO 0 lwezitalye .
+PFX GO 0 lwekitalye .
+PFX GO 0 lwebitalye .
+PFX GO 0 lwelitalye .
+PFX GO 0 lwegatalye .
+PFX GO 0 lwekatalye .
+PFX GO 0 lwebutalye .
+PFX GO 0 lwelutalye .
+PFX GO 0 lwekutalye .
+PFX GO 0 lwetutalye .
 
 # The permission subjunctive e.g. kantuule, kanfumbe
 PFX SB Y 11
