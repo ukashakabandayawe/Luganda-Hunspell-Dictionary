@@ -51,6 +51,11 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 AFF_FILE = REPO_ROOT / "Luganda.aff"
 
+# If set to a flag name (e.g. "HB"), the generated cross-product block will be inserted
+# immediately before the first "PFX <flag>" line when the output flag block doesn't
+# already exist in the .aff.
+INSERT_BEFORE_FLAG = "$insert_before_flag".strip() or None
+
 rule_left_raw = """
 $rule_left"""
 
@@ -143,12 +148,30 @@ def main():
         start_idx = None
 
     if start_idx is not None and last_flag_idx is not None:
+        # Replace existing block in-place.
         new_lines = lines[:start_idx] + [block] + lines[last_flag_idx + 1:]
     else:
-        new_lines = lines
-        if new_lines and not new_lines[-1].endswith(chr(10)):
-            new_lines[-1] += chr(10)
-        new_lines.append(block)
+        # Insert before an anchor flag if requested; otherwise append.
+        insert_idx = None
+        if INSERT_BEFORE_FLAG:
+            anchor_prefix = "PFX {} ".format(INSERT_BEFORE_FLAG)
+            for i, line in enumerate(lines):
+                if line.strip().startswith(anchor_prefix):
+                    insert_idx = i
+                    # If the anchor PFX block is preceded by one or more cross-product
+                    # comment lines, insert before those comments to keep them attached
+                    # to the anchor block.
+                    while insert_idx > 0 and lines[insert_idx - 1].strip().startswith("# Cross product"):
+                        insert_idx -= 1
+                    break
+
+        if insert_idx is not None:
+            new_lines = lines[:insert_idx] + [block] + lines[insert_idx:]
+        else:
+            new_lines = lines
+            if new_lines and not new_lines[-1].endswith(chr(10)):
+                new_lines[-1] += chr(10)
+            new_lines.append(block)
 
     with open(AFF_FILE, 'w', encoding='utf-8') as f:
         f.writelines(new_lines)
@@ -172,6 +195,8 @@ def build_script(left_flag: str, right_flag: str, out_flag: str, out_path: Path,
     rule_left = extract_block(left_flag)
     rule_right = extract_block(right_flag)
 
+    insert_before_flag = getattr(build_script, "insert_before_flag", "")
+
     script_text = TEMPLATE.substitute(
         left_flag=left_flag,
         right_flag=right_flag,
@@ -180,6 +205,7 @@ def build_script(left_flag: str, right_flag: str, out_flag: str, out_path: Path,
         rule_right=rule_right.rstrip('\n'),
         left_desc=left_desc,
         right_desc=right_desc,
+        insert_before_flag=insert_before_flag or "",
     )
 
     out_path.write_text(script_text, encoding='utf-8')
@@ -190,12 +216,14 @@ def main_cli():
     parser.add_argument('--left', help='Left flag (e.g. SC)', dest='left')
     parser.add_argument('--right', help='Right flag (e.g. Ob)', dest='right')
     parser.add_argument('--out', help='Output flag (e.g. FD)', dest='out_flag')
+    parser.add_argument('--before', help='Insert generated block before this flag (e.g. HB)', dest='before_flag')
     parser.add_argument('--overwrite', action='store_true', help='Overwrite existing script')
     args = parser.parse_args()
 
     left = args.left or input("Enter left flag: ").strip()
     right = args.right or input("Enter right flag: ").strip()
     out_flag = args.out_flag or input("Enter output flag: ").strip()
+    before_flag = (args.before_flag or "").strip()
 
     if not (left and right and out_flag):
         sys.exit("Error: all flags are required")
@@ -209,6 +237,8 @@ def main_cli():
     if out_path.exists() and not args.overwrite:
         sys.exit("Error: {} already exists (use --overwrite to replace)".format(out_path))
 
+    # Pass optional insert-before flag to the template via a function attribute.
+    build_script.insert_before_flag = before_flag
     build_script(left, right, out_flag, out_path, left_desc, right_desc)
 
 if __name__ == '__main__':
