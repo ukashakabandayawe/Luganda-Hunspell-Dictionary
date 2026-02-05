@@ -51,10 +51,10 @@ PFX St 0 otukya .
 
 rule_right_raw = """
 PFX Ob Y 18
-PFX Ob 0 n .
-PFX Ob 0 nd .
-PFX Ob 0 nn .
-PFX Ob 0 mp .
+PFX Ob 0 n [^lmnb]
+PFX Ob l nd l.[^mn][^u]
+PFX Ob l nn l.[mn]
+PFX Ob w mp [w]
 PFX Ob 0 mu .
 PFX Ob 0 ba .
 PFX Ob 0 gu .
