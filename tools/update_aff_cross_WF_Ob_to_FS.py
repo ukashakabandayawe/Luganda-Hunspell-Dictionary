@@ -18,7 +18,8 @@ INSERT_BEFORE_FLAG = "".strip() or None
 
 rule_left_raw = """
 PFX WF Y 160
-PFX WF 0 wendi . 
+PFX WF 0 wendi [^mn]
+PFX WF 0 wendi mu 
 PFX WF 0 wetuli . 
 PFX WF 0 wemuli . 
 PFX WF 0 webali . 
@@ -34,7 +35,8 @@ PFX WF 0 webuli .
 PFX WF 0 weluli .
 PFX WF 0 wekuli .
 PFX WF 0 wetuli .
-PFX WF 0 bwendi . 
+PFX WF 0 bwendi [^mn]
+PFX WF 0 bwendi mu 
 PFX WF 0 bwetuli . 
 PFX WF 0 bwemuli . 
 PFX WF 0 bwebali . 
@@ -50,7 +52,8 @@ PFX WF 0 bwebuli .
 PFX WF 0 bweluli .
 PFX WF 0 bwekuli .
 PFX WF 0 bwetuli .
-PFX WF 0 lwendi . 
+PFX WF 0 lwendi [^mn]
+PFX WF 0 lwendi mu 
 PFX WF 0 lwetuli . 
 PFX WF 0 lwemuli . 
 PFX WF 0 lwebali . 
@@ -66,7 +69,8 @@ PFX WF 0 lwebuli .
 PFX WF 0 lweluli .
 PFX WF 0 lwekuli .
 PFX WF 0 lwetuli .
-PFX WF 0 zendi . 
+PFX WF 0 zendi [^mn]
+PFX WF 0 zendi mu 
 PFX WF 0 zetuli . 
 PFX WF 0 zemuli . 
 PFX WF 0 zebali . 
@@ -82,7 +86,8 @@ PFX WF 0 zebuli .
 PFX WF 0 zeluli .
 PFX WF 0 zekuli .
 PFX WF 0 zetuli .
-PFX WF 0 gwendi . 
+PFX WF 0 gwendi [^mn]
+PFX WF 0 gwendi mu 
 PFX WF 0 gwetuli . 
 PFX WF 0 gwemuli . 
 PFX WF 0 gwebali . 
@@ -98,7 +103,8 @@ PFX WF 0 gwebuli .
 PFX WF 0 gweluli .
 PFX WF 0 gwekuli .
 PFX WF 0 gwetuli .
-PFX WF 0 gyendi . 
+PFX WF 0 gyendi [^mn]
+PFX WF 0 gyendi mu 
 PFX WF 0 gyetuli . 
 PFX WF 0 gyemuli . 
 PFX WF 0 gyebali . 
@@ -114,7 +120,8 @@ PFX WF 0 gyebuli .
 PFX WF 0 gyeluli .
 PFX WF 0 gyekuli .
 PFX WF 0 gyetuli .
-PFX WF 0 kyendi . 
+PFX WF 0 kyendi [^mn]
+PFX WF 0 kyendi mu 
 PFX WF 0 kyetuli . 
 PFX WF 0 kyemuli . 
 PFX WF 0 kyebali . 
@@ -130,7 +137,8 @@ PFX WF 0 kyebuli .
 PFX WF 0 kyeluli .
 PFX WF 0 kyekuli .
 PFX WF 0 kyetuli .
-PFX WF 0 byendi . 
+PFX WF 0 byendi [^mn]
+PFX WF 0 byendi mu 
 PFX WF 0 byetuli . 
 PFX WF 0 byemuli . 
 PFX WF 0 byebali . 
@@ -146,7 +154,8 @@ PFX WF 0 byebuli .
 PFX WF 0 byeluli .
 PFX WF 0 byekuli .
 PFX WF 0 byetuli .
-PFX WF 0 lyendi . 
+PFX WF 0 lyendi [^mn]
+PFX WF 0 lyendi mu 
 PFX WF 0 lyetuli . 
 PFX WF 0 lyemuli . 
 PFX WF 0 lyebali . 
@@ -162,7 +171,8 @@ PFX WF 0 lyebuli .
 PFX WF 0 lyeluli .
 PFX WF 0 lyekuli .
 PFX WF 0 lyetuli .
-PFX WF 0 kendi . 
+PFX WF 0 kendi [^mn]
+PFX WF 0 kendi mu 
 PFX WF 0 ketuli . 
 PFX WF 0 kemuli . 
 PFX WF 0 kebali . 

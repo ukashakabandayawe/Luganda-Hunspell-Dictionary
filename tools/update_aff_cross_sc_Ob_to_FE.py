@@ -17,8 +17,9 @@ AFF_FILE = REPO_ROOT / "Luganda.aff"
 INSERT_BEFORE_FLAG = "".strip() or None
 
 rule_left_raw = """
-PFX sc Y 163
-PFX sc 0 wessi .
+PFX sc Y 173
+PFX sc 0 wessi [^mn]
+PFX sc 0 wessi mu
 PFX sc 0 wetuta .
 PFX sc 0 wemuta .
 PFX sc 0 webata .
@@ -34,7 +35,8 @@ PFX sc 0 webuta .
 PFX sc 0 weluta .
 PFX sc 0 wekuta .
 PFX sc 0 wetuta .
-PFX sc 0 bwessi .
+PFX sc 0 bwessi [^mn]
+PFX sc 0 bwessi mu
 PFX sc 0 bwetuta .
 PFX sc 0 bwemuta .
 PFX sc 0 bwebata .
@@ -50,7 +52,8 @@ PFX sc 0 bwebuta .
 PFX sc 0 bweluta .
 PFX sc 0 bwekuta .
 PFX sc 0 bwetuta .
-PFX sc 0 lwessi .
+PFX sc 0 lwessi [^mn]
+PFX sc 0 lwessi mu
 PFX sc 0 lwetuta .
 PFX sc 0 lwemuta .
 PFX sc 0 lwebata .
@@ -66,7 +69,8 @@ PFX sc 0 lwebuta .
 PFX sc 0 lweluta .
 PFX sc 0 lwekuta .
 PFX sc 0 lwetuta .
-PFX sc 0 zessi .
+PFX sc 0 zessi [^mn]
+PFX sc 0 zessi mu
 PFX sc 0 zetuta .
 PFX sc 0 zemuta .
 PFX sc 0 zebata .
@@ -82,7 +86,8 @@ PFX sc 0 zebuta .
 PFX sc 0 zeluta .
 PFX sc 0 zekuta .
 PFX sc 0 zetuta .
-PFX sc 0 gwessi .
+PFX sc 0 gwessi [^mn]
+PFX sc 0 gwessi mu
 PFX sc 0 gwetuta .
 PFX sc 0 gwemuta .
 PFX sc 0 gwebata .
@@ -98,7 +103,8 @@ PFX sc 0 gwebuta .
 PFX sc 0 gweluta .
 PFX sc 0 gwekuta .
 PFX sc 0 gwetuta .
-PFX sc 0 gyessi .
+PFX sc 0 gyessi [^mn]
+PFX sc 0 gyessi mu
 PFX sc 0 gyetuta .
 PFX sc 0 gyemuta .
 PFX sc 0 gyebata .
@@ -114,7 +120,8 @@ PFX sc 0 gyebuta .
 PFX sc 0 gyeluta .
 PFX sc 0 gyekuta .
 PFX sc 0 gyetuta .
-PFX sc 0 kyessi .
+PFX sc 0 kyessi [^mn]
+PFX sc 0 kyessi mu
 PFX sc 0 kyetuta .
 PFX sc 0 kyemuta .
 PFX sc 0 kyebata .
@@ -130,7 +137,8 @@ PFX sc 0 kyebuta .
 PFX sc 0 kyeluta .
 PFX sc 0 kyekuta .
 PFX sc 0 kyetuta .
-PFX sc 0 byessi .
+PFX sc 0 byessi [^mn]
+PFX sc 0 byessi mu
 PFX sc 0 byetuta .
 PFX sc 0 byemuta .
 PFX sc 0 byebata .
@@ -146,7 +154,8 @@ PFX sc 0 byebuta .
 PFX sc 0 byeluta .
 PFX sc 0 byekuta .
 PFX sc 0 byetuta .
-PFX sc 0 lyessi .
+PFX sc 0 lyessi [^mn]
+PFX sc 0 lyessi mu
 PFX sc 0 lyetuta .
 PFX sc 0 lyemuta .
 PFX sc 0 lyebata .
@@ -162,7 +171,8 @@ PFX sc 0 lyebuta .
 PFX sc 0 lyeluta .
 PFX sc 0 lyekuta .
 PFX sc 0 lyetuta .
-PFX sc 0 kessi .
+PFX sc 0 kessi [^mn]
+PFX sc 0 kessi mu
 PFX sc 0 ketuta .
 PFX sc 0 kemuta .
 PFX sc 0 kebata .

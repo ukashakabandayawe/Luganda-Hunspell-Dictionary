@@ -17,8 +17,9 @@ AFF_FILE = REPO_ROOT / "Luganda.aff"
 INSERT_BEFORE_FLAG = "".strip() or None
 
 rule_left_raw = """
-PFX WM Y 194
-PFX WM 0 wennaa .
+PFX WM Y 204
+PFX WM 0 wennaa [^mn]
+PFX WM 0 wennaa mu
 PFX WM 0 wemunaa .
 PFX WM 0 wetunaa .
 PFX WM 0 wemunaa .
@@ -37,7 +38,8 @@ PFX WM 0 wezinaa .
 PFX WM 0 wekunaa .
 PFX WM 0 weganaa .
 PFX WM 0 wetunaa .
-PFX WM 0 bwennaa .
+PFX WM 0 bwennaa [^mn]
+PFX WM 0 bwennaa mu
 PFX WM 0 bwemunaa .
 PFX WM 0 bwetunaa .
 PFX WM 0 bwemunaa .
@@ -56,7 +58,8 @@ PFX WM 0 bwezinaa .
 PFX WM 0 bwekunaa .
 PFX WM 0 bweganaa .
 PFX WM 0 bwetunaa .
-PFX WM 0 lwennaa .
+PFX WM 0 lwennaa [^mn]
+PFX WM 0 lwennaa mu
 PFX WM 0 lwemunaa .
 PFX WM 0 lwetunaa .
 PFX WM 0 lwemunaa .
@@ -75,7 +78,8 @@ PFX WM 0 lwezinaa .
 PFX WM 0 lwekunaa .
 PFX WM 0 lweganaa .
 PFX WM 0 lwetunaa .
-PFX WM 0 zennaa .
+PFX WM 0 zennaa [^mn]
+PFX WM 0 zennaa mu
 PFX WM 0 zemunaa .
 PFX WM 0 zetunaa .
 PFX WM 0 zemunaa .
@@ -94,7 +98,8 @@ PFX WM 0 zezinaa .
 PFX WM 0 zekunaa .
 PFX WM 0 zeganaa .
 PFX WM 0 zetunaa .
-PFX WM 0 gwennaa .
+PFX WM 0 gwennaa [^mn]
+PFX WM 0 gwennaa mu
 PFX WM 0 gwemunaa .
 PFX WM 0 gwetunaa .
 PFX WM 0 gwemunaa .
@@ -113,8 +118,8 @@ PFX WM 0 gwezinaa .
 PFX WM 0 gwekunaa .
 PFX WM 0 gweganaa .
 PFX WM 0 gwetunaa .
-PFX WM 0 gyennaa .
-PFX WM 0 gyemunaa .
+PFX WM 0 gyennaa [^mn]
+PFX WM 0 gyennaa mu
 PFX WM 0 gyetunaa .
 PFX WM 0 gyemunaa .
 PFX WM 0 gyebanaa .
@@ -132,7 +137,8 @@ PFX WM 0 gyezinaa .
 PFX WM 0 gyekunaa .
 PFX WM 0 gyeganaa .
 PFX WM 0 gyetunaa .
-PFX WM 0 kyennaa .
+PFX WM 0 kyennaa [^mn]
+PFX WM 0 kyennaa mu
 PFX WM 0 kyemunaa .
 PFX WM 0 kyetunaa .
 PFX WM 0 kyemunaa .
@@ -151,7 +157,8 @@ PFX WM 0 kyezinaa .
 PFX WM 0 kyekunaa .
 PFX WM 0 kyeganaa .
 PFX WM 0 kyetunaa .
-PFX WM 0 byennaa .
+PFX WM 0 byennaa [^mn]
+PFX WM 0 byennaa mu
 PFX WM 0 byemunaa .
 PFX WM 0 byetunaa .
 PFX WM 0 byemunaa .
@@ -170,7 +177,8 @@ PFX WM 0 byezinaa .
 PFX WM 0 byekunaa .
 PFX WM 0 byeganaa .
 PFX WM 0 byetunaa .
-PFX WM 0 lyennaa .
+PFX WM 0 lyennaa [^mn]
+PFX WM 0 lyennaa mu
 PFX WM 0 lyemunaa .
 PFX WM 0 lyetunaa .
 PFX WM 0 lyemunaa .
@@ -189,7 +197,8 @@ PFX WM 0 lyezinaa .
 PFX WM 0 lyekunaa .
 PFX WM 0 lyeganaa .
 PFX WM 0 lyetunaa .
-PFX WM 0 kennaa .
+PFX WM 0 kennaa [^mn]
+PFX WM 0 kennaa mu
 PFX WM 0 kemunaa .
 PFX WM 0 ketunaa .
 PFX WM 0 kemunaa .

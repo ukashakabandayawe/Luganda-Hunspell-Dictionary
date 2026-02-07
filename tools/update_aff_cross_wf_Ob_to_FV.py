@@ -17,8 +17,9 @@ AFF_FILE = REPO_ROOT / "Luganda.aff"
 INSERT_BEFORE_FLAG = "".strip() or None
 
 rule_left_raw = """
-PFX wf Y 163
-PFX wf 0 wessili .
+PFX wf Y 173
+PFX wf 0 wessili [^mn]
+PFX wf 0 wessili mu
 PFX wf 0 wetutali .
 PFX wf 0 wemutali .
 PFX wf 0 webatali .
@@ -34,7 +35,8 @@ PFX wf 0 webutali .
 PFX wf 0 welutali .
 PFX wf 0 wekutali .
 PFX wf 0 wetutali .
-PFX wf 0 bwessili .
+PFX wf 0 bwessili [^mn]
+PFX wf 0 bwessili mu
 PFX wf 0 bwetutali .
 PFX wf 0 bwemutali .
 PFX wf 0 bwebatali .
@@ -50,7 +52,8 @@ PFX wf 0 bwebutali .
 PFX wf 0 bwelutali .
 PFX wf 0 bwekutali .
 PFX wf 0 bwetutali .
-PFX wf 0 lwessili .
+PFX wf 0 lwessili [^mn]
+PFX wf 0 lwessili mu
 PFX wf 0 lwetutali .
 PFX wf 0 lwemutali .
 PFX wf 0 lwebatali .
@@ -66,7 +69,8 @@ PFX wf 0 lwebutali .
 PFX wf 0 lwelutali .
 PFX wf 0 lwekutali .
 PFX wf 0 lwetutali .
-PFX wf 0 zessili .
+PFX wf 0 zessili [^mn]
+PFX wf 0 zessili mu
 PFX wf 0 zetutali .
 PFX wf 0 zemutali .
 PFX wf 0 zebatali .
@@ -82,7 +86,8 @@ PFX wf 0 zebutali .
 PFX wf 0 zelutali .
 PFX wf 0 zekutali .
 PFX wf 0 zetutali .
-PFX wf 0 gwessili .
+PFX wf 0 gwessili [^mn]
+PFX wf 0 gwessili mu
 PFX wf 0 gwetutali .
 PFX wf 0 gwemutali .
 PFX wf 0 gwebatali .
@@ -98,7 +103,8 @@ PFX wf 0 gwebutali .
 PFX wf 0 gwelutali .
 PFX wf 0 gwekutali .
 PFX wf 0 gwetutali .
-PFX wf 0 gyessili .
+PFX wf 0 gyessili [^mn]
+PFX wf 0 gyessili mu
 PFX wf 0 gyetutali .
 PFX wf 0 gyemutali .
 PFX wf 0 gyebatali .
@@ -114,7 +120,8 @@ PFX wf 0 gyebutali .
 PFX wf 0 gyelutali .
 PFX wf 0 gyekutali .
 PFX wf 0 gyetutali .
-PFX wf 0 kyessili .
+PFX wf 0 kyessili [^mn]
+PFX wf 0 kyessili mu
 PFX wf 0 kyetutali .
 PFX wf 0 kyemutali .
 PFX wf 0 kyebatali .
@@ -130,7 +137,8 @@ PFX wf 0 kyebutali .
 PFX wf 0 kyelutali .
 PFX wf 0 kyekutali .
 PFX wf 0 kyetutali .
-PFX wf 0 byessili .
+PFX wf 0 byessili [^mn]
+PFX wf 0 byessili mu
 PFX wf 0 byetutali .
 PFX wf 0 byemutali .
 PFX wf 0 byebatali .
@@ -146,7 +154,8 @@ PFX wf 0 byebutali .
 PFX wf 0 byelutali .
 PFX wf 0 byekutali .
 PFX wf 0 byetutali .
-PFX wf 0 lyessili .
+PFX wf 0 lyessili [^mn]
+PFX wf 0 lyessili mu
 PFX wf 0 lyetutali .
 PFX wf 0 lyemutali .
 PFX wf 0 lyebatali .
@@ -162,7 +171,8 @@ PFX wf 0 lyebutali .
 PFX wf 0 lyelutali .
 PFX wf 0 lyekutali .
 PFX wf 0 lyetutali .
-PFX wf 0 kessili .
+PFX wf 0 kessili [^mn]
+PFX wf 0 kessili mu
 PFX wf 0 ketutali .
 PFX wf 0 kemutali .
 PFX wf 0 kebatali .

@@ -17,8 +17,9 @@ AFF_FILE = REPO_ROOT / "Luganda.aff"
 INSERT_BEFORE_FLAG = "".strip() or None
 
 rule_left_raw = """
-PFX WN Y 196
-PFX WN 0 wenna .
+PFX WN Y 206
+PFX WN 0 wenna [^mn]
+PFX WN 0 wenna mu
 PFX WN 0 wewa .
 PFX WN 0 weya .
 PFX WN 0 wetwa .
@@ -37,7 +38,8 @@ PFX WN 0 welwa .
 PFX WN 0 wekwa .
 PFX WN 0 wegaa .
 PFX WN 0 wetwa .
-PFX WN 0 bwenna .
+PFX WN 0 bwenna [^mn]
+PFX WN 0 bwenna mu
 PFX WN 0 bwewa .
 PFX WN 0 bweya .
 PFX WN 0 bwetwa .
@@ -56,10 +58,12 @@ PFX WN 0 bwelwa .
 PFX WN 0 bwekwa .
 PFX WN 0 bwegaa .
 PFX WN 0 bwetwa .
-PFX WN 0 bwenna .
+PFX WN 0 bwenna [^mn]
+PFX WN 0 bwenna mu
 PFX WN 0 bwewa .
 PFX WN 0 bweya .
-PFX WN 0 lwenna .
+PFX WN 0 lwenna [^mn]
+PFX WN 0 lwenna mu
 PFX WN 0 lwewa .
 PFX WN 0 lweya .
 PFX WN 0 lwetwa .
@@ -78,10 +82,12 @@ PFX WN 0 lwelwa .
 PFX WN 0 lwekwa .
 PFX WN 0 lwegaa .
 PFX WN 0 lwetwa .
-PFX WN 0 lwenna .
+PFX WN 0 lwenna [^mn]
+PFX WN 0 lwenna mu
 PFX WN 0 lwewa .
 PFX WN 0 lweya .
-PFX WN 0 zenna .
+PFX WN 0 zenna [^mn]
+PFX WN 0 zenna mu
 PFX WN 0 zewa .
 PFX WN 0 zeya .
 PFX WN 0 zetwa .
@@ -100,7 +106,8 @@ PFX WN 0 zelwa .
 PFX WN 0 zekwa .
 PFX WN 0 zegaa .
 PFX WN 0 zetwa .
-PFX WN 0 gwenna .
+PFX WN 0 gwenna [^mn]
+PFX WN 0 gwenna mu
 PFX WN 0 gwewa .
 PFX WN 0 gweya .
 PFX WN 0 gwetwa .
@@ -119,7 +126,8 @@ PFX WN 0 gwelwa .
 PFX WN 0 gwekwa .
 PFX WN 0 gwegaa .
 PFX WN 0 gwetwa .
-PFX WN 0 gyenna .
+PFX WN 0 gyenna [^mn]
+PFX WN 0 gyenna mu
 PFX WN 0 gyewa .
 PFX WN 0 gyeya .
 PFX WN 0 gyetwa .
@@ -138,7 +146,8 @@ PFX WN 0 gyelwa .
 PFX WN 0 gyekwa .
 PFX WN 0 gyegaa .
 PFX WN 0 gyetwa .
-PFX WN 0 kyenna .
+PFX WN 0 kyenna [^mn]
+PFX WN 0 kyenna mu
 PFX WN 0 kyewa .
 PFX WN 0 kyeya .
 PFX WN 0 kyetwa .
@@ -157,7 +166,8 @@ PFX WN 0 kyelwa .
 PFX WN 0 kyekwa .
 PFX WN 0 kyegaa .
 PFX WN 0 kyetwa .
-PFX WN 0 byenna .
+PFX WN 0 byenna [^mn]
+PFX WN 0 byenna mu
 PFX WN 0 byewa .
 PFX WN 0 byeya .
 PFX WN 0 byetwa .
@@ -176,7 +186,8 @@ PFX WN 0 byelwa .
 PFX WN 0 byekwa .
 PFX WN 0 byegaa .
 PFX WN 0 byetwa .
-PFX WN 0 lyenna .
+PFX WN 0 lyenna [^mn]
+PFX WN 0 lyenna mu
 PFX WN 0 lyewa .
 PFX WN 0 lyeya .
 PFX WN 0 lyetwa .
@@ -195,7 +206,8 @@ PFX WN 0 lyelwa .
 PFX WN 0 lyekwa .
 PFX WN 0 lyegaa .
 PFX WN 0 lyetwa .
-PFX WN 0 kenna .
+PFX WN 0 kenna [^mn]
+PFX WN 0 kenna mu
 PFX WN 0 kewa .
 PFX WN 0 keya .
 PFX WN 0 ketwa .
