@@ -3,24 +3,27 @@ import os
 from pathlib import Path
 
 # Cross product generator: sc x OR => FJ
-# Left: sc (negative variant of SC)
-# Right: OR (special reflexive object markers)
-# Output flag: FJ
+# Description:
+# - Left block `sc`: Subordinating conjunction when with negative subjects in present simple tense
+# - Right block `OR`: Special reflexive object markers
+# - Output flag `FJ`: Cross-product prefixes for sc x OR
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 AFF_FILE = REPO_ROOT / "Luganda.aff"
 
+# If set to a flag name (e.g. "HB"), the generated cross-product block will be inserted
+# immediately before the first "PFX <flag>" line when the output flag block doesn't
+# already exist in the .aff.
+INSERT_BEFORE_FLAG = "".strip() or None
+
 rule_left_raw = """
-PFX sc Y 19
+PFX sc Y 163
 PFX sc 0 wessi .
-PFX sc 0 oto .
-PFX sc 0 ata .
 PFX sc 0 wetuta .
 PFX sc 0 wemuta .
 PFX sc 0 webata .
 PFX sc 0 weguta .
 PFX sc 0 wegita .
-PFX sc 0 ete .
 PFX sc 0 wezita .
 PFX sc 0 wekita .
 PFX sc 0 webita .
@@ -31,7 +34,153 @@ PFX sc 0 webuta .
 PFX sc 0 weluta .
 PFX sc 0 wekuta .
 PFX sc 0 wetuta .
-"""
+PFX sc 0 bwessi .
+PFX sc 0 bwetuta .
+PFX sc 0 bwemuta .
+PFX sc 0 bwebata .
+PFX sc 0 bweguta .
+PFX sc 0 bwegita .
+PFX sc 0 bwezita .
+PFX sc 0 bwekita .
+PFX sc 0 bwebita .
+PFX sc 0 bwelita .
+PFX sc 0 bwegata .
+PFX sc 0 bwekata .
+PFX sc 0 bwebuta .
+PFX sc 0 bweluta .
+PFX sc 0 bwekuta .
+PFX sc 0 bwetuta .
+PFX sc 0 lwessi .
+PFX sc 0 lwetuta .
+PFX sc 0 lwemuta .
+PFX sc 0 lwebata .
+PFX sc 0 lweguta .
+PFX sc 0 lwegita .
+PFX sc 0 lwezita .
+PFX sc 0 lwekita .
+PFX sc 0 lwebita .
+PFX sc 0 lwelita .
+PFX sc 0 lwegata .
+PFX sc 0 lwekata .
+PFX sc 0 lwebuta .
+PFX sc 0 lweluta .
+PFX sc 0 lwekuta .
+PFX sc 0 lwetuta .
+PFX sc 0 zessi .
+PFX sc 0 zetuta .
+PFX sc 0 zemuta .
+PFX sc 0 zebata .
+PFX sc 0 zeguta .
+PFX sc 0 zegita .
+PFX sc 0 zezita .
+PFX sc 0 zekita .
+PFX sc 0 zebita .
+PFX sc 0 zelita .
+PFX sc 0 zegata .
+PFX sc 0 zekata .
+PFX sc 0 zebuta .
+PFX sc 0 zeluta .
+PFX sc 0 zekuta .
+PFX sc 0 zetuta .
+PFX sc 0 gwessi .
+PFX sc 0 gwetuta .
+PFX sc 0 gwemuta .
+PFX sc 0 gwebata .
+PFX sc 0 gweguta .
+PFX sc 0 gwegita .
+PFX sc 0 gwezita .
+PFX sc 0 gwekita .
+PFX sc 0 gwebita .
+PFX sc 0 gwelita .
+PFX sc 0 gwegata .
+PFX sc 0 gwekata .
+PFX sc 0 gwebuta .
+PFX sc 0 gweluta .
+PFX sc 0 gwekuta .
+PFX sc 0 gwetuta .
+PFX sc 0 gyessi .
+PFX sc 0 gyetuta .
+PFX sc 0 gyemuta .
+PFX sc 0 gyebata .
+PFX sc 0 gyeguta .
+PFX sc 0 gyegita .
+PFX sc 0 gyezita .
+PFX sc 0 gyekita .
+PFX sc 0 gyebita .
+PFX sc 0 gyelita .
+PFX sc 0 gyegata .
+PFX sc 0 gyekata .
+PFX sc 0 gyebuta .
+PFX sc 0 gyeluta .
+PFX sc 0 gyekuta .
+PFX sc 0 gyetuta .
+PFX sc 0 kyessi .
+PFX sc 0 kyetuta .
+PFX sc 0 kyemuta .
+PFX sc 0 kyebata .
+PFX sc 0 kyeguta .
+PFX sc 0 kyegita .
+PFX sc 0 kyezita .
+PFX sc 0 kyekita .
+PFX sc 0 kyebita .
+PFX sc 0 kyelita .
+PFX sc 0 kyegata .
+PFX sc 0 kyekata .
+PFX sc 0 kyebuta .
+PFX sc 0 kyeluta .
+PFX sc 0 kyekuta .
+PFX sc 0 kyetuta .
+PFX sc 0 byessi .
+PFX sc 0 byetuta .
+PFX sc 0 byemuta .
+PFX sc 0 byebata .
+PFX sc 0 byeguta .
+PFX sc 0 byegita .
+PFX sc 0 byezita .
+PFX sc 0 byekita .
+PFX sc 0 byebita .
+PFX sc 0 byelita .
+PFX sc 0 byegata .
+PFX sc 0 byekata .
+PFX sc 0 byebuta .
+PFX sc 0 byeluta .
+PFX sc 0 byekuta .
+PFX sc 0 byetuta .
+PFX sc 0 lyessi .
+PFX sc 0 lyetuta .
+PFX sc 0 lyemuta .
+PFX sc 0 lyebata .
+PFX sc 0 lyeguta .
+PFX sc 0 lyegita .
+PFX sc 0 lyezita .
+PFX sc 0 lyekita .
+PFX sc 0 lyebita .
+PFX sc 0 lyelita .
+PFX sc 0 lyegata .
+PFX sc 0 lyekata .
+PFX sc 0 lyebuta .
+PFX sc 0 lyeluta .
+PFX sc 0 lyekuta .
+PFX sc 0 lyetuta .
+PFX sc 0 kessi .
+PFX sc 0 ketuta .
+PFX sc 0 kemuta .
+PFX sc 0 kebata .
+PFX sc 0 keguta .
+PFX sc 0 kegita .
+PFX sc 0 kezita .
+PFX sc 0 kekita .
+PFX sc 0 kebita .
+PFX sc 0 kelita .
+PFX sc 0 kegata .
+PFX sc 0 kekata .
+PFX sc 0 kebuta .
+PFX sc 0 keluta .
+PFX sc 0 kekuta .
+PFX sc 0 ketuta .
+PFX sc 0 oto .
+PFX sc 0 ata .
+PFX sc 0 ete ."""
 
 rule_right_raw = """
 PFX OR Y 16
@@ -50,8 +199,12 @@ PFX OR 0 lwe .
 PFX OR 0 zee .
 PFX OR 0 kwe .
 PFX OR 0 gee .
-PFX OR 0 twe .
-"""
+PFX OR 0 twe ."""
+
+FLAG_DESCRIPTIONS = {
+    "sc": "Subordinating conjunction when with negative subjects in present simple tense",
+    "OR": "Special reflexive object markers",
+}
 
 def parse_rules(raw_text):
     rules = []
@@ -73,6 +226,7 @@ def generate_block():
     lefts = parse_rules(rule_left_raw)
     rights = parse_rules(rule_right_raw)
     new_rules = []
+
     for left in lefts:
         for right in rights:
             if left['strip'] != '0':
@@ -81,70 +235,46 @@ def generate_block():
                 combined = left['add'] + right['add'][len(left['strip']):]
             else:
                 combined = left['add'] + right['add']
+
             if left['cond'] != '.':
                 if not re.match(left['cond'], right['add']):
                     continue
+
             new_rules.append({'strip': right['strip'], 'add': combined, 'cond': right['cond']})
 
-    out_flag = 'FJ'
-    file_parts = Path(__file__).stem.split('_')
-    desc_left = file_parts[3] if len(file_parts) >= 7 else '?'
-    desc_right = file_parts[4] if len(file_parts) >= 7 else '?'
-    flag_from_name = file_parts[6] if len(file_parts) >= 7 else out_flag
-    
-    flag_descriptions = {
-        'yt': 'Using the adverb yet in reflexive verbs',
-        'YT': 'Using the adverb yet',
-        'yT': 'Subject markers of adverb yet for relative pronouns',
-        'ob': 'Objects used in relative pronouns',
-        'SC': 'Subordinating conjunction when with subjects in present simple tense',
-        'sc': 'Subordinating conjunction when with negative subjects in present simple tense',
-        'WN': 'Subordinating conjunction when with subjects in near and distant past tense',
-        'wn': 'Subordinating conjunction when with negative subjects in near and distant past tense',
-        'WM': 'Subordinating conjunction when with subjects in near future tense',
-        'wm': 'Subordinating conjunction when with negative subjects in near future tense',
-        'WF': 'Subordinating conjunction when with subjects in far future tense',
-        'wf': 'Subordinating conjunction when with negative subjects in far future tense',
-        'SB': 'Permission subjunctive',
-        'CC': 'Counterfactual conditions',
-        'St': 'Adverb still',
-        'st': 'Negating adverb still to no longer',
-        'LT': 'Adverbs like this and like that in present simple tense',
-        'Ob': 'Object markers',
-        'OR': 'Special reflexive object markers',
-    }
-    
-    left_desc = flag_descriptions.get(desc_left, desc_left)
-    right_desc = flag_descriptions.get(desc_right, desc_right)
-    comment_line = f"# Cross product of {desc_left} ({left_desc}) and {desc_right} ({right_desc}) to {flag_from_name}"
+    out_flag = "FJ"
+    left_desc = FLAG_DESCRIPTIONS.get("sc", "sc")
+    right_desc = FLAG_DESCRIPTIONS.get("OR", "OR")
+    comment_line = "# Cross product of {} ({}) and {} ({}) to {}".format(
+        "sc", left_desc, "OR", right_desc, out_flag
+    )
 
-    output = [comment_line, f"PFX {out_flag} Y {len(new_rules)}"]
+    output = ["PFX {} Y {}".format(out_flag, len(new_rules))]
     for r in new_rules:
-        output.append(f"PFX {out_flag} {r['strip']} {r['add']} {r['cond']}")
-    return (out_flag, "\n".join(output) + "\n")
+        output.append("PFX {} {} {} {}".format(out_flag, r['strip'], r['add'], r['cond']))
+
+    return (out_flag, "\n".join([comment_line] + output) + "\n")
 
 def main():
     if not os.path.exists(AFF_FILE):
-        print(f"Error: {AFF_FILE} not found.")
+        print("Error: {} not found.".format(AFF_FILE))
         return
 
     out_flag, block = generate_block()
-    
+
     with open(AFF_FILE, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-    # Find existing block for this flag (comment + PFX lines)
     first_flag_idx = None
     last_flag_idx = None
-    
+
     for i, line in enumerate(lines):
         stripped = line.strip()
-        if stripped.startswith(f"PFX {out_flag} "):
+        if stripped.startswith("PFX {} ".format(out_flag)):
             if first_flag_idx is None:
                 first_flag_idx = i
             last_flag_idx = i
-    
-    # Check if there's a comment line right before the first flag line
+
     if first_flag_idx is not None and first_flag_idx > 0:
         prev_line = lines[first_flag_idx - 1].strip()
         if prev_line.startswith("# Cross product"):
@@ -156,21 +286,36 @@ def main():
     else:
         start_idx = None
 
-    # Replace block in place or append at end
     if start_idx is not None and last_flag_idx is not None:
-        # Replace existing block in place
+        # Replace existing block in-place.
         new_lines = lines[:start_idx] + [block] + lines[last_flag_idx + 1:]
     else:
-        # Append at end
-        new_lines = lines
-        if new_lines and not new_lines[-1].endswith(chr(10)):
-            new_lines[-1] += chr(10)
-        new_lines.append(block)
+        # Insert before an anchor flag if requested; otherwise append.
+        insert_idx = None
+        if INSERT_BEFORE_FLAG:
+            anchor_prefix = "PFX {} ".format(INSERT_BEFORE_FLAG)
+            for i, line in enumerate(lines):
+                if line.strip().startswith(anchor_prefix):
+                    insert_idx = i
+                    # If the anchor PFX block is preceded by one or more cross-product
+                    # comment lines, insert before those comments to keep them attached
+                    # to the anchor block.
+                    while insert_idx > 0 and lines[insert_idx - 1].strip().startswith("# Cross product"):
+                        insert_idx -= 1
+                    break
+
+        if insert_idx is not None:
+            new_lines = lines[:insert_idx] + [block] + lines[insert_idx:]
+        else:
+            new_lines = lines
+            if new_lines and not new_lines[-1].endswith(chr(10)):
+                new_lines[-1] += chr(10)
+            new_lines.append(block)
 
     with open(AFF_FILE, 'w', encoding='utf-8') as f:
         f.writelines(new_lines)
 
-    print(f"{out_flag}: updated in place.")
+    print("{}: updated in place.".format(out_flag))
 
 if __name__ == '__main__':
     main()
