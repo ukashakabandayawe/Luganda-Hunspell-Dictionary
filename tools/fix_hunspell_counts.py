@@ -5,6 +5,7 @@ Fix Hunspell Dictionary Counts
 This script corrects:
 1. Wrong rule header counts in .aff files (PFX/SFX rule counts)
 2. Wrong word counts in .dic files (first line count)
+3. Duplicate flags on a single .dic entry (e.g. word/PSPS -> word/PS)
 
 Usage:
     python fix_hunspell_counts.py [--aff AFFFILE] [--dic DICFILE] [--dry-run]
@@ -18,13 +19,117 @@ import re
 import sys
 import argparse
 from pathlib import Path
-from typing import List, Tuple, Dict
+from typing import Optional
 
 
 class HunspellCountFixer:
     def __init__(self, dry_run: bool = False):
         self.dry_run = dry_run
         self.corrections_made = []
+
+    def _detect_flag_mode_from_aff(self, aff_path: Path) -> str:
+        """Return Hunspell FLAG mode from .aff.
+
+        Supported: short (default), long, num, UTF-8.
+        """
+        try:
+            with open(aff_path, 'r', encoding='utf-8') as f:
+                for raw_line in f:
+                    line = raw_line.strip()
+                    if not line or line.startswith('#'):
+                        continue
+                    m = re.match(r'^FLAG\s+(\S+)\s*$', line)
+                    if m:
+                        mode = m.group(1)
+                        # Hunspell uses: long|num|UTF-8 (or absent => "short")
+                        return mode
+        except OSError:
+            pass
+
+        return 'short'
+
+    def _split_dic_entry(self, line_no_newline: str) -> tuple[Optional[str], Optional[str], str, str]:
+        """Split a .dic line into (word, flags, tail_ws_and_rest, leading_ws).
+
+        - Only considers the first whitespace-delimited token for word/flags.
+        - Returns (None, None, original_tail, leading_ws) for non-entry lines.
+        """
+        if not line_no_newline:
+            return None, None, '', ''
+
+        # Preserve any leading whitespace (rare in .dic, but keep it stable)
+        leading_ws_match = re.match(r'^(\s*)', line_no_newline)
+        leading_ws = leading_ws_match.group(1) if leading_ws_match else ''
+        stripped_leading = line_no_newline[len(leading_ws):]
+        if not stripped_leading or stripped_leading.startswith('#'):
+            return None, None, '', leading_ws
+
+        m = re.match(r'^(\S+)(\s+.*)?$', stripped_leading)
+        if not m:
+            return None, None, '', leading_ws
+
+        token = m.group(1)
+        tail = m.group(2) or ''
+
+        # Find first unescaped '/'
+        slash_index = None
+        escaped = False
+        for idx, ch in enumerate(token):
+            if escaped:
+                escaped = False
+                continue
+            if ch == '\\':
+                escaped = True
+                continue
+            if ch == '/':
+                slash_index = idx
+                break
+
+        if slash_index is None:
+            return None, None, tail, leading_ws
+
+        word = token[:slash_index]
+        flags = token[slash_index + 1:]
+        return word, flags, tail, leading_ws
+
+    def _parse_flags(self, flags: str, flag_mode: str) -> Optional[list[str]]:
+        """Parse the flags string into a list of flag tokens based on FLAG mode."""
+        if flags is None:
+            return None
+
+        if flag_mode == 'num':
+            # e.g. 12,13,4
+            return [f for f in flags.split(',') if f]
+
+        if flag_mode == 'long':
+            # Two-character flags concatenated (e.g. PSObyy)
+            if len(flags) % 2 != 0:
+                return None
+            return [flags[i:i + 2] for i in range(0, len(flags), 2)]
+
+        if flag_mode == 'UTF-8':
+            # Each Unicode codepoint is a flag
+            return list(flags)
+
+        # Default: "short" (single-byte flag chars)
+        return list(flags)
+
+    def _join_flags(self, tokens: list[str], flag_mode: str) -> str:
+        if flag_mode == 'num':
+            return ','.join(tokens)
+        return ''.join(tokens)
+
+    def _dedupe_preserve_order(self, tokens: list[str]) -> tuple[list[str], int]:
+        seen: set[str] = set()
+        deduped: list[str] = []
+        removed = 0
+        for token in tokens:
+            if token in seen:
+                removed += 1
+                continue
+            seen.add(token)
+            deduped.append(token)
+        return deduped, removed
         
     def fix_aff_file(self, aff_path: Path) -> bool:
         """
@@ -112,10 +217,20 @@ class HunspellCountFixer:
         self.corrections_made.extend(corrections)
         return len(corrections) > 0
     
-    def fix_dic_file(self, dic_path: Path) -> bool:
+    def fix_dic_file(
+        self,
+        dic_path: Path,
+        *,
+        flag_mode: str = 'short',
+        fix_duplicate_flags: bool = True,
+        max_duplicate_reports: int = 25,
+    ) -> bool:
         """
-        Fix word count in .dic file.
-        Returns True if correction was made.
+        Fix issues in .dic file.
+        - Fix word count (first line)
+        - Optionally remove duplicate flags per entry
+
+        Returns True if any correction was made.
         """
         print(f"\n{'='*70}")
         print(f"Checking .dic file: {dic_path}")
@@ -148,37 +263,84 @@ class HunspellCountFixer:
             # Skip blank lines and comments (lines starting with #)
             if stripped and not stripped.startswith('#'):
                 actual_count += 1
-        
-        correction_made = False
-        
+
+        corrected_lines = list(lines)
+        any_changes = False
+
+        # Fix header word count
         if declared_count != actual_count:
-            correction = {
+            self.corrections_made.append({
                 'type': 'DIC',
+                'subtype': 'COUNT',
                 'line_num': 1,
                 'declared': declared_count,
-                'actual': actual_count
-            }
-            self.corrections_made.append(correction)
-            
+                'actual': actual_count,
+            })
             print(f"⚠️  Word count mismatch:")
             print(f"   Declared: {declared_count} words")
             print(f"   Actual:   {actual_count} words")
             print(f"   Difference: {actual_count - declared_count:+d}")
             print(f"   {'[DRY RUN] Would correct' if self.dry_run else '✅ CORRECTED'}\n")
-            
-            if not self.dry_run:
-                lines[0] = f"{actual_count}\n"
-                with open(dic_path, 'w', encoding='utf-8') as f:
-                    f.writelines(lines)
-                print(f"✅ Saved corrections to {dic_path}\n")
-            else:
+            corrected_lines[0] = f"{actual_count}\n"
+            any_changes = True
+
+        # Fix duplicate flags per entry
+        if fix_duplicate_flags:
+            duplicate_fixes = 0
+            duplicate_reports = 0
+            for idx in range(1, len(corrected_lines)):
+                original_line = corrected_lines[idx]
+                line_wo_nl = original_line[:-1] if original_line.endswith('\n') else original_line
+                nl = '\n' if original_line.endswith('\n') else ''
+
+                word, flags, tail, leading_ws = self._split_dic_entry(line_wo_nl)
+                if word is None or flags is None or flags == '':
+                    continue
+
+                tokens = self._parse_flags(flags, flag_mode)
+                if tokens is None:
+                    continue
+
+                deduped_tokens, removed = self._dedupe_preserve_order(tokens)
+                if removed <= 0:
+                    continue
+
+                new_flags = self._join_flags(deduped_tokens, flag_mode)
+                new_token = f"{word}/{new_flags}"
+                new_line = f"{leading_ws}{new_token}{tail}{nl}"
+                corrected_lines[idx] = new_line
+                any_changes = True
+                duplicate_fixes += 1
+
+                self.corrections_made.append({
+                    'type': 'DIC',
+                    'subtype': 'DUP_FLAGS',
+                    'line_num': idx + 1,
+                    'word': word,
+                    'removed': removed,
+                })
+
+                if duplicate_reports < max_duplicate_reports:
+                    duplicate_reports += 1
+                    print(f"⚠️  Duplicate flags on '{word}' (line {idx + 1}): removed {removed}")
+                    print(f"   {'[DRY RUN] Would rewrite' if self.dry_run else '✅ REWROTE'}: {word}/{flags} → {word}/{new_flags}\n")
+
+            if duplicate_fixes and duplicate_reports >= max_duplicate_reports:
+                remaining = duplicate_fixes - duplicate_reports
+                if remaining > 0:
+                    print(f"… and {remaining} more entries with duplicate flags were {'found' if self.dry_run else 'fixed'} (output truncated).\n")
+
+        if any_changes:
+            if self.dry_run:
                 print(f"🔍 [DRY RUN] No changes written to {dic_path}\n")
-            
-            correction_made = True
+            else:
+                with open(dic_path, 'w', encoding='utf-8') as f:
+                    f.writelines(corrected_lines)
+                print(f"✅ Saved corrections to {dic_path}\n")
         else:
             print(f"✅ No corrections needed in {dic_path}\n")
-        
-        return correction_made
+
+        return any_changes
     
     def print_summary(self):
         """Print summary of all corrections made."""
@@ -202,9 +364,16 @@ class HunspellCountFixer:
         
         if dic_corrections:
             print(f"\n📝 .dic file corrections: {len(dic_corrections)}")
-            for corr in dic_corrections:
+            count_fixes = [c for c in dic_corrections if c.get('subtype') == 'COUNT']
+            dup_flag_fixes = [c for c in dic_corrections if c.get('subtype') == 'DUP_FLAGS']
+
+            for corr in count_fixes:
                 diff = corr['actual'] - corr['declared']
                 print(f"   • Word count: {corr['declared']} → {corr['actual']} ({diff:+d})")
+
+            if dup_flag_fixes:
+                total_removed = sum(c.get('removed', 0) for c in dup_flag_fixes)
+                print(f"   • Duplicate flags: fixed {len(dup_flag_fixes)} entries (removed {total_removed} duplicates)")
         
         print(f"\n{'Total corrections: ' + str(len(self.corrections_made))}")
         
@@ -251,6 +420,12 @@ Examples:
         action='store_true',
         help='Test mode - show what would be changed without modifying files'
     )
+
+    parser.add_argument(
+        '--no-fix-duplicate-flags',
+        action='store_true',
+        help='Disable removing duplicate flags on .dic entries'
+    )
     
     args = parser.parse_args()
     
@@ -264,16 +439,31 @@ Examples:
     
     any_corrections = False
     
+    flag_mode = 'short'
+
     # Fix .aff file if specified
     if args.aff:
         aff_path = Path(args.aff)
         if fixer.fix_aff_file(aff_path):
             any_corrections = True
+        if aff_path.exists():
+            flag_mode = fixer._detect_flag_mode_from_aff(aff_path)
     
     # Fix .dic file if specified
     if args.dic:
         dic_path = Path(args.dic)
-        if fixer.fix_dic_file(dic_path):
+
+        # If no .aff provided but a sibling .aff exists, use it to detect flag mode.
+        if not args.aff:
+            sibling_aff = dic_path.with_suffix('.aff')
+            if sibling_aff.exists():
+                flag_mode = fixer._detect_flag_mode_from_aff(sibling_aff)
+
+        if fixer.fix_dic_file(
+            dic_path,
+            flag_mode=flag_mode,
+            fix_duplicate_flags=not args.no_fix_duplicate_flags,
+        ):
             any_corrections = True
     
     # Print summary
