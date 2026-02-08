@@ -800,6 +800,39 @@ PFX PS 0 oku .
 PFX PS 0 tu .
 PFX PS 0 otu .
 
+# subjects markers in present simple tense 
+# These handle special cases e.g you can have the word "babeewo" but not "ababeewo"  
+PFX PT Y 28
+PFX PT j nzi jj # It creates nzija from stem "jja"
+PFX PT z nzi zze # It creates nzize
+PFX PT j n jj # It handles the word "nja" (the singular of tujja) so, Luganda.dic should have "jja" entry with NEEDAFFIX flag plus other flags
+PFX PT 0 n [^jbnmlhprxq] # Person marker
+PFX PT 0 m b # Person marker: buuka-->mbuuka
+PFX PT 0 o . # Person marker
+PFX PT l nd l.[^mn] # Person marker: lya-->ndya
+PFX PT l nn l.[mn][^u] # Person marker: luma-->nnuma
+PFX PT w mp w # Person marker: wandiika --> mpandiika
+PFX PT 0 a . # Person marker
+PFX PT 0 tu . # Person marker
+PFX PT 0 mu . # Person marker
+PFX PT 0 ba . # Person marker
+PFX PT 0 a [^aeiou]
+PFX PT 0 ba . MORPH:tense=present MORPH:number=plural MORPH:pos=verb MORPH:class=1 MORPH:polarity=negative
+PFX PT 0 gu .
+PFX PT 0 gi .
+PFX PT 0 e [^aeiou]
+PFX PT 0 zi .
+PFX PT 0 ki .
+PFX PT 0 bi .
+PFX PT 0 li .
+PFX PT 0 ga .
+PFX PT 0 ka .
+PFX PT 0 bu .
+PFX PT 0 lu .
+PFX PT 0 ku .
+PFX PT 0 tu .
+
+
 # subjects markers in very near past tense 
 # This used to use flag E together with the present tense subject markers since the prefixes for both tenses are the same but was made independent and changed to SC and then finally changed to VP
 PFX VP Y 37
