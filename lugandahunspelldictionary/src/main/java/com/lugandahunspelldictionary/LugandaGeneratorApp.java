@@ -385,6 +385,9 @@ public class LugandaGeneratorApp extends Application {
         Button errorTable = new Button("Error Table");
         Button flagTable = new Button("Words by Flag");
         Button generateRules = new Button("Generate Rules");
+        errorTable.setDisable(true);//No longer useful
+        generateRules.setDisable(true);//No longer useful
+        clearErrors.setDisable(true);//No longer useful
         
         clearErrors.setOnMouseClicked(e -> {
             for (Result r : filteredRows) {
