@@ -163,11 +163,32 @@ SET UTF8
 FLAG long
 LANG lg
 TRY abcdefghijklmnoprstuvwyzABCDEFGHIJKLMNOPRSTUVWYZ
-BREAK ' 
-# WORDCHARS '’
+#BREAK ' 
+WORDCHARS '’
 INCONV 1
 INCONV  ’ '
 NEEDAFFIX NA
+
+# TO DO: using COMPOUNDFLAG
+
+COMPOUNDRULE 1
+COMPOUNDRULE (C1)*(C2)
+
+ONLYINCOMPOUND OC
+
+COMPOUNDFLAG CF
+
+COMPOUNDPERMITFLAG CP
+
+COMPOUNDBEGIN CB
+
+COMPOUNDMIN 1
+
+FORBIDDENWORD fw
+
+WARN NR
+FORBIDWARN
+
 
 # Optional vowels at the begining of words e.g. akajanja-->kajanja 
 PFX ea Y 3
@@ -4574,20 +4595,20 @@ PFX Ne ery ka   erya
 
 # Class VI nouns 
 # Was using flag t and now uses Nf
-PFX Nf Y 13
-PFX Nf a   0    ak
-PFX Nf aka obu  aka[^mnaeiou]
-PFX Nf aka bu   aka[^mnaeiou]
-PFX Nf aka obwa akamb
-PFX Nf aka bwa  akamb
-PFX Nf aka obwa akan[aeiou]
-PFX Nf aka bwa  akan[aeiou]
-PFX Nf aka obu  akam[^b]
-PFX Nf aka bu   akam[^b]
-PFX Nf aka obu  akan[^aeiou]
-PFX Nf aka bu   akan[^aeiou]
-PFX Nf ak  obw  akee
-PFX Nf ak  bw   akee
+PFX N6 Y 13
+PFX N6 a   0    ak
+PFX N6 aka obu/CP  aka[^mnaeiou]
+PFX N6 aka bu   aka[^mnaeiou]
+PFX N6 aka obwa/CP akamb
+PFX N6 aka bwa  akamb
+PFX N6 aka obwa/CP akan[aeiou]
+PFX N6 aka bwa  akan[aeiou]
+PFX N6 aka obu/CP  akam[^b]
+PFX N6 aka bu   akam[^b]
+PFX N6 aka obu/CP  akan[^aeiou]
+PFX N6 aka bu   akan[^aeiou]
+PFX N6 ak  obw/CP  akee
+PFX N6 ak  bw   akee
 
 # Special class VI nouns e.g. bukamunye
 PFX bu Y 2
