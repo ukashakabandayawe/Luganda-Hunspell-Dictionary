@@ -11,19 +11,30 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 AFF_FILE = REPO_ROOT / "Luganda.aff"
 
 rule_left_raw = """
-PFX SB Y 12
+PFX SB Y 22
 PFX SB j kanzi jj # It creates kanzije from stem "jje"
 PFX SB 0 kan [^jbnmlhprxq] # fumba-->fumbe-->kanfumbe
 PFX SB 0 kam b # stems that start with "B"
-PFX SB 0 o . 
+PFX SB 0 k'o . 
 PFX SB l kand li
 PFX SB l kand l.[^mn] # Handles non nasalized stems that start with "L" e.g. lya-->lye-->Kandye
 PFX SB l kann l.[mn] # Handles nasalized stems that start with "L" e.g. luma-->lume-->Kannume
 PFX SB w kamp w # Handles stems that start with "W" e.g. wandiika-->wandiike-->kampaandiike
-PFX SB 0 a . 
+PFX SB 0 k'a . 
 PFX SB 0 katu . 
 PFX SB 0 kamu . 
 PFX SB 0 kaba . 
+PFX SB 0 kagu .
+PFX SB 0 kagi .
+PFX SB 0 kazi .
+PFX SB 0 kaki .
+PFX SB 0 kabi .
+PFX SB 0 kali .
+PFX SB 0 kaga .
+PFX SB 0 kaka .
+PFX SB 0 kabu .
+PFX SB 0 kalu .
+PFX SB 0 kaku .
 """
 
 rule_right_raw = """
