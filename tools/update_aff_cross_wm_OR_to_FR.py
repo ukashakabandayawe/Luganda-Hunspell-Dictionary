@@ -17,7 +17,10 @@ AFF_FILE = REPO_ROOT / "Luganda.aff"
 INSERT_BEFORE_FLAG = "".strip() or None
 
 rule_left_raw = """
-PFX wm Y 165
+PFX wm Y 192
+PFX wm 0 w'otoo .
+PFX wm 0 w'ataa .
+PFX wm 0 w'etaa .
 PFX wm 0 wessii .
 PFX wm 0 wetutaa .
 PFX wm 0 wemutaa .
@@ -34,6 +37,9 @@ PFX wm 0 webutaa .
 PFX wm 0 welutaa .
 PFX wm 0 wekutaa .
 PFX wm 0 wetutaa .
+PFX wm 0 bw'otoo .
+PFX wm 0 bw'ataa .
+PFX wm 0 bw'etaa .
 PFX wm 0 bwessii .
 PFX wm 0 bwetutaa .
 PFX wm 0 bwemutaa .
@@ -51,6 +57,9 @@ PFX wm 0 bwelutaa .
 PFX wm 0 bwekutaa .
 PFX wm 0 bwetutaa .
 PFX wm 0 bwessii .
+PFX wm 0 lw'otoo .
+PFX wm 0 lw'ataa .
+PFX wm 0 lw'etaa .
 PFX wm 0 lwessii .
 PFX wm 0 lwetutaa .
 PFX wm 0 lwemutaa .
@@ -68,6 +77,9 @@ PFX wm 0 lwelutaa .
 PFX wm 0 lwekutaa .
 PFX wm 0 lwetutaa .
 PFX wm 0 lwessii .
+PFX wm 0 z'otoo .
+PFX wm 0 z'ataa .
+PFX wm 0 z'etaa .
 PFX wm 0 zessii .
 PFX wm 0 zetutaa .
 PFX wm 0 zemutaa .
@@ -84,6 +96,9 @@ PFX wm 0 zebutaa .
 PFX wm 0 zelutaa .
 PFX wm 0 zekutaa .
 PFX wm 0 zetutaa .
+PFX wm 0 gw'otoo .
+PFX wm 0 gw'ataa .
+PFX wm 0 gw'etaa .
 PFX wm 0 gwessii .
 PFX wm 0 gwetutaa .
 PFX wm 0 gwemutaa .
@@ -100,6 +115,9 @@ PFX wm 0 gwebutaa .
 PFX wm 0 gwelutaa .
 PFX wm 0 gwekutaa .
 PFX wm 0 gwetutaa .
+PFX wm 0 gy'otoo .
+PFX wm 0 gy'ataa .
+PFX wm 0 gy'etaa .
 PFX wm 0 gyessii .
 PFX wm 0 gyetutaa .
 PFX wm 0 gyemutaa .
@@ -116,6 +134,9 @@ PFX wm 0 gyebutaa .
 PFX wm 0 gyelutaa .
 PFX wm 0 gyekutaa .
 PFX wm 0 gyetutaa .
+PFX wm 0 ky'otoo .
+PFX wm 0 ky'ataa .
+PFX wm 0 ky'etaa .
 PFX wm 0 kyessii .
 PFX wm 0 kyetutaa .
 PFX wm 0 kyemutaa .
@@ -132,6 +153,9 @@ PFX wm 0 kyebutaa .
 PFX wm 0 kyelutaa .
 PFX wm 0 kyekutaa .
 PFX wm 0 kyetutaa .
+PFX wm 0 by'otoo .
+PFX wm 0 by'ataa .
+PFX wm 0 by'etaa .
 PFX wm 0 byessii .
 PFX wm 0 byetutaa .
 PFX wm 0 byemutaa .
@@ -148,6 +172,9 @@ PFX wm 0 byebutaa .
 PFX wm 0 byelutaa .
 PFX wm 0 byekutaa .
 PFX wm 0 byetutaa .
+PFX wm 0 ly'otoo .
+PFX wm 0 ly'ataa .
+PFX wm 0 ly'etaa .
 PFX wm 0 lyessii .
 PFX wm 0 lyetutaa .
 PFX wm 0 lyemutaa .
@@ -164,6 +191,9 @@ PFX wm 0 lyebutaa .
 PFX wm 0 lyelutaa .
 PFX wm 0 lyekutaa .
 PFX wm 0 lyetutaa .
+PFX wm 0 k'otoo .
+PFX wm 0 k'ataa .
+PFX wm 0 k'etaa .
 PFX wm 0 kessii .
 PFX wm 0 ketutaa .
 PFX wm 0 kemutaa .
@@ -179,10 +209,7 @@ PFX wm 0 kekataa .
 PFX wm 0 kebutaa .
 PFX wm 0 kelutaa .
 PFX wm 0 kekutaa .
-PFX wm 0 ketutaa .
-PFX wm 0 otoo .
-PFX wm 0 ataa .
-PFX wm 0 etaa ."""
+PFX wm 0 ketutaa ."""
 
 rule_right_raw = """
 PFX OR Y 16

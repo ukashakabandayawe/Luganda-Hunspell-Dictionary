@@ -103,6 +103,9 @@ PFX sc 0 gwebuta .
 PFX sc 0 gweluta .
 PFX sc 0 gwekuta .
 PFX sc 0 gwetuta .
+PFX sc 0 gw'oto .
+PFX sc 0 gw'ata .
+PFX sc 0 gw'ete .
 PFX sc 0 gyessi [^mn]
 PFX sc 0 gyessi mu
 PFX sc 0 gyetuta .
@@ -120,6 +123,9 @@ PFX sc 0 gyebuta .
 PFX sc 0 gyeluta .
 PFX sc 0 gyekuta .
 PFX sc 0 gyetuta .
+PFX sc 0 gy'oto .
+PFX sc 0 gy'ata .
+PFX sc 0 gy'ete .
 PFX sc 0 kyessi [^mn]
 PFX sc 0 kyessi mu
 PFX sc 0 kyetuta .
@@ -137,6 +143,9 @@ PFX sc 0 kyebuta .
 PFX sc 0 kyeluta .
 PFX sc 0 kyekuta .
 PFX sc 0 kyetuta .
+PFX sc 0 ky'oto .
+PFX sc 0 ky'ata .
+PFX sc 0 ky'ete .
 PFX sc 0 byessi [^mn]
 PFX sc 0 byessi mu
 PFX sc 0 byetuta .
@@ -154,6 +163,9 @@ PFX sc 0 byebuta .
 PFX sc 0 byeluta .
 PFX sc 0 byekuta .
 PFX sc 0 byetuta .
+PFX sc 0 by'oto .
+PFX sc 0 by'ata .
+PFX sc 0 by'ete .
 PFX sc 0 lyessi [^mn]
 PFX sc 0 lyessi mu
 PFX sc 0 lyetuta .
@@ -171,6 +183,9 @@ PFX sc 0 lyebuta .
 PFX sc 0 lyeluta .
 PFX sc 0 lyekuta .
 PFX sc 0 lyetuta .
+PFX sc 0 ly'oto .
+PFX sc 0 ly'ata .
+PFX sc 0 ly'ete .
 PFX sc 0 kessi [^mn]
 PFX sc 0 kessi mu
 PFX sc 0 ketuta .
@@ -188,9 +203,9 @@ PFX sc 0 kebuta .
 PFX sc 0 keluta .
 PFX sc 0 kekuta .
 PFX sc 0 ketuta .
-PFX sc 0 oto .
-PFX sc 0 ata .
-PFX sc 0 ete ."""
+PFX sc 0 k'oto .
+PFX sc 0 k'ata .
+PFX sc 0 k'ete ."""
 
 rule_right_raw = """
 PFX Ob Y 18

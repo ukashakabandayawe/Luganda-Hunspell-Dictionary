@@ -17,7 +17,11 @@ AFF_FILE = REPO_ROOT / "Luganda.aff"
 INSERT_BEFORE_FLAG = "".strip() or None
 
 rule_left_raw = """
-PFX WM Y 194
+PFX WM Y 230
+PFX WM 0 w'onoo .
+PFX WM 0 w'onaa .
+PFX WM 0 w'anaa .
+PFX WM 0 w'enaa .
 PFX WM 0 wennaa .
 PFX WM 0 wemunaa .
 PFX WM 0 wetunaa .
@@ -37,6 +41,10 @@ PFX WM 0 wezinaa .
 PFX WM 0 wekunaa .
 PFX WM 0 weganaa .
 PFX WM 0 wetunaa .
+PFX WM 0 bw'onoo .
+PFX WM 0 bw'onaa .
+PFX WM 0 bw'anaa .
+PFX WM 0 bw'enaa .
 PFX WM 0 bwennaa .
 PFX WM 0 bwemunaa .
 PFX WM 0 bwetunaa .
@@ -56,6 +64,10 @@ PFX WM 0 bwezinaa .
 PFX WM 0 bwekunaa .
 PFX WM 0 bweganaa .
 PFX WM 0 bwetunaa .
+PFX WM 0 lw'onoo .
+PFX WM 0 lw'onaa .
+PFX WM 0 lw'anaa .
+PFX WM 0 lw'enaa .
 PFX WM 0 lwennaa .
 PFX WM 0 lwemunaa .
 PFX WM 0 lwetunaa .
@@ -75,6 +87,10 @@ PFX WM 0 lwezinaa .
 PFX WM 0 lwekunaa .
 PFX WM 0 lweganaa .
 PFX WM 0 lwetunaa .
+PFX WM 0 z'onoo .
+PFX WM 0 z'onaa .
+PFX WM 0 z'anaa .
+PFX WM 0 z'enaa .
 PFX WM 0 zennaa .
 PFX WM 0 zemunaa .
 PFX WM 0 zetunaa .
@@ -94,6 +110,10 @@ PFX WM 0 zezinaa .
 PFX WM 0 zekunaa .
 PFX WM 0 zeganaa .
 PFX WM 0 zetunaa .
+PFX WM 0 gw'onoo .
+PFX WM 0 gw'onaa .
+PFX WM 0 gw'anaa .
+PFX WM 0 gw'enaa .
 PFX WM 0 gwennaa .
 PFX WM 0 gwemunaa .
 PFX WM 0 gwetunaa .
@@ -113,6 +133,10 @@ PFX WM 0 gwezinaa .
 PFX WM 0 gwekunaa .
 PFX WM 0 gweganaa .
 PFX WM 0 gwetunaa .
+PFX WM 0 gy'onoo .
+PFX WM 0 gy'onaa .
+PFX WM 0 gy'anaa .
+PFX WM 0 gy'enaa .
 PFX WM 0 gyennaa .
 PFX WM 0 gyemunaa .
 PFX WM 0 gyetunaa .
@@ -132,6 +156,10 @@ PFX WM 0 gyezinaa .
 PFX WM 0 gyekunaa .
 PFX WM 0 gyeganaa .
 PFX WM 0 gyetunaa .
+PFX WM 0 ky'onoo .
+PFX WM 0 ky'onaa .
+PFX WM 0 ky'anaa .
+PFX WM 0 ky'enaa .
 PFX WM 0 kyennaa .
 PFX WM 0 kyemunaa .
 PFX WM 0 kyetunaa .
@@ -151,6 +179,10 @@ PFX WM 0 kyezinaa .
 PFX WM 0 kyekunaa .
 PFX WM 0 kyeganaa .
 PFX WM 0 kyetunaa .
+PFX WM 0 by'onoo .
+PFX WM 0 by'onaa .
+PFX WM 0 by'anaa .
+PFX WM 0 by'enaa .
 PFX WM 0 byennaa .
 PFX WM 0 byemunaa .
 PFX WM 0 byetunaa .
@@ -170,6 +202,10 @@ PFX WM 0 byezinaa .
 PFX WM 0 byekunaa .
 PFX WM 0 byeganaa .
 PFX WM 0 byetunaa .
+PFX WM 0 ly'onoo .
+PFX WM 0 ly'onaa .
+PFX WM 0 ly'anaa .
+PFX WM 0 ly'enaa .
 PFX WM 0 lyennaa .
 PFX WM 0 lyemunaa .
 PFX WM 0 lyetunaa .
@@ -189,6 +225,10 @@ PFX WM 0 lyezinaa .
 PFX WM 0 lyekunaa .
 PFX WM 0 lyeganaa .
 PFX WM 0 lyetunaa .
+PFX WM 0 k'onoo .
+PFX WM 0 k'onaa .
+PFX WM 0 k'anaa .
+PFX WM 0 k'enaa .
 PFX WM 0 kennaa .
 PFX WM 0 kemunaa .
 PFX WM 0 ketunaa .
@@ -207,11 +247,7 @@ PFX WM 0 kelunaa .
 PFX WM 0 kezinaa .
 PFX WM 0 kekunaa .
 PFX WM 0 keganaa .
-PFX WM 0 ketunaa .
-PFX WM 0 onoo .
-PFX WM 0 onaa .
-PFX WM 0 anaa .
-PFX WM 0 enaa ."""
+PFX WM 0 ketunaa ."""
 
 rule_right_raw = """
 PFX OR Y 16

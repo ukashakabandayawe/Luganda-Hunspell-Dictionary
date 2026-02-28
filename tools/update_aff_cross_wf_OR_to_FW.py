@@ -17,7 +17,10 @@ AFF_FILE = REPO_ROOT / "Luganda.aff"
 INSERT_BEFORE_FLAG = "".strip() or None
 
 rule_left_raw = """
-PFX wf Y 163
+PFX wf Y 190
+PFX wf 0 w'otoli .
+PFX wf 0 w'atali .
+PFX wf 0 w'eteli .
 PFX wf 0 wessili .
 PFX wf 0 wetutali .
 PFX wf 0 wemutali .
@@ -34,6 +37,9 @@ PFX wf 0 webutali .
 PFX wf 0 welutali .
 PFX wf 0 wekutali .
 PFX wf 0 wetutali .
+PFX wf 0 bw'otoli .
+PFX wf 0 bw'atali .
+PFX wf 0 bw'eteli .
 PFX wf 0 bwessili .
 PFX wf 0 bwetutali .
 PFX wf 0 bwemutali .
@@ -50,6 +56,9 @@ PFX wf 0 bwebutali .
 PFX wf 0 bwelutali .
 PFX wf 0 bwekutali .
 PFX wf 0 bwetutali .
+PFX wf 0 lw'otoli .
+PFX wf 0 lw'atali .
+PFX wf 0 lw'eteli .
 PFX wf 0 lwessili .
 PFX wf 0 lwetutali .
 PFX wf 0 lwemutali .
@@ -66,6 +75,9 @@ PFX wf 0 lwebutali .
 PFX wf 0 lwelutali .
 PFX wf 0 lwekutali .
 PFX wf 0 lwetutali .
+PFX wf 0 z'otoli .
+PFX wf 0 z'atali .
+PFX wf 0 z'eteli .
 PFX wf 0 zessili .
 PFX wf 0 zetutali .
 PFX wf 0 zemutali .
@@ -82,6 +94,9 @@ PFX wf 0 zebutali .
 PFX wf 0 zelutali .
 PFX wf 0 zekutali .
 PFX wf 0 zetutali .
+PFX wf 0 gw'otoli .
+PFX wf 0 gw'atali .
+PFX wf 0 gw'eteli .
 PFX wf 0 gwessili .
 PFX wf 0 gwetutali .
 PFX wf 0 gwemutali .
@@ -98,6 +113,9 @@ PFX wf 0 gwebutali .
 PFX wf 0 gwelutali .
 PFX wf 0 gwekutali .
 PFX wf 0 gwetutali .
+PFX wf 0 gy'otoli .
+PFX wf 0 gy'atali .
+PFX wf 0 gy'eteli .
 PFX wf 0 gyessili .
 PFX wf 0 gyetutali .
 PFX wf 0 gyemutali .
@@ -114,6 +132,9 @@ PFX wf 0 gyebutali .
 PFX wf 0 gyelutali .
 PFX wf 0 gyekutali .
 PFX wf 0 gyetutali .
+PFX wf 0 ky'otoli .
+PFX wf 0 ky'atali .
+PFX wf 0 ky'eteli .
 PFX wf 0 kyessili .
 PFX wf 0 kyetutali .
 PFX wf 0 kyemutali .
@@ -130,6 +151,9 @@ PFX wf 0 kyebutali .
 PFX wf 0 kyelutali .
 PFX wf 0 kyekutali .
 PFX wf 0 kyetutali .
+PFX wf 0 by'otoli .
+PFX wf 0 by'atali .
+PFX wf 0 by'eteli .
 PFX wf 0 byessili .
 PFX wf 0 byetutali .
 PFX wf 0 byemutali .
@@ -146,6 +170,9 @@ PFX wf 0 byebutali .
 PFX wf 0 byelutali .
 PFX wf 0 byekutali .
 PFX wf 0 byetutali .
+PFX wf 0 ly'otoli .
+PFX wf 0 ly'atali .
+PFX wf 0 ly'eteli .
 PFX wf 0 lyessili .
 PFX wf 0 lyetutali .
 PFX wf 0 lyemutali .
@@ -162,6 +189,9 @@ PFX wf 0 lyebutali .
 PFX wf 0 lyelutali .
 PFX wf 0 lyekutali .
 PFX wf 0 lyetutali .
+PFX wf 0 k'otoli .
+PFX wf 0 k'atali .
+PFX wf 0 k'eteli .
 PFX wf 0 kessili .
 PFX wf 0 ketutali .
 PFX wf 0 kemutali .
@@ -177,10 +207,7 @@ PFX wf 0 kekatali .
 PFX wf 0 kebutali .
 PFX wf 0 kelutali .
 PFX wf 0 kekutali .
-PFX wf 0 ketutali .
-PFX wf 0 otoli .
-PFX wf 0 atali .
-PFX wf 0 eteli ."""
+PFX wf 0 ketutali ."""
 
 rule_right_raw = """
 PFX OR Y 16
