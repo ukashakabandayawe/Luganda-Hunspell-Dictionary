@@ -1,0 +1,35 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+
+  <p>Selected stems: {{ stems|length }}</p>
+  <p class="help">When you assign stems, the system will automatically create review tasks for <strong>all active flags</strong>.</p>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="action" value="{{ action_name }}" />
+    <input type="hidden" name="apply" value="1" />
+
+    {% for stem in stems %}
+      <input type="hidden" name="_selected_action" value="{{ stem.pk }}" />
+    {% endfor %}
+
+    <fieldset class="module aligned">
+      <div class="form-row">
+        <label for="id_user_id">Assign to user</label>
+        <select id="id_user_id" name="user_id" required>
+          <option value="">-- choose --</option>
+          {% for u in users %}
+            <option value="{{ u.id }}">{{ u.username }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </fieldset>
+
+    <div class="submit-row">
+      <input type="submit" value="Assign" class="default" />
+      <a href="..">Cancel</a>
+    </div>
+  </form>
+{% endblock %}

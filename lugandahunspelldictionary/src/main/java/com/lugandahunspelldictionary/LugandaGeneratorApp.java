@@ -14,6 +14,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.application.Platform;
+import javafx.collections.ObservableListBase;
+import javafx.concurrent.Task;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -29,6 +32,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class LugandaGeneratorApp extends Application {
 
@@ -41,32 +45,168 @@ public class LugandaGeneratorApp extends Application {
         NUM
     }
 
+    private static final int MAX_FILTER_MATCHES = 50_000;
+    private static final int MAX_STATS_ROWS = 200_000;
+    private static final int MAX_WORDS_BY_FLAG_COLUMNS = 300;
+    private static final int MAX_WORDS_PER_FLAG_BUCKET = 5000;
+    private static final int MAX_COMBO_FLAGS = 500;
+    private static final long MAX_COMBO_OPS = 25_000_000L;
+
+    private static final class ErrorStore {
+        private final Map<Long, Set<String>> errorsByRowKey = new LinkedHashMap<>();
+
+        public boolean isError(long rowKey, String root) {
+            Set<String> set = errorsByRowKey.get(rowKey);
+            return set != null && set.contains(root);
+        }
+
+        public void toggle(long rowKey, String root) {
+            Set<String> set = errorsByRowKey.get(rowKey);
+            if (set == null) {
+                set = new LinkedHashSet<>();
+                errorsByRowKey.put(rowKey, set);
+            }
+            if (!set.add(root)) {
+                set.remove(root);
+                if (set.isEmpty()) {
+                    errorsByRowKey.remove(rowKey);
+                }
+            }
+        }
+    }
+
+    private static final class LazyResultsList extends ObservableListBase<Result> {
+        private final List<LugandaAffParser.AffixEntry> simpleEntries;
+        private final List<LugandaAffParser.AffixEntry> prefixEntries;
+        private final List<LugandaAffParser.AffixEntry> suffixEntries;
+        private final long comboCount;
+        private final ErrorStore errorStore;
+
+        LazyResultsList(
+                List<LugandaAffParser.AffixEntry> simpleEntries,
+                List<LugandaAffParser.AffixEntry> prefixEntries,
+                List<LugandaAffParser.AffixEntry> suffixEntries,
+                ErrorStore errorStore
+        ) {
+            this.simpleEntries = simpleEntries == null ? Collections.emptyList() : simpleEntries;
+            this.prefixEntries = prefixEntries == null ? Collections.emptyList() : prefixEntries;
+            this.suffixEntries = suffixEntries == null ? Collections.emptyList() : suffixEntries;
+            this.errorStore = errorStore;
+            this.comboCount = (long) this.prefixEntries.size() * (long) this.suffixEntries.size();
+        }
+
+        @Override
+        public Result get(int index) {
+            long rowKey = index;
+            int simpleCount = simpleEntries.size();
+
+            if (index < simpleCount) {
+                LugandaAffParser.AffixEntry ae = simpleEntries.get(index);
+                return Result.single(rowKey, ae, errorStore);
+            }
+
+            long comboStart = simpleCount;
+            long comboEndExclusive = comboStart + comboCount;
+            if (rowKey >= comboStart && rowKey < comboEndExclusive) {
+                long comboIndex = rowKey - comboStart;
+                int suffixCount = suffixEntries.size();
+                int pIndex = (int) (comboIndex / suffixCount);
+                int sIndex = (int) (comboIndex % suffixCount);
+                LugandaAffParser.AffixEntry p = prefixEntries.get(pIndex);
+                LugandaAffParser.AffixEntry s = suffixEntries.get(sIndex);
+                return Result.combo(rowKey, p, s, errorStore);
+            }
+
+            return Result.bareRoot(rowKey, errorStore);
+        }
+
+        @Override
+        public int size() {
+            long total = (long) simpleEntries.size() + comboCount + 1L;
+            return total > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) total;
+        }
+
+        public boolean isTruncatedByIntMax() {
+            long total = (long) simpleEntries.size() + comboCount + 1L;
+            return total > Integer.MAX_VALUE;
+        }
+    }
+
     public static class Result {
-        private final Map<String, String> wordsByRoot; // root -> generated word
+        private enum Kind { SINGLE, COMBO, ROOT }
+
+        private final Kind kind;
+        private final long rowKey;
         private final String flag;
         private final String affix;
-        private final LugandaAffParser.AffixEntry affixEntry;
-        private final Map<String, Boolean> errorsByRoot; // root -> is error
+        private final LugandaAffParser.AffixEntry single;
+        private final LugandaAffParser.AffixEntry prefix;
+        private final LugandaAffParser.AffixEntry suffix;
+        private final ErrorStore errorStore;
 
-        public Result(Map<String, String> wordsByRoot, String flag, String affix, LugandaAffParser.AffixEntry affixEntry) {
-            this.wordsByRoot = wordsByRoot;
+        private Result(Kind kind,
+                       long rowKey,
+                       String flag,
+                       String affix,
+                       LugandaAffParser.AffixEntry single,
+                       LugandaAffParser.AffixEntry prefix,
+                       LugandaAffParser.AffixEntry suffix,
+                       ErrorStore errorStore) {
+            this.kind = kind;
+            this.rowKey = rowKey;
             this.flag = flag;
             this.affix = affix;
-            this.affixEntry = affixEntry;
-            this.errorsByRoot = new LinkedHashMap<>();
-            // Initialize all as non-errors
-            for (String root : wordsByRoot.keySet()) {
-                errorsByRoot.put(root, false);
-            }
+            this.single = single;
+            this.prefix = prefix;
+            this.suffix = suffix;
+            this.errorStore = errorStore;
+        }
+
+        public static Result single(long rowKey, LugandaAffParser.AffixEntry ae, ErrorStore errorStore) {
+            String affixDisplay = (ae == null || ae.affix == null || ae.affix.isEmpty()) ? "0" : ae.affix;
+            String flag = ae == null ? "" : ae.flag;
+            return new Result(Kind.SINGLE, rowKey, flag, affixDisplay, ae, null, null, errorStore);
+        }
+
+        public static Result combo(long rowKey, LugandaAffParser.AffixEntry prefix, LugandaAffParser.AffixEntry suffix, ErrorStore errorStore) {
+            String pAff = (prefix == null || prefix.affix == null || prefix.affix.isEmpty()) ? "0" : prefix.affix;
+            String sAff = (suffix == null || suffix.affix == null || suffix.affix.isEmpty()) ? "0" : suffix.affix;
+            String affixDisplay = pAff + " + " + sAff;
+            String flag = (prefix == null ? "" : prefix.flag) + "+" + (suffix == null ? "" : suffix.flag);
+            return new Result(Kind.COMBO, rowKey, flag, affixDisplay, null, prefix, suffix, errorStore);
+        }
+
+        public static Result bareRoot(long rowKey, ErrorStore errorStore) {
+            return new Result(Kind.ROOT, rowKey, "ROOT", "", null, null, null, errorStore);
         }
 
         public String getFlag() { return flag; }
         public String getAffix() { return affix; }
-        public LugandaAffParser.AffixEntry getAffixEntry() { return affixEntry; }
-        public Map<String, String> getWordsByRoot() { return wordsByRoot; }
-        public boolean isError(String root) { return errorsByRoot.getOrDefault(root, false); }
-        public void toggleError(String root) { 
-            errorsByRoot.put(root, !errorsByRoot.getOrDefault(root, false)); 
+        public LugandaAffParser.AffixEntry getAffixEntry() { return single; }
+
+        public String getWordForRoot(String root) {
+            if (root == null || root.isEmpty()) return "";
+            if (kind == Kind.ROOT) {
+                return root;
+            }
+            if (kind == Kind.SINGLE) {
+                String word = LugandaAffParser.apply(single, root);
+                return word == null ? "" : word;
+            }
+            // COMBO
+            String mid = LugandaAffParser.apply(prefix, root);
+            if (mid == null) return "";
+            String word = LugandaAffParser.apply(suffix, mid);
+            return word == null ? "" : word;
+        }
+
+        public boolean isError(String root) {
+            return errorStore != null && errorStore.isError(rowKey, root);
+        }
+
+        public void toggleError(String root) {
+            if (errorStore == null) return;
+            errorStore.toggle(rowKey, root);
         }
     }
 
@@ -194,14 +334,19 @@ public class LugandaGeneratorApp extends Application {
             statsPanel.getChildren().add(label);
         }
 
-        // Add row number column
-        TableColumn<Result, String> noCol = new TableColumn<>("No.");
+        // Add row number column (avoid indexOf() for huge/lazy lists)
+        TableColumn<Result, Void> noCol = new TableColumn<>("No.");
         noCol.setPrefWidth(50);
-        noCol.setCellValueFactory(cellData -> {
-            int index = table.getItems().indexOf(cellData.getValue()) + 1;
-            return new javafx.beans.property.SimpleStringProperty(String.valueOf(index));
+        noCol.setSortable(false);
+        noCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleObjectProperty<>(null));
+        noCol.setCellFactory(col -> new TableCell<Result, Void>() {
+            @Override
+            protected void updateItem(Void item, boolean empty) {
+                super.updateItem(item, empty);
+                setText(empty ? null : String.valueOf(getIndex() + 1));
+                setStyle("-fx-alignment: CENTER;");
+            }
         });
-        noCol.setStyle("-fx-alignment: CENTER;");
         table.getColumns().add(noCol);
         
         // Add affix column
@@ -220,8 +365,7 @@ public class LugandaGeneratorApp extends Application {
             TableColumn<Result, String> col = new TableColumn<>(r);
             col.setPrefWidth(150);
             col.setCellValueFactory(cellData -> {
-                Map<String, String> words = cellData.getValue().getWordsByRoot();
-                return new javafx.beans.property.SimpleStringProperty(words.getOrDefault(r, ""));
+                return new javafx.beans.property.SimpleStringProperty(cellData.getValue().getWordForRoot(r));
             });
             
             // Custom cell factory to make cells clickable and show error state
@@ -248,7 +392,7 @@ public class LugandaGeneratorApp extends Application {
                         setOnMouseClicked(event -> {
                             result.toggleError(r);
                             updateItem(item, false); // Refresh cell
-                            updateStatistics(roots, table.getItems(), statsLabels);
+                            maybeUpdateStatistics(roots, table.getItems(), statsLabels);
                         });
                     }
                 }
@@ -263,57 +407,31 @@ public class LugandaGeneratorApp extends Application {
         flagCol.setPrefWidth(120);
         table.getColumns().add(flagCol);
 
-        ObservableList<Result> rows = FXCollections.observableArrayList();
+        ErrorStore errorStore = new ErrorStore();
 
-        // For each flag and each affix, create one row with all roots applied
+        // Flatten simple rules (flag-specific entries)
+        List<LugandaAffParser.AffixEntry> simpleEntries = new ArrayList<>();
         for (Map.Entry<String, LugandaAffParser.AffixGroup> flagEntry : affMap.entrySet()) {
-            String flag = flagEntry.getKey();
             LugandaAffParser.AffixGroup group = flagEntry.getValue();
-            for (LugandaAffParser.AffixEntry ae : group.entries) {
-                Map<String, String> wordsByRoot = new LinkedHashMap<>();
-                for (String root : roots) {
-                    String word = LugandaAffParser.apply(ae, root);
-                    if (word != null) {
-                        wordsByRoot.put(root, word);
-                    } else {
-                        wordsByRoot.put(root, "");
-                    }
-                }
-                String affixDisplay = ae.affix.isEmpty() ? "0" : ae.affix;
-                rows.add(new Result(wordsByRoot, flag, affixDisplay, ae));
-            }
+            if (group == null || group.entries == null) continue;
+            simpleEntries.addAll(group.entries);
         }
 
-        // Add combinable prefix+suffix cross-products (Hunspell "Y" headers): prefix then suffix only
-        for (LugandaAffParser.AffixGroup pGroup : combinablePrefixes) {
-            for (LugandaAffParser.AffixGroup sGroup : combinableSuffixes) {
-                for (LugandaAffParser.AffixEntry pAe : pGroup.entries) {
-                    for (LugandaAffParser.AffixEntry sAe : sGroup.entries) {
-                        Map<String, String> wordsByRoot = new LinkedHashMap<>();
-                        for (String root : roots) {
-                            String mid = LugandaAffParser.apply(pAe, root);
-                            String finalWord = mid == null ? null : LugandaAffParser.apply(sAe, mid);
-                            wordsByRoot.put(root, finalWord == null ? "" : finalWord);
-                        }
-                        String affixDisplay = (pAe.affix.isEmpty() ? "0" : pAe.affix) + " + " + (sAe.affix.isEmpty() ? "0" : sAe.affix);
-                        String flagDisplay = pAe.flag + "+" + sAe.flag;
-                        rows.add(new Result(wordsByRoot, flagDisplay, affixDisplay, null));
-                    }
-                }
-            }
+        // Flatten combinable prefix/suffix entries for cross-product view
+        List<LugandaAffParser.AffixEntry> comboPrefixes = new ArrayList<>();
+        for (LugandaAffParser.AffixGroup g : combinablePrefixes) {
+            if (g == null || g.entries == null) continue;
+            comboPrefixes.addAll(g.entries);
+        }
+        List<LugandaAffParser.AffixEntry> comboSuffixes = new ArrayList<>();
+        for (LugandaAffParser.AffixGroup g : combinableSuffixes) {
+            if (g == null || g.entries == null) continue;
+            comboSuffixes.addAll(g.entries);
         }
 
-        // Add a row for bare roots
-        Map<String, String> bareRoots = new LinkedHashMap<>();
-        for (String root : roots) {
-            bareRoots.put(root, root);
-        }
-        rows.add(new Result(bareRoots, "ROOT", "", null));
-
-        // Create filtered list for search
-        ObservableList<Result> allRows = FXCollections.observableArrayList(rows);
-        ObservableList<Result> filteredRows = FXCollections.observableArrayList(rows);
-        table.setItems(filteredRows);
+        LazyResultsList baseRows = new LazyResultsList(simpleEntries, comboPrefixes, comboSuffixes, errorStore);
+        ObservableList<Result> filteredRows = FXCollections.observableArrayList();
+        table.setItems(baseRows);
         
         // Search bar
         TextField searchField = new TextField();
@@ -324,49 +442,11 @@ public class LugandaGeneratorApp extends Application {
         exactMatchBtn.setStyle("-fx-font-size: 11px; -fx-padding: 5px 10px;");
         
         searchField.textProperty().addListener((obs, oldVal, newVal) -> {
-            filteredRows.clear();
-            if (newVal == null || newVal.trim().isEmpty()) {
-                filteredRows.addAll(allRows);
-            } else {
-                String searchText = newVal.toLowerCase().trim();
-                boolean exactMatch = exactMatchBtn.isSelected();
-                
-                for (Result r : allRows) {
-                    boolean matches = false;
-                    for (String word : r.getWordsByRoot().values()) {
-                        if (word != null) {
-                            if (exactMatch) {
-                                if (word.toLowerCase().equals(searchText)) {
-                                    matches = true;
-                                    break;
-                                }
-                            } else {
-                                if (word.toLowerCase().contains(searchText)) {
-                                    matches = true;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    if (!matches && exactMatch) {
-                        if (r.getFlag().toLowerCase().equals(searchText)) {
-                            matches = true;
-                        }
-                    } else if (!matches && r.getFlag().toLowerCase().contains(searchText)) {
-                        matches = true;
-                    }
-                    
-                    if (matches) {
-                        filteredRows.add(r);
-                    }
-                }
-            }
-            updateStatistics(roots, filteredRows, statsLabels);
+            scheduleSearch(roots, table, baseRows, filteredRows, statsLabels, rulesInfo, searchField, exactMatchBtn);
         });
         
         exactMatchBtn.selectedProperty().addListener((obs, oldVal, newVal) -> {
-            // Trigger search update
-            searchField.setText(searchField.getText());
+            scheduleSearch(roots, table, baseRows, filteredRows, statsLabels, rulesInfo, searchField, exactMatchBtn);
         });
         
         Button clearSearch = new Button("Clear");
@@ -375,8 +455,8 @@ public class LugandaGeneratorApp extends Application {
         HBox searchBox = new HBox(8, new Label("Search:"), searchField, exactMatchBtn, clearSearch);
         searchBox.setPadding(new Insets(8));
         
-        // Initialize statistics with correct totals
-        updateStatistics(roots, filteredRows, statsLabels);
+        // Initialize statistics: only compute when list is reasonably sized
+        maybeUpdateStatistics(roots, table.getItems(), statsLabels);
 
         Button save = new Button("Save CSV");
         Button back = new Button("Back");
@@ -398,7 +478,7 @@ public class LugandaGeneratorApp extends Application {
                 }
             }
             table.refresh();
-            updateStatistics(roots, filteredRows, statsLabels);
+            maybeUpdateStatistics(roots, filteredRows, statsLabels);
         });
         
         refresh.setOnAction(e -> {
@@ -409,9 +489,11 @@ public class LugandaGeneratorApp extends Application {
             }
         });
         
-        errorTable.setOnAction(e -> showErrorTable(allRows, roots));
-        flagTable.setOnAction(e -> showWordsByFlagTable(allRows, roots));
-        generateRules.setOnAction(e -> showRuleGenerator(allRows, roots));
+        errorTable.setOnAction(e -> showErrorTable(filteredRows.isEmpty() ? FXCollections.observableArrayList(table.getItems()) : filteredRows, roots));
+        flagTable.setOnAction(e -> {
+            showWordsByFlagTableFromAff(affMap, roots);
+        });
+        generateRules.setOnAction(e -> showRuleGenerator(filteredRows.isEmpty() ? FXCollections.observableArrayList(table.getItems()) : filteredRows, roots));
         
         HBox h = new HBox(8, back, save, clearErrors, refresh, errorTable, flagTable, generateRules);
         h.setPadding(new Insets(8));
@@ -441,10 +523,10 @@ public class LugandaGeneratorApp extends Application {
                     }
                     bw.write("flag\n");
                     
-                    // Write rows
-                    for (Result r : filteredRows) {
+                    // Write rows (current table view)
+                    for (Result r : table.getItems()) {
                         for (String root : roots) {
-                            bw.write(escapeCsv(r.getWordsByRoot().getOrDefault(root, "")));
+                            bw.write(escapeCsv(r.getWordForRoot(root)));
                             bw.write(',');
                         }
                         bw.write(escapeCsv(r.getFlag()));
@@ -473,7 +555,7 @@ public class LugandaGeneratorApp extends Application {
         for (Result r : allRows) {
             for (String root : roots) {
                 if (r.isError(root)) {
-                    String word = r.getWordsByRoot().getOrDefault(root, "");
+                    String word = r.getWordForRoot(root);
                     if (!word.isEmpty()) {
                         errorsByRoot.get(root).add(word);
                     }
@@ -507,9 +589,14 @@ public class LugandaGeneratorApp extends Application {
         // Add row number column
         TableColumn<Map<String, String>, String> noCol = new TableColumn<>("No.");
         noCol.setPrefWidth(50);
-        noCol.setCellValueFactory(cellData -> {
-            int index = errorTable.getItems().indexOf(cellData.getValue()) + 1;
-            return new javafx.beans.property.SimpleStringProperty(String.valueOf(index));
+        noCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(""));
+        noCol.setCellFactory(col -> new TableCell<Map<String, String>, String>() {
+            @Override
+            protected void updateItem(String item, boolean empty) {
+                super.updateItem(item, empty);
+                setText(empty ? null : String.valueOf(getIndex() + 1));
+                setStyle("-fx-alignment: CENTER;");
+            }
         });
         noCol.setStyle("-fx-alignment: CENTER;");
         errorTable.getColumns().add(noCol);
@@ -642,7 +729,7 @@ public class LugandaGeneratorApp extends Application {
             if (flag == null) continue;
             if ("ROOT".equalsIgnoreCase(flag)) continue;
             for (String root : roots) {
-                String word = r.getWordsByRoot().getOrDefault(root, "");
+                String word = r.getWordForRoot(root);
                 if (word != null && !word.isEmpty()) {
                     Map<String, Set<String>> byFlag = wordsByRootFlag.get(root);
                     if (byFlag != null) {
@@ -687,7 +774,15 @@ public class LugandaGeneratorApp extends Application {
 
         TableColumn<Map<String, String>, String> noCol = new TableColumn<>("No.");
         noCol.setPrefWidth(50);
-        noCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(String.valueOf(tv.getItems().indexOf(cd.getValue()) + 1)));
+        noCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(""));
+        noCol.setCellFactory(col -> new TableCell<Map<String, String>, String>() {
+            @Override
+            protected void updateItem(String item, boolean empty) {
+                super.updateItem(item, empty);
+                setText(empty ? null : String.valueOf(getIndex() + 1));
+                setStyle("-fx-alignment: CENTER;");
+            }
+        });
         noCol.setStyle("-fx-alignment: CENTER;");
         tv.getColumns().add(noCol);
 
@@ -795,6 +890,323 @@ public class LugandaGeneratorApp extends Application {
                 }
             } catch (Exception ex) {
                 showError("Failed to update Luganda.dic: " + ex.getMessage());
+            }
+        });
+
+        Button closeBtn = new Button("Close");
+        closeBtn.setOnAction(e -> flagStage.close());
+        HBox bottom = new HBox(8, closeBtn, applyBtn);
+        bottom.setPadding(new Insets(8));
+
+        BorderPane bp = new BorderPane();
+        bp.setTop(new VBox(6, info, new Separator()));
+        bp.setCenter(tv);
+        bp.setBottom(bottom);
+
+        Scene scene = new Scene(bp, 1200, 600);
+        flagStage.setScene(scene);
+        flagStage.show();
+    }
+
+    private static final class WordsByFlagModel {
+        private final List<String> flags;
+        // root -> flag -> ordered words
+        private final Map<String, Map<String, List<String>>> words;
+        private final boolean comboIncluded;
+        private final boolean truncated;
+
+        private WordsByFlagModel(List<String> flags,
+                                 Map<String, Map<String, List<String>>> words,
+                                 boolean comboIncluded,
+                                 boolean truncated) {
+            this.flags = flags;
+            this.words = words;
+            this.comboIncluded = comboIncluded;
+            this.truncated = truncated;
+        }
+    }
+
+    private void showWordsByFlagTableFromAff(Map<String, LugandaAffParser.AffixGroup> affMap, List<String> roots) {
+        Stage flagStage = new Stage();
+        flagStage.setTitle("Words by Flag");
+
+        Label status = new Label("Building words-by-flag view…");
+        status.setStyle("-fx-font-size: 11px; -fx-text-fill: #666;");
+        ProgressIndicator pi = new ProgressIndicator();
+        pi.setPrefSize(40, 40);
+        Button cancelBtn = new Button("Cancel");
+
+        VBox loading = new VBox(10, status, pi, cancelBtn);
+        loading.setPadding(new Insets(12));
+        Scene loadingScene = new Scene(loading, 520, 160);
+        flagStage.setScene(loadingScene);
+        flagStage.show();
+
+        Task<WordsByFlagModel> task = new Task<WordsByFlagModel>() {
+            @Override
+            protected WordsByFlagModel call() {
+                if (roots == null || roots.isEmpty()) {
+                    return new WordsByFlagModel(Collections.emptyList(), Collections.emptyMap(), false, false);
+                }
+                if (affMap == null || affMap.isEmpty()) {
+                    return new WordsByFlagModel(Collections.emptyList(), Collections.emptyMap(), false, false);
+                }
+
+                Map<String, Map<String, LinkedHashSet<String>>> tmp = new LinkedHashMap<>();
+                for (String root : roots) {
+                    tmp.put(root, new LinkedHashMap<>());
+                }
+                LinkedHashSet<String> flagsEncountered = new LinkedHashSet<>();
+                boolean truncated = false;
+
+                // Simple (non-combo) flags: only include flags that actually generate at least one word.
+                int rootIndex = 0;
+                for (String root : roots) {
+                    if (isCancelled()) break;
+                    rootIndex++;
+                    updateMessage("Processing roots " + rootIndex + "/" + roots.size() + "…");
+
+                    for (Map.Entry<String, LugandaAffParser.AffixGroup> entry : affMap.entrySet()) {
+                        if (isCancelled()) break;
+                        String flag = entry.getKey();
+                        if (flag == null) continue;
+                        if ("ROOT".equalsIgnoreCase(flag)) continue;
+                        LugandaAffParser.AffixGroup group = entry.getValue();
+                        if (group == null || group.entries == null) continue;
+                        if (group.entries.isEmpty()) continue;
+
+                        for (LugandaAffParser.AffixEntry ae : group.entries) {
+                            if (isCancelled()) break;
+                            String word = LugandaAffParser.apply(ae, root);
+                            if (word == null || word.isEmpty()) continue;
+
+                            flagsEncountered.add(flag);
+                            Map<String, LinkedHashSet<String>> byFlag = tmp.get(root);
+                            LinkedHashSet<String> set = byFlag.computeIfAbsent(flag, k -> new LinkedHashSet<>());
+                            if (set.size() >= MAX_WORDS_PER_FLAG_BUCKET) {
+                                truncated = true;
+                                continue;
+                            }
+                            set.add(word);
+                        }
+                    }
+                }
+
+                // Optionally include combinable prefix+suffix (combo) flags, but only when the projected work is safe.
+                List<LugandaAffParser.AffixEntry> prefixEntries = new ArrayList<>();
+                List<LugandaAffParser.AffixEntry> suffixEntries = new ArrayList<>();
+                List<String> prefixFlags = new ArrayList<>();
+                List<String> suffixFlags = new ArrayList<>();
+
+                for (Map.Entry<String, LugandaAffParser.AffixGroup> entry : affMap.entrySet()) {
+                    LugandaAffParser.AffixGroup group = entry.getValue();
+                    if (group == null || group.entries == null) continue;
+                    String flag = entry.getKey();
+                    if (flag == null) continue;
+                    if (group.combinable && group.type == 'P') {
+                        prefixEntries.addAll(group.entries);
+                        if (!prefixFlags.contains(flag)) prefixFlags.add(flag);
+                    } else if (group.combinable && group.type == 'S') {
+                        suffixEntries.addAll(group.entries);
+                        if (!suffixFlags.contains(flag)) suffixFlags.add(flag);
+                    }
+                }
+
+                long projectedOps = (long) roots.size() * (long) prefixEntries.size() * (long) suffixEntries.size();
+                long projectedComboFlags = (long) prefixFlags.size() * (long) suffixFlags.size();
+                boolean includeCombos = projectedComboFlags > 0
+                        && projectedComboFlags <= MAX_COMBO_FLAGS
+                        && projectedOps <= MAX_COMBO_OPS;
+
+                if (includeCombos) {
+                    int idx = 0;
+                    for (String root : roots) {
+                        if (isCancelled()) break;
+                        idx++;
+                        updateMessage("Processing combo flags " + idx + "/" + roots.size() + "…");
+
+                        for (LugandaAffParser.AffixEntry p : prefixEntries) {
+                            if (isCancelled()) break;
+                            String mid = LugandaAffParser.apply(p, root);
+                            if (mid == null || mid.isEmpty()) continue;
+                            for (LugandaAffParser.AffixEntry s : suffixEntries) {
+                                if (isCancelled()) break;
+                                String word = LugandaAffParser.apply(s, mid);
+                                if (word == null || word.isEmpty()) continue;
+                                String comboFlag = (p.flag == null ? "" : p.flag) + "+" + (s.flag == null ? "" : s.flag);
+                                if (comboFlag.equals("+")) continue;
+
+                                flagsEncountered.add(comboFlag);
+                                Map<String, LinkedHashSet<String>> byFlag = tmp.get(root);
+                                LinkedHashSet<String> set = byFlag.computeIfAbsent(comboFlag, k -> new LinkedHashSet<>());
+                                if (set.size() >= MAX_WORDS_PER_FLAG_BUCKET) {
+                                    truncated = true;
+                                    continue;
+                                }
+                                set.add(word);
+                            }
+                        }
+                    }
+                }
+
+                // Convert to lists for stable index access in the table.
+                List<String> flags = new ArrayList<>(flagsEncountered);
+                if (flags.size() > MAX_WORDS_BY_FLAG_COLUMNS) {
+                    flags = flags.subList(0, MAX_WORDS_BY_FLAG_COLUMNS);
+                    truncated = true;
+                }
+
+                Map<String, Map<String, List<String>>> out = new LinkedHashMap<>();
+                for (String root : roots) {
+                    Map<String, LinkedHashSet<String>> byFlag = tmp.getOrDefault(root, new LinkedHashMap<>());
+                    Map<String, List<String>> lists = new LinkedHashMap<>();
+                    for (String flag : flags) {
+                        LinkedHashSet<String> set = byFlag.get(flag);
+                        if (set == null || set.isEmpty()) {
+                            lists.put(flag, Collections.emptyList());
+                        } else {
+                            lists.put(flag, new ArrayList<>(set));
+                        }
+                    }
+                    out.put(root, lists);
+                }
+
+                return new WordsByFlagModel(flags, out, includeCombos, truncated);
+            }
+        };
+
+        status.textProperty().bind(task.messageProperty());
+        cancelBtn.setOnAction(e -> task.cancel(true));
+        flagStage.setOnCloseRequest(e -> task.cancel(true));
+
+        task.setOnSucceeded(e -> {
+            WordsByFlagModel model = task.getValue();
+            buildWordsByFlagStage(flagStage, model, roots);
+        });
+        task.setOnFailed(e -> {
+            Throwable ex = task.getException();
+            flagStage.close();
+            showError("Failed to build Words by Flag: " + (ex == null ? "unknown error" : ex.getMessage()));
+        });
+
+        Thread t = new Thread(task, "lg-words-by-flag");
+        t.setDaemon(true);
+        t.start();
+    }
+
+    private void buildWordsByFlagStage(Stage flagStage, WordsByFlagModel model, List<String> roots) {
+        List<String> flags = model == null ? Collections.emptyList() : model.flags;
+        Map<String, Map<String, List<String>>> words = model == null ? Collections.emptyMap() : model.words;
+
+        int maxRows = 0;
+        for (String root : roots) {
+            Map<String, List<String>> byFlag = words.get(root);
+            if (byFlag == null) continue;
+            for (String flag : flags) {
+                List<String> list = byFlag.get(flag);
+                if (list != null) maxRows = Math.max(maxRows, list.size());
+            }
+        }
+        maxRows = Math.min(maxRows, MAX_WORDS_PER_FLAG_BUCKET);
+
+        Label info = new Label(
+                "Grouped by root and flag (duplicates removed). Select flags in headers, then Apply to update Luganda.dic."
+                        + (model != null && !model.comboIncluded ? " Combo flags omitted (too many combinations)." : "")
+                        + (model != null && model.truncated ? " Output truncated to keep UI responsive." : "")
+        );
+        info.setStyle("-fx-font-size: 11px; -fx-text-fill: #666;");
+
+        // Table rows are just indices; cell factories read words from the model.
+        ObservableList<Integer> indexRows = FXCollections.observableArrayList();
+        for (int i = 0; i < maxRows; i++) {
+            indexRows.add(i);
+        }
+        TableView<Integer> tv = new TableView<>(indexRows);
+
+        TableColumn<Integer, String> noCol = new TableColumn<>("No.");
+        noCol.setPrefWidth(50);
+        noCol.setSortable(false);
+        noCol.setCellValueFactory(cd -> new javafx.beans.property.SimpleStringProperty(String.valueOf(cd.getValue() + 1)));
+        noCol.setStyle("-fx-alignment: CENTER;");
+        tv.getColumns().add(noCol);
+
+        // Flag selection controls: root -> selected flags
+        Map<String, Set<String>> selectedFlagsByRoot = new LinkedHashMap<>();
+        for (String root : roots) {
+            selectedFlagsByRoot.put(root, new LinkedHashSet<>());
+        }
+
+        // Nested columns: root -> flags
+        for (String root : roots) {
+            TableColumn<Integer, String> rootCol = new TableColumn<>(root);
+            for (String flag : flags) {
+                final String flagFinal = flag;
+                CheckBox headerCheck = new CheckBox(flagFinal);
+                headerCheck.setOnAction(e -> {
+                    Set<String> set = selectedFlagsByRoot.getOrDefault(root, new LinkedHashSet<>());
+                    if (headerCheck.isSelected()) {
+                        set.add(flagFinal);
+                    } else {
+                        set.remove(flagFinal);
+                    }
+                    selectedFlagsByRoot.put(root, set);
+                });
+
+                TableColumn<Integer, String> flagCol = new TableColumn<>();
+                flagCol.setGraphic(headerCheck);
+                flagCol.setPrefWidth(140);
+                flagCol.setStyle("-fx-alignment: CENTER;");
+                flagCol.setCellValueFactory(cd -> {
+                    int idx = cd.getValue();
+                    Map<String, List<String>> byFlag = words.get(root);
+                    if (byFlag == null) return new javafx.beans.property.SimpleStringProperty("");
+                    List<String> list = byFlag.get(flagFinal);
+                    if (list == null || idx < 0 || idx >= list.size()) {
+                        return new javafx.beans.property.SimpleStringProperty("");
+                    }
+                    return new javafx.beans.property.SimpleStringProperty(list.get(idx));
+                });
+                rootCol.getColumns().add(flagCol);
+            }
+            tv.getColumns().add(rootCol);
+        }
+
+        Button applyBtn = new Button("Apply to Luganda.dic");
+        applyBtn.setStyle("-fx-font-weight: bold;");
+        applyBtn.setOnAction(e -> {
+            Map<String, Set<String>> toApply = new LinkedHashMap<>();
+            for (Map.Entry<String, Set<String>> entry : selectedFlagsByRoot.entrySet()) {
+                Set<String> sel = entry.getValue();
+                if (sel == null || sel.isEmpty()) continue;
+                LinkedHashSet<String> flat = new LinkedHashSet<>();
+                for (String f : sel) {
+                    if (f == null) continue;
+                    String[] parts = f.split("\\+");
+                    for (String p : parts) {
+                        String t = p == null ? "" : p.trim();
+                        if (!t.isEmpty()) flat.add(t);
+                    }
+                }
+                if (!flat.isEmpty()) {
+                    toApply.put(entry.getKey(), flat);
+                }
+            }
+
+            if (toApply.isEmpty()) {
+                Alert a = new Alert(Alert.AlertType.INFORMATION, "No flags selected.", ButtonType.OK);
+                a.setHeaderText(null);
+                a.showAndWait();
+                return;
+            }
+
+            HunspellFlagMode mode = detectFlagMode(defaultAffPath);
+            try {
+                ApplyResult res = applyFlagsToDic(defaultDicPath, toApply, mode);
+                Alert ok = new Alert(Alert.AlertType.INFORMATION, res.toUserMessage(), ButtonType.OK);
+                ok.setHeaderText("Updated " + defaultDicPath.toAbsolutePath());
+                ok.showAndWait();
+            } catch (IOException ex) {
+                showError("Failed to update .dic: " + ex.getMessage());
             }
         });
 
@@ -1053,7 +1465,7 @@ public class LugandaGeneratorApp extends Application {
             LugandaAffParser.AffixEntry ae = r.getAffixEntry();
             if (ae == null) continue; // skip ROOT row
             for (String root : roots) {
-                String word = r.getWordsByRoot().getOrDefault(root, "");
+                String word = r.getWordForRoot(root);
                 if (word != null && !word.isEmpty() && !r.isError(root)) {
                     rulesByRoot.get(root).add(new ProposedRule(root, ae.type, r.getFlag(), ae.strip, ae.affix, ae.condition));
                 }
@@ -1283,13 +1695,22 @@ public class LugandaGeneratorApp extends Application {
         rulesStage.show();
     }
 
-    private void updateStatistics(List<String> roots, ObservableList<Result> rows, Map<String, Label> statsLabels) {
+    private void maybeUpdateStatistics(List<String> roots, ObservableList<Result> rows, Map<String, Label> statsLabels) {
+        if (rows == null) return;
+        if (rows.size() > MAX_STATS_ROWS) {
+            for (String root : roots) {
+                Label label = statsLabels.get(root);
+                if (label != null) label.setText(root + ": N/A (too many rows)");
+            }
+            return;
+        }
+
         for (String root : roots) {
             int totalWords = 0;
             int errorWords = 0;
             
             for (Result r : rows) {
-                String word = r.getWordsByRoot().get(root);
+                String word = r.getWordForRoot(root);
                 if (word != null && !word.isEmpty()) {
                     totalWords++;
                     if (r.isError(root)) {
@@ -1302,6 +1723,103 @@ public class LugandaGeneratorApp extends Application {
             String statText = String.format("%s: %.1f%% (%d/%d)", root, errorRate, errorWords, totalWords);
             statsLabels.get(root).setText(statText);
         }
+    }
+
+    private static final AtomicLong SEARCH_SEQ = new AtomicLong(0);
+
+    private void scheduleSearch(
+            List<String> roots,
+            TableView<Result> table,
+            LazyResultsList baseRows,
+            ObservableList<Result> filteredRows,
+            Map<String, Label> statsLabels,
+            Label rulesInfo,
+            TextField searchField,
+            ToggleButton exactMatchBtn
+    ) {
+        final long seq = SEARCH_SEQ.incrementAndGet();
+        String newVal = searchField.getText();
+        if (newVal == null || newVal.trim().isEmpty()) {
+            filteredRows.clear();
+            table.setItems(baseRows);
+            rulesInfo.setText("Total Rules: " + table.getItems().size());
+            maybeUpdateStatistics(roots, table.getItems(), statsLabels);
+            searchField.setDisable(false);
+            return;
+        }
+        final String searchText = newVal.toLowerCase().trim();
+        final boolean exactMatch = exactMatchBtn.isSelected();
+
+        searchField.setDisable(true);
+        rulesInfo.setText("Searching…");
+
+        Task<List<Result>> task = new Task<List<Result>>() {
+            @Override
+            protected List<Result> call() {
+                List<Result> matches = new ArrayList<>();
+                int n = baseRows.size();
+                for (int i = 0; i < n; i++) {
+                    if (isCancelled()) break;
+                    Result r = baseRows.get(i);
+                    boolean m = false;
+
+                    // Match by words
+                    for (String root : roots) {
+                        String word = r.getWordForRoot(root);
+                        if (word == null) continue;
+                        String w = word.toLowerCase();
+                        if (exactMatch ? w.equals(searchText) : w.contains(searchText)) {
+                            m = true;
+                            break;
+                        }
+                    }
+
+                    // Match by flag
+                    if (!m) {
+                        String f = r.getFlag() == null ? "" : r.getFlag().toLowerCase();
+                        if (exactMatch ? f.equals(searchText) : f.contains(searchText)) {
+                            m = true;
+                        }
+                    }
+
+                    if (m) {
+                        matches.add(r);
+                        if (matches.size() >= MAX_FILTER_MATCHES) {
+                            break;
+                        }
+                    }
+                }
+                return matches;
+            }
+        };
+
+        task.setOnSucceeded(e -> {
+            if (seq != SEARCH_SEQ.get()) return; // superseded
+            List<Result> matches = task.getValue();
+            filteredRows.setAll(matches);
+            table.setItems(filteredRows);
+            rulesInfo.setText("Matches: " + filteredRows.size() + (filteredRows.size() >= MAX_FILTER_MATCHES ? " (showing first " + MAX_FILTER_MATCHES + ")" : ""));
+            maybeUpdateStatistics(roots, filteredRows, statsLabels);
+            searchField.setDisable(false);
+        });
+
+        task.setOnFailed(e -> {
+            if (seq != SEARCH_SEQ.get()) return;
+            Throwable ex = task.getException();
+            rulesInfo.setText("Search failed");
+            searchField.setDisable(false);
+            Platform.runLater(() -> {
+                if (ex != null) {
+                    showError("Search failed: " + ex.getMessage());
+                } else {
+                    showError("Search failed.");
+                }
+            });
+        });
+
+        Thread t = new Thread(task, "lg-search");
+        t.setDaemon(true);
+        t.start();
     }
 
     private static String escapeCsv(String s) {

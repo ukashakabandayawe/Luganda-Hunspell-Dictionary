@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Review Stem · Luganda Flag Review{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <div class="row">
+      <div>
+        <h2>Review Stem</h2>
+        <div class="muted">Confirm whether each flag produces valid words for the stem.</div>
+      </div>
+      <div>
+        <a class="btn" href="{% url 'review:my_queue' %}">Back to queue</a>
+      </div>
+    </div>
+
+    <hr class="sep">
+
+    <div class="row">
+      <div>
+        <div class="muted">Stem</div>
+        <div style="font-size: 22px; font-weight: 700; letter-spacing: 0.2px;">{{ stem.text }}</div>
+      </div>
+      <div class="badge pending">Pending flags: {{ pending }}</div>
+    </div>
+  </div>
+
+  <div class="stack" style="margin-top: 16px;">
+    {% if task_rows %}
+      {% for row in task_rows %}
+        <div class="card">
+          <div class="row">
+            <div>
+              <h2 style="margin: 0; font-size: 18px;">Flag {{ row.code }}</h2>
+              {% if row.description %}
+                <div class="muted" style="margin-top: 4px;">{{ row.description }}</div>
+              {% else %}
+                <div class="muted" style="margin-top: 4px;">(No description in .aff for this flag)</div>
+              {% endif %}
+            </div>
+            <div>
+              {% if row.task.status == 'approved' %}
+                <span class="badge approved">Approved</span>
+              {% elif row.task.status == 'rejected' %}
+                <span class="badge rejected">Rejected</span>
+              {% elif row.task.status == 'skipped' %}
+                <span class="badge skipped">Skipped</span>
+              {% else %}
+                <span class="badge pending">Pending</span>
+              {% endif %}
+            </div>
+          </div>
+
+          <hr class="sep">
+
+          {% if row.examples %}
+            <div class="muted">Generated words ({{ row.examples|length }})</div>
+            <ul class="examples">
+              {% for w in row.examples %}
+                <li>{{ w }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <div class="muted"><em>No wordforms generated for this stem + flag.</em></div>
+          {% endif %}
+
+          <hr class="sep">
+
+          <form method="post" class="stack">
+            {% csrf_token %}
+            <input type="hidden" name="task_id" value="{{ row.task.id }}" />
+            <div>
+              <label class="muted" for="note_{{ row.task.id }}">Note (optional)</label>
+              <input id="note_{{ row.task.id }}" type="text" name="note" placeholder="Why did you approve/reject? (optional)" />
+            </div>
+            <div class="row" style="justify-content: flex-start; flex-wrap: wrap;">
+              <button class="btn good" type="submit" name="action" value="approve">Approve</button>
+              <button class="btn bad" type="submit" name="action" value="reject">Reject</button>
+            </div>
+          </form>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="card">
+        <h2>No tasks</h2>
+        <div class="muted">No flags are available to review for this stem yet.</div>
+      </div>
+    {% endif %}
+
+    {% if tasks_nav %}
+      <div class="card">
+        <h2 style="margin-top: 0;">All flags</h2>
+        <div class="muted">Open any flag to review it. If you don’t choose one, the page shows the next pending flag.</div>
+        <hr class="sep">
+        <details>
+          <summary>Show flags ({{ tasks_nav|length }})</summary>
+          <div style="margin-top: 12px; overflow-x: auto;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width: 140px;">Flag</th>
+                  <th>Status</th>
+                  <th style="width: 120px;">Open</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for t in tasks_nav %}
+                  <tr>
+                    <td><strong>{{ t.flag__code }}</strong></td>
+                    <td>
+                      {% if t.status == 'approved' %}
+                        <span class="badge approved">Approved</span>
+                      {% elif t.status == 'rejected' %}
+                        <span class="badge rejected">Rejected</span>
+                      {% elif t.status == 'skipped' %}
+                        <span class="badge skipped">Skipped</span>
+                      {% else %}
+                        <span class="badge pending">Pending</span>
+                      {% endif %}
+                    </td>
+                    <td>
+                      <a class="btn" href="?task={{ t.id }}">Open</a>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

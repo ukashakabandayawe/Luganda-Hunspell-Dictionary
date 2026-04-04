@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}My Queue · Luganda Flag Review{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <div class="row">
+      <div>
+        <h2>My Review Queue</h2>
+        <div class="muted">Stems assigned to you with pending flags.</div>
+      </div>
+      <div class="row" style="justify-content: flex-end;">
+        <div class="badge">Assigned stems: {{ stems|length }}</div>
+        <div class="badge pending">Pending tasks: {{ total_pending }}</div>
+      </div>
+    </div>
+
+    <hr class="sep">
+
+    {% if stems %}
+      {% if total_pending == 0 %}
+        <div class="muted">These stems are assigned to you, but an admin hasn’t created review tasks (flags) for them yet.</div>
+        <hr class="sep">
+      {% endif %}
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Stem</th>
+            <th style="width: 140px; text-align: center;">Pending flags</th>
+            <th style="width: 120px;">Open</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in stems %}
+            <tr>
+              <td><strong>{{ s.text }}</strong></td>
+              <td style="text-align: center;">
+                {% if s.pending_count > 0 %}
+                  <span class="badge pending">{{ s.pending_count }}</span>
+                {% else %}
+                  <span class="badge">0</span>
+                {% endif %}
+              </td>
+              <td>
+                <a class="btn primary" href="{% url 'review:review_stem' s.id %}">Open</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <div class="muted">No pending stems assigned to you.</div>
+    {% endif %}
+  </div>
+{% endblock %}
