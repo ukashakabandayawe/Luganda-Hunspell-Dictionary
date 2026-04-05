@@ -8,3 +8,6 @@ Dj-Database-URL==2.2.0
 # Postgres driver (Render Postgres)
 # Don't hard-pin to a patch version that might not have wheels for Render's image.
 psycopg[binary]>=3.2.2,<4
+
+# File locking for safe working dictionary updates
+filelock==3.16.1
