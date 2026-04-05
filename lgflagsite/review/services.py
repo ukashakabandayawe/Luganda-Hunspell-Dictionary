@@ -80,6 +80,29 @@ def build_approved_flags_map(tasks: QuerySet[StemFlagTask]) -> Dict[str, Set[str
 	return out
 
 
+def rebuild_working_dic_for_user_id(user_id: int) -> Tuple[int, int]:
+	"""Rebuild a user's working .dic from source using that user's approved tasks.
+
+	This is important on hosts with ephemeral filesystems: even if the working file
+	gets deleted, we can regenerate it from persisted review decisions.
+	"""
+	aff_path, source_dic = _default_paths()
+	working_dic = working_dic_path_for_user_id(user_id)
+	flag_mode = detect_flag_mode(aff_path)
+	approved_map = build_approved_flags_map(
+		StemFlagTask.objects.filter(
+			decided_by_id=user_id,
+		)
+	)
+	total_matched, total_changed, _, _ = rebuild_working_dic(
+		source_dic,
+		working_dic,
+		approved_map,
+		flag_mode,
+	)
+	return total_matched, total_changed
+
+
 def update_working_dic_for_task_change(
 	task: StemFlagTask,
 	previous_status: str,
@@ -96,9 +119,15 @@ def update_working_dic_for_task_change(
 	working_dic = working_dic_path_for_user_id(acting_user_id)
 	flag_mode = detect_flag_mode(aff_path)
 
+	existed_before = working_dic.exists()
 	ensure_working_dic_exists(source_dic, working_dic)
 
 	if new_status == StemFlagTask.Status.APPROVED:
+		# If the working file didn't exist (e.g. after a redeploy), rebuild from DB
+		# approvals first so we don't lose historical approvals.
+		if not existed_before:
+			return rebuild_working_dic_for_user_id(acting_user_id)
+
 		# Incremental apply.
 		stem = task.stem.text
 		total_matched, total_changed, _, _ = apply_flags_to_dic_file(
@@ -110,17 +139,6 @@ def update_working_dic_for_task_change(
 
 	if previous_status == StemFlagTask.Status.APPROVED and new_status != StemFlagTask.Status.APPROVED:
 		# Need to remove previously applied flags, so rebuild from scratch.
-		approved_map = build_approved_flags_map(
-			StemFlagTask.objects.filter(
-				decided_by_id=acting_user_id,
-			)
-		)
-		total_matched, total_changed, _, _ = rebuild_working_dic(
-			source_dic,
-			working_dic,
-			approved_map,
-			flag_mode,
-		)
-		return total_matched, total_changed
+		return rebuild_working_dic_for_user_id(acting_user_id)
 
 	return 0, 0

@@ -10,7 +10,7 @@ from django.utils import timezone
 
 from .dic_io import ensure_working_dic_exists
 from .models import Flag, ReviewDecision, Stem, StemFlagTask
-from .services import working_dic_path_for_user_id
+from .services import rebuild_working_dic_for_user_id, working_dic_path_for_user_id
 
 
 def _safe_filename_part(value: str) -> str:
@@ -32,7 +32,12 @@ def download_user_working_dic(modeladmin, request, queryset):
 	source_dic = Path(getattr(settings, "HUNSPELL_DIC_SOURCE_PATH"))
 	working_dic = working_dic_path_for_user_id(int(user.id))
 
-	ensure_working_dic_exists(source_dic, working_dic)
+	# On ephemeral hosts, the working file may be missing after redeploy.
+	# Rebuild from DB approvals so downloads always reflect review progress.
+	if not working_dic.exists():
+		rebuild_working_dic_for_user_id(int(user.id))
+	else:
+		ensure_working_dic_exists(source_dic, working_dic)
 	if not working_dic.exists():
 		modeladmin.message_user(request, f"Working .dic not found: {working_dic}", level=messages.ERROR)
 		return None
