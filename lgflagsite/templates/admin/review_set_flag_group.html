@@ -1,0 +1,34 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+
+  <p>Selected flags: {{ flags|length }}</p>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="action" value="{{ action_name }}" />
+    <input type="hidden" name="apply" value="1" />
+
+    {% for flag in flags %}
+      <input type="hidden" name="_selected_action" value="{{ flag.pk }}" />
+    {% endfor %}
+
+    <fieldset class="module aligned">
+      <div class="form-row">
+        <label for="id_flag_group">Flag group</label>
+        <select id="id_flag_group" name="flag_group" required>
+          <option value="">-- choose --</option>
+          {% for value,label in flag_groups %}
+            <option value="{{ value }}" {% if value == current_flag_group %}selected{% endif %}>{{ label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </fieldset>
+
+    <div class="submit-row">
+      <input type="submit" value="Apply" class="default" />
+      <a href="..">Cancel</a>
+    </div>
+  </form>
+{% endblock %}
