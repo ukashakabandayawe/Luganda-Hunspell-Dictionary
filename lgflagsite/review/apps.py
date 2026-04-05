@@ -58,13 +58,12 @@ class ReviewConfig(AppConfig):
 
         def _warm() -> None:
             try:
-                from .hunspell import _aff_signature, _affix_entry_index_cached, _detect_flag_mode_cached
+                from .hunspell import _aff_signature, _detect_flag_mode_cached
 
                 aff_path = Path(getattr(settings, "HUNSPELL_AFF_PATH"))
                 sig = _aff_signature(aff_path)
                 t0 = time.perf_counter()
                 _detect_flag_mode_cached(*sig)
-                _affix_entry_index_cached(*sig)
                 _ = time.perf_counter() - t0
             except Exception:
                 # Best-effort only; never break app startup.

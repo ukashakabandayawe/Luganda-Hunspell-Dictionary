@@ -31,21 +31,22 @@ def detect_flag_mode(aff_path: Path) -> str:
 @lru_cache(maxsize=4)
 def _detect_flag_mode_cached(aff_path_str: str, mtime_ns: int, size: int) -> str:
     try:
-        for raw in _read_aff_lines(Path(aff_path_str)):
-            line = raw.strip()
-            if not line or line.startswith("#"):
-                continue
-            if not line.upper().startswith("FLAG"):
-                continue
-            toks = line.split()
-            if len(toks) < 2:
-                continue
-            mode = toks[1].strip().lower()
-            if mode == "long":
-                return HunspellFlagMode.LONG
-            if mode == "num":
-                return HunspellFlagMode.NUM
-            return HunspellFlagMode.DEFAULT
+        with Path(aff_path_str).open("r", encoding="utf-8", errors="replace") as f:
+            for raw in f:
+                line = raw.strip()
+                if not line or line.startswith("#"):
+                    continue
+                if not line.upper().startswith("FLAG"):
+                    continue
+                toks = line.split()
+                if len(toks) < 2:
+                    continue
+                mode = toks[1].strip().lower()
+                if mode == "long":
+                    return HunspellFlagMode.LONG
+                if mode == "num":
+                    return HunspellFlagMode.NUM
+                return HunspellFlagMode.DEFAULT
     except OSError:
         return HunspellFlagMode.DEFAULT
     return HunspellFlagMode.DEFAULT
@@ -145,31 +146,24 @@ def parse_flag_descriptions(aff_path: Path) -> Dict[str, str]:
     Prefer canonical lines near the top like: `# XX = ...`.
     Otherwise fall back to the comment block immediately above the first PFX/SFX header.
     """
+    # This can be large; prefer using DB-synced descriptions.
+    # Keep a best-effort streaming implementation for tools/tests.
     out: Dict[str, str] = {}
     try:
-        lines = _read_aff_lines(aff_path)
-
-        # 1) Canonical `# XX = ...`
-        for raw in lines[:3000]:
-            line = raw.strip()
-            if not line.startswith("#"):
-                continue
-            m = re.match(r"^#\s*([^\s=]{1,16})\s*=\s*(.+?)\s*$", line)
-            if not m:
-                continue
-            code = m.group(1).strip()
-            desc = m.group(2).strip()
-            if code and code not in out:
-                out[code] = desc
-
-        # 2) Comment block above the first header
-        # We only fill missing descriptions here.
-        for flag in parse_affix_types(aff_path).keys():
-            if flag in out:
-                continue
-            d = describe_flag_from_comments(lines, flag)
-            if d:
-                out[flag] = d
+        with aff_path.open("r", encoding="utf-8", errors="replace") as f:
+            for i, raw in enumerate(f, start=1):
+                if i > 3000:
+                    break
+                line = raw.strip()
+                if not line.startswith("#"):
+                    continue
+                m = re.match(r"^#\s*([^\s=]{1,16})\s*=\s*(.+?)\s*$", line)
+                if not m:
+                    continue
+                code = m.group(1).strip()
+                desc = m.group(2).strip()
+                if code and code not in out:
+                    out[code] = desc
     except OSError:
         return {}
     return out
@@ -189,128 +183,149 @@ def _aff_signature(aff_path: Path) -> tuple[str, int, int]:
         return str(p), 0, 0
 
 
-@lru_cache(maxsize=2)
+@lru_cache(maxsize=128)
 def _flag_description_cached(aff_path_str: str, mtime_ns: int, size: int, flag: str) -> str:
+    """Best-effort description from comments, without loading the whole file."""
+
     if not flag:
         return ""
-    lines = _read_aff_lines(Path(aff_path_str))
-    return describe_flag_from_comments(lines, flag) or ""
 
+    canonical = ""
+    comment_block: List[str] = []
 
-@lru_cache(maxsize=2)
-def _read_aff_lines(aff_path: Path) -> List[str]:
-    return aff_path.read_text(encoding="utf-8", errors="replace").splitlines()
-
-
-def describe_flag_from_comments(lines: List[str], flag: str) -> Optional[str]:
-    header_re = re.compile(rf"^\s*(PFX|SFX)\s+{re.escape(flag)}\s+[YN]\s+\d+")
-    header_index: Optional[int] = None
-    for i, raw in enumerate(lines):
-        if header_re.match(raw):
-            header_index = i
-            break
-    if header_index is None:
-        return None
-
-    comment_lines: List[str] = []
-    j = header_index - 1
-    while j >= 0:
-        t = lines[j].strip()
-        if not t:
-            break
-        if not t.startswith("#"):
-            break
-        s = t.lstrip("#").strip()
+    def clean_comment(s: str) -> str:
+        s = s.strip().lstrip("#").strip()
         for marker in (" e.g.", " E.g.", " for example:", " For example:"):
             if marker in s:
                 s = s.split(marker, 1)[0].rstrip(" :")
-        if s and not s.lower().startswith(("e.g.", "for example:", "since ")):
-            comment_lines.append(s)
-        j -= 1
+        return s
 
-    comment_lines.reverse()
-    if not comment_lines:
-        return None
-    return " ".join(comment_lines[:2]).strip() or None
+    try:
+        with Path(aff_path_str).open("r", encoding="utf-8", errors="replace") as f:
+            for i, raw in enumerate(f, start=1):
+                t = (raw or "").strip()
+                if not t:
+                    comment_block = []
+                    continue
+                if t.startswith("#"):
+                    m = re.match(r"^#\s*([^\s=]{1,16})\s*=\s*(.+?)\s*$", t)
+                    if m and m.group(1).strip() == flag:
+                        canonical = m.group(2).strip()
+                    c = clean_comment(t)
+                    if c and not c.lower().startswith(("e.g.", "for example:", "since ")):
+                        comment_block.append(c)
+                    continue
+
+                parts = t.split()
+                if len(parts) >= 4 and parts[0].upper() in {"PFX", "SFX"} and parts[2].upper() in {"Y", "N"}:
+                    code = parts[1]
+                    if code == flag:
+                        return canonical or (" ".join(comment_block[:2]).strip() if comment_block else "")
+                    comment_block = []
+                    continue
+
+                comment_block = []
+                if i > 2000000:  # safety guard for extremely large files
+                    break
+    except OSError:
+        return ""
+
+    return canonical or ""
 
 
 def parse_affix_types(aff_path: Path) -> Dict[str, str]:
     """Map flag -> 'P' or 'S' based on PFX/SFX headers."""
     out: Dict[str, str] = {}
     try:
-        for raw in _read_aff_lines(aff_path):
-            line = raw.strip()
-            if not line or line.startswith("#"):
-                continue
-            toks = line.split()
-            if len(toks) < 2:
-                continue
-            if toks[0].upper() == "PFX":
-                out.setdefault(toks[1], "P")
-            elif toks[0].upper() == "SFX":
-                out.setdefault(toks[1], "S")
+        with aff_path.open("r", encoding="utf-8", errors="replace") as f:
+            for raw in f:
+                line = raw.strip()
+                if not line or line.startswith("#"):
+                    continue
+                toks = line.split()
+                if len(toks) < 2:
+                    continue
+                if toks[0].upper() == "PFX":
+                    out.setdefault(toks[1], "P")
+                elif toks[0].upper() == "SFX":
+                    out.setdefault(toks[1], "S")
     except OSError:
         return {}
     return out
 
 
-@lru_cache(maxsize=2)
-def _affix_entry_index_cached(aff_path_str: str, mtime_ns: int, size: int) -> Dict[str, Tuple[AffixEntry, ...]]:
-    """Build an index of flag -> entries for a given .aff signature."""
+@lru_cache(maxsize=512)
+def _affix_entries_for_flag_cached(
+    aff_path_str: str,
+    mtime_ns: int,
+    size: int,
+    flag: str,
+) -> Tuple[AffixEntry, ...]:
+    """Parse affix entries for a single flag by streaming the .aff file.
 
-    aff_path = Path(aff_path_str)
-    lines = _read_aff_lines(aff_path)
+    This avoids loading the entire Luganda.aff into memory (which can exceed
+    small-host RAM limits like Render's free tier).
+    """
 
-    out: Dict[str, List[AffixEntry]] = {}
-    combinable: Dict[tuple[str, str], bool] = {}
+    if not flag:
+        return ()
 
-    for raw in lines:
-        line = raw.strip()
-        if not line or line.startswith("#"):
-            continue
-        toks = line.split()
-        if len(toks) < 2:
-            continue
-        kind = toks[0].upper()
-        if kind not in ("PFX", "SFX"):
-            continue
+    combinable: Dict[str, bool] = {"P": False, "S": False}
+    out: List[AffixEntry] = []
 
-        flag = toks[1]
-        affix_type = "P" if kind == "PFX" else "S"
+    try:
+        with Path(aff_path_str).open("r", encoding="utf-8", errors="replace") as f:
+            for raw in f:
+                line = (raw or "").strip()
+                if not line or line.startswith("#"):
+                    continue
+                toks = line.split()
+                if len(toks) < 2:
+                    continue
+                kind = toks[0].upper()
+                if kind not in ("PFX", "SFX"):
+                    continue
 
-        # Header: PFX XX Y 2
-        is_header = len(toks) >= 4 and toks[2].upper() in ("Y", "N")
-        if is_header:
-            combinable[(flag, affix_type)] = toks[2].upper() == "Y"
-            continue
+                code = toks[1]
+                if code != flag:
+                    continue
 
-        # Rule line: PFX XX 0 tu .
-        if len(toks) < 4:
-            continue
-        strip = "" if toks[2] == "0" else toks[2]
-        add = "" if toks[3] == "0" else toks[3]
-        condition = toks[4] if len(toks) >= 5 else "."
-        out.setdefault(flag, []).append(
-            AffixEntry(
-                affix_type=affix_type,
-                flag=flag,
-                strip=strip,
-                add=add,
-                condition=condition or ".",
-                combinable=combinable.get((flag, affix_type), False),
-            )
-        )
+                affix_type = "P" if kind == "PFX" else "S"
 
-    return {k: tuple(v) for k, v in out.items()}
+                # Header: PFX XX Y 2
+                is_header = len(toks) >= 4 and toks[2].upper() in ("Y", "N")
+                if is_header:
+                    combinable[affix_type] = toks[2].upper() == "Y"
+                    continue
+
+                # Rule line: PFX XX 0 tu .
+                if len(toks) < 4:
+                    continue
+                strip = "" if toks[2] == "0" else toks[2]
+                add = "" if toks[3] == "0" else toks[3]
+                condition = toks[4] if len(toks) >= 5 else "."
+                out.append(
+                    AffixEntry(
+                        affix_type=affix_type,
+                        flag=flag,
+                        strip=strip,
+                        add=add,
+                        condition=condition or ".",
+                        combinable=combinable.get(affix_type, False),
+                    )
+                )
+    except OSError:
+        return ()
+
+    return tuple(out)
 
 
 def iter_affix_entries_for_flag(aff_path: Path, flag: str) -> List[AffixEntry]:
     if not flag:
         return []
     aff_path_str, mtime_ns, size = _aff_signature(aff_path)
-    idx = _affix_entry_index_cached(aff_path_str, mtime_ns, size)
     # Return a copy to avoid accidental mutations affecting cached data.
-    return list(idx.get(flag, ()))
+    return list(_affix_entries_for_flag_cached(aff_path_str, mtime_ns, size, flag))
 
 
 def apply_entry(entry: AffixEntry, root: str) -> Optional[str]:
@@ -368,7 +383,7 @@ def _generate_examples_cached(
 ) -> Tuple[str, ...]:
     if not flag or not root or limit <= 0:
         return ()
-    entries = _affix_entry_index_cached(aff_path_str, mtime_ns, size).get(flag, ())
+    entries = _affix_entries_for_flag_cached(aff_path_str, mtime_ns, size, flag)
     out: List[str] = []
     seen: Set[str] = set()
     for e in entries:

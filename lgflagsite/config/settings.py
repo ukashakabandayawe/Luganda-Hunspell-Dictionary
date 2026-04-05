@@ -30,9 +30,6 @@ DATA_DIR = BASE_DIR / "data"
 WORKING_DIR = DATA_DIR / "working"
 WORKING_DIC_PATH = WORKING_DIR / "Luganda.dic"
 
-# Warm expensive Hunspell .aff parsing caches at startup.
-WARM_AFF_CACHE_ON_STARTUP = True
-
 # Repo root (contains Luganda.aff and Luganda.dic)
 REPO_DIR = BASE_DIR.parent
 
@@ -48,6 +45,10 @@ def _env_bool(name: str, default: bool = False) -> bool:
 
 
 _render_hostname = (os.environ.get("RENDER_EXTERNAL_HOSTNAME") or "").strip()
+
+# Warm expensive Hunspell .aff parsing caches at startup.
+# On small hosts (e.g. Render free tier), warming can exceed memory limits.
+WARM_AFF_CACHE_ON_STARTUP = _env_bool("WARM_AFF_CACHE_ON_STARTUP", default=not bool(_render_hostname))
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
