@@ -4,7 +4,7 @@
   <h1>{{ title }}</h1>
 
   <p>Selected stems: {{ stems|length }}</p>
-  <p class="help">When you assign stems, the system will automatically create review tasks for <strong>all active flags</strong>.</p>
+  <p class="help">When you assign stems, the system will automatically create review tasks for the <strong>selected flag group</strong> (active flags only).</p>
 
   <form method="post">
     {% csrf_token %}
@@ -22,6 +22,15 @@
           <option value="">-- choose --</option>
           {% for u in users %}
             <option value="{{ u.id }}">{{ u.username }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="id_flag_group">Flag group</label>
+        <select id="id_flag_group" name="flag_group" required>
+          {% for value,label in flag_groups %}
+            <option value="{{ value }}" {% if value == current_flag_group %}selected{% endif %}>{{ label }}</option>
           {% endfor %}
         </select>
       </div>
