@@ -4,11 +4,22 @@ from django.utils import timezone
 
 
 class Flag(models.Model):
+	class Group(models.TextChoices):
+		PRIORITY = "priority", "Priority"
+		NOUNS = "nouns", "Nouns"
+		ADJECTIVES = "adjectives", "Adjectives"
+		REFLEXIVE_VERBS = "reflexive_verbs", "Reflexive verbs"
+		ADVANCED = "advanced", "Advanced flags"
+
 	code = models.CharField(max_length=8, unique=True)
 	# Hunspell affix type: 'P' (prefix), 'S' (suffix), or '' when unknown.
 	affix_type = models.CharField(max_length=1, blank=True, default="")
+	# The 1-based order the flag first appears in Luganda.aff (used for admin sorting).
+	# Defaults high so unknown/un-synced flags appear last until synced.
+	aff_order = models.PositiveIntegerField(default=1_000_000, db_index=True)
 	description = models.TextField(blank=True, default="")
 	is_active = models.BooleanField(default=True)
+	group = models.CharField(max_length=16, choices=Group.choices, default=Group.PRIORITY)
 
 	def __str__(self) -> str:
 		return self.code
