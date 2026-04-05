@@ -43,8 +43,9 @@ class Command(BaseCommand):
 		except OSError as ex:
 			raise CommandError(str(ex))
 
-		# code -> (affix_type 'P'|'S', description)
-		flags: dict[str, tuple[str, str]] = {}
+		# code -> (affix_type 'P'|'S', description, group, aff_order)
+		flags: dict[str, tuple[str, str, str, int]] = {}
+		advanced_on = False
 
 		def clean_comment(s: str) -> str:
 			s = s.strip().lstrip("#").strip()
@@ -74,9 +75,15 @@ class Command(BaseCommand):
 					if len(parts) >= 4 and parts[0] in {"PFX", "SFX"} and parts[2] in {"Y", "N"}:
 						code = parts[1]
 						affix_type = "P" if parts[0] == "PFX" else "S"
+						if code == "GA":
+							advanced_on = True
+						group = Flag.Group.ADVANCED if advanced_on else Flag.Group.PRIORITY
 						if code not in flags:
+							aff_order = len(flags) + 1
 							desc = canonical.get(code) or (" ".join(comment_block[:2]).strip() if comment_block else "")
-							flags[code] = (affix_type, desc)
+							flags[code] = (affix_type, desc, group, aff_order)
+						if code == "JP":
+							advanced_on = False
 						comment_block = []
 						continue
 
@@ -88,8 +95,17 @@ class Command(BaseCommand):
 		created = 0
 		updated = 0
 
-		for code, (t, desc) in flags.items():
-			obj, is_new = Flag.objects.get_or_create(code=code, defaults={"affix_type": t, "description": desc, "is_active": True})
+		for code, (t, desc, group, aff_order) in flags.items():
+			obj, is_new = Flag.objects.get_or_create(
+				code=code,
+				defaults={
+					"affix_type": t,
+					"description": desc,
+					"is_active": True,
+					"group": group or Flag.Group.PRIORITY,
+					"aff_order": int(aff_order),
+				},
+			)
 			if is_new:
 				created += 1
 				continue
@@ -102,6 +118,13 @@ class Command(BaseCommand):
 				changed = True
 			if not obj.is_active:
 				obj.is_active = True
+				changed = True
+			if obj.aff_order != int(aff_order):
+				obj.aff_order = int(aff_order)
+				changed = True
+			# Auto-mark GA..JP as Advanced based on .aff order; do not override other manual groupings.
+			if group == Flag.Group.ADVANCED and obj.group != Flag.Group.ADVANCED:
+				obj.group = Flag.Group.ADVANCED
 				changed = True
 			if changed:
 				obj.save()
