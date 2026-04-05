@@ -10,7 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,16 +40,33 @@ REPO_DIR = BASE_DIR.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
+def _env_bool(name: str, default: bool = False) -> bool:
+    v = (os.environ.get(name) or "").strip().lower()
+    if v == "":
+        return default
+    return v in {"1", "true", "yes", "y", "on"}
+
+
+_render_hostname = (os.environ.get("RENDER_EXTERNAL_HOSTNAME") or "").strip()
+
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-1hd23+-=+q@^6+a#bz7+dve%#!o6e+h*8%ss=%g3_3pm02f8#y'
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY",
+    "django-insecure-1hd23+-=+q@^6+a#bz7+dve%#!o6e+h*8%ss=%g3_3pm02f8#y",
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = _env_bool("DEBUG", default=not bool(_render_hostname))
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
+if _render_hostname:
+    ALLOWED_HOSTS.append(_render_hostname)
+
+_extra_allowed_hosts = (os.environ.get("ALLOWED_HOSTS") or "").strip()
+if _extra_allowed_hosts:
+    ALLOWED_HOSTS.extend([h.strip() for h in _extra_allowed_hosts.split(",") if h.strip()])
 
 
 # Application definition
@@ -63,6 +83,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+	'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -97,10 +118,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    "default": dj_database_url.config(
+        default=f"sqlite:///{(BASE_DIR / 'db.sqlite3').as_posix()}",
+        conn_max_age=600,
+        ssl_require=not DEBUG,
+    )
 }
 
 
@@ -140,9 +162,20 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+if _render_hostname:
+    CSRF_TRUSTED_ORIGINS = [f"https://{_render_hostname}"]
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    USE_X_FORWARDED_HOST = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
