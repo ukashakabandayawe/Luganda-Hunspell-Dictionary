@@ -47,9 +47,70 @@ class UserAdminWithWorkingDic(DjangoUserAdmin):
 
 @admin.register(Flag)
 class FlagAdmin(admin.ModelAdmin):
-	list_display = ("code", "affix_type", "is_active")
-	list_filter = ("affix_type", "is_active")
+	list_display = ("code", "affix_type", "group", "is_active")
+	list_filter = ("affix_type", "group", "is_active")
 	search_fields = ("code", "description")
+	ordering = ("aff_order", "code")
+	actions = (
+		"mark_selected_flags_priority",
+		"mark_selected_flags_nouns",
+		"mark_selected_flags_adjectives",
+		"mark_selected_flags_reflexive_verbs",
+		"set_selected_flags_group",
+	)
+
+	@admin.action(description="Mark selected flags as Priority")
+	def mark_selected_flags_priority(self, request, queryset):
+		updated = queryset.update(group=Flag.Group.PRIORITY)
+		self.message_user(request, f"Updated {updated} flags to group '{Flag.Group.PRIORITY.label}'.", level=messages.SUCCESS)
+
+	@admin.action(description="Mark selected flags as Nouns")
+	def mark_selected_flags_nouns(self, request, queryset):
+		updated = queryset.update(group=Flag.Group.NOUNS)
+		self.message_user(request, f"Updated {updated} flags to group '{Flag.Group.NOUNS.label}'.", level=messages.SUCCESS)
+
+	@admin.action(description="Mark selected flags as Adjectives")
+	def mark_selected_flags_adjectives(self, request, queryset):
+		updated = queryset.update(group=Flag.Group.ADJECTIVES)
+		self.message_user(request, f"Updated {updated} flags to group '{Flag.Group.ADJECTIVES.label}'.", level=messages.SUCCESS)
+
+	@admin.action(description="Mark selected flags as Reflexive verbs")
+	def mark_selected_flags_reflexive_verbs(self, request, queryset):
+		updated = queryset.update(group=Flag.Group.REFLEXIVE_VERBS)
+		self.message_user(
+			request,
+			f"Updated {updated} flags to group '{Flag.Group.REFLEXIVE_VERBS.label}'.",
+			level=messages.SUCCESS,
+		)
+
+	@admin.action(description="Set group for selected flags")
+	def set_selected_flags_group(self, request, queryset):
+		if "apply" in request.POST:
+			group = (request.POST.get("flag_group") or "").strip()
+			allowed_groups = {c[0] for c in Flag.Group.choices}
+			if group not in allowed_groups:
+				self.message_user(request, "Select a valid flag group.", level=messages.ERROR)
+				return None
+
+			updated = queryset.update(group=group)
+			self.message_user(
+				request,
+				f"Updated {updated} flags to group '{Flag.Group(group).label}'.",
+				level=messages.SUCCESS,
+			)
+			return None
+
+		request.current_app = self.admin_site.name
+		context = {
+			**self.admin_site.each_context(request),
+			"title": "Set group for flags",
+			"flags": queryset,
+			"flag_groups": list(Flag.Group.choices),
+			"current_flag_group": "",
+			"action_name": "set_selected_flags_group",
+			"opts": self.model._meta,
+		}
+		return TemplateResponse(request, "admin/review_set_flag_group.html", context)
 
 
 @admin.register(Stem)
@@ -97,6 +158,11 @@ class StemAdmin(admin.ModelAdmin):
 	def assign_selected_to_user(self, request, queryset):
 		if "apply" in request.POST:
 			user_id = request.POST.get("user_id")
+			group = (request.POST.get("flag_group") or Flag.Group.PRIORITY).strip()
+			allowed_groups = {c[0] for c in Flag.Group.choices}
+			if group not in allowed_groups:
+				self.message_user(request, "Invalid flag group.", level=messages.ERROR)
+				return None
 			if not user_id:
 				self.message_user(request, "Select a user.", level=messages.ERROR)
 				return None
@@ -109,10 +175,17 @@ class StemAdmin(admin.ModelAdmin):
 
 			stem_ids = list(queryset.values_list("id", flat=True))
 			count = len(stem_ids)
+			flags = list(Flag.objects.filter(is_active=True, group=group).values_list("id", flat=True))
+			if stem_ids and not flags:
+				self.message_user(
+					request,
+					f"No active flags found in group '{Flag.Group(group).label}'.",
+					level=messages.ERROR,
+				)
+				return None
 			now = timezone.now()
 			Stem.objects.filter(id__in=stem_ids).update(assigned_to=user, assigned_at=now)
 
-			flags = list(Flag.objects.filter(is_active=True).values_list("id", flat=True))
 			if stem_ids and flags:
 				batch: list[StemFlagTask] = []
 				batch_size = 5000
@@ -127,7 +200,7 @@ class StemAdmin(admin.ModelAdmin):
 
 			self.message_user(
 				request,
-				f"Assigned {count} stems to {user.username}. Review tasks ensured for all active flags.",
+				f"Assigned {count} stems to {user.username}. Review tasks ensured for {len(flags)} active flags in group '{Flag.Group(group).label}'.",
 				level=messages.SUCCESS,
 			)
 			return None
@@ -139,6 +212,8 @@ class StemAdmin(admin.ModelAdmin):
 			"title": "Assign stems",
 			"stems": queryset,
 			"users": users,
+			"flag_groups": list(Flag.Group.choices),
+			"current_flag_group": Flag.Group.PRIORITY,
 			"action_name": "assign_selected_to_user",
 			"opts": self.model._meta,
 		}
