@@ -1,0 +1,9 @@
+Django==5.1.6
+# WSGI server for Render
+gunicorn==22.0.0
+# Static files in production
+whitenoise==6.7.0
+# Parse DATABASE_URL for Postgres on Render
+Dj-Database-URL==2.2.0
+# Postgres driver (Render Postgres)
+psycopg[binary]==3.2.1
