@@ -6,4 +6,5 @@ whitenoise==6.7.0
 # Parse DATABASE_URL for Postgres on Render
 Dj-Database-URL==2.2.0
 # Postgres driver (Render Postgres)
-psycopg[binary]==3.2.1
+# Don't hard-pin to a patch version that might not have wheels for Render's image.
+psycopg[binary]>=3.2.2,<4
