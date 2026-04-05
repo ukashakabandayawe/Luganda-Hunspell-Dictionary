@@ -1,0 +1,3038 @@
+﻿[
+{
+  "model": "review.flag",
+  "pk": 1,
+  "fields": {
+    "code": "ea",
+    "affix_type": "P",
+    "aff_order": 1,
+    "description": "Optional vowels at the begining of words",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 2,
+  "fields": {
+    "code": "ko",
+    "affix_type": "S",
+    "aff_order": 2,
+    "description": "suffix \"ko\" in words like okulyako, okulabako, fumbako Was using flag A but now uses ko",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 3,
+  "fields": {
+    "code": "mu",
+    "affix_type": "S",
+    "aff_order": 3,
+    "description": "suffix \"mu\" in words like tunulamu Was using flag O but now uses mu",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 4,
+  "fields": {
+    "code": "yk",
+    "affix_type": "S",
+    "aff_order": 4,
+    "description": "suffix \"yooko\"",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 5,
+  "fields": {
+    "code": "yo",
+    "affix_type": "S",
+    "aff_order": 5,
+    "description": "suffix \"yo\"",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 6,
+  "fields": {
+    "code": "wo",
+    "affix_type": "S",
+    "aff_order": 6,
+    "description": "suffix \"wo\"",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 7,
+  "fields": {
+    "code": "ae",
+    "affix_type": "S",
+    "aff_order": 7,
+    "description": "vowels at the end of possesives",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 8,
+  "fields": {
+    "code": "oo",
+    "affix_type": "P",
+    "aff_order": 8,
+    "description": "A person who does an act It can also be used like the Luganda equivalent of English's \"just\"",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 9,
+  "fields": {
+    "code": "RP",
+    "affix_type": "P",
+    "aff_order": 9,
+    "description": "Reflexive verb form subject markers: present simple tense (also usable for some past forms)",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 10,
+  "fields": {
+    "code": "ps",
+    "affix_type": "P",
+    "aff_order": 10,
+    "description": "Negative subject markers: present simple + very near past",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 11,
+  "fields": {
+    "code": "pS",
+    "affix_type": "P",
+    "aff_order": 11,
+    "description": "present simple tense and very near past tense negative subject marker to be used in relative pronoun words",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 12,
+  "fields": {
+    "code": "np",
+    "affix_type": "P",
+    "aff_order": 12,
+    "description": "Negative subject markers: near + distant past",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 13,
+  "fields": {
+    "code": "nP",
+    "affix_type": "P",
+    "aff_order": 13,
+    "description": "Negative Subject markers for the near past and distant past to be used in the combination [object]+[subject]+[stem] I think its called relative pronouns in English",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 14,
+  "fields": {
+    "code": "nf",
+    "affix_type": "P",
+    "aff_order": 14,
+    "description": "Negative subject markers: near future",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 15,
+  "fields": {
+    "code": "ff",
+    "affix_type": "P",
+    "aff_order": 15,
+    "description": "Negative subject markers: far future",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 16,
+  "fields": {
+    "code": "fF",
+    "affix_type": "P",
+    "aff_order": 16,
+    "description": "Negative Subject markers for the far future tense in relative pronoun words",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 17,
+  "fields": {
+    "code": "Rn",
+    "affix_type": "P",
+    "aff_order": 17,
+    "description": "Reflexive verb form subject markers: near future",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 18,
+  "fields": {
+    "code": "RF",
+    "affix_type": "P",
+    "aff_order": 18,
+    "description": "Reflexive verb form subject markers: far future",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 19,
+  "fields": {
+    "code": "rf",
+    "affix_type": "P",
+    "aff_order": 19,
+    "description": "Reflexive negative subject markers: far future",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 20,
+  "fields": {
+    "code": "rF",
+    "affix_type": "P",
+    "aff_order": 20,
+    "description": "Reflexive Negative Subject markers for the far future tense e.g silyeliisa, tolyeliisa, temulyewalana, tebalyeluma",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 21,
+  "fields": {
+    "code": "gg",
+    "affix_type": "P",
+    "aff_order": 21,
+    "description": "Infinitive prefix for non-reflexive verbs (oku-/ku- plus agreement variants)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 22,
+  "fields": {
+    "code": "hh",
+    "affix_type": "P",
+    "aff_order": 22,
+    "description": "Infinitive prefix for reflexive verbs (okwee-/kwee- plus agreement variants)",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 23,
+  "fields": {
+    "code": "rp",
+    "affix_type": "P",
+    "aff_order": 23,
+    "description": "Negation for reflexive verb forms in present/very-near past (e.g. seetaaga/te-...)",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 24,
+  "fields": {
+    "code": "rP",
+    "affix_type": "P",
+    "aff_order": 24,
+    "description": "Negating the reflexive verb form for relative pronoun words e.g zeseetaaga, kyemuteetaaga in Present simple tense",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 25,
+  "fields": {
+    "code": "PS",
+    "affix_type": "P",
+    "aff_order": 25,
+    "description": "Subject markers (affirmative): present simple + very near past",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 26,
+  "fields": {
+    "code": "PT",
+    "affix_type": "P",
+    "aff_order": 26,
+    "description": "subjects markers in present simple tense These handle special cases e.g you can have the word \"babeewo\" but not \"ababeewo\"",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 27,
+  "fields": {
+    "code": "VP",
+    "affix_type": "P",
+    "aff_order": 27,
+    "description": "subjects markers in very near past tense This used to use flag E together with the present tense subject markers since the prefixes for both tenses are the same but was made independent and changed to SC and then finally changed to VP",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 28,
+  "fields": {
+    "code": "NP",
+    "affix_type": "P",
+    "aff_order": 28,
+    "description": "Subject markers (affirmative): near past",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 29,
+  "fields": {
+    "code": "DP",
+    "affix_type": "P",
+    "aff_order": 29,
+    "description": "Subject markers (affirmative): distant past",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 30,
+  "fields": {
+    "code": "NF",
+    "affix_type": "P",
+    "aff_order": 30,
+    "description": "Subject markers (affirmative): near future",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 31,
+  "fields": {
+    "code": "nF",
+    "affix_type": "P",
+    "aff_order": 31,
+    "description": "Negative Subject markers for the near future to be used in the combination [object]+[subject]+[stem] I think its called relative pronouns in English",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 32,
+  "fields": {
+    "code": "FF",
+    "affix_type": "P",
+    "aff_order": 32,
+    "description": "Subject markers (affirmative): far future",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 33,
+  "fields": {
+    "code": "PP",
+    "affix_type": "P",
+    "aff_order": 33,
+    "description": "Subject markers for the present progressive tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 34,
+  "fields": {
+    "code": "pp",
+    "affix_type": "P",
+    "aff_order": 34,
+    "description": "Negative subject markers for the present progressive tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 35,
+  "fields": {
+    "code": "Pp",
+    "affix_type": "P",
+    "aff_order": 35,
+    "description": "Negative subject markers for the present progressive tense to be used in relative pronouns",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 36,
+  "fields": {
+    "code": "JJ",
+    "affix_type": "P",
+    "aff_order": 36,
+    "description": "Subject markers for the distant past progressive tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 37,
+  "fields": {
+    "code": "jj",
+    "affix_type": "P",
+    "aff_order": 37,
+    "description": "Negative Subject markers for the distant past progressive tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 38,
+  "fields": {
+    "code": "IP",
+    "affix_type": "P",
+    "aff_order": 38,
+    "description": "Subject markers for the immediate past tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 39,
+  "fields": {
+    "code": "ip",
+    "affix_type": "P",
+    "aff_order": 39,
+    "description": "Negative Subject markers for the immediate past tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 40,
+  "fields": {
+    "code": "RI",
+    "affix_type": "P",
+    "aff_order": 40,
+    "description": "Reflexive Subject markers for the immediate past tense",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 41,
+  "fields": {
+    "code": "ri",
+    "affix_type": "P",
+    "aff_order": 41,
+    "description": "Reflexive Negative Subject markers for the immediate past tense",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 42,
+  "fields": {
+    "code": "YT",
+    "affix_type": "P",
+    "aff_order": 42,
+    "description": "Using the adverb \"yet\"",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 43,
+  "fields": {
+    "code": "yt",
+    "affix_type": "P",
+    "aff_order": 43,
+    "description": "Using the adverb \"yet\" in reflexive verbs",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 44,
+  "fields": {
+    "code": "yT",
+    "affix_type": "P",
+    "aff_order": 44,
+    "description": "subject markers of the adverb \"yet\" to be used with relative pronouns especially after a cross product with rule ob",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 45,
+  "fields": {
+    "code": "SC",
+    "affix_type": "P",
+    "aff_order": 45,
+    "description": "subordinating conjunction \"when\" glued to subjects markers in present simple and very near past tense It befits to add lemma \"ba\", \"badde\" to Luganda.dic to handle wemuba, weziba, wetuba, webabadde etc",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 46,
+  "fields": {
+    "code": "sc",
+    "affix_type": "P",
+    "aff_order": 46,
+    "description": "subordinating conjunction \"when\" glued to negative subjects markers in present simple and very near past tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 47,
+  "fields": {
+    "code": "WN",
+    "affix_type": "P",
+    "aff_order": 47,
+    "description": "subordinating conjunction \"when\" glued to subjects markers in near and distant past tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 48,
+  "fields": {
+    "code": "wn",
+    "affix_type": "P",
+    "aff_order": 48,
+    "description": "subordinating conjunction \"when\" glued to negative subjects markers in near and distant past tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 49,
+  "fields": {
+    "code": "WM",
+    "affix_type": "P",
+    "aff_order": 49,
+    "description": "subordinating conjunction \"when\" glued to subjects markers in near future tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 50,
+  "fields": {
+    "code": "wm",
+    "affix_type": "P",
+    "aff_order": 50,
+    "description": "subordinating conjunction \"when\" glued to negative subjects markers in near future tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 51,
+  "fields": {
+    "code": "WF",
+    "affix_type": "P",
+    "aff_order": 51,
+    "description": "subordinating conjunction \"when\" glued to subjects markers in far future tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 52,
+  "fields": {
+    "code": "wf",
+    "affix_type": "P",
+    "aff_order": 52,
+    "description": "subordinating conjunction \"when\" glued to subjects markers in the far future tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 53,
+  "fields": {
+    "code": "WG",
+    "affix_type": "P",
+    "aff_order": 53,
+    "description": "subordinating conjunction \"when\" glued to reflexive subjects markers in present simple tense and the past tenses",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 54,
+  "fields": {
+    "code": "wg",
+    "affix_type": "P",
+    "aff_order": 54,
+    "description": "subordinating conjunction \"when\" glued to reflexive negative subjects markers in present simple tense and the past tenses",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 55,
+  "fields": {
+    "code": "WH",
+    "affix_type": "P",
+    "aff_order": 55,
+    "description": "subordinating conjunction \"when\" glued to reflexive subjects markers in near future tense",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 56,
+  "fields": {
+    "code": "wh",
+    "affix_type": "P",
+    "aff_order": 56,
+    "description": "subordinating conjunction \"when\" glued to reflexive negative subjects markers in near future tense",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 57,
+  "fields": {
+    "code": "WJ",
+    "affix_type": "P",
+    "aff_order": 57,
+    "description": "subordinating conjunction \"when\" glued to reflexive subjects markers in far future tense",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 58,
+  "fields": {
+    "code": "wj",
+    "affix_type": "P",
+    "aff_order": 58,
+    "description": "subordinating conjunction \"when\" glued to relexive negative subjects markers in the far future tense",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 59,
+  "fields": {
+    "code": "SB",
+    "affix_type": "P",
+    "aff_order": 59,
+    "description": "The permission subjunctive",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 60,
+  "fields": {
+    "code": "Sb",
+    "affix_type": "P",
+    "aff_order": 60,
+    "description": "The reflexive permission subjunctive",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 61,
+  "fields": {
+    "code": "CC",
+    "affix_type": "P",
+    "aff_order": 61,
+    "description": "Counterfactual conditions: nnandikoze, bandilidde",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 62,
+  "fields": {
+    "code": "cC",
+    "affix_type": "P",
+    "aff_order": 62,
+    "description": "Counterfactual conditions with reflexive verbs: nnandyebasse, bandyegulidde",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 63,
+  "fields": {
+    "code": "IM",
+    "affix_type": "P",
+    "aff_order": 63,
+    "description": "Expressing possibility using modal verb \"may\"",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 64,
+  "fields": {
+    "code": "iM",
+    "affix_type": "P",
+    "aff_order": 64,
+    "description": "Expressing possibility using modal verb \"may\" for reflexive verbs",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 65,
+  "fields": {
+    "code": "Ob",
+    "affix_type": "P",
+    "aff_order": 65,
+    "description": "Object markers (basic)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 66,
+  "fields": {
+    "code": "OR",
+    "affix_type": "P",
+    "aff_order": 66,
+    "description": "Special reflexive object markers used in constructions like \"-mwe-\", \"-gwe-\", etc.",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 67,
+  "fields": {
+    "code": "ob",
+    "affix_type": "P",
+    "aff_order": 67,
+    "description": "These are objects as used in relative pronouns they cant be used independently, they have to be chained with subject markers in all tenses",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 68,
+  "fields": {
+    "code": "Ad",
+    "affix_type": "P",
+    "aff_order": 68,
+    "description": "Adjectives",
+    "is_active": true,
+    "group": "adjectives"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 69,
+  "fields": {
+    "code": "St",
+    "affix_type": "P",
+    "aff_order": 69,
+    "description": "The adverb \"still\"",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 70,
+  "fields": {
+    "code": "st",
+    "affix_type": "P",
+    "aff_order": 70,
+    "description": "Negating the adverb \"still\" to \"no longer\"",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 71,
+  "fields": {
+    "code": "ST",
+    "affix_type": "P",
+    "aff_order": 71,
+    "description": "The adverb \"Still\" as used with reflexive verbs",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 72,
+  "fields": {
+    "code": "sT",
+    "affix_type": "P",
+    "aff_order": 72,
+    "description": "Negating the adverb \"still\" to \"no longer\" as used with reflexive verbs",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 73,
+  "fields": {
+    "code": "LT",
+    "affix_type": "P",
+    "aff_order": 73,
+    "description": "The adverbs \"like this\" and \"Like that\" in present simple tense and very near past",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 77,
+  "fields": {
+    "code": "nc",
+    "affix_type": "P",
+    "aff_order": 77,
+    "description": "Handles class III nouns like ennyumba, ennyimba, ennyondo without disrupting enyonyi, ennamba",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 80,
+  "fields": {
+    "code": "N6",
+    "affix_type": "P",
+    "aff_order": 80,
+    "description": "Class VI noun prefixes",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 81,
+  "fields": {
+    "code": "bu",
+    "affix_type": "P",
+    "aff_order": 81,
+    "description": "Special class VI nouns",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 86,
+  "fields": {
+    "code": "yy",
+    "affix_type": "P",
+    "aff_order": 86,
+    "description": "Impersonal possessive prefix",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 87,
+  "fields": {
+    "code": "zz",
+    "affix_type": "P",
+    "aff_order": 87,
+    "description": "Size-based noun prefixes (aka-/obu-/ebya-/etc.)",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 88,
+  "fields": {
+    "code": "NN",
+    "affix_type": "P",
+    "aff_order": 88,
+    "description": "Cross product PS x Ob (present/very-near-past subject + basic object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 89,
+  "fields": {
+    "code": "GG",
+    "affix_type": "P",
+    "aff_order": 89,
+    "description": "Cross product NP x Ob (near-past subject + basic object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 90,
+  "fields": {
+    "code": "QQ",
+    "affix_type": "P",
+    "aff_order": 90,
+    "description": "Cross product NF x Ob (near-future subject + basic object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 91,
+  "fields": {
+    "code": "RR",
+    "affix_type": "P",
+    "aff_order": 91,
+    "description": "Cross product FF x Ob (far-future subject + basic object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 92,
+  "fields": {
+    "code": "SS",
+    "affix_type": "P",
+    "aff_order": 92,
+    "description": "Cross product ps x Ob (present/very-near-past negative subject + basic object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 93,
+  "fields": {
+    "code": "MM",
+    "affix_type": "P",
+    "aff_order": 93,
+    "description": "Cross product gg x Ob (infinitive + basic object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 94,
+  "fields": {
+    "code": "II",
+    "affix_type": "P",
+    "aff_order": 94,
+    "description": "Cross product np x Ob (past negative subject + basic object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 95,
+  "fields": {
+    "code": "WW",
+    "affix_type": "P",
+    "aff_order": 95,
+    "description": "Cross product nf x Ob (near-future negative subject + basic object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 96,
+  "fields": {
+    "code": "TT",
+    "affix_type": "P",
+    "aff_order": 96,
+    "description": "Cross product ff x Ob (far-future negative subject + basic object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 97,
+  "fields": {
+    "code": "UU",
+    "affix_type": "P",
+    "aff_order": 97,
+    "description": "Cross product PS x OR (present/very-near-past subject + special reflexive object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 98,
+  "fields": {
+    "code": "VV",
+    "affix_type": "P",
+    "aff_order": 98,
+    "description": "Cross product NP x OR (near-past subject + special reflexive object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 99,
+  "fields": {
+    "code": "XX",
+    "affix_type": "P",
+    "aff_order": 99,
+    "description": "Cross product DP x OR (distant-past subject + special reflexive object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 100,
+  "fields": {
+    "code": "YY",
+    "affix_type": "P",
+    "aff_order": 100,
+    "description": "Cross product NF x OR (near-future subject + special reflexive object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 101,
+  "fields": {
+    "code": "ZZ",
+    "affix_type": "P",
+    "aff_order": 101,
+    "description": "Cross product FF x OR (far-future subject + special reflexive object)",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 102,
+  "fields": {
+    "code": "LL",
+    "affix_type": "P",
+    "aff_order": 102,
+    "description": "Cross product PP x OR (present progressive subject + special reflexive object) -> LL",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 103,
+  "fields": {
+    "code": "kk",
+    "affix_type": "P",
+    "aff_order": 103,
+    "description": "Cross product pp x Ob (negative present progressive subject + basic object) -> kk",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 104,
+  "fields": {
+    "code": "KK",
+    "affix_type": "P",
+    "aff_order": 104,
+    "description": "Cross product pp x OR (negative present progressive subject + special reflexive object) -> KK",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 105,
+  "fields": {
+    "code": "vv",
+    "affix_type": "P",
+    "aff_order": 105,
+    "description": "Cross product IP x Ob (immediate past subject + basic object) -> vv",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 106,
+  "fields": {
+    "code": "xx",
+    "affix_type": "P",
+    "aff_order": 106,
+    "description": "Cross product ip x Ob (negative immediate past subject + basic object) -> xx",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 107,
+  "fields": {
+    "code": "cc",
+    "affix_type": "P",
+    "aff_order": 107,
+    "description": "Cross product ip x OR (negative immediate past subject + special reflexive object) -> cc",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 108,
+  "fields": {
+    "code": "ww",
+    "affix_type": "P",
+    "aff_order": 108,
+    "description": "Cross product IP x OR (immediate past subject + special reflexive object) -> ww",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 109,
+  "fields": {
+    "code": "HH",
+    "affix_type": "P",
+    "aff_order": 109,
+    "description": "Cross product JJ x Ob (distant past progressive subject + basic object) -> HH",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 110,
+  "fields": {
+    "code": "tt",
+    "affix_type": "P",
+    "aff_order": 110,
+    "description": "Cross product jj x Ob (negative past progressive subject + basic object) -> tt",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 111,
+  "fields": {
+    "code": "ii",
+    "affix_type": "P",
+    "aff_order": 111,
+    "description": "Cross product JJ x OR (distant past progressive subject + special reflexive object) -> ii",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 112,
+  "fields": {
+    "code": "uu",
+    "affix_type": "P",
+    "aff_order": 112,
+    "description": "Cross product jj x OR (negative past progressive subject + special reflexive object) -> uu",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 113,
+  "fields": {
+    "code": "ll",
+    "affix_type": "P",
+    "aff_order": 113,
+    "description": "Cross product PP x Ob (present progressive subject + basic object) -> ll",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 114,
+  "fields": {
+    "code": "BG",
+    "affix_type": "P",
+    "aff_order": 114,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x DP (Subject markers (affirmative): distant and very near  past) -> BG",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 115,
+  "fields": {
+    "code": "BI",
+    "affix_type": "P",
+    "aff_order": 115,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x FF (Subject markers (affirmative): far future) -> BI",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 116,
+  "fields": {
+    "code": "BS",
+    "affix_type": "P",
+    "aff_order": 116,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x fF (Negative Subject markers for the far future tense in relative pronoun words) -> BS",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 117,
+  "fields": {
+    "code": "BK",
+    "affix_type": "P",
+    "aff_order": 117,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x IP (Subject markers for the immediate past tense) -> BK",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 118,
+  "fields": {
+    "code": "BV",
+    "affix_type": "P",
+    "aff_order": 118,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x nF (Negative Subject markers for the near future to be used in the combination [object]+[subject]+[stem]) -> BV",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 119,
+  "fields": {
+    "code": "BF",
+    "affix_type": "P",
+    "aff_order": 119,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x NP (Subject markers (affirmative): near past) -> BF",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 120,
+  "fields": {
+    "code": "BQ",
+    "affix_type": "P",
+    "aff_order": 120,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x Pp (Negative subject markers for the present progressive tense to be used in relative pronouns) -> BQ",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 121,
+  "fields": {
+    "code": "BW",
+    "affix_type": "P",
+    "aff_order": 121,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x PP (Subject markers for the present progressive tense) -> BW",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 122,
+  "fields": {
+    "code": "BD",
+    "affix_type": "P",
+    "aff_order": 122,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x PS (Subject markers (affirmative): present simple + very near past) -> BD",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 123,
+  "fields": {
+    "code": "BM",
+    "affix_type": "P",
+    "aff_order": 123,
+    "description": "Cross product ob (Object Relative) x RP (Reflexive Present) -> BM",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 124,
+  "fields": {
+    "code": "BH",
+    "affix_type": "P",
+    "aff_order": 124,
+    "description": "Cross product ob (Objects in Relative pronouns) x NF (Subject markers (affirmative): near future) -> BH",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 125,
+  "fields": {
+    "code": "BR",
+    "affix_type": "P",
+    "aff_order": 125,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x pS (present simple tense and very near past tense negative subject marker to be used in relative pronoun words) -> BR",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 126,
+  "fields": {
+    "code": "BP",
+    "affix_type": "P",
+    "aff_order": 126,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x RF (Reflexive verb form subject markers: far future) -> BP",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 127,
+  "fields": {
+    "code": "BT",
+    "affix_type": "P",
+    "aff_order": 127,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x rF (Reflexive Negative Subject markers for the far future tense) -> BT",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 128,
+  "fields": {
+    "code": "BL",
+    "affix_type": "P",
+    "aff_order": 128,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x RI (Reflexive Subject markers for the immediate past tense) -> BL",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 129,
+  "fields": {
+    "code": "BN",
+    "affix_type": "P",
+    "aff_order": 129,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x Rn (Reflexive verb form subject markers: near future) -> BN",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 130,
+  "fields": {
+    "code": "BU",
+    "affix_type": "P",
+    "aff_order": 130,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x rP (Negating the reflexive verb form for relative pronoun words e.g zeseetaaga, kyemuteetaaga in Present simple tense) -> BU",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 131,
+  "fields": {
+    "code": "BE",
+    "affix_type": "P",
+    "aff_order": 131,
+    "description": "Cross product ob (These are objects as used in relative pronouns) x VP (subjects markers in very near past tense) -> BE",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 132,
+  "fields": {
+    "code": "BX",
+    "affix_type": "P",
+    "aff_order": 132,
+    "description": "Cross product ob (Object Relative) x nP (Negative Past Relative Subject in relative pronoun words) -> BX",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 133,
+  "fields": {
+    "code": "FY",
+    "affix_type": "P",
+    "aff_order": 133,
+    "description": "Cross product of CC (Counterfactual conditions) and Ob (Object markers) to FY Cross product of CC (Counterfactual conditions) and Ob (Object markers) to FY",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 134,
+  "fields": {
+    "code": "FZ",
+    "affix_type": "P",
+    "aff_order": 134,
+    "description": "Cross product of CC (Counterfactual conditions) and OR (Special reflexive object markers) to FZ",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 135,
+  "fields": {
+    "code": "EH",
+    "affix_type": "P",
+    "aff_order": 135,
+    "description": "Cross product of LT (Adverbs like this and like that in present simple tense) and Ob (Object markers) to EH",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 136,
+  "fields": {
+    "code": "EJ",
+    "affix_type": "P",
+    "aff_order": 136,
+    "description": "Cross product of LT (Adverbs like this and like that in present simple tense) and OR (Special reflexive object markers) to EJ",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 137,
+  "fields": {
+    "code": "ED",
+    "affix_type": "P",
+    "aff_order": 137,
+    "description": "Cross product of ob (Objects used in relative pronouns) and yT (Subject markers of adverb yet for relative pronouns) to FC Cross product of ob (Objects used in relative pronouns) and St (Adverb still) to ED",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 138,
+  "fields": {
+    "code": "FC",
+    "affix_type": "P",
+    "aff_order": 138,
+    "description": "Cross product of ob (Objects used in relative pronouns) and yT (Subject markers of adverb yet for relative pronouns) to FC",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 139,
+  "fields": {
+    "code": "FX",
+    "affix_type": "P",
+    "aff_order": 139,
+    "description": "Cross product of SB (Permission subjunctive) and Ob (Object markers) to FX",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 140,
+  "fields": {
+    "code": "FD",
+    "affix_type": "P",
+    "aff_order": 140,
+    "description": "Cross product of SC (Subordinating conjunction when with subjects in present simple tense) and Ob (Object markers) to FD",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 141,
+  "fields": {
+    "code": "FI",
+    "affix_type": "P",
+    "aff_order": 141,
+    "description": "Cross product of SC (Subordinating conjunction when with subjects in present simple tense) and OR (Special reflexive object markers) to FI",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 142,
+  "fields": {
+    "code": "FJ",
+    "affix_type": "P",
+    "aff_order": 142,
+    "description": "Cross product of sc (Subordinating conjunction when with negative subjects in present simple tense) and OR (Special reflexive object markers) to FJ",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 143,
+  "fields": {
+    "code": "EB",
+    "affix_type": "P",
+    "aff_order": 143,
+    "description": "Cross product of St (Adverb still) and Ob (Object markers) to EB Cross product of St (Adverb still) and Ob (Object markers) to EB",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 144,
+  "fields": {
+    "code": "EF",
+    "affix_type": "P",
+    "aff_order": 144,
+    "description": "Cross product of st (Negating adverb still to no longer) and Ob (Object markers) to EF",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 145,
+  "fields": {
+    "code": "FE",
+    "affix_type": "P",
+    "aff_order": 145,
+    "description": "Cross product of sc (Subordinating conjunction when with negative subjects in present simple tense) and Ob (Object markers) to FE",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 146,
+  "fields": {
+    "code": "EC",
+    "affix_type": "P",
+    "aff_order": 146,
+    "description": "Cross product of St (Adverb still) and OR (Special reflexive object markers) to EC",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 147,
+  "fields": {
+    "code": "EG",
+    "affix_type": "P",
+    "aff_order": 147,
+    "description": "Cross product of st (Negating adverb still to no longer) and OR (Special reflexive object markers) to EG",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 148,
+  "fields": {
+    "code": "FS",
+    "affix_type": "P",
+    "aff_order": 148,
+    "description": "Cross product of WF (Subordinating conjunction when with subjects in far future tense) and Ob (Object markers) to FS",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 149,
+  "fields": {
+    "code": "FV",
+    "affix_type": "P",
+    "aff_order": 149,
+    "description": "Cross product of wf (Subordinating conjunction when with negative subjects in far future tense) and Ob (Object markers) to FV",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 150,
+  "fields": {
+    "code": "FT",
+    "affix_type": "P",
+    "aff_order": 150,
+    "description": "Cross product of WF (Subordinating conjunction when with subjects in far future tense) and OR (Special reflexive object markers) to FT",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 151,
+  "fields": {
+    "code": "FW",
+    "affix_type": "P",
+    "aff_order": 151,
+    "description": "Cross product of wf (Subordinating conjunction when with negative subjects in far future tense) and OR (Special reflexive object markers) to FW",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 152,
+  "fields": {
+    "code": "FM",
+    "affix_type": "P",
+    "aff_order": 152,
+    "description": "Cross product of WM (Subordinating conjunction when with subjects in near future tense) and Ob (Object markers) to FM",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 153,
+  "fields": {
+    "code": "FP",
+    "affix_type": "P",
+    "aff_order": 153,
+    "description": "Cross product of wm (Subordinating conjunction when with negative subjects in near future tense) and Ob (Object markers) to FP",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 154,
+  "fields": {
+    "code": "FN",
+    "affix_type": "P",
+    "aff_order": 154,
+    "description": "Cross product of WM (Subordinating conjunction when with subjects in near future tense) and OR (Special reflexive object markers) to FN",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 155,
+  "fields": {
+    "code": "FR",
+    "affix_type": "P",
+    "aff_order": 155,
+    "description": "Cross product of wm (Subordinating conjunction when with negative subjects in near future tense) and OR (Special reflexive object markers) to FR",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 156,
+  "fields": {
+    "code": "FG",
+    "affix_type": "P",
+    "aff_order": 156,
+    "description": "Cross product of WN (Subordinating conjunction when with subjects in near and distant past tense) and Ob (Object markers) to FG",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 157,
+  "fields": {
+    "code": "FH",
+    "affix_type": "P",
+    "aff_order": 157,
+    "description": "Cross product of wn (Subordinating conjunction when with negative subjects in near and distant past tense) and Ob (Object markers) to FH",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 158,
+  "fields": {
+    "code": "FK",
+    "affix_type": "P",
+    "aff_order": 158,
+    "description": "Cross product of WN (Subordinating conjunction when with subjects in near and distant past tense) and OR (Special reflexive object markers) to FK",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 159,
+  "fields": {
+    "code": "FL",
+    "affix_type": "P",
+    "aff_order": 159,
+    "description": "Cross product of wn (Subordinating conjunction when with negative subjects in near and distant past tense) and OR (Special reflexive object markers) to FL",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 160,
+  "fields": {
+    "code": "FA",
+    "affix_type": "P",
+    "aff_order": 160,
+    "description": "Cross product of YT (Using the adverb yet) and Ob (Object markers) to FA",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 161,
+  "fields": {
+    "code": "FB",
+    "affix_type": "P",
+    "aff_order": 161,
+    "description": "Cross product of YT (Using the adverb yet) and OR (Special reflexive object markers) to FB",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 162,
+  "fields": {
+    "code": "EK",
+    "affix_type": "P",
+    "aff_order": 162,
+    "description": "Cross product of IM (IM) and Ob (Ob) to EK",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 163,
+  "fields": {
+    "code": "EL",
+    "affix_type": "P",
+    "aff_order": 163,
+    "description": "Cross product of IM (IM) and OR (OR) to EL",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 164,
+  "fields": {
+    "code": "EM",
+    "affix_type": "P",
+    "aff_order": 164,
+    "description": "Cross product of PS (Present simple tense subject markers) and Ob (Object markers) to EM",
+    "is_active": true,
+    "group": "priority"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 165,
+  "fields": {
+    "code": "JQ",
+    "affix_type": "P",
+    "aff_order": 165,
+    "description": "Cross product of SB (Permission subjunctive) and OR (Special reflexive object markers) to JQ",
+    "is_active": true,
+    "group": "reflexive_verbs"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 166,
+  "fields": {
+    "code": "GA",
+    "affix_type": "P",
+    "aff_order": 166,
+    "description": "Cross product of FA (FA) and Ob (Object markers) to GA",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 167,
+  "fields": {
+    "code": "GB",
+    "affix_type": "P",
+    "aff_order": 167,
+    "description": "Cross product of EM (EM) and OR (Special reflexive object markers) to GB",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 168,
+  "fields": {
+    "code": "GC",
+    "affix_type": "P",
+    "aff_order": 168,
+    "description": "Cross product of EM (EM) and Ob (Object markers) to GC",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 169,
+  "fields": {
+    "code": "GD",
+    "affix_type": "P",
+    "aff_order": 169,
+    "description": "Cross product of EK (EK) and OR (Special reflexive object markers) to GD",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 170,
+  "fields": {
+    "code": "GE",
+    "affix_type": "P",
+    "aff_order": 170,
+    "description": "Cross product of EK (EK) and Ob (Object markers) to GE",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 171,
+  "fields": {
+    "code": "GF",
+    "affix_type": "P",
+    "aff_order": 171,
+    "description": "Cross product of FA (FA) and OR (Special reflexive object markers) to GF",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 172,
+  "fields": {
+    "code": "GH",
+    "affix_type": "P",
+    "aff_order": 172,
+    "description": "Cross product of FH (FH) and OR (Special reflexive object markers) to GH",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 173,
+  "fields": {
+    "code": "GI",
+    "affix_type": "P",
+    "aff_order": 173,
+    "description": "Cross product of FH (FH) and Ob (Object markers) to GI",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 174,
+  "fields": {
+    "code": "GJ",
+    "affix_type": "P",
+    "aff_order": 174,
+    "description": "Cross product of FG (FG) and OR (Special reflexive object markers) to GJ",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 175,
+  "fields": {
+    "code": "GK",
+    "affix_type": "P",
+    "aff_order": 175,
+    "description": "Cross product of FG (FG) and Ob (Object markers) to GK",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 176,
+  "fields": {
+    "code": "GL",
+    "affix_type": "P",
+    "aff_order": 176,
+    "description": "Cross product of FP (FP) and OR (Special reflexive object markers) to GL",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 177,
+  "fields": {
+    "code": "GM",
+    "affix_type": "P",
+    "aff_order": 177,
+    "description": "Cross product of FP (FP) and Ob (Object markers) to GM",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 178,
+  "fields": {
+    "code": "GN",
+    "affix_type": "P",
+    "aff_order": 178,
+    "description": "Cross product of FM (FM) and OR (Special reflexive object markers) to GN",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 179,
+  "fields": {
+    "code": "GO",
+    "affix_type": "P",
+    "aff_order": 179,
+    "description": "Cross product of FM (FM) and Ob (Object markers) to GO",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 180,
+  "fields": {
+    "code": "GP",
+    "affix_type": "P",
+    "aff_order": 180,
+    "description": "Cross product of FV (FV) and OR (Special reflexive object markers) to GP",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 181,
+  "fields": {
+    "code": "GQ",
+    "affix_type": "P",
+    "aff_order": 181,
+    "description": "Cross product of FV (FV) and Ob (Object markers) to GQ",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 182,
+  "fields": {
+    "code": "GR",
+    "affix_type": "P",
+    "aff_order": 182,
+    "description": "Cross product of FS (FS) and OR (Special reflexive object markers) to GR",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 183,
+  "fields": {
+    "code": "GS",
+    "affix_type": "P",
+    "aff_order": 183,
+    "description": "Cross product of FS (FS) and Ob (Object markers) to GS",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 184,
+  "fields": {
+    "code": "GT",
+    "affix_type": "P",
+    "aff_order": 184,
+    "description": "Cross product of FE (FE) and OR (Special reflexive object markers) to GT",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 185,
+  "fields": {
+    "code": "GU",
+    "affix_type": "P",
+    "aff_order": 185,
+    "description": "Cross product of FE (FE) and Ob (Object markers) to GU",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 186,
+  "fields": {
+    "code": "GV",
+    "affix_type": "P",
+    "aff_order": 186,
+    "description": "Cross product of EF (EF) and OR (Special reflexive object markers) to GV",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 187,
+  "fields": {
+    "code": "GW",
+    "affix_type": "P",
+    "aff_order": 187,
+    "description": "Cross product of EF (EF) and Ob (Object markers) to GW",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 188,
+  "fields": {
+    "code": "GX",
+    "affix_type": "P",
+    "aff_order": 188,
+    "description": "Cross product of EB (EB) and OR (Special reflexive object markers) to GX",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 189,
+  "fields": {
+    "code": "GY",
+    "affix_type": "P",
+    "aff_order": 189,
+    "description": "Cross product of EB (EB) and Ob (Object markers) to GY",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 190,
+  "fields": {
+    "code": "GZ",
+    "affix_type": "P",
+    "aff_order": 190,
+    "description": "Cross product of FD (FD) and OR (Special reflexive object markers) to GZ",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 191,
+  "fields": {
+    "code": "HA",
+    "affix_type": "P",
+    "aff_order": 191,
+    "description": "Cross product of FD (FD) and Ob (Object markers) to HA",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 192,
+  "fields": {
+    "code": "HB",
+    "affix_type": "P",
+    "aff_order": 192,
+    "description": "Cross product of FX (FX) and OR (Special reflexive object markers) to HB",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 193,
+  "fields": {
+    "code": "HC",
+    "affix_type": "P",
+    "aff_order": 193,
+    "description": "Cross product of FX (FX) and Ob (Object markers) to HC",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 194,
+  "fields": {
+    "code": "HD",
+    "affix_type": "P",
+    "aff_order": 194,
+    "description": "Cross product of FC (FC) and OR (Special reflexive object markers) to HD",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 195,
+  "fields": {
+    "code": "HE",
+    "affix_type": "P",
+    "aff_order": 195,
+    "description": "Cross product of FC (FC) and Ob (Object markers) to HE",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 196,
+  "fields": {
+    "code": "HF",
+    "affix_type": "P",
+    "aff_order": 196,
+    "description": "Cross product of ED (ED) and OR (Special reflexive object markers) to HF",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 197,
+  "fields": {
+    "code": "HG",
+    "affix_type": "P",
+    "aff_order": 197,
+    "description": "Cross product of ED (ED) and Ob (Object markers) to HG",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 198,
+  "fields": {
+    "code": "HI",
+    "affix_type": "P",
+    "aff_order": 198,
+    "description": "Cross product of EH (EH) and OR (Special reflexive object markers) to HI",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 199,
+  "fields": {
+    "code": "HJ",
+    "affix_type": "P",
+    "aff_order": 199,
+    "description": "Cross product of EH (EH) and Ob (Object markers) to HJ",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 200,
+  "fields": {
+    "code": "HK",
+    "affix_type": "P",
+    "aff_order": 200,
+    "description": "Cross product of BX (BX) and OR (Special reflexive object markers) to HK",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 201,
+  "fields": {
+    "code": "HL",
+    "affix_type": "P",
+    "aff_order": 201,
+    "description": "Cross product of BX (BX) and Ob (Object markers) to HL",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 202,
+  "fields": {
+    "code": "HM",
+    "affix_type": "P",
+    "aff_order": 202,
+    "description": "Cross product of BE (BE) and OR (Special reflexive object markers) to HM",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 203,
+  "fields": {
+    "code": "HN",
+    "affix_type": "P",
+    "aff_order": 203,
+    "description": "Cross product of BE (BE) and Ob (Object markers) to HN",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 204,
+  "fields": {
+    "code": "HO",
+    "affix_type": "P",
+    "aff_order": 204,
+    "description": "Cross product of BR (BR) and OR (Special reflexive object markers) to HO",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 205,
+  "fields": {
+    "code": "HP",
+    "affix_type": "P",
+    "aff_order": 205,
+    "description": "Cross product of BR (BR) and Ob (Object markers) to HP",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 206,
+  "fields": {
+    "code": "HQ",
+    "affix_type": "P",
+    "aff_order": 206,
+    "description": "Cross product of BH (BH) and OR (Special reflexive object markers) to HQ",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 207,
+  "fields": {
+    "code": "HR",
+    "affix_type": "P",
+    "aff_order": 207,
+    "description": "Cross product of BH (BH) and Ob (Object markers) to HR",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 208,
+  "fields": {
+    "code": "HS",
+    "affix_type": "P",
+    "aff_order": 208,
+    "description": "Cross product of BD (BD) and OR (Special reflexive object markers) to HS",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 209,
+  "fields": {
+    "code": "HT",
+    "affix_type": "P",
+    "aff_order": 209,
+    "description": "Cross product of BD (BD) and Ob (Object markers) to HT",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 210,
+  "fields": {
+    "code": "HU",
+    "affix_type": "P",
+    "aff_order": 210,
+    "description": "Cross product of BW (BW) and OR (Special reflexive object markers) to HU",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 211,
+  "fields": {
+    "code": "HV",
+    "affix_type": "P",
+    "aff_order": 211,
+    "description": "Cross product of BW (BW) and Ob (Object markers) to HV",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 212,
+  "fields": {
+    "code": "HW",
+    "affix_type": "P",
+    "aff_order": 212,
+    "description": "Cross product of BQ (BQ) and OR (Special reflexive object markers) to HW",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 213,
+  "fields": {
+    "code": "HX",
+    "affix_type": "P",
+    "aff_order": 213,
+    "description": "Cross product of BQ (BQ) and Ob (Object markers) to HX",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 214,
+  "fields": {
+    "code": "HY",
+    "affix_type": "P",
+    "aff_order": 214,
+    "description": "Cross product of BF (BF) and OR (Special reflexive object markers) to HY",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 215,
+  "fields": {
+    "code": "HZ",
+    "affix_type": "P",
+    "aff_order": 215,
+    "description": "Cross product of BF (BF) and Ob (Object markers) to HZ",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 216,
+  "fields": {
+    "code": "IA",
+    "affix_type": "P",
+    "aff_order": 216,
+    "description": "Cross product of BV (BV) and OR (Special reflexive object markers) to IA",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 217,
+  "fields": {
+    "code": "IB",
+    "affix_type": "P",
+    "aff_order": 217,
+    "description": "Cross product of BV (BV) and Ob (Object markers) to IB",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 218,
+  "fields": {
+    "code": "IC",
+    "affix_type": "P",
+    "aff_order": 218,
+    "description": "Cross product of BK (BK) and OR (Special reflexive object markers) to IC",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 219,
+  "fields": {
+    "code": "ID",
+    "affix_type": "P",
+    "aff_order": 219,
+    "description": "Cross product of BK (BK) and Ob (Object markers) to ID",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 220,
+  "fields": {
+    "code": "IE",
+    "affix_type": "P",
+    "aff_order": 220,
+    "description": "Cross product of BS (BS) and OR (Special reflexive object markers) to IE",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 221,
+  "fields": {
+    "code": "IF",
+    "affix_type": "P",
+    "aff_order": 221,
+    "description": "Cross product of BS (BS) and Ob (Object markers) to IF",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 222,
+  "fields": {
+    "code": "IG",
+    "affix_type": "P",
+    "aff_order": 222,
+    "description": "Cross product of BI (BI) and OR (Special reflexive object markers) to IG",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 223,
+  "fields": {
+    "code": "IH",
+    "affix_type": "P",
+    "aff_order": 223,
+    "description": "Cross product of BI (BI) and Ob (Object markers) to IH",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 224,
+  "fields": {
+    "code": "IJ",
+    "affix_type": "P",
+    "aff_order": 224,
+    "description": "Cross product of BG (BG) and OR (Special reflexive object markers) to IJ",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 225,
+  "fields": {
+    "code": "IK",
+    "affix_type": "P",
+    "aff_order": 225,
+    "description": "Cross product of BG (BG) and Ob (Object markers) to IK",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 226,
+  "fields": {
+    "code": "IL",
+    "affix_type": "P",
+    "aff_order": 226,
+    "description": "Cross product of ll (ll) and OR (Special reflexive object markers) to IL",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 227,
+  "fields": {
+    "code": "IN",
+    "affix_type": "P",
+    "aff_order": 227,
+    "description": "Cross product of ll (ll) and Ob (Object markers) to IN",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 228,
+  "fields": {
+    "code": "IO",
+    "affix_type": "P",
+    "aff_order": 228,
+    "description": "Cross product of tt (tt) and OR (Special reflexive object markers) to IO",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 229,
+  "fields": {
+    "code": "IQ",
+    "affix_type": "P",
+    "aff_order": 229,
+    "description": "Cross product of tt (tt) and Ob (Object markers) to IQ",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 230,
+  "fields": {
+    "code": "IR",
+    "affix_type": "P",
+    "aff_order": 230,
+    "description": "Cross product of HH (HH) and OR (Special reflexive object markers) to IR",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 231,
+  "fields": {
+    "code": "IS",
+    "affix_type": "P",
+    "aff_order": 231,
+    "description": "Cross product of HH (HH) and Ob (Object markers) to IS",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 232,
+  "fields": {
+    "code": "IT",
+    "affix_type": "P",
+    "aff_order": 232,
+    "description": "Cross product of vv (vv) and OR (Special reflexive object markers) to IT",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 233,
+  "fields": {
+    "code": "IU",
+    "affix_type": "P",
+    "aff_order": 233,
+    "description": "Cross product of vv (vv) and Ob (Object markers) to IU",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 234,
+  "fields": {
+    "code": "IV",
+    "affix_type": "P",
+    "aff_order": 234,
+    "description": "Cross product of kk (kk) and OR (Special reflexive object markers) to IV",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 235,
+  "fields": {
+    "code": "IW",
+    "affix_type": "P",
+    "aff_order": 235,
+    "description": "Cross product of kk (kk) and Ob (Object markers) to IW",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 236,
+  "fields": {
+    "code": "IX",
+    "affix_type": "P",
+    "aff_order": 236,
+    "description": "Cross product of TT (TT) and OR (Special reflexive object markers) to IX",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 237,
+  "fields": {
+    "code": "IY",
+    "affix_type": "P",
+    "aff_order": 237,
+    "description": "Cross product of TT (TT) and Ob (Object markers) to IY",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 238,
+  "fields": {
+    "code": "IZ",
+    "affix_type": "P",
+    "aff_order": 238,
+    "description": "Cross product of WW (WW) and OR (Special reflexive object markers) to IZ",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 239,
+  "fields": {
+    "code": "JA",
+    "affix_type": "P",
+    "aff_order": 239,
+    "description": "Cross product of WW (WW) and Ob (Object markers) to JA",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 240,
+  "fields": {
+    "code": "JB",
+    "affix_type": "P",
+    "aff_order": 240,
+    "description": "Cross product of II (II) and OR (Special reflexive object markers) to JB",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 241,
+  "fields": {
+    "code": "JC",
+    "affix_type": "P",
+    "aff_order": 241,
+    "description": "Cross product of II (II) and Ob (Object markers) to JC",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 242,
+  "fields": {
+    "code": "JD",
+    "affix_type": "P",
+    "aff_order": 242,
+    "description": "Cross product of MM (MM) and OR (Special reflexive object markers) to JD",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 243,
+  "fields": {
+    "code": "JE",
+    "affix_type": "P",
+    "aff_order": 243,
+    "description": "Cross product of MM (MM) and Ob (Object markers) to JE",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 244,
+  "fields": {
+    "code": "JF",
+    "affix_type": "P",
+    "aff_order": 244,
+    "description": "Cross product of SS (SS) and OR (Special reflexive object markers) to JF",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 245,
+  "fields": {
+    "code": "JG",
+    "affix_type": "P",
+    "aff_order": 245,
+    "description": "Cross product of SS (SS) and Ob (Object markers) to JG",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 246,
+  "fields": {
+    "code": "JH",
+    "affix_type": "P",
+    "aff_order": 246,
+    "description": "Cross product of RR (RR) and OR (Special reflexive object markers) to JH",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 247,
+  "fields": {
+    "code": "JI",
+    "affix_type": "P",
+    "aff_order": 247,
+    "description": "Cross product of RR (RR) and Ob (Object markers) to JI",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 248,
+  "fields": {
+    "code": "JK",
+    "affix_type": "P",
+    "aff_order": 248,
+    "description": "Cross product of QQ (QQ) and OR (Special reflexive object markers) to JK",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 249,
+  "fields": {
+    "code": "JL",
+    "affix_type": "P",
+    "aff_order": 249,
+    "description": "Cross product of QQ (QQ) and Ob (Object markers) to JL",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 250,
+  "fields": {
+    "code": "JM",
+    "affix_type": "P",
+    "aff_order": 250,
+    "description": "Cross product of GG (GG) and OR (Special reflexive object markers) to JM",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 251,
+  "fields": {
+    "code": "JN",
+    "affix_type": "P",
+    "aff_order": 251,
+    "description": "Cross product of GG (GG) and Ob (Object markers) to JN",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 252,
+  "fields": {
+    "code": "JO",
+    "affix_type": "P",
+    "aff_order": 252,
+    "description": "Cross product of NN (NN) and OR (Special reflexive object markers) to JO",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 253,
+  "fields": {
+    "code": "JP",
+    "affix_type": "P",
+    "aff_order": 253,
+    "description": "Cross product of NN (NN) and Ob (Object markers) to JP",
+    "is_active": true,
+    "group": "advanced"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 254,
+  "fields": {
+    "code": "N1",
+    "affix_type": "P",
+    "aff_order": 74,
+    "description": "Class I noun prefixes",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 255,
+  "fields": {
+    "code": "N2",
+    "affix_type": "P",
+    "aff_order": 75,
+    "description": "Class II noun prefixes",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 256,
+  "fields": {
+    "code": "N3",
+    "affix_type": "P",
+    "aff_order": 76,
+    "description": "Class III noun prefixes",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 257,
+  "fields": {
+    "code": "N4",
+    "affix_type": "P",
+    "aff_order": 78,
+    "description": "Class IV noun prefixes",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 258,
+  "fields": {
+    "code": "N5",
+    "affix_type": "P",
+    "aff_order": 79,
+    "description": "Class V noun prefixes",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 259,
+  "fields": {
+    "code": "N7",
+    "affix_type": "P",
+    "aff_order": 82,
+    "description": "Class VII noun prefixes",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 260,
+  "fields": {
+    "code": "N8",
+    "affix_type": "P",
+    "aff_order": 83,
+    "description": "Class VIII noun prefixes (large stuff)",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 261,
+  "fields": {
+    "code": "N9",
+    "affix_type": "P",
+    "aff_order": 84,
+    "description": "Class IX noun prefixes",
+    "is_active": true,
+    "group": "nouns"
+  }
+},
+{
+  "model": "review.flag",
+  "pk": 262,
+  "fields": {
+    "code": "Nx",
+    "affix_type": "P",
+    "aff_order": 85,
+    "description": "Class X noun prefixes",
+    "is_active": true,
+    "group": "nouns"
+  }
+}
+]
