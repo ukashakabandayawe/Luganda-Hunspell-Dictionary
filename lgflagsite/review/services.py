@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 import re
 import shutil
+from dataclasses import dataclass
 from typing import Dict, Set, Tuple
 
 from django.conf import settings
@@ -12,6 +13,13 @@ from django.contrib.auth import get_user_model
 from .dic_io import apply_flags_to_dic_file, ensure_working_dic_exists, rebuild_working_dic
 from .hunspell import detect_flag_mode
 from .models import StemFlagTask
+
+
+@dataclass(frozen=True)
+class WorkingDicUpdateResult:
+	matched: int = 0
+	changed: int = 0
+	did_sync: bool = False
 
 
 def _default_paths() -> tuple[Path, Path]:
@@ -109,12 +117,15 @@ def update_working_dic_for_task_change(
 	new_status: str,
 	*,
 	acting_user_id: int,
-) -> Tuple[int, int]:
+) -> WorkingDicUpdateResult:
 	"""Keep a per-user working .dic in sync with approvals.
 
 	- Approve: incrementally apply that flag to that stem in that user's working .dic.
 	- Un-approve (approved -> rejected/skipped/pending): rebuild that user's working .dic from source using approvals decided by that user.
 	"""
+	if not getattr(settings, "WORKING_DIC_SYNC_ON_REVIEW", True):
+		return WorkingDicUpdateResult(did_sync=False)
+
 	aff_path, source_dic = _default_paths()
 	working_dic = working_dic_path_for_user_id(acting_user_id)
 	flag_mode = detect_flag_mode(aff_path)
@@ -126,7 +137,8 @@ def update_working_dic_for_task_change(
 		# If the working file didn't exist (e.g. after a redeploy), rebuild from DB
 		# approvals first so we don't lose historical approvals.
 		if not existed_before:
-			return rebuild_working_dic_for_user_id(acting_user_id)
+			matched, changed = rebuild_working_dic_for_user_id(acting_user_id)
+			return WorkingDicUpdateResult(matched=matched, changed=changed, did_sync=True)
 
 		# Incremental apply.
 		stem = task.stem.text
@@ -135,10 +147,11 @@ def update_working_dic_for_task_change(
 			{stem: {task.flag.code}},
 			flag_mode,
 		)
-		return total_matched, total_changed
+		return WorkingDicUpdateResult(matched=total_matched, changed=total_changed, did_sync=True)
 
 	if previous_status == StemFlagTask.Status.APPROVED and new_status != StemFlagTask.Status.APPROVED:
 		# Need to remove previously applied flags, so rebuild from scratch.
-		return rebuild_working_dic_for_user_id(acting_user_id)
+		matched, changed = rebuild_working_dic_for_user_id(acting_user_id)
+		return WorkingDicUpdateResult(matched=matched, changed=changed, did_sync=True)
 
-	return 0, 0
+	return WorkingDicUpdateResult(did_sync=True)

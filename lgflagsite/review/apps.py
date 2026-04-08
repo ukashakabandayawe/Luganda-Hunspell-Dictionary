@@ -10,6 +10,10 @@ from django.conf import settings
 def _ensure_user_working_dic_exists(user_id: int) -> None:
     try:
         from django.conf import settings as dj_settings
+
+        if not getattr(dj_settings, "WORKING_DIC_SYNC_ON_REVIEW", True):
+            return
+
         from .dic_io import ensure_working_dic_exists
         from .services import working_dic_path_for_user_id
 
@@ -58,12 +62,13 @@ class ReviewConfig(AppConfig):
 
         def _warm() -> None:
             try:
-                from .hunspell import _aff_signature, _detect_flag_mode_cached
+                from .hunspell import _aff_signature, _affix_block_ranges_cached, _detect_flag_mode_cached
 
                 aff_path = Path(getattr(settings, "HUNSPELL_AFF_PATH"))
                 sig = _aff_signature(aff_path)
                 t0 = time.perf_counter()
                 _detect_flag_mode_cached(*sig)
+                _affix_block_ranges_cached(*sig)
                 _ = time.perf_counter() - t0
             except Exception:
                 # Best-effort only; never break app startup.

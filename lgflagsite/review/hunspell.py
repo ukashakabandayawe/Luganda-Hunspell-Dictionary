@@ -52,6 +52,95 @@ def _detect_flag_mode_cached(aff_path_str: str, mtime_ns: int, size: int) -> str
     return HunspellFlagMode.DEFAULT
 
 
+@lru_cache(maxsize=2)
+def _affix_block_ranges_cached(
+    aff_path_str: str,
+    mtime_ns: int,
+    size: int,
+) -> Dict[str, Tuple[Tuple[str, int, int], ...]]:
+    """Index .aff into per-flag byte ranges.
+
+    Many Hunspell .aff files (including Luganda.aff) are very large. Building a full
+    in-memory index of *all* rules can exceed small host RAM limits.
+
+    Instead, we do a single streaming pass and record the byte ranges for each
+    PFX/SFX header block. Later, to parse a single flag we only read its block(s)
+    from disk.
+
+    Returns: flag -> tuple of (affix_type 'P'|'S', start_byte, end_byte)
+    """
+
+    path = Path(aff_path_str)
+    out: Dict[str, List[Tuple[str, int, int]]] = {}
+
+    current_flag: Optional[str] = None
+    current_type: Optional[str] = None
+    current_start: Optional[int] = None
+
+    try:
+        with path.open("rb") as f:
+            while True:
+                start_pos = f.tell()
+                raw = f.readline()
+                if not raw:
+                    break
+
+                try:
+                    line = raw.decode("utf-8", errors="replace").strip()
+                except Exception:
+                    continue
+
+                if not line or line.startswith("#"):
+                    continue
+
+                parts = line.split()
+                if len(parts) >= 4 and parts[0].upper() in {"PFX", "SFX"} and parts[2].upper() in {"Y", "N"}:
+                    # New header block begins.
+                    if current_flag is not None and current_type is not None and current_start is not None:
+                        out.setdefault(current_flag, []).append((current_type, current_start, start_pos))
+
+                    current_flag = parts[1]
+                    current_type = "P" if parts[0].upper() == "PFX" else "S"
+                    current_start = start_pos
+
+            end_pos = int(size)
+            if current_flag is not None and current_type is not None and current_start is not None:
+                out.setdefault(current_flag, []).append((current_type, current_start, end_pos))
+    except OSError:
+        return {}
+
+    return {k: tuple(v) for k, v in out.items()}
+
+
+def _iter_aff_lines_in_ranges(
+    aff_path: Path,
+    ranges: Sequence[Tuple[str, int, int]],
+) -> Iterable[Tuple[str, str]]:
+    """Yield (affix_type, line) for lines inside the provided byte ranges."""
+
+    if not ranges:
+        return
+
+    with aff_path.open("rb") as f:
+        for affix_type, start_b, end_b in ranges:
+            if start_b < 0 or end_b <= start_b:
+                continue
+            try:
+                f.seek(int(start_b))
+            except OSError:
+                continue
+
+            while f.tell() < int(end_b):
+                raw = f.readline()
+                if not raw:
+                    break
+                try:
+                    line = raw.decode("utf-8", errors="replace").rstrip("\n")
+                except Exception:
+                    continue
+                yield affix_type, line
+
+
 def split_long_flags(flags_raw: str) -> List[str]:
     if not flags_raw:
         return []
@@ -270,52 +359,50 @@ def _affix_entries_for_flag_cached(
     if not flag:
         return ()
 
+    aff_path = Path(aff_path_str)
+    ranges = _affix_block_ranges_cached(aff_path_str, mtime_ns, size).get(flag, ())
+    if not ranges:
+        return ()
+
     combinable: Dict[str, bool] = {"P": False, "S": False}
     out: List[AffixEntry] = []
 
-    try:
-        with Path(aff_path_str).open("r", encoding="utf-8", errors="replace") as f:
-            for raw in f:
-                line = (raw or "").strip()
-                if not line or line.startswith("#"):
-                    continue
-                toks = line.split()
-                if len(toks) < 2:
-                    continue
-                kind = toks[0].upper()
-                if kind not in ("PFX", "SFX"):
-                    continue
+    for affix_type, raw in _iter_aff_lines_in_ranges(aff_path, ranges):
+        line = (raw or "").strip()
+        if not line or line.startswith("#"):
+            continue
+        toks = line.split()
+        if len(toks) < 2:
+            continue
+        kind = toks[0].upper()
+        if kind not in ("PFX", "SFX"):
+            continue
+        code = toks[1]
+        if code != flag:
+            continue
 
-                code = toks[1]
-                if code != flag:
-                    continue
+        # Header: PFX XX Y 2
+        is_header = len(toks) >= 4 and toks[2].upper() in ("Y", "N")
+        if is_header:
+            combinable[affix_type] = toks[2].upper() == "Y"
+            continue
 
-                affix_type = "P" if kind == "PFX" else "S"
-
-                # Header: PFX XX Y 2
-                is_header = len(toks) >= 4 and toks[2].upper() in ("Y", "N")
-                if is_header:
-                    combinable[affix_type] = toks[2].upper() == "Y"
-                    continue
-
-                # Rule line: PFX XX 0 tu .
-                if len(toks) < 4:
-                    continue
-                strip = "" if toks[2] == "0" else toks[2]
-                add = "" if toks[3] == "0" else toks[3]
-                condition = toks[4] if len(toks) >= 5 else "."
-                out.append(
-                    AffixEntry(
-                        affix_type=affix_type,
-                        flag=flag,
-                        strip=strip,
-                        add=add,
-                        condition=condition or ".",
-                        combinable=combinable.get(affix_type, False),
-                    )
-                )
-    except OSError:
-        return ()
+        # Rule line: PFX XX 0 tu .
+        if len(toks) < 4:
+            continue
+        strip = "" if toks[2] == "0" else toks[2]
+        add = "" if toks[3] == "0" else toks[3]
+        condition = toks[4] if len(toks) >= 5 else "."
+        out.append(
+            AffixEntry(
+                affix_type=affix_type,
+                flag=flag,
+                strip=strip,
+                add=add,
+                condition=condition or ".",
+                combinable=combinable.get(affix_type, False),
+            )
+        )
 
     return tuple(out)
 

@@ -46,9 +46,19 @@ def _env_bool(name: str, default: bool = False) -> bool:
 
 _render_hostname = (os.environ.get("RENDER_EXTERNAL_HOSTNAME") or "").strip()
 
-# Warm expensive Hunspell .aff parsing caches at startup.
-# On small hosts (e.g. Render free tier), warming can exceed memory limits.
-WARM_AFF_CACHE_ON_STARTUP = _env_bool("WARM_AFF_CACHE_ON_STARTUP", default=not bool(_render_hostname))
+# Warm Hunspell .aff parsing caches at startup.
+# This warmup is designed to be low-memory (byte-range index), and improves
+# reviewer latency for the first few flags after deploy.
+WARM_AFF_CACHE_ON_STARTUP = _env_bool("WARM_AFF_CACHE_ON_STARTUP", default=True)
+
+# Updating the on-disk working .dic on every approve/reject requires reading and
+# rewriting the entire (large) dictionary file. This is OK locally but can be very
+# slow on small/remote disks (e.g. Render). When disabled, decisions still persist
+# in the DB and working dictionaries are rebuilt on-demand for download.
+WORKING_DIC_SYNC_ON_REVIEW = _env_bool(
+    "WORKING_DIC_SYNC_ON_REVIEW",
+    default=not bool(_render_hostname),
+)
 
 
 # SECURITY WARNING: keep the secret key used in production secret!

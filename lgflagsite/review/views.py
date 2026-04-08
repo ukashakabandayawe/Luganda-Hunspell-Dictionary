@@ -71,14 +71,16 @@ def review_stem(request, stem_id: int):
             return redirect("review:review_stem", stem_id=stem.id)
 
         try:
-            matched, changed = update_working_dic_for_task_change(
+            result = update_working_dic_for_task_change(
                 task,
                 prev,
                 task.status,
                 acting_user_id=request.user.id,
             )
-            if task.status == StemFlagTask.Status.APPROVED:
-                messages.success(request, f"Approved. Updated {changed}/{matched} matching .dic lines.")
+            if not getattr(result, "did_sync", False):
+                messages.success(request, "Decision saved. Working .dic will be rebuilt on download.")
+            elif task.status == StemFlagTask.Status.APPROVED:
+                messages.success(request, f"Approved. Updated {result.changed}/{result.matched} matching .dic lines.")
             elif prev == StemFlagTask.Status.APPROVED and task.status != StemFlagTask.Status.APPROVED:
                 messages.success(request, "Decision saved. Working .dic rebuilt to reflect rollback.")
             else:

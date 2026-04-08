@@ -34,7 +34,9 @@ def download_user_working_dic(modeladmin, request, queryset):
 
 	# On ephemeral hosts, the working file may be missing after redeploy.
 	# Rebuild from DB approvals so downloads always reflect review progress.
-	if not working_dic.exists():
+	if not getattr(settings, "WORKING_DIC_SYNC_ON_REVIEW", True):
+		rebuild_working_dic_for_user_id(int(user.id))
+	elif not working_dic.exists():
 		rebuild_working_dic_for_user_id(int(user.id))
 	else:
 		ensure_working_dic_exists(source_dic, working_dic)
