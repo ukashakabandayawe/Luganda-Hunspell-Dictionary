@@ -226,12 +226,16 @@ bambi
 # --------- banja --------- #
 banja
 banje
+banjizza
 banjisa
 banjise
+banjisizza
 banjibwa
 banjibwe
+banjibbwa
 banjiza
 banjize
+banjilizza
 
 banjaako
 banjaamu
@@ -304,6 +308,14 @@ banjizeeyooko
 banjizeewo
 banjizeewooko
 banjizeengako
+
+banjilizzaako
+banjilizzaamu
+banjilizzaamuuko
+banjilizzaayo
+banjilizzaayooko
+banjilizzaawo
+banjilizzaawooko
 # ------------------------- #
 
 bannange
@@ -323,12 +335,16 @@ bega
 # ------------ bejjagala ------------ #
 bejjagala
 bejjagale
+bejjagadde
 bejjagaza
 bejjagaze
+bejjagazza
 bejjagalwa
 bejjagalwe
+bejjagaddwa
 bejjagalira
 bejjagalire
+bejjagalidde
 bejjagalako
 bejjagalamu
 bejjagalamuuko
@@ -345,6 +361,15 @@ bejjagaleyooko
 bejjagalewo
 bejjagalewooko
 bejjagalengako
+
+bejjagaddeko
+bejjagaddemu
+bejjagaddemuuko
+bejjagaddeyo
+bejjagaddeeyooko
+bejjagaddewo
+bejjagaddewooko
+
 bejjagazaako
 bejjagazaamu
 bejjagazaamuuko
@@ -361,6 +386,15 @@ bejjagazeeyooko
 bejjagazeewo
 bejjagazeewooko
 bejjagazeengako
+
+bejjaggazzaako
+bejjaggazzaamu
+bejjaggazzaamuuko
+bejjaggazzaayo
+bejjaggazzaayooko
+bejjaggazzaawo
+bejjaggazzaawooko
+
 bejjagalwaako
 bejjagalwaamu
 bejjagalwaamuuko
@@ -377,6 +411,16 @@ bejjagalweeyooko
 bejjagalweewo
 bejjagalweewooko
 bejjagalweengako
+
+bejjagaddwaako
+bejjagaddwaamu
+bejjagaddwaamuuko
+bejjagaddwaayo
+bejjagaddwaayooko
+bejjagaddwaawo
+bejjagaddwaawooko
+
+
 bejjagaliraako
 bejjagaliraamu
 bejjagaliraamuuko
@@ -394,6 +438,22 @@ bejjagalireewo
 bejjagalireewooko
 bejjagalireengako
 
+bejjagaliddwaako
+bejjagaliddwaamu
+bejjagaliddwaamuuko
+bejjagaliddwaayo
+bejjagaliddwaayooko
+bejjagaliddwaawo
+bejjagaliddwaawooko
+
+bejjagaliddeko
+bejjagaliddemu
+bejjagaliddemuuko
+bejjagaliddeyo
+bejjagaliddeeyooko
+bejjagaliddewo
+bejjagaliddewooko
+
 bendera
 bi
 bibiri
@@ -402,12 +462,16 @@ biici
 # --- biita --- #
 biita
 biite
+biise
 biitisa
 biitise
+biitisizza
 biitibwa
 biitibwe
+biitibbwa
 biitira
 biitire
+biitidde
 
 biitako
 biitamu
@@ -427,6 +491,14 @@ biitewo
 biitewooko
 biitengako
 
+biiseeko
+biiseemu
+biiseemuuko
+biiseeyo
+biiseeyooko
+biiseewo
+biiseewooko
+
 biitisaako
 biitisaamu
 biitisaamuuko
@@ -444,6 +516,14 @@ biitiseeyooko
 biitiseewo
 biitiseewooko
 biitiseengako
+
+biitisizzaako
+biitisizzaamu
+biitisizzaamuuko
+biitisizzaayo
+biitisizzaayooko
+biitisizzaawo
+biitisizzaawooko
 
 bitibwako
 bitibwaamu
@@ -463,6 +543,15 @@ bitibweewo
 bitibweewooko
 bitibweengako
 
+biitibbwaako
+biitibbwaamu
+biitibbwaamuuko
+biitibbwaayo
+biitibbwaayooko
+biitibbwaawo
+biitibbwaawooko
+biitibbwangako
+
 biitiraako
 biitiraamu
 biitiraamuuko
@@ -480,18 +569,30 @@ biitireeyooko
 biitireewo
 biitireewooko
 biitireengako
+
+biitiddeko
+biitiddemu
+biitiddemuuko
+biitiddeyo
+biitiddeeyooko
+biitiddewo
+biitiddewooko
 # ------------------------- #
 
 biki
 # --- bikka --- #
 bikka
 bikke
+bisse
 bikkisa
 bikkise
+bikkisizza
 bikkibwa
 bikkibwe
+bikkiddwa
 bikkira 
 bikkire
+bikkidde
 
 bikkako
 bikkamu
@@ -511,6 +612,15 @@ bikkewo
 bikkewooko
 bikkengako
 
+bisseeko
+bisseemu
+bisseemuuko
+bisseeyo
+bisseeyooko
+bisseewo
+bisseewooko
+bisseengako
+
 bikkisaako
 bikkisaamu
 bikkisaamuuko
@@ -528,6 +638,15 @@ bikkiseeyooko
 bikkiseewo
 bikkiseewooko
 bikkiseengako
+
+bikkisizzaako
+bikkisizzaamu
+bikkisizzaamuuko
+bikkisizzaayo
+bikkisizzaayooko
+bikkisizzaawo
+bikkisizzaawooko
+bikkisizangako
 
 bikkibwaako
 bikkibwaamu
@@ -547,6 +666,15 @@ bikkibweewo
 bikkibweewooko
 bikkibweengako
 
+bikkiddwaako
+bikkiddwaamu
+bikkiddwaamuuko
+bikkiddwaayo
+bikkiddwaayooko
+bikkiddwaawo
+bikkiddwaawooko
+bikkiddwangako
+
 bikkirako
 bikkiramu
 bikkiramuuko
@@ -564,6 +692,15 @@ bikkireeyooko
 bikkirewo
 bikkirewooko
 bikkireengako
+
+bikkiddeko
+bikkiddemu
+bikkiddemuuko
+bikkiddeyo
+bikkiddeyooko
+bikkiddewo
+bikkiddewooko
+bikkiddengako
 # ------------------------- #
 
 biki
@@ -580,8 +717,13 @@ bojja
 # --- bonaabona --- #
 bonaabona
 bonaabone
+bonyebonye
 bonyaabonya
 bonyaabonye
+bonyaabonyezza
+bonyaabonyezebwa
+bonyaabonyezebwe
+bonyaabonyezzeddwa
 bonaabonera
 bonaabonere
 
@@ -603,6 +745,15 @@ bonaabonewo
 bonaabonewooko
 bonaabonengako
 
+bonyebonyeeko
+bonyebonyeemu
+bonyebonyeemuuko
+bonyebonyeeyo
+bonyebonyeeyooko
+bonyebonyeewo
+bonyebonyeewooko
+bonyebonyeengako
+
 bonyaabonyaako
 bonyaabonyaamu
 bonyaabonyaamuuko
@@ -620,6 +771,42 @@ bonyaabonyeeyooko
 bonyaabonyeewo
 bonyaabonyeewooko
 bonyaabonyeengako
+
+bonyaabonyezzaako
+bonyaabonyezzaamu
+bonyaabonyezzaamuuko
+bonyaabonyezzaayo
+bonyaabonyezzaayooko
+bonyaabonyezzaawo
+bonyaabonyezzaawooko
+bonyaabonyezzangako
+
+bonyaabonyezebwaako
+bonyaabonyezebwaamu
+bonyaabonyezebwaamuuko
+bonyaabonyezebwaayo
+bonyaabonyezebwaayooko
+bonyaabonyezebwaawo
+bonyaabonyezebwaawooko
+bonyaabonyezebwangako
+
+bonyaabonyezebweeko
+bonyaabonyezebweemu
+bonyaabonyezebweemuuko
+bonyaabonyezebweeyo
+bonyaabonyezebweeyooko
+bonyaabonyezebweewo
+bonyaabonyezebweewooko
+bonyaabonyezebweengako
+
+bonyaabonyezzeddwaako
+bonyaabonyezzeddwaamu
+bonyaabonyezzeddwaamuuko
+bonyaabonyezzeddwaayo
+bonyaabonyezzeddwaayooko
+bonyaabonyezzeddwaawo
+bonyaabonyezzeddwaawooko
+bonyaabonyezzeddwangako
 
 bonaabonerako
 bonaaboneramu
