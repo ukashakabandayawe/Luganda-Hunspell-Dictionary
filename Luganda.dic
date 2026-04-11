@@ -2807,6 +2807,7 @@ fikkiddeyooko
 fikkiddewo
 fikkiddewooko
 fikkiddeengako
+# ------------------------- #
 
 
 firimu
@@ -2843,6 +2844,8 @@ fubyeeyooko
 fubyeewo
 fubyeewooko
 fubyeengako
+# ------------------------- #
+
 
 fubutuka
 fufuggala
@@ -2970,6 +2973,7 @@ fugiddeyooko
 fugiddewo
 fugiddewooko
 fugiddeengako
+# ------------------------- #
 
 
 fuka
@@ -3101,6 +3105,7 @@ fumbiddeyooko
 fumbiddewo
 fumbiddewooko
 fumbiddeengako
+# ------------------------- #
 
 fumbirwa
 fumbo
@@ -3226,8 +3231,6 @@ funiddeyooko
 funiddewo
 funiddewooko
 funiddeengako
-
-
 # -------------------------- #
 
 funda
@@ -3356,14 +3359,179 @@ fuliddeyooko
 fuliddewo
 fuliddewooko
 fuliddeengako
+# ------------------------- #
 
-
-fuula
 fuuwa
 fuuweeta
 fuuyira
+
+# ----------- okugaana ------------ #
 gaana
+gaane
+gaanye
+gaanibwa
+gaanibwe
+gaaniddwa
+gaanisa
+gaanise
+gaanisizza
+gaanira
+gaanire
+gaanidde
+
+gaanako
+gaanamu
+gaanamuuko
+gaanayo
+gaanaayooko
+gaanawo
+gaanawooko
+gaanangako
+
+gaaneko
+gaanemu
+gaanemuuko
+gaaneyo
+gaaneyooko
+gaanewo
+gaanewooko
+gaaneengako
+
+gaanyeeko
+gaanyeemu
+gaanyeemuuko
+gaanyeeyo
+gaanyeeyooko
+gaanyeewo
+gaanyeewooko
+gaanyeengako
+
+gaanibwako
+gaanibwamu
+gaanibwamuuko
+gaanibwayo
+gaanibwayooko
+gaanibwawo
+gaanibwawooko
+gaanibwangako
+
+gaanibweko
+gaanibwemu
+gaanibwemuuko
+gaanibweyo
+gaanibweyooko
+gaanibwewo
+gaanibwewooko
+gaanibwengako
+
+gaaniddwaako
+gaaniddwaamu
+gaaniddwaamuuko
+gaaniddwayo
+gaaniddwayooko
+gaaniddwaawo
+gaaniddwaawooko
+gaaniddwangako
+
+gaanisaako
+gaanisaamu
+gaanisaaamuuko
+gaanisaayo
+gaanisaayooko
+gaanisaawo
+gaanisaawooko
+gaanisangako
+
+gaaniseeko
+gaaniseemu
+gaaniseemuuko
+gaaniseeyo
+gaaniseeyooko
+gaaniseewo
+gaaniseewooko
+gaaniseengako
+
+gaanisizzaako
+gaanisizzaamu
+gaanisizzaamuuko
+gaanisizzaayo
+gaanisizzaayooko
+gaanisizzaawo
+gaanisizzaawooko
+gaanisizzangako
+
+gaanirako
+gaaniramu
+gaaniramuuko
+gaanirayo
+gaanirayooko
+gaanirawo
+gaanirawooko
+gaanirangako
+
+gaanireko
+gaaniremu
+gaaniremuuko
+gaanireyo
+gaanireyooko
+gaanirewo
+gaanirewooko
+gaanireengako
+
+gaaniddeko
+gaaniddemu
+gaaniddemuuko
+gaaniddeyo
+gaaniddeyooko
+gaaniddewo
+gaaniddewooko
+gaaniddeengako
+
+# ------------------------- #
+
+# ----------- okugaaya -------------- #
 gaaya
+gaaye
+gaayizza
+gaayibwa
+gaayibwe
+gaayibbwa
+gaayisa
+gaayise
+gaayisizza
+gaayira
+gaayire
+
+gaayako
+gaayamu
+gaayamuuko
+gaayayo
+gaayayooko
+gaayaawo
+gaayawooko
+gaayangako
+gaayangamu
+gaayangamuuko
+gaayanayo
+gaayaayooko
+gaayaawo
+gaayawooko
+
+gaayeko
+gaayemu
+gaayemuuko
+gaayeyo
+gaayeyooko
+gaayewo
+gaayewooko
+gaayengako
+gaayengamu
+gaayengamuuko
+gaayengayo
+gaayengayooko
+gaayengaawo
+gaayengawooko
+
 gaba
 gabalema
 gabana
