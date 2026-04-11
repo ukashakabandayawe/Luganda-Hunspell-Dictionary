@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#1F2937"
+        android:pathData="M54,6C27.49,6 6,27.49 6,54s21.49,48 48,48 48,-21.49 48,-48S80.51,6 54,6z" />
+
+    <!-- Simple open-book glyph -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,34c-3.31,0 -6,2.69 -6,6v28c0,3.31 2.69,6 6,6h16c2.21,0 4,1.79 4,4v-44c0,-2.21 -1.79,-4 -4,-4H34z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M58,34c-2.21,0 -4,1.79 -4,4v44c0,-2.21 1.79,-4 4,-4h16c3.31,0 6,-2.69 6,-6V40c0,-3.31 -2.69,-6 -6,-6H58z" />
+
+    <!-- 'LG' mark -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M40,52h6v18h10v6H40V52z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M68,58c0,-3.31 -2.69,-6 -6,-6h-6c-3.31,0 -6,2.69 -6,6v12c0,3.31 2.69,6 6,6h12V64H62v6h-6V58h6v6h6V58z" />
+
+</vector>

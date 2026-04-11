@@ -74,10 +74,10 @@ class StemFlagTask(models.Model):
 	def __str__(self) -> str:
 		return f"{self.stem.text} -> {self.flag.code} ({self.status})"
 
-	def set_status(self, status: str, user, note: str = ""):
+	def set_status(self, status: str, user, note: str = "", decided_at=None):
 		self.status = status
 		self.decided_by = user
-		self.decided_at = timezone.now()
+		self.decided_at = decided_at or timezone.now()
 		self.save(update_fields=["status", "decided_by", "decided_at", "updated_at"])
 		ReviewDecision.objects.create(task=self, user=user, decision=status, note=note or "")
 
