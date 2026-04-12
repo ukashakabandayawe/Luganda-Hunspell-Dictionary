@@ -223,7 +223,7 @@ balansi
 bali
 balula
 bambi
-# --------- okubanja --------- #
+# --------- okubanja(to owe/demand) --------- #
 banja
 banje
 banjizza
@@ -332,7 +332,7 @@ bbugubugu
 bbululu
 beera
 bega
-# ------------ okubejjagala ------------ #
+# ------------ okubejjagala(to burp) ------------ #
 bejjagala
 bejjagale
 bejjagadde
@@ -459,7 +459,7 @@ bi
 bibiri
 biibiita
 biici
-# --- okubiita --- #
+# --- okubiita(caring in a lovely manner) --- #
 biita
 biite
 biise
@@ -580,7 +580,7 @@ biitiddewooko
 # ------------------------- #
 
 biki
-# --- okubikka --- #
+# --- okubikka(to cover) --- #
 bikka
 bikke
 bisse
@@ -714,7 +714,7 @@ bitano
 bizinensi
 boggola
 bojja
-# --- okubonaabona --- #
+# --- okubonaabona(to suffer) --- #
 bonaabona
 bonaabone
 bonyebonye
@@ -869,7 +869,7 @@ byonna
 caayi
 cakala
 camufu
- --- okucamuka --- #
+ --- okucamuka(to get excited) --- #
 camuka
 camuke
 camuse
@@ -966,7 +966,7 @@ camuddewo
 camuddewooko
 camuddeengako
 
-# ------ okucanga ------ #
+# ------ okucanga(to shuffle) ------ #
 canga
 cange
 canze
@@ -1091,7 +1091,7 @@ cangiddengako
 
 cokoleeti
 
-# ------- okucupula -------- #
+# ------- okucupula(to duplicate) -------- #
 cupula
 cupule
 cupudde
@@ -1217,7 +1217,7 @@ cupuliddengako
 
 ekicupuli
 
-# --------- okudaaga --------- #
+# --------- okudaaga(to suffer) --------- #
 daaga
 daage
 daaze
@@ -1332,7 +1332,7 @@ daagiddengako
 
 dda
 
-# --------- okudaabiriza --------- #
+# --------- okudaabiriza(to renovate) --------- #
 ddaabiriza
 daabirize
 daabirizza
@@ -1445,7 +1445,7 @@ daabirizireengako
 
 ddala
 
-# ------- okudda --------- #
+# ------- okudda(to return) --------- #
 dda
 dde
 zze
@@ -1646,7 +1646,7 @@ ddiddengawooko
 ddensite
 ddi
 ddirira
-# --------- okuddugala --------- #
+# --------- okuddugala (to become dirty) --------- #
 ddugala
 ddugale
 ddugadde
@@ -1777,7 +1777,7 @@ ddumbi
 dduukirira
 ddyo
 
-# ---------- okudiba --------- #
+# ---------- okudiba(to flop) --------- #
 diba
 dibe
 dibye
@@ -2726,7 +2726,7 @@ ffiga
 fiira
 fiirwa
 
-# ---------- okufikka ----------- #
+# ---------- okufikka(to remain) ----------- #
 fikka
 fikke
 fisse
@@ -2813,7 +2813,7 @@ fikkiddeengako
 firimu
 fu
 
-# ----------- okufuba ------------ #
+# ----------- okufuba(to strive) ------------ #
 fuba
 fube
 fubye
@@ -2852,7 +2852,7 @@ fufuggala
 fufuggaza
 fufumya
 
-# ----------- okufuga ------------ #
+# ----------- okufuga(to rule) ------------ #
 fuga
 fuge
 fuze
@@ -2983,7 +2983,7 @@ fukumuka
 fukumula
 fuluma
 
-# ----------- okufumba ------------ #
+# ----------- okufumba(to cook) ------------ #
 fumba
 fumbe
 fumbye
@@ -3110,7 +3110,7 @@ fumbiddeengako
 fumbirwa
 fumbo
 fumita
-# --------------- okufuna ------------- #
+# --------------- okufuna(to get) ------------- #
 funa
 fune
 funye
@@ -3239,7 +3239,7 @@ funga
 funvubira
 funya
 funze
-# --------------- okufuuka ------------- #
+# --------------- okufuuka(to become) ------------- #
 fuuka
 fuuke
 fuuse
@@ -3365,7 +3365,7 @@ fuuwa
 fuuweeta
 fuuyira
 
-# ----------- okugaana ------------ #
+# ----------- okugaana(to refuse) ------------ #
 gaana
 gaane
 gaanye
@@ -3489,7 +3489,7 @@ gaaniddeengako
 
 # ------------------------- #
 
-# ----------- okugaaya -------------- #
+# ----------- okugaaya(to chew) -------------- #
 gaaya
 gaaye
 gaayizza
@@ -3533,7 +3533,7 @@ gaayengaawo
 gaayengawooko
 # ------------------------- #
 
-# ----------- okugaba -------------- #
+# ----------- okugaba(to share) -------------- #
 gaba
 gabe
 gabye
@@ -3733,7 +3733,7 @@ gajambula
 galamira
 galamiza
 
-# ---------- okugamba ----------- #
+# ---------- okugamba(to tell) ----------- #
 gamba
 gambe
 gambye
@@ -3945,7 +3945,7 @@ ggaamu
 ggalaama
 ggalagi
 
-# --------- okuggala -------------- #
+# --------- okuggala(to close) -------------- #
 ggala
 ggale
 ggadde
@@ -5015,6 +5015,14 @@ kaayaniddeyo
 kaayaniddeyooko
 kaayaniddewo
 kaayaniddewooko
+
+kaayaniddeeko
+kaayaniddeemu
+kaayaniddeemuuko
+kaayaniddeeyo
+kaayaniddeeyooko
+kaayaniddeewo
+kaayaniddeewooko
 # ------------------------- #
 
 kabaka
@@ -5107,11 +5115,11 @@ kakasibwengayooko
 kakasibwengawo
 kakasibwengawooko
 
-kakasiddwako
-kakasiddwamu
+kakasiddwaako
+kakasiddwaamu
 kakasiddwaamuuko
-kakasiddwayo
-kakasiddwayooko
+kakasiddwaayo
+kakasiddwaayooko
 kakasiddwaawo
 kakasiddwaawooko
 
@@ -5402,11 +5410,8 @@ kolera
 kolere
 koledde
 
-kolaako
 kolako
-kolaamu
 kolamu
-kolaamuuko
 kolamuuko
 kolayo
 kolayooko
@@ -5417,7 +5422,7 @@ kolangamu
 kolangamuuko
 kolangayo
 kolangayooko
-kolaangawo
+kolangawo
 kolangawooko
 
 koleko
@@ -5556,6 +5561,13 @@ koleddeyo
 koleddeyooko
 koleddewo
 koleddewooko
+koleddeeko
+koleddeemu
+koleddeemuuko
+koleddeeyo
+koleddeeyooko
+koleddeewo
+koleddeewooko
 # ------------------------- #
 
 kolagana
@@ -5659,8 +5671,184 @@ laajana
 laalaasa
 laavu
 laawa
-# --- laba --- #
+# --- okulaba(to see) --- #
 laba
+labe
+labye
+labibwa
+labibwe
+labiddwa
+labisa
+labise
+labisizza
+labira
+labire
+labidde
+
+labako
+labamu
+labamuuko
+labayo
+labayooko
+labawoo
+labawooko
+labangako
+labangamu
+labangamuuko
+labangayo
+labangayooko
+labangawo
+labangawooko
+
+labeko
+labemu
+labemuuko
+labeyo
+labeyooko
+labewo
+labewooko
+labengako
+labengamu
+labengamuuko
+labengayo
+labengayooko
+labengawo
+labengawooko
+
+labyeeko
+labyeemu
+labyeemuuko
+labyeeyo
+labyeeyooko
+labyeewo
+labyeewooko
+
+
+labibwako
+labibwamu
+labibwamuuko
+labibwayo
+labibwayooko
+labibwawo
+labibwawooko
+labibwangako
+labibwangamu
+labibwangamuuko
+labibwangayo
+labibwangayooko
+labibwangawo
+labibwangawooko
+
+labibweko
+labibwemu
+labibwemuuko
+labibweyo
+labibweyooko
+labibwewo
+labibwewooko
+labibwengako
+labibwengamu
+labibwengamuuko
+labibwengayo
+labibwengayooko
+labibwengawo
+labibwengawooko
+
+labiddwaako
+labiddwaamu
+labiddwaamuuko
+labiddwaayo
+labiddwayooko
+labiddwaawo
+labiddwaawooko
+labiddwaangako
+labiddwaangamu
+
+labisaako
+labisaamu
+labisaamuuko
+labisaayo
+labisaayooko
+labisaawo
+labisaawooko
+labisangako
+labisangamu
+labisangamuuko
+labisangayo
+labisangayooko
+labisangawo
+labisangawooko
+
+labiseeko
+labiseemu
+labiseemuuko
+labiseeyo
+labiseeyooko
+labiseewo
+labiseewooko
+labiseengako
+labiseengamu
+labiseengamuuko
+labiseengayo
+labiseengayooko
+labiseengawo
+labiseengawooko
+
+labisizzaako
+labisizzaamu
+labisizzaamuuko
+labisizzaayo
+labisizzaayooko
+labisizzaawo
+labisizzaawooko
+
+labirako
+labiramu
+labiramuuko
+labirayo
+labiraayooko
+labirawo
+labirawooko
+labirangako
+labirangamu
+labirangamuuko
+labirangayo
+labirangayooko
+labirangawo
+labirangawooko
+
+labireko
+labiremu
+labiremuuko
+labireyo
+labireyooko
+labirewo
+labirewooko
+labireengako
+labireengamu
+labireengamuuko
+labireengayo
+labireengayooko
+labireengawo
+labireengawooko
+
+labiddeko
+labiddemu
+labiddemuuko
+labiddeyo
+labiddeyooko
+labiddewo
+labiddewooko
+labiddeeko
+labiddeemu
+labiddeemuuko
+labiddeeyo
+labiddeyooko
+labiddeewo
+labiddeewooko
+# ------------------------- #
+
+
 labagana/NA
 labagane/NA
 omulabi/oo
