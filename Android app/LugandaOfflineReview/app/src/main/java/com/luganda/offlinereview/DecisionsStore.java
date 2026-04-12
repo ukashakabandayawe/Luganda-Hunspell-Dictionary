@@ -98,6 +98,24 @@ public final class DecisionsStore {
         saveDecisionsPayload(context, payload);
     }
 
+    public static JSONObject findDecisionRow(Context context, String stem, String flag) throws Exception {
+        if (stem == null || flag == null) return null;
+        JSONObject payload = loadDecisionsPayload(context);
+        JSONArray arr = payload.optJSONArray("decisions");
+        if (arr == null) return null;
+
+        for (int i = 0; i < arr.length(); i++) {
+            JSONObject row = arr.optJSONObject(i);
+            if (row == null) continue;
+            String s = row.optString("stem", "");
+            String f = row.optString("flag", "");
+            if (stem.equals(s) && flag.equals(f)) {
+                return row;
+            }
+        }
+        return null;
+    }
+
     public static Map<String, Map<String, String>> loadDecisionStatusMap(Context context) throws Exception {
         JSONObject payload = loadDecisionsPayload(context);
         JSONArray arr = payload.optJSONArray("decisions");
