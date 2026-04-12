@@ -120,8 +120,33 @@ public class ReviewActivity extends AppCompatActivity {
             return;
         }
 
+        if (BackupFolderStore.isConfigured(this)) {
+            final String username = getUsernameFromBundle();
+            new Thread(() -> {
+                try {
+                    JSONObject payload = DecisionsStore.buildExportPayload(ReviewActivity.this, bundle);
+                    DriveBackupWriter.writeDecisionsBackup(ReviewActivity.this, username, payload);
+                } catch (Exception ex) {
+                    runOnUiThread(() -> Toast.makeText(
+                            ReviewActivity.this,
+                            "Backup failed: " + ex.getMessage(),
+                            Toast.LENGTH_LONG
+                    ).show());
+                }
+            }).start();
+        }
+
         Toast.makeText(this, decision.toUpperCase() + " saved", Toast.LENGTH_SHORT).show();
         showNextPendingOrFirst();
+    }
+
+    private String getUsernameFromBundle() {
+        if (bundle == null) return "reviewer";
+        JSONObject user = bundle.optJSONObject("user");
+        if (user == null) return "reviewer";
+        String u = user.optString("username", "");
+        if (u == null || u.trim().isEmpty()) return "reviewer";
+        return u.trim();
     }
 
     private void showNextPendingOrFirst() {

@@ -21,9 +21,11 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQ_IMPORT_BUNDLE = 1001;
     private static final int REQ_EXPORT_DECISIONS = 1002;
     private static final int REQ_EXPORT_DIC = 1003;
+    private static final int REQ_PICK_BACKUP_FOLDER = 1004;
 
     private TextView status;
     private TextView progress;
+    private TextView backupStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +37,18 @@ public class MainActivity extends AppCompatActivity {
 
         status = findViewById(R.id.homeStatus);
         progress = findViewById(R.id.homeProgress);
+        backupStatus = findViewById(R.id.homeBackupStatus);
         Button btnImport = findViewById(R.id.btnImportBundle);
         Button btnQueue = findViewById(R.id.btnOpenQueue);
         Button btnExportDecisions = findViewById(R.id.btnExportDecisions);
         Button btnExportDic = findViewById(R.id.btnExportDic);
+        Button btnSetBackupFolder = findViewById(R.id.btnSetBackupFolder);
 
         btnImport.setOnClickListener(v -> startImportBundle());
         btnQueue.setOnClickListener(v -> openQueue());
         btnExportDecisions.setOnClickListener(v -> startExportDecisions());
         btnExportDic.setOnClickListener(v -> startExportDic());
+        btnSetBackupFolder.setOnClickListener(v -> pickBackupFolder());
 
         refreshUi();
     }
@@ -69,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         if (!hasBundle) {
             status.setText(dicOk + "\n\nNo review bundle imported yet.");
             progress.setText("Progress: (import a bundle)");
+            refreshBackupUi();
             return;
         }
 
@@ -122,10 +128,22 @@ public class MainActivity extends AppCompatActivity {
                     "Pending: " + pending + "\n" +
                     "Decided: " + decided
             );
+            refreshBackupUi();
         } catch (Exception ex) {
             status.setText(dicOk + "\n\nFailed to load bundle: " + ex);
             progress.setText("Progress: error");
+            refreshBackupUi();
         }
+    }
+
+    private void refreshBackupUi() {
+        if (backupStatus == null) return;
+        if (!BackupFolderStore.isConfigured(this)) {
+            backupStatus.setText("Backup: (not set)\nAuto-backup is OFF");
+            return;
+        }
+
+        backupStatus.setText("Backup: configured\nAuto-backup is ON");
     }
 
     private void startImportBundle() {
@@ -189,6 +207,15 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, REQ_EXPORT_DIC);
     }
 
+    private void pickBackupFolder() {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+        intent.addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION);
+        intent.addFlags(Intent.FLAG_GRANT_PREFIX_URI_PERMISSION);
+        startActivityForResult(intent, REQ_PICK_BACKUP_FOLDER);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -218,6 +245,17 @@ public class MainActivity extends AppCompatActivity {
                     DicExporter.exportWorkingDic(this, os, payload);
                 }
                 Toast.makeText(this, "Working .dic exported", Toast.LENGTH_SHORT).show();
+            } else if (requestCode == REQ_PICK_BACKUP_FOLDER) {
+                int flags = data.getFlags();
+                int takeFlags = flags & (Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+                try {
+                    getContentResolver().takePersistableUriPermission(uri, takeFlags);
+                } catch (SecurityException ex) {
+                    // Continue anyway; if persist fails, backup may stop working after reboot.
+                }
+                BackupFolderStore.setTreeUri(this, uri);
+                Toast.makeText(this, "Backup folder set", Toast.LENGTH_SHORT).show();
+                refreshBackupUi();
             }
         } catch (Exception ex) {
             Toast.makeText(this, "Operation failed: " + ex, Toast.LENGTH_LONG).show();
