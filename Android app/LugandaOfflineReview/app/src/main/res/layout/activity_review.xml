@@ -106,11 +106,14 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnReject"
-                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            style="@style/Widget.Material3.Button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
+                            android:backgroundTint="?attr/colorError"
+                            android:textColor="?attr/colorOnError"
                             app:icon="@drawable/ic_reject"
+                            app:iconTint="?attr/colorOnError"
                             app:iconGravity="textStart"
                             app:iconPadding="8dp"
                             android:text="Reject" />

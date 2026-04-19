@@ -139,14 +139,13 @@ public final class DecisionsStore {
         return out;
     }
 
-    public static JSONObject buildExportPayload(Context context, JSONObject bundleJson) throws Exception {
+    public static JSONObject buildExportPayload(Context context, JSONObject userJson) throws Exception {
         JSONObject payload = loadDecisionsPayload(context);
         payload.put("schema", 1);
         payload.put("generated_at", nowIsoUtc());
 
-        JSONObject user = bundleJson.optJSONObject("user");
-        if (user != null) {
-            payload.put("user", user);
+        if (userJson != null) {
+            payload.put("user", userJson);
         }
         return payload;
     }

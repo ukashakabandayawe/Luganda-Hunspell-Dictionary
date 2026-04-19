@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class ReviewActivity extends AppCompatActivity {
 
-    private JSONObject bundle;
+    private BundleStore.BundleHeader bundleHeader;
     private Map<String, Map<String, String>> decisionMap;
 
     private int stemIndex;
@@ -67,7 +67,7 @@ public class ReviewActivity extends AppCompatActivity {
         }
 
         try {
-            bundle = BundleStore.loadBundleJson(this);
+            bundleHeader = BundleStore.readBundleHeader(this);
             decisionMap = DecisionsStore.loadDecisionStatusMap(this);
         } catch (Exception ex) {
             Toast.makeText(this, "Failed to load bundle/decisions: " + ex, Toast.LENGTH_LONG).show();
@@ -75,7 +75,14 @@ public class ReviewActivity extends AppCompatActivity {
             return;
         }
 
-        JSONObject stemObj = safeStemAt(stemIndex);
+        JSONObject stemObj;
+        try {
+            stemObj = BundleStore.loadStemAtIndex(this, stemIndex);
+        } catch (Exception ex) {
+            Toast.makeText(this, "Failed to load stem from bundle: " + ex, Toast.LENGTH_LONG).show();
+            finish();
+            return;
+        }
         if (stemObj == null) {
             Toast.makeText(this, "Stem not found in bundle", Toast.LENGTH_LONG).show();
             finish();
@@ -131,7 +138,7 @@ public class ReviewActivity extends AppCompatActivity {
             final String username = getUsernameFromBundle();
             new Thread(() -> {
                 try {
-                    JSONObject payload = DecisionsStore.buildExportPayload(ReviewActivity.this, bundle);
+                    JSONObject payload = DecisionsStore.buildExportPayload(ReviewActivity.this, bundleHeader == null ? null : bundleHeader.toUserJson());
                     DriveBackupWriter.writeDecisionsBackup(ReviewActivity.this, username, payload);
                 } catch (Exception ex) {
                     runOnUiThread(() -> Toast.makeText(
@@ -148,10 +155,8 @@ public class ReviewActivity extends AppCompatActivity {
     }
 
     private String getUsernameFromBundle() {
-        if (bundle == null) return "reviewer";
-        JSONObject user = bundle.optJSONObject("user");
-        if (user == null) return "reviewer";
-        String u = user.optString("username", "");
+        if (bundleHeader == null) return "reviewer";
+        String u = bundleHeader.username;
         if (u == null || u.trim().isEmpty()) return "reviewer";
         return u.trim();
     }
@@ -333,9 +338,4 @@ public class ReviewActivity extends AppCompatActivity {
         return baseStatus == null ? "pending" : baseStatus;
     }
 
-    private JSONObject safeStemAt(int index) {
-        JSONArray stems = bundle.optJSONArray("stems");
-        if (stems == null) return null;
-        return stems.optJSONObject(index);
-    }
 }

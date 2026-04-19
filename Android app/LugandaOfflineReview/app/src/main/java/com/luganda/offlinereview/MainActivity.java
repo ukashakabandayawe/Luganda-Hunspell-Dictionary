@@ -3,15 +3,14 @@ package com.luganda.offlinereview;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.widget.Button;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.appbar.MaterialToolbar;
-
-import org.json.JSONArray;
+import com.luganda.offlinereview.ui.DonutProgressView;
 import org.json.JSONObject;
 
 import java.io.OutputStream;
@@ -26,6 +25,17 @@ public class MainActivity extends AppCompatActivity {
     private TextView status;
     private TextView progress;
     private TextView backupStatus;
+    private TextView userName;
+    private TextView statStems;
+    private TextView statPending;
+    private TextView statDecided;
+
+    private View headerLoader;
+
+    private DonutProgressView progressDonut;
+    private TextView legendActiveValue;
+    private TextView legendInactiveValue;
+    private TextView legendDraftsValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +48,23 @@ public class MainActivity extends AppCompatActivity {
         status = findViewById(R.id.homeStatus);
         progress = findViewById(R.id.homeProgress);
         backupStatus = findViewById(R.id.homeBackupStatus);
-        Button btnImport = findViewById(R.id.btnImportBundle);
-        Button btnQueue = findViewById(R.id.btnOpenQueue);
-        Button btnExportDecisions = findViewById(R.id.btnExportDecisions);
-        Button btnExportDic = findViewById(R.id.btnExportDic);
-        Button btnSetBackupFolder = findViewById(R.id.btnSetBackupFolder);
+        userName = findViewById(R.id.homeUserName);
+        statStems = findViewById(R.id.homeStatStems);
+        statPending = findViewById(R.id.homeStatPending);
+        statDecided = findViewById(R.id.homeStatDecided);
+
+        headerLoader = findViewById(R.id.homeHeaderLoader);
+
+        progressDonut = findViewById(R.id.homeProgressDonut);
+        legendActiveValue = findViewById(R.id.homeLegendActiveValue);
+        legendInactiveValue = findViewById(R.id.homeLegendInactiveValue);
+        legendDraftsValue = findViewById(R.id.homeLegendDraftsValue);
+
+        android.view.View btnImport = findViewById(R.id.btnImportBundle);
+        android.view.View btnQueue = findViewById(R.id.btnOpenQueue);
+        android.view.View btnExportDecisions = findViewById(R.id.btnExportDecisions);
+        android.view.View btnExportDic = findViewById(R.id.btnExportDic);
+        android.view.View btnSetBackupFolder = findViewById(R.id.btnSetBackupFolder);
 
         btnImport.setOnClickListener(v -> startImportBundle());
         btnQueue.setOnClickListener(v -> openQueue());
@@ -61,89 +83,138 @@ public class MainActivity extends AppCompatActivity {
 
     private void refreshUi() {
         boolean hasBundle = BundleStore.hasBundle(this);
-        String dicOk;
-        try {
-            String firstLine = new java.io.BufferedReader(
-                    new java.io.InputStreamReader(getAssets().open("Luganda.dic"), java.nio.charset.StandardCharsets.UTF_8)
-            ).readLine();
-            dicOk = "Embedded Luganda.dic OK (first line: " + firstLine + ")";
-        } catch (Exception ex) {
-            dicOk = "Missing embedded Luganda.dic: " + ex;
-        }
+        final String dicProblem = getEmbeddedDicProblem();
+
+        if (userName != null) userName.setText("Reviewer");
+        if (statStems != null) statStems.setText("-");
+        if (statPending != null) statPending.setText("-");
+        if (statDecided != null) statDecided.setText("-");
+
+        if (progressDonut != null) progressDonut.setValues(0, 0, 0);
+        if (legendActiveValue != null) legendActiveValue.setText("-");
+        if (legendInactiveValue != null) legendInactiveValue.setText("-");
+        if (legendDraftsValue != null) legendDraftsValue.setText("-");
+
+        setHeaderLoading(false);
+        setHeaderStatusText(null);
 
         if (!hasBundle) {
-            status.setText(dicOk + "\n\nNo review bundle imported yet.");
-            progress.setText("Progress: (import a bundle)");
+            setHeaderLoading(false);
+            if (dicProblem != null) {
+                setHeaderStatusText("No review bundle imported yet.\n" + dicProblem);
+            } else {
+                setHeaderStatusText("No review bundle imported yet.");
+            }
+            progress.setText("Import a bundle to see progress.");
             refreshBackupUi();
             return;
         }
 
-        try {
-            JSONObject bundle = BundleStore.loadBundleJson(this);
-            JSONObject user = bundle.optJSONObject("user");
-            String username = user != null ? user.optString("username", "") : "";
-            status.setText(dicOk + "\n\nBundle loaded for: " + (username.isEmpty() ? "(unknown)" : username));
-
-            JSONArray stems = bundle.optJSONArray("stems");
-            int stemsCount = stems == null ? 0 : stems.length();
-            int totalTasks = 0;
-            int pending = 0;
-            int decided = 0;
-
-            java.util.Map<String, java.util.Map<String, String>> decisionMap = DecisionsStore.loadDecisionStatusMap(this);
-
-            if (stems != null) {
-                for (int i = 0; i < stems.length(); i++) {
-                    JSONObject s = stems.optJSONObject(i);
-                    if (s == null) continue;
-                    String stemText = s.optString("stem", "");
-                    JSONArray tasks = s.optJSONArray("tasks");
-                    if (tasks == null) continue;
-                    for (int j = 0; j < tasks.length(); j++) {
-                        JSONObject t = tasks.optJSONObject(j);
-                        if (t == null) continue;
-                        totalTasks++;
-                        String flag = t.optString("flag", "");
-                        String baseStatus = t.optString("status", "pending");
-                        String eff = baseStatus;
-                        java.util.Map<String, String> byFlag = decisionMap.get(stemText);
-                        if (byFlag != null) {
-                            String d = byFlag.get(flag);
-                            if (d != null) {
-                                String dl = d.trim().toLowerCase();
-                                if (dl.equals("approved") || dl.equals("approve")) eff = "approved";
-                                else if (dl.equals("rejected") || dl.equals("reject")) eff = "rejected";
-                            }
-                        }
-                        if ("pending".equals(eff)) pending++;
-                        else decided++;
-                    }
-                }
-            }
-
-            progress.setText(
-                    "Progress:\n" +
-                    "Stems: " + stemsCount + "\n" +
-                    "Tasks: " + totalTasks + "\n" +
-                    "Pending: " + pending + "\n" +
-                    "Decided: " + decided
-            );
-            refreshBackupUi();
-        } catch (Exception ex) {
-            status.setText(dicOk + "\n\nFailed to load bundle: " + ex);
-            progress.setText("Progress: error");
-            refreshBackupUi();
+        // While loading, show a loader instead of text.
+        if (dicProblem != null) {
+            setHeaderLoading(false);
+            setHeaderStatusText(dicProblem);
+        } else {
+            setHeaderStatusText(null);
+            setHeaderLoading(true);
         }
+
+        progress.setText("Loading...");
+        refreshBackupUi();
+
+        new Thread(() -> {
+            try {
+                BundleStore.BundleHeader header = BundleStore.readBundleHeader(MainActivity.this);
+                java.util.Map<String, java.util.Map<String, String>> decisionMap = DecisionsStore.loadDecisionStatusMap(MainActivity.this);
+                BundleStore.ProgressSummary sum = BundleStore.computeProgress(MainActivity.this, decisionMap);
+
+                String username = header.username == null ? "" : header.username;
+                String who = username.isEmpty() ? "(unknown)" : username;
+
+                int active = sum.approved;
+                int inactive = sum.rejected;
+                int drafts = sum.pending;
+
+                runOnUiThread(() -> {
+                    if (userName != null) userName.setText(who);
+
+                    if (dicProblem != null) {
+                        setHeaderStatusText(dicProblem);
+                    } else {
+                        setHeaderStatusText(null);
+                    }
+                    setHeaderLoading(false);
+
+                    if (statStems != null) statStems.setText(String.valueOf(sum.stems));
+                    if (statPending != null) statPending.setText(String.valueOf(sum.pending));
+                    if (statDecided != null) statDecided.setText(String.valueOf(sum.decided));
+
+                        if (progressDonut != null) progressDonut.setValues(active, inactive, drafts);
+                        if (legendActiveValue != null) legendActiveValue.setText(String.valueOf(active));
+                        if (legendInactiveValue != null) legendInactiveValue.setText(String.valueOf(inactive));
+                        if (legendDraftsValue != null) legendDraftsValue.setText(String.valueOf(drafts));
+
+                        progress.setText("Tasks: " + sum.decided + "/" + sum.tasks);
+                    refreshBackupUi();
+                });
+            } catch (Throwable ex) {
+                runOnUiThread(() -> {
+                    setHeaderLoading(false);
+                    if (dicProblem != null) {
+                        setHeaderStatusText("Failed to load bundle: " + ex + "\n" + dicProblem);
+                    } else {
+                        setHeaderStatusText("Failed to load bundle: " + ex);
+                    }
+                    progress.setText("Progress: error");
+                    refreshBackupUi();
+                });
+            }
+        }).start();
+    }
+
+    private String getEmbeddedDicProblem() {
+        try {
+            String firstLine;
+            try (java.io.BufferedReader reader = new java.io.BufferedReader(
+                    new java.io.InputStreamReader(getAssets().open("Luganda.dic"), java.nio.charset.StandardCharsets.UTF_8)
+            )) {
+                firstLine = reader.readLine();
+            }
+            if (firstLine == null || firstLine.trim().isEmpty()) {
+                return "Embedded Luganda.dic is empty";
+            }
+            return null;
+        } catch (Exception ex) {
+            return "Missing embedded Luganda.dic: " + ex;
+        }
+    }
+
+    private void setHeaderLoading(boolean isLoading) {
+        if (headerLoader != null) {
+            headerLoader.setVisibility(isLoading ? View.VISIBLE : View.GONE);
+        }
+    }
+
+    private void setHeaderStatusText(String text) {
+        if (status == null) return;
+        if (text == null || text.trim().isEmpty()) {
+            status.setText("");
+            status.setVisibility(View.GONE);
+            return;
+        }
+
+        status.setText(text);
+        status.setVisibility(View.VISIBLE);
     }
 
     private void refreshBackupUi() {
         if (backupStatus == null) return;
         if (!BackupFolderStore.isConfigured(this)) {
-            backupStatus.setText("Backup: (not set)\nAuto-backup is OFF");
+            backupStatus.setText("Auto-backup: OFF");
             return;
         }
 
-        backupStatus.setText("Backup: configured\nAuto-backup is ON");
+        backupStatus.setText("Auto-backup: ON");
     }
 
     private void startImportBundle() {
@@ -170,12 +241,8 @@ public class MainActivity extends AppCompatActivity {
         }
         String username = "reviewer";
         try {
-            JSONObject bundle = BundleStore.loadBundleJson(this);
-            JSONObject user = bundle.optJSONObject("user");
-            if (user != null) {
-                String u = user.optString("username", "");
-                if (!u.isEmpty()) username = u;
-            }
+            BundleStore.BundleHeader header = BundleStore.readBundleHeader(this);
+            if (header.username != null && !header.username.trim().isEmpty()) username = header.username.trim();
         } catch (Exception ignored) {}
 
         Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
@@ -192,12 +259,8 @@ public class MainActivity extends AppCompatActivity {
         }
         String username = "reviewer";
         try {
-            JSONObject bundle = BundleStore.loadBundleJson(this);
-            JSONObject user = bundle.optJSONObject("user");
-            if (user != null) {
-                String u = user.optString("username", "");
-                if (!u.isEmpty()) username = u;
-            }
+            BundleStore.BundleHeader header = BundleStore.readBundleHeader(this);
+            if (header.username != null && !header.username.trim().isEmpty()) username = header.username.trim();
         } catch (Exception ignored) {}
 
         Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
@@ -230,16 +293,16 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Bundle imported", Toast.LENGTH_SHORT).show();
                 refreshUi();
             } else if (requestCode == REQ_EXPORT_DECISIONS) {
-                JSONObject bundle = BundleStore.loadBundleJson(this);
-                JSONObject payload = DecisionsStore.buildExportPayload(this, bundle);
+                BundleStore.BundleHeader header = BundleStore.readBundleHeader(this);
+                JSONObject payload = DecisionsStore.buildExportPayload(this, header.toUserJson());
                 try (OutputStream os = getContentResolver().openOutputStream(uri)) {
                     if (os == null) throw new IllegalStateException("Could not open output");
                     os.write(payload.toString().getBytes(java.nio.charset.StandardCharsets.UTF_8));
                 }
                 Toast.makeText(this, "Decisions exported", Toast.LENGTH_SHORT).show();
             } else if (requestCode == REQ_EXPORT_DIC) {
-                JSONObject bundle = BundleStore.loadBundleJson(this);
-                JSONObject payload = DecisionsStore.buildExportPayload(this, bundle);
+                BundleStore.BundleHeader header = BundleStore.readBundleHeader(this);
+                JSONObject payload = DecisionsStore.buildExportPayload(this, header.toUserJson());
                 try (OutputStream os = getContentResolver().openOutputStream(uri)) {
                     if (os == null) throw new IllegalStateException("Could not open output");
                     DicExporter.exportWorkingDic(this, os, payload);

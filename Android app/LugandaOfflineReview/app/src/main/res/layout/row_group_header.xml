@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="0dp"
+    app:cardBackgroundColor="?attr/colorPrimaryContainer"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/groupRowChevron"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Expand"
+            android:src="@drawable/ic_chevron_right"
+            android:tint="?attr/colorOnPrimaryContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/groupRowTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Group"
+            android:textColor="?attr/colorOnPrimaryContainer"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/groupRowChevron" />
+
+        <TextView
+            android:id="@+id/groupRowCounts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Stems: 0   Pending: 0   Done: 0"
+            android:textColor="?attr/colorOnPrimaryContainer"
+            android:alpha="0.85"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/groupRowTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/groupRowChevron" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

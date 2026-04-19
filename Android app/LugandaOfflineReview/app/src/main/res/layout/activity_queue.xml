@@ -23,6 +23,13 @@
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/queueProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/queueTitle"
             android:layout_width="match_parent"
@@ -35,7 +42,9 @@
             android:id="@+id/queueRecycler"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false" />
 
     </LinearLayout>
 
