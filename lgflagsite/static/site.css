@@ -37,6 +37,11 @@ a {
 
 a:hover { text-decoration: underline; }
 
+details > summary,
+details > summary * {
+  cursor: pointer;
+}
+
 .container {
   max-width: 980px;
   margin: 0 auto;

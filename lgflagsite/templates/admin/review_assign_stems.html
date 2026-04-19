@@ -3,8 +3,25 @@
 {% block content %}
   <h1>{{ title }}</h1>
 
-  <p>Selected stems: {{ stems|length }}</p>
+  <p>Selected stems (after grouping): {{ stems|length }}</p>
+  <p class="help">If a selected stem belongs to a group in <strong>Luganda.dic</strong>, the whole group is assigned together.</p>
   <p class="help">When you assign stems, the system will automatically create review tasks for the <strong>selected flag group</strong> (active flags only).</p>
+
+  {% if grouped_stems %}
+    <h2>Grouped preview</h2>
+    {% for g in grouped_stems %}
+      <details {% if forloop.first %}open{% endif %}>
+        <summary>{{ g.title }} ({{ g.stems|length }})</summary>
+        <div style="padding-left: 1rem;">
+          <ul>
+            {% for s in g.stems %}
+              <li>{{ s.text }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </details>
+    {% endfor %}
+  {% endif %}
 
   <form method="post">
     {% csrf_token %}

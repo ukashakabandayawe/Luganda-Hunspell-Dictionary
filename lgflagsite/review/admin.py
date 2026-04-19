@@ -122,8 +122,8 @@ class FlagAdmin(admin.ModelAdmin):
 
 @admin.register(Stem)
 class StemAdmin(admin.ModelAdmin):
-	list_display = ("text", "flags_raw", "assigned_to", "assigned_at", "source_line_no")
-	list_filter = ("assigned_to",)
+	list_display = ("text", "group_title", "flags_raw", "assigned_to", "assigned_at", "source_line_no")
+	list_filter = ("assigned_to", "group")
 	search_fields = ("text", "flags_raw")
 	ordering = ("source_line_no", "text")
 	actions = (
@@ -161,8 +161,58 @@ class StemAdmin(admin.ModelAdmin):
 			level=messages.SUCCESS,
 		)
 
+	@admin.display(description="Group")
+	def group_title(self, obj: Stem):
+		try:
+			g = getattr(obj, "group", None)
+			return g.title if g else ""
+		except Exception:
+			return ""
+
+	def _expand_stems_by_group(self, queryset):
+		# If any selected stems are in a group, include the full group.
+		qs = queryset.select_related("group")
+		group_ids = list(qs.exclude(group_id__isnull=True).values_list("group_id", flat=True).distinct())
+		stem_ids = set(qs.values_list("id", flat=True))
+		if group_ids:
+			stem_ids.update(Stem.objects.filter(group_id__in=group_ids).values_list("id", flat=True))
+		return Stem.objects.filter(id__in=stem_ids).select_related("group")
+
+	def _grouped_preview_rows(self, stems):
+		# Build accordion-friendly groups.
+		rows = []
+		stems = list(stems)
+		# Sort so group blocks follow file order.
+		def sort_key(s: Stem):
+			g = getattr(s, "group", None)
+			g_line = getattr(g, "source_line_no", 10**9) if g else 10**9
+			return (g_line, int(s.source_line_no or 0), s.text)
+		stems.sort(key=sort_key)
+
+		buckets = {}
+		order = []
+		for s in stems:
+			g = getattr(s, "group", None)
+			if g is not None:
+				key = ("group", int(g.id))
+				title = g.title
+				line = int(getattr(g, "source_line_no", 0) or 0)
+			else:
+				key = ("stem", int(s.id))
+				title = s.text
+				line = int(s.source_line_no or 0)
+			if key not in buckets:
+				buckets[key] = {"title": title, "source_line_no": line, "stems": []}
+				order.append(key)
+			buckets[key]["stems"].append(s)
+
+		for key in order:
+			rows.append(buckets[key])
+		return rows
+
 	@admin.action(description="Assign selected stems to a user")
 	def assign_selected_to_user(self, request, queryset):
+		queryset = self._expand_stems_by_group(queryset)
 		if "apply" in request.POST:
 			user_id = request.POST.get("user_id")
 			group = (request.POST.get("flag_group") or Flag.Group.PRIORITY).strip()
@@ -214,10 +264,12 @@ class StemAdmin(admin.ModelAdmin):
 
 		users = get_user_model().objects.filter(is_active=True).order_by("username")
 		request.current_app = self.admin_site.name
+		grouped_stems = self._grouped_preview_rows(queryset)
 		context = {
 			**self.admin_site.each_context(request),
 			"title": "Assign stems",
 			"stems": queryset,
+			"grouped_stems": grouped_stems,
 			"users": users,
 			"flag_groups": list(Flag.Group.choices),
 			"current_flag_group": Flag.Group.PRIORITY,

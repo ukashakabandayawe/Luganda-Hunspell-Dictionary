@@ -25,8 +25,26 @@ class Flag(models.Model):
 		return self.code
 
 
+class StemGroup(models.Model):
+	"""A logical grouping of stem variants as authored in Luganda.dic comments."""
+
+	title = models.CharField(max_length=255)
+	# 1-based line number of the group header in Luganda.dic (stable ordering key).
+	source_line_no = models.IntegerField(unique=True, db_index=True)
+
+	def __str__(self) -> str:
+		return self.title
+
+
 class Stem(models.Model):
 	text = models.CharField(max_length=255, unique=True)
+	group = models.ForeignKey(
+		StemGroup,
+		on_delete=models.SET_NULL,
+		null=True,
+		blank=True,
+		related_name="stems",
+	)
 	# Raw flags string from Luganda.dic (after '/', before whitespace).
 	flags_raw = models.CharField(max_length=512, blank=True, default="")
 	# Preserve everything after the first whitespace so export can round-trip.

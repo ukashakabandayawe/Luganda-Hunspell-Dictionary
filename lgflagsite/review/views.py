@@ -32,13 +32,72 @@ def logout_view(request):
 def my_queue(request):
     if request.user.is_staff:
         return redirect(reverse("admin:index"))
-    stems = (
+    stems_qs = (
         Stem.objects.filter(assigned_to=request.user)
+        .select_related("group")
         .annotate(pending_count=Count("flag_tasks", filter=Q(flag_tasks__status=StemFlagTask.Status.PENDING)))
         .order_by("source_line_no", "id")
     )
-    total_pending = stems.aggregate(total_pending=Sum("pending_count")).get("total_pending") or 0
-    return render(request, "review/my_queue.html", {"stems": stems, "total_pending": total_pending})
+    stems = list(stems_qs)
+    assigned_stems_count = len(stems)
+    total_pending = sum(int(getattr(s, "pending_count", 0) or 0) for s in stems)
+
+    # Group stems as authored in Luganda.dic comment blocks.
+    # - If a stem is in a StemGroup: group under that header.
+    # - Otherwise: treat as its own single-item group.
+    groups_by_key: dict[tuple[str, int], dict] = {}
+    group_order: list[tuple[str, int]] = []
+
+    for s in stems:
+        g = getattr(s, "group", None)
+        if g is not None:
+            key = ("group", int(g.id))
+            title = g.title
+            order_line = int(getattr(g, "source_line_no", 10**9) or 10**9)
+        else:
+            key = ("stem", int(s.id))
+            title = s.text
+            order_line = int(getattr(s, "source_line_no", 10**9) or 10**9)
+
+        if key not in groups_by_key:
+            groups_by_key[key] = {
+                "title": title,
+                "source_line_no": order_line,
+                "pending": 0,
+                "stems": [],
+                "open_stem_id": None,
+            }
+            group_order.append(key)
+
+        entry = groups_by_key[key]
+        entry["stems"].append(s)
+        entry["pending"] += int(getattr(s, "pending_count", 0) or 0)
+        # Prefer to open a stem that has pending work.
+        if entry["open_stem_id"] is None:
+            entry["open_stem_id"] = int(s.id)
+        else:
+            current_open = next((x for x in entry["stems"] if int(x.id) == int(entry["open_stem_id"])), None)
+            current_pending = int(getattr(current_open, "pending_count", 0) or 0) if current_open is not None else 0
+            this_pending = int(getattr(s, "pending_count", 0) or 0)
+            if current_pending <= 0 and this_pending > 0:
+                entry["open_stem_id"] = int(s.id)
+
+    # Sort groups by their source order; each group's stems are already ordered by source_line_no.
+    grouped_stems = [groups_by_key[k] for k in group_order]
+    grouped_stems.sort(key=lambda d: (int(d.get("source_line_no", 10**9) or 10**9), str(d.get("title") or "")))
+    for g in grouped_stems:
+        g["stems"].sort(key=lambda s: (int(getattr(s, "source_line_no", 10**9) or 10**9), int(getattr(s, "id", 0) or 0)))
+
+    return render(
+        request,
+        "review/my_queue.html",
+        {
+            "stems": stems,
+            "grouped_stems": grouped_stems,
+            "assigned_stems_count": assigned_stems_count,
+            "total_pending": total_pending,
+        },
+    )
 
 
 @login_required

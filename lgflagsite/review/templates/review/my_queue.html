@@ -10,7 +10,7 @@
         <div class="muted">Stems assigned to you with pending flags.</div>
       </div>
       <div class="row" style="justify-content: flex-end;">
-        <div class="badge">Assigned stems: {{ stems|length }}</div>
+        <div class="badge">Assigned stems: {{ assigned_stems_count }}</div>
         <div class="badge pending">Pending tasks: {{ total_pending }}</div>
       </div>
     </div>
@@ -22,32 +22,53 @@
         <div class="muted">These stems are assigned to you, but an admin hasn’t created review tasks (flags) for them yet.</div>
         <hr class="sep">
       {% endif %}
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Stem</th>
-            <th style="width: 140px; text-align: center;">Pending flags</th>
-            <th style="width: 120px;">Open</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for s in stems %}
-            <tr>
-              <td><strong>{{ s.text }}</strong></td>
-              <td style="text-align: center;">
-                {% if s.pending_count > 0 %}
-                  <span class="badge pending">{{ s.pending_count }}</span>
-                {% else %}
-                  <span class="badge">0</span>
-                {% endif %}
-              </td>
-              <td>
-                <a class="btn primary" href="{% url 'review:review_stem' s.id %}">Open</a>
-              </td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      {% for g in grouped_stems %}
+        <details style="margin: 10px 0;">
+          <summary class="row" style="align-items: center; cursor: pointer;">
+            <div><strong>{{ g.title }}</strong></div>
+            <div class="row" style="justify-content: flex-end; flex: 1; gap: 8px;">
+              <div class="badge">Stems: {{ g.stems|length }}</div>
+              {% if g.pending > 0 %}
+                <div class="badge pending">Pending: {{ g.pending }}</div>
+              {% else %}
+                <div class="badge">Pending: 0</div>
+              {% endif %}
+              {% if g.stems|length <= 1 %}
+                <a class="btn primary" href="{% url 'review:review_stem' g.open_stem_id %}">Open</a>
+              {% endif %}
+            </div>
+          </summary>
+
+          <div style="margin-top: 10px;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Stem</th>
+                  <th style="width: 140px; text-align: center;">Pending flags</th>
+                  <th style="width: 120px;">Open</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for s in g.stems %}
+                  <tr>
+                    <td><strong>{{ s.text }}</strong></td>
+                    <td style="text-align: center;">
+                      {% if s.pending_count > 0 %}
+                        <span class="badge pending">{{ s.pending_count }}</span>
+                      {% else %}
+                        <span class="badge">0</span>
+                      {% endif %}
+                    </td>
+                    <td>
+                      <a class="btn" href="{% url 'review:review_stem' s.id %}">Open</a>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </details>
+      {% endfor %}
     {% else %}
       <div class="muted">No pending stems assigned to you.</div>
     {% endif %}
