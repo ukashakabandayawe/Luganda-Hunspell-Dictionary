@@ -2,20 +2,13 @@ from __future__ import annotations
 
 import gzip
 import json
-from dataclasses import asdict
-from datetime import datetime, timezone
 from pathlib import Path
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand, CommandError
 
-from review.hunspell import generate_examples_for_flag, get_flag_description
-from review.models import Stem, StemFlagTask
-
-
-def _utc_now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+from review.offline_bundle import build_offline_review_bundle_payload
 
 
 class Command(BaseCommand):
@@ -74,77 +67,11 @@ class Command(BaseCommand):
 
         out_path.parent.mkdir(parents=True, exist_ok=True)
 
-        stems = list(
-            Stem.objects.filter(assigned_to=user)
-            .only("id", "text", "source_line_no")
-            .order_by("source_line_no", "id")
+        payload = build_offline_review_bundle_payload(
+            user=user,
+            limit_examples=limit_examples,
+            examples_for=examples_for,
         )
-
-        stem_ids = [s.id for s in stems]
-        tasks = (
-            StemFlagTask.objects.filter(stem_id__in=stem_ids)
-            .select_related("flag", "stem")
-            .order_by("stem__source_line_no", "stem_id", "flag__code")
-        )
-
-        tasks_by_stem: dict[int, list[StemFlagTask]] = {}
-        for t in tasks:
-            tasks_by_stem.setdefault(t.stem_id, []).append(t)
-
-        total_tasks = 0
-        total_examples = 0
-
-        stem_rows = []
-        for s in stems:
-            task_rows = []
-            for t in tasks_by_stem.get(s.id, []):
-                total_tasks += 1
-                code = t.flag.code
-                desc = t.flag.description or get_flag_description(aff_path, code) or ""
-
-                include_examples = examples_for == "all" or t.status == StemFlagTask.Status.PENDING
-                examples: list[str] = []
-                if include_examples and limit_examples > 0:
-                    examples = generate_examples_for_flag(aff_path, code, s.text, limit=limit_examples)
-                    total_examples += len(examples)
-
-                task_rows.append(
-                    {
-                        "task_id": int(t.id),
-                        "flag": code,
-                        "status": t.status,
-                        "description": desc,
-                        "examples": examples,
-                    }
-                )
-
-            stem_rows.append(
-                {
-                    "stem": s.text,
-                    "source_line_no": int(s.source_line_no or 0),
-                    "tasks": task_rows,
-                }
-            )
-
-        payload = {
-            "schema": 1,
-            "generated_at": _utc_now_iso(),
-            "repo_dir": str(repo_dir),
-            "user": {"id": int(user.id), "username": user.username},
-            "aff": {
-                "path": str(aff_path),
-                "mtime_ns": aff_path.stat().st_mtime_ns,
-                "size": aff_path.stat().st_size,
-            },
-            "example_limit": limit_examples,
-            "examples_for": examples_for,
-            "stems": stem_rows,
-            "summary": {
-                "stems": len(stems),
-                "tasks": total_tasks,
-                "examples": total_examples,
-            },
-        }
 
         # Compact JSON to keep bundles small.
         raw = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
@@ -153,6 +80,7 @@ class Command(BaseCommand):
 
         self.stdout.write(
             self.style.SUCCESS(
-                f"Bundle written: {out_path} (stems={len(stems)}, tasks={total_tasks}, examples={total_examples})"
+                "Bundle written: "
+                f"{out_path} (stems={payload.get('summary', {}).get('stems')}, tasks={payload.get('summary', {}).get('tasks')}, examples={payload.get('summary', {}).get('examples')})"
             )
         )

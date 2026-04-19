@@ -10,6 +10,7 @@ from django.utils import timezone
 
 from .dic_io import ensure_working_dic_exists
 from .models import Flag, ReviewDecision, Stem, StemFlagTask
+from .offline_bundle import build_offline_review_bundle_payload
 from .services import rebuild_working_dic_for_user_id, working_dic_path_for_user_id
 
 
@@ -48,8 +49,69 @@ def download_user_working_dic(modeladmin, request, queryset):
 	return FileResponse(open(working_dic, "rb"), as_attachment=True, filename=filename)
 
 
+@admin.action(description="Download user's offline review bundle (.json.gz)")
+def download_user_offline_review_bundle(modeladmin, request, queryset):
+	if queryset.count() != 1:
+		modeladmin.message_user(request, "Select exactly 1 user to export a bundle for.", level=messages.WARNING)
+		return None
+
+	user = queryset.first()
+	if user is None:
+		modeladmin.message_user(request, "User not found.", level=messages.ERROR)
+		return None
+
+	if "apply" in request.POST:
+		limit_raw = (request.POST.get("limit_examples") or "120").strip()
+		examples_for = (request.POST.get("examples_for") or "pending").strip().lower()
+		try:
+			limit_examples = int(limit_raw)
+		except ValueError:
+			modeladmin.message_user(request, "Limit examples must be a number.", level=messages.ERROR)
+			return None
+		if limit_examples < 0:
+			modeladmin.message_user(request, "Limit examples must be >= 0.", level=messages.ERROR)
+			return None
+		if examples_for not in {"pending", "all"}:
+			modeladmin.message_user(request, "Examples for must be 'pending' or 'all'.", level=messages.ERROR)
+			return None
+
+		try:
+			payload = build_offline_review_bundle_payload(
+				user=user,
+				limit_examples=limit_examples,
+				examples_for=examples_for,
+			)
+			# Write to disk first so FileResponse can stream efficiently (and include Content-Length).
+			data_dir = Path(getattr(settings, "DATA_DIR"))
+			out_path = (data_dir / "bundles" / f"bundle_{getattr(user, 'username', str(user.id))}.json.gz").resolve()
+			out_path.parent.mkdir(parents=True, exist_ok=True)
+			import gzip
+			import json
+
+			with gzip.open(out_path, "wt", compresslevel=9, encoding="utf-8") as f:
+				json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
+		except Exception as ex:
+			modeladmin.message_user(request, f"Failed to export bundle: {ex}", level=messages.ERROR)
+			return None
+
+		filename = f"bundle_{_safe_filename_part(getattr(user, 'username', '') or str(user.id))}.json.gz"
+		return FileResponse(open(out_path, "rb"), as_attachment=True, filename=filename, content_type="application/gzip")
+
+	request.current_app = modeladmin.admin_site.name
+	context = {
+		**modeladmin.admin_site.each_context(request),
+		"title": "Export offline review bundle",
+		"users": queryset,
+		"action_name": "download_user_offline_review_bundle",
+		"current_limit_examples": 0,
+		"current_examples_for": "pending",
+		"opts": queryset.model._meta,
+	}
+	return TemplateResponse(request, "admin/review_export_bundle.html", context)
+
+
 class UserAdminWithWorkingDic(DjangoUserAdmin):
-	actions = (download_user_working_dic,)
+	actions = (download_user_working_dic, download_user_offline_review_bundle)
 
 
 @admin.register(Flag)
