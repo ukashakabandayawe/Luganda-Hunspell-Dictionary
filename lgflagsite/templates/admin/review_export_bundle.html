@@ -1,0 +1,39 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+
+  <p>Selected users: {{ users|length }}</p>
+  <p class="help">This will generate and download a <strong>.json.gz</strong> bundle for the Android offline review app.</p>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="action" value="{{ action_name }}" />
+    <input type="hidden" name="apply" value="1" />
+
+    {% for u in users %}
+      <input type="hidden" name="_selected_action" value="{{ u.pk }}" />
+    {% endfor %}
+
+    <fieldset class="module aligned">
+      <div class="form-row">
+        <label for="id_examples_for">Generate examples for</label>
+        <select id="id_examples_for" name="examples_for" required>
+          <option value="pending" {% if current_examples_for == 'pending' %}selected{% endif %}>Pending tasks only (recommended)</option>
+          <option value="all" {% if current_examples_for == 'all' %}selected{% endif %}>All tasks</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="id_limit_examples">Limit examples per task</label>
+        <input id="id_limit_examples" type="number" min="0" name="limit_examples" value="{{ current_limit_examples }}" required />
+        <p class="help">0 is recommended (fastest). Increase if you want sample generated words.</p>
+      </div>
+    </fieldset>
+
+    <div class="submit-row">
+      <input type="submit" value="Download bundle" class="default" />
+      <a href="..">Cancel</a>
+    </div>
+  </form>
+{% endblock %}
