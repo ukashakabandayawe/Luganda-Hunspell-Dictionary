@@ -175,7 +175,7 @@ def review_stem(request, stem_id: int):
     task_rows = []
     if current_task is not None:
         code = current_task.flag.code
-        desc = current_task.flag.description or get_flag_description(aff_path, code) or ""
+        desc = current_task.flag.description or current_task.flag.aff_description or get_flag_description(aff_path, code) or ""
         examples = generate_examples_for_flag(aff_path, code, stem.text, limit=120)
         task_rows.append(
             {

@@ -74,7 +74,7 @@ def build_offline_review_bundle_payload(
 		for t in tasks_by_stem.get(s.id, []):
 			total_tasks += 1
 			code = t.flag.code
-			desc = t.flag.description or get_flag_description(aff_path, code) or ""
+			desc = t.flag.description or t.flag.aff_description or get_flag_description(aff_path, code) or ""
 
 			include_examples = examples_for == "all" or t.status == StemFlagTask.Status.PENDING
 			examples: list[str] = []

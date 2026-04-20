@@ -17,7 +17,12 @@ class Flag(models.Model):
 	# The 1-based order the flag first appears in Luganda.aff (used for admin sorting).
 	# Defaults high so unknown/un-synced flags appear last until synced.
 	aff_order = models.PositiveIntegerField(default=1_000_000, db_index=True)
+	# Reviewer-facing (user-friendly) description. This should be edited in Django Admin.
+	# It is NOT overwritten by the Luganda.aff sync command.
 	description = models.TextField(blank=True, default="")
+	# Auto-synced description parsed from Luganda.aff comments (developer-oriented).
+	# This is used as a fallback when no reviewer-friendly description is provided.
+	aff_description = models.TextField(blank=True, default="")
 	is_active = models.BooleanField(default=True)
 	group = models.CharField(max_length=16, choices=Group.choices, default=Group.PRIORITY)
 

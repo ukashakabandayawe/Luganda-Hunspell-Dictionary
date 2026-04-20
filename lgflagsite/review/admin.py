@@ -118,8 +118,36 @@ class UserAdminWithWorkingDic(DjangoUserAdmin):
 class FlagAdmin(admin.ModelAdmin):
 	list_display = ("code", "affix_type", "group", "is_active")
 	list_filter = ("affix_type", "group", "is_active")
-	search_fields = ("code", "description")
+	search_fields = ("code", "description", "aff_description")
 	ordering = ("aff_order", "code")
+	fieldsets = (
+		(
+			None,
+			{
+				"fields": (
+					"code",
+					"affix_type",
+					"group",
+					"is_active",
+					"aff_order",
+				),
+			},
+		),
+		(
+			"Reviewer description (editable)",
+			{
+				"fields": ("description",),
+				"description": "This is what reviewers will see in the Android app and the Django review page.",
+			},
+		),
+		(
+			"From Luganda.aff (auto-synced)",
+			{
+				"fields": ("aff_description",),
+				"description": "Developer-oriented description parsed from Luganda.aff comments. Used only when the reviewer description is blank.",
+			},
+		),
+	)
 	actions = (
 		"mark_selected_flags_priority",
 		"mark_selected_flags_nouns",

@@ -100,7 +100,8 @@ class Command(BaseCommand):
 				code=code,
 				defaults={
 					"affix_type": t,
-					"description": desc,
+					"description": "",
+					"aff_description": desc,
 					"is_active": True,
 					"group": group or Flag.Group.PRIORITY,
 					"aff_order": int(aff_order),
@@ -113,8 +114,8 @@ class Command(BaseCommand):
 			if t and obj.affix_type != t:
 				obj.affix_type = t
 				changed = True
-			if desc and obj.description != desc:
-				obj.description = desc
+			if desc and obj.aff_description != desc:
+				obj.aff_description = desc
 				changed = True
 			if not obj.is_active:
 				obj.is_active = True
