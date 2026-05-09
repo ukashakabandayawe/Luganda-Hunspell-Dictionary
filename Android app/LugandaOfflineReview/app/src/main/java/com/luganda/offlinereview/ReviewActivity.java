@@ -151,6 +151,15 @@ public class ReviewActivity extends AppCompatActivity {
         }
 
         Toast.makeText(this, decision.toUpperCase() + " saved", Toast.LENGTH_SHORT).show();
+
+        // If this was the last pending flag for the stem, return to the queue.
+        // (Avoid looping back to the first flag.)
+        if (findNextPendingTaskIndex() < 0) {
+            Toast.makeText(this, "Stem complete", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
+
         showNextPendingOrFirst();
     }
 
