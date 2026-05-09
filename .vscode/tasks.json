@@ -28,6 +28,15 @@
 			"isBackground": true,
 			"problemMatcher": [],
 			"group": "build"
+		},
+		{
+			"label": "Sync aff flags",
+			"type": "process",
+			"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+			"args": [
+				"manage.py",
+				"sync_luganda_aff_flags"
+			]
 		}
 	]
 }
