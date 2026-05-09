@@ -5,7 +5,7 @@
 
   <p>Selected stems (after grouping): {{ stems|length }}</p>
   <p class="help">If a selected stem belongs to a group in <strong>Luganda.dic</strong>, the whole group is assigned together.</p>
-  <p class="help">When you assign stems, the system will automatically create review tasks for the <strong>selected flag group</strong> (active flags only).</p>
+  <p class="help">When you assign stems, the system will automatically create review tasks for the <strong>selected flag group(s)</strong> (active flags only).</p>
 
   {% if grouped_stems %}
     <h2>Grouped preview</h2>
@@ -44,12 +44,15 @@
       </div>
 
       <div class="form-row">
-        <label for="id_flag_group">Flag group</label>
-        <select id="id_flag_group" name="flag_group" required>
+        <label>Flag group(s)</label>
+        <div style="display: grid; gap: 6px; padding-top: 6px;">
           {% for value,label in flag_groups %}
-            <option value="{{ value }}" {% if value == current_flag_group %}selected{% endif %}>{{ label }}</option>
+            <label style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" name="flag_groups" value="{{ value }}" {% if value in current_flag_groups %}checked{% endif %} />
+              <span>{{ label }}</span>
+            </label>
           {% endfor %}
-        </select>
+        </div>
       </div>
     </fieldset>
 
