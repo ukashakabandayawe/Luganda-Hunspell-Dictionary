@@ -305,10 +305,20 @@ class StemAdmin(admin.ModelAdmin):
 		queryset = self._expand_stems_by_group(queryset)
 		if "apply" in request.POST:
 			user_id = request.POST.get("user_id")
-			group = (request.POST.get("flag_group") or Flag.Group.PRIORITY).strip()
 			allowed_groups = {c[0] for c in Flag.Group.choices}
-			if group not in allowed_groups:
-				self.message_user(request, "Invalid flag group.", level=messages.ERROR)
+			# New UI posts multiple values under flag_groups[]. Keep backward compatibility
+			# with the old single-select name (flag_group).
+			groups = [g.strip() for g in request.POST.getlist("flag_groups") if (g or "").strip()]
+			if not groups:
+				fallback = (request.POST.get("flag_group") or "").strip()
+				if fallback:
+					groups = [fallback]
+			if not groups:
+				self.message_user(request, "Select one or more flag groups.", level=messages.ERROR)
+				return None
+			invalid = [g for g in groups if g not in allowed_groups]
+			if invalid:
+				self.message_user(request, f"Invalid flag group(s): {', '.join(invalid)}.", level=messages.ERROR)
 				return None
 			if not user_id:
 				self.message_user(request, "Select a user.", level=messages.ERROR)
@@ -322,11 +332,12 @@ class StemAdmin(admin.ModelAdmin):
 
 			stem_ids = list(queryset.values_list("id", flat=True))
 			count = len(stem_ids)
-			flags = list(Flag.objects.filter(is_active=True, group=group).values_list("id", flat=True))
+			flags = list(Flag.objects.filter(is_active=True, group__in=groups).values_list("id", flat=True))
 			if stem_ids and not flags:
+				labels = ", ".join(Flag.Group(g).label for g in groups)
 				self.message_user(
 					request,
-					f"No active flags found in group '{Flag.Group(group).label}'.",
+					f"No active flags found in selected group(s): {labels}.",
 					level=messages.ERROR,
 				)
 				return None
@@ -345,9 +356,10 @@ class StemAdmin(admin.ModelAdmin):
 				if batch:
 					StemFlagTask.objects.bulk_create(batch, ignore_conflicts=True)
 
+			labels = ", ".join(Flag.Group(g).label for g in groups)
 			self.message_user(
 				request,
-				f"Assigned {count} stems to {user.username}. Review tasks ensured for {len(flags)} active flags in group '{Flag.Group(group).label}'.",
+				f"Assigned {count} stems to {user.username}. Review tasks ensured for {len(flags)} active flags in group(s): {labels}.",
 				level=messages.SUCCESS,
 			)
 			return None
@@ -362,7 +374,7 @@ class StemAdmin(admin.ModelAdmin):
 			"grouped_stems": grouped_stems,
 			"users": users,
 			"flag_groups": list(Flag.Group.choices),
-			"current_flag_group": Flag.Group.PRIORITY,
+			"current_flag_groups": [Flag.Group.PRIORITY],
 			"action_name": "assign_selected_to_user",
 			"opts": self.model._meta,
 		}
