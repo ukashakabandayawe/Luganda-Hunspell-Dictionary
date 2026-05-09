@@ -12,48 +12,36 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 AFF_FILE = REPO_ROOT / "Luganda.aff"
 
 rule_left_raw = """
-PFX PS Y 41
+PFX PS Y 29
 PFX PS j nzi jj # It creates nzija from stem "jja"
 PFX PS z nzi zze # It creates nzize
-PFX PS j n jj # It handles the word "nja" (the singular of tujja) so, Luganda.dic should have "jja" entry with NEEDAFFIX flag plus other flags
-PFX PS 0 n [^jbnmlhprxq] # Person marker
-PFX PS 0 m b # Person marker: buuka-->mbuuka
-PFX PS 0 o . # Person marker
-PFX PS l nd l.[^mn] # Person marker: lya-->ndya
-PFX PS l nn l.[mn] # Person marker: luma-->nnuma
-PFX PS w mp w # Person marker: wandiika --> mpandiika
-PFX PS 0 a . # Person marker
-PFX PS 0 tu . # Person marker
-PFX PS 0 mu . # Person marker
-PFX PS 0 ba . # Person marker
-PFX PS 0 a [^aeiou]
-PFX PS 0 ba . MORPH:tense=present MORPH:number=plural MORPH:pos=verb MORPH:class=1 MORPH:polarity=negative
-PFX PS 0 aba .
-PFX PS 0 gu .
-PFX PS 0 ogu .
-PFX PS 0 gi .
-PFX PS 0 egi .
-PFX PS 0 e [^aeiou]
-PFX PS 0 zi .
-PFX PS 0 ezi .
-PFX PS 0 ki .
-PFX PS 0 eki .
-PFX PS 0 bi .
-PFX PS 0 ebi .
-PFX PS 0 li .
-PFX PS 0 eli .
-PFX PS 0 ga .
-PFX PS 0 aga .
-PFX PS 0 ka .
-PFX PS 0 aka .
-PFX PS 0 bu .
-PFX PS 0 obu .
-PFX PS 0 lu .
-PFX PS 0 olu .
-PFX PS 0 ku .
-PFX PS 0 oku .
-PFX PS 0 tu .
-PFX PS 0 otu ."""
+PFX PS j n   jj # It handles the word "nja" (the singular of tujja) so, Luganda.dic should have "jja" entry with NEEDAFFIX flag plus other flags
+PFX PS y nj  y.[^mn] # yiga-->njiga
+PFX PS 0 n   [^jbnmlhprxq] # Person marker
+PFX PS 0 m   b # Person marker: buuka-->mbuuka
+PFX PS 0 o   . # Person marker
+PFX PS l nd  l.[^mn] # Person marker: lya-->ndya
+PFX PS l nn  l.[mn][^u] # Person marker: luma-->nnuma
+PFX PS w mp  w # Person marker: wandiika --> mpandiika
+PFX PS 0 a   . # Person marker
+PFX PS 0 tu  . # Person marker
+PFX PS 0 mu  . # Person marker
+PFX PS 0 ba  . # Person marker
+PFX PS 0 a   [^aeiou]
+PFX PS 0 ba  . MORPH:tense=present MORPH:number=plural MORPH:pos=verb MORPH:class=1 MORPH:polarity=negative
+PFX PS 0 gu  .
+PFX PS 0 gi  .
+PFX PS 0 e   [^aeiou]
+PFX PS 0 zi  .
+PFX PS 0 ki  .
+PFX PS 0 bi  .
+PFX PS 0 li  .
+PFX PS 0 ga  .
+PFX PS 0 ka  .
+PFX PS 0 bu  .
+PFX PS 0 lu  .
+PFX PS 0 ku  .
+PFX PS 0 tu  ."""
 
 rule_right_raw = """
 PFX Ob Y 18
