@@ -5,11 +5,13 @@ from django.contrib import admin, messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin as DjangoUserAdmin
 from django.http import FileResponse
+from django.db.models import Count, Max, Min, Q
 from django.template.response import TemplateResponse
 from django.utils import timezone
 
 from .dic_io import ensure_working_dic_exists
 from .models import Flag, ReviewDecision, Stem, StemFlagTask
+from .models import StemGroup
 from .offline_bundle import build_offline_review_bundle_payload
 from .services import rebuild_working_dic_for_user_id, working_dic_path_for_user_id
 
@@ -419,6 +421,140 @@ class StemAdmin(admin.ModelAdmin):
 			"opts": self.model._meta,
 		}
 		return TemplateResponse(request, "admin/review_create_tasks.html", context)
+
+
+@admin.register(StemGroup)
+class StemGroupAdmin(admin.ModelAdmin):
+	list_display = ("title", "source_line_no", "assigned_to", "stems_count")
+	search_fields = ("title",)
+	ordering = ("source_line_no", "title")
+	actions = ("assign_selected_groups_to_user",)
+
+	def get_queryset(self, request):
+		qs = super().get_queryset(request)
+		return qs.annotate(
+			_total_stems=Count("stems", distinct=True),
+			_unassigned_stems=Count(
+				"stems",
+				filter=Q(stems__assigned_to__isnull=True),
+				distinct=True,
+			),
+			_assignee_min=Min("stems__assigned_to__username"),
+			_assignee_max=Max("stems__assigned_to__username"),
+		)
+
+	@admin.display(description="# stems")
+	def stems_count(self, obj: StemGroup) -> int:
+		try:
+			return obj.stems.count()
+		except Exception:
+			return 0
+
+	@admin.display(description="Assigned to", ordering="_assignee_min")
+	def assigned_to(self, obj: StemGroup) -> str:
+		total = getattr(obj, "_total_stems", None)
+		unassigned = getattr(obj, "_unassigned_stems", None)
+		assignee_min = getattr(obj, "_assignee_min", None)
+		assignee_max = getattr(obj, "_assignee_max", None)
+		# Fallback for safety if queryset isn't annotated.
+		if total is None or unassigned is None:
+			assigned_usernames = list(
+				obj.stems.exclude(assigned_to__isnull=True).values_list("assigned_to__username", flat=True).distinct()
+			)
+			if not assigned_usernames:
+				return "Unassigned"
+			if len(assigned_usernames) == 1 and obj.stems.filter(assigned_to__isnull=True).count() == 0:
+				return assigned_usernames[0]
+			return "Mixed"
+
+		if total == 0:
+			return "Unassigned"
+		if unassigned == total:
+			return "Unassigned"
+		if unassigned and unassigned > 0:
+			return "Mixed"
+		if assignee_min and assignee_min == assignee_max:
+			return str(assignee_min)
+		return "Mixed"
+
+	@admin.action(description="Assign selected stem groups to a user")
+	def assign_selected_groups_to_user(self, request, queryset):
+		if "apply" in request.POST:
+			user_id = request.POST.get("user_id")
+			allowed_groups = {c[0] for c in Flag.Group.choices}
+			groups = [g.strip() for g in request.POST.getlist("flag_groups") if (g or "").strip()]
+			if not groups:
+				fallback = (request.POST.get("flag_group") or "").strip()
+				if fallback:
+					groups = [fallback]
+			if not groups:
+				self.message_user(request, "Select one or more flag groups.", level=messages.ERROR)
+				return None
+			invalid = [g for g in groups if g not in allowed_groups]
+			if invalid:
+				self.message_user(request, f"Invalid flag group(s): {', '.join(invalid)}.", level=messages.ERROR)
+				return None
+			if not user_id:
+				self.message_user(request, "Select a user.", level=messages.ERROR)
+				return None
+			User = get_user_model()
+			try:
+				user = User.objects.get(id=user_id)
+			except User.DoesNotExist:
+				self.message_user(request, "User not found.", level=messages.ERROR)
+				return None
+
+			group_ids = list(queryset.values_list("id", flat=True))
+			stem_ids = list(Stem.objects.filter(group_id__in=group_ids).values_list("id", flat=True))
+			count = len(stem_ids)
+			flags = list(Flag.objects.filter(is_active=True, group__in=groups).values_list("id", flat=True))
+			if stem_ids and not flags:
+				labels = ", ".join(Flag.Group(g).label for g in groups)
+				self.message_user(
+					request,
+					f"No active flags found in selected group(s): {labels}.",
+					level=messages.ERROR,
+				)
+				return None
+
+			now = timezone.now()
+			if stem_ids:
+				Stem.objects.filter(id__in=stem_ids).update(assigned_to=user, assigned_at=now)
+
+			if stem_ids and flags:
+				batch: list[StemFlagTask] = []
+				batch_size = 5000
+				for sid in stem_ids:
+					for fid in flags:
+						batch.append(StemFlagTask(stem_id=sid, flag_id=fid))
+						if len(batch) >= batch_size:
+							StemFlagTask.objects.bulk_create(batch, ignore_conflicts=True)
+							batch.clear()
+				if batch:
+					StemFlagTask.objects.bulk_create(batch, ignore_conflicts=True)
+
+			labels = ", ".join(Flag.Group(g).label for g in groups)
+			self.message_user(
+				request,
+				f"Assigned {count} stems (from {queryset.count()} groups) to {user.username}. Review tasks ensured for {len(flags)} active flags in group(s): {labels}.",
+				level=messages.SUCCESS,
+			)
+			return None
+
+		users = get_user_model().objects.filter(is_active=True).order_by("username")
+		request.current_app = self.admin_site.name
+		preview_groups = list(queryset.order_by("source_line_no", "id"))
+		context = {
+			**self.admin_site.each_context(request),
+			"title": "Assign stem groups",
+			"stem_groups": preview_groups,
+			"users": users,
+			"flag_groups": list(Flag.Group.choices),
+			"current_flag_groups": [Flag.Group.PRIORITY],
+			"action_name": "assign_selected_groups_to_user",
+			"opts": self.model._meta,
+		}
+		return TemplateResponse(request, "admin/review_assign_stem_groups.html", context)
 
 
 @admin.register(StemFlagTask)
