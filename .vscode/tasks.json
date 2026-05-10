@@ -37,6 +37,16 @@
 				"manage.py",
 				"sync_luganda_aff_flags"
 			]
+		},
+		{
+			"label": "Sync dic to site (import --upsert)",
+			"type": "process",
+			"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+			"args": [
+				"manage.py",
+				"import_luganda_dic",
+				"--upsert"
+			]
 		}
 	]
 }
