@@ -428,7 +428,7 @@ class StemGroupAdmin(admin.ModelAdmin):
 	list_display = ("title", "source_line_no", "assigned_to", "stems_count")
 	search_fields = ("title",)
 	ordering = ("source_line_no", "title")
-	actions = ("assign_selected_groups_to_user",)
+	actions = ("assign_selected_groups_to_user", "unassign_selected_groups")
 
 	def get_queryset(self, request):
 		qs = super().get_queryset(request)
@@ -555,6 +555,23 @@ class StemGroupAdmin(admin.ModelAdmin):
 			"opts": self.model._meta,
 		}
 		return TemplateResponse(request, "admin/review_assign_stem_groups.html", context)
+
+	@admin.action(description="Unassign selected stem groups")
+	def unassign_selected_groups(self, request, queryset):
+		group_ids = list(queryset.values_list("id", flat=True))
+		if not group_ids:
+			self.message_user(request, "No stem groups selected.", level=messages.WARNING)
+			return
+
+		# Unassign stems that belong to these groups.
+		stems_qs = Stem.objects.filter(group_id__in=group_ids).exclude(assigned_to__isnull=True)
+		stems_count = stems_qs.count()
+		stems_qs.update(assigned_to=None, assigned_at=None)
+		self.message_user(
+			request,
+			f"Unassigned {stems_count} stems across {len(group_ids)} stem groups.",
+			level=messages.SUCCESS,
+		)
 
 
 @admin.register(StemFlagTask)

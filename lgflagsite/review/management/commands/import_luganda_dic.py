@@ -7,6 +7,8 @@ from typing import Optional
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
+from django.db.models import Count, Max, Min, Q
+from django.utils import timezone
 
 from review.dic_io import parse_dic_entry_line
 from review.hunspell import HunspellFlagMode, detect_flag_mode, merge_flags, split_long_flags
@@ -119,6 +121,37 @@ class Command(BaseCommand):
 		groups_seen = 0
 		current_group: StemGroup | None = None
 		first_seen_line_no: dict[str, int] = {}
+		group_assignee_cache: dict[int, int | None] = {}
+
+		def _single_assignee_id_for_group(group_id: int) -> int | None:
+			"""Return a user_id if all *assigned* stems in the group share one user.
+
+			If the group has no assigned stems, or multiple assignees, return None.
+			We intentionally allow unassigned stems: the goal is to keep group-level
+			assignment stable when new stems are imported.
+			"""
+			cached = group_assignee_cache.get(int(group_id), "__missing__")
+			if cached != "__missing__":
+				return cached
+
+			agg = Stem.objects.filter(group_id=int(group_id)).aggregate(
+				assigned_users=Count(
+					"assigned_to_id",
+					filter=Q(assigned_to__isnull=False),
+					distinct=True,
+				),
+				min_user=Min("assigned_to_id", filter=Q(assigned_to__isnull=False)),
+				max_user=Max("assigned_to_id", filter=Q(assigned_to__isnull=False)),
+			)
+			assigned_users = int(agg.get("assigned_users") or 0)
+			min_user = agg.get("min_user")
+			max_user = agg.get("max_user")
+			if assigned_users == 1 and min_user is not None and min_user == max_user:
+				group_assignee_cache[int(group_id)] = int(min_user)
+				return int(min_user)
+
+			group_assignee_cache[int(group_id)] = None
+			return None
 
 		for idx, line in enumerate(lines):
 			if idx == 0:
@@ -164,14 +197,21 @@ class Command(BaseCommand):
 				continue
 
 			if upsert:
+				defaults = {
+					"group": current_group,
+					"flags_raw": entry.flags_raw or "",
+					"trailing": entry.trailing or "",
+					"source_line_no": stem_first_line,
+				}
+				if current_group is not None:
+					assignee_id = _single_assignee_id_for_group(int(current_group.id))
+					if assignee_id is not None:
+						defaults["assigned_to_id"] = int(assignee_id)
+						defaults["assigned_at"] = timezone.now()
+
 				stem, is_new = Stem.objects.get_or_create(
 					text=entry.stem,
-					defaults={
-						"group": current_group,
-						"flags_raw": entry.flags_raw or "",
-						"trailing": entry.trailing or "",
-						"source_line_no": stem_first_line,
-					},
+					defaults=defaults,
 				)
 				if is_new:
 					missing_stems_created += 1
@@ -181,6 +221,14 @@ class Command(BaseCommand):
 					if current_group is not None and stem.group_id != current_group.id:
 						stem.group = current_group
 						fields_to_update.append("group")
+					# If the group already has a single assignee, keep assignments stable by
+					# assigning any previously-unassigned stems we encounter during sync.
+					if current_group is not None and getattr(stem, "assigned_to_id", None) is None:
+						assignee_id = _single_assignee_id_for_group(int(current_group.id))
+						if assignee_id is not None:
+							stem.assigned_to_id = int(assignee_id)
+							stem.assigned_at = timezone.now()
+							fields_to_update.extend(["assigned_to", "assigned_at"])
 					# Keep ordering in sync with current file.
 					if int(stem.source_line_no or 0) != int(stem_first_line):
 						stem.source_line_no = stem_first_line
