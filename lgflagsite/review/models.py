@@ -33,9 +33,9 @@ class Flag(models.Model):
 class StemGroup(models.Model):
 	"""A logical grouping of stem variants as authored in Luganda.dic comments."""
 
-	title = models.CharField(max_length=255)
+	title = models.CharField(max_length=255, unique=True)
 	# 1-based line number of the group header in Luganda.dic (stable ordering key).
-	source_line_no = models.IntegerField(unique=True, db_index=True)
+	source_line_no = models.IntegerField(db_index=True)
 
 	def __str__(self) -> str:
 		return self.title

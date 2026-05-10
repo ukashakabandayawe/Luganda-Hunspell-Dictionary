@@ -131,14 +131,18 @@ class Command(BaseCommand):
 					current_group = None
 				else:
 					groups_seen += 1
-					current_group, _ = StemGroup.objects.get_or_create(
-						source_line_no=idx,
-						defaults={"title": title},
+					current_group, created = StemGroup.objects.get_or_create(
+						title=title,
+						defaults={"source_line_no": idx},
 					)
-					# If title changed in file, keep DB in sync.
-					if current_group.title != title:
-						current_group.title = title
-						current_group.save(update_fields=["title"])
+					# Keep ordering stable: store the earliest occurrence in the file.
+					try:
+						current_line = int(getattr(current_group, "source_line_no", 0) or 0)
+					except Exception:
+						current_line = 0
+					if not created and (current_line <= 0 or int(idx) < current_line):
+						current_group.source_line_no = int(idx)
+						current_group.save(update_fields=["source_line_no"])
 				continue
 
 			entry = parse_dic_entry_line(line)
