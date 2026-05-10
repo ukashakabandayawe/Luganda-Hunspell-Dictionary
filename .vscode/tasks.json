@@ -1,5 +1,29 @@
 {
 	"version": "2.0.0",
+	"inputs": [
+		{
+			"id": "bundleUser",
+			"type": "promptString",
+			"description": "Username to export a bundle for (e.g. alfa)",
+			"default": "alfa"
+		},
+		{
+			"id": "bundleLimitExamples",
+			"type": "promptString",
+			"description": "Max examples per task",
+			"default": "120"
+		},
+		{
+			"id": "bundleExamplesFor",
+			"type": "pickString",
+			"description": "Generate examples for",
+			"options": [
+				"pending",
+				"all"
+			],
+			"default": "pending"
+		}
+	],
 	"tasks": [
 		{
 			"label": "Copy Luganda.aff/Luganda.dic to LanguageTool hunspell",
@@ -46,6 +70,21 @@
 				"manage.py",
 				"import_luganda_dic",
 				"--upsert"
+			]
+		},
+		{
+			"label": "Export offline bundle (user)",
+			"type": "process",
+			"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+			"args": [
+				"manage.py",
+				"export_review_bundle",
+				"--user",
+				"${input:bundleUser}",
+				"--limit-examples",
+				"${input:bundleLimitExamples}",
+				"--examples-for",
+				"${input:bundleExamplesFor}"
 			]
 		}
 	]
