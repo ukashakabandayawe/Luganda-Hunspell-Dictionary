@@ -113,7 +113,41 @@ def download_user_offline_review_bundle(modeladmin, request, queryset):
 
 
 class UserAdminWithWorkingDic(DjangoUserAdmin):
+	list_display = (
+		"username",
+		"assigned_stems_count",
+		"assigned_stem_groups_count",
+		"email",
+		"first_name",
+		"last_name",
+		"is_staff",
+	)
 	actions = (download_user_working_dic, download_user_offline_review_bundle)
+
+	def get_queryset(self, request):
+		qs = super().get_queryset(request)
+		return qs.annotate(
+			_assigned_stems=Count("assigned_stems", distinct=True),
+			_assigned_stem_groups=Count(
+				"assigned_stems__group",
+				filter=Q(assigned_stems__group__isnull=False),
+				distinct=True,
+			),
+		)
+
+	@admin.display(description="# stems", ordering="_assigned_stems")
+	def assigned_stems_count(self, obj) -> int:
+		try:
+			return int(getattr(obj, "_assigned_stems", 0) or 0)
+		except Exception:
+			return 0
+
+	@admin.display(description="# stem groups", ordering="_assigned_stem_groups")
+	def assigned_stem_groups_count(self, obj) -> int:
+		try:
+			return int(getattr(obj, "_assigned_stem_groups", 0) or 0)
+		except Exception:
+			return 0
 
 
 @admin.register(Flag)
