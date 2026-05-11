@@ -36,6 +36,9 @@ class StemGroup(models.Model):
 	title = models.CharField(max_length=255, unique=True)
 	# 1-based line number of the group header in Luganda.dic (stable ordering key).
 	source_line_no = models.IntegerField(db_index=True)
+	# Admin-managed classification: which Flag.Group(s) this stem group belongs to.
+	# Used as the default when assigning groups to users (so you don't have to re-pick).
+	flag_groups = models.JSONField(blank=True, default=list)
 
 	def __str__(self) -> str:
 		return self.title

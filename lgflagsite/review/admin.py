@@ -223,7 +223,80 @@ class StemAdmin(admin.ModelAdmin):
 		"unassign_selected",
 		"create_flag_tasks_for_selected",
 		"ensure_all_flag_tasks_for_selected",
+		"set_flag_groups_for_selected_stem_groups",
 	)
+
+	@admin.action(description="Set flag group(s) for selected stems' stem group(s)")
+	def set_flag_groups_for_selected_stem_groups(self, request, queryset):
+		if "apply" in request.POST:
+			allowed_groups = {c[0] for c in Flag.Group.choices}
+			groups = [g.strip() for g in request.POST.getlist("flag_groups") if (g or "").strip()]
+			if not groups:
+				self.message_user(request, "Select one or more flag groups.", level=messages.ERROR)
+				return None
+			invalid = [g for g in groups if g not in allowed_groups]
+			if invalid:
+				self.message_user(request, f"Invalid flag group(s): {', '.join(invalid)}.", level=messages.ERROR)
+				return None
+
+			stem_ids = list(queryset.values_list("id", flat=True))
+			group_ids = list(
+				Stem.objects.filter(id__in=stem_ids)
+				.exclude(group_id__isnull=True)
+				.values_list("group_id", flat=True)
+				.distinct()
+			)
+			if not group_ids:
+				self.message_user(request, "No selected stems belong to a stem group.", level=messages.WARNING)
+				return None
+
+			# Normalize (dedupe + stable order).
+			uniq = []
+			seen = set()
+			for g in groups:
+				if g in seen:
+					continue
+				seen.add(g)
+				uniq.append(g)
+
+			updated = 0
+			for sg in StemGroup.objects.filter(id__in=group_ids):
+				sg.flag_groups = list(uniq)
+				sg.save(update_fields=["flag_groups"])
+				updated += 1
+
+			labels = ", ".join(Flag.Group(g).label for g in uniq)
+			self.message_user(
+				request,
+				f"Set flag group(s) for {updated} stem groups: {labels}.",
+				level=messages.SUCCESS,
+			)
+			return None
+
+		# Preview the stem groups affected.
+		stem_ids = list(queryset.values_list("id", flat=True))
+		groups = list(
+			StemGroup.objects.filter(
+				id__in=(
+					Stem.objects.filter(id__in=stem_ids)
+					.exclude(group_id__isnull=True)
+					.values_list("group_id", flat=True)
+					.distinct()
+				)
+			).order_by("source_line_no", "title")
+		)
+		request.current_app = self.admin_site.name
+		context = {
+			**self.admin_site.each_context(request),
+			"title": "Set flag group(s) for stem groups",
+			"stem_groups": groups,
+			"stems": queryset,
+			"flag_groups": list(Flag.Group.choices),
+			"current_flag_groups": [],
+			"action_name": "set_flag_groups_for_selected_stem_groups",
+			"opts": self.model._meta,
+		}
+		return TemplateResponse(request, "admin/review_set_stem_group_flag_groups.html", context)
 
 	@admin.action(description="Ensure review tasks for ALL active flags")
 	def ensure_all_flag_tasks_for_selected(self, request, queryset):
@@ -425,10 +498,48 @@ class StemAdmin(admin.ModelAdmin):
 
 @admin.register(StemGroup)
 class StemGroupAdmin(admin.ModelAdmin):
-	list_display = ("title", "source_line_no", "assigned_to", "stems_count")
+	list_display = ("title", "source_line_no", "flag_groups_display", "assigned_to", "stems_count")
 	search_fields = ("title",)
 	ordering = ("source_line_no", "title")
-	actions = ("assign_selected_groups_to_user", "unassign_selected_groups")
+	actions = (
+		"assign_selected_groups_to_user",
+		"unassign_selected_groups",
+		"set_flag_groups_for_selected_groups",
+	)
+
+	def get_actions(self, request):
+		actions = super().get_actions(request)
+		User = get_user_model()
+		# Keep the actions menu usable; if you have a lot of users,
+		# fall back to the generic "Assign ... to a user" action.
+		reviewers = list(
+			User.objects.filter(is_active=True, is_staff=False, is_superuser=False)
+			.only("id", "username")
+			.order_by("username")
+		)
+		max_dynamic = 40
+		if len(reviewers) > max_dynamic:
+			return actions
+
+		for u in reviewers:
+			uid = int(u.id)
+			username = (getattr(u, "username", "") or str(uid)).strip()
+			label = username[:1].upper() + username[1:]
+			action_name = f"assign_selected_stem_groups_to_user_{uid}"
+
+			def _make_action(target_user_id: int, target_label: str):
+				def _action(modeladmin, req, queryset):
+					return modeladmin._assign_selected_groups_to_specific_user(req, queryset, target_user_id)
+				_action.__name__ = f"assign_selected_stem_groups_to_user_{target_user_id}"
+				_action.short_description = f"Assign selected stem groups to {target_label}"
+				return _action
+
+			actions[action_name] = (
+				_make_action(uid, label),
+				action_name,
+				f"Assign selected stem groups to {label}",
+			)
+		return actions
 
 	def get_queryset(self, request):
 		qs = super().get_queryset(request)
@@ -477,6 +588,20 @@ class StemGroupAdmin(admin.ModelAdmin):
 			return str(assignee_min)
 		return "Mixed"
 
+	@admin.display(description="Flag group(s)")
+	def flag_groups_display(self, obj: StemGroup) -> str:
+		try:
+			groups = list(getattr(obj, "flag_groups", None) or [])
+		except Exception:
+			groups = []
+		allowed = {c[0] for c in Flag.Group.choices}
+		labels = []
+		for g in groups:
+			if g not in allowed:
+				continue
+			labels.append(Flag.Group(g).label)
+		return ", ".join(labels)
+
 	@admin.action(description="Assign selected stem groups to a user")
 	def assign_selected_groups_to_user(self, request, queryset):
 		if "apply" in request.POST:
@@ -487,8 +612,26 @@ class StemGroupAdmin(admin.ModelAdmin):
 				fallback = (request.POST.get("flag_group") or "").strip()
 				if fallback:
 					groups = [fallback]
+			# If nothing was selected, default to the union of the selected stem groups'
+			# stored flag group(s). This makes assignment a one-step action once groups
+			# are classified.
 			if not groups:
-				self.message_user(request, "Select one or more flag groups.", level=messages.ERROR)
+				union: list[str] = []
+				seen = set()
+				for sg in queryset:
+					for g in (getattr(sg, "flag_groups", None) or []):
+						g = (g or "").strip()
+						if not g or g in seen:
+							continue
+						seen.add(g)
+						union.append(g)
+				groups = union
+			if not groups:
+				self.message_user(
+					request,
+					"Select one or more flag groups (or set flag groups on these stem groups first).",
+					level=messages.ERROR,
+				)
 				return None
 			invalid = [g for g in groups if g not in allowed_groups]
 			if invalid:
@@ -544,17 +687,135 @@ class StemGroupAdmin(admin.ModelAdmin):
 		users = get_user_model().objects.filter(is_active=True).order_by("username")
 		request.current_app = self.admin_site.name
 		preview_groups = list(queryset.order_by("source_line_no", "id"))
+		# Default the checkbox selection to the union of stored groups.
+		union: list[str] = []
+		seen = set()
+		for sg in preview_groups:
+			for g in (getattr(sg, "flag_groups", None) or []):
+				g = (g or "").strip()
+				if not g or g in seen:
+					continue
+				seen.add(g)
+				union.append(g)
 		context = {
 			**self.admin_site.each_context(request),
 			"title": "Assign stem groups",
 			"stem_groups": preview_groups,
 			"users": users,
 			"flag_groups": list(Flag.Group.choices),
-			"current_flag_groups": [Flag.Group.PRIORITY],
+			"current_flag_groups": union or [Flag.Group.PRIORITY],
 			"action_name": "assign_selected_groups_to_user",
 			"opts": self.model._meta,
 		}
 		return TemplateResponse(request, "admin/review_assign_stem_groups.html", context)
+
+	def _assign_selected_groups_to_specific_user(self, request, queryset, user_id: int):
+		allowed_groups = {c[0] for c in Flag.Group.choices}
+		User = get_user_model()
+		user = User.objects.filter(id=int(user_id), is_active=True).only("id", "username").first()
+		if not user:
+			self.message_user(request, "User not found.", level=messages.ERROR)
+			return None
+
+		# Default to the union of stored flag group(s) on the selected stem groups.
+		union: list[str] = []
+		seen = set()
+		for sg in queryset:
+			for g in (getattr(sg, "flag_groups", None) or []):
+				g = (g or "").strip()
+				if not g or g in seen:
+					continue
+				seen.add(g)
+				union.append(g)
+		groups = [g for g in union if g in allowed_groups]
+		if not groups:
+			self.message_user(
+				request,
+				"No flag group(s) set on these stem groups. Use 'Set flag group(s) for selected stem groups' first (or use the generic assign action).",
+				level=messages.ERROR,
+			)
+			return None
+
+		group_ids = list(queryset.values_list("id", flat=True))
+		stem_ids = list(Stem.objects.filter(group_id__in=group_ids).values_list("id", flat=True))
+		count = len(stem_ids)
+		flags = list(Flag.objects.filter(is_active=True, group__in=groups).values_list("id", flat=True))
+		if stem_ids and not flags:
+			labels = ", ".join(Flag.Group(g).label for g in groups)
+			self.message_user(
+				request,
+				f"No active flags found in selected group(s): {labels}.",
+				level=messages.ERROR,
+			)
+			return None
+
+		now = timezone.now()
+		if stem_ids:
+			Stem.objects.filter(id__in=stem_ids).update(assigned_to=user, assigned_at=now)
+
+		if stem_ids and flags:
+			batch: list[StemFlagTask] = []
+			batch_size = 5000
+			for sid in stem_ids:
+				for fid in flags:
+					batch.append(StemFlagTask(stem_id=sid, flag_id=fid))
+					if len(batch) >= batch_size:
+						StemFlagTask.objects.bulk_create(batch, ignore_conflicts=True)
+						batch.clear()
+			if batch:
+				StemFlagTask.objects.bulk_create(batch, ignore_conflicts=True)
+
+		labels = ", ".join(Flag.Group(g).label for g in groups)
+		self.message_user(
+			request,
+			f"Assigned {count} stems (from {queryset.count()} groups) to {user.username}. Review tasks ensured for {len(flags)} active flags in group(s): {labels}.",
+			level=messages.SUCCESS,
+		)
+		return None
+
+	@admin.action(description="Set flag group(s) for selected stem groups")
+	def set_flag_groups_for_selected_groups(self, request, queryset):
+		if "apply" in request.POST:
+			allowed_groups = {c[0] for c in Flag.Group.choices}
+			groups = [g.strip() for g in request.POST.getlist("flag_groups") if (g or "").strip()]
+			if not groups:
+				self.message_user(request, "Select one or more flag groups.", level=messages.ERROR)
+				return None
+			invalid = [g for g in groups if g not in allowed_groups]
+			if invalid:
+				self.message_user(request, f"Invalid flag group(s): {', '.join(invalid)}.", level=messages.ERROR)
+				return None
+
+			uniq = []
+			seen = set()
+			for g in groups:
+				if g in seen:
+					continue
+				seen.add(g)
+				uniq.append(g)
+
+			updated = 0
+			for sg in queryset:
+				sg.flag_groups = list(uniq)
+				sg.save(update_fields=["flag_groups"])
+				updated += 1
+
+			labels = ", ".join(Flag.Group(g).label for g in uniq)
+			self.message_user(request, f"Set flag group(s) for {updated} stem groups: {labels}.", level=messages.SUCCESS)
+			return None
+
+		request.current_app = self.admin_site.name
+		preview_groups = list(queryset.order_by("source_line_no", "id"))
+		context = {
+			**self.admin_site.each_context(request),
+			"title": "Set flag group(s) for stem groups",
+			"stem_groups": preview_groups,
+			"flag_groups": list(Flag.Group.choices),
+			"current_flag_groups": [],
+			"action_name": "set_flag_groups_for_selected_groups",
+			"opts": self.model._meta,
+		}
+		return TemplateResponse(request, "admin/review_set_stem_group_flag_groups.html", context)
 
 	@admin.action(description="Unassign selected stem groups")
 	def unassign_selected_groups(self, request, queryset):

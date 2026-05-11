@@ -1,0 +1,46 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+
+  {% if stem_groups %}
+    <p>Selected stem groups: {{ stem_groups|length }}</p>
+    <h2>Preview</h2>
+    <ul>{% for g in stem_groups %}<li>{{ g.title }} ({{ g.stems.count }})</li>{% endfor %}</ul>
+  {% endif %}
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="action" value="{{ action_name }}" />
+    <input type="hidden" name="apply" value="1" />
+
+    {% if stems %}
+      {% for s in stems %}
+        <input type="hidden" name="_selected_action" value="{{ s.pk }}" />
+      {% endfor %}
+    {% else %}
+      {% for g in stem_groups %}
+        <input type="hidden" name="_selected_action" value="{{ g.pk }}" />
+      {% endfor %}
+    {% endif %}
+
+    <fieldset class="module aligned">
+      <div class="form-row">
+        <label>Flag group(s)</label>
+        <div style="display: grid; gap: 6px; padding-top: 6px;">
+          {% for value,label in flag_groups %}
+            <label style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" name="flag_groups" value="{{ value }}" {% if value in current_flag_groups %}checked{% endif %} />
+              <span>{{ label }}</span>
+            </label>
+          {% endfor %}
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="submit-row">
+      <input type="submit" value="Apply" class="default" />
+      <a href="..">Cancel</a>
+    </div>
+  </form>
+{% endblock %}
