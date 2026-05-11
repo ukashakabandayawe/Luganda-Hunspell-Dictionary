@@ -498,7 +498,7 @@ class StemAdmin(admin.ModelAdmin):
 
 @admin.register(StemGroup)
 class StemGroupAdmin(admin.ModelAdmin):
-	list_display = ("title", "source_line_no", "flag_groups_display", "assigned_to", "stems_count")
+	list_display = ("title", "assigned_to", "flag_groups_display", "stems_count", "source_line_no")
 	search_fields = ("title",)
 	ordering = ("source_line_no", "title")
 	actions = (

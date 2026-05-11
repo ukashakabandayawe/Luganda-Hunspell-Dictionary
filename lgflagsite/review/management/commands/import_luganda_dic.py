@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import re
+from collections import Counter
 from typing import Optional
 
 from django.conf import settings
@@ -121,7 +122,28 @@ class Command(BaseCommand):
 		groups_seen = 0
 		current_group: StemGroup | None = None
 		first_seen_line_no: dict[str, int] = {}
+		group_first_seen_line_no: dict[str, int] = {}
 		group_assignee_cache: dict[int, int | None] = {}
+
+		def _peek_group_sample_stems(start_idx: int, *, max_stems: int = 8, max_lines: int = 800) -> list[str]:
+			"""Peek ahead to sample stems inside the current group block.
+
+			Used as a heuristic to map a moved+renamed group title back to the existing
+			DB StemGroup by looking at which group the stems previously belonged to.
+			"""
+			out: list[str] = []
+			limit = min(len(lines), int(start_idx) + int(max_lines))
+			for j in range(int(start_idx) + 1, limit):
+				m = _parse_group_marker(lines[j])
+				if m is not None and m[0] == "end":
+					break
+				entry = parse_dic_entry_line(lines[j])
+				if not entry:
+					continue
+				out.append(entry.stem)
+				if len(out) >= int(max_stems):
+					break
+			return out
 
 		def _single_assignee_id_for_group(group_id: int) -> int | None:
 			"""Return a user_id if all *assigned* stems in the group share one user.
@@ -164,18 +186,97 @@ class Command(BaseCommand):
 					current_group = None
 				else:
 					groups_seen += 1
-					current_group, created = StemGroup.objects.get_or_create(
-						title=title,
-						defaults={"source_line_no": idx},
-					)
-					# Keep ordering stable: store the earliest occurrence in the file.
-					try:
-						current_line = int(getattr(current_group, "source_line_no", 0) or 0)
-					except Exception:
-						current_line = 0
-					if not created and (current_line <= 0 or int(idx) < current_line):
-						current_group.source_line_no = int(idx)
-						current_group.save(update_fields=["source_line_no"])
+					# Stable identity rules:
+					# 1) Prefer matching by title (robust if lines shift when you insert words).
+					# 2) If the title doesn't exist yet, fall back to matching by source_line_no
+					#    to detect in-place renames.
+					# 3) If neither match, create a new group.
+					created = False
+					first_line_in_file = group_first_seen_line_no.setdefault(title, int(idx))
+
+					current_group = StemGroup.objects.filter(title=title).only("id", "title", "source_line_no").first()
+					if current_group is not None:
+						# Keep ordering aligned to current file (use earliest occurrence within this file).
+						if int(getattr(current_group, "source_line_no", 0) or 0) != int(first_line_in_file):
+							current_group.source_line_no = int(first_line_in_file)
+							current_group.save(update_fields=["source_line_no"])
+					else:
+						existing_at_line = (
+							StemGroup.objects.filter(source_line_no=int(idx))
+							.only("id", "title", "source_line_no")
+							.order_by("id")
+						)
+						current_group = existing_at_line.first()
+						if current_group is not None:
+							# Rename in-place (line-based fallback). This keeps existing stems/tasks/assignments.
+							conflict = (
+								StemGroup.objects.filter(title=title)
+								.exclude(id=current_group.id)
+								.exists()
+							)
+							if conflict:
+								raise CommandError(
+									(
+										"Cannot rename StemGroup at line "
+										f"{idx} from '{current_group.title}' to '{title}' "
+										"because that title already exists. "
+										"Choose a unique group title in Luganda.dic."
+									)
+								)
+							fields = []
+							if (current_group.title or "") != title:
+								current_group.title = title
+								fields.append("title")
+							if int(getattr(current_group, "source_line_no", 0) or 0) != int(first_line_in_file):
+								current_group.source_line_no = int(first_line_in_file)
+								fields.append("source_line_no")
+							if fields:
+								current_group.save(update_fields=fields)
+						else:
+							# Heuristic: moved+renamed group.
+							# If this title is new and the header line doesn't match an existing group,
+							# try to identify the prior group by the stems inside this block.
+							sample = _peek_group_sample_stems(idx)
+							if sample:
+								group_ids = list(
+									Stem.objects.filter(text__in=sample)
+									.exclude(group_id__isnull=True)
+									.values_list("group_id", flat=True)
+								)
+								if group_ids:
+									counts = Counter(int(gid) for gid in group_ids if gid)
+									cand_id, cand_hits = counts.most_common(1)[0]
+									found = len(group_ids)
+									# Require a strong majority to avoid accidental remaps.
+									if found >= 3 and cand_hits >= 3 and (cand_hits / max(1, found)) >= 0.75:
+										candidate = (
+											StemGroup.objects.filter(id=int(cand_id))
+											.only("id", "title", "source_line_no")
+											.first()
+										)
+										if candidate is not None:
+											conflict = StemGroup.objects.filter(title=title).exclude(id=candidate.id).exists()
+											if conflict:
+												raise CommandError(
+													(
+														"Cannot rename stem group (heuristic match) to "
+														f"'{title}' because that title already exists."
+													)
+											)
+											fields = []
+											if (candidate.title or "") != title:
+												candidate.title = title
+												fields.append("title")
+											if int(getattr(candidate, "source_line_no", 0) or 0) != int(first_line_in_file):
+												candidate.source_line_no = int(first_line_in_file)
+												fields.append("source_line_no")
+											if fields:
+												candidate.save(update_fields=fields)
+											current_group = candidate
+
+							if current_group is None:
+								current_group = StemGroup.objects.create(title=title, source_line_no=int(first_line_in_file))
+								created = True
 				continue
 
 			entry = parse_dic_entry_line(line)
@@ -186,12 +287,17 @@ class Command(BaseCommand):
 			stem_first_line = first_seen_line_no.setdefault(entry.stem, idx)
 
 			if update_groups_only:
-				if current_group is None:
-					continue
 				stem = Stem.objects.filter(text=entry.stem).only("id", "group_id").first()
 				if stem is None:
 					continue
-				if stem.group_id != current_group.id:
+				# If this stem used to be in a group due to a missing end marker,
+				# and its first occurrence is now outside any group, clear it.
+				if current_group is None and int(stem_first_line) == int(idx):
+					if stem.group_id is not None:
+						Stem.objects.filter(id=stem.id).update(group=None)
+						updated += 1
+					continue
+				if current_group is not None and stem.group_id != current_group.id:
 					Stem.objects.filter(id=stem.id).update(group=current_group)
 					updated += 1
 				continue
@@ -220,6 +326,12 @@ class Command(BaseCommand):
 					# Attach/refresh group.
 					if current_group is not None and stem.group_id != current_group.id:
 						stem.group = current_group
+						fields_to_update.append("group")
+					# If this stem's first occurrence is now outside any group,
+					# clear its group. This fixes cases where a missing group end marker
+					# previously caused later stems to be incorrectly grouped.
+					if current_group is None and int(stem_first_line) == int(idx) and stem.group_id is not None:
+						stem.group = None
 						fields_to_update.append("group")
 					# If the group already has a single assignee, keep assignments stable by
 					# assigning any previously-unassigned stems we encounter during sync.
