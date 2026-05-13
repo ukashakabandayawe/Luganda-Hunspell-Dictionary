@@ -5,9 +5,11 @@ from django.contrib import admin, messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin as DjangoUserAdmin
 from django.http import FileResponse
-from django.db.models import Count, Max, Min, Q
+from django.db.models import Count, F, Max, Min, Q
 from django.template.response import TemplateResponse
+from django.urls import reverse
 from django.utils import timezone
+from django.utils.html import format_html
 
 from .dic_io import ensure_working_dic_exists
 from .models import Flag, ReviewDecision, Stem, StemFlagTask
@@ -123,6 +125,23 @@ class UserAdminWithWorkingDic(DjangoUserAdmin):
 		"is_staff",
 	)
 	actions = (download_user_working_dic, download_user_offline_review_bundle)
+	readonly_fields = (
+		"assigned_stems_count",
+		"assigned_stem_groups_count",
+		"assigned_stem_groups_link",
+	)
+	fieldsets = DjangoUserAdmin.fieldsets + (
+		(
+			"Review workload",
+			{
+				"fields": (
+					"assigned_stems_count",
+					"assigned_stem_groups_count",
+					"assigned_stem_groups_link",
+				)
+			},
+		),
+	)
 
 	def get_queryset(self, request):
 		qs = super().get_queryset(request)
@@ -138,16 +157,87 @@ class UserAdminWithWorkingDic(DjangoUserAdmin):
 	@admin.display(description="# stems", ordering="_assigned_stems")
 	def assigned_stems_count(self, obj) -> int:
 		try:
-			return int(getattr(obj, "_assigned_stems", 0) or 0)
+			annotated = getattr(obj, "_assigned_stems", None)
+			if annotated is not None:
+				return int(annotated or 0)
+			return int(obj.assigned_stems.count())
 		except Exception:
 			return 0
 
 	@admin.display(description="# stem groups", ordering="_assigned_stem_groups")
 	def assigned_stem_groups_count(self, obj) -> int:
 		try:
-			return int(getattr(obj, "_assigned_stem_groups", 0) or 0)
+			annotated = getattr(obj, "_assigned_stem_groups", None)
+			if annotated is not None:
+				return int(annotated or 0)
+			return int(obj.assigned_stems.filter(group__isnull=False).values("group_id").distinct().count())
 		except Exception:
 			return 0
+
+	@admin.display(description="Stem groups")
+	def assigned_stem_groups_link(self, obj):
+		try:
+			count = self.assigned_stem_groups_count(obj)
+			url = reverse("admin:review_stemgroup_changelist")
+			url = f"{url}?assigned_to=u:{int(obj.id)}"
+			return format_html('<a href="{}">View stem groups assigned to this user</a> ({}).', url, count)
+		except Exception:
+			return ""
+
+
+class StemGroupAssignedToFilter(admin.SimpleListFilter):
+	title = "Assigned to"
+	parameter_name = "assigned_to"
+
+	def lookups(self, request, model_admin):
+		User = get_user_model()
+		# Keep the sidebar usable.
+		users = list(
+			User.objects.filter(is_active=True, is_staff=False, is_superuser=False)
+			.only("id", "username")
+			.order_by("username")[:80]
+		)
+		items = [
+			("unassigned", "Unassigned"),
+			("mixed", "Mixed"),
+		]
+		items.extend((f"u:{int(u.id)}", getattr(u, "username", str(u.id)) or str(u.id)) for u in users)
+		return items
+
+	def queryset(self, request, queryset):
+		value = (self.value() or "").strip()
+		if not value:
+			return queryset
+
+		# These rely on annotations added in StemGroupAdmin.get_queryset.
+		if value == "unassigned":
+			return queryset.filter(_total_stems__gt=0, _unassigned_stems=F("_total_stems"))
+		if value == "mixed":
+			# Anything with at least one stem that is not purely unassigned and not purely one user.
+			return queryset.exclude(_total_stems__gt=0, _unassigned_stems=F("_total_stems")).exclude(
+				_total_stems__gt=0,
+				_unassigned_stems=0,
+				_assignee_min=F("_assignee_max"),
+			)
+
+		if value.startswith("u:"):
+			try:
+				user_id = int(value.split(":", 1)[1])
+			except ValueError:
+				return queryset
+			User = get_user_model()
+			username = User.objects.filter(id=user_id).values_list("username", flat=True).first()
+			if not username:
+				return queryset.none()
+			# Show groups whose stems are all assigned to this user.
+			return queryset.filter(
+				_total_stems__gt=0,
+				_unassigned_stems=0,
+				_assignee_min=username,
+				_assignee_max=username,
+			)
+
+		return queryset
 
 
 @admin.register(Flag)
@@ -533,6 +623,7 @@ class StemAdmin(admin.ModelAdmin):
 @admin.register(StemGroup)
 class StemGroupAdmin(admin.ModelAdmin):
 	list_display = ("title", "assigned_to", "flag_groups_display", "stems_count", "source_line_no")
+	list_filter = (StemGroupAssignedToFilter,)
 	search_fields = ("title",)
 	ordering = ("source_line_no", "title")
 	actions = (
