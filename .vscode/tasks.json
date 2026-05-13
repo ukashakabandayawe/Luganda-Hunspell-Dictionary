@@ -8,6 +8,22 @@
 			"default": "alfa"
 		},
 		{
+			"id": "batchBundleLimitExamples",
+			"type": "promptString",
+			"description": "Batch export: max examples per task (0 is fastest)",
+			"default": "0"
+		},
+		{
+			"id": "batchBundleExamplesFor",
+			"type": "pickString",
+			"description": "Batch export: generate examples for",
+			"options": [
+				"pending",
+				"all"
+			],
+			"default": "pending"
+		},
+		{
 			"id": "bundleLimitExamples",
 			"type": "promptString",
 			"description": "Max examples per task",
@@ -85,6 +101,19 @@
 				"${input:bundleLimitExamples}",
 				"--examples-for",
 				"${input:bundleExamplesFor}"
+			]
+		},
+		{
+			"label": "Export offline bundles batch (alfa..lima)",
+			"type": "process",
+			"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+			"args": [
+				"manage.py",
+				"export_review_bundles_batch",
+				"--limit-examples",
+				"${input:batchBundleLimitExamples}",
+				"--examples-for",
+				"${input:batchBundleExamplesFor}"
 			]
 		}
 	]
