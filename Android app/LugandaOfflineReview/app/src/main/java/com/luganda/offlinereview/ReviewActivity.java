@@ -1,6 +1,11 @@
 package com.luganda.offlinereview;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewConfiguration;
+import android.widget.ScrollView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -36,10 +41,20 @@ public class ReviewActivity extends AppCompatActivity {
 
     private int currentTaskIndex = -1;
 
+    // When the reviewer navigates using Prev/Next, we keep them in sequential mode
+    // so approving/rejecting doesn't jump to the next pending task elsewhere.
+    private boolean manualNavigationMode = false;
+
+    private float swipeDownX;
+    private float swipeDownY;
+    private int swipeMinDistancePx;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
+
+        swipeMinDistancePx = Math.max(90, ViewConfiguration.get(this).getScaledTouchSlop() * 3);
 
         MaterialToolbar toolbar = findViewById(R.id.reviewToolbar);
         setSupportActionBar(toolbar);
@@ -58,6 +73,15 @@ public class ReviewActivity extends AppCompatActivity {
         Button rejectBtn = findViewById(R.id.btnReject);
         prevBtn = findViewById(R.id.btnPrevTask);
         nextBtn = findViewById(R.id.btnNextTask);
+
+        // Replace prev/next buttons with swipe.
+        if (prevBtn != null) prevBtn.setVisibility(View.GONE);
+        if (nextBtn != null) nextBtn.setVisibility(View.GONE);
+
+        ScrollView reviewScroll = findViewById(R.id.reviewScroll);
+        if (reviewScroll != null) {
+            reviewScroll.setOnTouchListener((v, event) -> handleSwipeTouch(event));
+        }
 
         stemIndex = getIntent().getIntExtra(QueueActivity.EXTRA_STEM_INDEX, -1);
         if (stemIndex < 0) {
@@ -101,16 +125,48 @@ public class ReviewActivity extends AppCompatActivity {
 
         approveBtn.setOnClickListener(v -> onDecide("approved"));
         rejectBtn.setOnClickListener(v -> onDecide("rejected"));
+        // Buttons are hidden; keep behavior reachable by swipe.
         prevBtn.setOnClickListener(v -> goPrevTask());
         nextBtn.setOnClickListener(v -> goNextTask());
 
         showNextPendingOrFirst();
     }
 
+    private boolean handleSwipeTouch(MotionEvent event) {
+        if (event == null) return false;
+
+        switch (event.getActionMasked()) {
+            case MotionEvent.ACTION_DOWN:
+                swipeDownX = event.getX();
+                swipeDownY = event.getY();
+                return false;
+            case MotionEvent.ACTION_UP:
+                float dx = event.getX() - swipeDownX;
+                float dy = event.getY() - swipeDownY;
+
+                if (Math.abs(dx) > swipeMinDistancePx && Math.abs(dx) > Math.abs(dy)) {
+                    if (dx > 0) {
+                        goPrevTask();
+                    } else {
+                        goNextTask();
+                    }
+                    return true;
+                }
+                return false;
+            default:
+                return false;
+        }
+    }
+
     @Override
     public boolean onSupportNavigateUp() {
-        finish();
+        finishAndReturnQueueUpdate();
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        finishAndReturnQueueUpdate();
     }
 
     private void onDecide(String decision) {
@@ -122,6 +178,9 @@ public class ReviewActivity extends AppCompatActivity {
         if (t == null) return;
         String flag = t.optString("flag", "");
         if (flag.isEmpty()) return;
+
+        String baseStatusBefore = t.optString("status", "pending");
+        boolean wasPendingBefore = "pending".equals(effectiveStatus(stemText, flag, baseStatusBefore));
 
         String note = noteEdit.getText() == null ? "" : noteEdit.getText().toString();
 
@@ -154,13 +213,22 @@ public class ReviewActivity extends AppCompatActivity {
 
         // If this was the last pending flag for the stem, return to the queue.
         // (Avoid looping back to the first flag.)
-        if (findNextPendingTaskIndex() < 0) {
+        if (findNextPendingTaskIndex() < 0 && wasPendingBefore) {
             Toast.makeText(this, "Stem complete", Toast.LENGTH_SHORT).show();
-            finish();
+            finishAndReturnQueueUpdate();
             return;
         }
 
-        showNextPendingOrFirst();
+        if (manualNavigationMode) {
+            int before = currentTaskIndex;
+            goNextTask();
+            if (currentTaskIndex == before) {
+                // We stayed on the same task (likely end of list); refresh header/buttons.
+                bindTask(tasks.optJSONObject(currentTaskIndex));
+            }
+        } else {
+            showNextPendingOrFirst();
+        }
     }
 
     private String getUsernameFromBundle() {
@@ -171,6 +239,7 @@ public class ReviewActivity extends AppCompatActivity {
     }
 
     private void showNextPendingOrFirst() {
+        manualNavigationMode = false;
         int pendingIdx = findNextPendingTaskIndexFrom(currentTaskIndex + 1);
         if (pendingIdx >= 0) {
             currentTaskIndex = pendingIdx;
@@ -189,6 +258,37 @@ public class ReviewActivity extends AppCompatActivity {
             descText.setText("");
             examplesText.setText("");
         }
+    }
+
+    private void finishAndReturnQueueUpdate() {
+        try {
+            int[] counts = computeStemCounts();
+            Intent data = new Intent();
+            data.putExtra(QueueActivity.EXTRA_STEM_INDEX, stemIndex);
+            data.putExtra(QueueActivity.EXTRA_RESULT_PENDING, counts[0]);
+            data.putExtra(QueueActivity.EXTRA_RESULT_DONE, counts[1]);
+            setResult(RESULT_OK, data);
+        } catch (Throwable ignored) {
+            // Best-effort; still allow navigation away.
+        }
+        finish();
+    }
+
+    private int[] computeStemCounts() {
+        int pending = 0;
+        int done = 0;
+        if (tasks == null) return new int[]{0, 0};
+
+        for (int i = 0; i < tasks.length(); i++) {
+            JSONObject tt = tasks.optJSONObject(i);
+            if (tt == null) continue;
+            String ff = tt.optString("flag", "");
+            String bs = tt.optString("status", "pending");
+            String eff = effectiveStatus(stemText, ff, bs);
+            if ("pending".equals(eff)) pending++;
+            else done++;
+        }
+        return new int[]{pending, done};
     }
 
     private int findNextPendingTaskIndex() {
@@ -283,6 +383,8 @@ public class ReviewActivity extends AppCompatActivity {
     private void goPrevTask() {
         if (tasks == null || tasks.length() == 0) return;
 
+        manualNavigationMode = true;
+
         int idx = currentTaskIndex;
         if (idx < 0) idx = 0;
         idx = idx - 1;
@@ -301,6 +403,8 @@ public class ReviewActivity extends AppCompatActivity {
 
     private void goNextTask() {
         if (tasks == null || tasks.length() == 0) return;
+
+        manualNavigationMode = true;
 
         if (currentTaskIndex >= 0 && currentTaskIndex < tasks.length()) {
             JSONObject cur = tasks.optJSONObject(currentTaskIndex);

@@ -17,16 +17,23 @@ import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 import java.util.zip.GZIPOutputStream;
 import java.util.zip.GZIPInputStream;
 
 public final class BundleStore {
     private static final String BUNDLE_FILE_NAME = "review_bundle.json.gz";
+    private static final String BASE_DIC_FILE_NAME = "Luganda.dic";
 
     private BundleStore() {}
 
     public static File getBundleFile(Context context) {
         return new File(context.getFilesDir(), BUNDLE_FILE_NAME);
+    }
+
+    public static File getBaseDicFile(Context context) {
+        return new File(context.getFilesDir(), BASE_DIC_FILE_NAME);
     }
 
     public static boolean hasBundle(Context context) {
@@ -36,6 +43,17 @@ public final class BundleStore {
     public static void importBundle(Context context, Uri uri) throws Exception {
         if (uri == null) {
             throw new IllegalArgumentException("uri is required");
+        }
+
+        // Capture previous bundle user so we can preserve decisions when re-importing
+        // an updated bundle for the same reviewer.
+        BundleHeader prevHeader = null;
+        try {
+            if (getBundleFile(context).exists()) {
+                prevHeader = readBundleHeader(context);
+            }
+        } catch (Throwable ignored) {
+            prevHeader = null;
         }
 
         byte[] data;
@@ -48,6 +66,24 @@ public final class BundleStore {
 
         if (data.length == 0) {
             throw new IllegalStateException("Selected file is empty");
+        }
+
+        // ZIP? (magic 'PK')
+        boolean isZip = data.length >= 2 && (data[0] == (byte) 'P') && (data[1] == (byte) 'K');
+        if (isZip) {
+            importZipBundle(context, data);
+
+            // Validate without materializing the full JSON into memory.
+            BundleHeader header = readBundleHeader(context);
+            if (header.schema != 1) {
+                throw new IllegalStateException("Unsupported bundle schema: " + header.schema);
+            }
+            if (!header.hasStems) {
+                throw new IllegalStateException("Invalid bundle: missing 'stems'");
+            }
+
+            handleDecisionsOnImport(context, prevHeader, header);
+            return;
         }
 
         // If file is already gzip (magic 1F 8B), store as-is.
@@ -75,12 +111,100 @@ public final class BundleStore {
             throw new IllegalStateException("Invalid bundle: missing 'stems'");
         }
 
-        // New assignment => clear any previous decisions.
+        handleDecisionsOnImport(context, prevHeader, header);
+    }
+
+    private static void handleDecisionsOnImport(Context context, BundleHeader prevHeader, BundleHeader newHeader) {
+        boolean keep = false;
+        if (prevHeader != null && newHeader != null) {
+            if (prevHeader.userId > 0 && newHeader.userId > 0 && prevHeader.userId == newHeader.userId) {
+                keep = true;
+            } else {
+                String pu = prevHeader.username == null ? "" : prevHeader.username.trim();
+                String nu = newHeader.username == null ? "" : newHeader.username.trim();
+                if (!pu.isEmpty() && pu.equalsIgnoreCase(nu)) {
+                    keep = true;
+                }
+            }
+        }
+
+        if (keep) {
+            return;
+        }
+
+        // New assignment or unknown -> clear previous decisions.
         File decisions = DecisionsStore.getDecisionsFile(context);
         if (decisions.exists()) {
+            // Best-effort backup.
+            try {
+                File bak = new File(context.getFilesDir(), "decisions.backup.json");
+                try (FileInputStream in = new FileInputStream(decisions);
+                     FileOutputStream out = new FileOutputStream(bak, false)) {
+                    byte[] buf = new byte[8192];
+                    int n;
+                    while ((n = in.read(buf)) >= 0) {
+                        if (n == 0) continue;
+                        out.write(buf, 0, n);
+                    }
+                }
+            } catch (Throwable ignored) {}
+
             // noinspection ResultOfMethodCallIgnored
             decisions.delete();
         }
+    }
+
+    private static void importZipBundle(Context context, byte[] zipBytes) throws Exception {
+        File outBundle = getBundleFile(context);
+        File outDic = getBaseDicFile(context);
+
+        boolean wroteBundle = false;
+        boolean wroteDic = false;
+
+        try (java.io.ByteArrayInputStream bais = new java.io.ByteArrayInputStream(zipBytes);
+             ZipInputStream zis = new ZipInputStream(bais)) {
+            ZipEntry e;
+            while ((e = zis.getNextEntry()) != null) {
+                String name = e.getName() == null ? "" : e.getName();
+                String lname = name.toLowerCase();
+                if (e.isDirectory()) {
+                    zis.closeEntry();
+                    continue;
+                }
+
+                if (lname.endsWith("review_bundle.json.gz") || lname.endsWith("bundle.json.gz") || lname.endsWith(".json.gz")) {
+                    try (FileOutputStream fos = new FileOutputStream(outBundle, false)) {
+                        copyAll(zis, fos);
+                    }
+                    wroteBundle = true;
+                } else if (lname.endsWith("luganda.dic") || lname.endsWith("luganda_dic.txt")) {
+                    try (FileOutputStream fos = new FileOutputStream(outDic, false)) {
+                        copyAll(zis, fos);
+                    }
+                    wroteDic = true;
+                }
+
+                zis.closeEntry();
+            }
+        }
+
+        if (!wroteBundle) {
+            throw new IllegalStateException("Zip bundle missing review_bundle.json.gz");
+        }
+        // dic is optional for backwards compatibility; if missing, we keep any previously stored base dic.
+        if (!wroteDic) {
+            // no-op
+        }
+    }
+
+    private static void copyAll(InputStream in, FileOutputStream out) throws Exception {
+        byte[] buf = new byte[8192];
+        int n;
+        while ((n = in.read(buf)) >= 0) {
+            if (n == 0) continue;
+            out.write(buf, 0, n);
+        }
+        out.flush();
     }
 
     /**

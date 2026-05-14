@@ -23,7 +23,11 @@ public final class DicExporter {
     public static void exportWorkingDic(Context context, OutputStream out, JSONObject decisionsPayload) throws Exception {
         Map<String, Set<String>> approvals = buildApprovalsMap(decisionsPayload);
 
-        try (InputStream is = context.getAssets().open("Luganda.dic");
+        java.io.File base = BundleStore.getBaseDicFile(context);
+
+        try (InputStream is = (base != null && base.exists())
+            ? new java.io.FileInputStream(base)
+            : context.getAssets().open("Luganda.dic");
              BufferedReader r = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
              BufferedWriter w = new BufferedWriter(new OutputStreamWriter(out, StandardCharsets.UTF_8))) {
 

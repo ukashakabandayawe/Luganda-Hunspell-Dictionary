@@ -37,10 +37,16 @@ public class MainActivity extends AppCompatActivity {
     private TextView legendInactiveValue;
     private TextView legendDraftsValue;
 
+    private String lastHandledIncomingUri;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        if (savedInstanceState != null) {
+            lastHandledIncomingUri = savedInstanceState.getString("lastHandledIncomingUri", null);
+        }
 
         MaterialToolbar toolbar = findViewById(R.id.homeToolbar);
         setSupportActionBar(toolbar);
@@ -73,12 +79,69 @@ public class MainActivity extends AppCompatActivity {
         btnSetBackupFolder.setOnClickListener(v -> pickBackupFolder());
 
         refreshUi();
+
+        // If the app was opened from WhatsApp/Files with a bundle, import it automatically.
+        handleIncomingIntent(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        handleIncomingIntent(intent);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("lastHandledIncomingUri", lastHandledIncomingUri);
+        super.onSaveInstanceState(outState);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         refreshUi();
+    }
+
+    private void handleIncomingIntent(Intent intent) {
+        if (intent == null) return;
+
+        final String action = intent.getAction();
+        Uri tempUri = null;
+
+        if (Intent.ACTION_VIEW.equals(action)) {
+            tempUri = intent.getData();
+        } else if (Intent.ACTION_SEND.equals(action)) {
+            try {
+                tempUri = intent.getParcelableExtra(Intent.EXTRA_STREAM);
+            } catch (Throwable ignored) {
+                tempUri = null;
+            }
+        }
+
+        if (tempUri == null) return;
+        final Uri uri = tempUri;
+
+        final String uriKey = uri.toString();
+        if (uriKey.equals(lastHandledIncomingUri)) return;
+        lastHandledIncomingUri = uriKey;
+
+        Toast.makeText(this, "Importing bundle...", Toast.LENGTH_SHORT).show();
+        new Thread(() -> {
+            try {
+                BundleStore.importBundle(MainActivity.this, uri);
+                runOnUiThread(() -> {
+                    Toast.makeText(MainActivity.this, "Bundle imported", Toast.LENGTH_SHORT).show();
+                    refreshUi();
+                });
+            } catch (Throwable ex) {
+                runOnUiThread(() -> Toast.makeText(
+                        MainActivity.this,
+                        "Import failed: " + (ex.getMessage() == null ? ex.toString() : ex.getMessage()),
+                        Toast.LENGTH_LONG
+                ).show());
+            }
+        }).start();
     }
 
     private void refreshUi() {
@@ -221,7 +284,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("*/*");
-        String[] mimeTypes = new String[]{"application/gzip", "application/x-gzip", "application/json", "application/octet-stream"};
+        String[] mimeTypes = new String[]{"application/zip", "application/gzip", "application/x-gzip", "application/json", "application/octet-stream"};
         intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
         startActivityForResult(intent, REQ_IMPORT_BUNDLE);
     }
@@ -325,3 +388,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+

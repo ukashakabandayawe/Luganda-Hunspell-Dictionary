@@ -31,6 +31,12 @@ public class QueueActivity extends AppCompatActivity {
     private static final String TAG = "QueueActivity";
 
     public static final String EXTRA_STEM_INDEX = "stem_index";
+    public static final String EXTRA_RESULT_PENDING = "result_pending";
+    public static final String EXTRA_RESULT_DONE = "result_done";
+
+    private static final int REQ_REVIEW_STEM = 1001;
+
+    private static CachedQueue sCache;
 
     private Map<String, Map<String, String>> decisionMap;
 
@@ -41,6 +47,11 @@ public class QueueActivity extends AppCompatActivity {
 
     private final Map<String, Boolean> expandedByGroupKey = new HashMap<>();
     private List<GroupBucket> lastBuckets = new ArrayList<>();
+
+    private long lastLoadedBundleMtime = -1L;
+    private long lastLoadedDecisionsMtime = -1L;
+
+    private boolean skipNextResumeReload = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,26 +74,152 @@ public class QueueActivity extends AppCompatActivity {
                 stemItem -> {
                     Intent intent = new Intent(this, ReviewActivity.class);
                     intent.putExtra(EXTRA_STEM_INDEX, stemItem.stemIndex);
-                    startActivity(intent);
+                    skipNextResumeReload = true;
+                    startActivityForResult(intent, REQ_REVIEW_STEM);
                 },
                 header -> {
                     boolean expanded = expandedByGroupKey.get(header.groupKey) != null && expandedByGroupKey.get(header.groupKey);
                     expandedByGroupKey.put(header.groupKey, !expanded);
                     adapter.setItems(buildQueueItems(lastBuckets));
+                    saveCacheIfPossible();
                 }
         );
         rv.setAdapter(adapter);
 
-        setLoading(true);
-        loadAndRenderAsync();
+        if (!restoreFromCacheIfFresh()) {
+            setLoading(true);
+            loadAndRenderAsync();
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        // Returning from ReviewActivity: reload decisions and recompute counts.
-        setLoading(true);
-        loadAndRenderAsync();
+        if (skipNextResumeReload) {
+            skipNextResumeReload = false;
+            return;
+        }
+        // Avoid re-parsing the full gzip bundle on every resume; it can be expensive.
+        // If the underlying files changed (bundle imported, decisions imported), reload.
+        if (!isCurrentDataFresh()) {
+            setLoading(true);
+            loadAndRenderAsync();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode != REQ_REVIEW_STEM) return;
+        if (resultCode != RESULT_OK || data == null) return;
+
+        int stemIndex = data.getIntExtra(EXTRA_STEM_INDEX, -1);
+        int pending = data.getIntExtra(EXTRA_RESULT_PENDING, -1);
+        int done = data.getIntExtra(EXTRA_RESULT_DONE, -1);
+        if (stemIndex < 0 || pending < 0 || done < 0) return;
+
+        applyStemCountsUpdate(stemIndex, pending, done);
+    }
+
+    private boolean restoreFromCacheIfFresh() {
+        if (sCache == null) return false;
+        if (!sCache.isFreshFor(this)) return false;
+        if (sCache.buckets == null) return false;
+
+        expandedByGroupKey.clear();
+        if (sCache.expandedByGroupKey != null) {
+            expandedByGroupKey.putAll(sCache.expandedByGroupKey);
+        }
+
+        lastBuckets = sCache.buckets;
+        lastLoadedBundleMtime = sCache.bundleMtime;
+        lastLoadedDecisionsMtime = sCache.decisionsMtime;
+
+        setLoading(false);
+        if (title != null) title.setText(sCache.titleText == null ? "My Queue" : sCache.titleText);
+        if (adapter != null) adapter.setItems(buildQueueItems(lastBuckets));
+        return true;
+    }
+
+    private boolean isCurrentDataFresh() {
+        long bm = getBundleMtime();
+        long dm = getDecisionsMtime();
+        if (bm <= 0) return false;
+        if (lastLoadedBundleMtime <= 0) return false;
+
+        // decisions file may not exist; treat missing as 0.
+        return bm == lastLoadedBundleMtime && dm == lastLoadedDecisionsMtime;
+    }
+
+    private long getBundleMtime() {
+        try {
+            java.io.File f = BundleStore.getBundleFile(this);
+            return (f != null && f.exists()) ? f.lastModified() : 0L;
+        } catch (Throwable ignored) {
+            return 0L;
+        }
+    }
+
+    private long getDecisionsMtime() {
+        try {
+            java.io.File f = DecisionsStore.getDecisionsFile(this);
+            return (f != null && f.exists()) ? f.lastModified() : 0L;
+        } catch (Throwable ignored) {
+            return 0L;
+        }
+    }
+
+    private void applyStemCountsUpdate(int stemIndex, int pending, int done) {
+        if (lastBuckets == null) return;
+        boolean changed = false;
+
+        for (GroupBucket b : lastBuckets) {
+            if (b == null) continue;
+            for (int i = 0; i < b.stems.size(); i++) {
+                StemItem s = b.stems.get(i);
+                if (s == null) continue;
+                if (s.stemIndex != stemIndex) continue;
+
+                int oldPending = s.pending;
+                int oldDone = s.done;
+                if (oldPending == pending && oldDone == done) {
+                    // Still update mtimes so we don't trigger a reload.
+                    lastLoadedDecisionsMtime = getDecisionsMtime();
+                    saveCacheIfPossible();
+                    return;
+                }
+
+                b.pendingTotal += (pending - oldPending);
+                b.doneTotal += (done - oldDone);
+                b.stems.set(i, new StemItem(s.stemIndex, s.stem, pending, done, s.sourceLineNo, s.groupKey));
+                changed = true;
+                break;
+            }
+            if (changed) break;
+        }
+
+        if (changed && adapter != null) {
+            adapter.setItems(buildQueueItems(lastBuckets));
+        }
+
+        lastLoadedDecisionsMtime = getDecisionsMtime();
+        saveCacheIfPossible();
+    }
+
+    private void saveCacheIfPossible() {
+        if (lastBuckets == null || lastBuckets.isEmpty()) return;
+        if (title == null) return;
+
+        long bm = getBundleMtime();
+        long dm = getDecisionsMtime();
+        if (bm <= 0) return;
+
+        if (sCache == null) sCache = new CachedQueue();
+        sCache.bundleMtime = bm;
+        sCache.decisionsMtime = dm;
+        sCache.titleText = title.getText() == null ? "My Queue" : title.getText().toString();
+        sCache.buckets = lastBuckets;
+        sCache.expandedByGroupKey = new HashMap<>(expandedByGroupKey);
     }
 
     private void loadAndRenderAsync() {
@@ -94,11 +231,6 @@ public class QueueActivity extends AppCompatActivity {
 
                 List<GroupBucket> buckets = buildBucketsFromLite(stems);
 
-                // Default: expand the first group so the screen looks like an accordion.
-                if (expandedByGroupKey.isEmpty() && !buckets.isEmpty()) {
-                    expandedByGroupKey.put(buckets.get(0).key, true);
-                }
-
                 List<QueueItem> items = buildQueueItems(buckets);
 
                 String username = loadedHeader == null ? "" : loadedHeader.username;
@@ -106,12 +238,18 @@ public class QueueActivity extends AppCompatActivity {
                 username = username.trim();
                 String header = username.isEmpty() ? "My Queue" : ("My Queue (" + username + ")");
 
+                final long bm = getBundleMtime();
+                final long dm = getDecisionsMtime();
+
                 runOnUiThread(() -> {
                     setLoading(false);
                     decisionMap = loadedDecisionMap;
                     lastBuckets = buckets;
+                    lastLoadedBundleMtime = bm;
+                    lastLoadedDecisionsMtime = dm;
                     title.setText(header);
                     if (adapter != null) adapter.setItems(items);
+                    saveCacheIfPossible();
                 });
             } catch (Throwable t) {
                 String bundleSize = "(unknown)";
@@ -603,5 +741,20 @@ public class QueueActivity extends AppCompatActivity {
 
     private static float dp(View v, float dp) {
         return dp * v.getResources().getDisplayMetrics().density;
+    }
+
+    private static final class CachedQueue {
+        long bundleMtime;
+        long decisionsMtime;
+        String titleText;
+        List<GroupBucket> buckets;
+        Map<String, Boolean> expandedByGroupKey;
+
+        boolean isFreshFor(QueueActivity a) {
+            if (a == null) return false;
+            long bm = a.getBundleMtime();
+            long dm = a.getDecisionsMtime();
+            return bm > 0 && bm == bundleMtime && dm == decisionsMtime;
+        }
     }
 }
