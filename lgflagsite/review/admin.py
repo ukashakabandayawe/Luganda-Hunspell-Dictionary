@@ -5,7 +5,8 @@ from django.contrib import admin, messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin as DjangoUserAdmin
 from django.http import FileResponse
-from django.db.models import Count, F, Max, Min, Q
+from django.db import connection
+from django.db.models import Aggregate, CharField, Count, F, Max, Min, Q
 from django.template.response import TemplateResponse
 from django.urls import reverse
 from django.utils import timezone
@@ -21,6 +22,22 @@ from .services import rebuild_working_dic_for_user_id, working_dic_path_for_user
 def _safe_filename_part(value: str) -> str:
 	value = (value or "").strip()
 	return "".join(ch for ch in value if ch.isalnum() or ch in ("-", "_", ".")) or "user"
+
+
+class GroupConcat(Aggregate):
+	"""Cross-DB-ish list aggregation.
+
+	SQLite supports GROUP_CONCAT; for other DBs we fall back to alternative
+	aggregations when available.
+	"""
+	function = "GROUP_CONCAT"
+	output_field = CharField()
+	allow_distinct = True
+
+	def __init__(self, expression, distinct=False, filter=None, **extra):
+		# SQLite supports GROUP_CONCAT([DISTINCT] expr, separator)
+		extra.setdefault("template", "%(function)s(%(distinct)s%(expressions)s, ', ')")
+		super().__init__(expression, distinct=distinct, filter=filter, **extra)
 
 
 @admin.action(description="Download user's working Luganda.dic")
@@ -44,7 +61,17 @@ def download_user_working_dic(modeladmin, request, queryset):
 	elif not working_dic.exists():
 		rebuild_working_dic_for_user_id(int(user.id))
 	else:
-		ensure_working_dic_exists(source_dic, working_dic)
+		# If the source dictionary changed since we last built the working file,
+		# rebuild from DB approvals to avoid stale stems lingering in downloads.
+		try:
+			src_mtime = source_dic.stat().st_mtime
+			work_mtime = working_dic.stat().st_mtime
+			if src_mtime > work_mtime:
+				rebuild_working_dic_for_user_id(int(user.id))
+			else:
+				ensure_working_dic_exists(source_dic, working_dic)
+		except Exception:
+			ensure_working_dic_exists(source_dic, working_dic)
 	if not working_dic.exists():
 		modeladmin.message_user(request, f"Working .dic not found: {working_dic}", level=messages.ERROR)
 		return None
@@ -225,17 +252,13 @@ class StemGroupAssignedToFilter(admin.SimpleListFilter):
 				user_id = int(value.split(":", 1)[1])
 			except ValueError:
 				return queryset
-			User = get_user_model()
-			username = User.objects.filter(id=user_id).values_list("username", flat=True).first()
-			if not username:
-				return queryset.none()
-			# Show groups whose stems are all assigned to this user.
-			return queryset.filter(
-				_total_stems__gt=0,
-				_unassigned_stems=0,
-				_assignee_min=username,
-				_assignee_max=username,
+			# Show groups where this user is among the assignees.
+			group_ids = (
+				Stem.objects.filter(assigned_to_id=user_id)
+				.exclude(group_id__isnull=True)
+				.values("group_id")
 			)
+			return queryset.filter(pk__in=group_ids)
 
 		return queryset
 
@@ -668,16 +691,39 @@ class StemGroupAdmin(admin.ModelAdmin):
 
 	def get_queryset(self, request):
 		qs = super().get_queryset(request)
-		return qs.annotate(
-			_total_stems=Count("stems", distinct=True),
-			_unassigned_stems=Count(
+		annotations = {
+			"_total_stems": Count("stems", distinct=True),
+			"_unassigned_stems": Count(
 				"stems",
 				filter=Q(stems__assigned_to__isnull=True),
 				distinct=True,
 			),
-			_assignee_min=Min("stems__assigned_to__username"),
-			_assignee_max=Max("stems__assigned_to__username"),
-		)
+			"_assignee_min": Min("stems__assigned_to__username"),
+			"_assignee_max": Max("stems__assigned_to__username"),
+		}
+
+		# Also include a CSV of distinct assignee usernames for display.
+		vendor = getattr(connection, "vendor", "")
+		if vendor == "postgresql":
+			try:
+				from django.contrib.postgres.aggregates import StringAgg
+				annotations["_assignees_csv"] = StringAgg(
+					"stems__assigned_to__username",
+					delimiter=", ",
+					distinct=True,
+					filter=Q(stems__assigned_to__isnull=False),
+					ordering="stems__assigned_to__username",
+				)
+			except Exception:
+				pass
+		elif vendor == "sqlite":
+			annotations["_assignees_csv"] = GroupConcat(
+				"stems__assigned_to__username",
+				distinct=True,
+				filter=Q(stems__assigned_to__isnull=False),
+			)
+
+		return qs.annotate(**annotations)
 
 	@admin.display(description="# stems")
 	def stems_count(self, obj: StemGroup) -> int:
@@ -690,28 +736,44 @@ class StemGroupAdmin(admin.ModelAdmin):
 	def assigned_to(self, obj: StemGroup) -> str:
 		total = getattr(obj, "_total_stems", None)
 		unassigned = getattr(obj, "_unassigned_stems", None)
-		assignee_min = getattr(obj, "_assignee_min", None)
-		assignee_max = getattr(obj, "_assignee_max", None)
+		assignees_csv = (getattr(obj, "_assignees_csv", None) or "").strip()
 		# Fallback for safety if queryset isn't annotated.
 		if total is None or unassigned is None:
-			assigned_usernames = list(
-				obj.stems.exclude(assigned_to__isnull=True).values_list("assigned_to__username", flat=True).distinct()
+			assigned_usernames = sorted(
+				set(
+					obj.stems.exclude(assigned_to__isnull=True)
+					.values_list("assigned_to__username", flat=True)
+					.distinct()
+				)
 			)
-			if not assigned_usernames:
-				return "Unassigned"
-			if len(assigned_usernames) == 1 and obj.stems.filter(assigned_to__isnull=True).count() == 0:
-				return assigned_usernames[0]
-			return "Mixed"
+			unassigned_count = obj.stems.filter(assigned_to__isnull=True).count()
+			items = [u for u in assigned_usernames if u]
+			if unassigned_count:
+				items.append("Unassigned")
+			return ", ".join(items) if items else "Unassigned"
 
 		if total == 0:
 			return "Unassigned"
 		if unassigned == total:
 			return "Unassigned"
+
+		label = assignees_csv
+		if not label:
+			# Should be rare (unsupported DB vendor); compute from related stems.
+			assigned_usernames = sorted(
+				set(
+					obj.stems.exclude(assigned_to__isnull=True)
+					.values_list("assigned_to__username", flat=True)
+					.distinct()
+				)
+			)
+			label = ", ".join(u for u in assigned_usernames if u)
+
 		if unassigned and unassigned > 0:
-			return "Mixed"
-		if assignee_min and assignee_min == assignee_max:
-			return str(assignee_min)
-		return "Mixed"
+			if label:
+				return f"{label}, Unassigned"
+			return "Unassigned"
+		return label or "Unassigned"
 
 	@admin.display(description="Flag group(s)")
 	def flag_groups_display(self, obj: StemGroup) -> str:

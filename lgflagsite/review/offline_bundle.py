@@ -4,6 +4,7 @@ import gzip
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Callable, Optional
 
 from django.conf import settings
 
@@ -20,6 +21,7 @@ def build_offline_review_bundle_payload(
 	user,
 	limit_examples: int = 120,
 	examples_for: str = "pending",
+	progress_callback: Optional[Callable[[int, int, int, int], None]] = None,
 ) -> dict:
 	"""Build the JSON payload for the offline Android review bundle.
 
@@ -69,7 +71,8 @@ def build_offline_review_bundle_payload(
 	total_examples = 0
 
 	stem_rows = []
-	for s in stems:
+	total_stems = len(stems)
+	for stem_i, s in enumerate(stems, start=1):
 		task_rows = []
 		for t in tasks_by_stem.get(s.id, []):
 			total_tasks += 1
@@ -108,6 +111,10 @@ def build_offline_review_bundle_payload(
 				"tasks": task_rows,
 			}
 		)
+
+		if progress_callback is not None:
+			# (done_stems, total_stems, total_tasks_so_far, total_examples_so_far)
+			progress_callback(stem_i, total_stems, total_tasks, total_examples)
 
 	return {
 		"schema": 1,

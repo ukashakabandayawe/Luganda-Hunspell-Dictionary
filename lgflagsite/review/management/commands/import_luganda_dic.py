@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import sys
 import re
 from collections import Counter
 from typing import Optional
@@ -11,6 +12,7 @@ from django.db import transaction
 from django.db.models import Count, Max, Min, Q
 from django.utils import timezone
 
+from review.cli_progress import ProgressLine, raw_stream_for_command_stdout
 from review.dic_io import parse_dic_entry_line
 from review.hunspell import HunspellFlagMode, detect_flag_mode, merge_flags, split_long_flags
 from review.models import Stem, StemGroup
@@ -78,6 +80,12 @@ class Command(BaseCommand):
 			action="store_true",
 			help="Only parse comment group blocks and attach Stem.group for existing stems. Does not create/delete stems.",
 		)
+		parser.add_argument(
+			"--progress",
+			choices=["auto", "on", "off"],
+			default="auto",
+			help="Show progress while importing (auto=TTY only).",
+		)
 
 	@transaction.atomic
 	def handle(self, *args, **options):
@@ -115,10 +123,22 @@ class Command(BaseCommand):
 		if not lines:
 			raise CommandError(".dic is empty")
 
+		progress_mode = (options.get("progress") or "auto").strip().lower()
+		if progress_mode not in {"auto", "on", "off"}:
+			progress_mode = "auto"
+		out_stream = raw_stream_for_command_stdout(self.stdout)
+		progress = ProgressLine(
+			out_stream,
+			enabled=(progress_mode != "off"),
+			force=(progress_mode == "on"),
+		)
+		total_lines = max(1, len(lines) - 1)
+
 		created = 0
 		updated = 0
 		duplicate_lines = 0
 		missing_stems_created = 0
+		pruned_missing = 0
 		groups_seen = 0
 		current_group: StemGroup | None = None
 		first_seen_line_no: dict[str, int] = {}
@@ -176,6 +196,16 @@ class Command(BaseCommand):
 			return None
 
 		for idx, line in enumerate(lines):
+			if progress.enabled and idx > 0:
+				progress.write(
+					progress.render(
+						prefix="import dic",
+						done=idx,
+						total=total_lines,
+						extra=f"c={created} u={updated} g={groups_seen}",
+					),
+					force=False,
+				)
 			if idx == 0:
 				continue  # count
 
@@ -391,12 +421,57 @@ class Command(BaseCommand):
 					stem.save(update_fields=["flags_raw"])
 					updated += 1
 
+		if progress.enabled:
+			progress.write(
+				progress.render(
+					prefix="import dic",
+					done=total_lines,
+					total=total_lines,
+					extra=f"c={created} u={updated} g={groups_seen}",
+				),
+				force=True,
+			)
+			progress.finish()
+
 		if update_groups_only:
 			self.stdout.write(self.style.SUCCESS(f"Updated stem groups: updated={updated}, groups_seen={groups_seen}"))
 		elif upsert:
+			# Prune stems that were removed/renamed in Luganda.dic.
+			# We do NOT delete rows (to keep review history); instead we clear assignment
+			# and grouping so they stop showing in reviewer queues and offline bundles.
+			seen_stems = set(first_seen_line_no.keys())
+			missing_ids: list[int] = []
+			chunk_size = 500
+			for sid, text, src_line in (
+				Stem.objects.values_list("id", "text", "source_line_no").iterator(chunk_size=2000)
+			):
+				try:
+					if int(src_line or 0) <= 0:
+						continue
+				except Exception:
+					continue
+				if text in seen_stems:
+					continue
+				missing_ids.append(int(sid))
+				if len(missing_ids) >= chunk_size:
+					pruned_missing += Stem.objects.filter(id__in=missing_ids).update(
+						group=None,
+						assigned_to=None,
+						assigned_at=None,
+						source_line_no=0,
+					)
+					missing_ids.clear()
+			if missing_ids:
+				pruned_missing += Stem.objects.filter(id__in=missing_ids).update(
+					group=None,
+					assigned_to=None,
+					assigned_at=None,
+					source_line_no=0,
+				)
+
 			self.stdout.write(
 				self.style.SUCCESS(
-					f"Upserted stems: missing_stems_created={missing_stems_created}, updated={updated}, groups_seen={groups_seen}"
+					f"Upserted stems: missing_stems_created={missing_stems_created}, updated={updated}, groups_seen={groups_seen}, pruned_missing={pruned_missing}"
 				)
 			)
 		else:

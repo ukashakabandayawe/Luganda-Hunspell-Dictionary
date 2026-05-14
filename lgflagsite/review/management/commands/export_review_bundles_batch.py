@@ -2,12 +2,14 @@ from __future__ import annotations
 
 import gzip
 import json
+import sys
 from pathlib import Path
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand, CommandError
 
+from review.cli_progress import ProgressLine, raw_stream_for_command_stdout
 from review.offline_bundle import build_offline_review_bundle_payload
 
 
@@ -54,6 +56,12 @@ class Command(BaseCommand):
             default="pending",
             help="Generate examples only for pending tasks (default) or all tasks.",
         )
+        parser.add_argument(
+            "--progress",
+            choices=["auto", "on", "off"],
+            default="auto",
+            help="Show progress while building each bundle (auto=TTY only).",
+        )
 
     def handle(self, *args, **options):
         raw_users = options.get("users") or []
@@ -85,15 +93,37 @@ class Command(BaseCommand):
         total_tasks = 0
         total_examples = 0
 
-        for username in usernames:
+        progress_mode = (options.get("progress") or "auto").strip().lower()
+        if progress_mode not in {"auto", "on", "off"}:
+            progress_mode = "auto"
+
+        out_stream = raw_stream_for_command_stdout(self.stdout)
+        progress = ProgressLine(
+            out_stream,
+            enabled=(progress_mode != "off"),
+            force=(progress_mode == "on"),
+        )
+
+        for user_i, username in enumerate(usernames, start=1):
             user = by_username[username]
             out_path = (out_dir / f"bundle_{user.username}.json.gz").resolve()
+
+            progress_cb = None
+            if progress.enabled:
+                progress.write(
+                    progress.render(prefix=f"{user.username}", done=0, total=1, extra="tasks=0  examples=0"),
+                    force=True,
+                )
+                progress_cb = progress.callback_counts(prefix=f"{user.username}")
 
             payload = build_offline_review_bundle_payload(
                 user=user,
                 limit_examples=limit_examples,
                 examples_for=examples_for,
+                progress_callback=progress_cb,
             )
+
+            progress.finish()
 
             raw = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
             with gzip.open(out_path, "wb", compresslevel=9) as f:

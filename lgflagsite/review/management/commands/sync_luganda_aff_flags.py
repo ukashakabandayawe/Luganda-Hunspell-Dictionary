@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import re
+import sys
 from pathlib import Path
 
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
+from review.cli_progress import ProgressLine, raw_stream_for_command_stdout
 from review.models import Flag
 
 
@@ -15,12 +17,28 @@ class Command(BaseCommand):
 
 	def add_arguments(self, parser):
 		parser.add_argument("--aff", type=str, default=str(getattr(settings, "HUNSPELL_AFF_PATH")))
+		parser.add_argument(
+			"--progress",
+			choices=["auto", "on", "off"],
+			default="auto",
+			help="Show progress while scanning and syncing (auto=TTY only).",
+		)
 
 	@transaction.atomic
 	def handle(self, *args, **options):
 		aff_path = Path(options["aff"]).resolve()
 		if not aff_path.exists():
 			raise CommandError(f".aff not found: {aff_path}")
+
+		progress_mode = (options.get("progress") or "auto").strip().lower()
+		if progress_mode not in {"auto", "on", "off"}:
+			progress_mode = "auto"
+		out_stream = raw_stream_for_command_stdout(self.stdout)
+		progress = ProgressLine(
+			out_stream,
+			enabled=(progress_mode != "off"),
+			force=(progress_mode == "on"),
+		)
 
 		# Canonical `# XX = ...` definitions live near the top; don't scan the whole file.
 		canonical: dict[str, str] = {}
@@ -55,12 +73,29 @@ class Command(BaseCommand):
 			return s
 
 		comment_block: list[str] = []
+		total_bytes = 0
+		bytes_read = 0
 		try:
-			with aff_path.open("r", encoding="utf-8", errors="replace") as f:
-				for line_no, raw in enumerate(f, start=1):
-					if line_no % 200000 == 0:
-						self.stdout.write(f"...scanned {line_no:,} lines")
-					line = (raw or "").rstrip("\n")
+			total_bytes = int(aff_path.stat().st_size or 0)
+		except OSError:
+			total_bytes = 0
+		try:
+			with aff_path.open("rb") as f:
+				for line_no, raw_b in enumerate(f, start=1):
+					if total_bytes > 0:
+						bytes_read += len(raw_b)
+						if progress.enabled and (line_no % 2000 == 0):
+							progress.write(
+								progress.render_bytes(
+									prefix="sync aff",
+									done_bytes=bytes_read,
+									total_bytes=total_bytes,
+									extra=f"flags={len(flags)}",
+								),
+								force=False,
+							)
+
+					line = (raw_b or b"").decode("utf-8", errors="replace").rstrip("\n")
 					t = line.strip()
 					if not t:
 						comment_block = []
@@ -90,6 +125,19 @@ class Command(BaseCommand):
 					comment_block = []
 		except OSError as ex:
 			raise CommandError(str(ex))
+		finally:
+			# Ensure the final scan state is visible, then move to a new line.
+			if progress.enabled and total_bytes > 0:
+				progress.write(
+					progress.render_bytes(
+						prefix="sync aff",
+						done_bytes=bytes_read,
+						total_bytes=total_bytes,
+						extra=f"flags={len(flags)}",
+					),
+					force=True,
+				)
+				progress.finish()
 
 		seen = set(flags.keys())
 		created = 0
