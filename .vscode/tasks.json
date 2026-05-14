@@ -75,7 +75,9 @@
 			"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
 			"args": [
 				"manage.py",
-				"sync_luganda_aff_flags"
+				"sync_luganda_aff_flags",
+				"--progress",
+				"on"
 			]
 		},
 		{
@@ -85,7 +87,9 @@
 			"args": [
 				"manage.py",
 				"import_luganda_dic",
-				"--upsert"
+				"--upsert",
+				"--progress",
+				"on"
 			]
 		},
 		{
@@ -97,6 +101,8 @@
 				"export_review_bundle",
 				"--user",
 				"${input:bundleUser}",
+				"--progress",
+				"on",
 				"--limit-examples",
 				"${input:bundleLimitExamples}",
 				"--examples-for",
@@ -110,6 +116,8 @@
 			"args": [
 				"manage.py",
 				"export_review_bundles_batch",
+				"--progress",
+				"on",
 				"--limit-examples",
 				"${input:batchBundleLimitExamples}",
 				"--examples-for",
