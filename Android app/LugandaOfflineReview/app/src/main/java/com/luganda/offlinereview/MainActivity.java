@@ -173,16 +173,15 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        // While loading, show a loader instead of text.
+        // Keep the dashboard visible without a loading message; refresh happens in the background.
+        setHeaderLoading(false);
         if (dicProblem != null) {
-            setHeaderLoading(false);
             setHeaderStatusText(dicProblem);
         } else {
             setHeaderStatusText(null);
-            setHeaderLoading(true);
         }
 
-        progress.setText("Loading...");
+        progress.setText(" ");
         refreshBackupUi();
 
         new Thread(() -> {

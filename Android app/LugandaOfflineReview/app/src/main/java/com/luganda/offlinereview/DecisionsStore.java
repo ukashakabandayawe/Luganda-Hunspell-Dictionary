@@ -139,6 +139,30 @@ public final class DecisionsStore {
         return out;
     }
 
+    public static Map<String, Map<String, String>> loadDecisionNoteMap(Context context) throws Exception {
+        JSONObject payload = loadDecisionsPayload(context);
+        JSONArray arr = payload.optJSONArray("decisions");
+        Map<String, Map<String, String>> out = new HashMap<>();
+        if (arr == null) return out;
+
+        for (int i = 0; i < arr.length(); i++) {
+            JSONObject row = arr.optJSONObject(i);
+            if (row == null) continue;
+            String stem = row.optString("stem", "").trim();
+            String flag = row.optString("flag", "").trim();
+            if (stem.isEmpty() || flag.isEmpty()) continue;
+
+            String note = row.optString("note", "");
+            Map<String, String> byFlag = out.get(stem);
+            if (byFlag == null) {
+                byFlag = new HashMap<>();
+                out.put(stem, byFlag);
+            }
+            byFlag.put(flag, note == null ? "" : note);
+        }
+        return out;
+    }
+
     public static JSONObject buildExportPayload(Context context, JSONObject userJson) throws Exception {
         JSONObject payload = loadDecisionsPayload(context);
         payload.put("schema", 1);

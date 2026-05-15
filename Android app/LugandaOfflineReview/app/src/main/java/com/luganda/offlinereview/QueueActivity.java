@@ -86,7 +86,7 @@ public class QueueActivity extends AppCompatActivity {
         );
         rv.setAdapter(adapter);
 
-        if (!restoreFromCacheIfFresh()) {
+        if (!restoreFromPersistentCacheIfFresh()) {
             setLoading(true);
             loadAndRenderAsync();
         }
@@ -121,10 +121,27 @@ public class QueueActivity extends AppCompatActivity {
         applyStemCountsUpdate(stemIndex, pending, done);
     }
 
-    private boolean restoreFromCacheIfFresh() {
-        if (sCache == null) return false;
-        if (!sCache.isFreshFor(this)) return false;
-        if (sCache.buckets == null) return false;
+    private boolean restoreFromPersistentCacheIfFresh() {
+        if (sCache == null || !sCache.isFreshFor(this) || sCache.buckets == null) {
+            QueueSnapshotStore.Snapshot snapshot = QueueSnapshotStore.load(this);
+            if (snapshot == null || !snapshot.isFreshFor(this) || snapshot.buckets == null) {
+                return false;
+            }
+
+            sCache = new CachedQueue();
+            sCache.bundleMtime = snapshot.bundleMtime;
+            sCache.decisionsMtime = snapshot.decisionsMtime;
+            sCache.titleText = snapshot.titleText;
+            sCache.username = snapshot.username;
+            sCache.stems = snapshot.stems;
+            sCache.tasks = snapshot.tasks;
+            sCache.pending = snapshot.pending;
+            sCache.decided = snapshot.decided;
+            sCache.approved = snapshot.approved;
+            sCache.rejected = snapshot.rejected;
+            sCache.buckets = snapshot.buckets;
+            sCache.expandedByGroupKey = snapshot.expandedByGroupKey;
+        }
 
         expandedByGroupKey.clear();
         if (sCache.expandedByGroupKey != null) {
@@ -151,7 +168,7 @@ public class QueueActivity extends AppCompatActivity {
         return bm == lastLoadedBundleMtime && dm == lastLoadedDecisionsMtime;
     }
 
-    private long getBundleMtime() {
+    long getBundleMtime() {
         try {
             java.io.File f = BundleStore.getBundleFile(this);
             return (f != null && f.exists()) ? f.lastModified() : 0L;
@@ -160,7 +177,7 @@ public class QueueActivity extends AppCompatActivity {
         }
     }
 
-    private long getDecisionsMtime() {
+    long getDecisionsMtime() {
         try {
             java.io.File f = DecisionsStore.getDecisionsFile(this);
             return (f != null && f.exists()) ? f.lastModified() : 0L;
@@ -218,8 +235,30 @@ public class QueueActivity extends AppCompatActivity {
         sCache.bundleMtime = bm;
         sCache.decisionsMtime = dm;
         sCache.titleText = title.getText() == null ? "My Queue" : title.getText().toString();
+        sCache.username = extractUsernameFromTitle(sCache.titleText);
+        sCache.stems = countStems(lastBuckets);
+        sCache.tasks = countTasks(lastBuckets);
+        sCache.pending = countPending(lastBuckets);
+        sCache.decided = sCache.tasks - sCache.pending;
+        sCache.approved = 0;
+        sCache.rejected = 0;
         sCache.buckets = lastBuckets;
         sCache.expandedByGroupKey = new HashMap<>(expandedByGroupKey);
+
+        QueueSnapshotStore.Snapshot snapshot = new QueueSnapshotStore.Snapshot();
+        snapshot.bundleMtime = sCache.bundleMtime;
+        snapshot.decisionsMtime = sCache.decisionsMtime;
+        snapshot.titleText = sCache.titleText;
+        snapshot.username = sCache.username;
+        snapshot.stems = sCache.stems;
+        snapshot.tasks = sCache.tasks;
+        snapshot.pending = sCache.pending;
+        snapshot.decided = sCache.decided;
+        snapshot.approved = sCache.approved;
+        snapshot.rejected = sCache.rejected;
+        snapshot.buckets = new ArrayList<>(lastBuckets);
+        snapshot.expandedByGroupKey = new HashMap<>(expandedByGroupKey);
+        new Thread(() -> QueueSnapshotStore.save(QueueActivity.this, snapshot)).start();
     }
 
     private void loadAndRenderAsync() {
@@ -369,6 +408,60 @@ public class QueueActivity extends AppCompatActivity {
         }
 
         return out;
+    }
+
+    private static int countStems(List<GroupBucket> buckets) {
+        int total = 0;
+        if (buckets == null) return 0;
+        for (GroupBucket bucket : buckets) {
+            if (bucket == null || bucket.stems == null) continue;
+            total += bucket.stems.size();
+        }
+        return total;
+    }
+
+    private static int countTasks(List<GroupBucket> buckets) {
+        int total = 0;
+        if (buckets == null) return 0;
+        for (GroupBucket bucket : buckets) {
+            if (bucket == null) continue;
+            if (bucket.stems == null) continue;
+            for (StemItem stem : bucket.stems) {
+                if (stem == null) continue;
+                total += stem.pending + stem.done;
+            }
+        }
+        return total;
+    }
+
+    private static int countPending(List<GroupBucket> buckets) {
+        int total = 0;
+        if (buckets == null) return 0;
+        for (GroupBucket bucket : buckets) {
+            if (bucket == null) continue;
+            total += bucket.pendingTotal;
+        }
+        return total;
+    }
+
+    private static int countDone(List<GroupBucket> buckets) {
+        int total = 0;
+        if (buckets == null) return 0;
+        for (GroupBucket bucket : buckets) {
+            if (bucket == null) continue;
+            total += bucket.doneTotal;
+        }
+        return total;
+    }
+
+    private static String extractUsernameFromTitle(String titleText) {
+        if (titleText == null) return "";
+        int open = titleText.indexOf('(');
+        int close = titleText.lastIndexOf(')');
+        if (open >= 0 && close > open) {
+            return titleText.substring(open + 1, close).trim();
+        }
+        return "";
     }
 
     static final class GroupBucket {
@@ -738,6 +831,13 @@ public class QueueActivity extends AppCompatActivity {
         long bundleMtime;
         long decisionsMtime;
         String titleText;
+        String username;
+        int stems;
+        int tasks;
+        int pending;
+        int decided;
+        int approved;
+        int rejected;
         List<GroupBucket> buckets;
         Map<String, Boolean> expandedByGroupKey;
 

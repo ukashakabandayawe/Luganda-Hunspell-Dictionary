@@ -24,6 +24,7 @@ public class ReviewActivity extends AppCompatActivity {
 
     private BundleStore.BundleHeader bundleHeader;
     private Map<String, Map<String, String>> decisionMap;
+    private Map<String, Map<String, String>> noteMap;
 
     private int stemIndex;
     private String stemText;
@@ -43,6 +44,9 @@ public class ReviewActivity extends AppCompatActivity {
 
     private int currentTaskIndex = -1;
     private volatile boolean decisionSaveInFlight = false;
+    private final Object backupLock = new Object();
+    private boolean backupRunning = false;
+    private boolean backupQueued = false;
 
     // When the reviewer navigates using Prev/Next, we keep them in sequential mode
     // so approving/rejecting doesn't jump to the next pending task elsewhere.
@@ -96,6 +100,7 @@ public class ReviewActivity extends AppCompatActivity {
         try {
             bundleHeader = BundleStore.readBundleHeader(this);
             decisionMap = DecisionsStore.loadDecisionStatusMap(this);
+            noteMap = DecisionsStore.loadDecisionNoteMap(this);
         } catch (Exception ex) {
             Toast.makeText(this, "Failed to load bundle/decisions: " + ex, Toast.LENGTH_LONG).show();
             finish();
@@ -200,7 +205,7 @@ public class ReviewActivity extends AppCompatActivity {
 
             try {
                 DecisionsStore.upsertDecision(ReviewActivity.this, stemText, flag, decision, note);
-                applyDecisionToMemory(stemText, flag, decision);
+                applyDecisionToMemory(stemText, flag, decision, note);
                 counts = computeStemCounts();
                 stemComplete = wasPendingBefore && counts[0] == 0;
             } catch (Exception ex) {
@@ -223,20 +228,10 @@ public class ReviewActivity extends AppCompatActivity {
                 noteEdit.setText("");
                 Toast.makeText(this, decision.toUpperCase() + " saved", Toast.LENGTH_SHORT).show();
 
+                QueueSnapshotStore.refreshAsync(ReviewActivity.this);
+
                 if (BackupFolderStore.isConfigured(this)) {
-                    final String username = getUsernameFromBundle();
-                    new Thread(() -> {
-                        try {
-                            JSONObject payload = DecisionsStore.buildExportPayload(ReviewActivity.this, bundleHeader == null ? null : bundleHeader.toUserJson());
-                            DriveBackupWriter.writeDecisionsBackup(ReviewActivity.this, username, payload);
-                        } catch (Exception ex) {
-                            runOnUiThread(() -> Toast.makeText(
-                                    ReviewActivity.this,
-                                    "Backup failed: " + ex.getMessage(),
-                                    Toast.LENGTH_LONG
-                            ).show());
-                        }
-                    }).start();
+                    requestDriveBackupCoalesced(getUsernameFromBundle());
                 }
 
                 // If this was the last pending flag for the stem, return to the queue.
@@ -266,7 +261,7 @@ public class ReviewActivity extends AppCompatActivity {
         if (rejectBtn != null) rejectBtn.setEnabled(enabled);
     }
 
-    private void applyDecisionToMemory(String stem, String flag, String decision) {
+    private void applyDecisionToMemory(String stem, String flag, String decision, String note) {
         if (stem == null || flag == null || decision == null) return;
         if (decisionMap == null) {
             decisionMap = new java.util.HashMap<>();
@@ -277,6 +272,16 @@ public class ReviewActivity extends AppCompatActivity {
             decisionMap.put(stem, byFlag);
         }
         byFlag.put(flag, decision);
+
+        if (noteMap == null) {
+            noteMap = new java.util.HashMap<>();
+        }
+        Map<String, String> noteByFlag = noteMap.get(stem);
+        if (noteByFlag == null) {
+            noteByFlag = new java.util.HashMap<>();
+            noteMap.put(stem, noteByFlag);
+        }
+        noteByFlag.put(flag, note == null ? "" : note);
     }
 
     private String getUsernameFromBundle() {
@@ -284,6 +289,50 @@ public class ReviewActivity extends AppCompatActivity {
         String u = bundleHeader.username;
         if (u == null || u.trim().isEmpty()) return "reviewer";
         return u.trim();
+    }
+
+    private void requestDriveBackupCoalesced(String username) {
+        final String who = (username == null || username.trim().isEmpty()) ? "reviewer" : username.trim();
+
+        boolean startWorker = false;
+        synchronized (backupLock) {
+            if (backupRunning) {
+                backupQueued = true;
+            } else {
+                backupRunning = true;
+                startWorker = true;
+            }
+        }
+        if (!startWorker) return;
+
+        new Thread(() -> {
+            boolean rerun;
+            do {
+                try {
+                    JSONObject payload = DecisionsStore.buildExportPayload(
+                            ReviewActivity.this,
+                            bundleHeader == null ? null : bundleHeader.toUserJson()
+                    );
+                    DriveBackupWriter.writeDecisionsBackup(ReviewActivity.this, who, payload);
+                } catch (Exception ex) {
+                    runOnUiThread(() -> Toast.makeText(
+                            ReviewActivity.this,
+                            "Backup failed: " + ex.getMessage(),
+                            Toast.LENGTH_LONG
+                    ).show());
+                }
+
+                synchronized (backupLock) {
+                    if (backupQueued) {
+                        backupQueued = false;
+                        rerun = true;
+                    } else {
+                        backupRunning = false;
+                        rerun = false;
+                    }
+                }
+            } while (rerun);
+        }, "review-backup").start();
     }
 
     private void showNextPendingOrFirst() {
@@ -390,14 +439,8 @@ public class ReviewActivity extends AppCompatActivity {
         }
         examplesText.setText(sb.toString().trim());
 
-        // Preload note (if this task was already decided before)
-        try {
-            JSONObject row = DecisionsStore.findDecisionRow(this, stemText, flag);
-            String note = row == null ? "" : row.optString("note", "");
-            noteEdit.setText(note == null ? "" : note);
-        } catch (Exception ex) {
-            noteEdit.setText("");
-        }
+        // Preload note from in-memory map to avoid disk I/O on the UI thread.
+        noteEdit.setText(getDecisionNote(stemText, flag));
 
         // Progress line
         int pending = 0;
@@ -496,6 +539,14 @@ public class ReviewActivity extends AppCompatActivity {
             }
         }
         return baseStatus == null ? "pending" : baseStatus;
+    }
+
+    private String getDecisionNote(String stem, String flag) {
+        if (noteMap == null) return "";
+        Map<String, String> byFlag = noteMap.get(stem);
+        if (byFlag == null) return "";
+        String n = byFlag.get(flag);
+        return n == null ? "" : n;
     }
 
 }
