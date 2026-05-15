@@ -80,3 +80,5 @@ en_US.dic
 
 # py cache__
 __pycache__/
+
+lgflagsite/db.sqlite3
