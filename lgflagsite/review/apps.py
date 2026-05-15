@@ -28,6 +28,10 @@ class ReviewConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'review'
 
+    def ready(self):
+        """Register signals when Django app is ready"""
+        import review.signals  # noqa
+
     def ready(self) -> None:
         # Ensure per-user working dictionaries exist on account creation.
         try:
