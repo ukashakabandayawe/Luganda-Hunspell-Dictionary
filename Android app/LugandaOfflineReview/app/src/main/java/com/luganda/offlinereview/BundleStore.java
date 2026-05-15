@@ -21,6 +21,10 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.GZIPOutputStream;
 import java.util.zip.GZIPInputStream;
+import java.io.RandomAccessFile;
+import java.io.DataOutputStream;
+import java.io.DataInputStream;
+import java.io.FileOutputStream;
 
 public final class BundleStore {
     private static final String BUNDLE_FILE_NAME = "review_bundle.json.gz";
@@ -112,6 +116,10 @@ public final class BundleStore {
         }
 
         handleDecisionsOnImport(context, prevHeader, header);
+
+        // Build persistent caches so queue/task loading after app restarts can avoid
+        // re-reading the gzip bundle.
+        buildStemCacheIfNeededAsync(context);
     }
 
     private static void handleDecisionsOnImport(Context context, BundleHeader prevHeader, BundleHeader newHeader) {
@@ -354,6 +362,10 @@ public final class BundleStore {
         File f = getBundleFile(context);
         if (!f.exists()) throw new IllegalStateException("Bundle not found");
 
+        if (hasStemCache(context)) {
+            return computeProgressFromStemCache(context, decisionMap);
+        }
+
         int stemsCount = 0;
         int tasksTotal = 0;
         int pending = 0;
@@ -399,6 +411,10 @@ public final class BundleStore {
         File f = getBundleFile(context);
         if (!f.exists()) throw new IllegalStateException("Bundle not found");
 
+        if (hasStemCache(context)) {
+            return loadQueueStemsFromStemCache(context, decisionMap);
+        }
+
         java.util.ArrayList<QueueStemLite> out = new java.util.ArrayList<>();
 
         try (FileInputStream fis = new FileInputStream(f);
@@ -425,6 +441,206 @@ public final class BundleStore {
             }
         }
 
+        return out;
+    }
+
+    // Stem cache files: data contains concatenated UTF-8 stem JSON objects; idx contains 8-byte offsets
+    private static File getStemDataFile(Context context) {
+        return new File(context.getFilesDir(), "stems.data");
+    }
+
+    private static File getStemIdxFile(Context context) {
+        return new File(context.getFilesDir(), "stems.idx");
+    }
+
+    private static boolean hasStemCache(Context context) {
+        File data = getStemDataFile(context);
+        File idx = getStemIdxFile(context);
+        return data.exists() && idx.exists();
+    }
+
+    private static int getCachedStemCount(Context context) {
+        File idx = getStemIdxFile(context);
+        if (!idx.exists()) return 0;
+        long len = idx.length();
+        if (len <= 0) return 0;
+        return (int) (len / 8L);
+    }
+
+    public static void buildStemCacheIfNeededAsync(Context context) {
+        new Thread(() -> {
+            try {
+                buildStemCacheIfNeeded(context);
+            } catch (Throwable ignored) {}
+        }).start();
+    }
+
+    private static void buildStemCacheIfNeeded(Context context) throws Exception {
+        File bundle = getBundleFile(context);
+        if (!bundle.exists()) return;
+
+        File data = getStemDataFile(context);
+        File idx = getStemIdxFile(context);
+
+        long bundleMtime = bundle.lastModified();
+        long idxMtime = idx.exists() ? idx.lastModified() : 0L;
+        if (idx.exists() && idxMtime >= bundleMtime && data.exists()) {
+            // cache up-to-date
+            return;
+        }
+
+        File tmpData = new File(context.getFilesDir(), "stems.data.tmp");
+        File tmpIdx = new File(context.getFilesDir(), "stems.idx.tmp");
+
+        try (FileOutputStream dfos = new FileOutputStream(tmpData, false);
+             DataOutputStream idos = new DataOutputStream(new FileOutputStream(tmpIdx, false))) {
+
+            try (FileInputStream fis = new FileInputStream(bundle);
+                 GZIPInputStream gis = new GZIPInputStream(fis);
+                 InputStreamReader isr = new InputStreamReader(gis, StandardCharsets.UTF_8);
+                 JsonReader r = new JsonReader(isr)) {
+
+                r.setLenient(true);
+                r.beginObject();
+                while (r.hasNext()) {
+                    String name = r.nextName();
+                    if (!"stems".equals(name)) {
+                        r.skipValue();
+                        continue;
+                    }
+
+                    // stems
+                    r.beginArray();
+                    while (r.hasNext()) {
+                        long offset = dfos.getChannel().position();
+                        idos.writeLong(offset);
+
+                        JSONObject stem = readStemObject(r);
+                        byte[] bytes = stem.toString().getBytes(StandardCharsets.UTF_8);
+                        dfos.write(bytes);
+                    }
+                    r.endArray();
+                    break;
+                }
+                r.endObject();
+            }
+        }
+
+        // Atomically replace
+        if (tmpIdx.exists()) {
+            if (!tmpIdx.renameTo(idx)) {
+                // fallback
+                try (FileInputStream in = new FileInputStream(tmpIdx);
+                     FileOutputStream out = new FileOutputStream(idx, false)) {
+                    byte[] b = new byte[8192];
+                    int n;
+                    while ((n = in.read(b)) >= 0) {
+                        if (n == 0) continue;
+                        out.write(b, 0, n);
+                    }
+                }
+                tmpIdx.delete();
+            }
+        }
+
+        if (tmpData.exists()) {
+            if (!tmpData.renameTo(data)) {
+                try (FileInputStream in = new FileInputStream(tmpData);
+                     FileOutputStream out = new FileOutputStream(data, false)) {
+                    byte[] b = new byte[8192];
+                    int n;
+                    while ((n = in.read(b)) >= 0) {
+                        if (n == 0) continue;
+                        out.write(b, 0, n);
+                    }
+                }
+                tmpData.delete();
+            }
+        }
+    }
+
+    public static JSONObject loadStemFromCache(Context context, int stemIndex) throws Exception {
+        File idx = getStemIdxFile(context);
+        File data = getStemDataFile(context);
+        if (!idx.exists() || !data.exists()) return null;
+
+        try (RandomAccessFile rafIdx = new RandomAccessFile(idx, "r")) {
+            long idxLen = rafIdx.length();
+            long entries = idxLen / 8;
+            if (stemIndex < 0 || stemIndex >= entries) return null;
+            rafIdx.seek((long) stemIndex * 8L);
+            long start = rafIdx.readLong();
+            long end = data.length();
+            if (stemIndex + 1 < entries) {
+                rafIdx.seek((long) (stemIndex + 1) * 8L);
+                end = rafIdx.readLong();
+            }
+
+            long len = end - start;
+            if (len <= 0) return null;
+
+            try (RandomAccessFile rafData = new RandomAccessFile(data, "r")) {
+                rafData.seek(start);
+                byte[] buf = new byte[(int) len];
+                rafData.readFully(buf);
+                String json = new String(buf, StandardCharsets.UTF_8);
+                return new JSONObject(json);
+            }
+        }
+    }
+
+    private static ProgressSummary computeProgressFromStemCache(
+            Context context,
+            java.util.Map<String, java.util.Map<String, String>> decisionMap
+    ) throws Exception {
+        int stemsCount = 0;
+        int tasksTotal = 0;
+        int pending = 0;
+        int decided = 0;
+        int approved = 0;
+        int rejected = 0;
+
+        int cachedCount = getCachedStemCount(context);
+        for (int i = 0; i < cachedCount; i++) {
+            JSONObject stemObj = loadStemFromCache(context, i);
+            if (stemObj == null) continue;
+            stemsCount++;
+
+            String stemText = stemObj.optString("stem", "");
+            org.json.JSONArray tasks = stemObj.optJSONArray("tasks");
+            if (tasks == null) continue;
+
+            for (int t = 0; t < tasks.length(); t++) {
+                JSONObject task = tasks.optJSONObject(t);
+                if (task == null) continue;
+                tasksTotal++;
+                String flag = task.optString("flag", "");
+                String baseStatus = task.optString("status", "pending");
+                String eff = effectiveStatusFromMap(decisionMap, stemText, flag, baseStatus);
+                if ("pending".equals(eff)) {
+                    pending++;
+                } else {
+                    decided++;
+                    if ("approved".equals(eff)) approved++;
+                    else if ("rejected".equals(eff)) rejected++;
+                }
+            }
+        }
+
+        return new ProgressSummary(stemsCount, tasksTotal, pending, decided, approved, rejected);
+    }
+
+    private static java.util.List<QueueStemLite> loadQueueStemsFromStemCache(
+            Context context,
+            java.util.Map<String, java.util.Map<String, String>> decisionMap
+    ) throws Exception {
+        java.util.ArrayList<QueueStemLite> out = new java.util.ArrayList<>();
+        int cachedCount = getCachedStemCount(context);
+        for (int i = 0; i < cachedCount; i++) {
+            JSONObject stemObj = loadStemFromCache(context, i);
+            if (stemObj == null) continue;
+            out.add(buildQueueStemLiteFromObject(stemObj, i, decisionMap));
+        }
         return out;
     }
 
@@ -555,6 +771,50 @@ public final class BundleStore {
         return new QueueStemLite(index, stemText, stemLine, groupKey, groupTitle, groupLine, pending, done);
     }
 
+    private static QueueStemLite buildQueueStemLiteFromObject(
+            JSONObject stemObj,
+            int index,
+            java.util.Map<String, java.util.Map<String, String>> decisionMap
+    ) {
+        String stemText = stemObj == null ? "" : stemObj.optString("stem", "");
+        int stemLine = stemObj == null ? 1_000_000_000 : stemObj.optInt("source_line_no", 1_000_000_000);
+
+        String groupKey = "ungrouped";
+        String groupTitle = "Ungrouped";
+        int groupLine = 1_000_000_000;
+
+        if (stemObj != null) {
+            JSONObject group = stemObj.optJSONObject("group");
+            if (group != null) {
+                int gid = group.optInt("id", 0);
+                String gt = group.optString("title", "");
+                int gl = group.optInt("source_line_no", 1_000_000_000);
+                if (gt == null || gt.trim().isEmpty()) gt = stemText;
+                groupTitle = gt;
+                groupLine = gl;
+                if (gid > 0) groupKey = "g:" + gid;
+                else groupKey = "gl:" + gl + ":" + groupTitle;
+            }
+        }
+
+        int pending = 0;
+        int done = 0;
+        org.json.JSONArray tasks = stemObj == null ? null : stemObj.optJSONArray("tasks");
+        if (tasks != null) {
+            for (int i = 0; i < tasks.length(); i++) {
+                JSONObject task = tasks.optJSONObject(i);
+                if (task == null) continue;
+                String flag = task.optString("flag", "");
+                String baseStatus = task.optString("status", "pending");
+                String eff = effectiveStatusFromMap(decisionMap, stemText, flag, baseStatus);
+                if ("pending".equals(eff)) pending++;
+                else done++;
+            }
+        }
+
+        return new QueueStemLite(index, stemText, stemLine, groupKey, groupTitle, groupLine, pending, done);
+    }
+
     private static final class TaskStatusRow {
         final String flag;
         final String baseStatus;
@@ -614,6 +874,12 @@ public final class BundleStore {
 
         File f = getBundleFile(context);
         if (!f.exists()) throw new IllegalStateException("Bundle not found");
+
+        // Try cache first for faster random access.
+        try {
+            JSONObject cached = loadStemFromCache(context, stemIndex);
+            if (cached != null) return cached;
+        } catch (Throwable ignored) {}
 
         try (FileInputStream fis = new FileInputStream(f);
              GZIPInputStream gis = new GZIPInputStream(fis);

@@ -250,6 +250,8 @@ public class QueueActivity extends AppCompatActivity {
                     title.setText(header);
                     if (adapter != null) adapter.setItems(items);
                     saveCacheIfPossible();
+                    // Build a stem cache in background for faster stem opens later.
+                    BundleStore.buildStemCacheIfNeededAsync(QueueActivity.this);
                 });
             } catch (Throwable t) {
                 String bundleSize = "(unknown)";
@@ -329,20 +331,9 @@ public class QueueActivity extends AppCompatActivity {
             bucket.doneTotal += s.done;
         }
 
-        List<GroupBucket> buckets = new ArrayList<>(bucketsByKey.values());
-        Collections.sort(buckets, (a, b) -> {
-            int c = Integer.compare(a.orderLine, b.orderLine);
-            if (c != 0) return c;
-            return a.title.compareToIgnoreCase(b.title);
-        });
-        for (GroupBucket b : buckets) {
-            Collections.sort(b.stems, (x, y) -> {
-                int c = Integer.compare(x.sourceLineNo, y.sourceLineNo);
-                if (c != 0) return c;
-                return x.stem.compareToIgnoreCase(y.stem);
-            });
-        }
-        return buckets;
+        // Preserve the bundle's file order (stems are already streamed in order).
+        // Sorting can be very expensive for huge reviewer assignments.
+        return new ArrayList<>(bucketsByKey.values());
     }
 
     @Override

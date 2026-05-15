@@ -36,10 +36,13 @@ public class ReviewActivity extends AppCompatActivity {
     private TextView progressText;
     private EditText noteEdit;
 
+    private Button approveBtn;
+    private Button rejectBtn;
     private Button prevBtn;
     private Button nextBtn;
 
     private int currentTaskIndex = -1;
+    private volatile boolean decisionSaveInFlight = false;
 
     // When the reviewer navigates using Prev/Next, we keep them in sequential mode
     // so approving/rejecting doesn't jump to the next pending task elsewhere.
@@ -69,8 +72,8 @@ public class ReviewActivity extends AppCompatActivity {
         progressText = findViewById(R.id.reviewProgress);
         noteEdit = findViewById(R.id.reviewNote);
 
-        Button approveBtn = findViewById(R.id.btnApprove);
-        Button rejectBtn = findViewById(R.id.btnReject);
+        approveBtn = findViewById(R.id.btnApprove);
+        rejectBtn = findViewById(R.id.btnReject);
         prevBtn = findViewById(R.id.btnPrevTask);
         nextBtn = findViewById(R.id.btnNextTask);
 
@@ -160,16 +163,19 @@ public class ReviewActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        finishAndReturnQueueUpdate();
+        finishAndReturnQueueUpdate(computeStemCounts());
         return true;
     }
 
     @Override
     public void onBackPressed() {
-        finishAndReturnQueueUpdate();
+        finishAndReturnQueueUpdate(computeStemCounts());
     }
 
     private void onDecide(String decision) {
+        if (decisionSaveInFlight) {
+            return;
+        }
         if (currentTaskIndex < 0 || currentTaskIndex >= tasks.length()) {
             Toast.makeText(this, "No task selected", Toast.LENGTH_SHORT).show();
             return;
@@ -184,51 +190,93 @@ public class ReviewActivity extends AppCompatActivity {
 
         String note = noteEdit.getText() == null ? "" : noteEdit.getText().toString();
 
-        try {
-            DecisionsStore.upsertDecision(this, stemText, flag, decision, note);
-            decisionMap = DecisionsStore.loadDecisionStatusMap(this);
-            noteEdit.setText("");
-        } catch (Exception ex) {
-            Toast.makeText(this, "Failed saving decision: " + ex, Toast.LENGTH_LONG).show();
-            return;
-        }
+        decisionSaveInFlight = true;
+        setDecisionButtonsEnabled(false);
 
-        if (BackupFolderStore.isConfigured(this)) {
-            final String username = getUsernameFromBundle();
-            new Thread(() -> {
-                try {
-                    JSONObject payload = DecisionsStore.buildExportPayload(ReviewActivity.this, bundleHeader == null ? null : bundleHeader.toUserJson());
-                    DriveBackupWriter.writeDecisionsBackup(ReviewActivity.this, username, payload);
-                } catch (Exception ex) {
-                    runOnUiThread(() -> Toast.makeText(
-                            ReviewActivity.this,
-                            "Backup failed: " + ex.getMessage(),
-                            Toast.LENGTH_LONG
-                    ).show());
-                }
-            }).start();
-        }
+        new Thread(() -> {
+            Exception saveError = null;
+            int[] counts = null;
+            boolean stemComplete = false;
 
-        Toast.makeText(this, decision.toUpperCase() + " saved", Toast.LENGTH_SHORT).show();
-
-        // If this was the last pending flag for the stem, return to the queue.
-        // (Avoid looping back to the first flag.)
-        if (findNextPendingTaskIndex() < 0 && wasPendingBefore) {
-            Toast.makeText(this, "Stem complete", Toast.LENGTH_SHORT).show();
-            finishAndReturnQueueUpdate();
-            return;
-        }
-
-        if (manualNavigationMode) {
-            int before = currentTaskIndex;
-            goNextTask();
-            if (currentTaskIndex == before) {
-                // We stayed on the same task (likely end of list); refresh header/buttons.
-                bindTask(tasks.optJSONObject(currentTaskIndex));
+            try {
+                DecisionsStore.upsertDecision(ReviewActivity.this, stemText, flag, decision, note);
+                applyDecisionToMemory(stemText, flag, decision);
+                counts = computeStemCounts();
+                stemComplete = wasPendingBefore && counts[0] == 0;
+            } catch (Exception ex) {
+                saveError = ex;
             }
-        } else {
-            showNextPendingOrFirst();
+
+            final Exception finalSaveError = saveError;
+            final int[] finalCounts = counts;
+            final boolean finalStemComplete = stemComplete;
+
+            runOnUiThread(() -> {
+                decisionSaveInFlight = false;
+                setDecisionButtonsEnabled(true);
+
+                if (finalSaveError != null) {
+                    Toast.makeText(this, "Failed saving decision: " + finalSaveError, Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                noteEdit.setText("");
+                Toast.makeText(this, decision.toUpperCase() + " saved", Toast.LENGTH_SHORT).show();
+
+                if (BackupFolderStore.isConfigured(this)) {
+                    final String username = getUsernameFromBundle();
+                    new Thread(() -> {
+                        try {
+                            JSONObject payload = DecisionsStore.buildExportPayload(ReviewActivity.this, bundleHeader == null ? null : bundleHeader.toUserJson());
+                            DriveBackupWriter.writeDecisionsBackup(ReviewActivity.this, username, payload);
+                        } catch (Exception ex) {
+                            runOnUiThread(() -> Toast.makeText(
+                                    ReviewActivity.this,
+                                    "Backup failed: " + ex.getMessage(),
+                                    Toast.LENGTH_LONG
+                            ).show());
+                        }
+                    }).start();
+                }
+
+                // If this was the last pending flag for the stem, return to the queue.
+                // (Avoid looping back to the first flag.)
+                if (finalStemComplete) {
+                    Toast.makeText(this, "Stem complete", Toast.LENGTH_SHORT).show();
+                    finishAndReturnQueueUpdate(finalCounts);
+                    return;
+                }
+
+                if (manualNavigationMode) {
+                    int before = currentTaskIndex;
+                    goNextTask();
+                    if (currentTaskIndex == before) {
+                        // We stayed on the same task (likely end of list); refresh header/buttons.
+                        bindTask(tasks.optJSONObject(currentTaskIndex));
+                    }
+                } else {
+                    showNextPendingOrFirst();
+                }
+            });
+        }).start();
+    }
+
+    private void setDecisionButtonsEnabled(boolean enabled) {
+        if (approveBtn != null) approveBtn.setEnabled(enabled);
+        if (rejectBtn != null) rejectBtn.setEnabled(enabled);
+    }
+
+    private void applyDecisionToMemory(String stem, String flag, String decision) {
+        if (stem == null || flag == null || decision == null) return;
+        if (decisionMap == null) {
+            decisionMap = new java.util.HashMap<>();
         }
+        Map<String, String> byFlag = decisionMap.get(stem);
+        if (byFlag == null) {
+            byFlag = new java.util.HashMap<>();
+            decisionMap.put(stem, byFlag);
+        }
+        byFlag.put(flag, decision);
     }
 
     private String getUsernameFromBundle() {
@@ -260,9 +308,8 @@ public class ReviewActivity extends AppCompatActivity {
         }
     }
 
-    private void finishAndReturnQueueUpdate() {
+    private void finishAndReturnQueueUpdate(int[] counts) {
         try {
-            int[] counts = computeStemCounts();
             Intent data = new Intent();
             data.putExtra(QueueActivity.EXTRA_STEM_INDEX, stemIndex);
             data.putExtra(QueueActivity.EXTRA_RESULT_PENDING, counts[0]);
