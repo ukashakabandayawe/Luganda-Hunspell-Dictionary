@@ -4396,8 +4396,9 @@ PFX iM 0 twandye .
 
 # object markers
 # Formally used F but now using Ob
-PFX Ob Y 18
-PFX Ob 0 n [^lmnb]
+PFX Ob Y 19
+PFX Ob 0 n  [^lmnbp]
+PFX Ob 0 m  p
 PFX Ob l nd l.[^mn][^u]
 PFX Ob l nn l.[mn]
 PFX Ob w mp [w]
@@ -4686,19 +4687,19 @@ PFX LT z bwenzi zze # It creates bwenzize from "zze"
 PFX LT j bwen jj # It handles the word "bwenja" (the singular of bwetujja) so, Luganda.dic should have "jja" entry with NEEDAFFIX flag plus other flags
 PFX LT 0 bwen [^jbnmlhprxq] # bwentyo bwenfumba
 PFX LT 0 bwem b #  buuka-->bwembuuka
-PFX LT 0 o . # tyo-->otyo
+PFX LT 0 bwo . # tyo-->otyo
 PFX LT l bwend l.[^mn] #  lya-->bwendya
 PFX LT l bwenn l.[mn][^u] # luma-->bwennuma
 PFX LT l bwend li
 PFX LT w bwemp w #  wandiika --> bwempandiika
-PFX LT 0 a . # tyo--atyo
+PFX LT 0 bwa . # tyo--atyo
 PFX LT 0 bwetu . # bwetutyo
 PFX LT 0 bwemu . 
 PFX LT 0 bweba . 
 PFX LT 0 bweba .
 PFX LT 0 bwegu .
 PFX LT 0 bwegi .
-PFX LT 0 e [^aeiou]
+PFX LT 0 bwe [^aeiou]
 PFX LT 0 bwezi .
 PFX LT 0 bweki .
 PFX LT 0 bwebi .
