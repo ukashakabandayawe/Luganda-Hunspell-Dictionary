@@ -785,7 +785,7 @@ PFX PS j n   jj # It handles the word "nja" (the singular of tujja) so, Luganda.
 PFX PS y nj  y.[^mn] # yiga-->njiga
 PFX PS 0 n   [^jbnmlhprxq] # Person marker
 PFX PS 0 m   b # Person marker: buuka-->mbuuka
-PFX PS b mm  banja
+PFX PS b mm  banj
 PFX PS 0 o   . # Person marker
 PFX PS l nd  l.[^mn] # Person marker: lya-->ndya
 PFX PS l nn  l.[mn][^u] # Person marker: luma-->nnuma
