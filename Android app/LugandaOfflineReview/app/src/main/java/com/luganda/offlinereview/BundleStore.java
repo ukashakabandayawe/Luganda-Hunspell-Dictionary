@@ -29,6 +29,7 @@ import java.io.FileOutputStream;
 public final class BundleStore {
     private static final String BUNDLE_FILE_NAME = "review_bundle.json.gz";
     private static final String BASE_DIC_FILE_NAME = "Luganda.dic";
+    private static volatile boolean stemCacheBuilding = false;
 
     private BundleStore() {}
 
@@ -468,94 +469,102 @@ public final class BundleStore {
     }
 
     public static void buildStemCacheIfNeededAsync(Context context) {
+        // Prevent concurrent cache builds
+        if (stemCacheBuilding) return;
         new Thread(() -> {
             try {
                 buildStemCacheIfNeeded(context);
-            } catch (Throwable ignored) {}
+            } catch (Throwable ignored) {
+            }
         }).start();
     }
 
     private static void buildStemCacheIfNeeded(Context context) throws Exception {
-        File bundle = getBundleFile(context);
-        if (!bundle.exists()) return;
+        stemCacheBuilding = true;
+        try {
+            File bundle = getBundleFile(context);
+            if (!bundle.exists()) return;
 
-        File data = getStemDataFile(context);
-        File idx = getStemIdxFile(context);
+            File data = getStemDataFile(context);
+            File idx = getStemIdxFile(context);
 
-        long bundleMtime = bundle.lastModified();
-        long idxMtime = idx.exists() ? idx.lastModified() : 0L;
-        if (idx.exists() && idxMtime >= bundleMtime && data.exists()) {
-            // cache up-to-date
-            return;
-        }
+            long bundleMtime = bundle.lastModified();
+            long idxMtime = idx.exists() ? idx.lastModified() : 0L;
+            if (idx.exists() && idxMtime >= bundleMtime && data.exists()) {
+                // cache up-to-date
+                return;
+            }
 
-        File tmpData = new File(context.getFilesDir(), "stems.data.tmp");
-        File tmpIdx = new File(context.getFilesDir(), "stems.idx.tmp");
+            File tmpData = new File(context.getFilesDir(), "stems.data.tmp");
+            File tmpIdx = new File(context.getFilesDir(), "stems.idx.tmp");
 
-        try (FileOutputStream dfos = new FileOutputStream(tmpData, false);
-             DataOutputStream idos = new DataOutputStream(new FileOutputStream(tmpIdx, false))) {
+            try (FileOutputStream dfos = new FileOutputStream(tmpData, false);
+                 DataOutputStream idos = new DataOutputStream(new FileOutputStream(tmpIdx, false))) {
 
-            try (FileInputStream fis = new FileInputStream(bundle);
-                 GZIPInputStream gis = new GZIPInputStream(fis);
-                 InputStreamReader isr = new InputStreamReader(gis, StandardCharsets.UTF_8);
-                 JsonReader r = new JsonReader(isr)) {
+                try (FileInputStream fis = new FileInputStream(bundle);
+                     GZIPInputStream gis = new GZIPInputStream(fis);
+                     InputStreamReader isr = new InputStreamReader(gis, StandardCharsets.UTF_8);
+                     JsonReader r = new JsonReader(isr)) {
 
-                r.setLenient(true);
-                r.beginObject();
-                while (r.hasNext()) {
-                    String name = r.nextName();
-                    if (!"stems".equals(name)) {
-                        r.skipValue();
-                        continue;
-                    }
-
-                    // stems
-                    r.beginArray();
+                    r.setLenient(true);
+                    r.beginObject();
                     while (r.hasNext()) {
-                        long offset = dfos.getChannel().position();
-                        idos.writeLong(offset);
+                        String name = r.nextName();
+                        if (!"stems".equals(name)) {
+                            r.skipValue();
+                            continue;
+                        }
 
-                        JSONObject stem = readStemObject(r);
-                        byte[] bytes = stem.toString().getBytes(StandardCharsets.UTF_8);
-                        dfos.write(bytes);
-                    }
-                    r.endArray();
-                    break;
-                }
-                r.endObject();
-            }
-        }
+                        // stems
+                        r.beginArray();
+                        while (r.hasNext()) {
+                            long offset = dfos.getChannel().position();
+                            idos.writeLong(offset);
 
-        // Atomically replace
-        if (tmpIdx.exists()) {
-            if (!tmpIdx.renameTo(idx)) {
-                // fallback
-                try (FileInputStream in = new FileInputStream(tmpIdx);
-                     FileOutputStream out = new FileOutputStream(idx, false)) {
-                    byte[] b = new byte[8192];
-                    int n;
-                    while ((n = in.read(b)) >= 0) {
-                        if (n == 0) continue;
-                        out.write(b, 0, n);
+                            JSONObject stem = readStemObject(r);
+                            byte[] bytes = stem.toString().getBytes(StandardCharsets.UTF_8);
+                            dfos.write(bytes);
+                        }
+                        r.endArray();
+                        break;
                     }
+                    r.endObject();
                 }
-                tmpIdx.delete();
             }
-        }
 
-        if (tmpData.exists()) {
-            if (!tmpData.renameTo(data)) {
-                try (FileInputStream in = new FileInputStream(tmpData);
-                     FileOutputStream out = new FileOutputStream(data, false)) {
-                    byte[] b = new byte[8192];
-                    int n;
-                    while ((n = in.read(b)) >= 0) {
-                        if (n == 0) continue;
-                        out.write(b, 0, n);
+            // Atomically replace
+            if (tmpIdx.exists()) {
+                if (!tmpIdx.renameTo(idx)) {
+                    // fallback
+                    try (FileInputStream in = new FileInputStream(tmpIdx);
+                         FileOutputStream out = new FileOutputStream(idx, false)) {
+                        byte[] b = new byte[8192];
+                        int n;
+                        while ((n = in.read(b)) >= 0) {
+                            if (n == 0) continue;
+                            out.write(b, 0, n);
+                        }
                     }
+                    tmpIdx.delete();
                 }
-                tmpData.delete();
             }
+
+            if (tmpData.exists()) {
+                if (!tmpData.renameTo(data)) {
+                    try (FileInputStream in = new FileInputStream(tmpData);
+                         FileOutputStream out = new FileOutputStream(data, false)) {
+                        byte[] b = new byte[8192];
+                        int n;
+                        while ((n = in.read(b)) >= 0) {
+                            if (n == 0) continue;
+                            out.write(b, 0, n);
+                        }
+                    }
+                    tmpData.delete();
+                }
+            }
+        } finally {
+            stemCacheBuilding = false;
         }
     }
 
@@ -584,7 +593,22 @@ public final class BundleStore {
                 byte[] buf = new byte[(int) len];
                 rafData.readFully(buf);
                 String json = new String(buf, StandardCharsets.UTF_8);
-                return new JSONObject(json);
+                JSONObject stem = new JSONObject(json);
+
+                // Sanity-check cached stem: tasks should normally be present.
+                try {
+                    org.json.JSONArray tasks = stem.optJSONArray("tasks");
+                    if (tasks == null || tasks.length() == 0) {
+                        // Cache appears corrupt or incomplete for this stem; trigger async rebuild
+                        buildStemCacheIfNeededAsync(context);
+                        return null;
+                    }
+                } catch (Throwable ignored) {
+                    buildStemCacheIfNeededAsync(context);
+                    return null;
+                }
+
+                return stem;
             }
         }
     }

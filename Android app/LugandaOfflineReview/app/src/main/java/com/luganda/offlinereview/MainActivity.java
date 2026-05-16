@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Watchdog.start(this);
 
         if (savedInstanceState != null) {
             lastHandledIncomingUri = savedInstanceState.getString("lastHandledIncomingUri", null);
@@ -101,6 +102,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         refreshUi();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Watchdog.stop();
     }
 
     private void handleIncomingIntent(Intent intent) {

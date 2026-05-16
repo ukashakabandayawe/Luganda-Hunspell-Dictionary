@@ -97,47 +97,53 @@ public class ReviewActivity extends AppCompatActivity {
             return;
         }
 
-        try {
-            bundleHeader = BundleStore.readBundleHeader(this);
-            decisionMap = DecisionsStore.loadDecisionStatusMap(this);
-            noteMap = DecisionsStore.loadDecisionNoteMap(this);
-        } catch (Exception ex) {
-            Toast.makeText(this, "Failed to load bundle/decisions: " + ex, Toast.LENGTH_LONG).show();
-            finish();
-            return;
-        }
+        // Load bundle header, decisions and stem off the UI thread to avoid ANR on large bundles.
+        new Thread(() -> {
+            try {
+                BundleStore.BundleHeader hdr = BundleStore.readBundleHeader(ReviewActivity.this);
+                java.util.Map<String, java.util.Map<String, String>> dmap = DecisionsStore.loadDecisionStatusMap(ReviewActivity.this);
+                java.util.Map<String, java.util.Map<String, String>> nmap = DecisionsStore.loadDecisionNoteMap(ReviewActivity.this);
+                org.json.JSONObject stemObj = BundleStore.loadStemAtIndex(ReviewActivity.this, stemIndex);
 
-        JSONObject stemObj;
-        try {
-            stemObj = BundleStore.loadStemAtIndex(this, stemIndex);
-        } catch (Exception ex) {
-            Toast.makeText(this, "Failed to load stem from bundle: " + ex, Toast.LENGTH_LONG).show();
-            finish();
-            return;
-        }
-        if (stemObj == null) {
-            Toast.makeText(this, "Stem not found in bundle", Toast.LENGTH_LONG).show();
-            finish();
-            return;
-        }
+                if (stemObj == null) {
+                    runOnUiThread(() -> {
+                        Toast.makeText(ReviewActivity.this, "Stem not found in bundle", Toast.LENGTH_LONG).show();
+                        finish();
+                    });
+                    return;
+                }
 
-        stemText = stemObj.optString("stem", "");
-        tasks = stemObj.optJSONArray("tasks");
-        if (tasks == null) tasks = new JSONArray();
+                // assign to fields then finish UI setup on main thread
+                bundleHeader = hdr;
+                decisionMap = dmap;
+                noteMap = nmap;
 
-        stemTitle.setText(stemText);
+                final org.json.JSONObject finalStem = stemObj;
+                runOnUiThread(() -> {
+                    stemText = finalStem.optString("stem", "");
+                    tasks = finalStem.optJSONArray("tasks");
+                    if (tasks == null) tasks = new org.json.JSONArray();
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(stemText);
-        }
+                    stemTitle.setText(stemText);
+                    if (getSupportActionBar() != null) {
+                        getSupportActionBar().setTitle(stemText);
+                    }
 
-        approveBtn.setOnClickListener(v -> onDecide("approved"));
-        rejectBtn.setOnClickListener(v -> onDecide("rejected"));
-        // Buttons are hidden; keep behavior reachable by swipe.
-        prevBtn.setOnClickListener(v -> goPrevTask());
-        nextBtn.setOnClickListener(v -> goNextTask());
+                    approveBtn.setOnClickListener(v -> onDecide("approved"));
+                    rejectBtn.setOnClickListener(v -> onDecide("rejected"));
+                    // Buttons are hidden; keep behavior reachable by swipe.
+                    prevBtn.setOnClickListener(v -> goPrevTask());
+                    nextBtn.setOnClickListener(v -> goNextTask());
 
-        showNextPendingOrFirst();
+                    showNextPendingOrFirst();
+                });
+            } catch (Exception ex) {
+                runOnUiThread(() -> {
+                    Toast.makeText(ReviewActivity.this, "Failed to load bundle/decisions: " + ex, Toast.LENGTH_LONG).show();
+                    finish();
+                });
+            }
+        }, "review-load").start();
     }
 
     private boolean handleSwipeTouch(MotionEvent event) {
