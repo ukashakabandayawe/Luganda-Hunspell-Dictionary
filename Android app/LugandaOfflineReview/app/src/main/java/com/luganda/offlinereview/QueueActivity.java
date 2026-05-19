@@ -47,16 +47,15 @@ public class QueueActivity extends AppCompatActivity {
 
     private final Map<String, Boolean> expandedByGroupKey = new HashMap<>();
     private List<GroupBucket> lastBuckets = new ArrayList<>();
-
+    private boolean skipNextResumeReload = false;
     private long lastLoadedBundleMtime = -1L;
     private long lastLoadedDecisionsMtime = -1L;
-
-    private boolean skipNextResumeReload = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_queue);
+        Watchdog.start(this);
 
         MaterialToolbar toolbar = findViewById(R.id.queueToolbar);
         setSupportActionBar(toolbar);
@@ -293,7 +292,6 @@ public class QueueActivity extends AppCompatActivity {
                 List<BundleStore.QueueStemLite> stems = BundleStore.loadQueueStems(QueueActivity.this, loadedDecisionMap);
 
                 List<GroupBucket> buckets = buildBucketsFromLite(stems);
-
                 List<QueueItem> items = buildQueueItems(buckets);
 
                 String username = loadedHeader == null ? "" : loadedHeader.username;

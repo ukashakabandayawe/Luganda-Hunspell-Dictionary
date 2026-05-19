@@ -293,28 +293,32 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        String username = "reviewer";
-        if (BundleStore.hasBundle(this)) {
-            try {
-                BundleStore.BundleHeader header = BundleStore.readBundleHeader(this);
-                if (header != null && header.username != null && !header.username.trim().isEmpty()) {
-                    username = header.username.trim();
+        backupStatus.setText("Auto-backup: ON (decisions + .dic)\nLast backup: …");
+
+        new Thread(() -> {
+            String username = "reviewer";
+            if (BundleStore.hasBundle(MainActivity.this)) {
+                try {
+                    BundleStore.BundleHeader header = BundleStore.readBundleHeader(MainActivity.this);
+                    if (header != null && header.username != null && !header.username.trim().isEmpty()) {
+                        username = header.username.trim();
+                    }
+                } catch (Exception ignored) {
+                    // Keep default.
                 }
-            } catch (Exception ignored) {
-                // Keep default.
             }
-        }
 
-        long lastMs = DriveBackupWriter.getLastBackupTimeMillis(this, username);
-        String lastText;
-        if (lastMs <= 0L) {
-            lastText = "Last backup: —";
-        } else {
-            DateFormat df = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT);
-            lastText = "Last backup: " + df.format(new Date(lastMs));
-        }
+            long lastMs = DriveBackupWriter.getLastBackupTimeMillis(MainActivity.this, username);
+            final String lastText;
+            if (lastMs <= 0L) {
+                lastText = "Last backup: —";
+            } else {
+                DateFormat df = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT);
+                lastText = "Last backup: " + df.format(new Date(lastMs));
+            }
 
-        backupStatus.setText("Auto-backup: ON (decisions + .dic)\n" + lastText);
+            runOnUiThread(() -> backupStatus.setText("Auto-backup: ON (decisions + .dic)\n" + lastText));
+        }, "backup-ui-refresh").start();
     }
 
     private void runManualBackupNow() {

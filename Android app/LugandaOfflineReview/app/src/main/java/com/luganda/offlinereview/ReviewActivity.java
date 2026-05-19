@@ -101,6 +101,7 @@ public class ReviewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
+        Watchdog.start(this);
 
         swipeMinDistancePx = Math.max(90, ViewConfiguration.get(this).getScaledTouchSlop() * 3);
 
@@ -230,6 +231,12 @@ public class ReviewActivity extends AppCompatActivity {
         finishAndReturnQueueUpdate(computeStemCounts());
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Watchdog.stop();
+    }
+
     private void onDecide(String decision) {
         if (decisionSaveInFlight) {
             return;
@@ -280,8 +287,6 @@ public class ReviewActivity extends AppCompatActivity {
 
                 noteEdit.setText("");
                 Toast.makeText(this, decision.toUpperCase() + " saved", Toast.LENGTH_SHORT).show();
-
-                QueueSnapshotStore.refreshAsync(ReviewActivity.this);
 
                 // If this was the last pending flag for the stem, return to the queue.
                 // (Avoid looping back to the first flag.)
