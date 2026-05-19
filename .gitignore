@@ -83,3 +83,4 @@ __pycache__/
 
 lgflagsite/db.sqlite3
 Android app/LugandaOfflineReview/ANR
+Android app/LugandaOfflineReview/logcat.txt
