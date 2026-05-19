@@ -10,8 +10,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.luganda.offlinereview.ui.DonutProgressView;
 import org.json.JSONObject;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 import java.io.OutputStream;
 
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView status;
     private TextView progress;
     private TextView backupStatus;
+    private LinearProgressIndicator backupProgressBar;
+    private TextView backupProgressText;
     private TextView userName;
     private TextView statStems;
     private TextView statPending;
@@ -55,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         status = findViewById(R.id.homeStatus);
         progress = findViewById(R.id.homeProgress);
         backupStatus = findViewById(R.id.homeBackupStatus);
+        backupProgressBar = findViewById(R.id.homeBackupProgressBar);
+        backupProgressText = findViewById(R.id.homeBackupProgressText);
         userName = findViewById(R.id.homeUserName);
         statStems = findViewById(R.id.homeStatStems);
         statPending = findViewById(R.id.homeStatPending);
@@ -72,12 +80,14 @@ public class MainActivity extends AppCompatActivity {
         android.view.View btnExportDecisions = findViewById(R.id.btnExportDecisions);
         android.view.View btnExportDic = findViewById(R.id.btnExportDic);
         android.view.View btnSetBackupFolder = findViewById(R.id.btnSetBackupFolder);
+        android.view.View btnBackupNow = findViewById(R.id.btnBackupNow);
 
         btnImport.setOnClickListener(v -> startImportBundle());
         btnQueue.setOnClickListener(v -> openQueue());
         btnExportDecisions.setOnClickListener(v -> startExportDecisions());
         btnExportDic.setOnClickListener(v -> startExportDic());
         btnSetBackupFolder.setOnClickListener(v -> pickBackupFolder());
+        if (btnBackupNow != null) btnBackupNow.setOnClickListener(v -> runManualBackupNow());
 
         refreshUi();
 
@@ -283,7 +293,87 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        backupStatus.setText("Auto-backup: ON");
+        String username = "reviewer";
+        if (BundleStore.hasBundle(this)) {
+            try {
+                BundleStore.BundleHeader header = BundleStore.readBundleHeader(this);
+                if (header != null && header.username != null && !header.username.trim().isEmpty()) {
+                    username = header.username.trim();
+                }
+            } catch (Exception ignored) {
+                // Keep default.
+            }
+        }
+
+        long lastMs = DriveBackupWriter.getLastBackupTimeMillis(this, username);
+        String lastText;
+        if (lastMs <= 0L) {
+            lastText = "Last backup: —";
+        } else {
+            DateFormat df = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.SHORT);
+            lastText = "Last backup: " + df.format(new Date(lastMs));
+        }
+
+        backupStatus.setText("Auto-backup: ON (decisions + .dic)\n" + lastText);
+    }
+
+    private void runManualBackupNow() {
+        if (!BackupFolderStore.isConfigured(this)) {
+            Toast.makeText(this, "Set a backup folder first", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!BundleStore.hasBundle(this)) {
+            Toast.makeText(this, "Import a bundle first", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (backupProgressBar != null) {
+            backupProgressBar.setIndeterminate(false);
+            backupProgressBar.setProgressCompat(0, false);
+            backupProgressBar.setVisibility(View.VISIBLE);
+        }
+        if (backupProgressText != null) {
+            backupProgressText.setText("Backup: 0%");
+            backupProgressText.setVisibility(View.VISIBLE);
+        }
+
+        new Thread(() -> {
+            try {
+                BundleStore.BundleHeader header = BundleStore.readBundleHeader(MainActivity.this);
+                String username = (header == null || header.username == null) ? "reviewer" : header.username.trim();
+                if (username.isEmpty()) username = "reviewer";
+
+                JSONObject payload = DecisionsStore.buildExportPayload(MainActivity.this, header == null ? null : header.toUserJson());
+                DriveBackupWriter.writeAllBackups(MainActivity.this, username, payload, (percent, label) -> {
+                    runOnUiThread(() -> {
+                        if (backupProgressBar != null) {
+                            backupProgressBar.setIndeterminate(false);
+                            backupProgressBar.setProgressCompat(percent, true);
+                        }
+                        if (backupProgressText != null) {
+                            if (label == null || label.trim().isEmpty()) {
+                                backupProgressText.setText("Backup: " + percent + "%");
+                            } else {
+                                backupProgressText.setText(label + ": " + percent + "%");
+                            }
+                        }
+                    });
+                });
+
+                runOnUiThread(() -> {
+                    Toast.makeText(MainActivity.this, "Backup complete", Toast.LENGTH_SHORT).show();
+                    if (backupProgressBar != null) backupProgressBar.setVisibility(View.GONE);
+                    if (backupProgressText != null) backupProgressText.setVisibility(View.GONE);
+                    refreshBackupUi();
+                });
+            } catch (Exception ex) {
+                runOnUiThread(() -> {
+                    if (backupProgressBar != null) backupProgressBar.setVisibility(View.GONE);
+                    if (backupProgressText != null) backupProgressText.setVisibility(View.GONE);
+                    Toast.makeText(MainActivity.this, "Backup failed: " + ex.getMessage(), Toast.LENGTH_LONG).show();
+                });
+            }
+        }, "manual-backup").start();
     }
 
     private void startImportBundle() {

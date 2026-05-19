@@ -2,6 +2,11 @@ package com.luganda.offlinereview;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Process;
+import android.content.SharedPreferences;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
@@ -12,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -19,8 +25,41 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ReviewActivity extends AppCompatActivity {
+
+    // Auto-backup policy: run a backup after completing N stems.
+    private static final int AUTO_BACKUP_EVERY_N_STEMS = 3;
+    private static final String PREFS_AUTO_BACKUP = "review_auto_backup";
+    private static final String KEY_STEMS_SINCE_BACKUP_PREFIX = "stemsSinceBackup_";
+
+    private static final Pattern[] HIGHLIGHT_PATTERNS = new Pattern[] {
+            Pattern.compile("\\breflexive\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bimmediate[\\s-]+past\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bpresent[\\s-]+simple\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bpresent[\\s-]+progressive\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bpast\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bfuture\\b", Pattern.CASE_INSENSITIVE)
+    };
+
+    private CharSequence highlightKeywordsGreen(String text) {
+        if (text == null || text.isEmpty()) return "";
+        int color = ContextCompat.getColor(this, R.color.success_green);
+        SpannableString s = new SpannableString(text);
+        for (Pattern p : HIGHLIGHT_PATTERNS) {
+            Matcher m = p.matcher(text);
+            while (m.find()) {
+                int start = m.start();
+                int end = m.end();
+                if (start >= 0 && end > start) {
+                    s.setSpan(new ForegroundColorSpan(color), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                }
+            }
+        }
+        return s;
+    }
 
     private BundleStore.BundleHeader bundleHeader;
     private Map<String, Map<String, String>> decisionMap;
@@ -244,13 +283,17 @@ public class ReviewActivity extends AppCompatActivity {
 
                 QueueSnapshotStore.refreshAsync(ReviewActivity.this);
 
-                if (BackupFolderStore.isConfigured(this)) {
-                    requestDriveBackupCoalesced(getUsernameFromBundle());
-                }
-
                 // If this was the last pending flag for the stem, return to the queue.
                 // (Avoid looping back to the first flag.)
                 if (finalStemComplete) {
+                    if (BackupFolderStore.isConfigured(this)) {
+                        String who = getUsernameFromBundle();
+                        int completed = incrementCompletedStemsSinceBackup(who);
+                        if (completed >= AUTO_BACKUP_EVERY_N_STEMS) {
+                            resetCompletedStemsSinceBackup(who);
+                            requestDriveBackupCoalesced(who);
+                        }
+                    }
                     Toast.makeText(this, "Stem complete", Toast.LENGTH_SHORT).show();
                     finishAndReturnQueueUpdate(finalCounts);
                     return;
@@ -305,6 +348,22 @@ public class ReviewActivity extends AppCompatActivity {
         return u.trim();
     }
 
+    private int incrementCompletedStemsSinceBackup(String username) {
+        String who = (username == null || username.trim().isEmpty()) ? "reviewer" : username.trim();
+        SharedPreferences prefs = getSharedPreferences(PREFS_AUTO_BACKUP, MODE_PRIVATE);
+        String key = KEY_STEMS_SINCE_BACKUP_PREFIX + who;
+        int cur = prefs.getInt(key, 0);
+        int next = cur + 1;
+        prefs.edit().putInt(key, next).apply();
+        return next;
+    }
+
+    private void resetCompletedStemsSinceBackup(String username) {
+        String who = (username == null || username.trim().isEmpty()) ? "reviewer" : username.trim();
+        SharedPreferences prefs = getSharedPreferences(PREFS_AUTO_BACKUP, MODE_PRIVATE);
+        prefs.edit().putInt(KEY_STEMS_SINCE_BACKUP_PREFIX + who, 0).apply();
+    }
+
     private void requestDriveBackupCoalesced(String username) {
         final String who = (username == null || username.trim().isEmpty()) ? "reviewer" : username.trim();
 
@@ -320,6 +379,10 @@ public class ReviewActivity extends AppCompatActivity {
         if (!startWorker) return;
 
         new Thread(() -> {
+            try {
+                Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+            } catch (Throwable ignored) {}
+
             boolean rerun;
             do {
                 try {
@@ -327,7 +390,7 @@ public class ReviewActivity extends AppCompatActivity {
                             ReviewActivity.this,
                             bundleHeader == null ? null : bundleHeader.toUserJson()
                     );
-                    DriveBackupWriter.writeDecisionsBackup(ReviewActivity.this, who, payload);
+                    DriveBackupWriter.writeAllBackups(ReviewActivity.this, who, payload);
                 } catch (Exception ex) {
                     runOnUiThread(() -> Toast.makeText(
                             ReviewActivity.this,
@@ -441,7 +504,7 @@ public class ReviewActivity extends AppCompatActivity {
         String effective = effectiveStatus(stemText, flag, baseStatus);
 
         flagTitle.setText(flag + "  (" + effective + ")");
-        descText.setText(desc);
+        descText.setText(highlightKeywordsGreen(desc));
 
         StringBuilder sb = new StringBuilder();
         if (examples != null) {

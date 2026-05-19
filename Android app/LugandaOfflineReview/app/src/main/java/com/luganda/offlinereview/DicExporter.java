@@ -20,7 +20,15 @@ import java.util.Set;
 public final class DicExporter {
     private DicExporter() {}
 
+    public interface ProgressCallback {
+        void onProgress(int done, int total);
+    }
+
     public static void exportWorkingDic(Context context, OutputStream out, JSONObject decisionsPayload) throws Exception {
+        exportWorkingDic(context, out, decisionsPayload, null);
+    }
+
+    public static void exportWorkingDic(Context context, OutputStream out, JSONObject decisionsPayload, ProgressCallback progress) throws Exception {
         Map<String, Set<String>> approvals = buildApprovalsMap(decisionsPayload);
 
         java.io.File base = BundleStore.getBaseDicFile(context);
@@ -33,20 +41,51 @@ public final class DicExporter {
 
             String line;
             int idx = 0;
+            int totalEntries = -1;
+            int entryIdx = 0;
+            int lastReportedPercent = -1;
             while ((line = r.readLine()) != null) {
                 idx++;
                 if (idx == 1) {
                     // Count line unchanged.
+                    String t = line == null ? "" : line.trim();
+                    try {
+                        totalEntries = Integer.parseInt(t);
+                    } catch (Exception ignored) {
+                        totalEntries = -1;
+                    }
+                    if (progress != null) {
+                        progress.onProgress(0, totalEntries);
+                    }
                     w.write(line);
                     w.write("\n");
                     continue;
                 }
 
+                entryIdx++;
                 String updated = applyApprovalsToDicLine(line, approvals);
                 w.write(updated);
                 w.write("\n");
+
+                if (progress != null && totalEntries > 0) {
+                    int pct = (int) Math.round((entryIdx * 100.0) / totalEntries);
+                    if (pct > 100) pct = 100;
+                    // Reduce UI churn: only report if percent changed.
+                    if (pct != lastReportedPercent) {
+                        lastReportedPercent = pct;
+                        progress.onProgress(entryIdx, totalEntries);
+                    }
+                }
             }
             w.flush();
+
+            if (progress != null) {
+                if (totalEntries > 0) {
+                    progress.onProgress(totalEntries, totalEntries);
+                } else {
+                    progress.onProgress(entryIdx, totalEntries);
+                }
+            }
         }
     }
 

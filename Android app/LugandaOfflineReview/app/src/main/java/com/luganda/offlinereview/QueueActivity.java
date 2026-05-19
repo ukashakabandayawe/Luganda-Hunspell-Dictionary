@@ -86,10 +86,69 @@ public class QueueActivity extends AppCompatActivity {
         );
         rv.setAdapter(adapter);
 
-        if (!restoreFromPersistentCacheIfFresh()) {
-            setLoading(true);
-            loadAndRenderAsync();
+        // Always show skeleton quickly; restore/parse cache off the UI thread.
+        setLoading(true);
+        restoreFromPersistentCacheIfFreshAsync();
+    }
+
+    private void restoreFromPersistentCacheIfFreshAsync() {
+        // Fast path: in-memory cache.
+        if (sCache != null && sCache.isFreshFor(this) && sCache.buckets != null) {
+            renderFromCacheAsync(sCache);
+            return;
         }
+
+        new Thread(() -> {
+            QueueSnapshotStore.Snapshot snapshot = QueueSnapshotStore.load(QueueActivity.this);
+            if (snapshot == null || !snapshot.isFreshFor(QueueActivity.this) || snapshot.buckets == null) {
+                runOnUiThread(() -> loadAndRenderAsync());
+                return;
+            }
+
+            CachedQueue cache = new CachedQueue();
+            cache.bundleMtime = snapshot.bundleMtime;
+            cache.decisionsMtime = snapshot.decisionsMtime;
+            cache.titleText = snapshot.titleText;
+            cache.username = snapshot.username;
+            cache.stems = snapshot.stems;
+            cache.tasks = snapshot.tasks;
+            cache.pending = snapshot.pending;
+            cache.decided = snapshot.decided;
+            cache.approved = snapshot.approved;
+            cache.rejected = snapshot.rejected;
+            cache.buckets = snapshot.buckets;
+            cache.expandedByGroupKey = snapshot.expandedByGroupKey;
+
+            sCache = cache;
+            renderFromCacheAsync(cache);
+        }, "queue-cache-restore").start();
+    }
+
+    private void renderFromCacheAsync(CachedQueue cache) {
+        if (cache == null || cache.buckets == null) {
+            runOnUiThread(() -> loadAndRenderAsync());
+            return;
+        }
+
+        new Thread(() -> {
+            // Restore expansion state before building items.
+            expandedByGroupKey.clear();
+            if (cache.expandedByGroupKey != null) {
+                expandedByGroupKey.putAll(cache.expandedByGroupKey);
+            }
+
+            List<GroupBucket> buckets = cache.buckets;
+            List<QueueItem> items = buildQueueItems(buckets);
+
+            runOnUiThread(() -> {
+                lastBuckets = buckets;
+                lastLoadedBundleMtime = cache.bundleMtime;
+                lastLoadedDecisionsMtime = cache.decisionsMtime;
+                setLoading(false);
+                if (title != null) title.setText(cache.titleText == null ? "My Queue" : cache.titleText);
+                if (adapter != null) adapter.setItems(items);
+            });
+        }, "queue-cache-render").start();
     }
 
     @Override
@@ -121,42 +180,7 @@ public class QueueActivity extends AppCompatActivity {
         applyStemCountsUpdate(stemIndex, pending, done);
     }
 
-    private boolean restoreFromPersistentCacheIfFresh() {
-        if (sCache == null || !sCache.isFreshFor(this) || sCache.buckets == null) {
-            QueueSnapshotStore.Snapshot snapshot = QueueSnapshotStore.load(this);
-            if (snapshot == null || !snapshot.isFreshFor(this) || snapshot.buckets == null) {
-                return false;
-            }
-
-            sCache = new CachedQueue();
-            sCache.bundleMtime = snapshot.bundleMtime;
-            sCache.decisionsMtime = snapshot.decisionsMtime;
-            sCache.titleText = snapshot.titleText;
-            sCache.username = snapshot.username;
-            sCache.stems = snapshot.stems;
-            sCache.tasks = snapshot.tasks;
-            sCache.pending = snapshot.pending;
-            sCache.decided = snapshot.decided;
-            sCache.approved = snapshot.approved;
-            sCache.rejected = snapshot.rejected;
-            sCache.buckets = snapshot.buckets;
-            sCache.expandedByGroupKey = snapshot.expandedByGroupKey;
-        }
-
-        expandedByGroupKey.clear();
-        if (sCache.expandedByGroupKey != null) {
-            expandedByGroupKey.putAll(sCache.expandedByGroupKey);
-        }
-
-        lastBuckets = sCache.buckets;
-        lastLoadedBundleMtime = sCache.bundleMtime;
-        lastLoadedDecisionsMtime = sCache.decisionsMtime;
-
-        setLoading(false);
-        if (title != null) title.setText(sCache.titleText == null ? "My Queue" : sCache.titleText);
-        if (adapter != null) adapter.setItems(buildQueueItems(lastBuckets));
-        return true;
-    }
+    // restoreFromPersistentCacheIfFresh removed; cache restore is now async to avoid ANRs.
 
     private boolean isCurrentDataFresh() {
         long bm = getBundleMtime();

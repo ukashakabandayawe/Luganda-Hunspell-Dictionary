@@ -438,6 +438,31 @@
                             android:textSize="12sp"
                             android:alpha="0.8" />
 
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBackupNow"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Backup now" />
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/homeBackupProgressBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/homeBackupProgressText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Backup: 0%"
+                            android:textSize="12sp"
+                            android:alpha="0.8"
+                            android:visibility="gone" />
+
                     </LinearLayout>
 
                 </com.google.android.material.card.MaterialCardView>
