@@ -36,6 +36,8 @@ public class ReviewActivity extends AppCompatActivity {
     private TextView examplesText;
     private TextView progressText;
     private EditText noteEdit;
+    private View loadingOverlay;
+    private ScrollView reviewScroll;
 
     private Button approveBtn;
     private Button rejectBtn;
@@ -75,6 +77,7 @@ public class ReviewActivity extends AppCompatActivity {
         examplesText = findViewById(R.id.reviewExamples);
         progressText = findViewById(R.id.reviewProgress);
         noteEdit = findViewById(R.id.reviewNote);
+        loadingOverlay = findViewById(R.id.reviewLoadingOverlay);
 
         approveBtn = findViewById(R.id.btnApprove);
         rejectBtn = findViewById(R.id.btnReject);
@@ -85,10 +88,12 @@ public class ReviewActivity extends AppCompatActivity {
         if (prevBtn != null) prevBtn.setVisibility(View.GONE);
         if (nextBtn != null) nextBtn.setVisibility(View.GONE);
 
-        ScrollView reviewScroll = findViewById(R.id.reviewScroll);
+        reviewScroll = findViewById(R.id.reviewScroll);
         if (reviewScroll != null) {
             reviewScroll.setOnTouchListener((v, event) -> handleSwipeTouch(event));
         }
+
+        setLoadingState(true);
 
         stemIndex = getIntent().getIntExtra(QueueActivity.EXTRA_STEM_INDEX, -1);
         if (stemIndex < 0) {
@@ -107,6 +112,7 @@ public class ReviewActivity extends AppCompatActivity {
 
                 if (stemObj == null) {
                     runOnUiThread(() -> {
+                        setLoadingState(false);
                         Toast.makeText(ReviewActivity.this, "Stem not found in bundle", Toast.LENGTH_LONG).show();
                         finish();
                     });
@@ -135,10 +141,12 @@ public class ReviewActivity extends AppCompatActivity {
                     prevBtn.setOnClickListener(v -> goPrevTask());
                     nextBtn.setOnClickListener(v -> goNextTask());
 
+                    setLoadingState(false);
                     showNextPendingOrFirst();
                 });
             } catch (Exception ex) {
                 runOnUiThread(() -> {
+                    setLoadingState(false);
                     Toast.makeText(ReviewActivity.this, "Failed to load bundle/decisions: " + ex, Toast.LENGTH_LONG).show();
                     finish();
                 });
@@ -553,6 +561,18 @@ public class ReviewActivity extends AppCompatActivity {
         if (byFlag == null) return "";
         String n = byFlag.get(flag);
         return n == null ? "" : n;
+    }
+
+    private void setLoadingState(boolean loading) {
+        if (loadingOverlay != null) {
+            loadingOverlay.setVisibility(loading ? View.VISIBLE : View.GONE);
+        }
+        if (reviewScroll != null) {
+            reviewScroll.setVisibility(loading ? View.INVISIBLE : View.VISIBLE);
+        }
+        if (progressText != null && loading) {
+            progressText.setText("Loading stem...");
+        }
     }
 
 }
