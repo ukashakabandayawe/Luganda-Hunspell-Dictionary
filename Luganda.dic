@@ -1,5 +1,5 @@
 15436
-
+#
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
 # This program is free software: you can redistribute it and/or modify
@@ -14,9 +14,9 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-
-
+#
+#
+#
 ab'/C1OC
 b'/C1OC
 abo/ea
@@ -144,18 +144,27 @@ amazima
 amazina
 amazuukira
 amazzi
-amyuka
+# ----------------------------- okumyuka(to become red) ---------------------------------------- #
+myuka
+myuke
+myuse
+myusa
+myusizza
+# ----------------------------------------------------------------------------------------------- #
 ani
 anna
 anti
 asatu
 ataano
 ate
-ateera
+# ---------------------- okutera (to tend) ------------------------------------------------------- #
+tera
+tere
+# ------------------------------------------------------------------------------------------------ #
 awaka
 awo
 b
-# --- okuba --- #
+# --------------------------------- okuba(to be) ------------------------------------------------- #
 li/NApsnpRFrfggPSDPSCscWNwnStstLT
 liko/NAnpRPPSDPWNwnStstSTsTNNGGBGBFBDBEBXEDEBEFEMFDFGwgWGWFSC
 liiko/NApsrpSSIIBRSCscFGFHwfwgwhFE
@@ -209,7 +218,8 @@ beerawooko
 beeramuuko
 beerayooko
 beerayo
-# -------------- #
+# --------------------------------------------------------------------------------------- #
+#
 baaba
 baasi
 bagiya
@@ -223,7 +233,8 @@ balansi
 bali
 balula
 bambi
-# --------- okubanja(to owe/demand) --------- #
+#
+# ------------------------------------- okubanja(to owe/demand) -------------------------- #
 banja
 banje
 banjizza
@@ -236,7 +247,7 @@ banjibbwa
 banjiza
 banjize
 banjilizza
-
+#
 banjaako
 banjaamu
 banjaamuuko
@@ -246,7 +257,7 @@ banjaawo
 banjaawooko
 banjanga
 banjangako
-
+#
 banjeeko
 banjeemu
 banjeemuuko
@@ -256,7 +267,7 @@ banjeewo
 banjeewooko
 banjenga
 banjengako
-
+#
 banjisaako
 banjisaamu
 banjisaamuuko
@@ -266,7 +277,7 @@ banjisaawo
 banjisaawooko
 banjisanga
 banjisangako
-
+#
 banjiseeko
 banjiseemu
 banjiseemuuko
@@ -276,7 +287,7 @@ banjiseewo
 banjiseewooko
 banjisenga
 banjisengako
-
+#
 banjibwaako
 banjibwaamu
 banjibwaamuuko
@@ -286,7 +297,7 @@ banjibwaawo
 banjibwaawooko
 banjibwanga
 banjibwangako
-
+#
 banjibweeko
 banjibweemu
 banjibweemuuko
@@ -296,7 +307,7 @@ banjibweewo
 banjibweewooko
 banjibwenga
 banjibwengako
-
+#
 banjizaako
 banjizaamu
 banjizaamuuko
@@ -306,7 +317,7 @@ banjizaawo
 banjizaawooko
 banjizaanga
 banjizangako
-
+#
 banjizeeko
 banjizeemu
 banjizeemuuko
@@ -316,7 +327,7 @@ banjizeewo
 banjizeewooko
 banjizenga
 banjizengako
-
+#
 banjilizzaako
 banjilizzaamu
 banjilizzaamuuko
@@ -324,8 +335,7 @@ banjilizzaayo
 banjilizzaayooko
 banjilizzaawo
 banjilizzaawooko
-# ------------------------- #
-
+# -------------------------------------------------------------------------------- #
 bannange
 batiza
 baza(amu)
@@ -340,7 +350,7 @@ bbugubugu
 bbululu
 beera
 bega
-# ------------ okubejjagala(to burp) ------------ #
+# ---------------------------------- okubejjagala(to burp) --------------------------------- #
 bejjagala
 bejjagale
 bejjagadde
@@ -353,7 +363,7 @@ bejjagaddwa
 bejjagalira
 bejjagalire
 bejjagalidde
-
+#
 bejjagalako
 bejjagalamu
 bejjagalamuuko
@@ -363,7 +373,7 @@ bejjagalawo
 bejjagalaawooko
 bejjagalanga
 bejjagalangako
-
+#
 bejjagaleko
 bejjagalemu
 bejjagalemuuko
@@ -373,7 +383,7 @@ bejjagalewo
 bejjagalewooko
 bejjagalenga
 bejjagalengako
-
+#
 bejjagaddeko
 bejjagaddemu
 bejjagaddemuuko
@@ -381,7 +391,7 @@ bejjagaddeyo
 bejjagaddeeyooko
 bejjagaddewo
 bejjagaddewooko
-
+#
 bejjagazaako
 bejjagazaamu
 bejjagazaamuuko
@@ -400,7 +410,7 @@ bejjagazeewo
 bejjagazeewooko
 bejjagazenga
 bejjagazengako
-
+#
 bejjaggazzaako
 bejjaggazzaamu
 bejjaggazzaamuuko
@@ -408,7 +418,7 @@ bejjaggazzaayo
 bejjaggazzaayooko
 bejjaggazzaawo
 bejjaggazzaawooko
-
+#
 bejjagalwaako
 bejjagalwaamu
 bejjagalwaamuuko
@@ -427,7 +437,7 @@ bejjagalweewo
 bejjagalweewooko
 bejjagalwenga
 bejjagalwengako
-
+#
 bejjagaddwaako
 bejjagaddwaamu
 bejjagaddwaamuuko
@@ -435,8 +445,7 @@ bejjagaddwaayo
 bejjagaddwaayooko
 bejjagaddwaawo
 bejjagaddwaawooko
-
-
+#
 bejjagaliraako
 bejjagaliraamu
 bejjagaliraamuuko
@@ -454,7 +463,7 @@ bejjagalireeyooko
 bejjagalireewo
 bejjagalireewooko
 bejjagalirengako
-
+#
 bejjagaliddwaako
 bejjagaliddwaamu
 bejjagaliddwaamuuko
@@ -462,7 +471,7 @@ bejjagaliddwaayo
 bejjagaliddwaayooko
 bejjagaliddwaawo
 bejjagaliddwaawooko
-
+#
 bejjagaliddeko
 bejjagaliddemu
 bejjagaliddemuuko
@@ -470,8 +479,7 @@ bejjagaliddeyo
 bejjagaliddeeyooko
 bejjagaliddewo
 bejjagaliddewooko
-#----------------------------------------------------------------------------- #
-
+# ----------------------------------------------------------------------------- #
 bendera
 bi
 bibiri
@@ -490,7 +498,7 @@ biitibbwa
 biitira
 biitire
 biitidde
-
+#
 biitako
 biitamu
 biitamuuko
@@ -500,7 +508,7 @@ biitawo
 biitawooko
 biitanga
 biitangako
-
+#
 biiteko
 biitemu
 biitemuuko
@@ -510,7 +518,7 @@ biitewo
 biitewooko
 biitenga
 biitengako
-
+#
 biiseeko
 biiseemu
 biiseemuuko
@@ -518,7 +526,7 @@ biiseeyo
 biiseeyooko
 biiseewo
 biiseewooko
-
+#
 biitisaako
 biitisaamu
 biitisaamuuko
@@ -528,7 +536,7 @@ biitisaawo
 biitisaawooko
 biitisanga
 biitisangako
-
+#
 biitiseeko
 biitiseemu
 biitiseemuuko
@@ -538,7 +546,7 @@ biitiseewo
 biitiseewooko
 biitisenga
 biitisengako
-
+#
 biitisizzaako
 biitisizzaamu
 biitisizzaamuuko
@@ -546,7 +554,7 @@ biitisizzaayo
 biitisizzaayooko
 biitisizzaawo
 biitisizzaawooko
-
+#
 bitibwako
 bitibwaamu
 bitibwaamuuko
@@ -556,7 +564,7 @@ bitibwaawo
 bitibwaawooko
 bitibwanga
 bitibwangako
-
+#
 bitibweeko
 bitibweemu
 bitibweemuuko
@@ -566,7 +574,7 @@ bitibweewo
 bitibweewooko
 bitibwenga
 bitibwengako
-
+#
 biitibbwaako
 biitibbwaamu
 biitibbwaamuuko
@@ -575,7 +583,7 @@ biitibbwaayooko
 biitibbwaawo
 biitibbwaawooko
 biitibbwanga
-
+#
 biitiraako
 biitiraamu
 biitiraamuuko
@@ -585,7 +593,7 @@ biitiraawo
 biitiraawooko
 biitiranga
 biitirangako
-
+#
 biitireko
 biitiremu
 biitiremuuko
@@ -595,7 +603,7 @@ biitireewo
 biitireewooko
 biitirenga
 biitirengako
-
+#
 biitiddeko
 biitiddemu
 biitiddemuuko
@@ -603,8 +611,7 @@ biitiddeyo
 biitiddeeyooko
 biitiddewo
 biitiddewooko
-# ------------------------- #
-
+# --------------------------------------------------------------------------------- #
 biki
 # --- okubikka(to cover) --- #
 bikka
@@ -619,7 +626,7 @@ bikkiddwa
 bikkira 
 bikkire
 bikkidde
-
+#
 bikkako
 bikkamu
 bikkamuuko
@@ -628,7 +635,7 @@ bikkayooko
 bikkwaawo
 bikkwaawooko
 bikkangako
-
+#
 bikkeko
 bikkemu
 bikkemuuko
@@ -637,7 +644,7 @@ bikkeeyooko
 bikkewo
 bikkewooko
 bikkengako
-
+#
 bisseeko
 bisseemu
 bisseemuuko
@@ -646,7 +653,7 @@ bisseeyooko
 bisseewo
 bisseewooko
 bissengako
-
+#
 bikkisaako
 bikkisaamu
 bikkisaamuuko
@@ -655,7 +662,7 @@ bikkisaayooko
 bikkisaawo
 bikkisaawooko
 bikkisangako
-
+#
 bikkiseeko
 bikkiseemu
 bikkiseemuuko
@@ -664,7 +671,7 @@ bikkiseeyooko
 bikkiseewo
 bikkiseewooko
 bikkisengako
-
+#
 bikkisizzaako
 bikkisizzaamu
 bikkisizzaamuuko
@@ -673,7 +680,7 @@ bikkisizzaayooko
 bikkisizzaawo
 bikkisizzaawooko
 bikkisizangako
-
+#
 bikkibwaako
 bikkibwaamu
 bikkibwaamuuko
@@ -682,7 +689,7 @@ bikkibwaayooko
 bikkibwaawo
 bikkibwaawooko
 bikkibwangako
-
+#
 bikkibweeko
 bikkibweemu
 bikkibweemuuko
@@ -691,7 +698,7 @@ bikkibweeyooko
 bikkibweewo
 bikkibweewooko
 bikkibweengako
-
+#
 bikkiddwaako
 bikkiddwaamu
 bikkiddwaamuuko
@@ -700,7 +707,7 @@ bikkiddwaayooko
 bikkiddwaawo
 bikkiddwaawooko
 bikkiddwangako
-
+#
 bikkirako
 bikkiramu
 bikkiramuuko
@@ -709,7 +716,7 @@ bikkiraayooko
 bikkiraawo
 bikkiraawooko
 bikkirangako
-
+#
 bikkireko
 bikkiremu
 bikkiremuuko
@@ -718,7 +725,7 @@ bikkireeyooko
 bikkirewo
 bikkirewooko
 bikkireengako
-
+#
 bikkiddeko
 bikkiddemu
 bikkiddemuuko
@@ -727,10 +734,8 @@ bikkiddeyooko
 bikkiddewo
 bikkiddewooko
 bikkiddengako
-# ------------------------- #
-
+# ------------------------------------------------------------------------------------------- #
 biki
-
 bina
 bisatu
 bisi
@@ -752,7 +757,7 @@ bonyaabonyezebwe
 bonyaabonyezzeddwa
 bonaabonera
 boneebonere
-
+#
 bonaabonako
 bonaabonamu
 bonaabonamuuko
@@ -761,7 +766,7 @@ bonaabonayooko
 bonaabonawo
 bonaabonawooko
 bonaabonangako
-
+#
 boneeboneko
 boneebonemu
 boneebonemuuko
@@ -770,7 +775,7 @@ boneeboneyooko
 boneebonewo
 boneebonewooko
 boneebonengako
-
+#
 bonyebonyeeko
 bonyebonyeemu
 bonyebonyeemuuko
@@ -779,7 +784,7 @@ bonyebonyeeyooko
 bonyebonyeewo
 bonyebonyeewooko
 bonyebonyeengako
-
+#
 bonyaabonyaako
 bonyaabonyaamu
 bonyaabonyaamuuko
@@ -788,7 +793,7 @@ bonyaabonyaayooko
 bonyaabonyaawo
 bonyaabonyaawooko
 bonyaabonyangako
-
+#
 bonyaabonyeeko
 bonyaabonyeemu
 bonyaabonyeemuuko
@@ -797,7 +802,7 @@ bonyaabonyeeyooko
 bonyaabonyeewo
 bonyaabonyeewooko
 bonyaabonyeengako
-
+#
 bonyaabonyezzaako
 bonyaabonyezzaamu
 bonyaabonyezzaamuuko
@@ -806,7 +811,7 @@ bonyaabonyezzaayooko
 bonyaabonyezzaawo
 bonyaabonyezzaawooko
 bonyaabonyezzangako
-
+#
 bonyaabonyezebwaako
 bonyaabonyezebwaamu
 bonyaabonyezebwaamuuko
@@ -815,7 +820,7 @@ bonyaabonyezebwaayooko
 bonyaabonyezebwaawo
 bonyaabonyezebwaawooko
 bonyaabonyezebwangako
-
+#
 bonyaabonyezebweeko
 bonyaabonyezebweemu
 bonyaabonyezebweemuuko
@@ -824,7 +829,7 @@ bonyaabonyezebweeyooko
 bonyaabonyezebweewo
 bonyaabonyezebweewooko
 bonyaabonyezebweengako
-
+#
 bonyaabonyezzeddwaako
 bonyaabonyezzeddwaamu
 bonyaabonyezzeddwaamuuko
@@ -832,7 +837,7 @@ bonyaabonyezzeddwaayo
 bonyaabonyezzeddwaayooko
 bonyaabonyezzeddwaawo
 bonyaabonyezzeddwaawooko
-
+#
 bonaabonerako
 bonaaboneramu
 bonaaboneramuuko
@@ -841,7 +846,7 @@ bonaabonerayooko
 bonaabonerawo
 bonaabonerawooko
 bonaabonerangako
-
+#
 boneebonereko
 boneeboneremu
 boneeboneremuuko
@@ -851,7 +856,6 @@ boneebonerewo
 boneebonerewooko
 boneebonereengako
 # ------------------------- #
-
 boneka
 bonereza
 bonyaabonya
@@ -894,7 +898,7 @@ byonna
 caayi
 cakala
 camufu
- --- okucamuka(to get excited) --- #
+# ------------------------ okucamuka(to get excited) --------------------------------- #
 camuka
 camuke
 camuse
@@ -909,7 +913,7 @@ camukidde
 camula
 camule
 camudde
-
+#
 camukako
 camukamu
 camukamuuko
@@ -918,7 +922,7 @@ camukayooko
 camukawo
 camukawooko
 camukangako
-
+#
 camukeko
 camukemu
 camukemuuko
@@ -927,7 +931,7 @@ camukeyooko
 camukewo
 camukewooko
 camukengako
-
+#
 camuseeko
 camuseemu
 camuseemuuko
@@ -936,7 +940,7 @@ camuseeyooko
 camuseewo
 camuseewooko
 camuseengako
-
+#
 camusaako
 camusaamu
 camusaamuuko
@@ -945,7 +949,7 @@ camusaayooko
 camusaawo
 camusaawooko
 camusangako
-
+#
 camukireko
 camukiremu
 camukiremuuko
@@ -954,7 +958,7 @@ camukireeyooko
 camukirewo
 camukirewooko
 camukireengako
-
+#
 camukiddeko
 camukiddemu
 camukiddemuuko
@@ -963,7 +967,7 @@ camukiddeyooko
 camukiddewo
 camukiddewooko
 camukiddengako
-
+#
 camulako
 camulamu
 camulamuuko
@@ -972,7 +976,7 @@ camulayooko
 camulawo
 camulawooko
 camulaangako
-
+#
 camuleko
 camulemumu
 camulemumuuko
@@ -981,7 +985,7 @@ camuleyooko
 camulewo
 camulewooko
 camuleengako
-
+#
 camuddeko
 camuddemu
 camuddemuuko
@@ -990,8 +994,7 @@ camuddeyooko
 camuddewo
 camuddewooko
 camuddeengako
-
-# ------ okucanga(to shuffle) ------ #
+# ------------------------- okucanga(to shuffle) ------------------------------------ #
 canga
 cange
 canze
@@ -1004,7 +1007,7 @@ cangiddwa
 cangira
 cangire
 cangidde
-
+#
 cangako
 cangamu
 cangamuuko
@@ -1013,7 +1016,7 @@ cangayooko
 cangawo
 cangawooko
 cangangako
-
+#
 cangeko
 cangemu
 cangemuuko
@@ -1022,7 +1025,7 @@ cangeyooko
 cangewo
 cangewooko
 cangeengako
-
+#
 canzeeko
 canzeemu
 canzeemuuko
@@ -1031,7 +1034,7 @@ canzeeyooko
 canzeewo
 canzeewooko
 canzeengako
-
+#
 cangisaako
 cangisaamu
 cangisaamuuko
@@ -1040,7 +1043,7 @@ cangisaayooko
 cangisaawo
 cangisaawooko
 cangisangako
-
+#
 cangiseeko
 cangiseemu
 cangiseemuuko
@@ -1049,7 +1052,7 @@ cangiseeyooko
 cangiseewo
 cangiseewooko
 cangiseengako
-
+#
 cangisizzaako
 cangisizzaamu
 cangisizzaamuuko
@@ -1058,7 +1061,7 @@ cangisizzaayooko
 cangisizzaawo
 cangisizzaawooko
 cangisizangako
-
+#
 cangibwaako
 cangibwaamu
 cangibwaamuuko
@@ -1067,7 +1070,7 @@ cangibwaayooko
 cangibwaawo
 cangibwaawooko
 cangibwangako
-
+#
 cangibweeko
 cangibweemu
 cangibweemuuko
@@ -1076,7 +1079,7 @@ cangibweeyooko
 cangibweewo
 cangibweewooko
 cangibweengako
-
+#
 cangiddwaako
 cangiddwaamu
 cangiddwaamuuko
@@ -1085,7 +1088,7 @@ cangiddwaayooko
 cangiddwaawo
 cangiddwaawooko
 cangiddwangako
-
+#
 cangirako
 cangiramu
 cangiramuuko
@@ -1094,7 +1097,7 @@ cangirayooko
 cangirawo
 cangirawooko
 cangirangako
-
+#
 cangireko
 cangiremu
 cangiremuuko
@@ -1103,7 +1106,7 @@ cangireyooko
 cangirewo
 cangirewooko
 cangireengako
-
+#
 cangiddeko
 cangiddemu
 cangiddemuuko
@@ -1113,9 +1116,7 @@ cangiddewo
 cangiddewooko
 cangiddengako
 # ------------------------- #
-
 cokoleeti
-
 # ------- okucupula(to duplicate) -------- #
 cupula
 cupule
@@ -1129,7 +1130,7 @@ cupuddwa
 cupulira
 cupulire
 cupulidde
-
+#
 cupulako
 cupulamu
 cupulamuuko
@@ -1138,7 +1139,7 @@ cupulayooko
 cupulawo
 cupulaawooko
 cupulaangako
-
+#
 cupuleko
 cupulemu
 cupulemuuko
@@ -1147,7 +1148,7 @@ cupuleyooko
 cupulewo
 cupulewooko
 cupuleengako
-
+#
 cupuddeko
 cupuddemu
 cupuddemuuko
@@ -1156,7 +1157,7 @@ cupuddeyooko
 cupuddewo
 cupuddewooko
 cupuddeengako
-
+#
 cupuzaako
 cupuzaamu
 cupuzaamuuko
@@ -1165,7 +1166,7 @@ cupuzaayooko
 cupuzaawo
 cupuzaawooko
 cupuzaangako
-
+#
 cupuzeeko
 cupuzeemu
 cupuzeemuuko
@@ -1174,7 +1175,7 @@ cupuzeeyooko
 cupuzeewo
 cupuzeewooko
 cupuzeengako
-
+#
 cupuzzaako
 cupuzzaamu
 cupuzzaamuuko
@@ -1183,7 +1184,7 @@ cupuzzaayooko
 cupuzzaawo
 cupuzzaawooko
 cupuzzaangako
-
+#
 cupulwaako
 cupulwaamu
 cupulwaamuuko
@@ -1192,7 +1193,7 @@ cupulwaayooko
 cupulwaawo
 cupulwaawooko
 cupulwaangako
-
+#
 cupulweeko
 cupulweemu
 cupulweemuuko
@@ -1201,7 +1202,7 @@ cupulweeyooko
 cupulweewo
 cupulweewooko
 cupulweengako
-
+#
 cupuddwaako
 cupuddwaamu
 cupuddwaamuuko
@@ -1210,7 +1211,7 @@ cupuddwaayooko
 cupuddwaawo
 cupuddwaawooko
 cupuddwangako
-
+#
 cupulirako
 cupuliramu
 cupuliramuuko
@@ -1219,7 +1220,7 @@ cupulirayooko
 cupulirawo
 cupulirawooko
 cupulirangako
-
+#
 cupulireko
 cupuliremu
 cupuliremuuko
@@ -1228,7 +1229,7 @@ cupulireyooko
 cupulirewo
 cupulirewooko
 cupulireengako
-
+#
 cupuliddeko
 cupuliddemu
 cupuliddemuuko
@@ -1238,10 +1239,7 @@ cupuliddewo
 cupuliddewooko
 cupuliddengako
 # ------------------------- #
-
-
 ekicupuli
-
 # --------- okudaaga(to suffer) --------- #
 daaga
 daage
@@ -1254,7 +1252,7 @@ daaziddwa
 daagira
 daagire
 daagidde
-
+#
 daagako
 daagamu
 daagamuuko
@@ -1263,7 +1261,7 @@ daagayooko
 daagaawo
 daagawooko
 daagangako
-
+#
 daageko
 daagemu
 daagemuuko
@@ -1272,7 +1270,7 @@ daageyooko
 daagewo
 daagewooko
 daageengako
-
+#
 daazeeko
 daazeemu
 daazeemuuko
@@ -1281,7 +1279,7 @@ daazeeyooko
 daazeewo
 daazeewooko
 daazeengako
-
+#
 daazaako
 daazaamu
 daazaamuuko
@@ -1290,7 +1288,7 @@ daazaayooko
 daazaawo
 daazaawooko
 daazaangako
-
+#
 daazizzaako
 daazizzaamu
 daazizzaamuuko
@@ -1299,7 +1297,7 @@ daazizzaayooko
 daazizzaawo
 daazizzaawooko
 daazizangako
-
+#
 daazibwaako
 daazibwaamu
 daazibwaamuuko
@@ -1308,7 +1306,7 @@ daazibwaayooko
 daazibwaawo
 daazibwaawooko
 daazibwangako
-
+#
 daazibweeko
 daazibweemu
 daazibweemuuko
@@ -1317,7 +1315,7 @@ daazibweeyooko
 daazibweewo
 daazibweewooko
 daazibweengako
-
+#
 daaziddwaako
 daaziddwaamu
 daaziddwaamuuko
@@ -1326,7 +1324,7 @@ daaziddwaayooko
 daaziddwaawo
 daaziddwaawooko
 daaziddwangako
-
+#
 daagirako
 daagiramu
 daagiramuuko
@@ -1335,7 +1333,7 @@ daagiraayooko
 daagiraawo
 daagiraawooko
 daagirangako
-
+#
 daagireko
 daagiremu
 daagiremuuko
@@ -1344,7 +1342,7 @@ daagireeyooko
 daagirewo
 daagirewooko
 daagireengako
-
+#
 daagiddeko
 daagiddemu
 daagiddemuuko
@@ -1354,9 +1352,7 @@ daagiddewo
 daagiddewooko
 daagiddengako
 # ------------------------- #
-
 dda
-
 # --------- okudaabiriza(to renovate) --------- #
 ddaabiriza
 daabirize
@@ -1369,7 +1365,7 @@ daabirizisizza
 daabiriziddwa
 daabirizira
 daabirizire
-
+#
 ddaabirizaako
 daabirizaamu
 daabirizaamuuko
@@ -1378,7 +1374,7 @@ daabirizaayooko
 daabirizaawo
 daabirizaawooko
 daabirizaangako
-
+#
 daabirizeeko
 daabirizeemu
 daabirizeemuuko
@@ -1387,7 +1383,7 @@ daabirizeeyooko
 daabirizeewo
 daabirizeewooko
 daabirizeengako
-
+#
 daabirizzaako
 daabirizzaamu
 daabirizzaamuuko
@@ -1396,7 +1392,7 @@ daabirizzaayooko
 daabirizzaawo
 daabirizzaawooko
 daabirizzaangako
-
+#
 daabirizibwaako
 daabirizibwaamu
 daabirizibwaamuuko
@@ -1405,7 +1401,7 @@ daabirizibwaayooko
 daabirizibwaawo
 daabirizibwaawooko
 daabirizibwangako
-
+#
 daabirizibweeko
 daabirizibweemu
 daabirizibweemuuko
@@ -1414,7 +1410,7 @@ daabirizibweeyooko
 daabirizibweewo
 daabirizibweewooko
 daabirizibweengako
-
+#
 daabirizisaako
 daabirizisaamu
 daabirizisaamuuko
@@ -1422,7 +1418,7 @@ daabirizisaayo
 daabirizisaayooko
 daabirizisaawo
 daabirizisaawooko
-
+#
 daabiriziseeko
 daabiriziseemu
 daabiriziseemuuko
@@ -1431,7 +1427,7 @@ daabiriziseeyooko
 daabiriziseewo
 daabiriziseewooko
 daabiriziseengako
-
+#
 daabirizisizzaako
 daabirizisizzaamu
 daabirizisizzaamuuko
@@ -1440,7 +1436,7 @@ daabirizisizzaayooko
 daabirizisizzaawo
 daabirizisizzaawooko
 daabirizisizzangako
-
+#
 daabiriziddwaako
 daabiriziddwaamu
 daabiriziddwaamuuko
@@ -1449,7 +1445,7 @@ daabiriziddwaayooko
 daabiriziddwaawo
 daabiriziddwaawooko
 daabiriziddwangako
-
+#
 daabirizirako
 daabiriziramu
 daabiriziramuuko
@@ -1458,7 +1454,7 @@ daabirizirayooko
 daabirizirawo
 daabirizirawooko
 daabirizirangako
-
+#
 daabirizireko
 daabiriziremu
 daabiriziremuuko
@@ -1467,9 +1463,8 @@ daabirizireyooko
 daabirizirewo
 daabirizirewooko
 daabirizireengako
-
+# ---------------------------------------------------------------------------- #
 ddala
-
 # ------- okudda(to return) --------- #
 dda
 dde
@@ -1483,7 +1478,7 @@ ddiddwa
 ddira
 ddire
 ddidde
-
+#
 ddako
 ddamu
 ddamuuko
@@ -1498,8 +1493,7 @@ ddangayo
 ddangayooko
 ddangaawo
 ddangawooko
-
-
+#
 ddeko
 ddemu
 ddemuuko
@@ -1514,8 +1508,7 @@ ddengayo
 ddengayooko
 ddengaawo
 ddengawooko
-
-
+#
 zzeeko
 zzeemu
 zzeemuuko
@@ -1530,7 +1523,7 @@ zzeengayo
 zzeengayooko
 zzeengaawo
 zzeengawooko
-
+#
 zzaako
 zzaamu
 zzaamuuko
@@ -1545,7 +1538,7 @@ zzangayo
 zzangayooko
 zzangaawo
 zzangawooko
-
+#
 ddissaako
 ddissaamu
 ddissaamuuko
@@ -1560,7 +1553,7 @@ ddisangayo
 ddisangayooko
 ddisangaawo
 ddisangawooko
-
+#
 ddisizzaako
 ddisizzaamu
 ddisizzaamuuko
@@ -1575,7 +1568,7 @@ ddisizzangayo
 ddisizzangayooko
 ddisizzangaawo
 ddisizzangawooko
-
+#
 ddibwaako
 ddibwaamu
 ddibwaamuuko
@@ -1590,7 +1583,7 @@ ddibwangayo
 ddibwangayooko
 ddibwangawo
 ddibwangawooko
-
+#
 ddibweeko
 ddibweemu
 ddibweemuuko
@@ -1605,7 +1598,7 @@ ddibweengayo
 ddibweengayooko
 ddibweengawo
 ddibweengawooko
-
+#
 ddiddwaako
 ddiddwaamu
 ddiddwaamuuko
@@ -1620,7 +1613,7 @@ ddiddwangayo
 ddiddwangayooko
 ddiddwangawo
 ddiddwangawooko
-
+#
 ddirako
 ddiramu
 ddiramuuko
@@ -1635,7 +1628,7 @@ ddirangayo
 ddirangayooko
 ddirangawo
 ddirangawooko
-
+#
 ddireko
 ddiremu
 ddiremuuko
@@ -1650,7 +1643,7 @@ ddirengayo
 ddirengayooko
 ddirengawo
 ddirengawooko
-
+#
 ddiddeko
 ddiddemu
 ddiddemuuko
@@ -1665,9 +1658,7 @@ ddiddengayo
 ddiddengayooko
 ddiddengawo
 ddiddengawooko
-
 # ------------------------- #
-
 ddensite
 ddi
 ddirira
@@ -1684,7 +1675,7 @@ ddugazza
 ddugalira
 ddugalire
 ddugalidde
-
+#
 ddugalako
 ddugalamu
 ddugalamuuko
@@ -1694,7 +1685,7 @@ ddugalaawo
 ddugalawooko
 ddugalanga
 ddugalangako
-
+#
 ddugaleko
 ddugalemu
 ddugalemuuko
@@ -1704,7 +1695,7 @@ ddugalewo
 ddugalewooko
 ddugalenga
 ddugaleengako
-
+#
 ddugaddeko
 ddugaddemu
 ddugaddemuuko
@@ -1714,7 +1705,7 @@ ddugaddewo
 ddugaddewooko
 ddugaddeenga
 ddugaddeengako
-
+#
 ddugazibwaako
 ddugazibwaamu
 ddugazibwaamuuko
@@ -1724,7 +1715,7 @@ ddugazibwaawo
 ddugazibwaawooko 
 ddugazibwanga  
 ddugazibwangako
-
+#
 ddugazibweeko
 ddugazibweemu
 ddugazibweemuuko
@@ -1734,7 +1725,7 @@ ddugazibweewo
 ddugazibweewooko
 ddugazibweenga
 ddugazibweengako
-
+#
 ddugaziddwaako
 ddugaziddwaamu
 ddugaziddwaamuuko
@@ -1744,7 +1735,7 @@ ddugaziddwaawo
 ddugaziddwaawooko
 ddugaziddwanga
 ddugaziddwangako
-
+#
 ddugazaako
 ddugazaamu
 ddugazaamuuko
@@ -1754,7 +1745,7 @@ ddugazaawo
 ddugazaawooko
 ddugazaanga
 ddugazangako
-
+#
 ddugazeeko
 ddugazeemu
 ddugazeemuuko
@@ -1764,7 +1755,7 @@ ddugazeewo
 ddugazeewooko
 ddugazeenga
 ddugazeengako
-
+#
 ddugazzaako
 ddugazzaamu
 ddugazzaamuuko
@@ -1774,7 +1765,7 @@ ddugazzaawo
 ddugazzaawooko
 ddugazzaanga
 ddugazzangako
-
+#
 ddugalirako
 ddugaliramu
 ddugaliramuuko
@@ -1784,7 +1775,7 @@ ddugalirawo
 ddugalirawooko
 ddugaliranga
 ddugalirangako
-
+#
 ddugalireko 
 ddugaliremu
 ddugaliremuuko
@@ -1794,7 +1785,7 @@ ddugalirewo
 ddugalirewooko
 ddugalireenga
 ddugalireengako
-
+#
 ddugaliddeko
 ddugaliddemu
 ddugaliddemuuko
@@ -1805,15 +1796,12 @@ ddugaliddewooko
 ddugaliiddenga
 ddugaliddengako
 # ------------------------- #
-
-
 ddugavu
 dduka
 ddukanya
 ddumbi
 dduukirira
 ddyo
-
 # ---------- okudiba(to flop) --------- #
 diba
 dibe
@@ -11318,7 +11306,7 @@ pangizise
 pangisiriza
 pangisirize
 pangisirizza
-
+#
 pangisaako
 pangisaamu
 pangisaamuuko
@@ -11643,8 +11631,6 @@ pimiddeeyooko
 pimiddeewo
 pimiddeewooko
 # ------------------------------------------------------------------ #
-
-PK
 pokopoko
 pokya
 poliisi
@@ -11843,7 +11829,6 @@ sabiddeeyooko
 sabiddeewo
 sabiddeewooko
 # ---------------------------------------------------------------#
-
 sabika
 sabiriza
 sajja
@@ -12025,7 +12010,6 @@ sambiddeeyooko
 sambiddeewo
 sambiddeewooko
 # -------------------------------------------------------------------------- #
-
 samira
 sammuka
 sammula
@@ -12392,7 +12376,6 @@ sekereddeeyooko
 sekereddeewo
 sekereddeewooko
 # --------------------------------------------------------------------------------- #
-
 sekeeterera
 sekerera
 sekula
