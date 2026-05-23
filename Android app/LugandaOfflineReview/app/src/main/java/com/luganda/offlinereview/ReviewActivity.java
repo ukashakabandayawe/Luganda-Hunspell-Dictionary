@@ -258,7 +258,7 @@ public class ReviewActivity extends AppCompatActivity {
             if (task == null) {
                 continue;
             }
-            String flag = task.optString("flag", "").trim().toUpperCase();
+            String flag = task.optString("flag", "").trim();
             if (!flag.isEmpty() && allowedFlags.contains(flag)) {
                 filtered.put(task);
             }
@@ -621,7 +621,7 @@ public class ReviewActivity extends AppCompatActivity {
         String baseStatus = t.optString("status", "pending");
         String effective = effectiveStatus(stemText, flag, baseStatus);
 
-        flagTitle.setText(flag + "  (" + effective + ")");
+        flagTitle.setText(buildFlagTitle(flag, effective));
         descText.setText(highlightKeywordsGreen(desc));
 
         StringBuilder sb = new StringBuilder();
@@ -658,6 +658,33 @@ public class ReviewActivity extends AppCompatActivity {
         }
 
         refreshNavButtons(effective);
+    }
+
+    private CharSequence buildFlagTitle(String flag, String effectiveStatus) {
+        String status = effectiveStatus == null ? "pending" : effectiveStatus.trim().toLowerCase();
+        String displayStatus;
+        Integer colorRes = null;
+
+        if ("approved".equals(status)) {
+            displayStatus = "Approved";
+            colorRes = R.color.success_green;
+        } else if ("rejected".equals(status)) {
+            displayStatus = "Rejected";
+            colorRes = android.R.color.holo_red_dark;
+        } else {
+            displayStatus = status.isEmpty() ? "Pending" : Character.toUpperCase(status.charAt(0)) + status.substring(1);
+        }
+
+        String text = flag + "  (" + displayStatus + ")";
+        SpannableString s = new SpannableString(text);
+        if (colorRes != null) {
+            int start = text.indexOf(displayStatus);
+            if (start >= 0) {
+                int color = ContextCompat.getColor(this, colorRes);
+                s.setSpan(new ForegroundColorSpan(color), start, start + displayStatus.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+        }
+        return s;
     }
 
     private String currentProgressFraction() {

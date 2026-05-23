@@ -32,7 +32,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.LinkedHashSet;
-import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -411,7 +410,7 @@ public class QueueActivity extends AppCompatActivity {
             if (token != null) {
                 String normalized = token.trim();
                 if (!normalized.isEmpty()) {
-                    out.add(normalized.toUpperCase(Locale.ROOT));
+                    out.add(normalized);
                 }
             }
         }
