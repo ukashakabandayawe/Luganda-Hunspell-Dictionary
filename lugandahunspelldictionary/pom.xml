@@ -37,7 +37,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.lugandahunspelldictionary.App</mainClass>
+                            <mainClass>com.lugandahunspelldictionary.CommonFlagAnalyzerApp</mainClass>
                         </configuration>
                     </execution>
                 </executions>
