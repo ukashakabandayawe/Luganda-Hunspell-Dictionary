@@ -1,15 +1,21 @@
 package com.luganda.offlinereview;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,6 +31,10 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.LinkedHashSet;
+import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class QueueActivity extends AppCompatActivity {
 
@@ -33,8 +43,16 @@ public class QueueActivity extends AppCompatActivity {
     public static final String EXTRA_STEM_INDEX = "stem_index";
     public static final String EXTRA_RESULT_PENDING = "result_pending";
     public static final String EXTRA_RESULT_DONE = "result_done";
+    public static final String EXTRA_CROSSCHECK_MODE = "crosscheck_mode";
+    public static final String EXTRA_CROSSCHECK_FLAGS = "crosscheck_flags";
+    public static final String EXTRA_CROSSCHECK_SUMMARY = "crosscheck_summary";
 
     private static final int REQ_REVIEW_STEM = 1001;
+    private static final String PREFS_CROSSCHECK = "crosscheck_mode";
+    private static final String KEY_CROSSCHECK_ACTIVE = "active";
+    private static final String KEY_CROSSCHECK_FLAGS = "flags";
+    private static final String KEY_CROSSCHECK_SUMMARY = "summary";
+    private static final Pattern CROSSCHECK_FLAG_PATTERN = Pattern.compile("[A-Za-z0-9]+(?:[+-][A-Za-z0-9]+)*");
 
     private static CachedQueue sCache;
 
@@ -44,12 +62,18 @@ public class QueueActivity extends AppCompatActivity {
     private RecyclerView rv;
     private QueueAdapter adapter;
     private LinearProgressIndicator progress;
+    private TextView crossCheckStatus;
+    private Button crossCheckButton;
+    private Button clearCrossCheckButton;
 
     private final Map<String, Boolean> expandedByGroupKey = new HashMap<>();
     private List<GroupBucket> lastBuckets = new ArrayList<>();
     private boolean skipNextResumeReload = false;
     private long lastLoadedBundleMtime = -1L;
     private long lastLoadedDecisionsMtime = -1L;
+    private boolean crossCheckActive = false;
+    private LinkedHashSet<String> crossCheckFlags = new LinkedHashSet<>();
+    private String crossCheckSummary = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,15 +88,26 @@ public class QueueActivity extends AppCompatActivity {
         }
 
         title = findViewById(R.id.queueTitle);
+        crossCheckStatus = findViewById(R.id.queueCrossCheckStatus);
+        crossCheckButton = findViewById(R.id.btnCrossCheckMode);
+        clearCrossCheckButton = findViewById(R.id.btnClearCrossCheckMode);
         progress = findViewById(R.id.queueProgress);
         rv = findViewById(R.id.queueRecycler);
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setVerticalScrollBarEnabled(true);
 
+        restoreCrossCheckState();
+        refreshCrossCheckUi();
+
         adapter = new QueueAdapter(new ArrayList<>(),
                 stemItem -> {
                     Intent intent = new Intent(this, ReviewActivity.class);
                     intent.putExtra(EXTRA_STEM_INDEX, stemItem.stemIndex);
+                    if (crossCheckActive && !crossCheckFlags.isEmpty()) {
+                        intent.putExtra(ReviewActivity.EXTRA_CROSSCHECK_MODE, true);
+                        intent.putStringArrayListExtra(ReviewActivity.EXTRA_CROSSCHECK_FLAGS, new ArrayList<>(crossCheckFlags));
+                        intent.putExtra(ReviewActivity.EXTRA_CROSSCHECK_SUMMARY, crossCheckSummary);
+                    }
                     skipNextResumeReload = true;
                     startActivityForResult(intent, REQ_REVIEW_STEM);
                 },
@@ -84,6 +119,13 @@ public class QueueActivity extends AppCompatActivity {
                 }
         );
         rv.setAdapter(adapter);
+
+        if (crossCheckButton != null) {
+            crossCheckButton.setOnClickListener(v -> showCrossCheckDialog());
+        }
+        if (clearCrossCheckButton != null) {
+            clearCrossCheckButton.setOnClickListener(v -> clearCrossCheckMode());
+        }
 
         // Always show skeleton quickly; restore/parse cache off the UI thread.
         setLoading(true);
@@ -284,6 +326,98 @@ public class QueueActivity extends AppCompatActivity {
         new Thread(() -> QueueSnapshotStore.save(QueueActivity.this, snapshot)).start();
     }
 
+    private void restoreCrossCheckState() {
+        SharedPreferences prefs = getSharedPreferences(PREFS_CROSSCHECK, MODE_PRIVATE);
+        crossCheckActive = prefs.getBoolean(KEY_CROSSCHECK_ACTIVE, false);
+        crossCheckSummary = prefs.getString(KEY_CROSSCHECK_SUMMARY, "");
+        crossCheckFlags = parseFlagSet(prefs.getString(KEY_CROSSCHECK_FLAGS, ""));
+        if (crossCheckFlags.isEmpty()) {
+            crossCheckActive = false;
+            crossCheckSummary = "";
+        }
+    }
+
+    private void persistCrossCheckState() {
+        SharedPreferences prefs = getSharedPreferences(PREFS_CROSSCHECK, MODE_PRIVATE);
+        prefs.edit()
+                .putBoolean(KEY_CROSSCHECK_ACTIVE, crossCheckActive && !crossCheckFlags.isEmpty())
+                .putString(KEY_CROSSCHECK_FLAGS, String.join(" ", crossCheckFlags))
+                .putString(KEY_CROSSCHECK_SUMMARY, crossCheckSummary == null ? "" : crossCheckSummary)
+                .apply();
+    }
+
+    private void showCrossCheckDialog() {
+        EditText input = new EditText(this);
+        input.setMinLines(4);
+        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE | InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS);
+        input.setHint("Paste unique flags here");
+        if (!crossCheckFlags.isEmpty()) {
+            input.setText(String.join(" ", crossCheckFlags));
+            input.setSelection(input.getText() == null ? 0 : input.getText().length());
+        }
+
+        new AlertDialog.Builder(this)
+                .setTitle("Decision cross-check mode")
+                .setMessage("Paste the unique flags for this stem group. The app will deduplicate the pasted text and reuse the set while you review multiple stems.")
+                .setView(input)
+                .setPositiveButton("Use set", (dialog, which) -> {
+                    LinkedHashSet<String> parsed = parseFlagSet(input.getText() == null ? "" : input.getText().toString());
+                    if (parsed.isEmpty()) {
+                        clearCrossCheckMode();
+                        Toast.makeText(this, "No flags found", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    crossCheckActive = true;
+                    crossCheckFlags = parsed;
+                    crossCheckSummary = "Cross-check: " + crossCheckFlags.size() + " unique flags";
+                    persistCrossCheckState();
+                    refreshCrossCheckUi();
+                    Toast.makeText(this, "Cross-check mode enabled", Toast.LENGTH_SHORT).show();
+                })
+                .setNegativeButton("Cancel", null)
+                .show();
+    }
+
+    private void clearCrossCheckMode() {
+        crossCheckActive = false;
+        crossCheckFlags.clear();
+        crossCheckSummary = "";
+        persistCrossCheckState();
+        refreshCrossCheckUi();
+    }
+
+    private void refreshCrossCheckUi() {
+        if (crossCheckStatus != null) {
+            if (!crossCheckActive || crossCheckFlags.isEmpty()) {
+                crossCheckStatus.setText("Cross-check: off");
+            } else {
+                crossCheckStatus.setText("Cross-check: " + crossCheckFlags.size() + " unique flags active");
+            }
+        }
+        if (clearCrossCheckButton != null) {
+            clearCrossCheckButton.setEnabled(crossCheckActive && !crossCheckFlags.isEmpty());
+        }
+    }
+
+    private static LinkedHashSet<String> parseFlagSet(String text) {
+        LinkedHashSet<String> out = new LinkedHashSet<>();
+        if (text == null) {
+            return out;
+        }
+
+        Matcher matcher = CROSSCHECK_FLAG_PATTERN.matcher(text);
+        while (matcher.find()) {
+            String token = matcher.group();
+            if (token != null) {
+                String normalized = token.trim();
+                if (!normalized.isEmpty()) {
+                    out.add(normalized.toUpperCase(Locale.ROOT));
+                }
+            }
+        }
+        return out;
+    }
+
     private void loadAndRenderAsync() {
         new Thread(() -> {
             try {
@@ -310,6 +444,7 @@ public class QueueActivity extends AppCompatActivity {
                     lastLoadedDecisionsMtime = dm;
                     title.setText(header);
                     if (adapter != null) adapter.setItems(items);
+                    refreshCrossCheckUi();
                     saveCacheIfPossible();
                     // Build a stem cache in background for faster stem opens later.
                     BundleStore.buildStemCacheIfNeededAsync(QueueActivity.this);

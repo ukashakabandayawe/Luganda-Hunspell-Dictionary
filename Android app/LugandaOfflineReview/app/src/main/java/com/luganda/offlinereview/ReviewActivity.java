@@ -24,6 +24,8 @@ import com.google.android.material.appbar.MaterialToolbar;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,6 +36,9 @@ public class ReviewActivity extends AppCompatActivity {
     private static final int AUTO_BACKUP_EVERY_N_STEMS = 3;
     private static final String PREFS_AUTO_BACKUP = "review_auto_backup";
     private static final String KEY_STEMS_SINCE_BACKUP_PREFIX = "stemsSinceBackup_";
+    public static final String EXTRA_CROSSCHECK_MODE = "crosscheck_mode";
+    public static final String EXTRA_CROSSCHECK_FLAGS = "crosscheck_flags";
+    public static final String EXTRA_CROSSCHECK_SUMMARY = "crosscheck_summary";
 
     private static final Pattern[] HIGHLIGHT_PATTERNS = new Pattern[] {
             Pattern.compile("\\breflexive\\b", Pattern.CASE_INSENSITIVE),
@@ -74,7 +79,11 @@ public class ReviewActivity extends AppCompatActivity {
 
     private int stemIndex;
     private String stemText;
+    private JSONArray sourceTasks;
     private JSONArray tasks;
+    private boolean crossCheckMode;
+    private LinkedHashSet<String> crossCheckFlags = new LinkedHashSet<>();
+    private String crossCheckSummary = "";
 
     private TextView stemTitle;
     private TextView flagTitle;
@@ -111,6 +120,14 @@ public class ReviewActivity extends AppCompatActivity {
         Watchdog.start(this);
 
         swipeMinDistancePx = Math.max(90, ViewConfiguration.get(this).getScaledTouchSlop() * 3);
+
+        Intent intent = getIntent();
+        crossCheckMode = intent != null && intent.getBooleanExtra(EXTRA_CROSSCHECK_MODE, false);
+        ArrayList<String> flags = intent == null ? null : intent.getStringArrayListExtra(EXTRA_CROSSCHECK_FLAGS);
+        if (flags != null) {
+            crossCheckFlags.addAll(flags);
+        }
+        crossCheckSummary = intent == null ? "" : intent.getStringExtra(EXTRA_CROSSCHECK_SUMMARY);
 
         MaterialToolbar toolbar = findViewById(R.id.reviewToolbar);
         setSupportActionBar(toolbar);
@@ -174,12 +191,37 @@ public class ReviewActivity extends AppCompatActivity {
                 final org.json.JSONObject finalStem = stemObj;
                 runOnUiThread(() -> {
                     stemText = finalStem.optString("stem", "");
-                    tasks = finalStem.optJSONArray("tasks");
-                    if (tasks == null) tasks = new org.json.JSONArray();
+                    sourceTasks = finalStem.optJSONArray("tasks");
+                    if (sourceTasks == null) sourceTasks = new org.json.JSONArray();
+                    tasks = sourceTasks;
+                    if (crossCheckMode && !crossCheckFlags.isEmpty()) {
+                        tasks = filterTasksByCrossCheck(tasks, crossCheckFlags);
+                    }
 
                     stemTitle.setText(stemText);
                     if (getSupportActionBar() != null) {
                         getSupportActionBar().setTitle(stemText);
+                    }
+
+                    if (crossCheckMode && !crossCheckFlags.isEmpty()) {
+                        String summary = crossCheckSummary == null || crossCheckSummary.trim().isEmpty()
+                                ? ("Cross-check: " + crossCheckFlags.size() + " unique flags")
+                                : crossCheckSummary.trim();
+                        progressText.setText(summary + " | Progress: " + currentProgressFraction());
+                    }
+
+                    if (tasks.length() == 0) {
+                        setDecisionButtonsEnabled(false);
+                        currentTaskIndex = -1;
+                        flagTitle.setText(crossCheckMode ? "No matching flags in cross-check set" : "No tasks");
+                        descText.setText("");
+                        examplesText.setText("");
+                        progressText.setText(crossCheckMode && !crossCheckFlags.isEmpty()
+                            ? (crossCheckSummary == null || crossCheckSummary.trim().isEmpty()
+                            ? ("Cross-check: " + crossCheckFlags.size() + " unique flags")
+                            : crossCheckSummary.trim()) + " | Progress: 0/0"
+                            : "No tasks");
+                        return;
                     }
 
                     approveBtn.setOnClickListener(v -> onDecide("approved"));
@@ -189,7 +231,11 @@ public class ReviewActivity extends AppCompatActivity {
                     nextBtn.setOnClickListener(v -> goNextTask());
 
                     setLoadingState(false);
-                    showNextPendingOrFirst();
+                    if (crossCheckMode && !crossCheckFlags.isEmpty()) {
+                        showNextCrossCheckOrFirst();
+                    } else {
+                        showNextPendingOrFirst();
+                    }
                 });
             } catch (Exception ex) {
                 runOnUiThread(() -> {
@@ -199,6 +245,25 @@ public class ReviewActivity extends AppCompatActivity {
                 });
             }
         }, "review-load").start();
+    }
+
+    private JSONArray filterTasksByCrossCheck(JSONArray source, LinkedHashSet<String> allowedFlags) {
+        JSONArray filtered = new JSONArray();
+        if (source == null || allowedFlags == null || allowedFlags.isEmpty()) {
+            return filtered;
+        }
+
+        for (int i = 0; i < source.length(); i++) {
+            JSONObject task = source.optJSONObject(i);
+            if (task == null) {
+                continue;
+            }
+            String flag = task.optString("flag", "").trim().toUpperCase();
+            if (!flag.isEmpty() && allowedFlags.contains(flag)) {
+                filtered.put(task);
+            }
+        }
+        return filtered;
     }
 
     private boolean handleSwipeTouch(MotionEvent event) {
@@ -294,6 +359,17 @@ public class ReviewActivity extends AppCompatActivity {
 
                 noteEdit.setText("");
                 Toast.makeText(this, decision.toUpperCase() + " saved", Toast.LENGTH_SHORT).show();
+
+                if (crossCheckMode) {
+                    if (currentTaskIndex >= tasks.length() - 1) {
+                        finishAndReturnQueueUpdate(finalCounts);
+                        return;
+                    }
+
+                    currentTaskIndex++;
+                    bindTask(tasks.optJSONObject(currentTaskIndex));
+                    return;
+                }
 
                 // If this was the last pending flag for the stem, return to the queue.
                 // (Avoid looping back to the first flag.)
@@ -437,13 +513,42 @@ public class ReviewActivity extends AppCompatActivity {
         if (tasks.length() > 0) {
             currentTaskIndex = 0;
             bindTask(tasks.optJSONObject(currentTaskIndex));
-            Toast.makeText(this, "No pending tasks for this stem", Toast.LENGTH_SHORT).show();
+            if (!crossCheckMode) {
+                Toast.makeText(this, "No pending tasks for this stem", Toast.LENGTH_SHORT).show();
+            }
         } else {
             currentTaskIndex = -1;
             flagTitle.setText("No tasks");
             descText.setText("");
             examplesText.setText("");
+            setDecisionButtonsEnabled(false);
         }
+    }
+
+    private void showNextCrossCheckOrFirst() {
+        manualNavigationMode = false;
+        if (tasks == null || tasks.length() == 0) {
+            currentTaskIndex = -1;
+            flagTitle.setText("No tasks");
+            descText.setText("");
+            examplesText.setText("");
+            setDecisionButtonsEnabled(false);
+            return;
+        }
+
+        if (currentTaskIndex < 0) {
+            currentTaskIndex = 0;
+            bindTask(tasks.optJSONObject(currentTaskIndex));
+            return;
+        }
+
+        if (currentTaskIndex >= tasks.length() - 1) {
+            finishAndReturnQueueUpdate(computeStemCounts());
+            return;
+        }
+
+        currentTaskIndex++;
+        bindTask(tasks.optJSONObject(currentTaskIndex));
     }
 
     private void finishAndReturnQueueUpdate(int[] counts) {
@@ -462,10 +567,11 @@ public class ReviewActivity extends AppCompatActivity {
     private int[] computeStemCounts() {
         int pending = 0;
         int done = 0;
-        if (tasks == null) return new int[]{0, 0};
+        JSONArray countsSource = sourceTasks != null ? sourceTasks : tasks;
+        if (countsSource == null) return new int[]{0, 0};
 
-        for (int i = 0; i < tasks.length(); i++) {
-            JSONObject tt = tasks.optJSONObject(i);
+        for (int i = 0; i < countsSource.length(); i++) {
+            JSONObject tt = countsSource.optJSONObject(i);
             if (tt == null) continue;
             String ff = tt.optString("flag", "");
             String bs = tt.optString("status", "pending");
@@ -531,21 +637,41 @@ public class ReviewActivity extends AppCompatActivity {
         // Preload note from in-memory map to avoid disk I/O on the UI thread.
         noteEdit.setText(getDecisionNote(stemText, flag));
 
-        // Progress line
-        int pending = 0;
-        int done = 0;
-        for (int i = 0; i < tasks.length(); i++) {
-            JSONObject tt = tasks.optJSONObject(i);
-            if (tt == null) continue;
-            String ff = tt.optString("flag", "");
-            String bs = tt.optString("status", "pending");
-            String eff = effectiveStatus(stemText, ff, bs);
-            if ("pending".equals(eff)) pending++;
-            else done++;
+        if (crossCheckMode && !crossCheckFlags.isEmpty()) {
+            progressText.setText((crossCheckSummary == null || crossCheckSummary.trim().isEmpty()
+                    ? ("Cross-check: " + crossCheckFlags.size() + " unique flags")
+                    : crossCheckSummary.trim()) + " | Progress: " + currentProgressFraction());
+        } else {
+            // Progress line
+            int pending = 0;
+            int done = 0;
+            for (int i = 0; i < tasks.length(); i++) {
+                JSONObject tt = tasks.optJSONObject(i);
+                if (tt == null) continue;
+                String ff = tt.optString("flag", "");
+                String bs = tt.optString("status", "pending");
+                String eff = effectiveStatus(stemText, ff, bs);
+                if ("pending".equals(eff)) pending++;
+                else done++;
+            }
+            progressText.setText("Pending: " + pending + "   Done: " + done);
         }
-        progressText.setText("Pending: " + pending + "   Done: " + done);
 
         refreshNavButtons(effective);
+    }
+
+    private String currentProgressFraction() {
+        if (tasks == null || tasks.length() == 0) {
+            return "0/0";
+        }
+        int current = currentTaskIndex + 1;
+        if (current < 0) {
+            current = 0;
+        }
+        if (current > tasks.length()) {
+            current = tasks.length();
+        }
+        return current + "/" + tasks.length();
     }
 
     private void refreshNavButtons(String effectiveStatus) {
