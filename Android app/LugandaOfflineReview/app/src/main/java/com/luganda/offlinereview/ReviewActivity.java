@@ -41,7 +41,14 @@ public class ReviewActivity extends AppCompatActivity {
             Pattern.compile("\\bpresent[\\s-]+simple\\b", Pattern.CASE_INSENSITIVE),
             Pattern.compile("\\bpresent[\\s-]+progressive\\b", Pattern.CASE_INSENSITIVE),
             Pattern.compile("\\bpast\\b", Pattern.CASE_INSENSITIVE),
-            Pattern.compile("\\bfuture\\b", Pattern.CASE_INSENSITIVE)
+            Pattern.compile("\\bfuture\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bsubjunctive\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bcounterfactual\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bmay\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bwhen\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\brelative\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bstill\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bprogressive\\b", Pattern.CASE_INSENSITIVE),
     };
 
     private CharSequence highlightKeywordsGreen(String text) {
