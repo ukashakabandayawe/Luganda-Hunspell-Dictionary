@@ -78,8 +78,16 @@ public final class CommonFlagAnalyzer {
             return commonFlags.isEmpty();
         }
 
+        public int getCommonFlagCount() {
+            return commonFlags.size();
+        }
+
         public String getCommonFlagsText() {
             return formatFlags(commonFlags, mode);
+        }
+
+        public int getUniqueFlagCount() {
+            return uniqueFlags.size();
         }
 
         public String getUniqueFlagsText() {
@@ -116,6 +124,10 @@ public final class CommonFlagAnalyzer {
 
         public LinkedHashSet<String> getUniqueFlags() {
             return new LinkedHashSet<>(uniqueFlags);
+        }
+
+        public int getUniqueFlagCount() {
+            return uniqueFlags.size();
         }
 
         public String getUniqueFlagsText() {

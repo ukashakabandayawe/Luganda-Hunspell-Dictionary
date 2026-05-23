@@ -308,8 +308,10 @@ public class CommonFlagAnalyzerApp extends Application {
         text.append("Mode: ").append(result.getMode()).append(System.lineSeparator());
         text.append("Category: ").append(categoryLabel).append(System.lineSeparator());
         text.append("Selected stems: ").append(result.getSelectedEntries().size()).append(System.lineSeparator());
+        text.append("Common flag count: ").append(result.getCommonFlagCount()).append(System.lineSeparator());
         text.append("Common flags (raw): ").append(result.getCommonFlagsText().isEmpty() ? "(none)" : result.getCommonFlagsText()).append(System.lineSeparator());
         text.append("Common flags (tokens): ").append(result.getCommonFlags().isEmpty() ? "(none)" : String.join(", ", result.getCommonFlags())).append(System.lineSeparator());
+        text.append("Unique flag count: ").append(result.getUniqueFlagCount()).append(System.lineSeparator());
         text.append("Unique flags across selected stems: ").append(result.getUniqueFlags().isEmpty() ? "(none)" : String.join(", ", result.getUniqueFlags())).append(System.lineSeparator());
         text.append(System.lineSeparator());
         text.append("Selected stem details:").append(System.lineSeparator());
@@ -317,7 +319,9 @@ public class CommonFlagAnalyzerApp extends Application {
             DicEntry entry = stemAnalysis.getEntry();
             text.append("- ")
                     .append(entry.getStem())
-                    .append(" -> common removed, unique flags: ")
+                .append(" -> unique flag count: ")
+                .append(stemAnalysis.getUniqueFlagCount())
+                .append("; unique flags: ")
                     .append(stemAnalysis.getUniqueFlags().isEmpty() ? "(none)" : String.join(", ", stemAnalysis.getUniqueFlags()))
                     .append(System.lineSeparator());
         }
