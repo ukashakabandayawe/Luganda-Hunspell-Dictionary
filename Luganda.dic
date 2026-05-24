@@ -1380,7 +1380,7 @@ cangiddewooko
 cangiddengako
 # --------------------------------------------------------------------------------------- #
 cokoleeti
-# ------- okucupula(to duplicate) -------- #
+# ---------------------------------- okucupula(to duplicate) --------------------------------- #
 cupula
 cupule
 cupudde
@@ -1726,9 +1726,9 @@ daabirizireyooko
 daabirizirewo
 daabirizirewooko
 daabirizireengako
-# ---------------------------------------------------------------------------- #
+# ------------------------------------------------------------------------------------- #
 ddala
-# ------------------------- okudda(to return) -------------------------------- #
+# ------------------------------- okudda(to return) ----------------------------------- #
 dda
 dde
 zze
@@ -1924,7 +1924,14 @@ ddiddengawooko
 # --------------------------------------------------------------------------------------- #
 ddensite
 ddi
+# ------------------------------- okuddirira(to be next) ----------------------------------------- #
 ddirira
+ddirire
+ddiridde
+ddiriza
+ddirize
+ddirizza
+# --------------------------------------------------------------------------------------------- #
 # -------------------------------- okuddugala (to become dirty) -------------------------------- #
 ddugala
 ddugale
@@ -2058,14 +2065,40 @@ ddugaliddewo
 ddugaliddewooko
 ddugaliiddenga
 ddugaliddengako
-# ------------------------- #
+# ----------------------------------------------------------------------------------------------- #
 ddugavu
+# ------------------------------- okudduka(to be dirty) ----------------------------------------- #
 dduka
+dduke
+ddusse
+ddusa
+ddusizza
+ddusibwa
+ddusibwe
+ddusiddwa
+ddukira
+ddukire
+ddukidde
+# ------------------------------------------------------------------------------------------------ #
+# ------------------------------- **okuddukanya(to manage) ----------------------------------------- #
 ddukanya
+ddukanye
+ddukanyizza
+ddukanyizibwa
+ddukanyizibwe
+ddukanyiziddwa
+# --------------------------------------------------------------------------------------------------- #
 ddumbi
+# ------------------------- **okuddukirira(to come to somebody's rescue) ---------------------------- #
 dduukirira
+dduukirire
+dduukiridde
+dduukirirwa
+dduukirirwe
+dduukiriddwa
+# ----------------------------------------------------------------------------------------------- #
 ddyo
-# ---------- okudiba(to flop) --------- #
+# ----------------------------------------- okudiba(to flop) ------------------------------------ #
 diba
 dibe
 dibye
@@ -2087,7 +2120,7 @@ dibayooko
 dibawo
 dibawooko
 dibangako
-
+#
 dibeko
 dibemu
 dibemuuko
@@ -2096,7 +2129,7 @@ dibeeyooko
 dibewo
 dibewooko
 dibeengako
-
+#
 dibyeeko
 dibyeemu
 dibyeemuuko
@@ -2105,7 +2138,7 @@ dibyeeyooko
 dibyeewo
 dibyeewooko
 dibyeengako
-
+#
 dibyaako
 dibyaamu
 dibyaamuuko
@@ -2114,7 +2147,7 @@ dibyaayooko
 dibyaawo
 dibyaawooko
 dibyangako
-
+#
 dibyeeko
 dibyeemu
 dibyeemuuko
@@ -2123,7 +2156,7 @@ dibyeeyooko
 dibyeewo
 dibyeewooko
 dibyeengako
-
+#
 dibizzaako
 dibizzaamu
 dibizzaamuuko
@@ -2132,7 +2165,7 @@ dibizzaayooko
 dibizzaawo
 dibizzaawooko
 dibizzangako
-
+#
 dibisaako
 dibisaamu
 dibisaamuuko
@@ -2141,7 +2174,7 @@ dibisaayooko
 dibisaawo
 dibisaawooko
 dibisangako
-
+#
 dibiseeko
 dibiseemu
 dibiseemuuko
@@ -2150,7 +2183,7 @@ dibiseeyooko
 dibiseewo
 dibiseewooko
 dibiseengako
-
+#
 dibisizzaako
 dibisizzaamu
 dibisizzaamuuko
@@ -2159,7 +2192,7 @@ dibisizzaayooko
 dibisizzaawo
 dibisizzaawooko
 dibisizangako
-
+#
 dibirako
 dibiramu
 dibiramuuko
@@ -2168,7 +2201,7 @@ dibirayooko
 dibirawo
 dibirawooko
 dibirangako
-
+#
 dibireko
 dibiremu
 dibiremuuko
@@ -2177,7 +2210,7 @@ dibireyooko
 dibirewo
 dibirewooko
 dibireengako
-
+#
 dibiddeko
 dibiddemu
 dibiddemuuko
@@ -2186,8 +2219,7 @@ dibiddeyooko
 dibiddewo
 dibiddewooko
 dibiddeengako
-# ------------------------- #
-
+# ----------------------------------------------------------------------------------------- #
 diguli
 disitulikiti
 doodo
@@ -2195,7 +2227,7 @@ doola
 duulu
 duumira
 e
-ebaasa
+ebbaasa
 # ---------------------------------- okwebaka (to sleep) ---------------------------------- #
 baka
 bake
@@ -2410,7 +2442,7 @@ bakiddeeyo
 bakiddeeyooko
 bakiddeewo
 bakiddeewooko
-# ---------------------------------------------------------------------------------- #
+# -------------------------------------------------------------------------------------------------- #
 ebala
 # --------------------------------------- okwebaza(to thank) --------------------------------------- #
 baza
@@ -2698,8 +2730,12 @@ diimiddeeyo
 diimiddeeyooko
 diimiddeewo
 diimiddeewooko
-# ------------------------------------------------------------------------------------- #
-efeebya
+# ------------------------------------------------------------------------------------------------- #
+# ------------------------------- **okwefeebya (to belittle oneself) -------------------------------- #
+feebya
+feebye
+feebezza
+# ---------------------------------------------------------------------------------------------------- #
 effeeza
 effirimbi
 effitina
@@ -2707,15 +2743,76 @@ effujjo
 effumbe
 effumbiro
 effumu/N5zz
-efiiriza
-efuula
-efuulira
+# ------------------------------- **okwefiiriza(to sacrifice) ----------------------------------------- #
+fiiriza
+fiirize
+fiirizza
+# ---------------------------------------------------------------------------------------------------- #
+# -------------------------------- **okwefuula(to pretend) ------------------------------------------- #
+fuula
+fuule
+fudde
+# --------------------------------------------------------------------------------------------------- #
+# -------------------------------- **okwefuulira(to betray) ----------------------------------------- #
+fuulira
+fuulire
+fuulidde
+# ------------------------------------------------------------------------------------------------ #
 eggaali/N3zz
-egatta
-egayirira
+# --------------------------------------- okuggata(to add/join) --------------------------------------- #
+gatta
+gatte
+gasse
+gattisa
+gattise
+gattisizza
+gattibwa
+gattibwe
+gattiddwa
+gattira
+gattire
+gattidde
+# ----------------------------------------------------------------------------------------------------- #
+# ----------------------------------------- **okwegayirira(to plead) ----------------------------------------- #
+gayirira
+gayirire
+gayiridde
+gayiriza
+gayirize
+gayirizza
+gayirirwa
+gayirirwe
+gayiriddwa
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- **okwegazaanya(to be at ease) --------------------------------------- #
 egazaanya
-egema
-egendereza
+egazaanye
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugema(to vaccinate) --------------------------------------- #
+gema
+geme
+gemye
+gemesa
+gemese
+gemesezza
+gemebwa
+gemebwe
+gemeddwa
+gemera
+gemere
+gemedde
+# ------------------------------------------------------------------------------------------------------ #
+# -------------------------------- **okwegendereza(to be careful) ----------------------------------------- #
+gendereza
+gendereze
+genderezza
+genderezebwa
+genderezebwe
+genderezeddwa
+genderereza
+genderereze
+gendererezza
+# --------------------------------------------------------------------------------------------------------- #
 # -------------------------------------- okweggama(to seek shelter) -------------------------------------- #
 ggama
 ggame
@@ -2807,13 +2904,27 @@ ggamiddeeyo
 ggamiddeeyooko
 ggamiddeewo
 ggamiddeewooko
-# --------------------------------------------------------------------------------- #
-eggana
+# ------------------------------------------------------------------------------------------------------ #
+# ---------------------------------- okugaana(to refuse) ------------------------------------------------ #
+gaana
+gaane
+gaanye
+gaanisa
+gaanise
+gaanisizza
+gaanibwa
+gaanibwe
+gaaniddwa
+gaanibwa
+gaanira
+gaanire
+gaanidde
+# --------------------------------------------------------------------------------------------------------- #
 eggego
-# --- eggi --- #
+# -------------------------------------- eggi(egg) ----------------------------------------------------- #
 eggi/N5
 egi/NAzz
-# ------------ #
+# -------------------------------------------------------------------------------------------------------- #
 eggolu
 eggombolola
 eggonjebwa
@@ -3008,7 +3119,11 @@ ejjinja
 ejjobyo
 ejjoogo
 ejjovu
-ejjukanya
+# --------------------------------- **okwejjukanya(to remind) ----------------------------------------- #
+jjukanya
+jjukanye
+jjukanyizza
+# -------------------------------------------------------------------------------------------------- #
 ejjuuni
 ejunya
 # ------------------------------------ okwejjusa(to regret) ------------------------------------ #
@@ -3085,11 +3200,27 @@ jjusizengayo
 jjusizengayooko
 jjusizengawo
 jjusizengawooko
-# -------------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------------------------------- #
 eka/yy
-ekaaliisa
-ekakasa
-# --------------------------------------- okwekalakaasa(to riot) ---------------------------------- #
+# ------------------------------------------ **okwekaalisa(to show off) ---------------------------------- #
+kaaliisa
+kaaliise
+kaaliisizza
+# --------------------------------------------------------------------------------------------------- #
+# ----------------------------------------- okukakasa(to confirm) ----------------------------------------- #
+kakasa
+kakase
+kakasizza
+kakasibwa
+kakasibwe
+kakasiddwa
+kakasiza
+kakasize
+kakasilizza
+kakasiliza
+kakasilize
+# ----------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwekalakaasa(to riot) -------------------------------------- #
 kalakaasa
 kalakaase
 kalakaasizza
@@ -3163,11 +3294,41 @@ kalakaasizengayo
 kalakaasizengayooko
 kalakaasizengawo
 kalakaasizengawooko
-# --------------------------------------------------------------------------------------- #
-ekanasa
-ekanga
-ekebejja
-ekengeera
+# ----------------------------------------------------------------------------------------------------- #
+# --------------------------------------- **okwekanasa(to be picky) --------------------------------------- #
+kanasa
+kanase
+kanasizza
+kanasiza
+kanasize
+# ------------------------------------------------------------------------------------------------------ #
+# --------------------------------------- okukanga(to scare) --------------------------------------- #
+kanga
+kange
+kanze
+kangisa
+kangise
+kangisizza
+kangibwa
+kangibwe    
+kangiddwa
+kangira
+kangire
+kangidde
+# --------------------------------------------------------------------------------------------------- #
+# --------------------------------------- **okwekebejja(to examine) --------------------------------------- #
+kebejja
+kebejje
+kebejjezza
+# --------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwekengera(to suspect) --------------------------------------- #
+kengera
+kengere
+kengedde
+kengerwa
+kengerwe
+kengeddwa
+# --------------------------------------------------------------------------------------------------- #
 ekereziya
 ekibabu
 ekibajje
@@ -3380,13 +3541,81 @@ ekkubo
 ekkufulu
 ekkula
 ekoba
-ekobaana
-ekuuma
-ekuumiro
-ekuusa
-ekwasa
-ekwata
-ekweka
+# ---------------------------------------- okwekobaana(to conspire) ---------------------------------------- #
+kobaana
+kobaane
+kobaanye
+# --------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------- okukuuma(to protect) ---------------------------------------- #
+kuuma
+kuume
+kuumye
+kuumisa
+kuumise
+kuumisizza
+kuumibwa
+kuumibwe
+kuumiddwa
+kuumira
+kuumire
+kuumidde
+kuumi
+# ----------------------------------------------------------------------------------------------------------- #
+ekkuumiro
+# ---------------------------------------- okukuuta(to rub/relate:if its in passive form) ---------------------------------------- #
+kuuta
+kuute
+kuuse
+kuusa
+kuusizza
+kuusibwa
+kuusibwe
+kuusiddwa
+kuutibwa
+kuutibwe
+kuutiddwa
+kuutibbwa
+kuutira
+kuutire
+kuutidde
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okukwata(to hold/arrest) ---------------------------------------------- #
+kwata
+kwate
+kwase
+kwatisa
+kwatise
+kwatisizza
+kwasa
+kwase
+kwasizza
+kwasibwa
+kwasibwe
+kwasiddwa
+kwatibwa
+kwatibwe
+kwatiddwa
+kwatira
+kwatire
+kwatidde
+kwasi
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okukweka(to hide) ---------------------------------------------- #
+kweka
+kweke
+kwese
+kwekesa
+kwekese
+kwesezza
+kwekebwa
+kwekebwe
+kwekebbwa
+kwekera
+kwekere
+kwekedde
+kwesi
+# -----------------------------------------------------------------------------------------------------#
+
 ekwekula
 eky
 eky'okunywa
