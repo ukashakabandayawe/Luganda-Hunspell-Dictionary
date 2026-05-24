@@ -15,7 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
-#
+# Note: The double asterisks (**) in the comments indicate that the following section or the verb contains irregular verb forms that do not follow the standard conjugation patterns.
+# So such verbs should be handled with special attention.
 #
 ab'/C1OC
 b'/C1OC
@@ -218,23 +219,86 @@ beerawooko
 beeramuuko
 beerayooko
 beerayo
-# --------------------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------------------------- #
 #
 baaba
 baasi
 bagiya
+# -------------------------------- okubajja(to do furniture) ----------------------------------- #
 bajja
+bajje
+bajjizza
+bajjisa
+bajjise
+bajjisizza
+bajjibwa
+bajjibwe 
+bajjiddwa
+bajjira
+bajjire
+bajjidde
+# ------------------------------------------------------------------------------------------------ #
+# ------------------------------- okubaka(to catch a projectile) --------------------------------- #
 baka
+bake
+basse
+bakisa
+bakise
+bakisizza
+bakibwa
+bakibwe
+bakiddwa
 bakira
+bakire
+bakidde
+# ------------------------------------------------------------------------------------------------ #
+# ------------------------------ okubala(to count) ----------------------------------------------- #
 bala
+bale
+baze
+bazisa
+bazise
+bazisizza
+balibwa
+balibwe
+baliddwa
+balira
+balire
+balidde
+# ------------------------------------------------------------------------------------------------ #
+# --------------------------------- okubalaga(to be itchy) --------------------------------------- #
 balagala
+balagale
+balagadde
+balagaza
+balagaze
+balagazza
+balagalwa
+balagalwe
+balagaddwa
+balagalira
+balagalire
+balagalidde
+# ------------------------------------------------------------------------------------------------- #
 balagavu
 balansi
 bali
+# --------------------------------- okubaluka(to explode) ----------------------------------------- #
+baluka
+baluke
+baluse
 balula
+balule
+baludde
+balulwa
+balulwe
+baluddwa
+balulira
+balulire
+balulidde
+# ------------------------------------------------------------------------------------------------- #
 bambi
-#
-# ------------------------------------- okubanja(to owe/demand) -------------------------- #
+# ------------------------------------- okubanja(to owe/demand) ----------------------------------- #
 banja
 banje
 banjizza
@@ -335,11 +399,30 @@ banjilizzaayo
 banjilizzaayooko
 banjilizzaawo
 banjilizzaawooko
-# -------------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------------------- #
 bannange
+# -------------------------------- **okubatiza(to baptize) --------------------------------- #
 batiza
-baza(amu)
+batize
+batizza
+batizibwa
+batizibwe
+batiziddwa
+# ----------------------------------------------------------------------------------------- #
+# ------------------------------- okubaza(to time/target) ---------------------------------------- #
+baza
 baze
+bazizza
+bazisa
+bazise
+bazisizza
+bazibwa
+bazibwe
+baziddwa
+bazira
+bazire
+bazidde
+# ----------------------------------------------------------------------------------------- #
 bba
 bbalaza
 bbiri
@@ -348,9 +431,35 @@ bbomu
 bbongo
 bbugubugu
 bbululu
+# -------------------------------- okubeera(to be/stay) ----------------------------------------- #
 beera
+beere
+badde
+beeza
+beeze
+beezezza
+beezebwa
+beezebwe
+beezeddwa
+beerera
+beerere
+beeredde
+# ------------------------------------------------------------------------------------------------- #
+# ------------------------------- okubega(to spy/serve food) ------------------------------------------------- #
 bega
-# ---------------------------------- okubejjagala(to burp) --------------------------------- #
+bege
+beze
+begesa
+begese
+begesezza
+begebwa
+begebwe
+begeddwa
+begera
+begere
+begedde
+# --------------------------------------------------------------------------------------------- #
+# ---------------------------------- okubejjagala(to burp) ------------------------------------ #
 bejjagala
 bejjagale
 bejjagadde
@@ -485,7 +594,7 @@ bi
 bibiri
 biibiita
 biici
-# --- okubiita(caring in a lovely manner) --- #
+# ----------------------------------- okubiita(caring in a lovely manner) ---------------------------------- #
 biita
 biite
 biise
@@ -611,9 +720,9 @@ biitiddeyo
 biitiddeeyooko
 biitiddewo
 biitiddewooko
-# --------------------------------------------------------------------------------- #
+# ------------------------------------------------------------------------------------------- #
 biki
-# --- okubikka(to cover) --- #
+# ------------------------------------------------- okubikka(to cover) ----------------------------------------- #
 bikka
 bikke
 bisse
@@ -734,18 +843,55 @@ bikkiddeyooko
 bikkiddewo
 bikkiddewooko
 bikkiddengako
-# ------------------------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------------------------------------- #
 biki
 bina
 bisatu
+# --------------------------------------- okubissiwala(to become wet) --------------------------------------------- #
+bissiwala
+bissiwale
+bissiwadde
+bissiwaza
+bissiwaze
+bissiwazza
+bissiwazibwa
+bissiwazibwe
+bissiwaziddwa
+bissiwalira
+bissiwalire
+bissiwalidde
+# ------------------------------------------------------------------------------------------------------------- #
 bisi
 bisibisi
 bisikwiti
 bitano
 bizinensi
+# ------------------------------- **okuboggola(to bark) --------------------------------------------- #
 boggola
+boggole
+boggodde
+boggoza
+boggoze
+boggozza
+boggolera
+boggolere
+boggoledde
+# --------------------------------------------------------------------------------------------- #
+# ------------------------------- okubojja(to peck: for birds) -------------------------------- #
 bojja
-# --- okubonaabona(to suffer) --- #
+bojje
+bojjezza
+bojjesa
+bojjese
+bojjesezza
+bojjebwa
+bojjebwe
+bojjeddwa
+bojjera
+bojjere
+bojjedde
+# --------------------------------------------------------------------------------------------- #
+# ----------------------------------- okubonaabona(to suffer) --------------------------------- #
 bonaabona
 boneebone
 bonyebonye
@@ -855,7 +1001,7 @@ boneebonereyooko
 boneebonerewo
 boneebonerewooko
 boneebonereengako
-# ------------------------- #
+# --------------------------------------------------------------------------------------- #
 boneka
 bonereza
 bonyaabonya
@@ -994,6 +1140,7 @@ camuddeyooko
 camuddewo
 camuddewooko
 camuddeengako
+# ------------------------------------------------------------------------------------ #
 # ------------------------- okucanga(to shuffle) ------------------------------------ #
 canga
 cange
@@ -1115,7 +1262,7 @@ cangiddeyooko
 cangiddewo
 cangiddewooko
 cangiddengako
-# ------------------------- #
+# --------------------------------------------------------------------------------------- #
 cokoleeti
 # ------- okucupula(to duplicate) -------- #
 cupula
@@ -1238,9 +1385,9 @@ cupuliddeyooko
 cupuliddewo
 cupuliddewooko
 cupuliddengako
-# ------------------------- #
+# --------------------------------------------------------------------------------------- #
 ekicupuli
-# --------- okudaaga(to suffer) --------- #
+# -------------------------- okudaaga(to suffer) ---------------------------------------- #
 daaga
 daage
 daaze
@@ -1351,9 +1498,9 @@ daagiddeyooko
 daagiddewo
 daagiddewooko
 daagiddengako
-# ------------------------- #
+# --------------------------------------------------------------------------------------- #
 dda
-# --------- okudaabiriza(to renovate) --------- #
+# ----------------------------- okudaabiriza(to renovate) ------------------------------- #
 ddaabiriza
 daabirize
 daabirizza
@@ -1465,7 +1612,7 @@ daabirizirewooko
 daabirizireengako
 # ---------------------------------------------------------------------------- #
 ddala
-# ------- okudda(to return) --------- #
+# ------------------------- okudda(to return) -------------------------------- #
 dda
 dde
 zze
@@ -1658,11 +1805,11 @@ ddiddengayo
 ddiddengayooko
 ddiddengawo
 ddiddengawooko
-# ------------------------- #
+# --------------------------------------------------------------------------------------- #
 ddensite
 ddi
 ddirira
-# --------- okuddugala (to become dirty) --------- #
+# -------------------------------- okuddugala (to become dirty) -------------------------------- #
 ddugala
 ddugale
 ddugadde
