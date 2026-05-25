@@ -229,45 +229,46 @@ SFX ae 0 o [^aeiou]
 # It can also be used like the Luganda equivalent of English's "just"
 # e.g. okulaba obulabi, kulya buli
 # Was using flag o but now uses oo
-PFX oo Y 38
-PFX oo o 0 om[uw]
-PFX oo omu ba omu
-PFX oo omu aba omu
-PFX oo omu mi omu
-PFX oo omu emi omu
-PFX oo omw emy omw
-PFX oo omul nd omul.[^mn]
-PFX oo omul end omul.[^mn] #e.g. omuli-->endi
-PFX oo omul nn omul.[mn]
-PFX oo omul enn omul.[mn]
-PFX oo omu n omu
-PFX oo omu en omu
-PFX oo omw ny omw
-PFX oo omw eny omw
-PFX oo omu ki omu
-PFX oo omu eki omu
-PFX oo omw ky omw
-PFX oo omw eky omw
-PFX oo omu bi omu
-PFX oo omu ebi omu
-PFX oo omw by omw
-PFX oo omw eby omw
-PFX oo omul dd omul
-PFX oo omul edd omul #omulamuoi-->eddamuzi
-PFX oo omu ek omuk # omukubi-->ekkubi
-PFX oo omw emy omw #e.g. omwambazi-->emyambazi
-PFX oo omu ma om[uw]
-PFX oo omu ama om[uw] #omulamuzi-->eddamuzi
-PFX oo omu ka omu
-PFX oo omu aka omu
-PFX oo omw ka omw
-PFX oo omw aka omw
-PFX oo om ob om[uw] # omuli-->obuli, omwambazi-->obwambazi
-PFX oo om b  om[uw]
-PFX oo om lu om[uw]
-PFX oo om olu om[uw]
-PFX oo om ok om[uw]
-PFX oo om ot om[uw]
+PFX oo Y 39
+PFX oo 0 mu [^aeiou]
+PFX oo 0 omu
+PFX oo 0 ba  [^aeiou]
+PFX oo 0 aba [^aeiou]
+PFX oo 0 mi [^aeiou] 
+PFX oo 0 emi [^aeiou] 
+PFX oo 0 emy [aeiou]
+PFX oo 0  nd [aeiou]
+PFX oo 0  end [aeiou] #e.g. 0 i-->endi
+PFX oo 0  nn [aeiou]
+PFX oo 0  enn [aeiou]
+PFX oo 0 n [aeiou]
+PFX oo 0 en [aeiou]
+PFX oo 0 ny [aeiou]
+PFX oo 0 eny [aeiou]
+PFX oo 0 ki [^aeiou]
+PFX oo 0 eki [^aeiou]
+PFX oo 0 ky [aeiou]
+PFX oo 0 eky [aeiou]
+PFX oo 0 bi [^aeiou]
+PFX oo 0 ebi [^aeiou]
+PFX oo 0 by [aeiou]
+PFX oo 0 eby [aeiou]
+PFX oo 0  dd [aeiou]
+PFX oo 0  edd [aeiou]  #omulamuoi-->eddamuzi
+PFX oo 0 ek omuk # omukubi-->ekkubi
+PFX oo 0 emy [aeiou] #e.g. omwambazi-->emyambazi
+PFX oo 0 ma [^aeiou]
+PFX oo 0 ama [^aeiou]
+PFX oo 0 ka omu
+PFX oo 0 aka omu
+PFX oo 0 ka [^aeiou]
+PFX oo 0 aka [^aeiou]
+PFX oo 0 obu [^aeiou] # omuli-->obuli, omwambazi-->obwambazi
+PFX oo 0 bu  [^aeiou]
+PFX oo om lu [^aeiou]
+PFX oo om olu [^aeiou]
+PFX oo om oku [^aeiou]
+PFX oo om otu [^aeiou]
 
 
 # Reflexive verb form, subject markers in present simple tense 
