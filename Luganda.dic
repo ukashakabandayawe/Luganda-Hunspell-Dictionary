@@ -5247,7 +5247,7 @@ fumbisizza
 fumbira
 fumbire
 fumbidde
-fumbi/PSPT
+fumbi/oo
 #
 fumbako
 fumbamu
@@ -5364,7 +5364,7 @@ fumbiddwa
 fumbiza
 fumbize
 fumbizza
-fumbo/PSPT
+fumbo/oo
 # --------------------------------------------------------------------------------------------- #
 # --------------------------------------- okufumita(to stab/pierce) --------------------------------------- #
 fumita
@@ -5376,7 +5376,7 @@ fumitiddwa
 fumitira
 fumitire
 fumitidde
-fumisi/PSPT
+fumisi/oo
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okufuna(to get) ------------------------------------------- #
 funa
@@ -5510,7 +5510,7 @@ funzizza
 fundira
 fundire
 fundidde
-funzi/PSPT
+funzi/oo
 # ------------------------------------------------------------------------------------------------- #
 fundi
 # --------------------------------------- okufunga(to tuck) ------------------------------------------- #
@@ -5705,7 +5705,7 @@ fuuyizza
 fuuyibwa
 fuuyibwe
 fuuyiddwa
-fuuyizi/PSPT
+fuuyizi/oo
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okugaana(to refuse) -------------------------------------- #
 gaana
@@ -5720,7 +5720,7 @@ gaanisizza
 gaanira
 gaanire
 gaanidde
-
+#
 gaanako
 gaanamu
 gaanamuuko
@@ -5729,7 +5729,7 @@ gaanaayooko
 gaanawo
 gaanawooko
 gaanangako
-
+#
 gaaneko
 gaanemu
 gaanemuuko
@@ -5738,7 +5738,7 @@ gaaneyooko
 gaanewo
 gaanewooko
 gaaneengako
-
+#
 gaanyeeko
 gaanyeemu
 gaanyeemuuko
@@ -5747,7 +5747,7 @@ gaanyeeyooko
 gaanyeewo
 gaanyeewooko
 gaanyeengako
-
+#
 gaanibwako
 gaanibwamu
 gaanibwamuuko
@@ -5756,7 +5756,7 @@ gaanibwayooko
 gaanibwawo
 gaanibwawooko
 gaanibwangako
-
+#
 gaanibweko
 gaanibwemu
 gaanibwemuuko
@@ -5765,7 +5765,7 @@ gaanibweyooko
 gaanibwewo
 gaanibwewooko
 gaanibwengako
-
+#
 gaaniddwaako
 gaaniddwaamu
 gaaniddwaamuuko
@@ -5774,7 +5774,7 @@ gaaniddwayooko
 gaaniddwaawo
 gaaniddwaawooko
 gaaniddwangako
-
+#
 gaanisaako
 gaanisaamu
 gaanisaamuuko
@@ -5783,7 +5783,7 @@ gaanisaayooko
 gaanisaawo
 gaanisaawooko
 gaanisangako
-
+#
 gaaniseeko
 gaaniseemu
 gaaniseemuuko
@@ -5792,7 +5792,7 @@ gaaniseeyooko
 gaaniseewo
 gaaniseewooko
 gaaniseengako
-
+#
 gaanisizzaako
 gaanisizzaamu
 gaanisizzaamuuko
@@ -5801,7 +5801,7 @@ gaanisizzaayooko
 gaanisizzaawo
 gaanisizzaawooko
 gaanisizzangako
-
+#
 gaanirako
 gaaniramu
 gaaniramuuko
@@ -5810,7 +5810,7 @@ gaanirayooko
 gaanirawo
 gaanirawooko
 gaanirangako
-
+#
 gaanireko
 gaaniremu
 gaaniremuuko
@@ -5819,7 +5819,7 @@ gaanireyooko
 gaanirewo
 gaanirewooko
 gaanireengako
-
+#
 gaaniddeko
 gaaniddemu
 gaaniddemuuko
@@ -5828,10 +5828,8 @@ gaaniddeyooko
 gaaniddewo
 gaaniddewooko
 gaaniddeengako
-
-# ------------------------- #
-
-# ----------- okugaaya(to chew) -------------- #
+# ----------------------------------------------------------------------------------------------- #
+# --------------------------------- okugaaya(to chew) ------------------------------------------ #
 gaaya
 gaaye
 gaayizza
@@ -5998,9 +5996,8 @@ gaayireengayo
 gaayireengayooko
 gaayireengawo
 gaayireengawooko
-# ------------------------------------------------------------------ #
-
-# ----------- okugaba(to share) -------------- #
+# ------------------------------------------------------------------------------------------------- #
+# ---------------------------------- okugaba(to share) ---------------------------------------------- #
 gaba
 gabe
 gabye
@@ -6013,7 +6010,8 @@ gabisizza
 gabira
 gabire
 gabidde
-
+gabi/oo
+#
 gabako
 gabamu
 gabamuuko
@@ -6028,7 +6026,7 @@ gabangayo
 gabangayooko
 gabangawo
 gabangawooko
-
+#
 gabeko
 gabemu
 gabemuuko
@@ -6043,7 +6041,7 @@ gabengayo
 gabengayooko
 gabengaawo
 gabengawooko
-
+#
 gabyeeko
 gabyeemu
 gabyeemuuko
@@ -6053,7 +6051,7 @@ gabyewo
 gabyewooko
 gabyengako
 gabyengamu
-
+#
 gabibwako
 gabibwamu
 gabibwamuuko
@@ -6068,7 +6066,7 @@ gabibwangayo
 gabibwangayooko
 gabibwangawo
 gabibwangawooko
-
+#
 gabibweko
 gabibwemu
 gabibwemuuko
@@ -6082,7 +6080,7 @@ gabibwengamuuko
 gabibwengayo
 gabibwengayooko
 gabibwengaawo
-
+#
 gabiddwaako
 gabiddwaamu
 gabiddwaamuuko
@@ -6097,7 +6095,7 @@ gabiddwangayo
 gabiddwangayooko
 gabiddwangawo
 gabiddwangawooko
-
+#
 gabisaako
 gabisaamu
 gabisaamuuko
@@ -6112,7 +6110,7 @@ gabisangayo
 gabisangayooko
 gabisangawo
 gabisangawooko
-
+#
 gabiseeko
 gabiseemu
 gabiseemuuko
@@ -6127,7 +6125,7 @@ gabiseengayo
 gabiseengayooko
 gabiseengaawo
 gabiseengawooko
-
+#
 gabisizzaako
 gabisizzaamu
 gabisizzaamuuko
@@ -6142,7 +6140,7 @@ gabisizzangayo
 gabisizzangayooko
 gabisizzangawo
 gabisizzangawooko
-
+#
 gabirako
 gabiramu
 gabiramuuko
@@ -6157,7 +6155,7 @@ gabirangayo
 gabirangayooko
 gabirangawo
 gabirangawooko
-
+#
 gabireko
 gabiremu
 gabiremuuko
@@ -6172,7 +6170,7 @@ gabireengayo
 gabireengayooko
 gabireengaawo
 gabireengawooko
-
+#
 gabiddeko
 gabiddemu
 gabiddemuuko
@@ -6187,19 +6185,72 @@ gabiddeengayo
 gabiddeengayooko
 gabiddeengaawo
 gabiddeengawooko
-# ------------------------- #
-
-gabalema
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugabana(to share) --------------------------------------- #
 gabana
+gabane
+gabanye
 gabanya
-gabi
+gabanyizza
+gabanyiza
+gabanyize
+gabanibwa
+gabanibwe
+gabaniddwa
+gabanira
+gabanire
+gabanidde
+# -------------------------------------------------------------------------------------------------- #
+# ------------------------------- okugabula(to serve) --------------------------------------- #
 gabula
+gabule
+gabudde
+gabuza
+gabuze
+gabuzza
+gabulibwa
+gabulibwe
+gabuliddwa
+gabulira
+gabulire
+gabulidde
+gabuzi/oo
+# --------------------------------------------------------------------------------------------------------- #
 gagga
+# --------------------------------------- okugaggawala(to become rich) --------------------------------------- #
 gaggawala
+gaggawale
+gaggawade
+gaggawaza
+gaggawaze
+gaggawazza
+gaggawalira
+gaggawalire
+gaggawalidde
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugajambula(to murder) --------------------------------------- #
 gajambula
+gajambule
+gajambudde
+gajambuza
+gajambuze
+gajambuzza
+gajambulibwa
+gajambulibwe
+gajambuliddwa
+gajambulira
+gajambulire
+gajambulidde
+gajambuzi/oo
+# --------------------------------------------------------------------------------------------------------- #
+# ------------------------------------- okugalamira (to lie down) ------------------------------------------ #
 galamira
+galamire
+galamidde
 galamiza
-
+galamize
+galamizza
+# ----------------------------------------------------------------------------------------------------------- #
 # ---------- okugamba(to tell) ----------- #
 gamba
 gambe
