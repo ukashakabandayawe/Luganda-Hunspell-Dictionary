@@ -237,6 +237,7 @@ bajjiddwa
 bajjira
 bajjire
 bajjidde
+bazzi
 # ------------------------------------------------------------------------------------------------ #
 # ------------------------------- okubaka(to catch a projectile) --------------------------------- #
 baka
@@ -251,6 +252,7 @@ bakiddwa
 bakira
 bakire
 bakidde
+basi
 # ------------------------------------------------------------------------------------------------ #
 # ------------------------------ okubala(to count) ----------------------------------------------- #
 bala
@@ -265,6 +267,7 @@ baliddwa
 balira
 balire
 balidde
+bazi
 # ------------------------------------------------------------------------------------------------ #
 # --------------------------------- okubalaga(to be itchy) --------------------------------------- #
 balagala
@@ -3615,8 +3618,24 @@ kwekere
 kwekedde
 kwesi
 # -----------------------------------------------------------------------------------------------------#
-
-ekwekula
+# ------------------------------- okukwekuka(to unhide) -------------------------------------------- #
+kwekula
+kwekule
+kwekudde
+kwekuza
+kwekuze
+kwekuzza
+kwekulwa
+kwekulwe
+kwekuddwa
+kwekulibwa
+kwekulibwe
+kwekuliddwa
+kwekulira
+kwekulire
+kwekulidde
+kwekuzi
+# --------------------------------------------------------------------------------------------------------- #
 eky
 eky'okunywa
 eky'omu
@@ -3664,9 +3683,12 @@ ekyoya
 ekyuma
 ely
 elya
-emala
-emalirira
-ematira
+# --------------------------------------- okumalirira(to intend) --------------------------------------- #
+malirira
+malirire
+maliridde
+malirizi
+# --------------------------------------------------------------------------------------------------------- #
 embaata
 embaga
 embalaasi
@@ -3705,8 +3727,12 @@ emmotoka
 emmunye
 emmunyeenye
 emmwanyi
-emotya
-emotymotya
+# --------------------------------------- **okwemotya(to be shy) --------------------------------------- #
+motya
+motye
+motyezza
+motyamotya
+# -----------------------------------------------------------------------------------------------------#
 empaanyisaganya
 empafu
 empagi
@@ -3734,9 +3760,37 @@ empummumpu
 empungu
 empuuta
 emu
-emulugunya
-emulula
+# --------------------------------------- okwemulugunya(to complain) --------------------------------------- #
+mulugunya
+mulugunye
+mulugunyizza
+mulugunyiza
+mulugunyize
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwemulula(to creep away) --------------------------------------- #
+mulula
+mulule
+muludde
+mululira
+mululire
+mululidde
+# --------------------------------------------------------------------------------------------------------- #
 emundu
+# --------------------------------------- okwenda(to fornicate) --------------------------------------- #
+nda
+nde
+nze
+nzesa
+nzese
+nzesezza
+ndebwa
+ndebwe
+ndeddwa
+ndera
+ndere
+ndedde
+nzi
+# ------------------------------------------------------------------------------------------------------ #
 enda
 endabirwamu
 endagaano
@@ -3756,7 +3810,6 @@ enduula
 endwadde
 endya
 endyambi
-enenya
 enfa
 enfaana
 enfaanana
@@ -4131,7 +4184,17 @@ eppeera
 eppeesa
 era
 eraga
-eraliikirira
+# ----------------------------------------- okweraliikira(to be worried) ----------------------------------------- #
+raliikirira
+raliikirire
+raliikiridde
+raliikiriza
+raliikirize
+raliikirizza
+raliikirirwa
+raliikirirwe
+raliikiriddwa
+# --------------------------------------------------------------------------------------------------------- #
 eri
 eriggwa
 erigomba
@@ -4140,14 +4203,44 @@ erindaazi
 erinnya
 erinnya/N5yy
 erinnyo
-eronda
-erondalonda
-erumika
-erumya
+# ------------------------------------ okulondalonda(to pick here and there) ------------------------------------ #
+londalonda
+londelonde
+lonzelonze
+# ---------------------------------------------------------------------------------------------------------- #
+# ------------------------------------- okulumika(to overhear) --------------------------------------- #
+lumika
+lumike
+lumise
+lumikibwa
+lumikibwe
+lumikiddwa
+lumikira
+lumikire
+lumikidde
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okulumya(to hurt someone) --------------------------------------- #
+lumya
+lumye
+lumizza
+# --------------------------------------------------------------------------------------------------------- #
 eryanda
 eryato/N5zz
 eryenvu/N5yy
-esammula
+# --------------------------------------- okusammula(to shake off) -------------------------------------- #
+sammula
+sammule
+sammudde
+sammuza
+sammuze
+sammuzza
+sammulibwa
+sammulibwe
+sammuliddwa
+sammulira
+sammulire
+sammulidde
+# --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okwesiga(to trust) --------------------------------------- #
 siga
 sige
@@ -4158,6 +4251,7 @@ sigibbwa
 sigira
 sigire
 sigidde
+sigwa
 #
 sigako
 sigamu
@@ -4234,14 +4328,28 @@ sigiddwaayo
 sigiddwaayooko
 sigiddwaawo
 sigiddwaawooko
-# ------------------------------------------------------------------------------------ # 
-esigwa
-esiiga
-esiima
-esimbawo
+# ----------------------------------------------------------------------------------------------------------- # 
+# --------------------------------------- okusiiga(to smear/infect) --------------------------------------- #
+siiga
+siige
+siize
+siigisa
+siigise
+siigisizza
+siigibwa
+siigibwe
+siigibbwa
+siigiddwa
+siigira
+siigire
+siigidde
+# ---------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwesimbawo(to contest) ------------------------------------------ #
+simbawo
+simbewo
+sibyeewo
+# --------------------------------------------------------------------------------------------------------- #
 esimbu
-esirisa
-esogga
 essa
 essaala
 essaati
@@ -4261,9 +4369,23 @@ essowani
 essubi
 essuubi
 essuula
-esunga
+# --------------------------------------- okusunga(to taunt) ------------------------------------------ #
+sunga
+sunge
+sunze
+sungisa
+sungise
+sungisizza
+sungibwa
+sungibwe
+sungiddwa
+sungira
+sungire
+sungidde
+sunzi
+# ------------------------------------------------------------------------------------------------------ #
 esweeta
-#----------------------------------------- okwetaaga(to need) ----------------------------------------- #
+# ----------------------------------------- okwetaaga(to need) ----------------------------------------- #
 taaga
 taage
 taaze
@@ -4402,24 +4524,100 @@ taagiddeeyooko
 taagiddeewo
 taagiddeewooko
 # ----------------------------------------------------------------------------------------- #
-
-etaba
-etala
-etamwa
-etegereza
-etereka
-etikka
-etonda
-etooloola
-etoowaza
-etta
+# --------------------------------------- okutaba(to participate) --------------------------------------- #
+taba
+tabe
+tabye
+tabisa
+tabise
+tabisizza
+tabibwa
+tabibwe
+tabiddwa
+tabira
+tabire
+tabidde
+tabi
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okutala(to move about) --------------------------------------- #
+tala
+tale
+taze
+talisa
+talise
+talisizza
+talibwa
+talibwe
+taliddwa
+talira
+talire
+talidde
+tazi
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwetegereza(to pay attention) --------------------------------------- #
+tegereza
+tegereze
+tegerezza
+tegerezesa
+tegerezese
+tegerezesezza
+tegerezebwa
+tegerezebwe
+tegerezebbwa
+tegerezeddwa
+tegerezera
+tegerezere
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwetooloola(to go around) --------------------------------------- #
+tooloola
+tooloole
+tooloodde
+toolooza
+toolooze
+tooloozza
+tooloolwa
+tooloolwe
+toolooddwa
+tooloolebwa
+tooloolebwe
+tooloolebbwa
+toolooleddwa
+tooloolera
+tooloolere
+toolooledde
+tooloozi
+# ---------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwetoowaza(to be humble) --------------------------------------- #
+toowaza
+toowaze
+toowazza
+toowazisa
+toowazise
+toowazisizza
+toowazibwa
+toowazibwe
+toowaziddwa
+# ---------------------------------------------------------------------------------------------------------- #
 ettaala
 ettaayi
 ettabi
 ettaka
 ettale
 ettama
-ettanira
+# ------------------------------------- okwettanira(to often like) ------------------------------------- #
+ttanira
+ttanire
+ttanidde
+ttaniza
+ttanize
+ttanizza
+ttanirwa
+ttanirwe
+ttaniriddwa
+ttanibwa
+ttanibwe
+ttanibbwa
+# ------------------------------------------------------------------------------------------------------------#
 ettawulo
 etteeka
 ettemu
@@ -4439,29 +4637,78 @@ ettwale
 etuga
 eviivi
 evinnyo
-evuunika
+# ---------------------------------------- okuvuunika(to turn upside down) ---------------------------------------- #
+vuunika
+vuunike
+vuunise
+vuunikisa
+vuunikise
+vuunikisizza
+vuunikibwa
+vuunikibwe
+vuunikiddwa
+vuunikira
+vuunikire
+vuunikidde
+vuunisi
+# --------------------------------------------------------------------------------------------------------- #
 evviini
 evviivi
 evvu
 evvuuvuumira
-ewakana
-ewandiisa
-ewanika
 eweema
-eweta
-ewola
-ewombeeka
-ewulira
-ewunya
-ewuunyisa
+# --------------------------------------- okuwombeeka(to humble) --------------------------------------- #
+wombeeka
+wombeeke
+wombeese
+wombeekebwa
+wombeekebwe
+wombekeddwa
+wombeekera
+wombeekere
+wombeekedde
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwewunya(to be surprised) --------------------------------------- #
+wunya
+wunye
+wunyizza
+wuunyisa
+wuunyise
+wunyisizza
+wuunyibwa
+wuunyibwe
+wuunyiddwa
+wuunyiza
+wuunyize
+# ---------------------------------------------------------------------------------------------------------- #
 ewuzi
 ey
 eya
 eyagala
 eyagaliza
 eyagazi
-eyambula
-eyanjula
+# ---------------------------------------- okweyambula(to undress) --------------------------------------- #
+yambula
+yambule
+yambudde
+yambuza
+yambuze
+yambuzza
+yambulira
+yambulire
+yambulidde
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okweyanjula(to introduce oneself) --------------------------------------- #
+yanjula
+yanjule
+yanjudde
+yanjuza
+yanjuze
+yanjuzza
+yanjulira
+yanjulire
+yanjulidde
+# ------------------------------------------------------------------------------------------------------- #
 # ------------------------------------ okweyanza(to thank) ------------------------------------ #
 yanza
 yanze
@@ -4550,18 +4797,44 @@ yanzibbwaawooko
 yanzibbwanga
 # ---------------------------------------------------------------------------------- #
 eyattayimu
-eyazika
-eyimbamu
-eyisa
+# --------------------------------------- okweyazika(to borrow) --------------------------------------- #
+yazika
+yazike
+yazise
+yazisa
+yazisizza
+yazikibwa
+yazikibwe
+yazikiddwa
+yazikira
+yazikire
+yazikidde
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okweyimbamu(to challenge) --------------------------------------- #
+yimbamu
+yimbemu
+yimbyemu
+# --------------------------------------------------------------------------------------------------------- #
 eyo
 eyokya
-eyongera
-eyunya
+# ---------------------------------------- okweyongera(to increase) --------------------------------------- #
+yongera
+yongere
+yongedde
+yongeza
+yongeze
+yongezza
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okweyuna(to hasten) --------------------------------------------- #
+yuna
+yune
+yunye
+# --------------------------------------------------------------------------------------------------------- #
 ez
 ez
 eza
 eza
-eziike
+ezzike
 ezziga
 fa
 faanana
