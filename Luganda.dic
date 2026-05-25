@@ -6251,7 +6251,7 @@ galamiza
 galamize
 galamizza
 # ----------------------------------------------------------------------------------------------------------- #
-# ---------- okugamba(to tell) ----------- #
+# -------------------------------------- okugamba(to tell) --------------------------------------------- #
 gamba
 gambe
 gambye
@@ -6264,7 +6264,8 @@ gambisizza
 gambira
 gambire
 gambidde
-
+gambi/oo
+#
 gambako
 gambamu
 gambamuuko
@@ -6279,7 +6280,7 @@ gambangayo
 gambangayooko
 gambangawo
 gambangawooko
-
+#
 gambeko
 gambemu
 gambemuuko
@@ -6294,7 +6295,7 @@ gambeengayo
 gambeengayooko
 gambenawo
 gambeengawooko
-
+#
 gambyeeko
 gambyeemu
 gambyeemuuko
@@ -6309,7 +6310,7 @@ gambyeengayo
 gambyeengayooko
 gambyeengawo
 gambyeengawooko
-
+#
 gambibwako
 gambibwamu
 gambibwamuuko
@@ -6324,7 +6325,7 @@ gambibwangayo
 gambibwangayooko
 gambibwangawo
 gambibwangawooko
-
+#
 gambibweko
 gambibwemu
 gambibwemuuko
@@ -6339,7 +6340,7 @@ gambibwengayo
 gambibwengayooko
 gambibwengaawo
 gambibwengawooko
-
+#
 gambiddwaako
 gambiddwaamu
 gambiddwaamuuko
@@ -6354,7 +6355,7 @@ gambiddwangayo
 gambiddwangayooko
 gambiddwangawo
 gambiddwangawooko
-
+#
 gambisaako
 gambisaamu
 gambisaamuuko
@@ -6369,7 +6370,7 @@ gabisangayo
 gabisangayooko
 gabisangawo
 gabisangawooko
-
+#
 gambiseeko
 gambiseemu
 gambiseemuuko
@@ -6384,7 +6385,7 @@ gambiseengayo
 gambiseengayooko
 gambiseengaawo
 gambiseengawooko
-
+#
 gambisizzaako
 gambisizzaamu
 gambisizzaamuuko
@@ -6393,7 +6394,7 @@ gambisizzaayooko
 gambisizzaawo
 gambisizzaawooko
 gambisizzangako
-
+#
 gambirako
 gambiramu
 gambiramuuko
@@ -6408,7 +6409,7 @@ gambirangayo
 gambirangayooko
 gambirangawo
 gambirangawooko
-
+#
 gambireko
 gambiremu
 gambiremuuko
@@ -6423,7 +6424,7 @@ gambireengayo
 gambireengayooko
 gambireengaawo
 gambireengawooko
-
+#
 gambiddeko
 gambiddemu
 gambiddemuuko
@@ -6432,38 +6433,168 @@ gambiddeyooko
 gambiddewo
 gambiddewooko
 gambiddeengako
-# ------------------------- #
-
+# ------------------------------------------------------------------------------------------- #
 ganyula
+# --------------------------------------- okuganyulwa(to gain) --------------------------------------- #
 ganyulwa
+ganyulwe
+ganyuddwa
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okuganza(to date) --------------------------------------- #
 ganza
+ganze
+ganzizza
+ganzibwa
+ganzibwe
+ganziddwa
+ganzi/oo
+# --------------------------------------------------------------------------------------------- #
+# -------------------------------------- **okuganzika(to place something onto something) --------------------------------------- #
 ganzika
+ganzike
+ganzise
+# --------------------------------------------------------------------------------------------- #
 gatonnya
+# --------------------------------------- okugatta(to add) --------------------------------------- #
 gatta
 gatte
+gasse
+gattisa
+gattise
+gattisizza
+gattibwa
+gattibwe
+gattiddwa
+gattibbwa
+gattira
+gattire
+gattidde
+gassi/oo
+# --------------------------------------------------------------------------------------------- #
 gavumenti
+# --------------------------------------- okugaya(to undermine) --------------------------------------- #
 gaya
+gaye
+gayizza
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugayaala(to become lazy) --------------------------------
 gayaala
-gayaavu
+gayaale
+gayadde
+gayaaza
+gayaaze
+gayaazizza
+gayaalilira
+gayaalilire
+gayaalidde  
+gayaavu/oo
+# --------------------------------------------------------------------------------------------- #
 gazi
+# --------------------------------------- **okugaziwa(to become spacious) --------------------------------------- #
 gaziwa
+gaziwe
+gaziye
+gaziya
+gaziyizza
+gaziyiza
+gaziyize
+gaziyira
+gaziyire
+gaziyidde
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugeegeenya(to mimic) --------------------------------------- #
 geegeenya
+geegeenye
+geegeenyezza
+geegeenyeza
+geegeenyeze
+geegeenyebwa
+geegeenyebwe
+geegeenyeddwa
+geegeenyera
+geegeenyere
+geegeenyedde
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugejja(to become fat) --------------------------------------- #
 gejja
-gema
+gejje
+gezze
+gejjesa
+gejjese
+gejjesezza
+gejjera
+gejjere
+gejjedde
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugenda(to go) --------------------------------------- #
 genda
+gende
+genze
+gendesa
+gendese
+gendisezza
+gendera
+gendere
+gendedde
+genzi/oo
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugenderera(to intend) --------------------------------------- #
 genderera
+genderere
+genderedde
+# ------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugenyiwa(to become a visitor) --------------------------------------- #
 genyiwa
+genyiwe
+genyiye
+genyiwaza
+genyiwaze
+genyiwazza
 genyiwala
+genyiwale
+genyiwadde
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugeya(to backbite) --------------------------------------- #
 geya
+geye
+geyezza
+geyesa
+geyese
+geyesezza
+geyebwa
+geyebwe
+geyeddwa
+geyera
+geyere
+geyedde
+geyeza
+geyeze
+# --------------------------------------------------------------------------------------------------- #             
 geyeena
+# --------------------------------------- okugeza(to take an example) --------------------------------------- #
 geza
+geze
+gezezza
+gezesa
+gezese
+gezesezza
+gezesebwa
+gezesebwe
+gezeseddwa
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugezaako(to try) ---------------------------------------------- #
 gezaako
+gezeeko
+gezezaako
+gezesaako
+gezeseeko
+gezesezaako
+# --------------------------------------------------------------------------------------------------------- #
 gezi
 ggaamu
 ggalaama
 ggalagi
-
-# --------- okuggala(to close) -------------- #
+# -------------------------------------- okuggala(to close) ----------------------------------------------- #
 ggala
 ggale
 ggadde
@@ -6476,7 +6607,9 @@ ggazza
 ggalira
 ggalire
 ggalidde
-
+ggazi/oo
+#
+ggalaako
 ggalako
 ggalamu
 ggalamuuko
@@ -6491,7 +6624,7 @@ ggalangayo
 ggalangayooko
 ggangawo
 ggalangawooko
-
+#
 ggaleko
 ggalemu
 ggalemuuko
@@ -6506,7 +6639,7 @@ ggalengayo
 ggalengayooko
 ggalengawo
 ggalengawooko
-
+#
 ggaddeko
 ggaddemu
 ggaddemuuko
@@ -6521,7 +6654,7 @@ ggaddengayo
 ggaddengayooko
 ggaddengawo
 ggaddengawooko
-
+#
 ggalwaako
 ggalwaamu
 ggalwaamuuko
@@ -6537,7 +6670,7 @@ ggalwangayo
 ggalwangayooko
 ggalwangawo
 ggalwangawooko
-
+#
 ggalweko
 ggalwemu
 ggalwemuuko
@@ -6552,7 +6685,7 @@ ggalwengayo
 ggalwengayooko
 ggalwengawo
 ggalwengawooko
-
+#
 ggaddwaako
 ggaddwaamu
 ggaddwaamuuko
@@ -6562,7 +6695,7 @@ ggaddwaawo
 ggaddwaawooko
 ggaddwangako
 ggaddwangamu
-
+#
 ggazaako
 ggazaamu
 ggazaamuuko
@@ -6577,7 +6710,7 @@ ggazangayo
 ggazangayooko
 ggazangawo
 ggazangawooko
-
+#
 ggazeeko
 ggazeemu
 ggazeemuuko
@@ -6592,7 +6725,7 @@ ggazeengayo
 ggazeengayooko
 ggazeengawo
 ggazeengawooko
-
+#
 ggazzaako
 ggazzaamu
 ggazzaamuuko
@@ -6607,7 +6740,7 @@ ggazzaangayo
 ggazzaangayooko
 ggazzaangawo
 ggazzaangawooko
-
+#
 ggalirako
 ggaliramu
 ggaliramuuko
@@ -6622,7 +6755,7 @@ ggalirangayo
 ggalirangayooko
 ggalirangawo
 ggalirangawooko
-
+#
 ggalireko
 ggaliremu
 ggaliremuuko
@@ -6637,7 +6770,7 @@ ggalireengayo
 ggalireengayooko
 ggalireengawo
 ggalireengawooko
-
+#
 ggaliddeko
 ggaliddemu
 ggaliddemuuko
@@ -6652,14 +6785,52 @@ ggaliddeengayo
 ggaliddeengayooko
 ggaliddeengawo
 ggaliddeengawooko
-# ------------------------- #
-
+# ---------------------------------------------------------------------------------------------------------- #
 ggalubindi
+# --------------------------------------- okuggwa(to come to an end) -------------------------------------------------- #
 ggwa
-ggwaamu
 ggwe
+wedde
+ggwera
+ggwere
+ggweredde
+# ----------------------------------------------------------------------------------------------------------- #
+# ------------------------------- okuggwaamu(to become finished) ----------------------------------------------------- #
+ggwaamu
+ggweemu
+weddeemu
+ggweramu
+ggweremu
+ggwereddemu
+# ----------------------------------------------------------------------------------------------------------- #
+ggwe
+# --------------------------------------- okuggya(to become ready) --------------------------------------- #
 ggya
+ggye
+yidde
+ggyiisa
+ggyiise
+ggyiisizza
+ggyiira
+ggyiire
+ggyiiridde
+# ---------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okuginga(to forge) ---------------------------------------------- #
 ginga
+ginge
+ginze
+gingisa
+gingise
+gingisizza
+gingibwa
+gingibwe
+gingiddwa
+gingira
+gingire
+gingidde
+ginzi/oo
+# --------------------------------------------------------------------------------------------------------- #
+
 gira
 Girimani
 goba
