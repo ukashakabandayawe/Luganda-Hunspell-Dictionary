@@ -7095,12 +7095,38 @@ gyaayo
 # ------------------------------------------------------------------------------------------------------------ #
 gye
 heedimasita
+# ------------------------------------- okujaajaamya(to misuse) ----------------------------------------- #
 jaajaamya
+jaajaamye
+jaajaamizza
+jaajaamiza
+jaajaamize
+jaajaamira
+jaajaamire
+jaajaamidde
+# -------------------------------------------------------------------------------------------------------------- #
+# ------------------------------------------ okujaganya(to celebrate) ---------------------------------------------- #
 jaganya
+jaganye
+jaganyizza
+# ------------------------------------------------------------------------------------------------------------- #
 jangu
+# --------------------------------------- okujeema(to disobey) ------------------------------------------------ #
 jeema
+jeeme
+jeemye
+jeemesa
+jeemese
+jeemesezza
+jeemebwa
+jeemebwe
+jeemeddwa
+jeemera
+jeemere
+jeemedde
+jeemu/oo
+# -------------------------------------------------------------------------------------------------------------- #
 jeemu
-jinga
 # ------------------------------------- okujja(to come and to remove) ----------------------------------------- #
 jja/NAPS
 jje/SB
@@ -7276,11 +7302,10 @@ jjiddeengayooko
 jjiddeengawo
 jjiddeengawooko
 # ----------------------------------------------------------------------------------------------------------- #
-
 # ------------------------------- okuja(to fit) ---------------------------------------------------------- #
 ja
 je
-
+#
 jaako
 jaamu
 jaamuuko
@@ -7295,7 +7320,7 @@ jangayo
 jangayooko
 jangawo
 jangawooko
-
+#
 jeeko
 jeemu
 jeemuuko
@@ -7310,10 +7335,9 @@ jeengayo
 jeengayooko
 jengawo
 jeengawooko
-# ------------------------- #
+# ---------------------------------------------------------------------------------------------------------- #
 jjajja
 jjajjange
-
 # ---------- okujjanjaba(to treat a patient) ----------- #
 jjanjaba
 jjanjabe
@@ -7327,7 +7351,7 @@ jjanjabisizza
 jjanjabira
 jjanjabire
 jjanjabidde
-
+#
 jjanjabako
 jjanjabamu
 jjanjabamuuko
@@ -7335,7 +7359,7 @@ jjanjabayo
 jjanjabayooko
 jjanjabawawo
 jjanjabawooko
-
+#
 jjanjabeko
 jjanjabemu
 jjanjabemuuko
@@ -7350,7 +7374,7 @@ jjanjabeengayo
 jjanjabeengayooko
 jjanjabengawo
 jjanjabengawooko
-
+#
 jjanjabyeeko
 jjanjabyeemu
 jjanjabyeemuuko
@@ -7358,7 +7382,7 @@ jjanjabyeeyo
 jjanjabyeeyooko
 jjanjabyeewo
 jjanjabyeewooko
-
+#
 jjanjabwako
 jjanjabwamu
 jjanjabwamuuko
@@ -7371,7 +7395,7 @@ jjanjabwangamu
 jjanjabwangamuuko
 jjanjabwangayo
 jjanjabwangayooko
-
+#
 jjanjabweko
 jjanjabwemu
 jjanjabwemuuko
@@ -7382,7 +7406,7 @@ jjanjabwewooko
 jjanjabwengako
 jjanjabwengamu
 jjanjabwengamuuko
-
+#
 jjanjabiddwako
 jjanjabiddwamu
 jjanjabiddwaamuuko
@@ -7390,7 +7414,7 @@ jjanjabiddwayo
 jjanjabiddwayooko
 jjanjabiddwaawo
 jjanjabiddwaawooko
-
+#
 jjanjabisaako
 jjanjabisaamu
 jjanjabisaamuuko
@@ -7398,7 +7422,7 @@ jjanjabisaayo
 jjanjabisaayooko
 jjanjabisaawo
 jjanjabisaawooko
-
+#
 jjanjabiseeko
 jjanjabiseemu
 jjanjabiseemuuko
@@ -7407,7 +7431,7 @@ jjanjabiseeyooko
 jjanjabiseewo
 jjanjabiseewooko
 jjanjabiseengako
-
+#
 jjanjabisizzaako
 jjanjabisizzaamu
 jjanjabisizzaamuuko
@@ -7415,7 +7439,7 @@ jjanjabisizzaayo
 jjanjabisizzaayooko
 jjanjabisizzaawo
 jjanjabisizzaawooko
-
+#
 jjanjabirako
 jjanjabiramu
 jjanjabiramuuko
@@ -7423,7 +7447,7 @@ jjanjabirayo
 jjanjabirayooko
 jjanjabirawo
 jjanjabirawooko
-
+#
 jjanjabireko
 jjanjabiremu
 jjanjabiremuuko
@@ -7437,7 +7461,7 @@ jjanjabireengamuuko
 jjanjabireengayo
 jjanjabireengayooko
 jjanjabireengawo
-
+#
 jjanjabiddeko
 jjanjabiddemu
 jjanjabiddemuuko
@@ -7445,12 +7469,20 @@ jjanjabiddeyo
 jjanjabiddeyooko
 jjanjabiddewo
 jjanjabiddewooko
-# ------------------------- #
-
+# ---------------------------------------------------------------------------------------------------------- #
 jjo
+# --------------------------------------- okujjira(to remember) ----------------------------------------------- #
 jjukira
+jjukire
+jjjukidde
 jjukiza
-# --------------- okujjula(to fill/serve food) -------------- #
+jjukize
+jjukizza
+jjukirwa
+jjukirwe
+jjukiddwa
+# ------------------------------------------------------------------------------------------------------------- #
+# ----------------------------------- okujjula(to fill/serve food) ----------------------------------------------- #
 jjula
 jjule
 jjudde
@@ -7463,7 +7495,7 @@ jjuzza
 jjulira
 jjulire
 jjulidde
-
+#
 jjulako
 jjulamu
 jjulangako
@@ -7473,7 +7505,7 @@ jjulangayo
 jjulangayooko
 jjulangawo
 jjulangawooko
-
+#
 jjuleko
 jjulemu
 jjulemuuko
@@ -7483,7 +7515,7 @@ jjulewo
 jjulewooko
 jjuleengako
 jjuleengamu
-
+#
 jjuddeko
 jjuddemu
 jjuddemuuko
@@ -7494,7 +7526,7 @@ jjuddeengamuuko
 jjuddeengayo
 jjuddeengayooko
 jjuddeengawo
-
+#
 jjulwaako
 jjulwaamu
 jjulwaamuuko
@@ -7507,7 +7539,7 @@ jjulwangayo
 jjulwangayooko
 jjulwangawo
 jjulwangawooko
-
+#
 jjulweeko
 jjulweemu
 jjulweemuuko
@@ -7516,13 +7548,13 @@ jjulweengamu
 jjulweengamuuko
 jjulwengawo
 jjulwengawooko
-
+#
 jjuddwaako
 jjuddwaamu
 jjuddwaamuuko
 jjuddwaawo
 jjuddwaawooko
-
+#
 jjuzaako
 jjuzaamu
 jjuzaamuuko
@@ -7537,7 +7569,7 @@ jjuzangayo
 jjuzangayooko
 jjuzangawo
 jjuzangawooko
-
+#
 jjuzeeko
 jjuzeemu
 jjuzeemuuko
@@ -7551,7 +7583,7 @@ jjuzeengamuuko
 jjuzeengayo
 jjuzeengayooko
 jjuzengawo
-
+#
 jjuzzaako
 jjuzzaamu
 jjuzzaamuuko
@@ -7566,7 +7598,7 @@ jjuzzangayo
 jjuzzangayooko
 jjuzzangawo
 jjuzzangawooko
-
+#
 jjulirako
 jjuliramu
 jjuliramuuko
@@ -7581,7 +7613,7 @@ jjulirangayo
 jjulirangayooko
 jjulirangawo
 jjulirangawooko
-
+#
 jjulireko
 jjuliremu
 jjuliremuuko
@@ -7596,7 +7628,7 @@ jjulireengayo
 jjulireengayooko
 jjulireengawo
 jjulireengawooko
-
+#
 jjuliddeko
 jjuliddemu
 jjuliddemuuko
@@ -7604,12 +7636,34 @@ jjuliddeyo
 jjuliddeyooko
 jjuliddewo
 jjuliddewooko
-
-# ------------------------- #
-
+# ------------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okujjumbira(to participate) ----------------------------------------------- #
 jjumbira
+jjumbire
+jjumbidde
+jjumbiza
+jjumbize
+jjumbizza
+jjumbirwa
+jjumbirwe
+jjumbiddwa
+jjumbize/oo
+# ------------------------------------------------------------------------------------------------------------- #
+# ----------------------------------- okujolonga(to belittle) ----------------------------------------------- #
 jolonga
-# -------------- okujooga(to tease/disrespect) -------------- #
+jolonge
+jolonze
+jolongesa
+jolongese
+jolongesezza
+jolongebwa
+jolongebwe
+jolongeddwa
+jolongera
+jolongere
+jolongedde
+# ------------------------------------------------------------------------------------------------------------- #
+# ------------------------------- okujooga(to tease/disrespect) -------------------------------------------------- #
 jooga
 jooge
 jooze
@@ -7622,7 +7676,7 @@ joogesezza
 joogera
 joogere
 joogedde
-
+#
 joogako
 joogamu
 joogamuuko
@@ -7632,7 +7686,7 @@ joogawo
 joogawooko
 joogangako
 joogangamu
-
+#
 joogeko
 joegemu
 joogemuuko
@@ -7641,7 +7695,7 @@ joogeyooko
 joogewo
 joogewooko
 joogengako
-
+#
 joozeeko
 joozeemu
 joozeemuuko
@@ -7649,7 +7703,7 @@ joozeeyo
 joozeeyooko
 joozeewo
 joozeewooko
-
+#
 joogebwako
 joogebwamu
 joogebwamuuko
@@ -7658,7 +7712,7 @@ joogebwayooko
 joogebwawo
 joogebwawooko
 joogebwangako
-
+#
 joogebweko
 joogebwemu
 joogebwemuuko
@@ -7667,7 +7721,7 @@ joogebweyooko
 joogebwewo
 joogebwewooko
 joogebwengako
-
+#
 joogeddwako
 joogeddwamu
 joogeddwaamuuko
@@ -7675,7 +7729,7 @@ joogeddwaayo
 joogeddwayooko
 joogeddwaawo
 joogeddwaawooko
-
+#
 joogesaako
 joogesamu
 joogesaamuuko
@@ -7684,7 +7738,7 @@ joogesayooko
 joogesawo
 joogesawooko
 joogesangako
-
+#
 joogeseeko
 joogeseemu
 joogeseemuuko
@@ -7693,7 +7747,7 @@ joogeseeyooko
 joogeseewo
 joogeseewooko
 joogeseengako
-
+#
 joogesezzaako
 joogesezzaamu
 joogesezzaamuuko
@@ -7702,7 +7756,7 @@ joogesezzaayooko
 joogesezzaawo
 joogesezzaawooko
 joogesezzangako 
-
+#
 joogerako
 joogeramu
 joogeramuuko
@@ -7711,7 +7765,7 @@ joogerayooko
 joogerawo
 joogerawooko
 joogerangako
-
+#
 joogereko
 joogeremu
 joogeremuuko
@@ -7720,7 +7774,7 @@ joogereyooko
 joogerewo
 joogerewooko
 joogereengako
-
+#
 joogeddeko
 joogeddemu
 joogeddemuuko
@@ -7728,12 +7782,20 @@ joogeddeyo
 joogeddeyooko
 joogeddewo
 joogeddewooko
-# ------------------------- #
-
+# ----------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okujulira(to witness) ----------------------------------------------- #
 julira
+julire
+julidde
 juliza
-
-# -------------- okukaaba(to cry) -------------- #
+julize
+julizza
+julirwa
+julirwe
+juliddwa
+julizi/oo
+# ------------------------------------------------------------------------------------------------------------- #
+# -------------------------------------- okukaaba(to cry) ----------------------------------------------------- #
 kaaba
 kaabe
 kaabye
@@ -7745,7 +7807,7 @@ kaabiddwa
 kaabira
 kaabire
 kaabidde
-
+#
 kaabako
 kaabamu
 kaabamuuko
@@ -7756,7 +7818,7 @@ kaabawooko
 kaabangako
 kaabangamu
 kaabangamuuko
-
+#
 kaabeko
 kaabemu
 kaabemuuko
@@ -7766,7 +7828,7 @@ kaabewo
 kaabewooko
 kaabeengako
 kaabeengamu
-
+#
 kaabyeeko
 kaabyeemu
 kaabyeemuuko
@@ -7774,7 +7836,7 @@ kaabyeeyo
 kaabyeeyooko
 kaabyeewo
 kaabyeewooko
-
+#
 kaabirako
 kaabiramu
 kaabiramuuko
@@ -7783,7 +7845,7 @@ kaabirayooko
 kaabirawo
 kaabirawooko
 kaabirangako
-
+#
 kaabireko
 kaabiremu
 kaabiremuuko
@@ -7792,7 +7854,7 @@ kaabireyooko
 kaabirewo
 kaabirewooko
 kaabireengako
-
+#
 kaabiddeko
 kaabiddemu
 kaabiddemuuko
@@ -7800,8 +7862,7 @@ kaabiddeyo
 kaabiddeyooko
 kaabiddewo
 kaabiddewooko
-# ------------------------- #
-
+# ----------------------------------------------------------------------------------------------------- #
 kaabuvubuka
 kaabuyonjo
 kaakati
@@ -7809,7 +7870,6 @@ kaamulali
 kaasa
 kaasi
 kaawa
-
 # ------------- okukaayana(to argue) -------------- #
 kaayana
 kaayane
