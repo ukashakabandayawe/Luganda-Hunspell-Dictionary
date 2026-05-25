@@ -7869,8 +7869,18 @@ kaakati
 kaamulali
 kaasa
 kaasi
+# -------------------------------- okukaawa(to be bitter) --------------------------------------------- #
 kaawa
-# ------------- okukaayana(to argue) -------------- #
+kaawe
+kaaye
+kaayisa
+kaayise
+kaayisizza
+kaayira
+kaayire
+kaayidde
+# ------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------- okukaayana(to argue) ----------------------------------------------- #
 kaayana
 kaayane
 kaayanye
@@ -7881,7 +7891,7 @@ kaayanyizza
 kaayanira
 kaayanire
 kaayanidde
-
+#
 kaayanako
 kaayanamu
 kaayanamuuko
@@ -7890,7 +7900,7 @@ kaayanangamu
 kaayanangamuuko
 kaayanangayo
 kaayanangayooko
-
+#
 kaayaneko
 kaayanemu
 kaayanemuuko
@@ -7899,7 +7909,7 @@ kaayanengamu
 kaayanengamuuko
 kaayanengayo
 kaayanengayooko
-
+#
 kaayanyeeko
 kaayanyeemu
 kaayanyeemuuko
@@ -7908,7 +7918,7 @@ kaayanyengamu
 kaayanyengamuuko
 kaayanyengayo
 kaayanyengayooko
-
+#
 kaayanirwaako
 kaayanirwaamu
 kaayanirwaamuuko
@@ -7916,7 +7926,7 @@ kaayanirwangamu
 kaayanirwangamuuko
 kaayanirwangawo
 kaayanirwangawooko
-
+#
 kaayanirweko
 kaayanirwemu
 kaayanirwemuuko
@@ -7925,7 +7935,7 @@ kaayanirwengamu
 kaayanirwengamuuko
 kaayanirwengawo
 kaayanirwengawooko
-
+#
 kaayanyaako
 kaayanyamu
 kaayanyamuuko
@@ -7936,7 +7946,7 @@ kaayanyangako
 kaayanyangamu
 kaayanyangamuuko
 kaayanyangawo
-
+#
 kaayanyizzaako
 kaayanyizzaamu
 kaayanyizzaamuuko
@@ -7945,7 +7955,7 @@ kaayanyizzangamu
 kaayanyizzangamuuko
 kaayanyizzangayo
 kaayanyizzangawo
-
+#
 kaayanirako
 kaayaniramu
 kaayaniramuuko
@@ -7960,7 +7970,7 @@ kaayanirangayo
 kaayanirangayooko
 kaayanirangawo
 kaayanirangawooko
-
+#
 kaayanireko
 kaayaniremu
 kaayaniremuuko
@@ -7975,7 +7985,7 @@ kaayanireengayo
 kaayanireengayooko
 kaayanireengawo
 kaayanireengawooko
-
+#
 kaayaniddeko
 kaayaniddemu
 kaayaniddemuuko
@@ -7983,7 +7993,7 @@ kaayaniddeyo
 kaayaniddeyooko
 kaayaniddewo
 kaayaniddewooko
-
+#
 kaayaniddeeko
 kaayaniddeemu
 kaayaniddeemuuko
@@ -7991,23 +8001,43 @@ kaayaniddeeyo
 kaayaniddeeyooko
 kaayaniddeewo
 kaayaniddeewooko
-# ------------------------- #
-
+# ----------------------------------------------------------------------------------------------------- #
 kabaka
 kabiite
 kadde
+# -------------------------------- okukaddiwa(to become old) -------------------------------------------------- #
+kaddiwa
+kaddiwe
+kaddiye
+kaddiya
+kaddiyizza
+kaddiyira
+kaddiyire
+kaddiyidde
+# ----------------------------------------------------------------------------------------------------- #
 kafuumuulampawu
+# -------------------------------------- okukaka(to force) -------------------------------------------------- #
 kaka
+kake
+kase
+kakibwa
+kakibwe
+kakiddwa
+kakibbwa
+kakira
+kakire
+kakidde
+kasi/oo
+# ------------------------------------------------------------------------------------------------------ #
 kakali
-
-# -------------- okukasa(to ensure) -------------- #
+# ----------------------------------- okukasa(to ensure) ----------------------------------------------- #
 kakasa
 kakase
 kakasizza
 kakasibwa
 kakasibwe
 kakasiddwa
-
+#
 kakasaako
 kakasaamu
 kakasaamuuko
@@ -8022,7 +8052,7 @@ kakasangayo
 kakasangayooko
 kakasangawo
 kakasangawooko
-
+#
 kakaseeko
 kakaseemu
 kakaseemuuko
@@ -8037,7 +8067,7 @@ kakaseengayo
 kakaseengayooko
 kakaseengawo
 kakaseengawooko
-
+#
 kakasizzaako
 kakasizzaamu
 kakasizzaamuuko
@@ -8052,7 +8082,7 @@ kakasizzangayo
 kakasizzangayooko
 kakasizzangawo
 kakasizzangawooko
-
+#
 kakasibwako
 kakasibwamu
 kakasibwamuuko
@@ -8067,7 +8097,7 @@ kakasibwangayo
 kakasibwangayooko
 kakasibwangawo
 kakasibwangawooko
-
+#
 kakasibweko
 kakasibwemu
 kakasibwemuuko
@@ -8082,7 +8112,7 @@ kakasibwengayo
 kakasibwengayooko
 kakasibwengawo
 kakasibwengawooko
-
+#
 kakasiddwaako
 kakasiddwaamu
 kakasiddwaamuuko
@@ -8090,14 +8120,33 @@ kakasiddwaayo
 kakasiddwaayooko
 kakasiddwaawo
 kakasiddwaawooko
-
-# ------------------------- #
-
-
+# ----------------------------------------------------------------------------------------------------- #
+# ----------------------------------- okukata(to prescribe) ----------------------------------------------- #
 kakata
+kakate
+kakatibwa
+kakatibwe
+kakatiddwa
+kakatira
+kakatire
+kakatide
+# -------------------------------------------------------------------------------------------------------- #
 kakobe
+# ----------------------------------- okukala(to become dry) ----------------------------------------------- #
 kala
+kale
+kaze
+kaza
+kazizza
+kalira
+kalire
+kalidde
+# ----------------------------------------------------------------------------------------------------- #
+# ------------------------------------ okukalambira(to persist) ----------------------------------------------- #
 kalambira
+kalambire
+kalambidde
+# -------------------------------------------------------------------------------------------------------- #
 kale
 kalenda
 kalifuwa
@@ -8105,36 +8154,118 @@ kalittima
 kaloti
 kalu
 kalubo
+# ------------------------------------- okukama(to milk) ------------------------------------------------- #
 kama
+kame
+kamye
+kamisa
+kamise
+kamisizza
+kamibwa
+kamibwe
+kamiddwa
+kamira
+kamire
+kamidde
+# -------------------------------------------------------------------------------------------------------- #
+# ------------------------------------ okukambuwala(to become harsh) ----------------------------------------------- #
 kambuwala
+kambuwale
+kambuwadde
+kambuwaza
+kambuwaze
+kambuwazza
+kambuwalira
+kambuwalire
+kambuwalidde
+# ------------------------------------------------------------------------------------------------------------ #
 kambwe
 kamera
 kammunguluze
+# --------------------------------------- okukamuka(to be drained) --------------------------------------- #
 kamuka
+kamuke
+kamuse
+# -------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------- okukamula(to wring) ------------------------------------------- #
 kamula
+kamule
+kamudde
+kamuza
+kamuze
+kamuzza
+kamulwa
+kamulwe
+kamuddwa
+kamulira
+kamulire
+kamulidde
+# ------------------------------------------------------------------------------------------------------- #
 kandida
-kanga
+# ------------------------------------------ okukangavvula(to punish) ------------------------------------ #
 kangavvula
+kangavvule
+kangavvudde
+kangavvuza
+kangavvuze
+kangavvuzza
+kangavvulwa
+kangavvulwe
+kangavvuddwa
+kangavvulira
+kangavvulire
+kangavvulidde
+# ------------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okukanya(to keep on trying) --------------------------------------- #
 kanya
+kanye
+kanyizza
+# ------------------------------------------------------------------------------------------------------------- #
 kasambula
 kaseera
 kasita
 kasooli
+# ---------------------------------------- okukasuka(to throw) --------------------------------------------- #
 kasuka
+kasuke
+kasuse
+kasusa
+kasusizza
+kasukibwa
+kasukibwe
+kasukiddwa
+kasukira
+kasukire
+kasukidde
+kasusi/oo
+# ------------------------------------------------------------------------------------------------------------- #
 katakketakke
 katemba
 kati
 katikkiro
 kato
+# ------------------------------------ okutonda(to create/apologize) ----------------------------------------------- #
+tonda
+tonde
+tonze
+tondesa
+tondese
+tondesezza
+tondebwa
+tondebwe
+tondeddwa
+tondera
+tondere
+tondedde
+tonzi
+# -------------------------------------------------------------------------------------------------------------------- #
 Katonda
 kaweefube
 kawo
-kaza
 kazambi
 kazooba
 kazzi
-
-# -------------------- okukebera(to check) ------------------- #
+# ------------------------------- okukebera(to check) ---------------------------------------------- #
 kebera
 kebere
 kebedde
@@ -8147,7 +8278,7 @@ kebezza
 keberera
 keberere
 keberedde
-
+#
 keberako
 keberamu
 keberamuuko
@@ -8162,7 +8293,7 @@ keberangayo
 keberangayooko
 keberangawo
 keberangawooko
-
+#
 kebereko
 kberemu
 keberemuuko
@@ -8177,7 +8308,7 @@ kebereengayo
 kebereengayooko
 kebereengawo
 kebereengawooko
-
+#
 kebeddeko
 kebeddeeko
 kebeddemu
@@ -8191,7 +8322,7 @@ kebeddeewo
 kebeddewo
 kebeddewooko
 kebeddeewooko
-
+#
 kebberwaako
 kebberwaamu
 kebberwaamuuko
@@ -8206,7 +8337,7 @@ kebberwangayo
 kebberwangayooko
 kebberwangawo
 kebberwangawooko
-
+#
 keberweko
 keberwemu
 keberwemuuko
@@ -8219,7 +8350,7 @@ keberweengamu
 keberweengamuuko
 keberwengawo
 keberwengawooko
-
+#
 kebeddwaako
 kebeddwaamu
 kebeddwaamuuko
@@ -8227,7 +8358,7 @@ kebeddwaawo
 kebeddwaawooko
 kebeddwangako
 kebeddwangamu
-
+#
 kebezaako
 kebezaamu
 kebezaamuuko
@@ -8242,7 +8373,7 @@ kebezangayo
 kebezangayooko
 kebezangawo
 kebezangawooko
-
+#
 kebezeeko
 kebezeemu
 kebezeemuuko
@@ -8256,7 +8387,7 @@ kebezeengayo
 kebezeengayooko
 kebezengawo
 kebezengawooko
-
+#
 kebezzaako
 kebezzaamu
 kebezzaamuuko
@@ -8271,7 +8402,7 @@ kebezzangayo
 kebezzangayooko
 kebezzangawo
 kebezzangawooko
-
+#
 kebereraako
 kebereraamu
 kebereraamuuko
@@ -8286,7 +8417,7 @@ kebererangayo
 kebererangayooko
 kebererangawo
 kebererangawooko
-
+#
 keberereko
 kebereremu
 kebereremuuko
@@ -8300,7 +8431,7 @@ keberereengamuuko
 keberereengayo
 keberereengayooko
 kebererengawo
-
+#
 kebereddeko
 kebereddeeko
 kebereddemu
@@ -8315,16 +8446,53 @@ kebereddewo
 kebereddeewo
 kebereddewooko
 kebereddeewooko
-# ------------------------- #
-
+# -------------------------------------------------------------------------------------------------- #
 keeki
+# ------------------------------------ keera(to be early) ------------------------------------------ #
 keera
+keere
+kedde
+keeza
+keeze
+keezezza
 keerera
+keerere
+keeredde
+# --------------------------------------------------------------------------------------------------- #
+# ---------------------------------- okukeerewa(to be late) ------------------------------------------- #
 keerewa
+keerewe
+keereye
+keereya
+keereyezza
+# -------------------------------------------------------------------------------------------------- #
+# ------------------------------------ okukeeta(to fed up) ----------------------------------------- #
 keeta
+keete
+keese
+keesa
+keesezza
+keetebwa
+keetebwe
+keeteddwa
+keetebbwa
+keetera
+keetere
+keetedde
+# --------------------------------------------------------------------------------------------------- #
+# ------------------------------------------ okukendeera(to become less/decrease) --------------------------------------------- #
 kendeera
+kendeere
+kendedde
 kendeeza
+kendeeze
+kendezza
+kendeezezza
+# ------------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okukenga(to perceive/notice) --------------------------------------------- #
 kenga
+
+
 ketta
 ki
 kidedde
