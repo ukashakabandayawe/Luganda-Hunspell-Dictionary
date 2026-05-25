@@ -4836,42 +4836,83 @@ eza
 eza
 ezzike
 ezziga
+# --------------------------------------- okufa(to die) -----------------------------------------------------#
 fa
+fe
+fudde
+fiisa
+fiise
+fiisizza
+fiirwa
+fiirwe
+fiiriddwa
+fiira
+fiire
+fiiridde
+fu
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufaanana(to be similar) --------------------------------------- #
 faanana
-# --- faako --- #
+faanane
+faananye
+faananya
+faananyizza
+faananyibwa
+faananyibwe
+faananyiddwa
+faananira
+faananire
+faananidde
+# --------------------------------------------------------------------------------------------------------- #
+# -------------------------------------- faako ------------------------------------------------------------ #
 faako/RPpsnpffRnRFrfgghhrpPSDPFFRIriYTytSCscWNWGwgWHWJwjiMSTsTRRNNGGSSMMIITTkkvvxxHHttllBGBIBSBKBVBFBQBWBDBHBRBEBXEHEDFCFDEBEFFEFSFVFMFGFAEKwnWMWFwfwhFH
 feeko/NARPnfrpPSscwnwmwgwhSBWWBXFXFPEMFV
+fuddeko/NARPnprpPSNPSCwgWGwhcCiMsTLTNNGGIIBGBFBDBEBXFYEHFDEFFHFGEKEMWNwn
+fuddeeko/NApsrpWGwgFEFMFGscWNFP
 fiirako/NAgghhPSNPFFNFDPYTSCscWNwnWMWFwfWGwgWHwhWJIMiMStstSTLTNNGGRRSSMMIITTQQvvxxBGBIBSBKBFBDBHBRBPBLBNBUBEBXFYFZEHEDEJFCFDFIFJEBEFFEFSFVFMFWFTFPFNFRFGFHFAFBEKELEMwjFKFL
 fiireko/NARPnfrpPSFFwmwhSBNNWWUUBVBXFXFPFREMwgWGwjFLJQGCGIGQHCHKHLHYIAIB
 fiiriddeko/NARPnpPSNPSCwgCCcCIMiMstLTNNGGMMIIUUVVBGBFBDBEFYFZEHEJFDFIFHFKFLEKELEMWNwnWGwhWJWHFGsc
 fiiriddeeko/NApsrfrpscWNSSBSBVBRFRwhwgWGwfWMBUFEFJFGFKFN
-fuddeko/NARPnprpPSNPSCwgWGwhcCiMsTLTNNGGIIBGBFBDBEBXFYEHFDEFFHFGEKEMWNwn
-fuddeeko/NApsrpWGwgFEFMFGscWNFP
-# --------------#
-# --- faayo --- #
+# -----------------------------------------------------------------------------------------------------------#
+# --------------------------------------- faayo ------------------------------------------------------------ #
 faayo/psnpffggPSDPNFFFPPppIPipykYTSCscWNwnWMwmWFwfStstLTIM
 feeyo/NAykwmSBPTsc
+fuddeyo/NAPSyknpVPNPSCwnCCLTWN
+fuddeeyo/NAykpsscWNWM
 fiirayo/NARPpsnpffRnRFrfgghhrpPSVPDPNFFFPPppJJjjIPipRIYTytSCscWNWMWFwgWGWHWJwjIMStstSTsTLTwnwfwhwmiMEMFDFEFGFHFMFSFV
 fiiriddeyo/NARPnprpPSDPipSCwnWGwgWFwhWNCCcCIMiMStstSTsTLTNNGGIIBGBXFYEHEDFDEBEFEKEMFH
 fiiriddeeyo/NApsrpSCPSscWNwnSSBRFE
-fuddeyo/NAPSyknpVPNPSCwnCCLTWN
-fuddeeyo/NAykpsscWNWM
-# -------------#
+# ---------------------------------------------------------------------------------------------------------#
 famire
 fayiro
+# --------------------------------------- okufeeba(to degrade) --------------------------------------- #
 feeba
+feebe
 feebya
+feebye
+febyezza
+# ---------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufera(to con) ----------------------------------------------- #
 fera
+fere
+feze
+fezesa
+fezese
+fezesezza
+ferebwa
+ferebwe
+fereddwa
+ferera
+ferere
+feredde
+# --------------------------------------------------------------------------------------------------------- #
 ffala
 ffe
 ffena
 ffenne
 ffenne/N1
 ffiga
-fiira
-fiirwa
-
-# ---------- okufikka(to remain) ----------- #
+# --------------------------------- okufikka(to remain) ------------------------------------------------ #
 fikka
 fikke
 fisse
@@ -4880,7 +4921,7 @@ fissizza
 fikkira
 fikkire
 fikkidde
-
+#
 fikkako
 fikkamu
 fikkamuuko
@@ -4889,7 +4930,7 @@ fikayooko
 fikaawo
 fikawooko
 fikangako
-
+#
 fikkeko
 fikkemu
 fikkemuuko
@@ -4898,7 +4939,7 @@ fikkeeyooko
 fikkewo
 fikkewooko
 fikkeengako
-
+#
 fisseeko
 fisseemu
 fisseemuuko
@@ -4907,7 +4948,7 @@ fisseeyooko
 fisseewo
 fisseewooko
 fisseengako
-
+#
 fissaako
 fissaamu
 fissaamuuko
@@ -4916,7 +4957,7 @@ fissaayooko
 fissaawo
 fissaawooko
 fissangako
-
+#
 fissizzaako
 fissizzaamu
 fissizzaamuuko
@@ -4925,7 +4966,7 @@ fissizzaayooko
 fissizzaawo
 fissizzaawooko
 fissizzangako
-
+#
 fikkirako
 fikkiramu
 fikkiramuuko
@@ -4934,7 +4975,7 @@ fikkirayooko
 fikkirawo
 fikkirawooko
 fikkirangako
-
+#
 fikkireko
 fikkiremu
 fikkiremuuko
@@ -4943,7 +4984,7 @@ fikkireyooko
 fikkirewo
 fikkirewooko
 fikkireengako
-
+#
 fikkiddeko
 fikkiddemu
 fikkiddemuuko
@@ -4952,17 +4993,13 @@ fikkiddeyooko
 fikkiddewo
 fikkiddewooko
 fikkiddeengako
-# ------------------------- #
-
-
+# ---------------------------------------------------------------------------------------------------- #
 firimu
-fu
-
-# ----------- okufuba(to strive) ------------ #
+# ---------------------------------- okufuba(to strive) ----------------------------------------------- #
 fuba
 fube
 fubye
-
+#
 fubako
 fubamu
 fubamuuko
@@ -4971,7 +5008,7 @@ fubayooko
 fubawo
 fubawooko
 fubangako
-
+#
 fubeko
 fubemu
 fubemuuko
@@ -4980,7 +5017,7 @@ fubeeyooko
 fubewo
 fubewooko
 fubeengako
-
+#
 fubyeeko
 fubyeemu
 fubyeemuuko
@@ -4989,15 +5026,34 @@ fubyeeyooko
 fubyeewo
 fubyeewooko
 fubyeengako
-# ------------------------- #
-
-
+# -------------------------------------------------------------------------------------------------- #
+# --------------------------------- okufubutuka (to dash out) --------------------------------------- #
 fubutuka
+fubutuke
+fubutuse
+fubutusa
+fubutusizza
+fubutulwa
+fubutulwe
+fubutuddwa
+fubutula
+fubutule
+fubutudde
+# ---------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- **okufufuggala(to become crushed) --------------------------------------- #
 fufuggala
+fufuggale
+fufuggade
 fufuggaza
+fufuggaze
+fufuggazza
+# ---------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- **okufufumya(to torture) --------------------------------------- #
 fufumya
-
-# ----------- okufuga(to rule) ------------ #
+fufumye
+fufumiza
+# --------------------------------------------------------------------------------------------------------- #
+# ------------------------------------ okufuga(to rule) --------------------------------------------- #
 fuga
 fuge
 fuze
@@ -5010,7 +5066,7 @@ fugisizza
 fugira
 fugire
 fugidde
-
+#
 fugako
 fugamu
 fugamuuko
@@ -5019,7 +5075,7 @@ fugayooko
 fugaawo
 fugawooko
 fugangako
-
+#
 fugeko
 fugemu
 fugemuuko
@@ -5028,7 +5084,7 @@ fugeyooko
 fugewo
 fugewooko
 fugeengako
-
+#
 fuzeeko
 fuzeemu
 fuzeemuuko
@@ -5037,7 +5093,7 @@ fuzeeyooko
 fuzeewo
 fuzeewooko
 fuzeengako
-
+#
 fugibwako
 fugibwamu
 fugibwamuuko
@@ -5046,7 +5102,7 @@ fugibwayooko
 fugibwawo
 fugibwawooko
 fugibwangako
-
+#
 fugibweko
 fugibwemu
 fugibwemuuko
@@ -5055,7 +5111,7 @@ fugibweyooko
 fugibwewo
 fugibwewooko
 fugibwengako
-
+#
 fugibbwaako
 fugibbwamu
 fugibbwaamuuko
@@ -5064,7 +5120,7 @@ fugibbwayooko
 fugibbwawo
 fugibbwawooko
 fugibbwangako
-
+#
 fugisaako
 fugisaamu
 fugisaamuuko
@@ -5073,7 +5129,7 @@ fugisaayooko
 fugisaawo
 fugisaawooko
 fugisangako
-
+#
 fugiseeko
 fugiseemu
 fugiseemuuko
@@ -5082,7 +5138,7 @@ fugiseeyooko
 fugiseewo
 fugiseewooko
 fugiseengako
-
+#
 fugisizzaako
 fugisizzaamu
 fugisizzaamuuko
@@ -5091,7 +5147,7 @@ fugisizzaayooko
 fugisizzaawo
 fugisizzaawooko
 fugisizzangako
-
+#
 fugirako
 fugiramu
 fugiramuuko
@@ -5100,7 +5156,7 @@ fugirayooko
 fugirawo
 fugirawooko
 fugirangako
-
+#
 fugireko
 fugiremu
 fugiremuuko
@@ -5109,7 +5165,7 @@ fugireyooko
 fugirewo
 fugirewooko
 fugireengako
-
+#
 fugiddeko
 fugiddemu
 fugiddemuuko
@@ -5118,17 +5174,67 @@ fugiddeyooko
 fugiddewo
 fugiddewooko
 fugiddeengako
-# ------------------------- #
-
-
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufuka(to pee) --------------------------------------- #
 fuka
+fuke
+fuse
+fusa
+fukisa
+fukise
+fukisizza
+fukibwa
+fukibwe
+fukiddwa
+fukira
+fukire
+fukidde
+# ------------------------------------------------------------------------------------------------ #
+# -------------------------------------- okufukamira(to kneel) --------------------------------------- #
 fukamira
+fukamire
+fukamidde
 fukamiza
-fukumuka
+fukamize
+fukamizza
+fukaamirirwa
+fukaamirirwe
+fukaamiriddwa
+fukamirira
+fukamirire
+fukamiridde
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufukumula(to pour out) --------------------------------------- #
 fukumula
+fukumule
+fukumudde
+fukumuza
+fukumuze
+fukumuzza
+fukumulibwa
+fukumulibwe
+fukumuliddwa
+fukumulira
+fukumulire
+fukumulidde
+fukumuka
+fukumuke
+fukumuse
+# ----------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufuluma(to exit) --------------------------------------- #
 fuluma
-
-# ----------- okufumba(to cook) ------------ #
+fulume
+fulumye
+fulumya
+fulumizza
+fulumibwa
+fulumibwe
+fulumiddwa
+fulumira
+fulumire
+fulumidde
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufumba(to cook) --------------------------------------- #
 fumba
 fumbe
 fumbye
@@ -5141,8 +5247,8 @@ fumbisizza
 fumbira
 fumbire
 fumbidde
-
-
+fumbi/PSPT
+#
 fumbako
 fumbamu
 fumbamuuko
@@ -5151,7 +5257,7 @@ fumbayooko
 fumbawo
 fumbawooko
 fumbangako
-
+#
 fumbeko
 fumbemu
 fumbemuuko
@@ -5160,7 +5266,7 @@ fumbeeyooko
 fumbewo
 fumbewooko
 fumbeengako
-
+#
 fumbyeeko
 fumbyeemu
 fumbyeemuuko
@@ -5169,7 +5275,7 @@ fumbyeeyooko
 fumbyeewo
 fumbyeewooko
 fumbyeengako
-
+#
 fumbibwako
 fumbibwamu
 fumbibwamuuko
@@ -5178,7 +5284,7 @@ fumbibwayooko
 fumbibwawo
 fumbibwawooko
 fumbibwangako
-
+#
 fumbibweko
 fumbibwemu
 fumbibwemuuko
@@ -5187,7 +5293,7 @@ fumbibweyooko
 fumbibwewo
 fumbibwewooko
 fumbibwengako
-
+#
 fumbiddwaako
 fumbiddwaamu
 fumbiddwaamuuko
@@ -5196,7 +5302,7 @@ fumbiddwayooko
 fumbiddwaawo
 fumbiddwaawooko
 fumbiddwangako
-
+#
 fumbisaako
 fumbisaamu
 fumbisaamuuko
@@ -5205,7 +5311,7 @@ fumbisaayooko
 fumbisaawo
 fumbisaawooko
 fumbisangako
-
+#
 fumbiseeko
 fumbiseemu
 fumbiseemuuko
@@ -5214,7 +5320,7 @@ fumbiseeyooko
 fumbiseewo
 fumbiseewooko
 fumbiseengako
-
+#
 fumbisizzaako
 fumbisizzaamu
 fumbisizzaamuuko
@@ -5223,7 +5329,7 @@ fumbisizzaayooko
 fumbisizzaawo
 fumbisizzaawooko
 fumbisizzangako
-
+#
 fumbirako
 fumbiramu
 fumbiramuuko
@@ -5232,7 +5338,7 @@ fumbirayooko
 fumbirawo
 fumbirawooko
 fumbirangako
-
+#
 fumbireko
 fumbiremu
 fumbiremuuko
@@ -5241,7 +5347,7 @@ fumbireyooko
 fumbirewo
 fumbirewooko
 fumbireengako
-
+#
 fumbiddeko
 fumbiddemu
 fumbiddemuuko
@@ -5250,12 +5356,29 @@ fumbiddeyooko
 fumbiddewo
 fumbiddewooko
 fumbiddeengako
-# ------------------------- #
-
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufumbirwa(to get married) --------------------------------------- #
 fumbirwa
-fumbo
+fumbirwe
+fumbiddwa
+fumbiza
+fumbize
+fumbizza
+fumbo/PSPT
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufumita(to stab/pierce) --------------------------------------- #
 fumita
-# --------------- okufuna(to get) ------------- #
+fumite
+fumise
+fumitibwa
+fumitibwe
+fumitiddwa
+fumitira
+fumitire
+fumitidde
+fumisi/PSPT
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufuna(to get) ------------------------------------------- #
 funa
 fune
 funye
@@ -5268,7 +5391,8 @@ funisizza
 funira
 funire
 funidde
-
+funyi
+#
 funako
 funamu
 funamuuko
@@ -5277,7 +5401,7 @@ funayooko
 funawo
 funawooko
 funangako
-
+#
 funeko
 funemu
 funemuuko
@@ -5286,7 +5410,7 @@ funeeyooko
 funewo
 funewooko
 funeengako
-
+#
 funyeeko
 funyeemu
 funyeemuuko
@@ -5295,7 +5419,7 @@ funyeeyooko
 funyeewo
 funyeewooko
 funyeengako
-
+#
 funibwako
 funibwamu
 funibwamuuko
@@ -5304,7 +5428,7 @@ funibwayooko
 funibwawo
 funibwawooko
 funibwangako
-
+#
 funibweko
 funibwemu
 funibwemuuko
@@ -5313,7 +5437,7 @@ funibweyooko
 funibwewo
 funibwewooko
 funibwengako
-
+#
 funiddwaako
 funiddwaamu
 funiddwaamuuko
@@ -5322,7 +5446,7 @@ funiddwayooko
 funiddwaawo
 funiddwaawooko
 funiddwangako
-
+#
 funisaako
 funisaamu
 funisaamuuko
@@ -5331,7 +5455,7 @@ funisaayooko
 funisaawo
 funisaawooko
 funisangako
-
+#
 funiseeko
 funiseemu
 funiseemuuko
@@ -5340,7 +5464,7 @@ funiseeyooko
 funiseewo
 funiseewooko
 funiseengako
-
+#
 funisizzaako
 funisizzaamu
 funisizzaamuuko
@@ -5349,7 +5473,7 @@ funisizzaayooko
 funisizzaawo
 funisizzaawooko
 funisizzangako
-
+#
 funirako
 funiramu
 funiramuuko
@@ -5358,7 +5482,7 @@ funirayooko
 funirawo
 funirawooko
 funirangako
-
+#
 funireko
 funiremu
 funiremuuko
@@ -5367,7 +5491,7 @@ funireyooko
 funirewo
 funirewooko
 funireengako
-
+#
 funiddeko
 funiddemu
 funiddemuuko
@@ -5376,15 +5500,53 @@ funiddeyooko
 funiddewo
 funiddewooko
 funiddeengako
-# -------------------------- #
-
+# --------------------------------------------------------------------------------------------- #
+# -------------------------------------- okufunda(to become tight) --------------------------------------- #
 funda
-fundi
-funga
-funvubira
-funya
+funde
 funze
-# --------------- okufuuka(to become) ------------- #
+funza
+funzizza
+fundira
+fundire
+fundidde
+funzi/PSPT
+# ------------------------------------------------------------------------------------------------- #
+fundi
+# --------------------------------------- okufunga(to tuck) ------------------------------------------- #
+funga
+funge
+funze
+fungisa
+fungise
+fungisizza
+fungibwa
+fungibwe
+fungiddwa
+fungibbwa
+fungira
+fungire
+fungidde
+# ---------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- **okufunvubira (to persist/preserve) --------------------------------------- #
+funvubira
+funvubire
+funvubidde
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufunya(to fold) ------------------------------------------- #
+funya
+funye
+funyizza
+funyiza
+funyize
+funyibwa
+funyibwe
+funyiddwa
+funyira
+funyire
+funyidde
+# --------------------------------------------------------------------------------------------------------- #
+# ------------------------------- okufuuka(to become) ------------------------------------------ #
 fuuka
 fuuke
 fuuse
@@ -5397,7 +5559,7 @@ fudde
 fuulira
 fuulire
 fuulidde
-
+#
 fuukamu
 fuukamuuko
 fuukayo
@@ -5405,7 +5567,7 @@ fuukayooko
 fuukawa
 fuukawooko
 fuukangako
-
+#
 fuukeko
 fuukemu
 fuukemuuko
@@ -5414,7 +5576,7 @@ fuukeyooko
 fuukewo
 fuukewooko
 fuukeengako
-
+#
 fuuseeko
 fuuseemu
 fuuseemuuko
@@ -5423,7 +5585,7 @@ fuuseeyooko
 fuuseewo
 fuuseewooko
 fuuseengako
-
+#
 fulibwako
 fulibwamu
 fulibwamuuko
@@ -5432,7 +5594,7 @@ fulibwayooko
 fulibwawo
 fulibwawooko
 fulibwangako
-
+#
 fulibweko
 fulibwemu
 fulibwemuuko
@@ -5441,7 +5603,7 @@ fulibweyooko
 fulibwewo
 fulibwewooko
 fulibwengako
-
+#
 fuuliddwaako
 fuuliddwaamu
 fuuliddwaamuuko
@@ -5450,7 +5612,7 @@ fuuliddwayooko
 fuuliddwaawo
 fuuliddwaawooko
 fuuliddwangako
-
+#
 fuulako
 fuulamu
 fuulamuuko
@@ -5459,7 +5621,7 @@ fuulayooko
 fuulawo
 fuulawooko
 fuulaangako
-
+#
 fuuleko
 fuulemu
 fuulemuuko
@@ -5468,7 +5630,7 @@ fuuleyooko
 fuulewo
 fuulewooko
 fuuleengako
-
+#
 fuddeko
 fuddemu
 fuddemuuko
@@ -5477,7 +5639,7 @@ fuddeyooko
 fuddewo
 fuddewooko
 fuudeengako
-
+#
 fuulirako
 fuuliramu
 fuuliramuuko
@@ -5486,7 +5648,7 @@ fuulirayooko
 fuulirawo
 fuulirawooko
 fuulirangako
-
+#
 fuulireko
 fuuliremu
 fuuliremuuko
@@ -5495,7 +5657,7 @@ fuulireyooko
 fuulirewo
 fuulirewooko
 fuulireengako
-
+#
 fuliddeko
 fuliddemu
 fuliddemuuko
@@ -5504,13 +5666,48 @@ fuliddeyooko
 fuliddewo
 fuliddewooko
 fuliddeengako
-# ------------------------- #
-
+# ------------------------------------------------------------------------------------------- #
+# ----------------------------------------- okufuuwa (to blow) ----------------------------------------- #
 fuuwa
+fuuwe
+fuuye
+fuuwisa
+fuuwise
+fuuwisizza
+fuuwibwa
+fuuwibwe
+fuuwiddwa
+fuuwira
+fuuwire
+fuuwidde
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufuuweeta(to smoke ciggarette) --------------------------------------- #
 fuuweeta
+fuuweete
+fuuweese
+fuuweesa
+fuuweese
+fuuweesezza
+fuuweetebwa
+fuuweetebwa
+fuuweeteddwa
+fuuweetera
+fuuweetere
+fuuweetedde
+# --------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufuuyira(to be spray) --------------------------------------- #
 fuuyira
-
-# ----------- okugaana(to refuse) ------------ #
+fuuyire
+fuuyidde
+fuuyiza
+fuuyize
+fuuyizza
+fuuyibwa
+fuuyibwe
+fuuyiddwa
+fuuyizi/PSPT
+# --------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------- okugaana(to refuse) -------------------------------------- #
 gaana
 gaane
 gaanye
