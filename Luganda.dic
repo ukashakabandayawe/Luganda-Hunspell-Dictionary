@@ -8491,17 +8491,71 @@ kendeezezza
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okukenga(to perceive/notice) --------------------------------------------- #
 kenga
-
-
+kenge
+kenze
+kengesa
+kengese
+kengesezza
+kengebwa
+kengebwe
+kengeddwa
+kengera
+kengere
+kengedde
+kenzi/oo
+# ------------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okuketta(to spy) --------------------------------------------- #
 ketta
+kette
+kesse
+kettesa
+kettese
+kettesezza
+kettebwa
+kettebwe
+ketteddwa
+kettera
+kettere
+kettedde
+kessi/oo
+# ------------------------------------------------------------------------------------------------------------- #
 ki
 kidedde
 kiggala
 kiki
-kikkirizibwa
-kiko
+# --------------------------------- okukkiriza(to believe/agree) --------------------------------------------- #
+kkiriza
+kkirize
+kkirizza
+kkirizisa
+kkirizise
+kkirizisizza
+kkirizibwa
+kkirizibwe
+kkiriziddwa
+kkiririza
+kkiririze
+kkiririzza
+kkiriziganya
+kkiriziganye
+# ---------------------------------------------------------------------------------------------------------- #
+kikyo
 kikye
+# ---------------------------------- okukima(to fetch) --------------------------------------------- #
 kima
+kime
+kimye
+kimisa
+kimise
+kimisizza
+kimibwa
+kimibwe
+kimiddwa
+kimira
+kimire
+kimidde
+kimi/oo
+# ------------------------------------------------------------------------------------------------------------- #
 kimu
 kinaana
 kino
@@ -8512,26 +8566,79 @@ kiri
 kitaka
 kitange
 kiwanuka
+# ---------------------------------------- okukka(to descend) --------------------------------------------- #
 kka
+kke
+sse
+ssa
+ssizza
+ssibwa
+ssibwe
+ssiddwa
+kkira
+kkire
+kkidde
+# -------------------------------------------------------------------------------------------------------- #
 kkaansa
+# ---------------------------------------- okukkaanya(to agree) --------------------------------------------- #
 kkaanya
+kkaanye
+kkaanyizza
+kkaanyisa
+kkaanyise
+kkaanyisizza
+# ------------------------------------------------------------------------------------------------------------- #
 kkakkamu
+# --------------------------------------- okukkakkana(to calm down) --------------------------------------------- #
 kkakkana
+kkakkane
+kkakkanye
+kkakkanya
+kkakkanye
+kkakkanyizza
+kkakkanira
+kkakkanire
+kkakkanidde
+# ------------------------------------------------------------------------------------------------------------- #
 kkampuni
 kkapa
+# --------------------------------------- okukkirira(to slope down) --------------------------------------------- #
 kkirira
-kkiriza
-kkiriziganya
+kkirire
+kkiridde
+# ------------------------------------------------------------------------------------------------------------- #
 kkono
 kkoosi
 kkufu
 kkumi
-kkusa
+# --------------------------------------- okukkuta(to become satisfied) --------------------------------------------- #
 kkuta
+kkute
+kkuse
+kkusa
+kkusizza
+kkusibwa
+kkusibwe
+kkusiddwa
+kkutira
+kkutire
+kkutidde
+# ----------------------------------------------------------------------------------------------- #
 kodo
+# ---------------------------------------- okukogga(to become small) --------------------------------------------- #
 kogga
+kogge
+kozze
+kozza
+koggesa
+koggese
+koggesezza
+koggera
+koggere
+koggedde
+# ------------------------------------------------------------------------------------------------------------ #
 kojja
-# --------------okukola(to work) -------------- #
+# ---------------------------------------- okukola(to work) ---------------------------------------------- #
 kola
 kole
 koze
@@ -8545,7 +8652,10 @@ kozesezza
 kolera 
 kolere
 koledde
-
+kolagana
+kolagane
+kolaganye
+#
 kolako
 kolamu
 kolamuuko
@@ -8560,7 +8670,7 @@ kolangayo
 kolangayooko
 kolangawo
 kolangawooko
-
+#
 koleko
 kolemu
 kolemuuko
@@ -8575,7 +8685,7 @@ kolengayo
 kolengayooko
 koleengawo
 kolengawooko
-
+#
 kozeeko
 kozeemu
 kozeemuuko
@@ -8583,7 +8693,7 @@ kozeeyo
 kozeeyooko
 kozeewo
 kozeewooko
-
+#
 kolebwaako
 kolebwaamu
 kolebwaamuuko
@@ -8598,7 +8708,7 @@ kolebwangayo
 kolebwangayooko
 kolebangawo
 kolebwangawooko
-
+#
 kolebweko
 kolebwemu
 kolebwemuuko
@@ -8613,7 +8723,7 @@ kolebwengayo
 kolebwengayooko
 kolebwengawo
 kolebwengawooko
-
+#
 koleddwaako
 koleddwaamu
 koleddwaamuuko
@@ -8621,7 +8731,7 @@ koleddwaayo
 koleddwayooko
 koleddwaawo
 koleddwaawooko
-
+#
 Kozesaako
 kozesaamu
 kozesaamuuko
@@ -8636,7 +8746,7 @@ kozesangayo
 kozesangayooko
 kozesangawo
 kozesangawooko
-
+#
 kozeseeko
 kozeseemu
 kozeseemuuko
@@ -8651,7 +8761,7 @@ kozeseengayo
 kozeseengayooko
 kozeseengawo
 kozeseengawooko
-
+#
 kozesezzaako
 kozesezzaamu
 kozesezzaamuuko
@@ -8659,7 +8769,7 @@ kozesezzaayo
 kozesezzaayooko
 kozesezzaawo
 kozesezzaawooko
-
+#
 koleraako
 koleraamu
 koleraamuuko
@@ -8674,7 +8784,7 @@ kolerangayo
 kolerangayooko
 kolerangawo
 kolerangawooko  
-
+#
 kolereko
 koleremu
 koleremuuko
@@ -8689,7 +8799,7 @@ kolereengayo
 kolereengayooko
 kolerengawo
 kolerengawooko
-
+#
 koleddeko
 koleddemu
 koleddemuuko
@@ -8704,10 +8814,12 @@ koleddeeyo
 koleddeeyooko
 koleddeewo
 koleddeewooko
-# ------------------------- #
-
-kolagana
+# --------------------------------------------------------------------------------------------------------- #
+# ----------------------------------------- okkolima(to curse) --------------------------------------------- #
 kolima
+
+
+
 kolimira
 koloboka
 kolobola
@@ -14722,7 +14834,6 @@ tegeera
 tegeerekeka
 tegeeza
 tegeka
-tekikirizibwa
 tekula
 tema
 temula
