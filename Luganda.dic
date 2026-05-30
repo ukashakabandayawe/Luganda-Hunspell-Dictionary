@@ -9384,7 +9384,20 @@ laalaasibwe
 laalaasiddwa
 # ------------------------------------------------------------------------------------------------------------------ #
 laavu
+# -------------------------------------------- okulaawa(to castrate) --------------------------------------------- #
 laawa
+laawe
+laaye
+laawisa
+laawise 
+laawisizza
+laawibwa
+laawibwe
+laawiddwa
+laawira
+laawire
+laawidde
+# ------------------------------------------------------------------------------------------------------------- #
 # ------------------------------------------- okulaba(to see) -------------------------------------------------------- #
 laba
 labe
@@ -9398,7 +9411,11 @@ labisizza
 labira
 labire
 labidde
-
+labagana/NA
+labagane/NA
+labaganye/NA
+omulabi/oo
+#
 labako
 labamu
 labamuuko
@@ -9413,7 +9430,7 @@ labangayo
 labangayooko
 labangawo
 labangawooko
-
+#
 labeko
 labemu
 labemuuko
@@ -9428,7 +9445,7 @@ labengayo
 labengayooko
 labengawo
 labengawooko
-
+#
 labyeeko
 labyeemu
 labyeemuuko
@@ -9436,8 +9453,7 @@ labyeeyo
 labyeeyooko
 labyeewo
 labyeewooko
-
-
+#
 labibwako
 labibwamu
 labibwamuuko
@@ -9452,7 +9468,7 @@ labibwangayo
 labibwangayooko
 labibwangawo
 labibwangawooko
-
+#
 labibweko
 labibwemu
 labibwemuuko
@@ -9467,7 +9483,7 @@ labibwengayo
 labibwengayooko
 labibwengawo
 labibwengawooko
-
+#
 labiddwaako
 labiddwaamu
 labiddwaamuuko
@@ -9477,7 +9493,7 @@ labiddwaawo
 labiddwaawooko
 labiddwaangako
 labiddwaangamu
-
+#
 labisaako
 labisaamu
 labisaamuuko
@@ -9492,7 +9508,7 @@ labisangayo
 labisangayooko
 labisangawo
 labisangawooko
-
+#
 labiseeko
 labiseemu
 labiseemuuko
@@ -9507,7 +9523,7 @@ labiseengayo
 labiseengayooko
 labiseengawo
 labiseengawooko
-
+#
 labisizzaako
 labisizzaamu
 labisizzaamuuko
@@ -9515,7 +9531,7 @@ labisizzaayo
 labisizzaayooko
 labisizzaawo
 labisizzaawooko
-
+#
 labirako
 labiramu
 labiramuuko
@@ -9530,7 +9546,7 @@ labirangayo
 labirangayooko
 labirangawo
 labirangawooko
-
+#
 labireko
 labiremu
 labiremuuko
@@ -9545,7 +9561,7 @@ labireengayo
 labireengayooko
 labireengawo
 labireengawooko
-
+#
 labiddeko
 labiddemu
 labiddemuuko
@@ -9560,18 +9576,49 @@ labiddeeyo
 labiddeyooko
 labiddeewo
 labiddeewooko
-# ------------------------- #
-
-
-labagana/NA
-labagane/NA
-omulabi/oo
-# --- labika --- #
+# --------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------- okulabika(to appear) ---------------------------------------------------- #
 labika
+labike
+labise
+labikilwa
+labikilwe
+labikiddwa
+labikira
+labikire
+labikidde
+# -------------------------------------------------------------------------------------------------------------- #
+# -------------------------------------- okulabirira(to take care of) ------------------------------------------------------- #
 labirira
+labirire
+labiridde   
+labirirwa
+labirirwe
+labiriddwa
+# -------------------------------------------------------------------------------------------------------------- #
+# -------------------------------------- okulabuka(to become warned) ------------------------------------------------------- #
 labuka
+labuke
+labuse
+labukira
+labukire
+labukidde
+# -------------------------------------------------------------------------------------------------------------- #
+# -------------------------------------- okulabula(to warn) ------------------------------------------------------- #
 labula
-# -------------------------------------- okulaga(to show) -------------------------------------- #
+labule
+labudde
+labuza
+labuze
+labuzze
+labulwa
+labulwe
+labuddwa
+labulira
+labulire
+labulidde
+# -------------------------------------------------------------------------------------------------------------- #
+# -------------------------------------- okulaga(to show) ------------------------------------------------------- #
 laga
 lage
 laze
@@ -9593,8 +9640,7 @@ lagaayooko
 lagawo
 lagaawooko
 lagangako
-
-
+#
 lageko
 lagemu
 lagemuuko
@@ -9608,14 +9654,14 @@ lageengamuuko
 lageengayo
 lageengayooko
 lageengawo
-
+#
 lageeko
 lageemu
 lageemuuko
 lageeyo
 lageeyooko
 lageewo
-
+#
 lazeeko
 lazeemu
 lazeemuuko
@@ -9623,7 +9669,7 @@ lazeeyo
 lazeeyooko
 lazeewo
 lazeewooko
-
+#
 lagibwaako
 lagibwaamu
 lagibwaamuuko
@@ -9638,7 +9684,7 @@ lagibwangayo
 lagibwangayooko
 lagibwangawo
 lagibwangawooko
-
+#
 lagibweeko
 lagibweemu
 lagibweemuuko
@@ -9653,7 +9699,7 @@ lagibweengayo
 lagibweengayooko
 lagibweengawo
 lagibweengawooko
-
+#
 lagibbwaako
 lagibbwaamu
 lagibbwaamuuko
@@ -9661,8 +9707,7 @@ lagibbwayo
 lagibbwayooko
 lagibbwawo
 lagibbwawooko
-
-
+#
 lagisaako
 lagisaamu
 lagisaamuuko
@@ -9673,7 +9718,7 @@ lagisaawooko
 lagisangako
 lagisangamu
 lagisangamuuko
-
+#
 lagiseeko
 lagiseemu
 lagiseemuuko
@@ -9684,7 +9729,7 @@ lagiseewooko
 lagiseengako
 lagiseengamu
 lagiseengamuuko
-
+#
 lagisizzaako
 lagisizzaamu
 lagisizzaamuuko
@@ -9692,7 +9737,7 @@ lagisizzaayo
 lagisizzaayooko
 lagisizzaawo
 lagisizzaawooko
-
+#
 lagirako
 lagiramu
 lagiramuuko
@@ -9707,7 +9752,7 @@ lagirangayo
 lagirangayooko
 lagirangawo
 lagirangawooko
-
+#
 lagireko
 lagiremu
 lagiremuuko
@@ -9722,7 +9767,7 @@ lagireengayo
 lagireengayooko
 lagireengawo
 lagireengawooko
-
+#
 lagiddeko
 lagiddemu
 lagiddemuuko
@@ -9730,7 +9775,7 @@ lagiddeyo
 lagiddeyooko
 lagiddewo
 lagiddewooko
-
+#
 lagiddeeko
 lagiddeemu
 lagiddeemuuko
@@ -9738,10 +9783,21 @@ lagiddeeyo
 lagiddeeyooko
 lagiddeewo
 lagiddeewooko
-# ------------------------- #
-
-
+# ----------------------------------------------------------------------------------------------------------------- #
+# ------------------------------------------- okulagaana(to agree) --------------------------------------------- #
 lagaana
+lagaane
+lagaanye
+lagaanisa
+lagaanise
+lagaanisizza
+lagaanibwa
+lagaanibwe
+lagaaniddwa
+lagaanira
+lagaanire
+lagaanidde
+# ----------------------------------------------------------------------------------------------------------------- #
 lagajjala
 lagira
 lagula
