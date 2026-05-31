@@ -12371,6 +12371,13 @@ naddala
 munafu
 # ------------------------------- okunafuwa(to become weak; to become lazy) ------------------------------- #
 nafuwa
+nafuwe
+nafuye
+nafuya
+nafuyizza
+nafuyira
+nafuyire
+nafuyidde
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------- okunakuwala(to become sad) ---------------------------------- #
 nakuwala
@@ -12382,7 +12389,7 @@ nakuwazizza
 nakuwalira
 nakuwalire
 nakuwalidde
-
+#
 nakuwalako
 nakuwalamu
 nakuwalamuuko
@@ -12397,7 +12404,7 @@ nakuwalangayo
 nakuwalangayooko
 nakuwalangawo
 nakuwalangawooko
-
+#
 nakuwaleko
 nakuwalemu
 nakuwalemuuko
@@ -12412,7 +12419,7 @@ nakuwaleengayo
 nakuwaleengayooko
 nakuwaleengawo
 nakuwaleengawooko
-
+#
 nakuwaddeko
 nakuwaddemu
 nakuwaddemuuko
@@ -12420,7 +12427,7 @@ nakuwaddeyo
 nakuwaddeyooko
 nakuwaddewo
 nakuwaddewooko
-
+#
 nakuwaddeeko
 nakuwaddeemu
 nakuwaddeemuuko
@@ -12428,7 +12435,7 @@ nakuwaddeeyo
 nakuwaddeeyooko
 nakuwaddeewo
 nakuwaddeewooko
-
+#
 nakuwazaako
 nakuwazaamu
 nakuwazaamuuko
@@ -12443,7 +12450,7 @@ nakuwazangayo
 nakuwazangayooko
 nakuwazangawo
 nakuwazangawooko
-
+#
 nakuwazeeko
 nakuwazeemu
 nakuwazeemuuko
@@ -12458,7 +12465,7 @@ nakuwazeengayo
 nakuwazeengayooko
 nakuwazeengawo
 nakuwazeengawooko
-
+#
 nakuwazizzaako
 nakuwazizzaamu
 nakuwazizzaamuuko
@@ -12466,7 +12473,7 @@ nakuwazizzaayo
 nakuwazizzaayooko
 nakuwazizzaawo
 nakuwazizzaawooko
-
+#
 nakuwalirako
 nakuwaliramu
 nakuwaliramuuko
@@ -12481,7 +12488,7 @@ nakuwalirangayo
 nakuwalirangayooko
 nakuwalirangawo
 nakuwalirangawooko
-
+#
 nakuwalireko
 nakuwaliremu
 nakuwaliremuuko
@@ -12496,7 +12503,7 @@ nakuwalireengayo
 nakuwalireengayooko
 nakuwalireengawo
 nakuwalireengawooko
-
+#
 nakuwaliddeko
 nakuwaliddemu
 nakuwaliddemuuko
@@ -12504,7 +12511,7 @@ nakuwaliddeyo
 nakuwaliddeyooko
 nakuwaliddewo
 nakuwaliddewooko
-
+#
 nakuwaliddeeko
 nakuwaliddeemu
 nakuwaliddeemuuko
@@ -12512,9 +12519,8 @@ nakuwaliddeeyo
 nakuwaliddeeyooko
 nakuwaliddeewo
 nakuwaliddeewooko
-# ------------------------- #
-
-nakuwavu
+# ---------------------------------------------------------------------------------------------------------- #
+omunakuwavu
 nange
 naye
 ndi
@@ -12523,7 +12529,7 @@ ne
 nedda
 neera
 nene
-# -------------------------- okunenya(to blame) ---------------------------------- #
+# ------------------------------------------------- okunenya(to blame) ----------------------------------------- #
 nenya
 nenye
 nenyezza
@@ -12681,8 +12687,7 @@ nenyeddeyo
 nenyeddeyooko
 nenyeddewo
 nenyeddewooko
-# --------------------------------------- #
-
+# ---------------------------------------------------------------------------------------------------------- #
 newaakubadde
 newankubadde
 neyanzizza
