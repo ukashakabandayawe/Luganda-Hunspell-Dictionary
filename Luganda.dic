@@ -11428,11 +11428,27 @@ manyiddeewooko
 manyi
 # ------ okumanyiira(To get used to something; to become accustomed to; to become experienced with) ------- #
 manyiira
+manyiire
+manyidde
+manyiiza
+manyiize
+manyizza
+manyiirwa
+manyiirwe
+manyiiriddwa
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okumanyika(to be famous; to be knowable) -------------------------------- #
 manyika
+manyike
+manyise
+manyikibwa
+manyikibwe
+manyikiddwa
+manyisibwa
+manyisibwe
+manyisiddwa
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------- okumatira(to be content) ---------------------------------- #
+# ------------------------------- okumatira(to be content) ------------------------------------------------ #
 matira
 matire
 matidde
@@ -11442,7 +11458,7 @@ matiddwa
 matiza
 matize
 matizza
-
+#
 matirako
 matiramu
 matiramuuko
@@ -11457,7 +11473,7 @@ matirangayo
 matirangayooko
 matirangawo
 matirangawooko
-
+#
 matireko
 matiremu
 matiremuuko
@@ -11472,7 +11488,7 @@ matireengayo
 matireengayooko
 matireengawo
 matireengawooko
-
+#
 matiddeko
 matiddemu
 matiddemuuko
@@ -11480,7 +11496,7 @@ matiddeyo
 matiddeyooko
 matiddewo
 matiddewooko
-
+#
 matiddeeko
 matiddeemu
 matiddeemuuko
@@ -11488,7 +11504,7 @@ matiddeeyo
 matiddeeyooko
 matiddeewo
 matiddeewooko
-
+#
 matibwaako
 matibwaamu
 matibwaamuuko
@@ -11503,7 +11519,7 @@ matibwangayo
 matibwangayooko
 matibwangawo
 matibwangawooko
-
+#
 matibweko
 matibweemu
 matibweemuuko
@@ -11518,7 +11534,7 @@ matibweengayo
 matibweengayooko
 matibwengawo
 matibwengawooko
-
+#
 matiddwaako
 matiddwaamu
 matiddwaamuuko
@@ -11526,7 +11542,7 @@ matiddwaayo
 matiddwaayooko
 matiddwaawo
 matiddwaawooko
-
+#
 matizaako
 matizaamu
 matizaamuuko
@@ -11541,7 +11557,7 @@ matizangayo
 matizangayooko
 matizangawo
 matizangawooko
-
+#
 matizeeko
 matizeemu
 matizeemuuko
@@ -11556,7 +11572,7 @@ matizeengayo
 matizeengayooko
 matizeengawo
 matizeengawooko
-
+#
 matizzaako
 matizzaamu
 matizzaamuuko
@@ -11564,18 +11580,35 @@ matizzaayo
 matizzaayooko
 matizzaawo
 matizzaawooko
-# ------------------------- #
-
+# ------------------------------------------------------------------------------------------------------------------------- #
 matiriyo
-mativu
-matiza
+omumativu
 mbega
 mbi
 mbu
 meeya
-# ------------------- okumeggana(to battle; to challenge; to wrestle; to wrestle 
-with) ------------------- #
+# --------------------- okumegga(to defeat; to challenge; to wrestle; to wrestle with) -------------------- #
+megga
+megge
+mezze
+meggesa
+meggese
+meggesezza
+meggebwa
+meggebwe    
+meggeddwa
+meggera
+meggere
+meggedde
+# --------------------------------------------------------------------------------------------------------- #
+# -------------------- okumeggana(to battle; to challenge; to wrestle; to wrestle with) ------------------- #
 meggana
+meggane
+megganye
+megganira
+megganire
+megganyidde
+omumegganyi
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------- okumenya(to break) ---------------------------------- #
 menya
@@ -11589,7 +11622,7 @@ menyesezza
 menyera
 menyere
 menyedde
-
+#
 menyako
 menyamu
 menyamuuko
@@ -11597,7 +11630,7 @@ menyayo
 menyayooko
 menyawo
 menyawooko
-
+#
 menyaako
 menyaamu
 menyaamuuko
@@ -11612,7 +11645,7 @@ menyangayo
 menyangayooko
 menyangawo
 menyangawooko
-
+#
 menyeeko
 menyeemu
 menyeemuuko
@@ -11629,7 +11662,7 @@ menyeengayo
 menyeengayooko
 menyeengawo
 menyeengawooko
-
+#
 menyebwaako
 menyebwaamu
 menyebwaamuuko
@@ -11644,7 +11677,7 @@ menyebwangayo
 menyebwangayooko
 menyebwangawo
 menyebwangawooko
-
+#
 menyebweko
 menyebweemu
 menyebweemuuko
@@ -11659,7 +11692,7 @@ menyebwengayo
 menyebwengayooko
 menyebwengawo
 menyebwengawooko
-
+#
 menyeddwaako
 menyeddwaamu
 menyeddwaamuuko
@@ -11667,7 +11700,7 @@ menyeddwayo
 menyeddwayooko
 menyeddwaawo
 menyeddwaawooko
-
+#
 menyesaako
 menyesaamu
 menyesaamuuko
@@ -11681,7 +11714,7 @@ menyesangayo
 menyesangayooko
 menyesangawo
 menyesangawooko
-
+#
 menyeseeko
 menyeseemu
 menyeseemuuko
@@ -11696,7 +11729,7 @@ menyeseengayo
 menyeseengayooko
 menyeseengawo
 menyeseengawooko
-
+#
 menyesezzaako
 menyesezzaamu
 menyesezzaamuuko
@@ -11704,7 +11737,7 @@ menyesezzaayo
 menyesezzaayooko
 menyesezzaawo
 menyesezzaawooko
-
+#
 menyerako
 menyeramu
 menyeramuuko
@@ -11719,7 +11752,7 @@ menyerangayo
 menyerangayooko
 menyerangawo
 menyerangawooko
-
+#
 menyereko
 menyeremu
 menyeremuuko
@@ -11734,7 +11767,7 @@ menyereengayo
 menyereengayooko
 menyereengawo
 menyereengawooko
-
+#
 menyeddeko
 menyeddemu
 menyeddemuuko
@@ -11742,7 +11775,7 @@ menyeddeyo
 menyeddeyooko
 menyeddewo
 menyeddewooko
-
+#
 menyeddeeko
 menyeddeemu
 menyeddeemuuko
@@ -11750,8 +11783,7 @@ menyeddeeyo
 menyeddeeyooko
 menyeddeewo
 menyeddeewooko
-# ------------------------- #
-
+# -------------------------------------------------------------------------------------------------------------- #
 ministule
 minzaani
 # ---------------------------------- okumira(to swallow) ---------------------------------- #
@@ -11767,7 +11799,7 @@ mizisizza
 mirira
 mirire
 miridde
-
+#
 miraako
 miraamu
 miraamuuko
@@ -11775,7 +11807,7 @@ miraayo
 miraayooko
 miraawo
 miraawooko
-
+#
 mirako
 miramu
 miramuuko
@@ -11790,7 +11822,7 @@ mirangayo
 mirangayooko
 mirangawo
 mirangawooko
-
+#
 mireko
 miremu
 miremuuko
@@ -11805,7 +11837,7 @@ mirengayo
 mirengayooko
 mireengawo
 mireengawooko
-
+#
 mizeeko
 mizeemu
 mizeemuuko
@@ -11813,7 +11845,7 @@ mizeeyo
 mizeeyooko
 mizeewo
 mizeewooko
-
+#
 miribwaako
 miribwaamu
 miribwaamuuko
@@ -11828,7 +11860,7 @@ miribwangayo
 miribwangayooko
 miribwangawo
 miribwangawooko
-
+#
 miribweko
 miribwemu
 miribwemuuko
@@ -11843,7 +11875,7 @@ miribwengayo
 miribwengayooko
 miribwengawo
 miribwengawooko
-
+#
 miriddwaako
 miriddwaamu
 miriddwaamuuko
@@ -11851,7 +11883,7 @@ miriddwayo
 miriddwayooko
 miriddwaawo
 miriddwaawooko
-
+#
 mizisaako
 mizisaamu
 mizisaamuuko
@@ -11866,7 +11898,7 @@ mizisangayo
 mizisangayooko
 mizisangawo
 mizisangawooko
-
+#
 miziseeko
 miziseemu
 miziseemuuko
@@ -11881,7 +11913,7 @@ miziseengayo
 miziseengayooko
 miziseengawo
 miziseengawooko
-
+#
 mizisizzaako
 mizisizzaamu
 mizisizzaamuuko
@@ -11889,7 +11921,7 @@ mizisizzaayo
 mizisizzaayooko
 mizisizzaawo
 mizisizzaawooko
-
+#
 mirirako
 miriramu
 miriramuuko
@@ -11904,7 +11936,7 @@ mirirangayo
 mirirangayooko
 mirirangawo
 mirirangawooko
-
+#
 mirireko
 miriremu
 miriremumuuko
@@ -11919,7 +11951,7 @@ mirirengayo
 mirireengayooko
 mirireengawo
 mirireengawooko
-
+#
 miriddeko
 miriddemu
 miriddemuuko
@@ -11927,7 +11959,7 @@ miriddeyo
 miriddeyooko
 miriddewo
 miriddewooko
-
+#
 miriddeeko
 miriddeemu
 miriddeemuuko
@@ -11935,18 +11967,34 @@ miriddeeyo
 miriddeeyooko
 miriddeewo
 miriddeewooko
-# ------------------------- #
-
+# --------------------------------------------------------------------------------------------------------- #
 Misiri
-# ------------- okumma(to deny somebody something; to refuse to
-give; to grudge; to withhold) ------------- #
+# ------------- **okumma(to deny somebody something; to refuse to give; to grudge; to withhold) ------------- #
 mma
+mme
+mmye
+mmisa
+mmise
+mmisizza
+mmibwa
+mmibwe
+mmiddwa
+mmira
+mmire
+mmidde
 # --------------------------------------------------------------------------------------------------------- #
 mmange
 mmeka
 mmemba
 # --------------------------------- okummuka(to be active; to be lively) ---------------------------------- #
 mmuka
+mmuke
+mmuse
+mmusa
+mmusizza
+mmukira
+mmukire
+mmukidde
 # --------------------------------------------------------------------------------------------------------- #
 mpaka
 mpi
@@ -12008,7 +12056,16 @@ mwattu
 mwe
 mwebale
 mwenda
+# ---------------------------------------- okumwenya(to smile) ----------------------------------------- #
 mwenya
+mwenye
+mwenyezza
+mwenyesa
+mwenyese
+mwenyesezza
+mwenyeza
+mwenyeze
+# ------------------------------------------------------------------------------------------------------ #
 mweraba
 n'olwekyo
 # ------------------------- okunaaba(to bathe) ---------------------------------- #
@@ -12021,7 +12078,7 @@ naabisizza
 naabira
 naabire
 naabidde
-
+#
 naabako
 naabamu
 naabamuuko
@@ -12036,7 +12093,7 @@ naabangayo
 naabangayooko
 naabangawo
 naabangawooko
-
+#
 naabeko
 naabemu
 naabemuuko
@@ -12051,7 +12108,7 @@ naabengayo
 naabengayooko
 naabengawo
 naabengawooko
-
+#
 naabyeeko
 naabyeemu
 naabyeemuuko
@@ -12059,7 +12116,7 @@ naabyeeyo
 naabyeeyooko
 naabyeewo
 naabyeewooko
-
+#
 naabisaako
 naabisaamu
 naabisaamuuko
@@ -12074,8 +12131,7 @@ naabisangayo
 naabisangayooko
 naabisangawo
 naabisangawooko
-
-
+#
 naabiseeko
 naabiseemu
 naabiseemu
@@ -12090,7 +12146,7 @@ naabiseengayo
 naabiseengayooko
 naabiseengawo
 naabiseengawooko
-
+#
 naabisizzaako
 naabisizzaamu
 naabisizzaamuuko
@@ -12098,7 +12154,7 @@ naabisizzaayo
 naabisizzaayooko
 naabisizzaawo
 naabisizzaawooko
-
+#
 naabirako
 naabiramu
 naabiramuuko
@@ -12113,7 +12169,7 @@ naabirangayo
 naabirangayooko
 naabirangawo
 naabirangawooko
-
+#
 naabireko
 naabiremu
 naabiremuuko
@@ -12128,7 +12184,7 @@ naabirengayo
 naabireengayooko
 naabireengawo
 naabireengawooko
-
+#
 naabiddeko
 naabiddemu
 naabiddemuuko
@@ -12136,7 +12192,7 @@ naabiddeyo
 naabiddeyooko
 naabiddewo
 naabiddewooko
-
+#
 naabiddeeko
 naabiddeemu
 naabiddeemuuko
@@ -12144,8 +12200,7 @@ naabiddeeyo
 naabiddeeyooko
 naabiddeewo
 naabiddeewooko
-# ------------------------- #
-
+# --------------------------------------------------------------------------------------------------------- #
 # ------------------------- okunaaza(to bathe someone) ---------------------------------- #
 naaza
 naaze
@@ -12159,7 +12214,7 @@ naazisizza
 naaliza
 naalize
 naalizza
-
+#
 naazaako
 naazaamu
 naazaamuuko
@@ -12174,7 +12229,7 @@ naazaangayo
 naazaangayooko
 naazaangawo
 naazaangawooko
-
+#
 naazeeko
 naazeemu
 naazeemuuko
@@ -12189,7 +12244,7 @@ naazeengayo
 naazeengayooko
 naazeengawo
 naazeengawooko
-
+#
 naazizzaako
 naazizzaamu
 naazizzaamuuko
@@ -12197,7 +12252,7 @@ naazizzaayo
 naazizzaayooko
 naazizzaawo
 naazizzaawooko
-
+#
 naazibwaako
 naazibwaamu
 naazibwaamuuko
@@ -12212,7 +12267,7 @@ naazibwangayo
 naazibwangayooko
 naazibwangawo
 naazibwangawooko
-
+#
 naazibweko
 naazibweemu
 naazibweemuuko
@@ -12227,7 +12282,7 @@ naazibwengayo
 naazibwengayooko
 naazibwengawo
 naazibwengawooko
-
+#
 naaziddwaako
 naaziddwaamu
 naaziddwaamuuko
@@ -12235,7 +12290,7 @@ naaziddwaayo
 naaziddwaayooko
 naaziddwaawo
 naaziddwaawooko
-
+#
 naazisaako
 naazisaamu
 naazisaamuuko
@@ -12250,7 +12305,7 @@ naazisangayo
 naazisangayooko
 naazisangawo
 naazisangawooko
-
+#
 naaziseeko
 naaziseemu
 naaziseemuuko
@@ -12265,7 +12320,7 @@ naaziseengayo
 naaziseengayooko
 naaziseengawo
 naaziseengawooko
-
+#
 naazisizzaako
 naazisizzaamu
 naazisizzaamuuko
@@ -12273,7 +12328,7 @@ naazisizzaayo
 naazisizzaayooko
 naazisizzaawo
 naazisizzaawooko
-
+#
 naalizaako
 naalizaamu
 naalizaamuuko
@@ -12288,7 +12343,7 @@ naalizangayo
 naalizangayooko
 naalizangawo
 naalizangawooko
-
+#
 naalizeeko
 naalizeemu
 naalizeemuuko
@@ -12303,7 +12358,7 @@ naalizeengayo
 naalizeengayooko
 naalizeengawo
 naalizeengawooko
-
+#
 naalizzaako
 naalizzaamu
 naalizzaamuuko
@@ -12311,10 +12366,9 @@ naalizzaayo
 naalizzaayooko
 naalizzaawo
 naalizzaawooko
-# ------------------------- #
-
+# -------------------------------------------------------------------------------------------------------- #
 naddala
-nafu
+munafu
 # ------------------------------- okunafuwa(to become weak; to become lazy) ------------------------------- #
 nafuwa
 # --------------------------------------------------------------------------------------------------------- #
