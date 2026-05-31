@@ -11039,12 +11039,23 @@ liire
 lidde
 omuli
 # --------------------------------------------------------------------------------------------------------- #
-# --- lyoka --- #
+# --------------------------------------- lyoka(so that) -------------------------------------------------- #
 lyoka
-# --- maama --- #
+lyoke
+lyose
+# --------------------------------------------------------------------------------------------------------- #
 maama
-# --- maamira --- #
+# ------------------------------------------ maamira(to hatch) --------------------------------------------- #
 maamira
+maamire
+maamidde
+maamiza
+maamize
+maamizza
+maamirwa
+maamirwe
+maamiddwa
+# ---------------------------------------------------------------------------------------------------------- #
 maapu
 mabega
 makanika
@@ -11063,7 +11074,7 @@ mazisizza
 malira
 malire
 malidde
-
+#
 malaako
 malaamu
 malaamuuko
@@ -11071,7 +11082,7 @@ malaayo
 malaayooko
 malaawo
 malaawooko
-
+#
 malako
 malamu
 malamuuko
@@ -11086,7 +11097,7 @@ malangayo
 malangayooko
 malangawo
 malangawooko
-
+#
 maleko
 malemu
 malemuuko
@@ -11101,7 +11112,7 @@ maleengayo
 maleengayooko
 maleengawo
 maleengawooko
-
+#
 mazeeko
 mazeemu
 mazeemuuko
@@ -11109,7 +11120,7 @@ mazeeyo
 mazeeyooko
 mazeewo
 mazeewooko
-
+#
 malibwaako
 malibwaamu
 malibwaamuuko
@@ -11124,7 +11135,7 @@ malibwangayo
 malibwangayooko
 malibwangawo
 malibwangawooko
-
+#
 malibweeko
 malibweemu
 malibweemuuko
@@ -11139,7 +11150,7 @@ malibwengayo
 malibwengayooko
 malibwengawo
 malibwengawooko
-
+#
 maliddwaako
 maliddwaamu
 maliddwaamuuko
@@ -11147,7 +11158,7 @@ maliddwayo
 maliddwayooko
 maliddwaawo
 maliddwaawooko
-
+#
 mazisaako
 mazisaamu
 mazisaamuuko
@@ -11162,7 +11173,7 @@ mazisangayo
 mazisangayooko
 mazisangawo
 mazisangawooko
-
+#
 maziseeko
 maziseemu
 maziseemuuko
@@ -11178,7 +11189,7 @@ maziseengayooko
 maziseengawo
 mazisizzaako
 maziseengawooko
-
+#
 mazisizzaako
 mazisizzaamu
 mazisizzaamuuko
@@ -11186,7 +11197,7 @@ mazisizzaayo
 mazisizzaayooko
 mazisizzaawo
 mazisizzaawooko
-
+#
 malirako
 maliramu
 maliramuuko
@@ -11201,7 +11212,7 @@ malirangayo
 malirangayooko
 malirangawo
 malirangawooko
-
+#
 malireko
 maliremu
 maliremuuko
@@ -11216,7 +11227,7 @@ malireengayo
 malireengayooko
 malireengawo
 malireengawooko
-
+#
 maliddeko
 maliddemu
 maliddemuuko
@@ -11224,7 +11235,7 @@ maliddeyo
 maliddeyooko
 maliddewo
 maliddewooko
-
+#
 maliddeeko
 maliddeemu
 maliddeemuuko
@@ -11232,21 +11243,23 @@ maliddeeyo
 maliddeeyooko
 maliddeewo
 maliddeewooko
-# ------------------------- #
-
+# -------------------------------------------------------------------------------------------------------- #
 malaaya
 malayika
 malirivu
 # ------------------------------------ okumaliriza(to end; to finish) ------------------------------------- #
 maliriza
-# --------------------------------------------------------------------------------------------------------- #
 malirize
 malirizza
+malirizibwa
+malirizibwe
+maliriziddwa
+# --------------------------------------------------------------------------------------------------------- #
 Mande
 mangadda
 mangu
 manvuuli
-# ---------------------- okumanya(to know) ----------------------- #
+# ------------------------------------ okumanya(to know) -------------------------------------------------- #
 manya
 manye
 manyibwa
@@ -11259,7 +11272,7 @@ manyisizza
 manyira
 manyire
 manyidde
-
+#
 manyaako
 manyaamu
 manyaamuuko
@@ -11274,7 +11287,7 @@ manyangayo
 manyangayooko
 manyangawo
 manyangawooko
-
+#
 manyeeko
 manyeemu
 manyeemuuko
@@ -11289,7 +11302,7 @@ manyeengayo
 manyeengayooko
 manyeengawo
 manyeengawooko
-
+#
 manyibwaako
 manyibwaamu
 manyibwaamuuko
@@ -11304,7 +11317,7 @@ manyibwangayo
 manyibwangayooko
 manyibwangawo
 manyibwangawooko
-
+#
 manyibweko
 manyibweemu
 manyibweemuuko
@@ -11319,7 +11332,7 @@ manyibwengayo
 manyibwengayooko
 manyibwengawo
 manyibwengawooko
-
+#
 manyiddwaako
 manyiddwaamu
 manyiddwaamuuko
@@ -11327,7 +11340,7 @@ manyiddwayo
 manyiddwayooko
 manyiddwaawo
 manyiddwaawooko
-
+#
 manyisaako
 manyisaamu
 manyisaamuuko
@@ -11342,7 +11355,7 @@ manyisangayo
 manyisangayooko
 manyisangawo
 manyisangawooko
-
+#
 manyiseeko
 manyiseemu
 manyiseemuuko
@@ -11357,7 +11370,7 @@ manyiseengayo
 manyiseengayooko
 manyiseengawo
 manyiseengawooko
-
+#
 manyisizzaako
 manyisizzaamu
 manyisizzaamuuko
@@ -11365,7 +11378,7 @@ manyisizzaayo
 manyisizzaayooko
 manyisizzaawo
 manyisizzaawooko
-
+#
 manyirako
 manyiramu
 manyiramuuko
@@ -11380,7 +11393,7 @@ manyirangayo
 manyirangayooko
 manyirangawo
 manyirangawooko
-
+#
 manyireko
 manyiremu
 manyiremuuko
@@ -11395,7 +11408,7 @@ manyireengayo
 manyireengayooko
 manyireengawo
 manyireengawooko
-
+#
 manyiddeko
 manyiddemu
 manyiddemuuko
@@ -11403,7 +11416,7 @@ manyiddeyo
 manyiddeyooko
 manyiddewo
 manyiddewooko
-
+#
 manyiddeeko
 manyiddeemu
 manyiddeemuuko
@@ -11411,11 +11424,9 @@ manyiddeeyo
 manyiddeeyooko
 manyiddeewo
 manyiddeewooko
-# ------------------------- #
-
+# -------------------------------------------------------------------------------------------------------------- #
 manyi
-# ------ okumanyiira(To get used to something; to become
-accustomed to; to become experienced with) ------- #
+# ------ okumanyiira(To get used to something; to become accustomed to; to become experienced with) ------- #
 manyiira
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okumanyika(to be famous; to be knowable) -------------------------------- #
