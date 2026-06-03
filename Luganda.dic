@@ -4837,7 +4837,7 @@ yanzibbwaawooko
 yanzibbwanga
 # ---------------------------------------------------------------------------------- #
 eyattayimu
-# --------------------------------------- okweyazika(to borrow) --------------------------------------- #
+# --------------------------------------- okwazika(to lend) --------------------------------------- #
 yazika
 yazike
 yazise
@@ -13561,7 +13561,7 @@ yambalire
 yambalidde
 omwambazi
 # --------------------------------------------------------------------------------------- #
-# ---------------------------- okwambuka(to go up) -------------------------------------- #
+# ---------------------------- okwambuka(to go up; inf.: okwambuka) -------------------------------------- #
 yambuka
 yambuke
 yambuse
@@ -21561,8 +21561,15 @@ yambiddeewooko
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------------------------- okuyambagana(to help one another) ----------------------------------- #
 yambagana
+yambagane
+yambaganye
+yambaganya
+yambaganyizza
+yambaganira
+yambaganire
+yambaganidde
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuyambala(to dress) ----------------------------------------- #
+# ---------------------------------------- okuyambala(to dress; inf: okwambala) ------------------------------------------- #
 yambala
 yambale
 yambadde
@@ -21743,41 +21750,101 @@ yambaliddeeyo
 yambaliddeeyooko
 yambaliddeewo
 yambaliddeewooko
-# ------------------------------------------------------------------- #
-# ---------------------- okuyambuka(to go; to go uphill; to climb; inf.: okwambuka) ----------------------- #
-yambuka
 # --------------------------------------------------------------------------------------------------------- #
-yambula
 yangu
-# --------------------- okuyanguwa(to hurry; to hasten; to hurry up; inf.:
-okwanguwa) --------------------- #
+# --------------------- okuyanguwa(to hurry; to hasten; to hurry up; inf.:okwanguwa) --------------------- #
 yanguwa
+yanguwe
+yanguye
+yanguya
+yanguyizza
+yanguyirwa
+yanguyirwe
+yanguyiddwa
+yanguyira
+yanguyire
+yanguyidde
 # --------------------------------------------------------------------------------------------------------- #
-yanjula
 # ---------------------------------- okuyasa(to burn up; to make shine) ----------------------------------- #
 yasa
-# --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okuyasimula(to sneeze; inf.: okwasimula) -------------------------------- #
-yasimula
+yase
+yasizza
+yasibwa
+yasibwe
+yasiddwa
+yasiza
+yasize
+yasirizza
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------------------ okuyatika(to split) ------------------------------------------ #
 yatika
+yatike
+yatise
+yatikira
+yatikire
+yatikidde
 # --------------------------------------------------------------------------------------------------------- #
 yavu
-yavuwala
+# ------------------------ okuyawuka(to be different; intrasitive) ----------------------------------------- #
 yawuka
-yawukana
-yawula
-yayuuya
-# ------------------------------------------ okuyaza(transitive) ------------------------------------------ #
-yaza
+yawuke
+yawuse
+yawukira
+yawukire
+yawukidde
 # --------------------------------------------------------------------------------------------------------- #
-yazika
+# ---------------------------------- okuyawukana(to be different; inf: okwawukana)------------------------- #
+yawukana
+yawukane
+yawukanye
+yawukanya
+yawukanyizza
+yawukanyiza
+yawukanyize
+yawukanira
+yawukanire
+yawukanidde
+# --------------------------------------------------------------------------------------------------------- #
+# ------------------------------ okuyawula(to separate; inf: okwawula) ------------------------------------ #
+yawula
+yawule
+yawudde
+yawuza
+yawuze
+yawuzza
+yawulwa
+yawulwe
+yawuddwa
+yawulira
+yawulire
+yawuliddde
+# --------------------------------------------------------------------------------------------------------- #
+# -------------------------------- okuyayuuya(to yawn; inf: okwayuuya) ------------------------------------ #
+yayuuya
+yayuuye
+yayuuyizza
+yayuuyisa
+yayuuyise
+yayuuyisizza
+yayuuyira
+yayuuyire
+yayuuyidde
+# --------------------------------------------------------------------------------------------------------- #
+# ---------------------------- okuyaza(to multiply; inf: okwaza) ------------------------------------------ #
+yaza
+yaze
+yazizza
+yazibwa
+yazibwe
+yaziddwa
+yaliza
+yalize
+# --------------------------------------------------------------------------------------------------------- #
 ye
 yee
 yenkana
 yennyini
-# -------------------------------- okuyera(to sweep) ---------------------------------- #
+# --------------------------------------------------- okuyera(to sweep) ----------------------------------- #
 yera
 yere
 yeze
@@ -21942,13 +22009,13 @@ yereddeeyo
 yereddeeyooko
 yereddeewo
 yereddeewooko
-# ------------------------------------------------------------------- #
+# --------------------------------------------------------------------------------------------------------- #
 yerabize
 yereere
 yeru
 yesu
 yezu
-# ---------------------------------------- okuyiga(to learn) ----------------------------------------- #
+# ------------------------------------------ okuyiga(to learn) -------------------------------------------- #
 yiga
 yige
 yize
@@ -22120,26 +22187,128 @@ yigiddeeyo
 yigiddeeyooko
 yigiddeewo
 yigiddeewooko
-# -------------------------------------------------------------------------------------- #
-yigga
-yigiriza
-# ---------------------------------------- okuyiika(intransitive) ----------------------------------------- #
-yiika
 # --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okuyigga(to hunt) ----------------------------------------------- #
+yigga
+yigge
+yizze
+yiggisa
+yiggise
+yiggisizza
+yiggibwa
+yiggibwe
+yiggiddwa
+yiggira
+yiggire
+yiggidde
+# --------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------- okuyiika(to pour; intransitive) ----------------------------------------- #
+yiika
+yiike
+yiise
+yiikira
+yiikire
+yiikidde
+# --------------------------------------------------------------------------------------------------------- #
+# -------------------------------------- okuyiikiriza(to provoke) ----------------------------------------- #
 yiikiriza
+yiikirize
+yiikirizza
+yiikirizibwa
+yiikirizibwe
+yiikirizibbwa
+yiikiririza
+yiikiririze
+# --------------------------------------------------------------------------------------------------------- #
+# -------------------------------------- okuyiiya(to invent) ---------------------------------------------- #
 yiiya
+yiiye
+yiiyizza
+yiiyisa
+yiiyise
+yiiyisizza
+yiiyibwa
+yiiyibwe
+yiiyiddwa
+yiiyiza
+yiiyize
+# --------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------- okuyimba(to sing) --------------------------------------------- #
 yimba
+yimbe
+yimbye
+yimbya
+yimbizza
+yimbisa
+yimbise
+yimbisizza
+yimbibwa
+yimbibwe
+yimbiddwa
+yimbira
+yimbire
+yimbidde
+# --------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------- okuyimbula(to release) ----------------------------------------- #
 yimbula
+yimbule
+yimbudde
+yimbuza
+yimbuze
+yimbuzza
+yimbulwa
+yimbulwe
+yimbuddwa
+yimbulira
+yimbulire
+yimbulidde
+# --------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------- okuyimirira(to stand) ---------------------------------------- #
 yimirira
+yimirire
+yimiridde
 yimiriza
+yimirize
+yimirizza
+yimirirwa
+yimirirwe
+yimiriddwa
+yimiririra
+yimiririre
+yimiriridde
+# --------------------------------------------------------------------------------------------------------- #
+# ----------------------------- okuyimuka(to stand; intransitive) ----------------------------------------- #
 yimuka
+yimuke
+yimuse
 yimusa
+yimusizza
+yimusibwa
+yimusibwe
+yimusiddwa
+yimusiza
+yimusize
+yimusirizza
+# --------------------------------------------------------------------------------------------------------- #
 yinginiya
 # ----------------------------------------- okuyingira(to enter) ------------------------------------------ #
 yingira
+yingire
+yingidde
+yingiza 
+yingize
+yingizza
+yingizibwa
+yingizibwe
+yingiziddwa
+yingilwa
+yingilwe
+yingiddwa
+yingirira
+yingirire
+yingiridde
 # --------------------------------------------------------------------------------------------------------- #
 yinsuwa
-yisa
 yisirayiri
 # -------------------------------- okuyita(to pass/call) ---------------------------------- #
 yita
@@ -22331,8 +22500,7 @@ yomba
 # --------------------------------------------------------------------------------------------------------- #
 yongera
 yongeza
-# -------------------- okuyonja(to clean; to make neat; to smarten up; inf.:
-okuyonja) -------------------- #
+# -------------------- okuyonja(to clean; to make neat; to smarten up; inf.: okuyonja) -------------------- #
 yonja
 # --------------------------------------------------------------------------------------------------------- #
 yonjo
@@ -22364,13 +22532,11 @@ yozaayoza
 # ------------------------------------- okuyunga(to join; to connect) ------------------------------------- #
 yunga
 # --------------------------------------------------------------------------------------------------------- #
-# ------------ okuyungula(to disconnect; to detach; to choose; to select;
-to assign; to sort) ------------- #
+# ------------ okuyungula(to disconnect; to detach; to choose; to select; to assign; to sort) ------------- #
 yungula
 # --------------------------------------------------------------------------------------------------------- #
 yunivasite
-# -------------------- okuyuuguuma(to shake; to sway; to move irregularly to and
-fro) --------------------- #
+# -------------------- okuyuuguuma(to shake; to sway; to move irregularly to and fro) --------------------- #
 yuuguuma
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okuyuza(to tear; to rend) --------------------------------------- #
