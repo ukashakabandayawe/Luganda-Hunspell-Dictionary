@@ -54,6 +54,7 @@ public class ReviewActivity extends AppCompatActivity {
             Pattern.compile("\\brelative\\b", Pattern.CASE_INSENSITIVE),
             Pattern.compile("\\bstill\\b", Pattern.CASE_INSENSITIVE),
             Pattern.compile("\\bprogressive\\b", Pattern.CASE_INSENSITIVE),
+            Pattern.compile("\\bobject\\b", Pattern.CASE_INSENSITIVE),
     };
 
     private CharSequence highlightKeywordsGreen(String text) {
