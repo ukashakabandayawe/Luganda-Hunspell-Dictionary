@@ -4,7 +4,7 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
-from django.db.models import Count, Q, Sum
+from django.db.models import Count, Prefetch, Q, Sum
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
@@ -13,6 +13,18 @@ from django.views.decorators.http import require_http_methods
 from .hunspell import generate_examples_for_flag, get_flag_description
 from .models import Stem, StemFlagTask
 from .services import update_working_dic_for_task_change
+
+
+def _allowed_flag_groups_for_stem(stem: Stem) -> set[str] | None:
+    g = getattr(stem, "group", None)
+    if g is None:
+        return None
+    try:
+        raw = list(getattr(g, "flag_groups", None) or [])
+    except Exception:
+        raw = []
+    allowed = {str(x).strip() for x in raw if str(x).strip()}
+    return allowed or None
 
 
 @login_required
@@ -32,13 +44,26 @@ def logout_view(request):
 def my_queue(request):
     if request.user.is_staff:
         return redirect(reverse("admin:index"))
+    pending_tasks_qs = (
+        StemFlagTask.objects.filter(status=StemFlagTask.Status.PENDING)
+        .select_related("flag")
+        .only("id", "stem_id", "status", "flag__group", "flag__code")
+    )
     stems_qs = (
         Stem.objects.filter(assigned_to=request.user)
         .select_related("group")
-        .annotate(pending_count=Count("flag_tasks", filter=Q(flag_tasks__status=StemFlagTask.Status.PENDING)))
+        .prefetch_related(Prefetch("flag_tasks", queryset=pending_tasks_qs, to_attr="_pending_tasks"))
         .order_by("source_line_no", "id")
     )
     stems = list(stems_qs)
+
+    for s in stems:
+        allowed = _allowed_flag_groups_for_stem(s)
+        pending_tasks = list(getattr(s, "_pending_tasks", []) or [])
+        if allowed is not None:
+            pending_tasks = [t for t in pending_tasks if getattr(getattr(t, "flag", None), "group", None) in allowed]
+        # Keep template/API compatibility with previous annotate().
+        s.pending_count = len(pending_tasks)
     assigned_stems_count = len(stems)
     total_pending = sum(int(getattr(s, "pending_count", 0) or 0) for s in stems)
 
@@ -109,7 +134,11 @@ def review_stem(request, stem_id: int):
     if not (request.user.is_staff or stem.assigned_to_id == request.user.id):
         raise Http404()
 
-    tasks = StemFlagTask.objects.filter(stem=stem).select_related("flag")
+    allowed = _allowed_flag_groups_for_stem(stem)
+    tasks_qs = StemFlagTask.objects.filter(stem=stem).select_related("flag")
+    if allowed is not None:
+        tasks_qs = tasks_qs.filter(flag__group__in=allowed)
+    tasks = tasks_qs
 
     if request.method == "POST":
         task_id = request.POST.get("task_id")

@@ -58,7 +58,12 @@ class Command(BaseCommand):
         if fmt not in {"gz", "zip"}:
             raise CommandError("--format must be 'gz' or 'zip'")
 
-        limit_examples = int(options.get("limit_examples") or options.get("limit-examples") or 120)
+        limit_opt = options.get("limit_examples")
+        if limit_opt is None:
+            limit_opt = options.get("limit-examples")
+        if limit_opt is None:
+            limit_opt = 120
+        limit_examples = int(limit_opt)
         if limit_examples < 0:
             raise CommandError("--limit-examples must be >= 0")
 

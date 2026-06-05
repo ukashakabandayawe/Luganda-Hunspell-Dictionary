@@ -12,6 +12,18 @@ from .hunspell import generate_examples_for_flag, get_flag_description
 from .models import Stem, StemFlagTask
 
 
+def _allowed_flag_groups_for_stem(stem: Stem) -> set[str] | None:
+	g = getattr(stem, "group", None)
+	if g is None:
+		return None
+	try:
+		raw = list(getattr(g, "flag_groups", None) or [])
+	except Exception:
+		raw = []
+	allowed = {str(x).strip() for x in raw if str(x).strip()}
+	return allowed or None
+
+
 def _utc_now_iso() -> str:
 	return datetime.now(timezone.utc).isoformat()
 
@@ -74,7 +86,10 @@ def build_offline_review_bundle_payload(
 	total_stems = len(stems)
 	for stem_i, s in enumerate(stems, start=1):
 		task_rows = []
+		allowed = _allowed_flag_groups_for_stem(s)
 		for t in tasks_by_stem.get(s.id, []):
+			if allowed is not None and getattr(getattr(t, "flag", None), "group", None) not in allowed:
+				continue
 			total_tasks += 1
 			code = t.flag.code
 			desc = t.flag.description or t.flag.aff_description or get_flag_description(aff_path, code) or ""
