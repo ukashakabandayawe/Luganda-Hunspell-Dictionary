@@ -96,6 +96,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        try {
+            getMenuInflater().inflate(com.luganda.offlinereview.R.menu.home_menu, menu);
+        } catch (Throwable ignored) {}
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(android.view.MenuItem item) {
+        if (item == null) return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        if (id == com.luganda.offlinereview.R.id.menu_accounts) {
+            startActivity(new Intent(this, AccountsActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         setIntent(intent);
@@ -209,13 +228,15 @@ public class MainActivity extends AppCompatActivity {
 
                 String username = header.username == null ? "" : header.username;
                 String who = username.isEmpty() ? "(unknown)" : username;
+                String acctName = AccountManager.getActiveAccountDisplayName(MainActivity.this);
+                final String whoLabel = (acctName != null && !acctName.trim().isEmpty()) ? (who + " — " + acctName.trim()) : who;
 
                 int active = sum.approved;
                 int inactive = sum.rejected;
                 int drafts = sum.pending;
 
                 runOnUiThread(() -> {
-                    if (userName != null) userName.setText(who);
+                    if (userName != null) userName.setText(whoLabel);
 
                     if (dicProblem != null) {
                         setHeaderStatusText(dicProblem);

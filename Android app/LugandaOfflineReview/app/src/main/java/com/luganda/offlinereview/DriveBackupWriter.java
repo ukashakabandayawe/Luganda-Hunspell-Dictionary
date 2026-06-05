@@ -65,10 +65,21 @@ public final class DriveBackupWriter {
         String user = safeUser(username);
         String fileName = "decisions_" + user + ".json";
 
+        // Use active account subfolder when available.
+        String acct = AccountManager.getActiveAccountId(context);
+        DocumentFile targetFolder = folder;
+        if (acct != null) {
+            DocumentFile sub = folder.findFile(acct);
+            if (sub == null || !sub.isDirectory()) {
+                try { sub = folder.createDirectory(acct); } catch (Throwable ignored) { sub = null; }
+            }
+            if (sub != null && sub.isDirectory()) targetFolder = sub;
+        }
+
         // Find or create file.
-        DocumentFile file = folder.findFile(fileName);
+        DocumentFile file = targetFolder.findFile(fileName);
         if (file == null) {
-            file = folder.createFile("application/json", fileName);
+            file = targetFolder.createFile("application/json", fileName);
         }
         if (file == null) {
             throw new IllegalStateException("Could not create backup file");
@@ -100,10 +111,20 @@ public final class DriveBackupWriter {
         String user = safeUser(username);
         String fileName = "Luganda_" + user + ".dic";
 
+        String acct = AccountManager.getActiveAccountId(context);
+        DocumentFile targetFolder = folder;
+        if (acct != null) {
+            DocumentFile sub = folder.findFile(acct);
+            if (sub == null || !sub.isDirectory()) {
+                try { sub = folder.createDirectory(acct); } catch (Throwable ignored) { sub = null; }
+            }
+            if (sub != null && sub.isDirectory()) targetFolder = sub;
+        }
+
         // Find or create file.
-        DocumentFile file = folder.findFile(fileName);
+        DocumentFile file = targetFolder.findFile(fileName);
         if (file == null) {
-            file = folder.createFile("text/plain", fileName);
+            file = targetFolder.createFile("text/plain", fileName);
         }
         if (file == null) {
             throw new IllegalStateException("Could not create .dic backup file");

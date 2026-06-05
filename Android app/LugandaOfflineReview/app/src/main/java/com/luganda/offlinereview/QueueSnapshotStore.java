@@ -44,6 +44,8 @@ final class QueueSnapshotStore {
     }
 
     static File getFile(Context context) {
+        File acct = AccountManager.getActiveAccountDir(context);
+        if (acct != null) return new File(acct, FILE_NAME);
         return new File(context.getFilesDir(), FILE_NAME);
     }
 
@@ -86,7 +88,9 @@ final class QueueSnapshotStore {
     static void save(Context context, Snapshot snapshot) {
         if (context == null || snapshot == null) return;
         File f = getFile(context);
-        File tmp = new File(context.getFilesDir(), FILE_NAME + ".tmp");
+        File base = AccountManager.getActiveAccountDir(context);
+        if (base == null) base = context.getFilesDir();
+        File tmp = new File(base, FILE_NAME + ".tmp");
 
         try {
             JSONObject root = new JSONObject();

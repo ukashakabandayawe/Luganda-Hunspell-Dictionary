@@ -34,10 +34,14 @@ public final class BundleStore {
     private BundleStore() {}
 
     public static File getBundleFile(Context context) {
+        File acct = AccountManager.getActiveAccountDir(context);
+        if (acct != null) return new File(acct, BUNDLE_FILE_NAME);
         return new File(context.getFilesDir(), BUNDLE_FILE_NAME);
     }
 
     public static File getBaseDicFile(Context context) {
+        File acct = AccountManager.getActiveAccountDir(context);
+        if (acct != null) return new File(acct, BASE_DIC_FILE_NAME);
         return new File(context.getFilesDir(), BASE_DIC_FILE_NAME);
     }
 
@@ -142,11 +146,13 @@ public final class BundleStore {
         }
 
         // New assignment or unknown -> clear previous decisions.
-        File decisions = DecisionsStore.getDecisionsFile(context);
+            File decisions = DecisionsStore.getDecisionsFile(context);
         if (decisions.exists()) {
             // Best-effort backup.
             try {
-                File bak = new File(context.getFilesDir(), "decisions.backup.json");
+                File acct = AccountManager.getActiveAccountDir(context);
+                File bakDir = acct != null ? acct : context.getFilesDir();
+                File bak = new File(bakDir, "decisions.backup.json");
                 try (FileInputStream in = new FileInputStream(decisions);
                      FileOutputStream out = new FileOutputStream(bak, false)) {
                     byte[] buf = new byte[8192];
@@ -447,10 +453,14 @@ public final class BundleStore {
 
     // Stem cache files: data contains concatenated UTF-8 stem JSON objects; idx contains 8-byte offsets
     private static File getStemDataFile(Context context) {
+        File acct = AccountManager.getActiveAccountDir(context);
+        if (acct != null) return new File(acct, "stems.data");
         return new File(context.getFilesDir(), "stems.data");
     }
 
     private static File getStemIdxFile(Context context) {
+        File acct = AccountManager.getActiveAccountDir(context);
+        if (acct != null) return new File(acct, "stems.idx");
         return new File(context.getFilesDir(), "stems.idx");
     }
 
@@ -495,8 +505,10 @@ public final class BundleStore {
                 return;
             }
 
-            File tmpData = new File(context.getFilesDir(), "stems.data.tmp");
-            File tmpIdx = new File(context.getFilesDir(), "stems.idx.tmp");
+            File acct = AccountManager.getActiveAccountDir(context);
+            File baseDir = acct != null ? acct : context.getFilesDir();
+            File tmpData = new File(baseDir, "stems.data.tmp");
+            File tmpIdx = new File(baseDir, "stems.idx.tmp");
 
             try (FileOutputStream dfos = new FileOutputStream(tmpData, false);
                  DataOutputStream idos = new DataOutputStream(new FileOutputStream(tmpIdx, false))) {

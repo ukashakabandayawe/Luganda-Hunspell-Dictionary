@@ -24,6 +24,10 @@ public final class DecisionsStore {
     private DecisionsStore() {}
 
     public static File getDecisionsFile(Context context) {
+        File acct = AccountManager.getActiveAccountDir(context);
+        if (acct != null) {
+            return new File(acct, DECISIONS_FILE_NAME);
+        }
         return new File(context.getFilesDir(), DECISIONS_FILE_NAME);
     }
 
@@ -46,7 +50,9 @@ public final class DecisionsStore {
 
     public static void saveDecisionsPayload(Context context, JSONObject payload) throws Exception {
         File f = getDecisionsFile(context);
-        File tmp = new File(context.getFilesDir(), DECISIONS_FILE_NAME + ".tmp");
+        File acct = AccountManager.getActiveAccountDir(context);
+        File base = acct != null ? acct : context.getFilesDir();
+        File tmp = new File(base, DECISIONS_FILE_NAME + ".tmp");
         payload.put("schema", 1);
         payload.put("generated_at", nowIsoUtc());
         byte[] bytes = payload.toString().getBytes(StandardCharsets.UTF_8);

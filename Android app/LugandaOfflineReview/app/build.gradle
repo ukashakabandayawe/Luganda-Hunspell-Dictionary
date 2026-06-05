@@ -7,7 +7,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId 'com.luganda.offlinereview'
+        applicationId 'com.luganda.offlinereviewer'
         minSdk 24
         targetSdk 34
         versionCode 6
