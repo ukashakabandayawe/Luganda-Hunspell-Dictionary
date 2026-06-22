@@ -39,3 +39,32 @@ Selected stem details:
 - pange -> unique flag count: 0; unique flags: (none)
 
 Suggested common group flags: BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
+
+MODIFIED CAUSATIVE STEMS
+Selected stems: 2
+Common flag count: 18
+Common flags (raw): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
+Common flags (tokens): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- cangise -> unique flag count: 0; unique flags: (none)
+- fumbise -> unique flag count: 0; unique flags: (none)
+
+Suggested common group flags: BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
+
+
+PAST CAUSATIVE STEMS
+Selected stems: 2
+Common flag count: 55
+Common flags (raw): BD, BE, BF, BG, BM, BN, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, St, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
+Common flags (tokens): BD, BE, BF, BG, BM, BN, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, St, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- cangisizza -> unique flag count: 0; unique flags: (none)
+- fumbisizza -> unique flag count: 0; unique flags: (none)
+
+Suggested common group flags: BD, BE, BF, BG, BM, BN, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, St, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
