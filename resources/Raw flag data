@@ -87,3 +87,53 @@ No common flag group was found for the selected stems.
 
 
 BENEFACTIVE STEMS
+Selected stems: 4
+Common flag count: 114
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, ww, xx, yt
+Common flags (tokens): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, ww, xx, yt
+Unique flag count: 10
+Unique flags across selected stems: CC, LT, cC, wh, FX, FY, FZ, wn, wm, FP
+
+Selected stem details:
+- cangira -> unique flag count: 4; unique flags: CC, LT, cC, wh
+- fumbira -> unique flag count: 7; unique flags: CC, FX, FY, FZ, LT, cC, wn
+- nyumiza -> unique flag count: 5; unique flags: CC, LT, cC, wm, wn
+- pangira -> unique flag count: 5; unique flags: FP, FY, FZ, wh, wn
+
+Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, ww, xx, yt
+
+
+
+MODIFIED BENEFACTIVE STEMS
+Selected stems: 4
+Common flag count: 14
+Common flags (raw): BV, EM, FP, FR, JQ, NN, PS, RP, Sb, UU, WW, nf, wh, wm
+Common flags (tokens): BV, EM, FP, FR, JQ, NN, PS, RP, Sb, UU, WW, nf, wh, wm
+Unique flag count: 11
+Unique flags across selected stems: FX, PT, SB, em, BU, FH, FL, rp, wg, wj, wn
+
+Selected stem details:
+- cangire -> unique flag count: 4; unique flags: FX, PT, SB, em
+- fumbire -> unique flag count: 6; unique flags: BU, FH, FL, FX, PT, SB
+- nyumize -> unique flag count: 1; unique flags: em
+- pangire -> unique flag count: 7; unique flags: BU, FX, SB, rp, wg, wj, wn
+
+Suggested common group flags: BV, EM, FP, FR, JQ, NN, PS, RP, Sb, UU, WW, nf, wh, wm
+
+
+
+PAST BENEFACTIVE STEMS
+Selected stems: 4
+Common flag count: 45
+Common flags (raw): BD, BE, BF, BG, BM, BR, BU, CC, DP, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FK, FL, FY, GG, II, NN, NP, PS, PT, RP, SS, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sc, st, wg, wn
+Common flags (tokens): BD, BE, BF, BG, BM, BR, BU, CC, DP, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FK, FL, FY, GG, II, NN, NP, PS, PT, RP, SS, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sc, st, wg, wn
+Unique flag count: 15
+Unique flags across selected stems: BX, EB, EC, FC, FJ, FZ, LT, SC, ST, St, sT, EK, EL, FA, RI
+
+Selected stem details:
+- cangidde -> unique flag count: 11; unique flags: BX, EB, EC, FC, FJ, FZ, LT, SC, ST, St, sT
+- fumbidde -> unique flag count: 8; unique flags: BX, EK, EL, FZ, LT, SC, ST, sT
+- nyumilizza -> unique flag count: 6; unique flags: EB, EK, EL, FA, FJ, St
+- pangidde -> unique flag count: 12; unique flags: BX, EB, EC, EK, EL, FJ, FZ, LT, RI, SC, ST, sT
+
+Suggested common group flags: BD, BE, BF, BG, BM, BR, BU, CC, DP, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FK, FL, FY, GG, II, NN, NP, PS, PT, RP, SS, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sc, st, wg, wn
