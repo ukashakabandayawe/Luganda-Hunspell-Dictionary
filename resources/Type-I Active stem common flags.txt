@@ -18,7 +18,7 @@ Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR
 
 The common flags here can be applied to any original present tense stem.
 
-FUTURE TENSE STEMS
+MODIFIED STEMS
 
 Selected stems: 4
 Common flag count: 14

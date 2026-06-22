@@ -16,3 +16,18 @@ Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR
 
 This has additional flags on top Type-I active stem flags and these are:
 EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, KK, LL, UU, VV, XX, YY, ZZ, cc, ii, uu, ww
+
+MODIFIED STEMS
+Selected stems: 3
+Common flag count: 17
+Common flags (raw): BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
+Common flags (tokens): BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- banje -> unique flag count: 0; unique flags: (none)
+- gambe -> unique flag count: 0; unique flags: (none)
+- kole -> unique flag count: 0; unique flags: (none)
+
+Suggested common group flags: BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
