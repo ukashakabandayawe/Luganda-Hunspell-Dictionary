@@ -1,0 +1,41 @@
+I don't know what to call these stems but all I know is that they can not take reflexive objects 
+
+I chose four words to represent all the other stems in these category and I analyzed them to find stems that apply to them.
+
+
+Mode: LONG
+Category: mixed
+Selected stems: 5
+Common flag count: 93
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
+Common flags (tokens): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- canga -> unique flag count: 0; unique flags: (none)
+- fumba -> unique flag count: 0; unique flags: (none)
+- matira -> unique flag count: 0; unique flags: (none)
+- nyumya -> unique flag count: 0; unique flags: (none)
+- panga -> unique flag count: 0; unique flags: (none)
+
+Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
+
+The common flags here can be applied to any original present tense stem.
+
+MODIFIED STEMS
+
+Selected stems: 4
+Common flag count: 14
+Common flags (raw): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
+Common flags (tokens): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- cange -> unique flag count: 0; unique flags: (none)
+- fumbe -> unique flag count: 0; unique flags: (none)
+- nyumye -> unique flag count: 0; unique flags: (none)
+- pange -> unique flag count: 0; unique flags: (none)
+
+Suggested common group flags: BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
