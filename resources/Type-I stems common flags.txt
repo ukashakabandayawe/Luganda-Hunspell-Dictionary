@@ -125,6 +125,22 @@ Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP
 
 
 
+MODIFIED PASSIVE STEMS
+Selected stems: 2
+Common flag count: 10
+Common flags (raw): BV, EM, FP, FX, NN, PS, SB, WW, nf, wm
+Common flags (tokens): BV, EM, FP, FX, NN, PS, SB, WW, nf, wm
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- cangibwe -> unique flag count: 0; unique flags: (none)
+- fumbibwe -> unique flag count: 0; unique flags: (none)
+
+Suggested common group flags: BV, EM, FP, FX, NN, PS, SB, WW, nf, wm
+
+
+
 PAST PASSIVE STEMS
 Selected stems: 2
 Common flag count: 36
