@@ -68,3 +68,19 @@ Selected stem details:
 - fumbisizza -> unique flag count: 0; unique flags: (none)
 
 Suggested common group flags: BD, BE, BF, BG, BM, BN, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, St, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
+
+
+
+PAST PASSIVE STEMS
+Selected stems: 2
+Common flag count: 36
+Common flags (raw): BD, BE, BF, BG, BK, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, St, WN, em, np, ps, sc, st, wn
+Common flags (tokens): BD, BE, BF, BG, BK, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, St, WN, em, np, ps, sc, st, wn
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- cangiddwa -> unique flag count: 0; unique flags: (none)
+- fumbiddwa -> unique flag count: 0; unique flags: (none)
+
+Suggested common group flags: BD, BE, BF, BG, BK, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, St, WN, em, np, ps, sc, st, wn
