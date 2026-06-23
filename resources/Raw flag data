@@ -3,14 +3,14 @@ Selected stems: 4
 Common flag count: 33
 Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, WG, cC, em, ps, sT, sc, st
 Common flags (tokens): BD, BE, BF, BG, BR, BX, CC, DP, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, WG, cC, em, ps, sT, sc, st
-Unique flag count: 19
-Unique flags across selected stems: EB, ED, EK, ST, St, WN, np, rp, wg, wn, BM, BU, FR, JQ, Sb, EJ, IM, MM, wh
+Unique flag count: 10
+Unique flags across selected stems: EB, ED, EK, ST, WN, np, rp, wg, wn, BU
 
 Selected stem details:
-- canze -> unique flag count: 10; unique flags: EB, ED, EK, ST, St, WN, np, rp, wg, wn
-- fumbye -> unique flag count: 9; unique flags: BM, BU, EB, ED, FR, JQ, Sb, St, wn
-- nyumizza -> unique flag count: 10; unique flags: BU, ED, EJ, EK, St, WN, np, rp, wg, wn
-- panze -> unique flag count: 7; unique flags: IM, MM, WN, np, rp, wg, wh
+- canze -> unique flag count: 9; unique flags: EB, ED, EK, ST, WN, np, rp, wg, wn
+- fumbye -> unique flag count: 4; unique flags: BU, EB, ED, wn
+- nyumizza -> unique flag count: 8; unique flags: BU, ED, EK, WN, np, rp, wg, wn
+- panze -> unique flag count: 4; unique flags: WN, np, rp, wg
 
 Suggested common group flags: BD, BE, BF, BG, BR, BX, CC, DP, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, WG, cC, em, ps, sT, sc, st
 
