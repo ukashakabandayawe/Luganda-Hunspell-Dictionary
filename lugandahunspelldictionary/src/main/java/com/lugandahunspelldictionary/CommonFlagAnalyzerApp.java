@@ -33,6 +33,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -40,6 +41,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.StringJoiner;
+import java.util.prefs.Preferences;
 
 public class CommonFlagAnalyzerApp extends Application {
     private final ObservableList<DicEntry> allEntries = FXCollections.observableArrayList();
@@ -59,6 +61,7 @@ public class CommonFlagAnalyzerApp extends Application {
     private final Button exportButton = new Button("Export report");
     private Path currentDicPath;
     private CommonFlagAnalyzer.DicFileData currentData;
+    private final Preferences prefs = Preferences.userNodeForPackage(CommonFlagAnalyzerApp.class);
 
     @Override
     public void start(Stage stage) {
@@ -198,21 +201,40 @@ public class CommonFlagAnalyzerApp extends Application {
     }
 
     private void chooseDic(Stage stage) {
-        FileChooser chooser = new FileChooser();
-        chooser.setTitle("Select reviewer dictionary");
-        chooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Hunspell dictionaries", "*.dic", "*.txt"),
-                new FileChooser.ExtensionFilter("Dictionary text files", "*.dic.txt", "*.txt"),
-                new FileChooser.ExtensionFilter("All files", "*.*")
-        );
-        java.io.File chosen = chooser.showOpenDialog(stage);
-        if (chosen == null) {
-            return;
-        }
 
-        Path path = chosen.toPath();
-        loadDictionary(path);
+    FileChooser chooser = new FileChooser();
+    chooser.setTitle("Select reviewer dictionary");
+
+    chooser.getExtensionFilters().addAll(
+            new FileChooser.ExtensionFilter("Hunspell dictionaries", "*.dic", "*.txt"),
+            new FileChooser.ExtensionFilter("Dictionary text files", "*.dic.txt", "*.txt"),
+            new FileChooser.ExtensionFilter("All files", "*.*")
+    );
+
+    // Restore last directory
+    String lastDir = prefs.get("lastDictionaryDir", null);
+    if (lastDir != null) {
+        File dir = new File(lastDir);
+        if (dir.exists() && dir.isDirectory()) {
+            chooser.setInitialDirectory(dir);
+        }
     }
+
+    File chosen = chooser.showOpenDialog(stage);
+
+    if (chosen == null) {
+        return;
+    }
+
+    // Save directory for next time
+    prefs.put(
+            "lastDictionaryDir",
+            chosen.getParentFile().getAbsolutePath()
+    );
+
+    Path path = chosen.toPath();
+    loadDictionary(path);
+}
 
     private void loadDictionary(Path path) {
         currentDicPath = path;
