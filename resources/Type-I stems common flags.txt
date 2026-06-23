@@ -154,3 +154,21 @@ Selected stem details:
 - fumbiddwa -> unique flag count: 0; unique flags: (none)
 
 Suggested common group flags: BD, BE, BF, BG, BK, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, St, WN, em, np, ps, sc, st, wn
+
+
+
+BENEFACTIVE STEMS
+Selected stems: 4
+Common flag count: 116
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
+Common flags (tokens): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- cangira -> unique flag count: 0; unique flags: (none)
+- fumbira -> unique flag count: 0; unique flags: (none)
+- nyumiza -> unique flag count: 0; unique flags: (none)
+- pangira -> unique flag count: 0; unique flags: (none)
+
+Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
