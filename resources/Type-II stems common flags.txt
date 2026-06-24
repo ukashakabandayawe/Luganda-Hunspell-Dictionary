@@ -67,3 +67,17 @@ Selected stem details:
 - gambisa -> unique flag count: 0; unique flags: 
 - kozesa -> unique flag count: 0; unique flags: 
 
+
+
+MODIFIED CAUSATIVE STEMS
+Selected stems: 3
+Common flag count: 17
+Common flags (raw): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, wh, wm
+Unique flag count: 0
+
+Selected stem details:
+- banjise -> unique flag count: 0; unique flags: (none)
+- gambise -> unique flag count: 0; unique flags: (none)
+- kozese -> unique flag count: 0; unique flags: (none)
+
+
