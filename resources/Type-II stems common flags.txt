@@ -81,3 +81,17 @@ Selected stem details:
 - kozese -> unique flag count: 0; unique flags: (none)
 
 
+
+PAST CAUSATIVE STEMS
+Source: E:\Luganda Hunspell Dictionary\resources\Luganda_lima.dic (21).txt
+Mode: LONG
+Category: mixed
+Selected stems: 3
+Common flag count: 53
+Common flags (raw): BD, BE, BF, BG, BM, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
+Unique flag count: 0
+
+Selected stem details:
+- banjisizza -> unique flag count: 0; unique flags: (none)
+- gambisizza -> unique flag count: 0; unique flags: (none)
+- kozesezza -> unique flag count: 0; unique flags: (none)
