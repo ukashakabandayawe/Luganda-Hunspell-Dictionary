@@ -95,3 +95,29 @@ Selected stem details:
 - banjisizza -> unique flag count: 0; unique flags: (none)
 - gambisizza -> unique flag count: 0; unique flags: (none)
 - kozesezza -> unique flag count: 0; unique flags: (none)
+
+
+
+PASSIVE STEMS
+Selected stems: 3
+Common flag count: 72
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, CC, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, FY, GG, HH, II, IM, IP, JJ, LT, NF, NN, NP, PP, PS, PT, QQ, RR, SC, SS, St, TT, WF, WM, WN, YT, em, ff, gg, ip, jj, kk, ll, np, pp, ps, sc, st, tt, vv, wf, wn, xx
+Unique flag count: 0
+
+Selected stem details:
+- banjibwa -> unique flag count: 0; unique flags: (none)
+- gambibwa -> unique flag count: 0; unique flags: (none)
+- kolebwa -> unique flag count: 0; unique flags: (none)
+
+
+
+
+MODIFIED PASSIVE STEMS
+Selected stems: 3
+Common flag count: 9
+Common flags (raw): BV, EM, FP, NN, PS, SB, WW, nf, wm
+
+Selected stem details:
+- banjibwe -> unique flag count: 0; unique flags: (none)
+- gambibwe -> unique flag count: 0; unique flags: (none)
+- kolebwe -> unique flag count: 0; unique flags: (none)
