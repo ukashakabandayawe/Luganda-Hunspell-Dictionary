@@ -121,3 +121,18 @@ Selected stem details:
 - banjibwe -> unique flag count: 0; unique flags: (none)
 - gambibwe -> unique flag count: 0; unique flags: (none)
 - kolebwe -> unique flag count: 0; unique flags: (none)
+
+
+
+PAST PASSIVE STEMS
+EM, em, sc, ED, 
+Selected stems: 3
+Common flag count: 27
+Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, ED, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, WN, em, np, ps, sc, wn
+Unique flag count: 0
+
+Selected stem details:
+- banjibbwa -> unique flag count: 0; unique flags: (none)
+- gambiddwa -> unique flag count: 0; unique flags: (none)
+- kolebbwa -> unique flag count: 0; unique flags: (none)
+
