@@ -57,7 +57,7 @@ public class SetSorterApp extends Application {
                 return a.compareTo(b);
             });
 
-            outputArea.setText(String.join("", sorted));
+            outputArea.setText(String.join(", ", sorted) + "\n" + String.join("", sorted));
         });
 
         VBox root = new VBox(10,
