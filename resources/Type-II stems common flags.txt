@@ -124,10 +124,10 @@ Selected stem details:
 
 
 
+
 PAST PASSIVE STEMS
-EM, em, sc, ED, 
 Selected stems: 3
-Common flag count: 27
+Common flag count: 31
 Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, ED, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, WN, em, np, ps, sc, wn
 Unique flag count: 0
 
@@ -135,4 +135,18 @@ Selected stem details:
 - banjibbwa -> unique flag count: 0; unique flags: (none)
 - gambiddwa -> unique flag count: 0; unique flags: (none)
 - kolebbwa -> unique flag count: 0; unique flags: (none)
+
+
+
+
+BENEFACTIVE STEMS
+Selected stems: 3
+Common flag count: 118
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, FY, FZ, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
+Unique flag count: 0
+
+Selected stem details:
+- banjiza -> unique flag count: 0; unique flags: (none)
+- gambira -> unique flag count: 0; unique flags: (none)
+- kolera -> unique flag count: 0; unique flags: (none)
 
