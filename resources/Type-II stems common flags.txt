@@ -150,3 +150,30 @@ Selected stem details:
 - gambira -> unique flag count: 0; unique flags: (none)
 - kolera -> unique flag count: 0; unique flags: (none)
 
+
+
+
+MODIFIED BENEFACTIVE STEMS
+Selected stems: 3
+Common flag count: 17
+Common flags (raw): BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
+Unique flag count: 0
+
+Selected stem details:
+- banjize -> unique flag count: 
+- gambire -> unique flag count: 
+- kolere -> unique flag count: 
+
+
+
+
+PAST BENEFACTIVE STEMS
+Selected stems: 3
+Common flag count: 54
+Common flags (raw): BD, BE, BF, BG, BM, BR, BU, BX, CC, DP, EC, ED, EF EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, ST, SS, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, St, sc, st, wg, wn
+Unique flag count: 0
+
+Selected stem details:
+- banjilizza 
+- gambidde 
+- koledde 
