@@ -1,0 +1,39 @@
+This Document contains the flags used with intrasitive verbs only.
+
+
+PAST TENSE STEMS
+Selected stems: 2
+Common flag count: 12
+Common flags (raw): CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
+Unique flag count: 0
+
+Selected stem details:
+- yayuuyizza -> unique flag count: 0; 
+- yiise -> unique flag count: 0; 
+
+
+
+
+
+
+
+
+
+
+
+
+MODIFIED CAUSATIVE
+Selected stems: 4
+Common flag count: 14
+Common flags (raw): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
+Common flags (tokens): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- sese -> unique flag count: 0; unique flags: (none)
+- yimuse -> unique flag count: 0; unique flags: (none)
+- zirise -> unique flag count: 0; unique flags: (none)
+- zuukuse -> unique flag count: 0; unique flags: (none)
+
+Suggested common group flags: BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
