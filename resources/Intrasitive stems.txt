@@ -11,8 +11,20 @@ Selected stem details:
 - yayuuyizza -> unique flag count: 0; 
 - yiise -> unique flag count: 0; 
 
+COMBINATION OF PAST AND MODIFIED CAUSATIVE STEMS
+Note: There is a case where for some verbs, the past tense stem is the same as the modified causative stem
+      so instead of repeating the same entry in the .dic we use one stem and give it flags for both. 
+      The representative verbs below fall in that category.
 
+Selected stems: 3
+Common flag count: 28
+Common flags (raw): BV, CC, DP, EM, FH, FP, FX, LT, NN, NP, PS, PT, RP, SB, SC, Sb, WN, WW, nf, np, ps, rp, sc, st, wg, wh, wm, wn
+Unique flag count: 2
 
+Selected stem details:
+- sese -> unique flag count: 0; unique flags: (none)
+- yimuse -> unique flag count: 0; unique flags: (none)
+- zuukuse -> unique flag count: 0; unique flags: (none)
 
 
 
