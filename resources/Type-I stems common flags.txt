@@ -175,6 +175,19 @@ Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR
 
 
 
+
+MODIFIED BENEFACTIVE STEMS
+Selected stems: 4
+Common flag count: 18
+Common flags (raw): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
+
+Selected stem details:
+- cangire -> unique flag count: 0
+- fumbire -> unique flag count: 0
+- nyumize -> unique flag count: 0
+- pangire -> unique flag count: 0
+
+
 PAST BENEFACTIVE STEMS
 Selected stems: 4
 Common flags: BD, BE, BF, BG, BM, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, UU, VV, WG, WN, XX, cC, sT, em, np, ps, rp, sc, st, wg, wn
