@@ -43,3 +43,16 @@ Selected stem details:
 - zuukuse -> unique flag count: 0; unique flags: (none)
 
 Suggested common group flags: BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
+
+
+
+BENEFACTIVE STEMS 
+Selected stems: 4
+Common flag count: 87
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, rp, ri, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
+
+Selected stem details:
+- sekerera -> unique flag count: 3; unique flags: (none)
+- yayuuyiza -> unique flag count: 5; unique flags: (none)
+- yiikira -> unique flag count: 0; unique flags: (none)
+- yuuguumira -> unique flag count: 2; unique flags: (none)
