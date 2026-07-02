@@ -56,3 +56,16 @@ Selected stem details:
 - yayuuyiza -> unique flag count: 5; unique flags: (none)
 - yiikira -> unique flag count: 0; unique flags: (none)
 - yuuguumira -> unique flag count: 2; unique flags: (none)
+
+
+
+
+PAST BENEFACTIVE STEMS
+Selected stems: 2
+Common flag count: 41
+Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, WG, WN, cC, em, np, ps, rp, sT, sc, st, wg, wn
+
+Selected stem details:
+- sekeredde -> unique flag count: 0; unique flags: (none)
+- yiikidde -> unique flag count: 0; unique flags: (none)
+
