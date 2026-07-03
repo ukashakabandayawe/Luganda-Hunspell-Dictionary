@@ -26,3 +26,16 @@ Selected stem details:
 - kuze -> unique flag count: 0; unique flags: (none)
 
 
+COMBINATION OF PAST AND MODIFIED CAUSATIVE STEMS
+Note: There is a case where for some verbs, the past tense stem is the same as the modified causative stem
+      so instead of repeating the same entry in the .dic we use one stem and give it flags for both. 
+      The representative verbs below fall in that category.
+
+Selected stems: 2
+Common flag count: 
+Common flags (raw): BV, CC, DP, EM, FP, FX, LT, NN, NP, PS, PT, RP, SB, SC, WN, WW, Sb, nf, np, ps, rp, sc, st, wg, wh, wm, wn
+Unique flag count: 0
+
+Selected stem details:
+- kaze -> unique flag count: 0; unique flags: (none)
+- kuze -> unique flag count: 0; unique flags: (none)
