@@ -11,4 +11,18 @@ Selected stem details:
 - gaziye -> unique flag count: 0; unique flags: (none)
 - kaddiye -> unique flag count: 0; unique flags: (none)
 
-Suggested common group flags: CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
+
+
+
+
+MODIFIED CAUSATIVE STEMS
+Selected stems: 2
+Common flag count: 17
+Common flags (raw): BV, EM, FP, FX, NN, PS, PT, RP, SB, Sb, WW, nf, rp, wg, wh, wm, wn
+Unique flag count: 0
+
+Selected stem details:
+- kaze -> unique flag count: 0; unique flags: (none)
+- kuze -> unique flag count: 0; unique flags: (none)
+
+
