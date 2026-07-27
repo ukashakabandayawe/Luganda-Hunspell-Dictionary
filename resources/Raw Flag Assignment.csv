@@ -10318,15 +10318,15 @@ longookere,ModifiedLocativeDeadjective
 longookedde,PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ----------- okulongoosa(to clean; to straighten; to correct; to operate; to perform surgery) ------------ #
-longoosa,OriginalDeadjective
-longoose,ModifiedDeadjective
-longoosezza,PastDeadjective
-longoosebwa,PassiveDeadjective
-longoosebwe,ModifiedPassiveDeadjective
-longooseddwa,PastPassiveDeadjective
-longooseza,BenefactiveDeadjective
-longooseze,ModifiedBenefactiveDeadjective
-longooselezza,PastBenefactiveDeadjective
+longoosa
+longoose
+longoosezza
+longoosebwa
+longoosebwe
+longooseddwa
+longooseza
+longooseze
+longooselezza
 # --------------------------------------------------------------------------------------------------------- #
 loole
 # ------------------------------- okuloopa(to report; to accuse; to expose) ------------------------------- #
@@ -10585,14 +10585,14 @@ lundidde
 # --------------------------------------------------------------------------------------------------------- #
 lungi
 # --------------------------------- Adj. okulungiwa(to become beautiful) ---------------------------------- #
-lungiwa
-lungiwe
-lungiye
-lungiya
-lungiyizza
-lungiyira
-lungiyire
-lungiyidde
+lungiwa,OriginalDeadjective
+lungiwe,ModifiedDeadjective
+lungiye,HybridDeadjective
+lungiya,CausativeDeadjective
+lungiyizza,PastCausativeDeadjective
+lungiyira,BenefactiveDeadjective
+lungiyire,ModifiedBenefactiveDeadjective
+lungiyidde,PastBenefactiveDeadjective
 #
 lungiwako
 lungiwamu
@@ -10728,15 +10728,15 @@ lwa
 lwaaki
 lwaasa
 # -------------------------------- okulwala(to become sick) ----------------------------------------------- #
-lwala
-lwale
-lwadde
-lwaza
-lwaze
-lwazizza
-lwalira
-lwalire
-lwalidde
+lwala,OriginalDeadjective
+lwale,ModifiedDeadjective
+lwadde,PastDeadjective
+lwaza,CausativeDeadjective
+lwaze,ModifiedCausativeDeadjective
+lwazizza,PastCausativeDeadjective
+lwalira,LocativeDeadjective
+lwalire,ModifiedLocativeDeadjective
+lwalidde,PastLocativeDeadjective
 #
 lwalako
 lwalamu
@@ -11430,15 +11430,15 @@ manyiddeewooko
 # -------------------------------------------------------------------------------------------------------------- #
 manyi
 # ------ okumanyiira(To get used to something; to become accustomed to; to become experienced with) ------- #
-manyiira
-manyiire
-manyidde
-manyiiza
-manyiize
-manyizza
-manyiirwa
-manyiirwe
-manyiiriddwa
+manyiira,OriginalDeadjective
+manyiire,ModifiedDeadjective
+manyidde,PastDeadjective
+manyiiza,CausativeDeadjective
+manyiize,ModifiedCausativeDeadjective
+manyizza,PastCausativeDeadjective
+manyiirwa,PassiveDeadjective
+manyiirwe,ModifiedPassiveDeadjective
+manyiiriddwa,PastPassiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okumanyika(to be famous; to be knowable) -------------------------------- #
 manyika
@@ -12373,25 +12373,26 @@ naalizzaawooko
 naddala
 munafu
 # ------------------------------- okunafuwa(to become weak; to become lazy) ------------------------------- #
-nafuwa
-nafuwe
-nafuye
-nafuya
-nafuyizza
-nafuyira
-nafuyire
-nafuyidde
+nafuwa,OriginalDeadjective
+nafuwe,ModifiedDeadjective
+nafuye,HybridDeadjective
+nafuya,CausativeDeadjective
+nafuyizza,PastCausativeDeadjective
+nafuyira,LocativeDeadjective
+nafuyire,ModifiedLocativeDeadjective
+nafuyidde,PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------- okunakuwala(to become sad) ---------------------------------- #
-nakuwala
-nakuwale
-nakuwadde
-nakuwaza
-nakuwaze
-nakuwazizza
-nakuwalira
-nakuwalire
-nakuwalidde
+nakuwala,OriginalDeadjective
+nakuwale,ModifiedDeadjective
+nakuwadde,PastDeadjective
+nakuwaza,CausativeDeadjective
+nakuwaze,ModifiedCausativeDeadjective
+nakuwazza,PastCausativeDeadjective
+nakuwazizza,PastCausativeDeadjective
+nakuwalira,LocativeDeadjective
+nakuwalire,ModifiedLocativeDeadjective
+nakuwalidde,PastLocativeDeadjective
 #
 nakuwalako
 nakuwalamu
@@ -12721,17 +12722,18 @@ nnyazaala
 nnyini
 nnyo
 # --------------------------- okunnyogoga(to become cold; to be cool; to be frozen) --------------------------- #
-nnyogoga
-nnyogoge
-nnyogozza
-nnyogoza
-nnyogoze
-nnyogozezza
-nnyogozesa
-nnyogozese
-nnyogogera
-nnyogogere
-nnyogogedde
+nnyogoga,OriginalDeadjective
+nnyogoge,ModifiedDeadjective
+nnyogozza,PastDeadjective
+nnyogoza,CausativeDeadjective
+nnyogoze,ModifiedCausativeDeadjective
+nnyogozezza,PastCausativeDeadjective
+nnyogozesa,CausativeDeadjective
+nnyogozese,ModifiedCausativeDeadjective
+nnyogozesezza,PastCausativeDeadjective
+nnyogogera,LocativeDeadjective
+nnyogogere,ModifiedLocativeDeadjective
+nnyogogedde,PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------- okunnyonnyola(to explain; to describe; to define) --------------------------- #
 nnyonnyola
@@ -13026,17 +13028,20 @@ nyigiddeewo
 nyigiddeewooko
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okunyiiga(to become pissed; to get annoyed) -------------------------------- #
-nyiiga
-nyiige
-nyiize
-nyiiza
-nyiizizza
-nyiizibwa
-nyiizibwe
-nyiiziddwa
-nyiiliza
-nyiilize
-nyiilizza
+nyiiga,OriginalDeadjective
+nyiige,ModifiedDeadjective
+nyiize,HybridDeadjective
+nyiiza,CausativeDeadjective
+nyiizizza,PastCausativeDeadjective
+nyiizibwa,PassiveCausativeDeadjective
+nyiizibwe,ModifiedPassiveCausativeDeadjective
+nyiiziddwa,PastPassiveCausativeDeadjective
+nyiiliza,BenefactiveDeadjective
+nyiilize,ModifiedBenefactiveDeadjective
+nyiilizza,PastBenefactiveDeadjective
+nyiigira,LocativeDeadjective
+nyiigire,ModifiedLocativeDeadjective
+nyiigidde,PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------- okunyiikira(to make an effort; to be diligent; to be hard-working) ------------------ #
 nyiikira
@@ -13048,15 +13053,15 @@ nyiikizza
 # --------------------------------------------------------------------------------------------------------- #
 nyiivu
 # ----------------- okunyirira(to become good looking; to have an attractive appearance) ------------------ #
-nyirira
-nyirire
-nyiridde
-nyiriza
-nyirize
-nyirizza
-nyiririra
-nyiririre
-nyiriridde
+nyirira,OriginalDeadjective
+nyirire,ModifiedDeadjective
+nyiridde,PastDeadjective
+nyiriza,CausativeDeadjective
+nyirize,ModifiedCausativeDeadjective
+nyirizza,PastCausativeDeadjective
+nyiririra,BenefactiveDeadjective
+nyiririre,ModifiedBenefactiveDeadjective
+nyiriridde,PastBenefactiveDeadjective
 omunyirivu
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okunyonyogera(to tickle) ---------------------------------------- #
@@ -15536,18 +15541,18 @@ sannyalalidde
 # --------------------------------------------------------------------------------------------------------- #
 sanyufu
 # --------------------------- okusanyuka(to become happy; to celebrate; to be glad) --------------------------- #
-sanyuka
-sanyuke
-sanyuse
-sanyusa
-sanyuse
-sanyusizza
-sanyusibwa
-sanyusibwe
-sanyusiddwa
-sanyukira
-sanyukire
-sanyukidde
+sanyuka,OriginalDeadjective
+sanyuke,ModifiedDeadjective
+sanyuse,PastDeadjective
+sanyusa,CausativeDeadjective
+sanyuse,ModifiedCausativeDeadjective
+sanyusizza,PastCausativeDeadjective
+sanyusibwa,PassiveDeadjective
+sanyusibwe,ModifiedPassiveDeadjective
+sanyusiddwa,PastPassiveDeadjective
+sanyukira,BenefactiveDeadjective
+sanyukire,ModifiedBenefactiveDeadjective
+sanyukidde,PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------------- okusasula(to pay) ----------------------------------------- #
 sasula
@@ -17021,15 +17026,15 @@ sunidde
 omusunyi
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------------- okusunguwala(to become angry) ------------------------------------- #
-sunguwala
-sunguwale
-sunguwadde
-sunguwaza
-sunguwaze
-sunguwazza
-sunguwulira
-sunguwulire
-sunguwuliddde
+sunguwala,OriginalDeadjective
+sunguwale,ModifiedDeadjective
+sunguwadde,PastDeadjective
+sunguwaza,CausativeDeadjective
+sunguwaze,ModifiedCausativeDeadjective
+sunguwazza,PastCausativeDeadjective
+sunguwulira,BenefactiveDeadjective
+sunguwulire,ModifiedBenefactiveDeadjective
+sunguwuliddde,PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------- okusunsula(to pick out (winner of a contest); to sort out) ----------------------- #
 sunsula
@@ -17538,15 +17543,15 @@ tawaanyizza
 # --------------------------------------------------------------------------------------------------------- #
 tayipu
 # ------------------- okutebenkera(to become calm; to become peaceful; to settle down) -------------------- #
-tebenkera
-tebenkere
-tebenkedde
-tebenkeza
-tebenkeze
-tebenkezza
-tebenkerera
-tebenkerere
-tebenkeredde
+tebenkera,OriginalDeadjective
+tebenkere,ModifiedDeadjective
+tebenkedde,PastDeadjective
+tebenkeza,CausativeDeadjective
+tebenkeze,ModifiedCausativeDeadjective
+tebenkezza,PastCausativeDeadjective
+tebenkerera,LocativeDeadjective
+tebenkerere,ModifiedLocativeDeadjective
+tebenkeredde,PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tebenkevu
 # ------- okuteebereza(to guess; to estimate; to approximate; to suspect; to speculate; to imagine) ------- #
