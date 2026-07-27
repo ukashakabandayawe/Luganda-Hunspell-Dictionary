@@ -9081,17 +9081,17 @@ koonagane
 koonaganye
 # ------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okukoowa(to become tired) --------------------------------------------- #
-koowa
-koowe
-kooye
-kooya
-kooyezza
-koowebwa
-koowebwe
-koowebbwa
-koowera
-koowere
-koowedde
+koowa,OriginalDeadjective
+koowe,ModifiedDeadjective
+kooye,HybridDeadjective
+kooya,CausativeDeadjective
+kooyezza,PastCausativeDeadjective
+koowebwa,PassiveDeadjective
+koowebwe,ModifiedPassiveDeadjective
+koowebbwa,PastPassiveDeadjective
+koowera,LocativeDeadjective
+koowere,ModifiedLocativeDeadjective
+koowedde,PastLocativeDeadjective
 koowu/oo
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okukotoggera(to hinder) --------------------------------------------- #
@@ -9144,14 +9144,14 @@ kubirizibwe
 kubiriziddwa
 # ------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- okukuguka(to become an expert) --------------------------------------------- #
-kuguka
-kuguke
-kuguse
-kugusa
-kugusizza
-kugukira
-kugukire
-kugukidde
+kuguka,OriginalDeadjective
+kuguke,ModifiedDeadjective
+kuguse,HybridDeadjective
+kugusa,CausativeDeadjective
+kugusizza,PastCausativeDeadjective
+kugukira,LocativeDeadjective
+kugukire,ModifiedLocativeDeadjective
+kugukidde,PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- okukukusa(to smuggle) --------------------------------------------- #
 kukusa
@@ -9165,27 +9165,27 @@ kukusibwe
 kukusiddwa
 # ------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- okukula(to become grown) --------------------------------------------- #
-kula
-kule
-kuze
-kuza
-kuzizza
-kuzibwa
-kuzibwe
-kuziddwa
-kulira
-kulire
-kulidde
+kula,OriginalDeadjective
+kule,ModifiedDeadjective
+kuze,HybridDeadjective
+kuza,CausativeDeadjective
+kuzizza,PastCausativeDeadjective
+kuzibwa,PassiveDeadjective
+kuzibwe,ModifiedPassiveDeadjective
+kuziddwa,PastPassiveDeadjective
+kulira,LocativeDeadjective
+kulire,ModifiedLocativeDeadjective
+kulidde,PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- okukulaakulana(to become developed) --------------------------------------------- #
-kulaakulana
-kulaakulane
-kulaakulanye
-kulaakulanya
-kulaakulanyizza
-kulaakulanira
-kulaakulanire
-kulaakulanidde
+kulaakulana,OriginalDeadjective
+kulaakulane,ModifiedDeadjective
+kulaakulanye,HybridDeadjective
+kulaakulanya,CausativeDeadjective
+kulaakulanyizza,PastCausativeDeadjective
+kulaakulanira,LocativeDeadjective
+kulaakulanire,ModifiedLocativeDeadjective
+kulaakulanidde,PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- okukulembera(to lead) --------------------------------------------- #
 kulembera
@@ -9650,12 +9650,12 @@ labirirwe
 labiriddwa
 # -------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------- okulabuka(to become warned) ------------------------------------------------------- #
-labuka
-labuke
-labuse
-labukira
-labukire
-labukidde
+labuka,OriginalDeadjective
+labuke,ModifiedDeadjective
+labuse,PastDeadjective
+labukira,LocativeDeadjective
+labukire,ModifiedLocativeDeadjective
+labukidde,PastLocativeDeadjective
 # -------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------- okulabula(to warn) ------------------------------------------------------- #
 labula
@@ -9900,18 +9900,18 @@ lakasidde
 lala
 lalu
 # ---------------------------------- okulaluka(to become mad) --------------------------------------------- #
-laluka
-laluke
-laluse
-lalula
-lalule
-laludde
-lalulwa
-lalulwe
-laluddwa
-lalukira
-lalukire
-lalukidde
+laluka,OriginalDeadjective
+laluke,ModifiedDeadjective
+laluse,PastDeadjective
+lalula,CausativeDeadjective
+lalule,ModifiedCausativeDeadjective
+laludde,PastCausativeDeadjective
+lalulwa,PassiveDeadjective
+lalulwe,ModifiedPassiveDeadjective
+laluddwa,PastPassiveDeadjective
+lalukira,BenefactiveDeadjective
+lalukire,ModifiedBenefactiveDeadjective
+lalukidde,PastBenefactiveDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------- okulamaga(to do pilgrimage) --------------------------------------------- #
 lamaga
@@ -10112,15 +10112,15 @@ lemere
 lemedde
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------------- okulemala(to become crippled) ------------------------------------- #
-lemala
-lemale
-lemadde
-lemaza
-lemaze
-lemazza
-lemalira
-lemalire
-lemalidde
+lemala,OriginalDeadjective
+lemale,ModifiedDeadjective
+lemadde,PastDeadjective
+lemaza,CausativeDeadjective
+lemaze,ModifiedCausativeDeadjective
+lemazza,PastCausativeDeadjective
+lemalira,LocativeDeadjective
+lemalire,ModifiedLocativeDeadjective
+lemalidde,PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------------- okulemesa(to hinder; to block; to sabotage; to frustrate) ----------------------- #
 lemesa
@@ -10310,23 +10310,23 @@ londoolere
 londooledde
 # --------------------------------------------------------------------------------------------------------- #
 # --------------- okulongooka(to become straightened out; to improve; to become clean;) ------------------- #
-longooka
-longooke
-longoose
-longookera
-longookere
-longookedde
+longooka,OriginalDeadjective
+longooke,ModifiedDeadjective
+longoose,PastDeadjective
+longookera,LocativeDeadjective
+longookere,ModifiedLocativeDeadjective
+longookedde,PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ----------- okulongoosa(to clean; to straighten; to correct; to operate; to perform surgery) ------------ #
-longoosa
-longoose
-longoosezza
-longoosebwa
-longoosebwe
-longooseddwa
-longooseza
-longooseze
-longooselezza
+longoosa,OriginalDeadjective
+longoose,ModifiedDeadjective
+longoosezza,PastDeadjective
+longoosebwa,PassiveDeadjective
+longoosebwe,ModifiedPassiveDeadjective
+longooseddwa,PastPassiveDeadjective
+longooseza,BenefactiveDeadjective
+longooseze,ModifiedBenefactiveDeadjective
+longooselezza,PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 loole
 # ------------------------------- okuloopa(to report; to accuse; to expose) ------------------------------- #
