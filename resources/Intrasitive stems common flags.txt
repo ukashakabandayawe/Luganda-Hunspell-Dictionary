@@ -55,7 +55,20 @@ Selected stem details:
 
 
 
-MODIFIED CAUSATIVE
+
+CAUSATIVE INTRASITIVE STEMS
+Selected stems: 3
+Common flag count: 88
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, cC, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wj, wf, wg, wn, xx, yt
+Unique flag count: 0
+
+Selected stem details:
+- sesa -> unique flag count: 0; unique flags: (none)
+- yimusa -> unique flag count: 0; unique flags: (none)
+- zirisa -> unique flag count: 0; unique flags: (none)
+
+
+MODIFIED CAUSATIVE INTRASITIVE STEMS
 Selected stems: 4
 Common flag count: 14
 Common flags (raw): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
