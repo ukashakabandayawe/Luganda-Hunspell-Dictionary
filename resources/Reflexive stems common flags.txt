@@ -82,3 +82,48 @@ Unique flag count: 0
 Selected stem details:
 - gayirizza -> unique flag count: 0; unique flags: (none)
 - tooloozza -> unique flag count: 0; unique flags: (none)
+
+
+
+
+
+PASSIVE REFLEXIVE STEMS
+Selected stems: 2
+Common flag count: 41
+Common flags (raw): BL, BM, BN, BP, BT, BU, EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, KK, LL, RF, RI, RP, Rn, ST, WG, WH, WJ, cc, hh, iM, ii, rf, ri, rp, sT, uu, wg, wj, ww, yt
+Unique flag count: 0
+
+Selected stem details:
+- raliikirirwa -> unique flag count: 0; unique flags: (none)
+- tooloolwa -> unique flag count: 0; unique flags: (none)
+
+
+
+
+
+MODIFIED PASSIVE REFLEXIVE STEMS
+Selected stems: 3
+Common flag count: 5
+Common flags (raw): FR, JQ, RP, Sb, wh
+Unique flag count: 0
+
+Selected stem details:
+- gayirirwe -> unique flag count: 0; unique flags: (none)
+- raliikirirwe -> unique flag count: 0; unique flags: (none)
+- tooloolwe -> unique flag count: 0; unique flags: (none)
+
+
+
+
+
+PAST PASSIVE REFLEXIVE STEMS
+Selected stems: 3
+Common flag count: 18
+Common flags (raw): BL, BM, BU, EC, EG, EJ, FI, FK, FK, FL, FZ, RP, ST, WG, cC, rp, sT, wg
+Unique flag count: 0
+
+Selected stem details:
+- gayiriddwa -> unique flag count: 0; unique flags: (none)
+- raliikiriddwa -> unique flag count: 0; unique flags: (none)
+- toolooddwa -> unique flag count: 0; unique flags: (none)
+
