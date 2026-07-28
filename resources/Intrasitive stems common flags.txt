@@ -97,6 +97,44 @@ Selected stem details:
 - zirisizza -> unique flag count: 0; unique flags: (none)
 
 
+
+
+PASSIVE INTRASITIVE STEMS
+Selected stems: 1
+Common flag count: 31
+Common flags (raw): DP, FF, IM, IP, JJ, LT, NF, NP, PP, PS, PT, SC, St, TT, WF, WM, WN, YT, ff, gg, ip, jj, kk, ll, np, pp, ps, sc, st, wf, wn
+Unique flag count: 0
+
+Selected stem details:
+- zirisibwa -> unique flag count: 0; unique flags: (none)
+
+
+
+
+
+MODIFIED PASSIVE INTRASITIVE STEMS
+Selected stems: 1
+Common flag count: 4
+Common flags (raw): PS, SB, nf, wm
+Unique flag count: 0
+
+Selected stem details:
+- zirisibwe -> unique flag count: 0; unique flags: (none)
+
+
+
+
+PAST PASSIVE INTRASITIVE STEMS
+Selected stems: 1
+Common flag count: 14
+Common flags (raw): CC, DP, LT, NP, PS, PT, SC, St, WN, np, ps, sc, st, wn
+Unique flag count: 0
+
+Selected stem details:
+- zirisiddwa -> unique flag count: 0; unique flags: (none)
+
+
+
 BENEFACTIVE INTRASITIVE STEMS
 Selected stems: 4
 Common flag count: 87
