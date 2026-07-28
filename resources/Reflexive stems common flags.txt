@@ -1,0 +1,40 @@
+ORIGINAL REFLEXIVE STEMS
+Selected stems: 4
+Common flag count: 42
+Common flags (raw): BL, BM, BN, BP, BT, BU, EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, FZ, KK, LL, RF, RI, RP, Rn, ST, WG, WH, WJ, cc, hh, iM, ii, rf, ri, rp, sT, uu, wg, wj, ww, yt
+Unique flag count: 0
+
+Selected stem details:
+- gayirira -> unique flag count: 0; unique flags: (none)
+- gendereza -> unique flag count: 0; unique flags: (none)
+- raliikirira -> unique flag count: 0; unique flags: (none)
+- tooloola -> unique flag count: 0; unique flags: (none)
+
+
+
+MODIFIED REFLEXIVE STEMS
+Selected stems: 4
+Common flag count: 5
+Common flags (raw): FR, JQ, RP, Sb, wh
+Unique flag count: 0
+
+Selected stem details:
+- gayirire -> unique flag count: 0; unique flags: (none)
+- gendereze -> unique flag count: 0; unique flags: (none)
+- raliikirire -> unique flag count: 0; unique flags: (none)
+- tooloole -> unique flag count: 0; unique flags: (none)
+
+
+
+
+PAST REFLEXIVE STEMS
+Selected stems: 4
+Common flag count: 14
+Common flags (raw): BM, BU, EC, EG, EJ, FI, FJ, FK, FL, FZ, RP, WG, ST, cC, rp, sT, wg
+Unique flag count: 0
+
+Selected stem details:
+- gayiridde -> unique flag count: 1; unique flags: EJ
+- genderezza -> unique flag count: 1; unique flags: ST
+- raliikiridde -> unique flag count: 5; unique flags: BN, EC, EJ, EL, ST
+- tooloodde -> unique flag count: 4; unique flags: BN, EC, EJ, ST
