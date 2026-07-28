@@ -13,6 +13,15 @@ Selected stem details:
 
 
 MODIFIED DEADJECTIVE STEMS
+Selected stems: 2
+Common flag count: 4
+Common flags (raw): PS, SB, nf, wm
+Common flags (tokens): PS, SB, nf, wm
+Unique flag count: 0
+
+Selected stem details:
+- funde -> unique flag count: 0; unique flags: (none)
+- kale -> unique flag count: 0; unique flags: (none)
 
 
 
