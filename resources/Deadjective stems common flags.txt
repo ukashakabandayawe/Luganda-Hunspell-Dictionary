@@ -12,6 +12,38 @@ Selected stem details:
 - kaddiye -> unique flag count: 0; unique flags: (none)
 
 
+PASSIVE DEADJECTIVE STEMS
+Selected stems: 1
+Common flag count: 66
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, FY, GG, HH, II, IM, IP, JJ, LT, NF, NN, NP, PP, PS, PT, QQ, RR, SC, SS, St, TT, WF, WM, WN, YT, ff, gg, ip, jj, kk, ll, np, pp, ps, sc, st, wf, wn
+Unique flag count: 0
+
+Selected stem details:
+- kuzibwa -> unique flag count: 0; unique flags: (none)
+
+
+
+
+MODIFIED PASSIVE DEADJECTIVE STEMS
+Selected stems: 1
+Common flag count: 7
+Common flags (raw): BV, EM, NN, PS, SB, nf, wm
+Unique flag count: 0
+
+Selected stem details:
+- kuzibwe -> unique flag count: 0; unique flags: (none)
+
+
+
+PAST PASSIVE DEADJECTIVE STEMS
+Selected stems: 1
+Common flag count: 14
+Common flags (raw): CC, DP, LT, NP, PS, PT, SC, St, WN, np, ps, sc, st, wn
+Unique flag count: 0
+
+Selected stem details:
+- kuziddwa -> unique flag count: 0; unique flags: (none)
+
 
 
 
@@ -26,7 +58,7 @@ Selected stem details:
 - kuze -> unique flag count: 0; unique flags: (none)
 
 
-COMBINATION OF PAST AND MODIFIED CAUSATIVE STEMS
+COMBINATION OF PAST AND MODIFIED CAUSATIVE STEMS (HYBRID STEMS)
 Note: There is a case where for some verbs, the past tense stem is the same as the modified causative stem
       so instead of repeating the same entry in the .dic we use one stem and give it flags for both. 
       The representative verbs below fall in that category.
@@ -39,3 +71,42 @@ Unique flag count: 0
 Selected stem details:
 - kaze -> unique flag count: 0; unique flags: (none)
 - kuze -> unique flag count: 0; unique flags: (none)
+
+
+
+
+**BENEFACTIVE DEADJECTIVE STEMS**
+Selected stems: 2
+Common flag count: 116
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
+Unique flag count: 0
+
+Selected stem details:
+- gaziyiza -> unique flag count: 0; unique flags: (none)
+- wanvuyiza -> unique flag count: 0; unique flags: (none)
+
+
+
+MODIFIED BENEFACTIVE DEADJECTIVE STEMS
+Selected stems: 2
+Common flag count: 18
+Common flags (raw): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
+Common flags (tokens): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
+Unique flag count: 0
+
+Selected stem details:
+- gaziyize -> unique flag count: 0; unique flags: (none)
+- wanvuyize -> unique flag count: 0; unique flags: (none)
+
+
+
+PAST BENEFACTIVE DEADJECTIVE STEMS
+Category: mixed
+Selected stems: 2
+Common flag count: 38
+Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, WG, WN, cC, em, np, ps, rp, sc, st, wg, wn
+Unique flag count: 0
+
+Selected stem details:
+- gaziyidde -> unique flag count: 0; unique flags: (none)
+- wanvuyidde -> unique flag count: 0; unique flags: (none)
