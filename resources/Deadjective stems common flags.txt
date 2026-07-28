@@ -1,7 +1,14 @@
+ORIGINAL DEADJECTIVE STEMS
 
 
 
-PAST TENSE STEMS
+
+MODIFIED DEADJECTIVE STEMS
+
+
+
+
+PAST TENSE DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 13
 Common flags (raw): CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
@@ -46,8 +53,20 @@ Selected stem details:
 
 
 
+CAUSATIVE DEADJECTIVE STEMS
+Selected stems: 3
+Common flag count: 88
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, cC, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
+Common flags (tokens): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, cC, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
+Unique flag count: 0
 
-MODIFIED CAUSATIVE STEMS
+Selected stem details:
+- gaziya -> unique flag count: 0; unique flags: (none)
+- kaza -> unique flag count: 0; unique flags: (none)
+- wanvuya -> unique flag count: 0; unique flags: (none)
+
+
+MODIFIED CAUSATIVE DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 17
 Common flags (raw): BV, EM, FP, FX, NN, PS, PT, RP, SB, Sb, WW, nf, rp, wg, wh, wm, wn
@@ -58,7 +77,7 @@ Selected stem details:
 - kuze -> unique flag count: 0; unique flags: (none)
 
 
-COMBINATION OF PAST AND MODIFIED CAUSATIVE STEMS (HYBRID STEMS)
+COMBINATION OF PAST TENSE STEMS AND MODIFIED CAUSATIVE STEMS (HYBRID DEADJECTIVE STEMS)
 Note: There is a case where for some verbs, the past tense stem is the same as the modified causative stem
       so instead of repeating the same entry in the .dic we use one stem and give it flags for both. 
       The representative verbs below fall in that category.
@@ -75,7 +94,7 @@ Selected stem details:
 
 
 
-**BENEFACTIVE DEADJECTIVE STEMS**
+BENEFACTIVE DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 116
 Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
@@ -101,6 +120,40 @@ Selected stem details:
 
 
 PAST BENEFACTIVE DEADJECTIVE STEMS
+#
+# I forgot to analyze the past benefactive deadjective stems for common flags. 
+# But they exist in reality e.g. wanvuyilizza, gaziyilizza, etc.
+#
+
+
+
+LOCATIVE DEADJECTIVE STEMS
+Selected stems: 2
+Common flag count: 87
+Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
+Common flags (tokens): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
+Unique flag count: 0
+
+Selected stem details:
+- gaziyira -> unique flag count: 0; unique flags: (none)
+- wanvuyira -> unique flag count: 0; unique flags: (none)
+
+
+
+
+MODIFIED LOCATIVE DEADJECTIVE STEMS
+Selected stems: 2
+Common flag count: 14
+Common flags (raw): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
+Unique flag count: 0
+
+Selected stem details:
+- gaziyire -> unique flag count: 0; unique flags: (none)
+- wanvuyire -> unique flag count: 0; unique flags: (none)
+
+
+
+PAST LOCATIVE DEADJECTIVE STEMS
 Category: mixed
 Selected stems: 2
 Common flag count: 38
@@ -110,3 +163,7 @@ Unique flag count: 0
 Selected stem details:
 - gaziyidde -> unique flag count: 0; unique flags: (none)
 - wanvuyidde -> unique flag count: 0; unique flags: (none)
+
+
+
+
