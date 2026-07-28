@@ -1,7 +1,34 @@
 This Document contains the flags used with intrasitive verbs only.
 
+ORIGINAL INTRASITIVE STEMS
+Selected stems: 3
+Common flag count: 28
+Common flags (raw): DP, FF, IM, IP, JJ, LT, NF, NP, PP, PS, PT, SC, St, WF, WM, WN, YT, ff, gg, ip, jj, np, pp, ps, sc, st, wf, wn
+Unique flag count: 0
 
-PAST TENSE STEMS
+Selected stem details:
+- seka -> unique flag count: 0; unique flags: (none)
+- yimuka -> unique flag count: 0; unique flags: (none)
+- zuukuka -> unique flag count: 0; unique flags: (none)
+
+
+
+
+MODIFIED INTRASITIVE STEMS
+Selected stems: 3
+Common flag count: 4
+Common flags (raw): PS, SB, nf, wm
+Unique flag count: 0
+
+Selected stem details:
+- seke -> unique flag count: 0; unique flags: (none)
+- yimuke -> unique flag count: 0; unique flags: (none)
+- zuukuke -> unique flag count: 0; unique flags: (none)
+
+
+
+
+PAST TENSE INTRASITIVE STEMS
 Selected stems: 2
 Common flag count: 12
 Common flags (raw): CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
@@ -11,7 +38,7 @@ Selected stem details:
 - yayuuyizza -> unique flag count: 0; 
 - yiise -> unique flag count: 0; 
 
-COMBINATION OF PAST AND MODIFIED CAUSATIVE STEMS
+COMBINATION OF PAST TENSE INTRASITIVE STEMS AND MODIFIED CAUSATIVE INTRASITIVE STEMS 
 Note: There is a case where for some verbs, the past tense stem is the same as the modified causative stem
       so instead of repeating the same entry in the .dic we use one stem and give it flags for both. 
       The representative verbs below fall in that category.
