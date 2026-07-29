@@ -144,16 +144,13 @@ Suggested common group flags: BV, EM, FP, FX, NN, PS, SB, WW, nf, wm
 PAST PASSIVE  TYPE-I STEMS
 Selected stems: 2
 Common flag count: 36
-Common flags (raw): BD, BE, BF, BG, BK, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, St, WN, em, np, ps, sc, st, wn
-Common flags (tokens): BD, BE, BF, BG, BK, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, St, WN, em, np, ps, sc, st, wn
+Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, ED, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, WN, em, np, ps, sc, wn
 Unique flag count: 0
 Unique flags across selected stems: (none)
 
 Selected stem details:
 - cangiddwa -> unique flag count: 0; unique flags: (none)
 - fumbiddwa -> unique flag count: 0; unique flags: (none)
-
-Suggested common group flags: BD, BE, BF, BG, BK, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, St, WN, em, np, ps, sc, st, wn
 
 
 
