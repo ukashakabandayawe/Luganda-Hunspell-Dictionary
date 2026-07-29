@@ -8523,12 +8523,12 @@ keerera/LocativeDeadjective
 keerere/ModifiedLocativeDeadjective
 keeredde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okukeerewa(to be late) ------------------------------------------- #
-keerewa
-keerewe
-keereye
-keereya
-keereyezza
+# ---------------------------------- okukeerewa(to be late): Deadjectival ------------------------------------------- #
+keerewa/OriginalDeadjective
+keerewe/ModifiedDeadjective
+keereye/HybridDeadjective
+keereya/CausativeDeadjective
+keereyezza/PastCausativeDeadjective
 # -------------------------------------------------------------------------------------------------- #
 # ------------------------------------ okukeeta(to fed up) ----------------------------------------- #
 keeta
@@ -10201,7 +10201,7 @@ lindidde
 linga
 linge
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okulingiriza(to be nosy; to peep at) ---------------------------------- #
+# --------------------------------- okulingiriza(to be nosy; to peep at): Type-I Transitive ---------------------------------- #
 lingiriza
 lingirize
 lingirizza
@@ -10223,7 +10223,7 @@ linnyire
 linnyidde
 # --------------------------------------------------------------------------------------------------------- #
 lipoota
-# -------------------------- okuliraana(to neighbor; to adjoin; to be adjacent) --------------------------- #
+# -------------------------- okuliraana(to neighbor; to adjoin; to be adjacent): Type-I Transitive --------------------------- #
 liraana
 liraane
 liraanye
@@ -11453,18 +11453,18 @@ manyiirwa/PassiveDeadjective
 manyiirwe/ModifiedPassiveDeadjective
 manyiiriddwa/PastPassiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okumanyika(to be famous; to be knowable) -------------------------------- #
-manyika
-manyike
-manyise
-manyikibwa
-manyikibwe
-manyikiddwa
-manyisibwa
-manyisibwe
-manyisiddwa
+# ------------------------------- okumanyika(to become famous; to be knowable): Deadjectival -------------------------------- #
+manyika/OriginalDeadjective
+manyike/ModifiedDeadjective
+manyise/PastDeadjective
+manyikibwa/PassiveDeadjective
+manyikibwe/ModifiedPassiveDeadjective
+manyikiddwa/PastPassiveDeadjective
+manyisibwa/PassiveDeadjective
+manyisibwe/ModifiedPassiveDeadjective
+manyisiddwa/PastPassiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okumatira(to be content) ------------------------------------------------ #
+# ------------------------------- okumatira(to be content): Type-I Transitive -------------------------------- #
 matira
 matire
 matidde
@@ -12002,15 +12002,15 @@ mmidde
 mmange
 mmeka
 mmemba
-# --------------------------------- okummuka(to be active; to be lively) ---------------------------------- #
-mmuka
-mmuke
-mmuse
-mmusa
-mmusizza
-mmukira
-mmukire
-mmukidde
+# --------------------------------- okummuka(to be active; to be lively): Deadjectival ---------------------------------- #
+mmuka/OriginalDeadjective
+mmuke/ModifiedDeadjective
+mmuse/HybridDeadjective
+mmusa/CausativeDeadjective
+mmusizza/PastCausativeDeadjective
+mmukira/LocativeDeadjective
+mmukire/ModifiedLocativeDeadjective
+mmukidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 mpaka
 mpi
@@ -13046,9 +13046,9 @@ nyiige/ModifiedDeadjective
 nyiize/HybridDeadjective
 nyiiza/CausativeDeadjective
 nyiizizza/PastCausativeDeadjective
-nyiizibwa/PassiveCausativeDeadjective
-nyiizibwe/ModifiedPassiveCausativeDeadjective
-nyiiziddwa/PastPassiveCausativeDeadjective
+nyiizibwa/PassiveDeadjective
+nyiizibwe/ModifiedPassiveDeadjective
+nyiiziddwa/PastPassiveDeadjective
 nyiiliza/BenefactiveDeadjective
 nyiilize/ModifiedBenefactiveDeadjective
 nyiilizza/PastBenefactiveDeadjective
@@ -13056,13 +13056,13 @@ nyiigira/LocativeDeadjective
 nyiigire/ModifiedLocativeDeadjective
 nyiigidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------- okunyiikira(to make an effort; to be diligent; to be hard-working) ------------------ #
-nyiikira
-nyiikire
-nyiikidde
-nyiikiza
-nyiikize
-nyiikizza
+# ------------------- okunyiikira(to make an effort; to be diligent; to be hard-working): Deadjectival ------------------ #
+nyiikira/OriginalDeadjective
+nyiikire/ModifiedDeadjective
+nyiikidde/PastDeadjective
+nyiikiza/CausativeDeadjective
+nyiikize/ModifiedCausativeDeadjective
+nyiikizza/PastCausativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 nyiivu
 # ----------------- okunyirira(to become good looking; to have an attractive appearance): Deadjectival ------------------ #
@@ -13133,19 +13133,19 @@ nyoomere
 nyoomedde
 omunyoomi
 # --------------------------------------------------------------------------------------------------------- #
-# ---------- okunyuma(to be enjoyable; to be pleasant; to be interesting; to be smart (fashion)) ---------- #
-nyuma
-nyume
-nyumye
-nyumisa
-nyumise
-nyumisizza
-nyumirwa
-nyumirwe
-nyumiddwa
-nyumira
-nyumire
-nyumidde
+# ---------- okunyuma(to be enjoyable; to be pleasant; to be interesting; to be smart (fashion)): Deadjectival ---------- #
+nyuma/OriginalDeadjective
+nyume/ModifiedDeadjective
+nyumye/PastDeadjective
+nyumisa/CausativeDeadjective
+nyumise/ModifiedCausativeDeadjective
+nyumisizza/PastCausativeDeadjective
+nyumirwa/PassiveDeadjective
+nyumirwe/ModifiedPassiveDeadjective
+nyumiddwa/PastPassiveDeadjective
+nyumira/BenefactiveDeadjective
+nyumire/ModifiedBenefactiveDeadjective
+nyumidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------------------- okunyumya(to chat) ----------------------------------------------- #
 nyumya
@@ -13301,19 +13301,19 @@ nywegerera
 nywegerere
 nywegeredde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------- okunywera(to be firm; to hold firm; to stand steady) -------------------------- #
-nywera
-nywere
-nywedde
-nyweza
-nyweze
-nywezezza
-nywezebwa
-nywezebwe
-nywezeddwa
-nywerera
-nywerere
-nyweredde
+# ------------------------- okunywera(to be firm; to hold firm; to stand steady): Deadjectival -------------------------- #
+nywera/OriginalDeadjective
+nywere/ModifiedDeadjective
+nywedde/PastDeadjective
+nyweza/CausativeDeadjective
+nyweze/ModifiedCausativeDeadjective
+nywezezza/PastCausativeDeadjective
+nywezebwa/PassiveDeadjective
+nywezebwe/ModifiedPassiveDeadjective
+nywezeddwa/PastPassiveDeadjective
+nywerera/LocativeDeadjective
+nywerere/ModifiedLocativeDeadjective
+nyweredde/PastLocativeDeadjective
 omunywevu
 # --------------------------------------------------------------------------------------------------------- #
 nze
@@ -13566,7 +13566,7 @@ yagilidde
 omwagazi
 omwagalwa
 # --------------------------------------------------------------------------------------- #
-# ----------------------------- okwambala(to be dress) ---------------------------------- #
+# ----------------------------- okwambala(to dress) ---------------------------------- #
 yambala
 yambale
 yambadde
@@ -14946,7 +14946,7 @@ pokopoko
 pokya
 poliisi
 polofeesa
-# ------------------------------- okupooca(to be very ill; to be feverish) -------------------------------- #
+# ------------------------------- okupooca(to be very ill; to be feverish): Intransitive -------------------------------- #
 pooca
 pooce
 poocezza
@@ -14965,7 +14965,7 @@ pulogulaamu
 pulojekiti
 pya
 rolex
-# ----------------------------------- okusaaga(to joke; to be kidding) ------------------------------------ #
+# ----------------------------------- okusaaga(to joke; to be kidding): Intransitive ------------------------------------ #
 saaga
 saage
 saaze
@@ -14988,10 +14988,10 @@ saalire
 saalidde
 # --------------------------------------------------------------------------------------------------------- #
 saamusaamu
-# --------------------------- okusaana(to be supposed to; ought; should; must) ---------------------------- #
-saana
-saane
-saanye
+# --------------------------- okusaana(to be supposed to; ought; should; must): Deadjectival ---------------------------- #
+saana/OriginalDeadjective
+saane/ModifiedDeadjective
+saanye/PastDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------------------------- okusaanika(to cover; to cover up) ----------------------------------- #
 saaniika
@@ -15011,17 +15011,18 @@ saanyaawo
 saanyeewo
 saanyizzawo
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------- okusaasaana(to scatter; to be scattered; to spread; to disperse) -------------------- #
-saasaana
-saasaane
-saasaanye
-saasaanya
-saasaanyizza
-saasaanyiza
-saasaanyize
-saasaanira
-saasaanire
-saasaanidde
+# ------------------- okusaasaana(to scatter; to be scattered; to spread; to disperse): Deadjectival -------------------- #
+saasaana/OriginalDeadjective
+saasaane/ModifiedDeadjective
+saasaanye/HybridDeadjective
+saasaanya/CausativeDeadjective
+saasaanyizza/PastCausativeDeadjective
+saasaanyiza/BenefactiveDeadjective
+saasaanyize/ModifiedBenefactiveDeadjective 
+saasaanyirizza/PastBenefactiveDeadjective
+saasaanira/LocativeDeadjective
+saasaanire/ModifiedLocativeDeadjective
+saasaanidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------------- okusaasira(to pity; to feel sorry for) --------------------------------- #
 saasira
@@ -15472,19 +15473,19 @@ samirira
 samirire
 samiridde
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------- okusammuka(to be scattered; to be spilled; to come to an end (rain)) ------------------ #
-sammuka
-sammuke
-sammusse
-sammuza
-sammuze
-sammuzza
-sammukirwa
-sammukirwe
-sammukiddwa
-sammukira
-sammukire
-sammukidde
+# ----------------- okusammuka(to be scattered; to be spilled; to come to an end (rain)): Deadjectival ------------------ #
+sammuka/OriginalDeadjective
+sammuke/ModifiedDeadjective
+sammusse/PastDeadjective
+sammuza/CausativeDeadjective
+sammuze/ModifiedCausativeDeadjective
+sammuzza/PastCausativeDeadjective
+sammukirwa/PassiveDeadjective
+sammukirwe/ModifiedPassiveDeadjective
+sammukiddwa/PastPassiveDeadjective
+sammukira/BenefactiveDeadjective
+sammukire/ModifiedBenefactiveDeadjective
+sammukidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okusanga(to meet; to find; to come upon) -------------------------------- #
 sanga
@@ -15500,13 +15501,13 @@ sangira
 sangire
 sangidde
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------- okusanguka(to be wiped off; to be eradicated; to be eliminated) -------------------- #
-sanguka
-sanguke
-sanguse
-sangukira
-sangukire
-sangukidde
+# -------------------- okusanguka(to be wiped off; to be eradicated; to be eliminated): Deadjectival -------------------- #
+sanguka/OriginalDeadjective
+sanguke/ModifiedDeadjective
+sanguse/PastDeadjective
+sangukira/BenefactiveDeadjective
+sangukire/ModifiedBenefactiveDeadjective
+sangukidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------- okusangula(to wipe off; to erase; to eliminate) ---------------------------- #
 sangula
@@ -15538,19 +15539,19 @@ saniririre
 saniriridde
 omusanirizi
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------- okusannyalala(to be or become numb; to grow stiff; to feel paralyzed) ----------------- #
-sannyalala
-sannyalale
-sannyaladde
-sannyalaza
-sannyalaze
-sannyalazza
-sannyalazibwa
-sannyalazibwe
-sannyalaziddwa
-sannyalalira
-sannyalalire
-sannyalalidde
+# ----------------- okusannyalala(to be or become numb; to grow stiff; to feel paralyzed): Deadjectival ----------------- #
+sannyalala/OriginalDeadjective
+sannyalale/ModifiedDeadjective
+sannyaladde/PastDeadjective
+sannyalaza/CausativeDeadjective
+sannyalaze/ModifiedCausativeDeadjective
+sannyalazza/PastCausativeDeadjective
+sannyalazibwa/PassiveDeadjective
+sannyalazibwe/ModifiedPassiveDeadjective
+sannyalaziddwa/PastPassiveDeadjective
+sannyalalira/LocativeDeadjective
+sannyalalire/ModifiedLocativeDeadjective
+sannyalalidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 sanyufu
 # --------------------------- okusanyuka(to become happy; to celebrate; to be glad): Deadjectival --------------------------- #
@@ -16006,7 +16007,7 @@ sekulira
 sekulire
 sekulidde
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------- okusemba(to be last / to recommend; to back up; to support) ---------------------- #
+# ---------------------- okusemba(to be last / to recommend; to back up; to support): Type-I Transitive ---------------------- #
 semba
 sembe
 sembye
@@ -16172,7 +16173,7 @@ sibira
 sibire
 sibidde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okusigala(to stay; to remain; to be left) ------------------------------- #
+# ------------------------------- okusigala(to stay; to remain; to be left): Intransitive ------------------------------- #
 sigala
 sigale
 sigadde
@@ -16220,7 +16221,7 @@ siikire
 siikidde
 omusiisi
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okusiima(to appreciate; to be grateful) -------------------------------- #
+# -------------------------------- okusiima(to appreciate; to be grateful): Type-I Transitive -------------------------------- #
 siima
 siime
 siimye
@@ -16269,7 +16270,7 @@ siiya
 siiye
 siiyiza
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------- okusika(to pull; to stretch / to inherit; to be an heir) ------------------------ #
+# ----------------------- okusika(to pull; to stretch / to inherit; to be an heir): Type-I Transitive ------------------------ #
 sika
 sike
 sise
@@ -16460,7 +16461,7 @@ omusitami
 sitayiro
 siteegi
 siteringi
-# ---------------------- okusituka(to rise; to arise; to stand up; to be well built) ---------------------- #
+# ---------------------- okusituka(to rise; to arise; to stand up; to be well built): Intrasitive ---------------------- #
 situka
 situke
 situse
@@ -16485,7 +16486,7 @@ situlire
 situlidde
 omusituzi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------- okusitunkana(to be restless/fidgety/uneasy; to keep moving about) ------------------- #
+# ------------------- okusitunkana(to be restless/fidgety/uneasy; to keep moving about): Intrasitive ------------------- #
 situnkana
 situnkane
 situnkanye
@@ -16506,12 +16507,12 @@ siyaggukira
 siyaggukire
 siyaggukidde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okusoba(to be more than; to be over and above) -------------------------------- #
-soba
-sobe
-sobye
-sobya
-sobezza
+# ------------------------------- okusoba(to be more than; to be over and above): Deadjectival -------------------------------- #
+soba/OriginalDeadjective
+sobe/ModifiedDeadjective
+sobye/HybridDeadjective
+sobya/CausativeDeadjective
+sobezza/PastCausativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------------------- okusobera(to confuse; to baffle; to perplex) ------------------------------ #
 sobera
@@ -16521,15 +16522,15 @@ soberwa
 soberwe
 sobeddwa
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ okusoboka(to be possible; to be manageable) ------------------------------ #
-soboka
-soboke
-sobose
-sobokera
-sobokere
-sobokedde
+# ------------------------------ okusoboka(to be possible; to be manageable): Deadjectival ------------------------------ #
+soboka/OriginalDeadjective
+soboke/ModifiedDeadjective
+sobose/PastDeadjective
+sobokera/LocativeDeadjective
+sobokere/ModifiedLocativeDeadjective
+sobokedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okusobola(to be able to; can) ------------------------------------- #
+# ------------------------------------- okusobola(to be able to; can)Type-I Transitive ------------------------------------- #
 sobola
 sobole
 sobose
@@ -16669,13 +16670,13 @@ songera
 songere
 songedde
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------- okusongoka(to come to a point; to be pointed; to be sharp) ----------------------- #
-songoka
-songoke
-songose
-songokera
-songokere
-songokedde
+# ---------------------- okusongoka(to come to a point; to be pointed; to be sharp): Deadjectival ----------------------- #
+songoka/OriginalDeadjective
+songoke/ModifiedDeadjective
+songose/PastDeadjective
+songokera/LocativeDeadjective
+songokere/ModifiedLocativeDeadjective
+songokedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 songovu
 # --------------------------------------- okusongola( to sharpen) ----------------------------------------- #
@@ -16718,7 +16719,7 @@ soona
 soone
 soonye
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------- okusosola(to pick out; to be selective; to be choosy; to discriminate) ----------------- #
+# ---------------- okusosola(to pick out; to be selective; to be choosy; to discriminate)Type-I Transitive ----------------- #
 sosola
 sosole
 sosodde
@@ -16994,7 +16995,7 @@ suliriza
 sulirize
 sulirizza
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okusumagira(to doze; to be sleepy) ----------------------------------- #
+# ---------------------------------- okusumagira(to doze; to be sleepy): Intrasitive ----------------------------------- #
 sumagira
 sumagire
 sumagidde
@@ -17168,7 +17169,7 @@ suumulira
 suumulire
 suumulidde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------- okuswakira(to be furious; to lose one&apos;s temper) -------------------------- #
+# ------------------------- okuswakira(to be furious; to lose ones temper): Intrasitive -------------------------- #
 swakira
 swakire
 swakidde
@@ -17179,7 +17180,7 @@ swakira
 swakire
 swakidde
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuswala(to be ashamed) ---------------------------------------- #
+# ---------------------------------------- okuswala(to be ashamed): Intrasitive ---------------------------------------- #
 swala
 swale
 swadde
@@ -17242,18 +17243,18 @@ taataaganiddwa
 taataaganyiza
 taataaganyize
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------ okutabuka(to be mixed; to be stirred; to be disturbed) ------------------------- #
-tabuka
-tabuke
-tabuse
-tabusa
-tabusizza
-tabukirwa
-tabukirwe
-tabukiddwa
-tabukira
-tabukire
-tabukidde
+# ------------------------ okutabuka(to be mixed; to be stirred; to be disturbed): Deadjectival ------------------------- #
+tabuka/OriginalDeadjective
+tabuke/ModifiedDeadjective
+tabuse/HybridDeadjective
+tabusa/CausativeDeadjective
+tabusizza/PastCausativeDeadjective
+tabukirwa/PassiveDeadjective
+tabukirwe/ModifiedPassiveDeadjective
+tabukiddwa/PastPassiveDeadjective
+tabukira/BenefactiveDeadjective
+tabukire/ModifiedBenefactiveDeadjective
+tabukidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------------- okutabula(to mix; to stir; to stir up) --------------------------------- #
 tabula
@@ -17512,19 +17513,19 @@ tandikire
 tandikidde
 omutandisi
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okutangaala(to be bright; to be light) --------------------------------- #
-tangaala
-tangaale
-tangadde
-tangaaza
-tangaaze
-tangazza
-tangaazibwa
-tangaazibwe
-tangaaziddwa
-tangaalira
-tangaalire
-tangaalidde
+# -------------------------------- okutangaala(to be bright; to be light): Deadjectival --------------------------------- #
+tangaala/OriginalDeadjective
+tangaale/ModifiedDeadjective
+tangadde/PastDeadjective
+tangaaza/CausativeDeadjective
+tangaaze/ModifiedCausativeDeadjective
+tangazza/PastCausativeDeadjective
+tangaazibwa/PassiveDeadjective
+tangaazibwe/ModifiedPassiveDeadjective
+tangaaziddwa/PastPassiveDeadjective
+tangaalira/BenefactiveDeadjective
+tangaalire/ModifiedBenefactiveDeadjective
+tangaalidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tangaavu
 # --------------------------- okutangira(to prevent; to restrain; to hold back) --------------------------- #
@@ -17785,7 +17786,7 @@ tegere
 tegedde
 omutezi
 # --------------------------------------------------------------------------------------------------------- #
-# --- okutegana(to trouble oneself; to make an effort; to take pains; to be bothered; to be disturbed) ---- #
+# --- okutegana(to trouble oneself; to make an effort; to take pains; to be bothered; to be disturbed): Intrasitive ---- #
 tegana
 tegane
 teganye
