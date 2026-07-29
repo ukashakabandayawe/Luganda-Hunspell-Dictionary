@@ -17813,10 +17813,10 @@ tegeereza
 tegeereze
 tegeerezza
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okutegeerekeka(to be understandable) ----------------------------------- #
-tegeerekeka
-tegeerekeke
-tegeerekese
+# -------------------------------- okutegeerekeka(to be understandable): Deadjectival ----------------------------------- #
+tegeerekeka/OriginalDeadjective
+tegeerekeke/ModifiedDeadjective
+tegeerekese/PastDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tegeeza
 # ------------------------------ okutegeka(to prepare; to arrange; to set up) ----------------------------- #
@@ -17927,22 +17927,22 @@ tenderereze
 tendererezza
 # --------------------------------------------------------------------------------------------------------- #
 tera
-# ------------------------ okutereera(to get well; to be straight; to be balanced) ------------------------ #
-tereera
-tereere
-teredde
-tereeza
-tereeze
-tereezza
-terezebwa
-terezebwe
-terezeddwa
-tereerera
-tereerere
-tereeredde
-tereereza
-tereereze
-tereerezza
+# ------------------------ okutereera(to get well; to be straight; to be balanced): Deadjectival ------------------------ #
+tereera/OriginalDeadjective
+tereere/ModifiedDeadjective
+teredde/PastDeadjective
+tereeza/CausativeDeadjective
+tereeze/ModifiedCausativeDeadjective
+terezza/PastCausativeDeadjective
+terezebwa/PassiveDeadjective
+terezebwe/ModifiedPassiveDeadjective
+terezeddwa/PastPassiveDeadjective
+tereerera/LocativeDeadjective
+tereerere/ModifiedLocativeDeadjective
+tereeredde/PastLocativeDeadjective
+tereereza/BenefactiveDeadjective
+tereereze/ModifiedBenefactiveDeadjective
+tereerezza/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tereevu
 # ---------------------- okutereka(to put away; to put aside; to store; to reserve) ----------------------- #
@@ -18386,15 +18386,15 @@ tonnyedde
 # --------------------------------------------------------------------------------------------------------- #
 tono
 toola
-# ---------------------- okutowolokoka(to feel free; to be relieved; to feel relief) ---------------------- #
-towolokoka
-towolokoke
-towolokose
-towolokosa
-towolokosezza
-towolokera
-towolokere
-towolokedde
+# ---------------------- okutowolokoka(to feel free; to be relieved; to feel relief): Deadjectival ---------------------- #
+towolokoka/OriginalDeadjective
+towolokoke/ModifiedDeadjective
+towolokose/HybridDeadjective
+towolokosa/CausativeDeadjective
+towolokosezza/PastCausativeDeadjective
+towolokera/LocativeDeadjective
+towolokere/ModifiedLocativeDeadjective
+towolokedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------------- okutta(to kill; to murder; to destroy) --------------------------------- #
 tta
@@ -18585,19 +18585,19 @@ tungira
 tungire
 tungidde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okutunula(to be awake; to look) ------------------------------------ #
-tunula
-tunule
-tunudde
-tunuza
-tunuze
-tunuzza
-tunulwa
-tunulwe
-tunuliddwa
-tunulira
-tunulire
-tunulidde
+# ------------------------------------ okutunula(to be awake; to look): Deadjectival ------------------------------------ #
+tunula/OriginalDeadjective
+tunule/ModifiedDeadjective
+tunudde/PastDeadjective
+tunuza/CausativeDeadjective
+tunuze/ModifiedCausativeDeadjective
+tunuzza/PastCausativeDeadjective
+tunulirwa/PassiveDeadjective
+tunulirwe/ModifiedPassiveDeadjective
+tunuliddwa/PastPassiveDeadjective
+tunulira/BenefactiveDeadjective
+tunulire/ModifiedBenefactiveDeadjective
+tunulidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------- okututumuka(to become famous/renowned; to become well-known): Deadjectival ---------------------- #
 tutumuka/OriginalDeadjective
@@ -18859,7 +18859,7 @@ twalira
 twalire
 twalidde
 # --------------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------------- okutya (to fear; to be afraid) ----------------------------------------- #
+# ----------------------------------------------- okutya (to fear; to be afraid): Type-I Transitive ----------------------------------------- #
 tya
 tye
 tidde
@@ -20056,7 +20056,7 @@ wakanidde
 wakati
 wakyaalani
 wala
-# ---------------------- okuwalaggana(to have a grudge with someone; to be hostile) ----------------------- #
+# ---------------------- okuwalaggana(to have a grudge with someone; to be hostile): Type-I Transitive ----------------------- #
 walaggana
 walaggane
 walagganye
@@ -20317,13 +20317,13 @@ wandiikiddewooko
 # --------------------------------------------------------------------------------------------------------- #
 wanji
 wangu
-# ------------------------------- okuwanguka(to be defeated) ---------------------------------------------- #
-wanguka
-wanguke
-wanguse
-wangukira
-wangukire
-wangukidde
+# ------------------------------- okuwanguka(to be defeated): Deadjectival ---------------------------------------------- #
+wanguka/OriginalDeadjective
+wanguke/ModifiedDeadjective
+wanguse/HybridDeadjective
+wangukira/LocativeDeadjective
+wangukire/ModifiedLocativeDeadjective
+wangukidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 wangula
 wangule
@@ -20457,7 +20457,7 @@ wembejjere
 wembejjedde
 omuwembezzi
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------- okuwemula(to curse; to swear; to use profane language; to be vulgar) ------------------ #
+# ----------------- okuwemula(to curse; to swear; to use profane language; to be vulgar): Type-I Transitive ------------------ #
 wemula
 wemule
 wemudde
@@ -20718,7 +20718,7 @@ weyiti
 wiigi
 wiiki
 wo
-# --------------------------------- okuwoggana(to be loud; to make noise) --------------------------------- #
+# --------------------------------- okuwoggana(to be loud; to make noise): Intransitive --------------------------------- #
 woggana
 woggane
 wogganye
@@ -20761,19 +20761,19 @@ wolutaali
 woma
 womba
 wombeefu
-# --------------------------- okuwona(to be healed; to be saved; inf.: okwona) ---------------------------- #
-wona
-wone
-wonye
-wonebwa
-wonebwe
-woneddwa
-wonera
-wonere
-wonedde
+# --------------------------- okuwona(to be healed; to be saved; inf.: okwona): Deadjectival ---------------------------- #
+wona/OriginalDeadjective
+wone/ModifiedDeadjective
+wonye/PastDeadjective
+wonebwa/PassiveDeadjective
+wonebwe/ModifiedPassiveDeadjective
+woneddwa/PastPassiveDeadjective
+wonera/LocativeDeadjective
+wonere/ModifiedLocativeDeadjective
+wonedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 wonna
-# ------------------------------------------- okuwonya(to heal) ------------------------------------------- #
+# ------------------------------------------- okuwonya(to heal): Type-II Transitive ------------------------------------------- #
 wonya
 wonye
 wonyezza
@@ -20794,19 +20794,20 @@ woolerwa
 woolerwe
 wooleddwa
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okuwooma(to be delicious) ------------------------------------------- #
-wooma
-woome
-woomye
-woomelwa
-woomelwe
-woomeddwa
-woomesa
-woomese
-woomesezza
-woomera
-woomere
-woomedde
+# ----------------------------------- okuwooma(to be delicious): Deadjectival ------------------------------------------- #
+wooma/OriginalDeadjective
+woome/ModifiedDeadjective
+woomye/HybridDeadjective
+woomya/CausativeDeadjective
+woomelwa/PassiveDeadjective
+woomelwe/ModifiedPassiveDeadjective
+woomeddwa/PastPassiveDeadjective
+woomesa/CausativeDeadjective
+woomese/ModifiedCausativeDeadjective
+woomesezza/PastCausativeDeadjective
+woomera/BenefactiveDeadjective
+woomere/ModifiedBenefactiveDeadjective
+woomedde/PastBenefactiveDeadjective
 #
 woomako
 woomamu
@@ -20968,16 +20969,16 @@ woomeddeeyooko
 woomeddeewo
 woomeddeewooko
 # ---------------------------------------------------------------------------------- #
-# ------------------------------- okuwoomerera(to be sweet; to taste sweet) ------------------------------- #
-woomerera
-woomerere
-woomeredde
-woomereza
-woomereze
-woomerezza
-woomererwa
-woomererwe
-woomeredwa
+# ------------------------------- okuwoomerera(to be sweet; to taste sweet): Deadjectival ------------------------------- #
+woomerera/OriginalDeadjective
+woomerere/ModifiedDeadjective
+woomeredde/PastDeadjective
+woomereza/CausativeDeadjective
+woomereze/ModifiedCausativeDeadjective
+woomerezza/PastCausativeDeadjective
+woomererwa/PassiveDeadjective
+woomererwe/ModifiedPassiveDeadjective
+woomereddwa/PastPassiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 wootameroni
 wooteri
@@ -21252,16 +21253,16 @@ wuliriziddwa
 # --------------------------------------------------------------------------------------------------------- #
 wummula
 wummuza
-# ----------------------------------- okuwuniikirira(to be taken aback) ----------------------------------- #
-wuniikirira
-wuniikirire
-wuniikiridde
-wuniikiriza
-wuniikirize
-wuniikirizza
-wuniikirirwa
-wuniikirirwe
-wuniikiriddwa
+# ----------------------------------- okuwuniikirira(to be taken aback): Deadjectival ----------------------------------- #
+wuniikirira/OriginalDeadjective
+wuniikirire/ModifiedDeadjective
+wuniikiridde/PastDeadjective
+wuniikiriza/CausativeDeadjective
+wuniikirize/ModifiedCausativeDeadjective
+wuniikirizza/PastCausativeDeadjective
+wuniikirirwa/PassiveDeadjective
+wuniikirirwe/ModifiedPassiveDeadjective
+wuniikiriddwa/PastPassiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------------------------------- okuwunya(to smell) -------------------------------------------- #
 wunya
@@ -21313,16 +21314,16 @@ wuubira
 wuubire
 wuubidde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okuwuubaala(to be bored; to be lonesome) -------------------------------- #
-wuubaala
-wuubaale
-wuubadde
-wuubaaza
-wuubaaze
-wuubazza
-wuubaalira
-wuubaalire
-wuubaalidde
+# ------------------------------- okuwuubaala(to be bored; to be lonesome): Deadjectival -------------------------------- #
+wuubaala/OriginalDeadjective
+wuubaale/ModifiedDeadjective
+wuubadde/PastDeadjective
+wuubaaza/CausativeDeadjective
+wuubaaze/ModifiedCausativeDeadjective
+wuubazza/PastCausativeDeadjective
+wuubaalira/LocativeDeadjective
+wuubaalire/ModifiedLocativeDeadjective
+wuubaalidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------ okuwuuma(to hiss; to make a buzzing noise) ------------------------------- #
 wuuma
@@ -21372,13 +21373,13 @@ yabikira
 yabikire
 yabikidde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------- okuyabuka(to separate; to disperse; to be adjourned) -------------------------- #
-yabuka
-yabuke
-yabuse
-yabukira
-yabukire
-yabukidde
+# ------------------------- okuyabuka(to separate; to disperse; to be adjourned): Deadjectival -------------------------- #
+yabuka/OriginalDeadjective
+yabuke/ModifiedDeadjective
+yabuse/PastDeadjective
+yabukira/LocativeDeadjective
+yabukire/ModifiedLocativeDeadjective
+yabukidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------- okuyagalana(to love one another; inf.: okwagalana) --------------------------- #
 yagalana
@@ -21825,13 +21826,13 @@ yatikire
 yatikidde
 # --------------------------------------------------------------------------------------------------------- #
 yavu
-# ------------------------ okuyawuka(to be different; intrasitive) ----------------------------------------- #
-yawuka
-yawuke
-yawuse
-yawukira
-yawukire
-yawukidde
+# ------------------------ okuyawuka(to be different): Deadjectival ----------------------------------------- #
+yawuka/OriginalDeadjective
+yawuke/ModifiedDeadjective
+yawuse/PastDeadjective
+yawukira/LocativeDeadjective
+yawukire/ModifiedLocativeDeadjective
+yawukidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------------- okuyawukana(to be different; inf: okwawukana)------------------------- #
 yawukana
@@ -22759,10 +22760,13 @@ z
 za
 za
 zaabu
-# ----------------------------- okuzaaka(to be bright; intrasitive) --------------------------------------- #
-zaaka
-zaake
-zaase
+# ----------------------------- okuzaaka(to be bright): Deadjectival --------------------------------------- #
+zaaka/OriginalDeadjective
+zaake/ModifiedDeadjective
+zaase/PastDeadjective
+zaakira/LocativeDeadjective
+zaakire/ModifiedLocativeDeadjective
+zaakidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------------- okuzaala(to give birth) ---------------------------------- #
 zaala
@@ -23596,15 +23600,15 @@ zirikire
 zirikidde
 # --------------------------------------------------------------------------------------------------------- #
 zito
-# ------------------------------------------------------- Adj. okuzitowa (to be heavy) ------------------------------------------------------- #
-zitowa
-zitowe
-zitoye
-zitoya
-zitoyezza
-zitoowerera
-zitoowerere
-zitooweredde
+# ------------------------------------------------------- okuzitowa (to be heavy): Deadjectival ------------------------------------------------------- #
+zitowa/OriginalDeadjective
+zitowe/ModifiedDeadjective
+zitoye/HybridDeadjective
+zitoya/CausativeDeadjective
+zitoyezza/PastCausativeDeadjective
+zitoowerera/BenefactiveDeadjective
+zitoowerere/ModifiedBenefactiveDeadjective
+zitooweredde/PastBenefactiveDeadjective
 #
 zitowako
 zitowamu
@@ -23697,10 +23701,13 @@ zitoowereddeeyooko
 zitoowereddeewo
 zitoowereddeewooko
 # -------------------------------------------------------------------------------------------------- #
-# ---------------------- okuziyira(to be blocked; to be crowded; to be constipated) ----------------------- #
-ziyira
-ziyire
-ziyidde
+# ---------------------- okuziyira(to be blocked; to be crowded; to be constipated): Deadjectival ----------------------- #
+ziyira/OriginalDeadjective
+ziyire/ModifiedDeadjective
+ziyidde/PastDeadjective
+ziyirira/LocativeDeadjective
+ziyirire/ModifiedLocativeDeadjective
+ziyiridde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------ okuziyiza(to prevent; to hinder; to block; to obstruct) ------------------------ #
 ziyiza
