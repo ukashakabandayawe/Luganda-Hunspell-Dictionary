@@ -4,7 +4,7 @@ I chose four words to represent all the other stems in these category and I anal
 
 
 
-ORIGINAL STEMS
+ORIGINAL TYPE-I STEMS
 Mode: LONG
 Category: mixed
 Selected stems: 5
@@ -25,7 +25,7 @@ Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR
 
 The common flags here can be applied to any original present tense stem.
 
-MODIFIED STEMS
+MODIFIED TYPE-I STEMS
 
 Selected stems: 4
 Common flag count: 14
@@ -44,7 +44,7 @@ Suggested common group flags: BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh
 
 
 
-PAST TENSE STEMS
+PAST TENSE TYPE-I STEMS
 Selected stems: 4
 Common flag count: 41
 Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, WG, WN, cC, sT, em, np, ps, rp, sc, st, wg, wn
@@ -62,7 +62,7 @@ Suggested common group flags: BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM
 
 
 
-CAUSATIVE STEMS
+CAUSATIVE TYPE-I STEMS
 Selected stems: 2
 Common flag count: 117
 Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cC, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
@@ -77,7 +77,7 @@ Selected stem details:
 Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cC, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
 
 
-MODIFIED CAUSATIVE STEMS
+MODIFIED CAUSATIVE TYPE-I STEMS
 Selected stems: 2
 Common flag count: 18
 Common flags (raw): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
@@ -92,7 +92,7 @@ Selected stem details:
 Suggested common group flags: BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
 
 
-PAST CAUSATIVE STEMS
+PAST CAUSATIVE TYPE-I STEMS
 Selected stems: 2
 Common flag count: 55
 Common flags (raw): BD, BE, BF, BG, BM, BN, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, St, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
@@ -109,7 +109,7 @@ Suggested common group flags: BD, BE, BF, BG, BM, BN, BR, BU, BX, CC, DP, EB, EC
 
 
 
-PASSIVE STEMS
+PASSIVE  TYPE-I STEMS
 Selected stems: 2
 Common flag count: 71
 Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, FY, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RR, SC, SS, St, TT, WF, WM, WN, YT, em, ff, gg, ip, jj, kk, ll, np, pp, ps, sc, st, tt, vv, wf, wn, xx
@@ -125,7 +125,7 @@ Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP
 
 
 
-MODIFIED PASSIVE STEMS
+MODIFIED PASSIVE  TYPE-I STEMS
 Selected stems: 2
 Common flag count: 10
 Common flags (raw): BV, EM, FP, FX, NN, PS, SB, WW, nf, wm
@@ -141,7 +141,7 @@ Suggested common group flags: BV, EM, FP, FX, NN, PS, SB, WW, nf, wm
 
 
 
-PAST PASSIVE STEMS
+PAST PASSIVE  TYPE-I STEMS
 Selected stems: 2
 Common flag count: 36
 Common flags (raw): BD, BE, BF, BG, BK, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, St, WN, em, np, ps, sc, st, wn
@@ -157,7 +157,7 @@ Suggested common group flags: BD, BE, BF, BG, BK, BR, BX, CC, DP, EB, ED, EF, EH
 
 
 
-BENEFACTIVE STEMS
+BENEFACTIVE TYPE-I STEMS
 Selected stems: 4
 Common flag count: 116
 Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
@@ -176,7 +176,7 @@ Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR
 
 
 
-MODIFIED BENEFACTIVE STEMS
+MODIFIED BENEFACTIVE  TYPE-I STEMS
 Selected stems: 4
 Common flag count: 18
 Common flags (raw): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
@@ -188,7 +188,7 @@ Selected stem details:
 - pangire -> unique flag count: 0
 
 
-PAST BENEFACTIVE STEMS
+PAST BENEFACTIVE  TYPE-I STEMS
 Selected stems: 4
 Common flags: BD, BE, BF, BG, BM, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, UU, VV, WG, WN, XX, cC, sT, em, np, ps, rp, sc, st, wg, wn
 

@@ -3,7 +3,7 @@ I don't know what to call these stems but all I know is that they can take refle
 I chose three words to represent all the other stems in these category and I analyzed them to find stems that apply to them.
 
 
-ORIGINAL STEMS
+ORIGINAL TYPE-II STEMS
 Mode: LONG
 Category: mixed
 Selected stems: 3
@@ -23,7 +23,7 @@ Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR
 This has additional flags on top Type-I active stem flags and these are:
 EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, KK, LL, UU, VV, XX, YY, ZZ, cc, ii, uu, ww
 
-MODIFIED STEMS
+MODIFIED TYPE-II STEMS
 Selected stems: 3
 Common flag count: 17
 Common flags (raw): BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
@@ -40,7 +40,7 @@ Suggested common group flags: BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW
 
 
 
-PAST TENSE STEMS
+PAST TENSE TYPE-II STEMS
 Selected stems: 2
 Common flag count: 55
 Common flags (raw): BD, BE, BF, BG, BM, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
@@ -53,7 +53,7 @@ Selected stem details:
 
 
 
-CAUSATIVE STEMS
+CAUSATIVE TYPE-II STEMS
 Source: E:\Luganda Hunspell Dictionary\resources\Luganda_lima.dic (21).txt
 Mode: LONG
 Category: mixed
@@ -69,7 +69,7 @@ Selected stem details:
 
 
 
-MODIFIED CAUSATIVE STEMS
+MODIFIED CAUSATIVE TYPE-II STEMS
 Selected stems: 3
 Common flag count: 17
 Common flags (raw): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, wh, wm
@@ -82,7 +82,7 @@ Selected stem details:
 
 
 
-PAST CAUSATIVE STEMS
+PAST CAUSATIVE TYPE-II STEMS
 Source: E:\Luganda Hunspell Dictionary\resources\Luganda_lima.dic (21).txt
 Mode: LONG
 Category: mixed
@@ -98,7 +98,7 @@ Selected stem details:
 
 
 
-PASSIVE STEMS
+PASSIVE  TYPE-II STEMS
 Selected stems: 3
 Common flag count: 72
 Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, CC, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, FY, GG, HH, II, IM, IP, JJ, LT, NF, NN, NP, PP, PS, PT, QQ, RR, SC, SS, St, TT, WF, WM, WN, YT, em, ff, gg, ip, jj, kk, ll, np, pp, ps, sc, st, tt, vv, wf, wn, xx
@@ -112,7 +112,7 @@ Selected stem details:
 
 
 
-MODIFIED PASSIVE STEMS
+MODIFIED PASSIVE  TYPE-II STEMS
 Selected stems: 3
 Common flag count: 9
 Common flags (raw): BV, EM, FP, NN, PS, SB, WW, nf, wm
@@ -125,7 +125,7 @@ Selected stem details:
 
 
 
-PAST PASSIVE STEMS
+PAST PASSIVE  TYPE-II STEMS
 Selected stems: 3
 Common flag count: 31
 Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, ED, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, WN, em, np, ps, sc, wn
@@ -139,7 +139,7 @@ Selected stem details:
 
 
 
-BENEFACTIVE STEMS
+BENEFACTIVE TYPE-II STEMS
 Selected stems: 3
 Common flag count: 118
 Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, FY, FZ, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
@@ -153,7 +153,7 @@ Selected stem details:
 
 
 
-MODIFIED BENEFACTIVE STEMS
+MODIFIED BENEFACTIVE  TYPE-II STEMS
 Selected stems: 3
 Common flag count: 17
 Common flags (raw): BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
@@ -167,7 +167,7 @@ Selected stem details:
 
 
 
-PAST BENEFACTIVE STEMS
+PAST BENEFACTIVE  TYPE-II STEMS
 Selected stems: 3
 Common flag count: 54
 Common flags (raw): BD, BE, BF, BG, BM, BR, BU, BX, CC, DP, EC, ED, EF EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, ST, SS, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, St, sc, st, wg, wn
