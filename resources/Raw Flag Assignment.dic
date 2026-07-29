@@ -18,6 +18,11 @@
 # Note: The double asterisks (**) in the comments indicate that the following section or the verb contains irregular verb forms that do not follow the standard conjugation patterns.
 # So such verbs should be handled with special attention.
 #
+# !!!!! This file is not the dictionary itself, but rather
+# a raw flag assignment file that uses human language instead of the actual flags.
+# It shows the flags assigned to verbs in the dictionary.  
+#
+#
 ab'/C1OC
 b'/C1OC
 abo/ea
@@ -145,12 +150,12 @@ amazima
 amazina
 amazuukira/
 amazzi
-# ----------------------------- okumyuka(to become red) ---------------------------------------- #
-myuka,OriginalDeadjective
-myuke,ModifiedDeadjective
-myuse,HybridDeadjective
-myusa,CausativeDeadjective
-myusizza,PastCausativeDeadjective
+# ----------------------------- okumyuka(to become red): Deadjectival ---------------------------------------- #
+myuka/OriginalDeadjective
+myuke/ModifiedDeadjective
+myuse/HybridDeadjective
+myusa/CausativeDeadjective
+myusizza/PastCausativeDeadjective
 # ----------------------------------------------------------------------------------------------- #
 ani
 anna
@@ -269,19 +274,19 @@ balire
 balidde
 bazi
 # ------------------------------------------------------------------------------------------------ #
-# --------------------------------- okubalaga(to be itchy) --------------------------------------- #
-balagala,OriginalDeadjective
-balagale,ModifiedDeadjective
-balagadde,PastDeadjective
-balagaza,CausativeDeadjective
-balagaze,ModifiedCausativeDeadjective
-balagazza,PastCausativeDeadjective
-balagalwa,PassiveDeadjective
-balagalwe,ModifiedPassiveDeadjective
-balagaddwa,PastPassiveDeadjective
-balagalira,LocativeDeadjective
-balagalire,ModifiedLocativeDeadjective
-balagalidde,PastLocativeDeadjective
+# --------------------------------- okubalaga(to be itchy): Deadjectival --------------------------------------- #
+balagala/OriginalDeadjective
+balagale/ModifiedDeadjective
+balagadde/PastDeadjective
+balagaza/CausativeDeadjective
+balagaze/ModifiedCausativeDeadjective
+balagazza/PastCausativeDeadjective
+balagalwa/PassiveDeadjective
+balagalwe/ModifiedPassiveDeadjective
+balagaddwa/PastPassiveDeadjective
+balagalira/LocativeDeadjective
+balagalire/ModifiedLocativeDeadjective
+balagalidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------- #
 balagavu
 balansi
@@ -854,19 +859,19 @@ bikkiddengako
 biki
 bina
 bisatu
-# --------------------------------------- okubissiwala(to become wet) --------------------------------------------- #
-bissiwala,OriginalDeadjective
-bissiwale,ModifiedDeadjective
-bissiwadde,PastDeadjective
-bissiwaza,CausativeDeadjective
-bissiwaze,ModifiedCausativeDeadjective
-bissiwazza,PastCausativeDeadjective
-bissiwazibwa,PassiveDeadjective
-bissiwazibwe,ModifiedPassiveDeadjective
-bissiwaziddwa,PastPassiveDeadjective
-bissiwalira,LocativeDeadjective
-bissiwalire,ModifiedLocativeDeadjective
-bissiwalidde,PastLocativeDeadjective
+# --------------------------------------- okubissiwala(to become wet): Deadjectival --------------------------------------------- #
+bissiwala/OriginalDeadjective
+bissiwale/ModifiedDeadjective
+bissiwadde/PastDeadjective
+bissiwaza/CausativeDeadjective
+bissiwaze/ModifiedCausativeDeadjective
+bissiwazza/PastCausativeDeadjective
+bissiwazibwa/PassiveDeadjective
+bissiwazibwe/ModifiedPassiveDeadjective
+bissiwaziddwa/PastPassiveDeadjective
+bissiwalira/LocativeDeadjective
+bissiwalire/ModifiedLocativeDeadjective
+bissiwalidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 bisi
 bisibisi
@@ -1009,13 +1014,13 @@ boneebonerewo
 boneebonerewooko
 boneebonereengako
 # --------------------------------------------------------------------------------------- #
-# -------------------------------- **okuboneka(to become visible) --------------------------------------- #
-boneka,OriginalDeadjective
-boneke,ModifiedDeadjective
-bonese,PastDeadjective
-bonekera,LocativeDeadjective
-bonekere,ModifiedLocativeDeadjective
-bonekedde,PastLocativeDeadjective
+# -------------------------------- **okuboneka(to become visible): Deadjectival --------------------------------------- #
+boneka/OriginalDeadjective
+boneke/ModifiedDeadjective
+bonese/PastDeadjective
+bonekera/LocativeDeadjective
+bonekere/ModifiedLocativeDeadjective
+bonekedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
 # ------------------------------- **okubonereza(to punish) --------------------------------- #
 bonereza
@@ -1039,10 +1044,10 @@ booleddwa
 # -------------------- okuboowa((from school); to show prejudice against to be boring) -------------------- #
 boowa
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- **okubowa(to be boring) ----------------------------------------- #
-bowa,OriginalDeadjective
-bowe,ModifiedDeadjective
-boye,PastDeadjective
+# ------------------------------- **okubowa(to be boring): Deadjectival ----------------------------------------- #
+bowa/OriginalDeadjective
+bowe/ModifiedDeadjective
+boye/PastDeadjective
 # --------------------------------------------------------------------------------------------- #
 Bubirigi
 # ------------ okubudaabuda(to extend good treatment to) -------------------------------------- #
@@ -1054,31 +1059,31 @@ buddo
 Bufalansa
 bufofoofo
 Buganda
-# ------------------------------- **okubuguma(to warm) ----------------------------------------- #
-buguma,OriginalDeadjective
-bugume,ModifiedDeadjective
-bugumye,HybridDeadjective
-bugumya,CausativeDeadjective
-bugumizza,PastCausativeDeadjective
-bugumizibwa,PassiveDeadjective
-bugumizibwe,ModifiedPassiveDeadjective
-bugumiziddwa,PastPassiveDeadjective
-bugumira,LocativeDeadjective
-bugumire,ModifiedLocativeDeadjective
-bugumidde,PastLocativeDeadjective
+# ------------------------------- **okubuguma(to warm): Deadjectival ----------------------------------------- #
+buguma/OriginalDeadjective
+bugume/ModifiedDeadjective
+bugumye/HybridDeadjective
+bugumya/CausativeDeadjective
+bugumizza/PastCausativeDeadjective
+bugumizibwa/PassiveDeadjective
+bugumizibwe/ModifiedPassiveDeadjective
+bugumiziddwa/PastPassiveDeadjective
+bugumira/LocativeDeadjective
+bugumire/ModifiedLocativeDeadjective
+bugumidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
-# ------------------------------- **okubula(to get lost) ----------------------------------------- #
-bula,OriginalDeadjective
-bule,ModifiedDeadjective
-buze,HybridDeadjective
-buza,CausativeDeadjective
-buzizza,PastCausativeDeadjective
-bulwa,PassiveDeadjective
-bulwe,ModifiedPassiveDeadjective
-buliddwa,PastPassiveDeadjective
-bulira,LocativeDeadjective
-bulire,ModifiedLocativeDeadjective
-bulidde,PastLocativeDeadjective
+# ------------------------------- **okubula(to get lost): Deadjectival ----------------------------------------- #
+bula/OriginalDeadjective
+bule/ModifiedDeadjective
+buze/HybridDeadjective
+buza/CausativeDeadjective
+buzizza/PastCausativeDeadjective
+bulwa/PassiveDeadjective
+bulwe/ModifiedPassiveDeadjective
+buliddwa/PastPassiveDeadjective
+bulira/LocativeDeadjective
+bulire/ModifiedLocativeDeadjective
+bulidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
 Bulaaya
 bulaaza
@@ -1936,30 +1941,30 @@ ddiddengawooko
 # --------------------------------------------------------------------------------------- #
 ddensite
 ddi
-# ------------------------------- okuddirira(to be next) ----------------------------------------- #
-ddirira,OriginalDeadjective
-ddirire,ModifiedDeadjective
-ddiridde,PastDeadjective
-ddiririrwa,PassiveDeadjective
-ddiririrwe,ModifiedPassiveDeadjective
-ddiririddwa,PastPassiveDeadjective
-ddiriza,CausativeDeadjective
-ddirize,ModifiedCausativeDeadjective
-ddirizza,PastCausativeDeadjective
+# ------------------------------- okuddirira(to be next): Deadjectival ----------------------------------------- #
+ddirira/OriginalDeadjective
+ddirire/ModifiedDeadjective
+ddiridde/PastDeadjective
+ddiririrwa/PassiveDeadjective
+ddiririrwe/ModifiedPassiveDeadjective
+ddiririddwa/PastPassiveDeadjective
+ddiriza/CausativeDeadjective
+ddirize/ModifiedCausativeDeadjective
+ddirizza/PastCausativeDeadjective
 # --------------------------------------------------------------------------------------------- #
-# -------------------------------- okuddugala (to become dirty) -------------------------------- #
-ddugala,OriginalDeadjective
-ddugale,ModifiedDeadjective
-ddugadde,PastDeadjective
-ddugazibwa,PassiveDeadjective
-ddugazibwe,ModifiedPassiveDeadjective
-ddugaziddwa,PastPassiveDeadjective
-ddugaza,CausativeDeadjective
-ddugaze,ModifiedCausativeDeadjective
-ddugazza,PastCausativeDeadjective
-ddugalira,LocativeDeadjective
-ddugalire,ModifiedLocativeDeadjective
-ddugalidde,PastLocativeDeadjective
+# -------------------------------- okuddugala (to become dirty): Deadjectival -------------------------------- #
+ddugala/OriginalDeadjective
+ddugale/ModifiedDeadjective
+ddugadde/PastDeadjective
+ddugazibwa/PassiveDeadjective
+ddugazibwe/ModifiedPassiveDeadjective
+ddugaziddwa/PastPassiveDeadjective
+ddugaza/CausativeDeadjective
+ddugaze/ModifiedCausativeDeadjective
+ddugazza/PastCausativeDeadjective
+ddugalira/LocativeDeadjective
+ddugalire/ModifiedLocativeDeadjective
+ddugalidde/PastLocativeDeadjective
 #
 ddugalako
 ddugalamu
@@ -2458,7 +2463,7 @@ bakiddeeyooko
 bakiddeewo
 bakiddeewooko
 # -------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuebala(to be thanked) ---------------------------------------- #
+# ---------------------------------------- okwebala(to be thanked) ---------------------------------------- #
 ebala
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okwebaza(to thank) --------------------------------------- #
@@ -2568,8 +2573,8 @@ ebbumbiro
 ebbwa
 ebibikka
 ebijanjaalo
-# ------------------------------------ okuebikkirira(to cover oneself) ------------------------------------ #
-ebikkirira
+# ------------------------------------ okwebikkirira(to cover oneself) ------------------------------------ #
+bikkirira
 # --------------------------------------------------------------------------------------------------------- #
 ebikomo
 ebikonde
@@ -2591,8 +2596,8 @@ ebitundu
 ebiwoomerera
 ebugwanjuba
 ebula
-# -------------------------------- okuebungulula(to encircle; to surround) -------------------------------- #
-ebungulula
+# -------------------------------- okwebungulula(to encircle; to surround) -------------------------------- #
+bungulula
 # --------------------------------------------------------------------------------------------------------- #
 ebuvanjuba
 ebweru
@@ -3562,9 +3567,8 @@ ekkowe
 ekkubo
 ekkufulu
 ekkula
-# -------------------- okuekoba(to conspire; to collaborate; to act together; to
-plot) -------------------- #
-ekoba
+# -------------------- okwekoba(to conspire; to collaborate; to act together; to plot) -------------------- #
+koba
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okwekobaana(to conspire) ---------------------------------------- #
 kobaana
@@ -3749,12 +3753,12 @@ emmotoka
 emmunye
 emmunyeenye
 emmwanyi
-# --------------------------------------- **okwemotya(to be shy) --------------------------------------- #
-motya,OriginalDeadjective
-motye,ModifiedDeadjective
-motyezza,PastDeadjective
-motyamotya,OriginalDeadjective
-motyemotye,ModifiedDeadjective
+# --------------------------------------- **okwemotya(to be shy): Deadjectival --------------------------------------- #
+motya/OriginalDeadjective
+motye/ModifiedDeadjective
+motyezza/PastDeadjective
+motyamotya/OriginalDeadjective
+motyemotye/ModifiedDeadjective
 # ----------------------------------------------------------------------------------------------------- #
 empaanyisaganya
 empafu
@@ -4396,8 +4400,8 @@ simbewo
 sibyeewo
 # --------------------------------------------------------------------------------------------------------- #
 esimbu
-# ---------------------------- okuessa(to place oneself; to put oneself down) ----------------------------- #
-essa
+# ---------------------------- okwessa(to place oneself; to put oneself down) ----------------------------- #
+ssa
 # --------------------------------------------------------------------------------------------------------- #
 essaala
 essaati
@@ -4682,8 +4686,8 @@ ettungulu
 ettuntu
 ettutumu
 ettwale
-# ---------------------------- okuetuga(to hang oneself; to strangle oneself) ----------------------------- #
-etuga
+# ---------------------------- okwetuga(to hang oneself; to strangle oneself) ----------------------------- #
+tuga
 # --------------------------------------------------------------------------------------------------------- #
 eviivi
 evinnyo
@@ -4867,7 +4871,7 @@ yimbemu
 yimbyemu
 # --------------------------------------------------------------------------------------------------------- #
 eyo
-# -------------------------------------- okueyokya(to burn oneself) --------------------------------------- #
+# -------------------------------------- okweyokya(to burn oneself) --------------------------------------- #
 yokya
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okuyongera(to increase; inf: okwongera) --------------------------------------- #
@@ -5096,13 +5100,13 @@ fubutula
 fubutule
 fubutudde
 # ---------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- **okufufuggala(to become crushed) --------------------------------------- #
-fufuggala,OriginalDeadjective
-fufuggale,ModifiedDeadjective
-fufuggade,PastDeadjective
-fufuggaza,CausativeDeadjective
-fufuggaze,ModifiedCausativeDeadjective
-fufuggazza,PastCausativeDeadjective
+# --------------------------------------- **okufufuggala(to become crushed): Deadjectival --------------------------------------- #
+fufuggala/OriginalDeadjective
+fufuggale/ModifiedDeadjective
+fufuggade/PastDeadjective
+fufuggaza/CausativeDeadjective
+fufuggaze/ModifiedCausativeDeadjective
+fufuggazza/PastCausativeDeadjective
 # ---------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- **okufufumya(to torture) --------------------------------------- #
 fufumya
@@ -5557,15 +5561,15 @@ funiddewo
 funiddewooko
 funiddeengako
 # --------------------------------------------------------------------------------------------- #
-# -------------------------------------- okufunda(to become tight) --------------------------------------- #
-funda,OriginalDeadjective
-funde,ModifiedDeadjective
-funze,HybridDeadjective
-funza,CausativeDeadjective
-funzizza,PastCausativeDeadjective
-fundira,LocativeDeadjective
-fundire,ModifiedLocativeDeadjective
-fundidde,PastLocativeDeadjective
+# -------------------------------------- okufunda(to become tight): Deadjectival --------------------------------------- #
+funda/OriginalDeadjective
+funde/ModifiedDeadjective
+funze/HybridDeadjective
+funza/CausativeDeadjective
+funzizza/PastCausativeDeadjective
+fundira/LocativeDeadjective
+fundire/ModifiedLocativeDeadjective
+fundidde/PastLocativeDeadjective
 funzi/oo
 # ------------------------------------------------------------------------------------------------- #
 fundi
@@ -5602,19 +5606,19 @@ funyira
 funyire
 funyidde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okufuuka(to become) ------------------------------------------ #
-fuuka,OriginalDeadjective
-fuuke,ModifiedDeadjective
-fuuse,PastDeadjective
-fuulibwa,PassiveDeadjective
-fuulibwe,ModifiedPassiveDeadjective
-fuuliddwa,PastPassiveDeadjective
-fuula,CausativeDeadjective
-fuule,ModifiedCausativeDeadjective
-fudde,PastCausativeDeadjective
-fuulira,LocativeDeadjective
-fuulire,ModifiedLocativeDeadjective
-fuulidde,PastLocativeDeadjective
+# ------------------------------- okufuuka(to become): Deadjectival ------------------------------------------ #
+fuuka/OriginalDeadjective
+fuuke/ModifiedDeadjective
+fuuse/PastDeadjective
+fuulibwa/PassiveDeadjective
+fuulibwe/ModifiedPassiveDeadjective
+fuuliddwa/PastPassiveDeadjective
+fuula/CausativeDeadjective
+fuule/ModifiedCausativeDeadjective
+fudde/PastCausativeDeadjective
+fuulira/LocativeDeadjective
+fuulire/ModifiedLocativeDeadjective
+fuulidde/PastLocativeDeadjective
 #
 fuukamu
 fuukamuuko
@@ -6273,16 +6277,16 @@ gabulidde
 gabuzi/oo
 # --------------------------------------------------------------------------------------------------------- #
 gagga
-# --------------------------------------- okugaggawala(to become rich) --------------------------------------- #
-gaggawala,OriginalDeadjective
-gaggawale,ModifiedDeadjective
-gaggawade,PastDeadjective
-gaggawaza,CausativeDeadjective
-gaggawaze,ModifiedCausativeDeadjective
-gaggawazza,PastCausativeDeadjective
-gaggawalira,LocativeDeadjective
-gaggawalire,ModifiedLocativeDeadjective
-gaggawalidde,PastLocativeDeadjective
+# --------------------------------------- okugaggawala(to become rich): Deadjectival --------------------------------------- #
+gaggawala/OriginalDeadjective
+gaggawale/ModifiedDeadjective
+gaggawade/PastDeadjective
+gaggawaza/CausativeDeadjective
+gaggawaze/ModifiedCausativeDeadjective
+gaggawazza/PastCausativeDeadjective
+gaggawalira/LocativeDeadjective
+gaggawalire/ModifiedLocativeDeadjective
+gaggawalidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugajambula(to murder) --------------------------------------- #
 gajambula
@@ -6490,15 +6494,15 @@ gambiddewo
 gambiddewooko
 gambiddeengako
 # ------------------------------------------------------------------------------------------- #
-# ------------------------------ okuganyula(to be profitable; to be of use) ------------------------------- #
-ganyula,OriginalDeadjective
-ganyule,ModifiedDeadjective
-ganyudde,PastDeadjective
+# ------------------------------ okuganyula(to be profitable; to be of use): Deadjectival ------------------------------- #
+ganyula/OriginalDeadjective
+ganyule/ModifiedDeadjective
+ganyudde/PastDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuganyulwa(to gain) --------------------------------------- #
-ganyulwa,PassiveDeadjective
-ganyulwe,ModifiedPassiveDeadjective
-ganyuddwa,PastPassiveDeadjective
+# --------------------------------------- okuganyulwa(to gain): Deadjectival --------------------------------------- #
+ganyulwa/PassiveDeadjective
+ganyulwe/ModifiedPassiveDeadjective
+ganyuddwa/PastPassiveDeadjective
 # --------------------------------------------------------------------------------------------- #
 # --------------------------------------- okuganza(to date) --------------------------------------- #
 ganza
@@ -6537,30 +6541,30 @@ gaya
 gaye
 gayizza
 # --------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okugayaala(to become lazy) ----------------------------------------- #
-gayaala,OriginalDeadjective
-gayaale,ModifiedDeadjective
-gayadde,PastDeadjective
-gayaaza,CausativeDeadjective
-gayaaze,ModifiedCausativeDeadjective
-gayaazizza,PastCausativeDeadjective
-gayaalilira,LocativeDeadjective
-gayaalilire,ModifiedLocativeDeadjective
-gayaalidde,PastLocativeDeadjective  
+# ---------------------------------------- okugayaala(to become lazy): Deadjectival ----------------------------------------- #
+gayaala/OriginalDeadjective
+gayaale/ModifiedDeadjective
+gayadde/PastDeadjective
+gayaaza/CausativeDeadjective
+gayaaze/ModifiedCausativeDeadjective
+gayaazizza/PastCausativeDeadjective
+gayaalilira/LocativeDeadjective
+gayaalilire/ModifiedLocativeDeadjective
+gayaalidde/PastLocativeDeadjective
 gayaavu/oo
 # --------------------------------------------------------------------------------------------- #
 gazi
-# --------------------------------------- **okugaziwa(to become spacious) --------------------------------------- #
-gaziwa,OriginalDeadjective
-gaziwe,ModifiedDeadjective
-gaziye,HybridDeadjective
-gaziya,CausativeDeadjective
-gaziyizza,PastCausativeDeadjective
-gaziyiza,BenefactiveDeadjective
-gaziyize,ModifiedBenefactiveDeadjective
-gaziyira,LocativeDeadjective
-gaziyire,ModifiedLocativeDeadjective
-gaziyidde,PastLocativeDeadjective
+# --------------------------------------- **okugaziwa(to become spacious): Deadjectival --------------------------------------- #
+gaziwa/OriginalDeadjective
+gaziwe/ModifiedDeadjective
+gaziye/HybridDeadjective
+gaziya/CausativeDeadjective
+gaziyizza/PastCausativeDeadjective
+gaziyiza/BenefactiveDeadjective
+gaziyize/ModifiedBenefactiveDeadjective
+gaziyira/LocativeDeadjective
+gaziyire/ModifiedLocativeDeadjective
+gaziyidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugeegeenya(to mimic) --------------------------------------- #
 geegeenya
@@ -6575,18 +6579,18 @@ geegeenyera
 geegeenyere
 geegeenyedde
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugejja(to become fat) --------------------------------------- #
-gejja,OriginalDeadjective
-gejje,ModifiedDeadjective
-gezze,HybridDeadjective
-gejjesa,CausativeDeadjective
-gejjese,ModifiedCausativeDeadjective
-gejjesezza,PastCausativeDeadjective
-gezza,CausativeDeadjective
-gezzezza,PastCausativeDeadjective
-gejjera,LocativeDeadjective
-gejjere,ModifiedLocativeDeadjective
-gejjedde,PastLocativeDeadjective
+# --------------------------------------- okugejja(to become fat): Deadjectival --------------------------------------- #
+gejja/OriginalDeadjective
+gejje/ModifiedDeadjective
+gezze/HybridDeadjective
+gejjesa/CausativeDeadjective
+gejjese/ModifiedCausativeDeadjective
+gejjesezza/PastCausativeDeadjective
+gezza/CausativeDeadjective
+gezzezza/PastCausativeDeadjective
+gejjera/LocativeDeadjective
+gejjere/ModifiedLocativeDeadjective
+gejjedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugenda(to go) --------------------------------------- #
 genda
@@ -6605,16 +6609,16 @@ genderera
 genderere
 genderedde
 # ------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugenyiwa(to become a visitor) --------------------------------------- #
-genyiwa,OriginalDeadjective
-genyiwe,ModifiedDeadjective
-genyiye,PastDeadjective
-genyiwaza,CausativeDeadjective
-genyiwaze,ModifiedCausativeDeadjective
-genyiwazza,PastCausativeDeadjective
-genyiwala
-genyiwale
-genyiwadde
+# --------------------------------------- okugenyiwa(to become a visitor): Deadjectival --------------------------------------- #
+genyiwa/OriginalDeadjective
+genyiwe/ModifiedDeadjective
+genyiye/PastDeadjective
+genyiwaza/CausativeDeadjective
+genyiwaze/ModifiedCausativeDeadjective
+genyiwazza/PastCausativeDeadjective
+genyiwala/OriginalDeadjective
+genyiwale/ModifiedDeadjective
+genyiwadde/PastDeadjective
 # --------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugeya(to backbite) --------------------------------------- #
 geya
@@ -6857,25 +6861,25 @@ ggwera
 ggwere
 ggweredde
 # ----------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okuggwaamu(to become finished) ----------------------------------------------------- #
-ggwaamu,OriginalDeadjective
-ggweemu,ModifiedDeadjective
-weddeemu,PastDeadjective
-ggweramu,LocativeDeadjective
-ggweremu,ModifiedLocativeDeadjective
-ggwereddemu,PastLocativeDeadjective
+# ------------------------------- okuggwaamu(to become finished): Deadjectival ----------------------------------------------------- #
+ggwaamu/OriginalDeadjective
+ggweemu/ModifiedDeadjective
+weddeemu/PastDeadjective
+ggweramu/LocativeDeadjective
+ggweremu/ModifiedLocativeDeadjective
+ggwereddemu/PastLocativeDeadjective
 # ----------------------------------------------------------------------------------------------------------- #
 ggwe
-# --------------------------------------- okuggya(to become ready) --------------------------------------- #
-ggya,OriginalDeadjective
-ggye,ModifiedDeadjective
-yidde,PastDeadjective
-ggyiisa,CausativeDeadjective
-ggyiise,ModifiedCausativeDeadjective
-ggyiisizza,PastCausativeDeadjective
-ggyiira,LocativeDeadjective
-ggyiire,ModifiedLocativeDeadjective
-ggyiiridde,PastLocativeDeadjective
+# --------------------------------------- okuggya(to become ready): Deadjectival --------------------------------------- #
+ggya/OriginalDeadjective
+ggye/ModifiedDeadjective
+yidde/PastDeadjective
+ggyiisa/CausativeDeadjective
+ggyiise/ModifiedCausativeDeadjective
+ggyiisizza/PastCausativeDeadjective
+ggyiira/LocativeDeadjective
+ggyiire/ModifiedLocativeDeadjective
+ggyiiridde/PastLocativeDeadjective
 # ---------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okuginga(to forge) ---------------------------------------------- #
 ginga
@@ -6985,15 +6989,15 @@ gombere
 gombedde
 # ------------------------------------------------------------------------------------------------------------- #
 gomesi
-# --------------------------------------- okugonda(to be soft) ----------------------------------------------- #
-gonda,OriginalDeadjective
-gonde,ModifiedDeadjective
-gonza,CausativeDeadjective
-gonze,HybridDeadjective
-gonzezza,PastCausativeDeadjective
-gondera,BenefactiveDeadjective
-gondere,ModifiedBenefactiveDeadjective
-gondedde,PastBenefactiveDeadjective
+# --------------------------------------- okugonda(to be soft): Deadjectival ----------------------------------------------- #
+gonda/OriginalDeadjective
+gonde/ModifiedDeadjective
+gonza/CausativeDeadjective
+gonze/HybridDeadjective
+gonzezza/PastCausativeDeadjective
+gondera/BenefactiveDeadjective
+gondere/ModifiedBenefactiveDeadjective
+gondedde/PastBenefactiveDeadjective
 gonvu/oo
 # ------------------------------------------------------------------------------------------------------------- #
 gonja
@@ -7030,17 +7034,17 @@ goyeza
 goyeze
 goyerezza
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuguba(to become stained) --------------------------------------- #
-guba,OriginalDeadjective
-gube,ModifiedDeadjective
-gubye,PastDeadjective
-gubya,CausativeDeadjective
-gubiza,BenefactiveDeadjective
-gubize,ModifiedBenefactiveDeadjective
-gubizza,PastCausativeDeadjective
-gubira,LocativeDeadjective
-gubire,ModifiedLocativeDeadjective
-gubidde,PastLocativeDeadjective
+# --------------------------------------- okuguba(to become stained): Deadjectival --------------------------------------- #
+guba/OriginalDeadjective
+gube/ModifiedDeadjective
+gubye/PastDeadjective
+gubya/CausativeDeadjective
+gubiza/BenefactiveDeadjective
+gubize/ModifiedBenefactiveDeadjective
+gubizza/PastCausativeDeadjective
+gubira/LocativeDeadjective
+gubire/ModifiedLocativeDeadjective
+gubidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugula(to buy) ---------------------------------------------------- #
 gula
@@ -7058,24 +7062,24 @@ gulidde
 guzi/oo
 # ------------------------------------------------------------------------------------------------------------- #
 gulugulu
-# --------------------------------------- okugulumira(to be high) ----------------------------------------------- #
-gulumira,OriginalDeadjective
-gulumire,ModifiedDeadjective
-gulumidde,PastDeadjective
-gulumiza,CausativeDeadjective
-gulumize,ModifiedCausativeDeadjective
-gulumizza,PastCausativeDeadjective
+# --------------------------------------- okugulumira(to be high): Deadjectival ----------------------------------------------- #
+gulumira/OriginalDeadjective
+gulumire/ModifiedDeadjective
+gulumidde/PastDeadjective
+gulumiza/CausativeDeadjective
+gulumize/ModifiedCausativeDeadjective
+gulumizza/PastCausativeDeadjective
 gulumivu/oo
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuguma (to be strong) --------------------------------------- #
-guma,OriginalDeadjective
-gume,ModifiedDeadjective
-gumye,HybridDeadjective
-gumya,CausativeDeadjective
-gumizza,PastCausativeDeadjective
-gumira,BenefactiveDeadjective
-gumire,ModifiedBenefactiveDeadjective
-gumidde,PastBenefactiveDeadjective
+# --------------------------------------- okuguma(to be strong): Deadjectival --------------------------------------- #
+guma/OriginalDeadjective
+gume/ModifiedDeadjective
+gumye/HybridDeadjective
+gumya/CausativeDeadjective
+gumizza/PastCausativeDeadjective
+gumira/BenefactiveDeadjective
+gumire/ModifiedBenefactiveDeadjective
+gumidde/PastBenefactiveDeadjective
 gumu/oo
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugumiikiriza(to tolerate) --------------------------------------- #
@@ -7929,16 +7933,16 @@ kaakati
 kaamulali
 kaasa
 kaasi
-# -------------------------------- okukaawa(to be bitter) --------------------------------------------- #
-kaawa
-kaawe
-kaaye
-kaayisa
-kaayise
-kaayisizza
-kaayira
-kaayire
-kaayidde
+# -------------------------------- okukaawa(to be bitter): Deadjectival --------------------------------------------- #
+kaawa/OriginalDeadjective
+kaawe/ModifiedDeadjective
+kaaye/HybridDeadjective
+kaayisa/CausativeDeadjective
+kaayise/ModifiedCausativeDeadjective
+kaayisizza/PastCausativeDeadjective
+kaayira/BenefactiveDeadjective
+kaayire/ModifiedBenefactiveDeadjective
+kaayidde/PastBenefactiveDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------- okukaayana(to argue) ----------------------------------------------- #
 kaayana
@@ -8065,15 +8069,15 @@ kaayaniddeewooko
 kabaka
 kabiite
 kadde
-# -------------------------------- okukaddiwa(to become old) -------------------------------------------------- #
-kaddiwa,OriginalDeadjective
-kaddiwe,ModifiedDeadjective
-kaddiye,HybridDeadjective
-kaddiya,CausativeDeadjective
-kaddiyizza,PastCausativeDeadjective
-kaddiyira,LocativeDeadjective
-kaddiyire,ModifiedLocativeDeadjective
-kaddiyidde,PastLocativeDeadjective
+# -------------------------------- okukaddiwa(to become old): Deadjectival -------------------------------------------------- #
+kaddiwa/OriginalDeadjective
+kaddiwe/ModifiedDeadjective
+kaddiye/HybridDeadjective
+kaddiya/CausativeDeadjective
+kaddiyizza/PastCausativeDeadjective
+kaddiyira/LocativeDeadjective
+kaddiyire/ModifiedLocativeDeadjective
+kaddiyidde/PastLocativeDeadjective
 # ----------------------------------------------------------------------------------------------------- #
 kafuumuulampawu
 # -------------------------------------- okukaka(to force) -------------------------------------------------- #
@@ -8192,15 +8196,15 @@ kakatire
 kakatide
 # -------------------------------------------------------------------------------------------------------- #
 kakobe
-# ----------------------------------- okukala(to become dry) ----------------------------------------------- #
-kala,OriginalDeadjective
-kale,ModifiedDeadjective
-kaze,HybridDeadjective
-kaza,CausativeDeadjective
-kazizza,PastCausativeDeadjective
-kalira,LocativeDeadjective
-kalire,ModifiedLocativeDeadjective
-kalidde,PastLocativeDeadjective
+# ----------------------------------- okukala(to become dry): Deadjectival ----------------------------------------------- #
+kala/OriginalDeadjective
+kale/ModifiedDeadjective
+kaze/HybridDeadjective
+kaza/CausativeDeadjective
+kazizza/PastCausativeDeadjective
+kalira/LocativeDeadjective
+kalire/ModifiedLocativeDeadjective
+kalidde/PastLocativeDeadjective
 # ----------------------------------------------------------------------------------------------------- #
 # ------------------------------------ okukalambira(to persist) ----------------------------------------------- #
 kalambira
@@ -8228,24 +8232,24 @@ kamira
 kamire
 kamidde
 # -------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okukambuwala(to become harsh) ----------------------------------------------- #
-kambuwala,OriginalDeadjective
-kambuwale,ModifiedDeadjective
-kambuwadde,PastDeadjective
-kambuwaza,CausativeDeadjective
-kambuwaze,ModifiedCausativeDeadjective
-kambuwazza,PastCausativeDeadjective
-kambuwalira,LocativeDeadjective
-kambuwalire,ModifiedLocativeDeadjective
-kambuwalidde,PastLocativeDeadjective
+# ------------------------------------ okukambuwala(to become harsh): Deadjectival ----------------------------------------------- #
+kambuwala/OriginalDeadjective
+kambuwale/ModifiedDeadjective
+kambuwadde/PastDeadjective
+kambuwaza/CausativeDeadjective
+kambuwaze/ModifiedCausativeDeadjective
+kambuwazza/PastCausativeDeadjective
+kambuwalira/LocativeDeadjective
+kambuwalire/ModifiedLocativeDeadjective
+kambuwalidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------ #
 kambwe
 kamera
 kammunguluze
-# --------------------------------------- okukamuka(to be drained) --------------------------------------- #
-kamuka
-kamuke
-kamuse
+# --------------------------------------- okukamuka(to be drained): Deadjectival --------------------------------------- #
+kamuka/OriginalDeadjective
+kamuke/ModifiedDeadjective
+kamuse/PastDeadjective
 # -------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okukamula(to wring) ------------------------------------------- #
 kamula
@@ -8508,16 +8512,16 @@ kebereddewooko
 kebereddeewooko
 # -------------------------------------------------------------------------------------------------- #
 keeki
-# ------------------------------------ keera(to be early) ------------------------------------------ #
-keera
-keere
-kedde
-keeza
-keeze
-keezezza
-keerera
-keerere
-keeredde
+# ------------------------------------ keera(to be early): Deadjectival ------------------------------------------ #
+keera/OriginalDeadjective
+keere/ModifiedDeadjective
+kedde/PastDeadjective
+keeza/CausativeDeadjective
+keeze/ModifiedCausativeDeadjective
+keezezza/PastCausativeDeadjective
+keerera/LocativeDeadjective
+keerere/ModifiedLocativeDeadjective
+keeredde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------- #
 # ---------------------------------- okukeerewa(to be late) ------------------------------------------- #
 keerewa
@@ -8540,14 +8544,14 @@ keetera
 keetere
 keetedde
 # --------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okukendeera(to become less/decrease) --------------------------------------------- #
-kendeera,OriginalDeadjective
-kendeere,ModifiedDeadjective
-kendedde,PastDeadjective
-kendeeza,CausativeDeadjective
-kendeeze,ModifiedCausativeDeadjective
-kendezza,PastCausativeDeadjective
-kendeezezza,PastCausativeDeadjective
+# ------------------------------------------ okukendeera(to become less/decrease): Deadjectival --------------------------------------------- #
+kendeera/OriginalDeadjective
+kendeere/ModifiedDeadjective
+kendedde/PastDeadjective
+kendeeza/CausativeDeadjective
+kendeeze/ModifiedCausativeDeadjective
+kendezza/PastCausativeDeadjective
+kendeezezza/PastCausativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okukenga(to perceive/notice) --------------------------------------------- #
 kenga
@@ -8671,31 +8675,31 @@ kkono
 kkoosi
 kkufu
 kkumi
-# --------------------------------------- okukkuta(to become satisfied) --------------------------------------------- #
-kkuta,OriginalDeadjective
-kkute,ModifiedDeadjective
-kkuse,HybridDeadjective
-kkusa,CausativeDeadjective
-kkusizza,PastCausativeDeadjective
-kkusibwa,PassiveDeadjective
-kkusibwe,ModifiedPassiveDeadjective
-kkusiddwa,PastPassiveDeadjective
-kkutira,LocativeDeadjective
-kkutire,ModifiedLocativeDeadjective
-kkutidde,PastLocativeDeadjective
+# --------------------------------------- okukkuta(to become satisfied): Deadjectival --------------------------------------------- #
+kkuta/OriginalDeadjective
+kkute/ModifiedDeadjective
+kkuse/HybridDeadjective
+kkusa/CausativeDeadjective
+kkusizza/PastCausativeDeadjective
+kkusibwa/PassiveDeadjective
+kkusibwe/ModifiedPassiveDeadjective
+kkusiddwa/PastPassiveDeadjective
+kkutira/LocativeDeadjective
+kkutire/ModifiedLocativeDeadjective
+kkutidde/PastLocativeDeadjective
 # ----------------------------------------------------------------------------------------------- #
 kodo
-# ---------------------------------------- okukogga(to become small) --------------------------------------------- #
-kogga,OriginalDeadjective
-kogge,ModifiedDeadjective
-kozze,HybridDeadjective
-kozza,CausativeDeadjective
-koggesa,CausativeDeadjective
-koggese,ModifiedCausativeDeadjective
-koggesezza,PastCausativeDeadjective
-koggera,LocativeDeadjective
-koggere,ModifiedLocativeDeadjective
-koggedde,PastLocativeDeadjective
+# ---------------------------------------- okukogga(to become small): Deadjectival --------------------------------------------- #
+kogga/OriginalDeadjective
+kogge/ModifiedDeadjective
+kozze/HybridDeadjective
+kozza/CausativeDeadjective
+koggesa/CausativeDeadjective
+koggese/ModifiedCausativeDeadjective
+koggesezza/PastCausativeDeadjective
+koggera/LocativeDeadjective
+koggere/ModifiedLocativeDeadjective
+koggedde/PastLocativeDeadjective
 kovvu
 # ------------------------------------------------------------------------------------------------------------ #
 kojja
@@ -9044,15 +9048,15 @@ konkonere
 konkonedde
 konkonyi/oo
 # -------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukonziba(to become emaciated) --------------------------------------------- #
-konziba,OriginalDeadjective
-konzibe,ModifiedDeadjective
-konzibye,HybridDeadjective
-konzibya,CausativeDeadjective
-konzibizza,PastCausativeDeadjective
-konzibira,LocativeDeadjective
-konzibire,ModifiedLocativeDeadjective
-konzibidde,PastLocativeDeadjective
+# --------------------------------------- okukonziba(to become emaciated): Deadjectival --------------------------------------------- #
+konziba/OriginalDeadjective
+konzibe/ModifiedDeadjective
+konzibye/HybridDeadjective
+konzibya/CausativeDeadjective
+konzibizza/PastCausativeDeadjective
+konzibira/LocativeDeadjective
+konzibire/ModifiedLocativeDeadjective
+konzibidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 kookolo
 # --------------------------------------- okukookoonya(to tantalize) --------------------------------------------- #
@@ -9089,18 +9093,18 @@ koonagana
 koonagane
 koonaganye
 # ------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okukoowa(to become tired) --------------------------------------------- #
-koowa,OriginalDeadjective
-koowe,ModifiedDeadjective
-kooye,HybridDeadjective
-kooya,CausativeDeadjective
-kooyezza,PastCausativeDeadjective
-koowebwa,PassiveDeadjective
-koowebwe,ModifiedPassiveDeadjective
-koowebbwa,PastPassiveDeadjective
-koowera,LocativeDeadjective
-koowere,ModifiedLocativeDeadjective
-koowedde,PastLocativeDeadjective
+# ---------------------------------------- okukoowa(to become tired): Deadjectival --------------------------------------------- #
+koowa/OriginalDeadjective
+koowe/ModifiedDeadjective
+kooye/HybridDeadjective
+kooya/CausativeDeadjective
+kooyezza/PastCausativeDeadjective
+koowebwa/PassiveDeadjective
+koowebwe/ModifiedPassiveDeadjective
+koowebbwa/PastPassiveDeadjective
+koowera/LocativeDeadjective
+koowere/ModifiedLocativeDeadjective
+koowedde/PastLocativeDeadjective
 koowu/oo
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okukotoggera(to hinder) --------------------------------------------- #
@@ -9152,15 +9156,15 @@ kubirizibwa
 kubirizibwe
 kubiriziddwa
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukuguka(to become an expert) --------------------------------------------- #
-kuguka,OriginalDeadjective
-kuguke,ModifiedDeadjective
-kuguse,HybridDeadjective
-kugusa,CausativeDeadjective
-kugusizza,PastCausativeDeadjective
-kugukira,LocativeDeadjective
-kugukire,ModifiedLocativeDeadjective
-kugukidde,PastLocativeDeadjective
+# -------------------------------------------- okukuguka(to become an expert): Deadjectival --------------------------------------------- #
+kuguka/OriginalDeadjective
+kuguke/ModifiedDeadjective
+kuguse/HybridDeadjective
+kugusa/CausativeDeadjective
+kugusizza/PastCausativeDeadjective
+kugukira/LocativeDeadjective
+kugukire/ModifiedLocativeDeadjective
+kugukidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- okukukusa(to smuggle) --------------------------------------------- #
 kukusa
@@ -9173,28 +9177,28 @@ kukusibwa
 kukusibwe
 kukusiddwa
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukula(to become grown) --------------------------------------------- #
-kula,OriginalDeadjective
-kule,ModifiedDeadjective
-kuze,HybridDeadjective
-kuza,CausativeDeadjective
-kuzizza,PastCausativeDeadjective
-kuzibwa,PassiveDeadjective
-kuzibwe,ModifiedPassiveDeadjective
-kuziddwa,PastPassiveDeadjective
-kulira,LocativeDeadjective
-kulire,ModifiedLocativeDeadjective
-kulidde,PastLocativeDeadjective
+# -------------------------------------------- okukula(to become grown): Deadjectival --------------------------------------------- #
+kula/OriginalDeadjective
+kule/ModifiedDeadjective
+kuze/HybridDeadjective
+kuza/CausativeDeadjective
+kuzizza/PastCausativeDeadjective
+kuzibwa/PassiveDeadjective
+kuzibwe/ModifiedPassiveDeadjective
+kuziddwa/PastPassiveDeadjective
+kulira/LocativeDeadjective
+kulire/ModifiedLocativeDeadjective
+kulidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukulaakulana(to become developed) --------------------------------------------- #
-kulaakulana,OriginalDeadjective
-kulaakulane,ModifiedDeadjective
-kulaakulanye,HybridDeadjective
-kulaakulanya,CausativeDeadjective
-kulaakulanyizza,PastCausativeDeadjective
-kulaakulanira,LocativeDeadjective
-kulaakulanire,ModifiedLocativeDeadjective
-kulaakulanidde,PastLocativeDeadjective
+# -------------------------------------------- okukulaakulana(to become developed): Deadjectival --------------------------------------------- #
+kulaakulana/OriginalDeadjective
+kulaakulane/ModifiedDeadjective
+kulaakulanye/HybridDeadjective
+kulaakulanya/CausativeDeadjective
+kulaakulanyizza/PastCausativeDeadjective
+kulaakulanira/LocativeDeadjective
+kulaakulanire/ModifiedLocativeDeadjective
+kulaakulanidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- okukulembera(to lead) --------------------------------------------- #
 kulembera
@@ -9658,13 +9662,13 @@ labirirwa
 labirirwe
 labiriddwa
 # -------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okulabuka(to become warned) ------------------------------------------------------- #
-labuka,OriginalDeadjective
-labuke,ModifiedDeadjective
-labuse,PastDeadjective
-labukira,LocativeDeadjective
-labukire,ModifiedLocativeDeadjective
-labukidde,PastLocativeDeadjective
+# -------------------------------------- okulabuka(to become warned): Deadjectival ------------------------------------------------------- #
+labuka/OriginalDeadjective
+labuke/ModifiedDeadjective
+labuse/PastDeadjective
+labukira/LocativeDeadjective
+labukire/ModifiedLocativeDeadjective
+labukidde/PastLocativeDeadjective
 # -------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------- okulabula(to warn) ------------------------------------------------------- #
 labula
@@ -9908,19 +9912,19 @@ lakasidde
 # ------------------------------------------------------------------------------------------------------------- #
 lala
 lalu
-# ---------------------------------- okulaluka(to become mad) --------------------------------------------- #
-laluka,OriginalDeadjective
-laluke,ModifiedDeadjective
-laluse,PastDeadjective
-lalula,CausativeDeadjective
-lalule,ModifiedCausativeDeadjective
-laludde,PastCausativeDeadjective
-lalulwa,PassiveDeadjective
-lalulwe,ModifiedPassiveDeadjective
-laluddwa,PastPassiveDeadjective
-lalukira,BenefactiveDeadjective
-lalukire,ModifiedBenefactiveDeadjective
-lalukidde,PastBenefactiveDeadjective
+# ---------------------------------- okulaluka(to become mad): Deadjectival --------------------------------------------- #
+laluka/OriginalDeadjective
+laluke/ModifiedDeadjective
+laluse/PastDeadjective
+lalula/CausativeDeadjective
+lalule/ModifiedCausativeDeadjective
+laludde/PastCausativeDeadjective
+lalulwa/PassiveDeadjective
+lalulwe/ModifiedPassiveDeadjective
+laluddwa/PastPassiveDeadjective
+lalukira/BenefactiveDeadjective
+lalukire/ModifiedBenefactiveDeadjective
+lalukidde/PastBenefactiveDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------- okulamaga(to do pilgrimage) --------------------------------------------- #
 lamaga
@@ -10120,16 +10124,16 @@ lemera
 lemere
 lemedde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okulemala(to become crippled) ------------------------------------- #
-lemala,OriginalDeadjective
-lemale,ModifiedDeadjective
-lemadde,PastDeadjective
-lemaza,CausativeDeadjective
-lemaze,ModifiedCausativeDeadjective
-lemazza,PastCausativeDeadjective
-lemalira,LocativeDeadjective
-lemalire,ModifiedLocativeDeadjective
-lemalidde,PastLocativeDeadjective
+# ------------------------------------- okulemala(to become crippled): Deadjectival ------------------------------------- #
+lemala/OriginalDeadjective
+lemale/ModifiedDeadjective
+lemadde/PastDeadjective
+lemaza/CausativeDeadjective
+lemaze/ModifiedCausativeDeadjective
+lemazza/PastCausativeDeadjective
+lemalira/LocativeDeadjective
+lemalire/ModifiedLocativeDeadjective
+lemalidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------------- okulemesa(to hinder; to block; to sabotage; to frustrate) ----------------------- #
 lemesa
@@ -10318,13 +10322,13 @@ londoolera
 londoolere
 londooledde
 # --------------------------------------------------------------------------------------------------------- #
-# --------------- okulongooka(to become straightened out; to improve; to become clean;) ------------------- #
-longooka,OriginalDeadjective
-longooke,ModifiedDeadjective
-longoose,PastDeadjective
-longookera,LocativeDeadjective
-longookere,ModifiedLocativeDeadjective
-longookedde,PastLocativeDeadjective
+# --------------- okulongooka(to become straightened out; to improve; to become clean;): Deadjectival ------------------- #
+longooka/OriginalDeadjective
+longooke/ModifiedDeadjective
+longoose/PastDeadjective
+longookera/LocativeDeadjective
+longookere/ModifiedLocativeDeadjective
+longookedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ----------- okulongoosa(to clean; to straighten; to correct; to operate; to perform surgery) ------------ #
 longoosa
@@ -10593,15 +10597,15 @@ lundire
 lundidde
 # --------------------------------------------------------------------------------------------------------- #
 lungi
-# --------------------------------- Adj. okulungiwa(to become beautiful) ---------------------------------- #
-lungiwa,OriginalDeadjective
-lungiwe,ModifiedDeadjective
-lungiye,HybridDeadjective
-lungiya,CausativeDeadjective
-lungiyizza,PastCausativeDeadjective
-lungiyira,BenefactiveDeadjective
-lungiyire,ModifiedBenefactiveDeadjective
-lungiyidde,PastBenefactiveDeadjective
+# --------------------------------- Adj. okulungiwa(to become beautiful): Deadjectival ---------------------------------- #
+lungiwa/OriginalDeadjective
+lungiwe/ModifiedDeadjective
+lungiye/HybridDeadjective
+lungiya/CausativeDeadjective
+lungiyizza/PastCausativeDeadjective
+lungiyira/BenefactiveDeadjective
+lungiyire/ModifiedBenefactiveDeadjective
+lungiyidde/PastBenefactiveDeadjective
 #
 lungiwako
 lungiwamu
@@ -10736,16 +10740,16 @@ lw
 lwa
 lwaaki
 lwaasa
-# -------------------------------- okulwala(to become sick) ----------------------------------------------- #
-lwala,OriginalDeadjective
-lwale,ModifiedDeadjective
-lwadde,PastDeadjective
-lwaza,CausativeDeadjective
-lwaze,ModifiedCausativeDeadjective
-lwazizza,PastCausativeDeadjective
-lwalira,LocativeDeadjective
-lwalire,ModifiedLocativeDeadjective
-lwalidde,PastLocativeDeadjective
+# -------------------------------- okulwala(to become sick): Deadjectival ----------------------------------------------- #
+lwala/OriginalDeadjective
+lwale/ModifiedDeadjective
+lwadde/PastDeadjective
+lwaza/CausativeDeadjective
+lwaze/ModifiedCausativeDeadjective
+lwazizza/PastCausativeDeadjective
+lwalira/LocativeDeadjective
+lwalire/ModifiedLocativeDeadjective
+lwalidde/PastLocativeDeadjective
 #
 lwalako
 lwalamu
@@ -11438,16 +11442,16 @@ manyiddeewo
 manyiddeewooko
 # -------------------------------------------------------------------------------------------------------------- #
 manyi
-# ------ okumanyiira(To get used to something; to become accustomed to; to become experienced with) ------- #
-manyiira,OriginalDeadjective
-manyiire,ModifiedDeadjective
-manyidde,PastDeadjective
-manyiiza,CausativeDeadjective
-manyiize,ModifiedCausativeDeadjective
-manyizza,PastCausativeDeadjective
-manyiirwa,PassiveDeadjective
-manyiirwe,ModifiedPassiveDeadjective
-manyiiriddwa,PastPassiveDeadjective
+# ------ okumanyiira(To get used; to become accustomed to; to become experienced with): Deadjectival ------- #
+manyiira/OriginalDeadjective
+manyiire/ModifiedDeadjective
+manyidde/PastDeadjective
+manyiiza/CausativeDeadjective
+manyiize/ModifiedCausativeDeadjective
+manyizza/PastCausativeDeadjective
+manyiirwa/PassiveDeadjective
+manyiirwe/ModifiedPassiveDeadjective
+manyiiriddwa/PastPassiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okumanyika(to be famous; to be knowable) -------------------------------- #
 manyika
@@ -12381,27 +12385,27 @@ naalizzaawooko
 # -------------------------------------------------------------------------------------------------------- #
 naddala
 munafu
-# ------------------------------- okunafuwa(to become weak; to become lazy) ------------------------------- #
-nafuwa,OriginalDeadjective
-nafuwe,ModifiedDeadjective
-nafuye,HybridDeadjective
-nafuya,CausativeDeadjective
-nafuyizza,PastCausativeDeadjective
-nafuyira,LocativeDeadjective
-nafuyire,ModifiedLocativeDeadjective
-nafuyidde,PastLocativeDeadjective
+# ------------------------------- okunafuwa(to become weak; to become lazy): Deadjectival ------------------------------- #
+nafuwa/OriginalDeadjective
+nafuwe/ModifiedDeadjective
+nafuye/HybridDeadjective
+nafuya/CausativeDeadjective
+nafuyizza/PastCausativeDeadjective
+nafuyira/LocativeDeadjective
+nafuyire/ModifiedLocativeDeadjective
+nafuyidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------- okunakuwala(to become sad) ---------------------------------- #
-nakuwala,OriginalDeadjective
-nakuwale,ModifiedDeadjective
-nakuwadde,PastDeadjective
-nakuwaza,CausativeDeadjective
-nakuwaze,ModifiedCausativeDeadjective
-nakuwazza,PastCausativeDeadjective
-nakuwazizza,PastCausativeDeadjective
-nakuwalira,LocativeDeadjective
-nakuwalire,ModifiedLocativeDeadjective
-nakuwalidde,PastLocativeDeadjective
+# -------------------------- okunakuwala(to become sad): Deadjectival ---------------------------------- #
+nakuwala/OriginalDeadjective
+nakuwale/ModifiedDeadjective
+nakuwadde/PastDeadjective
+nakuwaza/CausativeDeadjective
+nakuwaze/ModifiedCausativeDeadjective
+nakuwazza/PastCausativeDeadjective
+nakuwazizza/PastCausativeDeadjective
+nakuwalira/LocativeDeadjective
+nakuwalire/ModifiedLocativeDeadjective
+nakuwalidde/PastLocativeDeadjective
 #
 nakuwalako
 nakuwalamu
@@ -12730,19 +12734,19 @@ nnyabo
 nnyazaala
 nnyini
 nnyo
-# --------------------------- okunnyogoga(to become cold; to be cool; to be frozen) --------------------------- #
-nnyogoga,OriginalDeadjective
-nnyogoge,ModifiedDeadjective
-nnyogozza,PastDeadjective
-nnyogoza,CausativeDeadjective
-nnyogoze,ModifiedCausativeDeadjective
-nnyogozezza,PastCausativeDeadjective
-nnyogozesa,CausativeDeadjective
-nnyogozese,ModifiedCausativeDeadjective
-nnyogozesezza,PastCausativeDeadjective
-nnyogogera,LocativeDeadjective
-nnyogogere,ModifiedLocativeDeadjective
-nnyogogedde,PastLocativeDeadjective
+# --------------------------- okunnyogoga(to become cold; to be cool; to be frozen): Deadjectival --------------------------- #
+nnyogoga/OriginalDeadjective
+nnyogoge/ModifiedDeadjective
+nnyogozza/PastDeadjective
+nnyogoza/CausativeDeadjective
+nnyogoze/ModifiedCausativeDeadjective
+nnyogozezza/PastCausativeDeadjective
+nnyogozesa/CausativeDeadjective
+nnyogozese/ModifiedCausativeDeadjective
+nnyogozesezza/PastCausativeDeadjective
+nnyogogera/LocativeDeadjective
+nnyogogere/ModifiedLocativeDeadjective
+nnyogogedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------- okunnyonnyola(to explain; to describe; to define) --------------------------- #
 nnyonnyola
@@ -13036,21 +13040,21 @@ nyigiddeeyooko
 nyigiddeewo
 nyigiddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okunyiiga(to become pissed; to get annoyed) -------------------------------- #
-nyiiga,OriginalDeadjective
-nyiige,ModifiedDeadjective
-nyiize,HybridDeadjective
-nyiiza,CausativeDeadjective
-nyiizizza,PastCausativeDeadjective
-nyiizibwa,PassiveCausativeDeadjective
-nyiizibwe,ModifiedPassiveCausativeDeadjective
-nyiiziddwa,PastPassiveCausativeDeadjective
-nyiiliza,BenefactiveDeadjective
-nyiilize,ModifiedBenefactiveDeadjective
-nyiilizza,PastBenefactiveDeadjective
-nyiigira,LocativeDeadjective
-nyiigire,ModifiedLocativeDeadjective
-nyiigidde,PastLocativeDeadjective
+# ------------------------------- okunyiiga(to become pissed; to get annoyed): Deadjectival -------------------------------- #
+nyiiga/OriginalDeadjective
+nyiige/ModifiedDeadjective
+nyiize/HybridDeadjective
+nyiiza/CausativeDeadjective
+nyiizizza/PastCausativeDeadjective
+nyiizibwa/PassiveCausativeDeadjective
+nyiizibwe/ModifiedPassiveCausativeDeadjective
+nyiiziddwa/PastPassiveCausativeDeadjective
+nyiiliza/BenefactiveDeadjective
+nyiilize/ModifiedBenefactiveDeadjective
+nyiilizza/PastBenefactiveDeadjective
+nyiigira/LocativeDeadjective
+nyiigire/ModifiedLocativeDeadjective
+nyiigidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------- okunyiikira(to make an effort; to be diligent; to be hard-working) ------------------ #
 nyiikira
@@ -13061,16 +13065,16 @@ nyiikize
 nyiikizza
 # --------------------------------------------------------------------------------------------------------- #
 nyiivu
-# ----------------- okunyirira(to become good looking; to have an attractive appearance) ------------------ #
-nyirira,OriginalDeadjective
-nyirire,ModifiedDeadjective
-nyiridde,PastDeadjective
-nyiriza,CausativeDeadjective
-nyirize,ModifiedCausativeDeadjective
-nyirizza,PastCausativeDeadjective
-nyiririra,BenefactiveDeadjective
-nyiririre,ModifiedBenefactiveDeadjective
-nyiriridde,PastBenefactiveDeadjective
+# ----------------- okunyirira(to become good looking; to have an attractive appearance): Deadjectival ------------------ #
+nyirira/OriginalDeadjective
+nyirire/ModifiedDeadjective
+nyiridde/PastDeadjective
+nyiriza/CausativeDeadjective
+nyirize/ModifiedCausativeDeadjective
+nyirizza/PastCausativeDeadjective
+nyiririra/BenefactiveDeadjective
+nyiririre/ModifiedBenefactiveDeadjective
+nyiriridde/PastBenefactiveDeadjective
 omunyirivu
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okunyonyogera(to tickle) ---------------------------------------- #
@@ -15549,19 +15553,19 @@ sannyalalire
 sannyalalidde
 # --------------------------------------------------------------------------------------------------------- #
 sanyufu
-# --------------------------- okusanyuka(to become happy; to celebrate; to be glad) --------------------------- #
-sanyuka,OriginalDeadjective
-sanyuke,ModifiedDeadjective
-sanyuse,PastDeadjective
-sanyusa,CausativeDeadjective
-sanyuse,ModifiedCausativeDeadjective
-sanyusizza,PastCausativeDeadjective
-sanyusibwa,PassiveDeadjective
-sanyusibwe,ModifiedPassiveDeadjective
-sanyusiddwa,PastPassiveDeadjective
-sanyukira,BenefactiveDeadjective
-sanyukire,ModifiedBenefactiveDeadjective
-sanyukidde,PastBenefactiveDeadjective
+# --------------------------- okusanyuka(to become happy; to celebrate; to be glad): Deadjectival --------------------------- #
+sanyuka/OriginalDeadjective
+sanyuke/ModifiedDeadjective
+sanyuse/PastDeadjective
+sanyusa/CausativeDeadjective
+sanyuse/ModifiedCausativeDeadjective
+sanyusizza/PastCausativeDeadjective
+sanyusibwa/PassiveDeadjective
+sanyusibwe/ModifiedPassiveDeadjective
+sanyusiddwa/PastPassiveDeadjective
+sanyukira/BenefactiveDeadjective
+sanyukire/ModifiedBenefactiveDeadjective
+sanyukidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------------- okusasula(to pay) ----------------------------------------- #
 sasula
@@ -17034,16 +17038,16 @@ sunire
 sunidde
 omusunyi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okusunguwala(to become angry) ------------------------------------- #
-sunguwala,OriginalDeadjective
-sunguwale,ModifiedDeadjective
-sunguwadde,PastDeadjective
-sunguwaza,CausativeDeadjective
-sunguwaze,ModifiedCausativeDeadjective
-sunguwazza,PastCausativeDeadjective
-sunguwulira,BenefactiveDeadjective
-sunguwulire,ModifiedBenefactiveDeadjective
-sunguwuliddde,PastBenefactiveDeadjective
+# ------------------------------------- okusunguwala(to become angry): Deadjectival ------------------------------------- #
+sunguwala/OriginalDeadjective
+sunguwale/ModifiedDeadjective
+sunguwadde/PastDeadjective
+sunguwaza/CausativeDeadjective
+sunguwaze/ModifiedCausativeDeadjective
+sunguwazza/PastCausativeDeadjective
+sunguwulira/BenefactiveDeadjective
+sunguwulire/ModifiedBenefactiveDeadjective
+sunguwuliddde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------- okusunsula(to pick out (winner of a contest); to sort out) ----------------------- #
 sunsula
@@ -17551,16 +17555,16 @@ tawaanyize
 tawaanyizza
 # --------------------------------------------------------------------------------------------------------- #
 tayipu
-# ------------------- okutebenkera(to become calm; to become peaceful; to settle down) -------------------- #
-tebenkera,OriginalDeadjective
-tebenkere,ModifiedDeadjective
-tebenkedde,PastDeadjective
-tebenkeza,CausativeDeadjective
-tebenkeze,ModifiedCausativeDeadjective
-tebenkezza,PastCausativeDeadjective
-tebenkerera,LocativeDeadjective
-tebenkerere,ModifiedLocativeDeadjective
-tebenkeredde,PastLocativeDeadjective
+# ------------------- okutebenkera(to become calm; to become peaceful; to settle down): Deadjectival -------------------- #
+tebenkera/OriginalDeadjective
+tebenkere/ModifiedDeadjective
+tebenkedde/PastDeadjective
+tebenkeza/CausativeDeadjective
+tebenkeze/ModifiedCausativeDeadjective
+tebenkezza/PastCausativeDeadjective
+tebenkerera/LocativeDeadjective
+tebenkerere/ModifiedLocativeDeadjective
+tebenkeredde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tebenkevu
 # ------- okuteebereza(to guess; to estimate; to approximate; to suspect; to speculate; to imagine) ------- #
@@ -18176,15 +18180,15 @@ tintire
 tintidde
 # --------------------------------------------------------------------------------------------------------- #
 muto
-# ---------------------------------- okutoba(to become wet/ to struggle) ---------------------------------- #
-toba,OriginalDeadjective
-tobe,ModifiedDeadjective
-tobye,HybridDeadjective
-tobya,CausativeDeadjective
-tobezza,PastCausativeDeadjective
-tobera,LocativeDeadjective
-tobere,ModifiedLocativeDeadjective
-tobedde,PastLocativeDeadjective
+# ---------------------------------- okutoba(to become wet/ to struggle): Deadjectival ---------------------------------- #
+toba/OriginalDeadjective
+tobe/ModifiedDeadjective
+tobye/HybridDeadjective
+tobya/CausativeDeadjective
+tobezza/PastCausativeDeadjective
+tobera/LocativeDeadjective
+tobere/ModifiedLocativeDeadjective
+tobedde/PastLocativeDeadjective
 #
 tobako
 tobamu
@@ -18475,16 +18479,16 @@ tugira
 tugire
 tugidde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ tukula(to become clean; to become pure) ---------------------------------- #
-tukula,OriginalDeadjective
-tukule,ModifiedDeadjective
-tukudde,PastDeadjective
-tukuza,CausativeDeadjective
-tukuze,ModifiedCausativeDeadjective
-tukuzza,PastCausativeDeadjective
-tukulira,LocativeDeadjective
-tukulire,ModifiedLocativeDeadjective
-tukulidde,PastLocativeDeadjective
+# ------------------------------ tukula(to become clean; to become pure): Deadjectival ---------------------------------- #
+tukula/OriginalDeadjective
+tukule/ModifiedDeadjective
+tukudde/PastDeadjective
+tukuza/CausativeDeadjective
+tukuze/ModifiedCausativeDeadjective
+tukuzza/PastCausativeDeadjective
+tukulira/LocativeDeadjective
+tukulire/ModifiedLocativeDeadjective
+tukulidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tukuvu
 tuli
@@ -18594,13 +18598,13 @@ tunulira
 tunulire
 tunulidde
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------- okututumuka(to become famous/renowned; to become well-known) ---------------------- #
-tutumuka,OriginalDeadjective
-tutumuke,ModifiedDeadjective
-tutumuse,PastDeadjective
-tutumukira,LocativeDeadjective
-tutumukire,ModifiedLocativeDeadjective
-tutumukidde,PastLocativeDeadjective
+# --------------------- okututumuka(to become famous/renowned; to become well-known): Deadjectival ---------------------- #
+tutumuka/OriginalDeadjective
+tutumuke/ModifiedDeadjective
+tutumuse/PastDeadjective
+tutumukira/LocativeDeadjective
+tutumukire/ModifiedLocativeDeadjective
+tutumukidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------- okututumula(to make famous; to promote; to elevate; to uplift) --------------------- #
 tutumula
@@ -20365,17 +20369,17 @@ wano
 wansi
 wantu
 omuwanvu
-# --------------------------------- okuwanvuwa(to become tall/high/long) ---------------------------------- #
-wanvuwa,OriginalDeadjective
-wanvuwe,ModifiedDeadjective
-wanvuye,HybridDeadjective
-wanvuya,CausativeDeadjective
-wanvuyizza,PastCausativeDeadjective
-wanvuyiza,BenefactiveDeadjective
-wanvuyize,ModifiedBenefactiveDeadjective
-wanvuyira,LocativeDeadjective
-wanvuyire,ModifiedLocativeDeadjective
-wanvuyidde,PastLocativeDeadjective
+# --------------------------------- okuwanvuwa(to become tall/high/long): Deadjectival ---------------------------------- #
+wanvuwa/OriginalDeadjective
+wanvuwe/ModifiedDeadjective
+wanvuye/HybridDeadjective
+wanvuya/CausativeDeadjective
+wanvuyizza/PastCausativeDeadjective
+wanvuyiza/BenefactiveDeadjective
+wanvuyize/ModifiedBenefactiveDeadjective
+wanvuyira/LocativeDeadjective
+wanvuyire/ModifiedLocativeDeadjective
+wanvuyidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------- okuwasa(to marry (man to a woman); to get married) --------------------------- #
 wasa
@@ -20679,16 +20683,16 @@ wetere
 wetedde
 # --------------------------------------------------------------------------------------------------------- #
 wewevu
-# ----------------------------------- okuweweera(to become contentd) -------------------------------------- #
-weweera,OriginalDeadjective
-weweere,ModifiedDeadjective
-wewedde,PastDeadjective
-weweeza,CausativeDeadjective
-weweeze,ModifiedCausativeDeadjective
-wewezza,PastCausativeDeadjective
-weweerwa,PassiveDeadjective
-weweerwe,ModifiedPassiveDeadjective
-weweddwa,PastPassiveDeadjective
+# ----------------------------------- okuweweera(to become contented): Deadjectival -------------------------------------- #
+weweera/OriginalDeadjective
+weweere/ModifiedDeadjective
+wewedde/PastDeadjective
+weweeza/CausativeDeadjective
+weweeze/ModifiedCausativeDeadjective
+wewezza/PastCausativeDeadjective
+weweerwa/PassiveDeadjective
+weweerwe/ModifiedPassiveDeadjective
+weweddwa/PastPassiveDeadjective
 # ---------------------------------------- okuwewula(to lighten) ----------------------------------------- #
 wewula
 wewule
@@ -22625,13 +22629,13 @@ yonoonedde
 omwonoonyi
 # --------------------------------------------------------------------------------------------------------- #
 yonoonefu
-# -------------------- okuyonooneka(to become spoiled; to get dirty; intrasitive) ------------------------- #
-yonooneka,OriginalDeadjective
-yonooneke,ModifiedDeadjective
-yonoonese,PastDeadjective
-yonoonekera,LocativeDeadjective
-yonoonekere,ModifiedLocativeDeadjective
-yonoonekedde,PastLocativeDeadjective
+# -------------------- okuyonooneka(to become spoiled; to get dirty; intrasitive): Deadjectival ------------------------- #
+yonooneka/OriginalDeadjective
+yonooneke/ModifiedDeadjective
+yonoonese/PastDeadjective
+yonoonekera/LocativeDeadjective
+yonoonekere/ModifiedLocativeDeadjective
+yonoonekedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okuyonsa(to breastfeed; to cause to suck) ------------------------------- #
 yonsa
@@ -23304,19 +23308,19 @@ zibideewooko
 # --------------------------------------------------------------------------------------------------------- #
 zibu
 zibula
-# ---------------------------------- okuzibuwala (to become difficult) ------------------------------------ #
-zibuwala,OriginalDeadjective
-zibuwale,ModifiedDeadjective
-zibuwadde,PastDeadjective
-zibuwalilwa,PassiveDeadjective
-zibuwalilwe,ModifiedPassiveDeadjective
-zibuwaliddwa,PastPassiveDeadjective
-zibuwaza,CausativeDeadjective
-zibuwaze,ModifiedCausativeDeadjective
-zibuwazza,PastCausativeDeadjective
-zibuwalira,BenefactiveDeadjective
-zibuwalire,ModifiedBenefactiveDeadjective
-zibuwalidde,PastBenefactiveDeadjective
+# ---------------------------------- okuzibuwala (to become difficult): Deadjectival ------------------------------------ #
+zibuwala/OriginalDeadjective
+zibuwale/ModifiedDeadjective
+zibuwadde/PastDeadjective
+zibuwalilwa/PassiveDeadjective
+zibuwalilwe/ModifiedPassiveDeadjective
+zibuwaliddwa/PastPassiveDeadjective
+zibuwaza/CausativeDeadjective
+zibuwaze/ModifiedCausativeDeadjective
+zibuwazza/PastCausativeDeadjective
+zibuwalira/BenefactiveDeadjective
+zibuwalire/ModifiedBenefactiveDeadjective
+zibuwalidde/PastBenefactiveDeadjective
 #
 zibuwalako
 zibuwalamu
