@@ -1055,24 +1055,24 @@ bonekedde/PastLocativeDeadjective
 bonereza/OriginalType-ITransitive
 bonereze/ModifiedType-ITransitive
 bonerezza/PastType-ITransitive
-bonerezebwa/PassiveType-ITransitive
-bonerezebwe/ModifiedPassiveType-ITransitive
-bonerezzeddwa/PastPassiveType-ITransitive
+bonerezebwa/PassiveTransitive
+bonerezebwe/ModifiedPassiveTTransitive
+bonerezzeddwa/PastPassiveTTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------- okubonerera(to learn from a punishment): Intransitive ----------------------------------------- #
 bonerera/OriginalIntransitive
 bonerere/ModifiedIntransitive
 boneredde/PastIntransitive
 # -------------------------------------------------------------------------------------------------------------------------- #
-# ------------------------------- **okuboola(to segregate): --------------------------------- #
-boola
-boole
-bodde
-boolebwa
-boolebwe
-booleddwa
+# ------------------------------- **okuboola(to segregate): Type-I Transitive --------------------------------- #
+boola/OriginalType-ITransitive
+boole/ModifiedType-ITransitive
+bodde/PastType-ITransitive
+boolebwa/PassiveTransitive
+boolebwe/ModifiedPassiveTransitive
+booleddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------- #
-# -------------------- okuboowa((from school); to show prejudice against to be boring) -------------------- #
+# -------------------- okuboowa((from school); to show prejudice) -------------------- #
 boowa
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- **okubowa(to be boring): Deadjectival ----------------------------------------- #
@@ -1081,9 +1081,15 @@ bowe/ModifiedDeadjective
 boye/PastDeadjective
 # --------------------------------------------------------------------------------------------- #
 Bubirigi
-# ------------ okubudaabuda(to extend good treatment to) -------------------------------------- #
-budaabuda
-budeebude
+# ------------ okubudaabuda(to extend good treatment to)Type-I Transitive -------------------------------------- #
+budaabuda/OriginalType-ITransitive
+budeebude/ModifiedType-ITransitive
+budaabudibwa/PassiveTransitive
+budaabudibwe/ModifiedPassiveTransitive
+budaabudiddwa/PastPassiveTransitive
+budaabudira/BenefactiveTransitive
+budaabudire/ModifiedBenefactiveTransitive
+budaabudidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 budalasini
 buddo
@@ -1124,62 +1130,64 @@ buli
 bulijjo
 bulungi
 bulyomu
-# ------------------------------- **okubumba(to model) ----------------------------------------- #
-bumba
-bumbe
-bumbye
-bumbisa
-bumbise
-bumbisizza
-bumbibwa
-bumbibwe
-bumbiddwa
-bumbira
-bumbire
-bumbidde
+# ------------------------------- **okubumba(to model): Type-I Transitive ----------------------------------------- #
+bumba/OriginalType-ITransitive
+bumbe/ModifiedType-ITransitive
+bumbye/PastType-ITransitive
+bumbisa/CausativeTransitive
+bumbise/ModifiedCausativeTransitive
+bumbisizza/PastCausativeTransitive
+bumbibwa/PassiveTransitive
+bumbibwe/ModifiedPassiveTransitive
+bumbiddwa/PastPassiveTransitive
+bumbira/BenefactiveTransitive
+bumbire/ModifiedBenefactiveTransitive
+bumbidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------- #
 busa
-# -------------------------------- okubuuka(to jump) ----------------------------------------- #
-buuka
-buuke
-buuse
-buusa
-buusizza
-buukibwa
-buukibwe
-buukiddwa
-buukira
-buukire
-buukidde
+# -------------------------------- okubuuka(to jump): Type-I Transitive ----------------------------------------- #
+buuka/OriginalType-ITransitive
+buuke/ModifiedType-ITransitive
+buuse/ModifiedType-ITransitive
+buusa/CausativeTransitive
+buuse/ModifiedCausativeTransitive
+buusizza/PastCausativeTransitive
+buukibwa/PassiveTransitive
+buukibwe/ModifiedPassiveTransitive
+buukiddwa/PastPassiveTransitive
+buukira/BenefactiveTransitive
+buukire/ModifiedBenefactiveTransitive
+buukidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------- #
-# -------------------------------- **okubuulira(to tell) ----------------------------------------- #
-buulira
-buulire
-buulidde
-buulirwa
-buulirwe
-buuliddwa
+# -------------------------------- **okubuulira(to tell): Type-II Transitive ----------------------------------------- #
+buulira/OriginalType-IITransitive
+buulire/ModifiedType-IITransitive
+buulidde/PastType-IITransitive
+buulirwa/PassiveTransitive
+buulirwe/ModifiedPassiveTransitive
+buuliddwa/PastPassiveTransitive
 # ---------------------------------------------------------------------------------------------------- #
-# -------------------------------- **okubuusabuusa(to doubt) ----------------------------------------- #
-buusabuusa
-buusebuuse
-buusibwabuusibwa
-buusibwabuusibwe
-buusiddwabuusiddwa
+# -------------------------------- **okubuusabuusa(to doubt): Type-I Transitive ----------------------------------------- #
+buusabuusa/OriginalType-ITransitive
+buusebuuse/ModifiedType-ITransitive
+buusizzabuusizza/PastType-ITransitive
+buusibwabuusibwa/PassiveTransitive
+buusibwabuusibwe/ModifiedPassiveTransitive
+buusiddwabuusiddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------- #
-# ------------------------------- **okubuza(to ask) ----------------------------------------- #
-buuza
-buuze
-buuzizza
-buuzisa
-buuzise
-buuzisizza
-buuzibwa
-buuzibwe
-buuziddwa
-buuliza
-buulize
-buulizza
+# ------------------------------- **okubuza(to ask): Type-II Transitive ----------------------------------------- #
+buuza/OriginalType-IITransitive
+buuze/ModifiedType-IITransitive
+buuzizza/PastType-IITransitive
+buuzisa/CausativeTransitive
+buuzise/ModifiedCausativeTransitive
+buuzisizza/PastCausativeTransitive
+buuzibwa/PassiveTransitive
+buuzibwe/ModifiedPassiveTransitive
+buuziddwa/PastPassiveTransitive
+buuliza/BenefactiveTransitive
+buulize/ModifiedBenefactiveTransitive
+buulizza/PastBenefactiveTransitive
 # ---------------------------------------------------------------------------------------------- #
 buzaabuzaa
 bw
@@ -1192,36 +1200,37 @@ byendo
 byombi
 byonna
 caayi
-# ------------------------------- okucakala(to enjoy oneself) ----------------------------------------- #
-cakala
-cakale
-cakadde
-cakaza
-cakaze
-cakazza
-cakazibwa
-cakazibwe
-cakaziddwa
-cakalira
-cakalire
-cakalidde
+# ------------------------------- okucakala(to enjoy oneself): Intransitive ----------------------------------------- #
+cakala/OriginalIntransitive
+cakale/ModifiedIntransitive
+cakadde/PastIntransitive
+cakaza/CausativeIntransitive
+cakaze/ModifiedCausativeIntransitive
+cakazza/PastCausativeIntransitive
+cakazibwa/PassiveIntransitive
+cakazibwe/ModifiedPassiveIntransitive
+cakaziddwa/PastPassiveIntransitive
+cakalira/LocativeIntransitive
+cakalire/ModifiedLocativeIntransitive
+cakalidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------- #
 camufu
-# ------------------------ okucamuka(to get excited) --------------------------------- #
-camuka
-camuke
-camuse
-camusa
-camusizza
-camusibwa
-camusibwe
-camusiddwa
-camukira
-camukire
-camukidde
-camula
-camule
-camudde
+# ------------------------ okucamuka(to get excited): Intransitive --------------------------------- #
+camuka/OriginalIntransitive
+camuke/ModifiedIntransitive
+camuse/PastIntransitive
+camusa/CausativeIntransitive
+camuse/ModifiedCausativeIntransitive
+camusizza/PastCausativeIntransitive
+camusibwa/PassiveIntransitive
+camusibwe/ModifiedPassiveIntransitive
+camusiddwa/PastPassiveIntransitive
+camukira/BenefactiveIntransitive
+camukire/ModifiedBenefactiveIntransitive
+camukidde/PastBenefactiveIntransitive
+camula/CausativeIntransitive
+camule/ModifiedCausativeIntransitive
+camudde/PastCausativeIntransitive
 #
 camukako
 camukamu
@@ -1304,19 +1313,19 @@ camuddewo
 camuddewooko
 camuddeengako
 # ------------------------------------------------------------------------------------ #
-# ------------------------- okucanga(to shuffle) ------------------------------------ #
-canga
-cange
-canze
-cangisa
-cangise
-cangisizza
-cangibwa
-cangibwe
-cangiddwa
-cangira
-cangire
-cangidde
+# ------------------------- okucanga(to shuffle): Type-I Transitive ------------------------------------ #
+canga/OriginalType-ITransitive
+cange/ModifiedType-ITransitive
+canze/PastType-ITransitive
+cangisa/CausativeTransitive
+cangise/ModifiedCausativeTransitive
+cangisizza/PastCausativeTransitive
+cangibwa/PassiveTransitive
+cangibwe/ModifiedPassiveTransitive
+cangiddwa/PastPassiveTransitive
+cangira/BenefactiveTransitive
+cangire/ModifiedBenefactiveTransitive
+cangidde/PastBenefactiveTransitive
 #
 cangako
 cangamu
@@ -1427,19 +1436,19 @@ cangiddewooko
 cangiddengako
 # --------------------------------------------------------------------------------------- #
 cokoleeti
-# ---------------------------------- okucupula(to duplicate) --------------------------------- #
-cupula
-cupule
-cupudde
-cupuza
-cupuze
-cupuzza
-cupulwa
-cupulwe
-cupuddwa
-cupulira
-cupulire
-cupulidde
+# ---------------------------------- okucupula(to duplicate): Type-I Transitive --------------------------------- #
+cupula/OriginalType-ITransitive
+cupule/ModifiedType-ITransitive
+cupudde/PastType-ITransitive
+cupuza/CausativeTransitive
+cupuze/ModifiedCausativeTransitive
+cupuzza/PastCausativeTransitive
+cupulwa/PassiveTransitive
+cupulwe/ModifiedPassiveTransitive
+cupuddwa/PastPassiveTransitive
+cupulira/BenefactiveTransitive
+cupulire/ModifiedBenefactiveTransitive
+cupulidde/PastBenefactiveTransitive
 #
 cupulako
 cupulamu
