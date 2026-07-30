@@ -2248,14 +2248,15 @@ duulu
 duumira
 e
 ebbaasa
-# ---------------------------------- okwebaka (to sleep) ---------------------------------- #
+# ---------------------------------- okwebaka (to sleep): Intrasitive-Reflexive ---------------------------------- #
 baka
 bake
-basse
-bakibwa
-bakibwe
-bakiddwa
+basse/Past
+bassibwa
+bassibwe
+bassiddwa
 bassa
+basse/Modified
 basizza
 bassizza
 basize
@@ -2463,16 +2464,16 @@ bakiddeeyooko
 bakiddeewo
 bakiddeewooko
 # -------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okwebala(to be thanked) ---------------------------------------- #
-ebala
+# ---------------------------------------- okwebala(to be thanked): Intrasitive-Reflexive ---------------------------------------- #
+bala
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwebaza(to thank) --------------------------------------- #
-baza
-baze
-bazizza
-bazibwa
-bazibwe
-baziddwa
+# --------------------------------------- okwebaza(to thank): Reflexive --------------------------------------- #
+baza/OriginalReflexive
+baze/ModifiedReflexive
+bazizza/PastReflexive
+bazibwa/PassiveReflexive
+bazibwe/ModifiedPassiveReflexive
+baziddwa/PastPassiveReflexive
 #
 bazaako
 bazaamu
@@ -2573,8 +2574,13 @@ ebbumbiro
 ebbwa
 ebibikka
 ebijanjaalo
-# ------------------------------------ okwebikkirira(to cover oneself) ------------------------------------ #
-bikkirira
+# ------------------------------------ okwebikkirira(to cover oneself): Intrasitive-Reflexive ------------------------------------ #
+bikkirira/OriginalIntransitiveReflexive
+bikkirire/ModifiedIntransitiveReflexive
+bikkiridde/PastIntransitiveReflexive
+bikkirirwa/PassiveIntransitiveReflexive
+bikkirirwe/ModifiedPassiveIntransitiveReflexive
+bikkiririddwa/PastPassiveIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 ebikomo
 ebikonde
@@ -2596,8 +2602,16 @@ ebitundu
 ebiwoomerera
 ebugwanjuba
 ebula
-# -------------------------------- okwebungulula(to encircle; to surround) -------------------------------- #
+# -------------------------------- okwebungulula(to encircle; to surround): Intrasitive-Reflexive -------------------------------- #
 bungulula
+bungulule
+bunguludde
+bungululwa
+bungululwe
+bungululiddwa
+bungululira
+bungululire
+bungululidde
 # --------------------------------------------------------------------------------------------------------- #
 ebuvanjuba
 ebweru
@@ -3753,12 +3767,12 @@ emmotoka
 emmunye
 emmunyeenye
 emmwanyi
-# --------------------------------------- **okwemotya(to be shy): Deadjectival --------------------------------------- #
-motya/OriginalDeadjective
-motye/ModifiedDeadjective
-motyezza/PastDeadjective
-motyamotya/OriginalDeadjective
-motyemotye/ModifiedDeadjective
+# --------------------------------------- **okwemotya(to be shy): Intrasitive Reflexive --------------------------------------- #
+motya/OriginalIntransitiveReflexive
+motye/ModifiedIntransitiveReflexive
+motyezza/PastIntransitiveReflexive
+motyamotya/OriginalIntransitiveReflexive
+motyemotye/ModifiedIntransitiveReflexive
 # ----------------------------------------------------------------------------------------------------- #
 empaanyisaganya
 empafu
@@ -3807,9 +3821,9 @@ emundu
 nda
 nde
 nze
-nzesa
-nzese
-nzesezza
+ndesa
+ndese
+ndesezza
 ndebwa
 ndebwe
 ndeddwa
