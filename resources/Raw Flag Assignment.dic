@@ -248,38 +248,38 @@ bajjidde/PastLocativeTransitive
 bajjiza/BenefactiveTransitive
 bajjize/ModifiedBenefactiveTransitive
 bajjilizza/PastBenefactiveTransitive
-bazzi
 # ------------------------------------------------------------------------------------------------ #
-# ------------------------------- okubaka(to catch a projectile) --------------------------------- #
-baka
-bake
-basse
-bakisa
-bakise
-bakisizza
-bakibwa
-bakibwe
-bakiddwa
-bakira
-bakire
-bakidde
-basi
+omubazzi
+# ------------------------------- okubaka(to catch a projectile): Type-I Transitive --------------------------------- #
+baka/OriginalType-ITransitive
+bake/ModifiedType-ITransitive
+base/PastType-ITransitive
+bakisa/CausativeTransitive
+bakise/ModifiedCausativeTransitive
+bakisizza/PastCausativeTransitive
+bakibwa/PassiveTransitive
+bakibwe/ModifiedPassiveTransitive
+bakiddwa/PastPassiveTransitive
+bakira/BenefactiveTransitive
+bakire/ModifiedBenefactiveTransitive
+bakidde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------ #
-# ------------------------------ okubala(to count) ----------------------------------------------- #
-bala
-bale
-baze
-bazisa
-bazise
-bazisizza
-balibwa
-balibwe
-baliddwa
-balira
-balire
-balidde
-bazi
+omubasi
+# ------------------------------ okubala(to count): Type-I Transitive ----------------------------------------------- #
+bala/OriginalType-ITransitive
+bale/ModifiedType-ITransitive
+baze/PastType-ITransitive
+bazisa/CausativeTransitive
+bazise/ModifiedCausativeTransitive
+bazisizza/PastCausativeTransitive
+balibwa/PassiveTransitive
+balibwe/ModifiedPassiveTransitive
+baliddwa/PastPassiveTransitive
+balira/BenefactiveTransitive
+balire/ModifiedBenefactiveTransitive
+balidde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------ #
+omubazi
 # --------------------------------- okubalaga(to be itchy): Deadjectival --------------------------------------- #
 balagala/OriginalDeadjective
 balagale/ModifiedDeadjective
@@ -297,34 +297,37 @@ balagalidde/PastLocativeDeadjective
 balagavu
 balansi
 bali
-# --------------------------------- okubaluka(to explode) ----------------------------------------- #
-baluka
-baluke
-baluse
-balula
-balule
-baludde
-balulwa
-balulwe
-baluddwa
-balulira
-balulire
-balulidde
+# --------------------------------- okubaluka(to explode): Intrasitive ----------------------------------------- #
+baluka/OriginalIntransitive
+baluke/ModifiedIntransitive
+baluse/PastIntransitive
+balula/CausativeIntransitive
+balule/ModifiedCausativeIntransitive
+baludde/PastCausativeIntransitive
+balulwa/PassiveIntransitive
+balulwe/ModifiedPassiveIntransitive
+baluddwa/PastPassiveIntransitive
+balulira/BenefactiveIntransitive
+balulire/ModifiedBenefactiveIntransitive
+balulidde/PastBenefactiveIntransitive
+balukira/LocativeIntransitive
+balukire/ModifiedLocativeIntransitive
+balukidde/PastLocativeIntransitive
 # ------------------------------------------------------------------------------------------------- #
 bambi
-# ------------------------------------- okubanja(to owe/demand) ----------------------------------- #
-banja
-banje
-banjizza
-banjisa
-banjise
-banjisizza
-banjibwa
-banjibwe
-banjibbwa
-banjiza
-banjize
-banjilizza
+# ------------------------------------- okubanja(to owe/demand): Type-II Transitive ----------------------------------- #
+banja/OriginalType-IITransitive
+banje/ModifiedType-IITransitive
+banjizza/PastType-IITransitive
+banjisa/CausativeTransitive
+banjise/ModifiedCausativeTransitive
+banjisizza/PastCausativeTransitive
+banjibwa/PassiveTransitive
+banjibwe/ModifiedPassiveTransitive
+banjibbwa/PastPassiveTransitive
+banjiza/BenefactiveTransitive
+banjize/ModifiedBenefactiveTransitive
+banjilizza/PastBenefactiveTransitive
 #
 banjaako
 banjaamu
@@ -415,30 +418,41 @@ banjilizzaawo
 banjilizzaawooko
 # ---------------------------------------------------------------------------------------- #
 bannange
-# -------------------------------- **okubatiza(to baptize) --------------------------------- #
-batiza
-batize
-batizza
-batizibwa
-batizibwe
-batiziddwa
+# -------------------------------- **okubatiza(to baptize): Type-I Transitive --------------------------------- #
+batiza/OriginalType-ITransitive
+batize/ModifiedType-ITransitive
+batizza/PastType-ITransitive
+batizibwa/PassiveTransitive
+batizibwe/ModifiedPassiveTransitive
+batiziddwa/PastPassiveTransitive
 # ----------------------------------------------------------------------------------------- #
-# ------------------------------- okubaza(to time/target) ---------------------------------------- #
-baza
-baze
-bazizza
-bazisa
-bazise
-bazisizza
-bazibwa
-bazibwe
-baziddwa
-bazira
-bazire
-bazidde
+# ------------------------------- okubaza(to time/target): Type-I Transitive ---------------------------------------- #
+baza/OriginalType-ITransitive
+baze/ModifiedType-ITransitive
+bazizza/PastType-ITransitive
+bazisa/CausativeTransitive
+bazise/ModifiedCausativeTransitive
+bazisizza/PastCausativeTransitive
+bazibwa/PassiveTransitive
+bazibwe/ModifiedPassiveTransitive
+baziddwa/PastPassiveTransitive
+balira/BenefactiveTransitive
+balire/ModifiedBenefactiveTransitive
+balidde/PastBenefactiveTransitive
 # ----------------------------------------------------------------------------------------- #
-# --------------------------------------- okubba(to steal; to rob) ---------------------------------------- #
-bba
+# --------------------------------------- okubba(to steal; to rob): Type-I Transitive ---------------------------------------- #
+bba/OriginalType-ITransitive
+bbe/ModifiedType-ITransitive
+bbye/PastType-ITransitive
+bbisa/CausativeTransitive
+bbise/ModifiedCausativeTransitive
+bbisizza/PastCausativeTransitive
+bbibwa/PassiveTransitive
+bbibwe/ModifiedPassiveTransitive
+bbiddwa/PastPassiveTransitive
+bbira/BenefactiveTransitive
+bbire/ModifiedBenefactiveTransitive
+bbidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 bbalaza
 bbiri
@@ -447,47 +461,47 @@ bbomu
 bbongo
 bbugubugu
 bbululu
-# -------------------------------- okubeera(to be/stay) ----------------------------------------- #
-beera
-beere
-badde
-beeza
-beeze
-beezezza
-beezebwa
-beezebwe
-beezeddwa
-beerera
-beerere
-beeredde
+# -------------------------------- okubeera(to be/stay): Type-I Transitive ----------------------------------------- #
+beera/OriginalType-ITransitive
+beere/ModifiedType-ITransitive
+badde/PastType-ITransitive
+beeza/CausativeTransitive
+beeze/ModifiedCausativeTransitive
+beezezza/PastCausativeTransitive
+beezebwa/PassiveTransitive
+beezebwe/ModifiedPassiveTransitive
+beezeddwa/PastPassiveTransitive
+beerera/LocativeTransitive
+beerere/ModifiedLocativeTransitive
+beeredde/PastLocativeTransitive
 # ------------------------------------------------------------------------------------------------- #
-# ------------------------------- okubega(to spy/serve food) ------------------------------------------------- #
-bega
-bege
-beze
-begesa
-begese
-begesezza
-begebwa
-begebwe
-begeddwa
-begera
-begere
-begedde
+# ------------------------------- okubega(to spy/serve food): Type-I Transitive ------------------------------------------------- #
+bega/OriginalType-ITransitive
+bege/ModifiedType-ITransitive
+beze/PastType-ITransitive
+begesa/CausativeTransitive
+begese/ModifiedCausativeTransitive
+begesezza/PastCausativeTransitive
+begebwa/PassiveTransitive
+begebwe/ModifiedPassiveTransitive
+begeddwa/PastPassiveTransitive
+begera/BenefactiveTransitive
+begere/ModifiedBenefactiveTransitive
+begedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------- #
-# ---------------------------------- okubejjagala(to burp) ------------------------------------ #
-bejjagala
-bejjagale
-bejjagadde
-bejjagaza
-bejjagaze
-bejjagazza
-bejjagalwa
-bejjagalwe
-bejjagaddwa
-bejjagalira
-bejjagalire
-bejjagalidde
+# ---------------------------------- okubejjagala(to burp): Type-I Transitive ------------------------------------ #
+bejjagala/OriginalType-ITransitive
+bejjagale/ModifiedType-ITransitive
+bejjagadde/PastType-ITransitive
+bejjagaza/CausativeTransitive
+bejjagaze/ModifiedCausativeTransitive
+bejjagazza/PastCausativeTransitive
+bejjagalwa/PassiveTransitive
+bejjagalwe/ModifiedPassiveTransitive
+bejjagaddwa/PastPassiveTransitive
+bejjagalira/BenefactiveTransitive
+bejjagalire/ModifiedBenefactiveTransitive
+bejjagalidde/PastBenefactiveTransitive
 #
 bejjagalako
 bejjagalamu
@@ -608,23 +622,31 @@ bejjagaliddewooko
 bendera
 bi
 bibiri
-# ----------------------------- okubiibiita(to pamper; to make a favorite of) ----------------------------- #
-biibiita
+# ----------------------------- okubiibiita(to pamper; to make a favorite of): Type-I Transitive ----------------------------- #
+biibiita/OriginalType-ITransitive
+biibite/ModifiedType-ITransitive
+biibise/PastType-ITransitive
+biibitibwa/PassiveTransitive
+biibitibwe/ModifiedPassiveTransitive
+biibitiddwa/PastPassiveTransitive
+biibitira/BenefactiveTransitive
+biibitire/ModifiedBenefactiveTransitive
+biibitidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 biici
-# ----------------------------------- okubiita(caring in a lovely manner) ---------------------------------- #
-biita
-biite
-biise
-biitisa
-biitise
-biitisizza
-biitibwa
-biitibwe
-biitibbwa
-biitira
-biitire
-biitidde
+# ----------------------------------- okubiita(caring in a lovely manner): Type-I Transitive ---------------------------------- #
+biita/OriginalType-ITransitive
+biite/ModifiedType-ITransitive
+biise/PastType-ITransitive
+biitisa/CausativeTransitive
+biitise/ModifiedCausativeTransitive
+biitisizza/PastCausativeTransitive
+biitibwa/PassiveTransitive
+biitibwe/ModifiedPassiveTransitive
+biitibbwa/PastPassiveTransitive
+biitira/BenefactiveTransitive
+biitire/ModifiedBenefactiveTransitive
+biitidde/PastBenefactiveTransitive
 #
 biitako
 biitamu
@@ -740,19 +762,19 @@ biitiddewo
 biitiddewooko
 # ------------------------------------------------------------------------------------------- #
 biki
-# ------------------------------------------------- okubikka(to cover) ----------------------------------------- #
-bikka
-bikke
-bisse
-bikkisa
-bikkise
-bikkisizza
-bikkibwa
-bikkibwe
-bikkiddwa
-bikkira 
-bikkire
-bikkidde
+# ------------------------------------------------- okubikka(to cover): Type-II Transitive ----------------------------------------- #
+bikka/OriginalType-IITransitive
+bikke/ModifiedType-IITransitive
+bisse/PastType-IITransitive
+bikkisa/CausativeTransitive
+bikkise/ModifiedCausativeTransitive
+bikkisizza/PastCausativeTransitive
+bikkibwa/PassiveTransitive
+bikkibwe/ModifiedPassiveTransitive
+bikkiddwa/PastPassiveTransitive
+bikkira/BenefactiveTransitive
+bikkire/ModifiedBenefactiveTransitive
+bikkidde/PastBenefactiveTransitive
 #
 bikkako
 bikkamu
@@ -884,43 +906,44 @@ bisibisi
 bisikwiti
 bitano
 bizinensi
-# ------------------------------- **okuboggola(to bark) --------------------------------------------- #
-boggola
-boggole
-boggodde
-boggoza
-boggoze
-boggozza
-boggolera
-boggolere
-boggoledde
+# ------------------------------- **okuboggola(to bark): Intrasitive --------------------------------------------- #
+boggola/OriginalIntransitive
+boggole/ModifiedIntransitive
+boggodde/PastIntransitive
+boggoza/CausativeIntransitive
+boggoze/ModifiedCausativeIntransitive
+boggozza/PastCausativeIntransitive
+boggolera/BenefactiveIntransitive
+boggolere/ModifiedBenefactiveIntransitive
+boggoledde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------- #
-# ------------------------------- okubojja(to peck: for birds) -------------------------------- #
-bojja
-bojje
-bojjezza
-bojjesa
-bojjese
-bojjesezza
-bojjebwa
-bojjebwe
-bojjeddwa
-bojjera
-bojjere
-bojjedde
+# ------------------------------- okubojja(to peck: for birds): Type-I Transitive -------------------------------- #
+bojja/OriginalType-ITransitive
+bojje/ModifiedType-ITransitive
+bojjezza/PastType-ITransitive
+bojjesa/CausativeTransitive
+bojjese/ModifiedCausativeTransitive
+bojjesezza/PastCausativeTransitive
+bojjebwa/PassiveTransitive
+bojjebwe/ModifiedPassiveTransitive
+bojjeddwa/PastPassiveTransitive
+bojjera/BenefactiveTransitive
+bojjere/ModifiedBenefactiveTransitive
+bojjedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------- #
-# ----------------------------------- okubonaabona(to suffer) --------------------------------- #
-bonaabona
-boneebone
-bonyebonye
-bonyaabonya
-bonyeebonye
-bonyaabonyezza
-bonyaabonyezebwa
-bonyaabonyezebwe
-bonyaabonyezzeddwa
-bonaabonera
-boneebonere
+# ----------------------------------- okubonaabona(to suffer): Intransitive --------------------------------- #
+bonaabona/OriginalIntransitive
+boneebone/ModifiedIntransitive
+bonyebonye/HybridIntransitive
+bonyaabonya/CausativeIntransitive
+bonyeebonye/ModifiedCausativeIntransitive
+bonyaabonyezza/PastCausativeIntransitive
+bonyaabonyezebwa/PassiveIntransitive
+bonyaabonyezebwe/ModifiedPassiveIntransitive
+bonyaabonyezzeddwa/PastPassiveIntransitive
+bonaabonera/BenefactiveIntransitive
+boneebonere/ModifiedBenefactiveIntransitive
+boneebonedde/PastBenefactiveIntransitive
 #
 bonaabonako
 bonaabonamu
@@ -1028,18 +1051,20 @@ bonekera/LocativeDeadjective
 bonekere/ModifiedLocativeDeadjective
 bonekedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
-# ------------------------------- **okubonereza(to punish) --------------------------------- #
-bonereza
-bonereze
-bonerezza
-bonerezebwa
-bonerezebwe
-bonerezzeddwa
-bonerera
-bonerere
-boneredde
-# --------------------------------------------------------------------------------------------- #
-# ------------------------------- **okuboola(to segregate) --------------------------------- #
+# ------------------------------- **okubonereza(to punish): Type-I Transitive --------------------------------- #
+bonereza/OriginalType-ITransitive
+bonereze/ModifiedType-ITransitive
+bonerezza/PastType-ITransitive
+bonerezebwa/PassiveType-ITransitive
+bonerezebwe/ModifiedPassiveType-ITransitive
+bonerezzeddwa/PastPassiveType-ITransitive
+# ------------------------------------------------------------------------------------------------------------- #
+# --------------------------------- okubonerera(to learn from a punishment): Intransitive ----------------------------------------- #
+bonerera/OriginalIntransitive
+bonerere/ModifiedIntransitive
+boneredde/PastIntransitive
+# -------------------------------------------------------------------------------------------------------------------------- #
+# ------------------------------- **okuboola(to segregate): --------------------------------- #
 boola
 boole
 bodde
