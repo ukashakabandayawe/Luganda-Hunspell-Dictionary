@@ -2791,7 +2791,7 @@ fiiriza/OriginalReflexive
 fiirize/ModifiedReflexive
 fiirizza/PastReflexive
 # ---------------------------------------------------------------------------------------------------- #
-# -------------------------------- **okwefuula(to pretend): IntasitiveReflexive ------------------------------------------- #
+# -------------------------------- **okwefuula(to pretend): IntransitiveReflexive ------------------------------------------- #
 fuula/OriginalIntransitiveReflexive
 fuule/ModifiedIntransitiveReflexive
 fudde/PastIntransitiveReflexive
@@ -2827,10 +2827,13 @@ gayirirwa/PassiveReflexive
 gayirirwe/ModifiedPassiveReflexive
 gayiriddwa/PastPassiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- **okwegazaanya(to ease; intransitive-Reflexive) --------------------------------------- #
-gazaanya
-gazaanye
-gazaanyizza
+# --------------------------------------- **okwegazaanya(to ease): IntransitiveReflexive --------------------------------------- #
+gazaanya/OriginalIntransitiveReflexive
+gazaanye/ModifiedIntransitiveReflexive
+gazaanyizza/PastIntransitiveReflexive
+gazaanyiza/LocativeReflexive
+gazaanyize/ModifiedLocativeReflexive
+gazaanyilizza/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugema(to vaccinate) --------------------------------------- #
 gema
@@ -2846,24 +2849,24 @@ gemera
 gemere
 gemedde
 # ------------------------------------------------------------------------------------------------------ #
-# -------------------------------- **okwegendereza(to be careful) ----------------------------------------- #
-gendereza
-gendereze
-genderezza
-genderezebwa
-genderezebwe
-genderezeddwa
-genderereza
-genderereze
-gendererezza
+# -------------------------------- **okwegendereza(to be careful): Reflexive ----------------------------------------- #
+gendereza/OriginalReflexive
+gendereze/ModifiedReflexive
+genderezza/PastReflexive
+genderezebwa/PassiveReflexive
+genderezebwe/ModifiedPassiveReflexive
+genderezeddwa/PastPassiveReflexive
+genderereza/LocativeReflexive
+genderereze/ModifiedLocativeReflexive
+gendererezza/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okweggama(to seek shelter) -------------------------------------- #
-ggama
-ggame
-ggamye
-ggamira
-ggamire
-ggamidde
+# -------------------------------------- okweggama(to seek shelter): Reflexive -------------------------------------- #
+ggama/OriginalReflexive
+ggame/ModifiedReflexive
+ggamye/PastReflexive
+ggamira/LocativeReflexive
+ggamire/ModifiedLocativeReflexive
+ggamidde/PastLocativeReflexive
 #
 ggamako
 ggamamu
@@ -2979,19 +2982,19 @@ eggumba
 eggwanga
 eggwanika
 eggwolu
-# --------------------------------------- okwegomba(to admire) --------------------------------------- #
-gomba
-gombe
-gombye
-gombebwa
-gombebwe
-gombeddwa
-gombesa
-gombese
-gombesezza
-gombera
-gombere
-gombedde
+# --------------------------------------- okwegomba(to admire): Reflexive --------------------------------------- #
+gomba/OriginalReflexive
+gombe/ModifiedReflexive
+gombye/PastReflexive
+gombebwa/PassiveReflexive
+gombebwe/ModifiedPassiveReflexive
+gombeddwa/PastPassiveReflexive
+gombesa/CausativeReflexive
+gombese/ModifiedCausativeReflexive
+gombesezza/PastCausativeReflexive
+gombera/LocativeReflexive
+gombere/ModifiedLocativeReflexive
+gombedde/PastLocativeReflexive
 #
 gombako
 gombamu
@@ -3163,19 +3166,20 @@ ejjinja
 ejjobyo
 ejjoogo
 ejjovu
-# --------------------------------- **okwejjukanya(to remind) ----------------------------------------- #
-jjukanya
-jjukanye
-jjukanyizza
+# --------------------------------- **okwejjukanya(to remind): Reflexive ----------------------------------------- #
+jjukanya/OriginalReflexive
+jjukanye/ModifiedReflexive
+jjukanyizza/PastReflexive
 # -------------------------------------------------------------------------------------------------- #
 ejjuuni
 ejunya
-# ------------------------------------ okwejjusa(to regret) ------------------------------------ #
-jjusa
-jjuse
-jjusizza
-jjusiza
-jjusize
+# ------------------------------------ okwejjusa(to regret): Reflexive ------------------------------------ #
+jjusa/OriginalReflexive
+jjuse/ModifiedReflexive
+jjusizza/PastReflexive
+jjusiza/LocativeReflexive
+jjusize/ModifiedLocativeReflexive
+jjusilizza/PastLocativeReflexive
 #
 jjusaako
 jjusaamu
@@ -3246,10 +3250,13 @@ jjusizengawo
 jjusizengawooko
 # --------------------------------------------------------------------------------------------------- #
 eka/yy
-# ------------------------------------------ **okwekaalisa(to show off) ---------------------------------- #
-kaaliisa
-kaaliise
-kaaliisizza
+# ------------------------------------------ **okwekaalisa(to show off): IntransitiveReflexive ---------------------------------- #
+kaaliisa/OriginalIntransitiveReflexive
+kaaliise/ModifiedIntransitiveReflexive
+kaaliisizza/PastIntransitiveReflexive
+kaaliisiza/LocativeReflexive
+kaaliisize/ModifiedLocativeReflexive
+kaaliisilizza/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------- #
 # ----------------------------------------- okukakasa(to confirm) ----------------------------------------- #
 kakasa
@@ -3264,12 +3271,13 @@ kakasilizza
 kakasiliza
 kakasilize
 # ----------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwekalakaasa(to riot) -------------------------------------- #
-kalakaasa
-kalakaase
-kalakaasizza
-kalakaasiza
-kalakaasize
+# --------------------------------------- okwekalakaasa(to riot): IntransitiveReflexive -------------------------------------- #
+kalakaasa/OriginalIntransitiveReflexive
+kalakaase/ModifiedIntransitiveReflexive
+kalakaasizza/PastIntransitiveReflexive
+kalakaasiza/LocativeReflexive
+kalakaasize/ModifiedLocativeReflexive
+kalakaasilizza/PastLocativeReflexive
 #
 kalakaasaako
 kalakaasaamu
@@ -3339,12 +3347,13 @@ kalakaasizengayooko
 kalakaasizengawo
 kalakaasizengawooko
 # ----------------------------------------------------------------------------------------------------- #
-# --------------------------------------- **okwekanasa(to be picky) --------------------------------------- #
-kanasa
-kanase
-kanasizza
-kanasiza
-kanasize
+# --------------------------------------- **okwekanasa(to be picky): Reflexive --------------------------------------- #
+kanasa/OriginalReflexive
+kanase/ModifiedReflexive
+kanasizza/PastReflexive
+kanasiza/BenefactiveReflexive
+kanasize/ModifiedBenefactiveReflexive
+kanasilizza/PastBenefactiveReflexive
 # ------------------------------------------------------------------------------------------------------ #
 # --------------------------------------- okukanga(to scare) --------------------------------------- #
 kanga
@@ -3360,18 +3369,18 @@ kangira
 kangire
 kangidde
 # --------------------------------------------------------------------------------------------------- #
-# --------------------------------------- **okwekebejja(to examine) --------------------------------------- #
-kebejja
-kebejje
-kebejjezza
+# --------------------------------------- **okwekebejja(to examine): Reflexive --------------------------------------- #
+kebejja/OriginalReflexive
+kebejje/ModifiedReflexive
+kebejjezza/PastReflexive
 # --------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwekengera(to suspect) --------------------------------------- #
-kengera
-kengere
-kengedde
-kengerwa
-kengerwe
-kengeddwa
+# --------------------------------------- okwekengera(to suspect): Reflexive --------------------------------------- #
+kengera/OriginalReflexive
+kengere/ModifiedReflexive
+kengedde/PastReflexive
+kengerwa/PassiveReflexive
+kengerwe/ModifiedPassiveReflexive
+kengeddwa/PastPassiveReflexive
 # --------------------------------------------------------------------------------------------------- #
 ekereziya
 ekibabu
@@ -3584,13 +3593,21 @@ ekkowe
 ekkubo
 ekkufulu
 ekkula
-# -------------------- okwekoba(to conspire; to collaborate; to act together; to plot) -------------------- #
-koba
+# -------------------- okwekoba(to conspire; to collaborate; to act together; to plot): IntrasitiveReflexive -------------------- #
+koba/OriginalIntransitiveReflexive
+kobe/ModifiedIntransitiveReflexive
+kobye/PastIntransitiveReflexive
+kobera/LocativeReflexive
+kobere/ModifiedLocativeReflexive
+kobedde/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okwekobaana(to conspire) ---------------------------------------- #
-kobaana
-kobaane
-kobaanye
+# ---------------------------------------- okwekobaana(to conspire): IntrasitiveReflexive ---------------------------------------- #
+kobaana/OriginalIntransitiveReflexive
+kobaane/ModifiedIntransitiveReflexive
+kobaanye/PastIntransitiveReflexive
+kobaanira/LocativeReflexive
+kobaanire/ModifiedLocativeReflexive
+kobaanidde/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okukuuma(to protect) ---------------------------------------- #
 kuuma
@@ -3804,37 +3821,35 @@ empummumpu
 empungu
 empuuta
 emu
-# --------------------------------------- okwemulugunya(to complain) --------------------------------------- #
-mulugunya
-mulugunye
-mulugunyizza
-mulugunyiza
-mulugunyize
+# --------------------------------------- okwemulugunya(to complain): IntrasitiveReflexive --------------------------------------- #
+mulugunya/OriginalIntransitiveReflexive
+mulugunye/ModifiedIntransitiveReflexive
+mulugunyizza/PastIntransitiveReflexive
+mulugunyiza/LocativeReflexive
+mulugunyize/ModifiedLocativeReflexive
+mulugunyilizza/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwemulula(to creep away) --------------------------------------- #
-mulula
-mulule
-muludde
-mululira
-mululire
-mululidde
+# --------------------------------------- okwemulula(to creep away): IntrasitiveReflexive --------------------------------------- #
+mulula/OriginalIntransitiveReflexive
+mulule/ModifiedIntransitiveReflexive
+muludde/PastIntransitiveReflexive
+mululira/LocativeReflexive
+mululire/ModifiedLocativeReflexive
+mululidde/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
 emundu
-# --------------------------------------- okwenda(to fornicate) --------------------------------------- #
-nda
-nde
-nze
-ndesa
-ndese
-ndesezza
-ndebwa
-ndebwe
-ndeddwa
-ndera
-ndere
-ndedde
-nzi
+# --------------------------------------- okwenda(to fornicate): IntrasitiveReflexive --------------------------------------- #
+nda/OriginalIntransitiveReflexive
+nde/ModifiedIntransitiveReflexive
+nze/PastIntransitiveReflexive
+ndesa/CausativeReflexive
+ndese/ModifiedCausativeReflexive
+ndesezza/PastCausativeReflexive
+ndera/LocativeReflexive
+ndere/ModifiedLocativeReflexive
+ndedde/PastLocativeReflexive
 # ------------------------------------------------------------------------------------------------------ #
+omwenzi
 enda
 endabirwamu
 endagaano
@@ -3903,15 +3918,16 @@ enkalakkalira
 enkalamata
 enkali
 enkambi
-# ------------------------------------ okwenkana(to be equal) ------------------------------------ #
-nkana
-nkane
-nkanye
-nkanya
-nkanyizza
-nkanika
-nkanira
-nkanire
+# ------------------------------------ okwenkana(to be equal): Reflexive ------------------------------------ #
+nkana/OriginalReflexive
+nkane/ModifiedReflexive
+nkanye/HybridReflexive
+nkanya/CausativeReflexive
+nkanyizza/PastReflexive
+nkanika/OriginalReflexive
+nkanira/LocativeReflexive
+nkanire/ModifiedLocativeReflexive
+nkanidde/PastLocativeReflexive
 #
 nkanako
 nkanamu
@@ -4046,10 +4062,16 @@ ennoni
 ennono
 ennyaanya
 ennyama
-# ----------------------------- okwennyamira(to be depressed; to be very sad) ----------------------------- #
-nnyamira
-nnyamire
-nnyamidde
+# ----------------------------- okwennyamira(to be depressed; to be very sad): Reflexive ----------------------------- #
+nnyamira/OriginalReflexive
+nnyamire/ModifiedReflexive
+nnyamidde/PastReflexive
+nnyamirwa/PassiveReflexive
+nnyamirwe/ModifiedPassiveReflexive
+nnyamiddwa/PastPassiveReflexive
+nnyamirira/LocativeReflexive
+nnyamirire/ModifiedLocativeReflexive
+nnyamiridde/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
 ennyamivu
 ennyange
@@ -4058,10 +4080,10 @@ ennyimba
 ennyindo
 ennyondo
 ennyongeza
-# ---------------------------------- okwennyonnyola(to express oneself) ----------------------------------- #
-nnyonnyola
-nnyonnyole
-nnyonnyodde
+# ---------------------------------- okwennyonnyolako(to express oneself): IntrasitiveReflexive ----------------------------------- #
+nnyonnyolako/OriginalIntransitiveReflexive
+nnyonnyoleko/ModifiedIntransitiveReflexive
+nnyonnyoddeko/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 ennyonta
 ennyonyi/N3zz
@@ -4122,18 +4144,23 @@ enva
 enviiri
 envubu
 envuma
-# -------------------- okwenyigira(to press oneself in; to participate; to engage in) --------------------- #
-nyigira
+# -------------------- okwenyigira(to press oneself in; to participate; to engage in): Reflexive --------------------- #
+nyigira/OriginalReflexive
+nyigire/ModifiedReflexive
+nyigidde/PastReflexive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------- okwenyumiriza(to be proud; to praise; to flatter; to boast) ---------------------- #
-nyumiriza
-nyumirize
-nyumirizza
+# ---------------------- okwenyumiriza(to be proud; to praise; to flatter; to boast): Reflexive ---------------------- #
+nyumiriza/OriginalReflexive
+nyumirize/ModifiedReflexive
+nyumirizza/PastReflexive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------- okwenyweza(to get ready; to prepare oneself) ------------------------------ #
-nyweza
-nyweze
-nywezezza
+# ----------------------------- okwenyweza(to get ready; to prepare oneself): IntransitiveReflexive ------------------------------ #
+nyweza/OriginalIntransitiveReflexive
+nyweze/ModifiedIntransitiveReflexive
+nywezezza/PastIntransitiveReflexive
+nywereza/LocativeReflexive
+nywereze/ModifiedLocativeReflexive
+nywererezza/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
 enzijanjaba
 enzikkiriza
@@ -4141,13 +4168,13 @@ enzikkiriziganya
 enziku
 enziro
 enzivuunula
-# ----------------------------------- okwepanka(to dare; to flatter) --------------------------------------------- #
-panka
-panke
-panse
-pankira
-pankire
-pankidde
+# ----------------------------------- okwepanka(to dare; to flatter): IntransitiveReflexive --------------------------------------------- #
+panka/OriginalIntransitiveReflexive
+panke/ModifiedIntransitiveReflexive
+panse/PastIntransitiveReflexive
+pankira/LocativeReflexive
+pankire/ModifiedLocativeReflexive
+pankidde/PastLocativeReflexive
 #
 pankako
 pankamu
@@ -4245,24 +4272,31 @@ eppamba
 eppeera
 eppeesa
 era
-# ----------------------------------------- okweraga(to show off) ----------------------------------------- #
-raga
+# ----------------------------------------- okweraga(to show off): IntransitiveReflexive ----------------------------------------- #
+raga/OriginalIntransitiveReflexive
+rage/ModifiedIntransitiveReflexive
+laze/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okweraliikira(to be worried) ----------------------------------------- #
-raliikirira
-raliikirire
-raliikiridde
-raliikiriza
-raliikirize
-raliikirizza
-raliikirirwa
-raliikirirwe
-raliikiriddwa
+# ----------------------------------------- okweraliikira(to be worried): Reflexive ----------------------------------------- #
+raliikirira/OriginalReflexive
+raliikirire/ModifiedReflexive
+raliikiridde/PastReflexive
+raliikiriza/CausativeReflexive
+raliikirize/ModifiedCausativeReflexive
+raliikirizza/PastCausativeReflexive
+raliikirirwa/PassiveReflexive
+raliikirirwe/ModifiedPassiveReflexive
+raliikiriddwa/PastPassiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 eri
 eriggwa
-# ------------- okwerigomba(to get intimate; to have sex; to act foolish; inf.:okwerigomba) -------------- #
-erigomba
+# ------------- okwerigomba(to get intimate; to have sex; to act foolish; inf.:okwerigomba): Reflexive -------------- #
+rigomba/OriginalReflexive
+rigombe/ModifiedReflexive
+rigombye/PastReflexive
+rigombera/LocativeReflexive
+rigombere/ModifiedLocativeReflexive
+rigombedde/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
 eriiso
 erindaazi
@@ -4411,14 +4445,16 @@ siigira
 siigire
 siigidde
 # ---------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwesimbawo(to contest) ------------------------------------------ #
-simbawo
-simbewo
-sibyeewo
+# --------------------------------------- okwesimbawo(to contest): IntransitiveReflexive ------------------------------------------ #
+simbawo/OriginalIntransitiveReflexive
+simbewo/ModifiedIntransitiveReflexive
+sibyeewo/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 esimbu
-# ---------------------------- okwessa(to place oneself; to put oneself down) ----------------------------- #
-ssa
+# ---------------------------- okwessa(to place oneself; to put oneself down): IntransitiveReflexive ----------------------------- #
+ssa/OriginalIntransitiveReflexive
+sse/ModifiedIntransitiveReflexive
+ssizza/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 essaala
 essaati
@@ -4454,16 +4490,19 @@ sungidde
 sunzi
 # ------------------------------------------------------------------------------------------------------ #
 esweeta
-# ----------------------------------------- okwetaaga(to need) ----------------------------------------- #
-taaga
-taage
-taaze
-taagibwa
-taagibwe
-taagibbwa
-taagira
-taagire
-taagidde
+# ----------------------------------------- okwetaaga(to need): Reflexive ----------------------------------------- #
+taaga/OriginalReflexive
+taage/ModifiedReflexive
+taaze/PastReflexive
+taagisa/CausativeReflexive
+taagise/ModifiedCausativeReflexive
+taagisizza/PastCausativeReflexive
+taagibwa/PassiveReflexive
+taagibwe/ModifiedPassiveReflexive
+taagibbwa/PastPassiveReflexive
+taagira/LocativeReflexive
+taagire/ModifiedLocativeReflexive
+taagidde/PastLocativeReflexive
 #
 taagako
 taagamu
@@ -4623,49 +4662,50 @@ talire
 talidde
 tazi
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwetegereza(to pay attention) --------------------------------------- #
-tegereza
-tegereze
-tegerezza
-tegerezesa
-tegerezese
-tegerezesezza
-tegerezebwa
-tegerezebwe
-tegerezebbwa
-tegerezeddwa
-tegerezera
-tegerezere
+# --------------------------------------- okwetegereza(to pay attention): Reflexive --------------------------------------- #
+tegereza/OriginalReflexive
+tegereze/ModifiedReflexive
+tegerezza/PastReflexive
+tegerezesa/CausativeReflexive
+tegerezese/ModifiedCausativeReflexive
+tegerezesezza/PastCausativeReflexive
+tegerezebwa/PassiveReflexive
+tegerezebwe/ModifiedPassiveReflexive
+tegerezebbwa/PastPassiveReflexive
+tegerezeddwa/PastPassiveReflexive
+tegerereza/LocativeReflexive
+tegerereze/ModifiedLocativeReflexive
+tegererezza/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwetooloola(to go around) --------------------------------------- #
-tooloola
-tooloole
-tooloodde
-toolooza
-toolooze
-tooloozza
-tooloolwa
-tooloolwe
-toolooddwa
-tooloolebwa
-tooloolebwe
-tooloolebbwa
-toolooleddwa
-tooloolera
-tooloolere
-toolooledde
-tooloozi
+# --------------------------------------- okwetooloola(to go around): Reflexive --------------------------------------- #
+tooloola/OriginalReflexive
+tooloole/ModifiedReflexive
+tooloodde/PastReflexive
+toolooza/CausativeReflexive
+toolooze/ModifiedCausativeReflexive
+tooloozza/PastCausativeReflexive
+tooloolwa/PassiveReflexive
+tooloolwe/ModifiedPassiveReflexive
+toolooddwa/PastPassiveReflexive
+tooloolebwa/PassiveReflexive
+tooloolebwe/ModifiedPassiveReflexive
+tooloolebbwa/PastPassiveReflexive
+toolooleddwa/PastPassiveReflexive
+tooloolera/LocativeReflexive
+tooloolere/ModifiedLocativeReflexive
+toolooledde/PastLocativeReflexive
 # ---------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwetoowaza(to be humble) --------------------------------------- #
-toowaza
-toowaze
-toowazza
-toowazisa
-toowazise
-toowazisizza
-toowazibwa
-toowazibwe
-toowaziddwa
+omwetooloozi
+# --------------------------------------- okwetoowaza(to be humble): IntrasitiveReflexive --------------------------------------- #
+toowaza/OriginalIntransitiveReflexive
+toowaze/ModifiedIntransitiveReflexive
+toowazza/PastIntransitiveReflexive
+toowazisa/CausativeReflexive
+toowazise/ModifiedCausativeReflexive
+toowazisizza/PastCausativeReflexive
+toowazibwa/PassiveReflexive
+toowazibwe/ModifiedPassiveReflexive
+toowaziddwa/PastPassiveReflexive
 # ---------------------------------------------------------------------------------------------------------- #
 ettaala
 ettaayi
@@ -4673,19 +4713,19 @@ ettabi
 ettaka
 ettale
 ettama
-# ------------------------------------- okwettanira(to often like) ------------------------------------- #
-ttanira
-ttanire
-ttanidde
-ttaniza
-ttanize
-ttanizza
-ttanirwa
-ttanirwe
-ttaniriddwa
-ttanibwa
-ttanibwe
-ttanibbwa
+# ------------------------------------- okwettanira(to often like): Reflexive ------------------------------------- #
+ttanira/OriginalReflexive
+ttanire/ModifiedReflexive
+ttanidde/PastReflexive
+ttaniza/CausativeReflexive
+ttanize/ModifiedCausativeReflexive
+ttanizza/PastCausativeReflexive
+ttanirwa/PassiveReflexive
+ttanirwe/ModifiedPassiveReflexive
+ttaniriddwa/PastPassiveReflexive
+ttanibwa/PassiveReflexive
+ttanibwe/ModifiedPassiveReflexive
+ttanibbwa/PastPassiveReflexive
 # ------------------------------------------------------------------------------------------------------------ #
 ettawulo
 etteeka
@@ -4703,8 +4743,10 @@ ettungulu
 ettuntu
 ettutumu
 ettwale
-# ---------------------------- okwetuga(to hang oneself; to strangle oneself) ----------------------------- #
-tuga
+# ---------------------------- okwetuga(to hang oneself; to strangle oneself): IntransitiveReflexive ----------------------------- #
+tuga/OriginalIntransitiveReflexive
+tuge/ModifiedIntransitiveReflexive
+tuze/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 eviivi
 evinnyo
@@ -4739,55 +4781,61 @@ wombeekera
 wombeekere
 wombeekedde
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwewuunya(to be surprised) --------------------------------------- #
-wuunya
-wuunye
-wuunyizza
-wuunyisa
-wuunyise
-wuunyisizza
-wuunyibwa
-wuunyibwe
-wuunyiddwa
-wuunyiza
-wuunyize
+# --------------------------------------- okwewuunya(to be surprised): Reflexive --------------------------------------- #
+wuunya/OriginalReflexive
+wuunye/ModifiedReflexive
+wuunyizza/PastReflexive
+wuunyisa/CausativeReflexive
+wuunyise/ModifiedCausativeReflexive
+wuunyisizza/PastCausativeReflexive
+wuunyibwa/PassiveReflexive
+wuunyibwe/ModifiedPassiveReflexive
+wuunyiddwa/PastPassiveReflexive
+wuunyiza/LocativeReflexive
+wuunyize/ModifiedLocativeReflexive
+wuunyilizza/PastLocativeReflexive
 # ---------------------------------------------------------------------------------------------------------- #
 ewuzi
 ey
 eya
-# ------------------------------------- okweyagala(to enjoy oneself) -------------------------------------- #
-yagala
+# ------------------------------------- okweyagala(to enjoy oneself): IntransitiveReflexive -------------------------------------- #
+yagala/OriginalIntransitiveReflexive
+yagale/ModifiedIntransitiveReflexive
+yagadde/PastIntransitiveReflexive
+yagalira/LocativeReflexive
+yagalire/ModifiedLocativeReflexive
+yagalidde/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
 yagazi
-# ---------------------------------------- okweyambula(to undress) --------------------------------------- #
-yambula
-yambule
-yambudde
-yambuza
-yambuze
-yambuzza
-yambulira
-yambulire
-yambulidde
+# ---------------------------------------- okweyambula(to undress): Reflexive --------------------------------------- #
+yambula/OriginalReflexive
+yambule/ModifiedReflexive
+yambudde/PastReflexive
+yambuza/CausativeReflexive
+yambuze/ModifiedCausativeReflexive
+yambuzza/PastCausativeReflexive
+yambulira/BenefactiveReflexive
+yambulire/ModifiedBenefactiveReflexive
+yambulidde/PastBenefactiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okweyanjula(to introduce oneself) --------------------------------------- #
-yanjula
-yanjule
-yanjudde
-yanjuza
-yanjuze
-yanjuzza
-yanjulira
-yanjulire
-yanjulidde
+# --------------------------------------- okweyanjula(to introduce oneself): IntransitiveReflexive --------------------------------------- #
+yanjula/OriginalIntransitiveReflexive
+yanjule/ModifiedIntransitiveReflexive
+yanjudde/PastIntransitiveReflexive
+yanjuza/CausativeReflexive
+yanjuze/ModifiedCausativeReflexive
+yanjuzza/PastCausativeReflexive
+yanjulira/LocativeReflexive
+yanjulire/ModifiedLocativeReflexive
+yanjulidde/PastLocativeReflexive
 # ------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okweyanza(to thank) ------------------------------------ #
-yanza
-yanze
-yanzizza
-yanzibwa
-yanzibwe
-yanzibbwa
+# ------------------------------------ okweyanza(to thank): Reflexive ------------------------------------ #
+yanza/OriginalReflexive
+yanze/ModifiedReflexive
+yanzizza/PastReflexive
+yanzibwa/PassiveReflexive
+yanzibwe/ModifiedPassiveReflexive
+yanzibbwa/PastPassiveReflexive
 #
 yanzaako
 yanzaamu
@@ -4882,14 +4930,19 @@ yazikira
 yazikire
 yazikidde
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okweyimbamu(to challenge) --------------------------------------- #
-yimbamu
-yimbemu
-yimbyemu
+# --------------------------------------- okweyimbamu(to challenge): Reflexive --------------------------------------- #
+yimbamu/OriginalReflexive
+yimbemu/ModifiedReflexive
+yimbyemu/PastReflexive
 # --------------------------------------------------------------------------------------------------------- #
 eyo
-# -------------------------------------- okweyokya(to burn oneself) --------------------------------------- #
-yokya
+# -------------------------------------- okweyokya(to burn oneself): Reflexive --------------------------------------- #
+yokya/OriginalReflexive
+yokye/ModifiedReflexive
+yokyezza/PastReflexive
+yokyeza/LocativeReflexive
+yokyeze/ModifiedLocativeReflexive
+yokyelezza/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okuyongera(to increase; inf: okwongera) --------------------------------------- #
 yongera
@@ -4899,13 +4952,13 @@ yongeza
 yongeze
 yongezza
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okweyuna(to hasten) --------------------------------------------- #
-yuna
-yune
-yunye
-yunira
-yunire
-yunidde
+# --------------------------------------- okweyuna(to hasten): Reflexive --------------------------------------------- #
+yuna/OriginalReflexive
+yune/ModifiedReflexive
+yunye/PastReflexive
+yunira/BenefactiveReflexive
+yunire/ModifiedBenefactiveReflexive
+yunidde/PastBenefactiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 ez
 ez
@@ -7159,10 +7212,16 @@ gwire
 gwiridde
 gwi/oo
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwegwanyiza(to wish for) --------------------------------------- #
-gwanyiza
-gwanyize
-gwanyizza
+# --------------------------------------- okwegwanyiza(to wish for): Reflexive --------------------------------------- #
+gwanyiza/OriginalReflexive
+gwanyize/ModifiedReflexive
+gwanyizza/PastReflexive
+gwanyizibwa/PassiveReflexive
+gwanyizibwe/ModifiedPassiveReflexive
+gwanyiziddwa/PastPassiveReflexive
+gwanyisa/CausativeReflexive
+gwanyise/ModifiedCausativeReflexive
+gwanyisizza/PastCausativeReflexive
 # ------------------------------------------------------------------------------------------------------------- #
 gwe
 omugwira
