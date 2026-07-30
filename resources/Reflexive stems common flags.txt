@@ -214,3 +214,41 @@ Unique flag count: 0
 Selected stem details:
 - gendererezza -> unique flag count: 0; unique flags: (none)
 - toolooledde -> unique flag count: 0; unique flags: (none)
+
+
+
+LOCATIVE REFLEXIVE STEMS
+Selected stems: 1
+Common flag count: 21
+Common flags (raw): BL, BM, BN, RF, RI, RP, Rn, ST, WG, WH, WJ, cC, hh, iM, rf, ri, rp, sT, wg, wj, yt
+Unique flag count: 0
+
+Selected stem details:
+- diimira -> unique flag count: 0; unique flags: (none)
+
+
+
+MODIFIED LOCATIVE REFLEXIVE STEMS
+Selected stems: 1
+Common flag count: 4
+Common flags (raw): Rn, Sb, rp, wh
+Unique flag count: 0
+
+Selected stem details:
+- diimire -> unique flag count: 0; unique flags: (none)
+
+
+
+PAST LOCATIVE REFLEXIVE STEMS
+Selected stems: 1
+Common flag count: 7
+Common flags (raw): RP, ST, WG, cC, rp, sT, wg
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- diimidde -> unique flag count: 0; unique flags: (none)
+
+
+
+
