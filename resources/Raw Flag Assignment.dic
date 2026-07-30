@@ -166,9 +166,9 @@ anti
 asatu
 ataano
 ate
-# ---------------------- okutera (to tend) ------------------------------------------------------- #
-tera
-tere
+# ---------------------- okutera (to tend): Intrasitive ------------------------------------------------------- #
+tera/OriginalIntransitive
+tere/ModifiedIntransitive
 # ------------------------------------------------------------------------------------------------ #
 awaka
 awo
@@ -232,19 +232,22 @@ beerayo
 baaba
 baasi
 bagiya
-# -------------------------------- okubajja(to do furniture) ----------------------------------- #
-bajja
-bajje
-bajjizza
-bajjisa
-bajjise
-bajjisizza
-bajjibwa
-bajjibwe 
-bajjiddwa
-bajjira
-bajjire
-bajjidde
+# -------------------------------- okubajja(to do furniture): Type-I Transitive ----------------------------------- #
+bajja/OriginalType-ITransitive
+bajje/ModifiedType-ITransitive
+bajjizza/PastType-ITransitive
+bajjisa/CausativeTransitive
+bajjise/ModifiedCausativeTransitive
+bajjisizza/PastCausativeTransitive
+bajjibwa/PassiveTransitive
+bajjibwe/ModifiedPassiveTransitive
+bajjiddwa/PastPassiveTransitive
+bajjira/LocativeTransitive
+bajjire/ModifiedLocativeTransitive
+bajjidde/PastLocativeTransitive
+bajjiza/BenefactiveTransitive
+bajjize/ModifiedBenefactiveTransitive
+bajjilizza/PastBenefactiveTransitive
 bazzi
 # ------------------------------------------------------------------------------------------------ #
 # ------------------------------- okubaka(to catch a projectile) --------------------------------- #
