@@ -21,6 +21,9 @@
 # !!!!! This file is not the dictionary itself, but rather
 # a raw flag assignment file that uses human language instead of the actual flags.
 # It shows the flags assigned to verbs in the dictionary.  
+# It makes flag assignment easy.
+# It also has corrections for some verbs that were incorrectly typed in the dictionary.
+# So, it's better to use this file to assign flags to verbs in the dictionary instead of using the dictionary itself.
 #
 #
 ab'/C1OC
@@ -2249,20 +2252,20 @@ duumira
 e
 ebbaasa
 # ---------------------------------- okwebaka (to sleep): Intrasitive-Reflexive ---------------------------------- #
-baka
-bake
-basse/Past
-bassibwa
-bassibwe
-bassiddwa
-bassa
-basse/Modified
-basizza
-bassizza
-basize
-bakira
-bakire
-bakidde
+baka/OriginalIntrasitiveReflexive
+bake/ModifiedIntransitiveReflexive
+basse/HybridIntransitiveReflexive
+bassibwa/PassiveReflexive
+bassibwe/ModifiedPassiveReflexive
+bassiddwa/PastPassiveReflexive
+bassa/CausativeReflexive
+bassizza/PastCausativeReflexive
+basiza/BenefactiveReflexive
+basize/ModifiedBenefactiveReflexive
+basilizza/PastBenefactiveReflexive
+bakira/BenefactiveReflexive
+bakire/ModifiedBenefactiveReflexive
+bakidde/PastBenefactiveReflexive
 #
 bakako
 bakamu
@@ -2577,10 +2580,10 @@ ebijanjaalo
 # ------------------------------------ okwebikkirira(to cover oneself): Intrasitive-Reflexive ------------------------------------ #
 bikkirira/OriginalIntransitiveReflexive
 bikkirire/ModifiedIntransitiveReflexive
-bikkiridde/PastIntransitiveReflexive
-bikkirirwa/PassiveIntransitiveReflexive
-bikkirirwe/ModifiedPassiveIntransitiveReflexive
-bikkiririddwa/PastPassiveIntransitiveReflexive
+bikkiridde/PastReflexive
+bikkirirwa/PassiveReflexive
+bikkirirwe/ModifiedPassiveReflexive
+bikkiririddwa/PastPassiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 ebikomo
 ebikonde
@@ -2603,15 +2606,15 @@ ebiwoomerera
 ebugwanjuba
 ebula
 # -------------------------------- okwebungulula(to encircle; to surround): Intrasitive-Reflexive -------------------------------- #
-bungulula
-bungulule
-bunguludde
-bungululwa
-bungululwe
-bungululiddwa
-bungululira
-bungululire
-bungululidde
+bungulula/OriginalIntransitiveReflexive
+bungulule/ModifiedIntransitiveReflexive
+bunguludde/PastIntransitiveReflexive
+bungululwa/PassiveReflexive
+bungululwe/ModifiedPassiveReflexive
+bungululiddwa/PastPassiveReflexive
+bungululira/BenefactiveReflexive
+bungululire/ModifiedBenefactiveReflexive
+bungululidde/PastBenefactiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 ebuvanjuba
 ebweru
@@ -2638,16 +2641,16 @@ eddusu
 edduuka
 edduyiro
 eddwaaliro
-# ----------------------------------------- okwediima(to refuse) ----------------------------------------- #
-diima
-diime
-diimye
-diimisa
-diimise
-diimisizza
-diimira
-diimire
-diimidde
+# ----------------------------------------- okwediima(to refuse): Intrasitive-Reflexive ----------------------------------------- #
+diima/OriginalIntransitiveReflexive
+diime/ModifiedIntransitiveReflexive
+diimye/PastIntransitiveReflexive
+diimisa/CausativeReflexive
+diimise/ModifiedCausativeReflexive
+diimisizza/PastCausativeReflexive
+diimira/LocativeReflexive
+diimire/ModifiedLocativeReflexive
+diimidde/PastLocativeReflexive
 #
 diimako
 diimamu
@@ -2783,20 +2786,20 @@ effujjo
 effumbe
 effumbiro
 effumu/N5zz
-# ------------------------------- **okwefiiriza(to sacrifice) ----------------------------------------- #
-fiiriza
-fiirize
-fiirizza
+# ------------------------------- **okwefiiriza(to sacrifice): Reflexive ----------------------------------------- #
+fiiriza/OriginalReflexive
+fiirize/ModifiedReflexive
+fiirizza/PastReflexive
 # ---------------------------------------------------------------------------------------------------- #
-# -------------------------------- **okwefuula(to pretend) ------------------------------------------- #
-fuula
-fuule
-fudde
+# -------------------------------- **okwefuula(to pretend): IntasitiveReflexive ------------------------------------------- #
+fuula/OriginalIntransitiveReflexive
+fuule/ModifiedIntransitiveReflexive
+fudde/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------- #
-# -------------------------------- **okwefuulira(to betray) ----------------------------------------- #
-fuulira
-fuulire
-fuulidde
+# -------------------------------- **okwefuulira(to betray): Reflexive ----------------------------------------- #
+fuulira/OriginalReflexive
+fuulire/ModifiedReflexive
+fuulidde/PastReflexive
 # ------------------------------------------------------------------------------------------------ #
 eggaali/N3zz
 # --------------------------------------- okuggata(to add/join) --------------------------------------- #
@@ -2813,16 +2816,16 @@ gattira
 gattire
 gattidde
 # ----------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- **okwegayirira(to plead) ----------------------------------------- #
-gayirira
-gayirire
-gayiridde
-gayiriza
-gayirize
-gayirizza
-gayirirwa
-gayirirwe
-gayiriddwa
+# ----------------------------------------- **okwegayirira(to plead): Reflexive ----------------------------------------- #
+gayirira/OriginalReflexive
+gayirire/ModifiedReflexive
+gayiridde/PastReflexive
+gayiriza/CausativeReflexive
+gayirize/ModifiedCausativeReflexive
+gayirizza/PastCausativeReflexive
+gayirirwa/PassiveReflexive
+gayirirwe/ModifiedPassiveReflexive
+gayiriddwa/PastPassiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- **okwegazaanya(to ease; intransitive-Reflexive) --------------------------------------- #
 gazaanya
