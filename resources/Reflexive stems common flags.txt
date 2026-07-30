@@ -40,6 +40,53 @@ Selected stem details:
 - tooloodde -> unique flag count: 0; unique flags: (none)
 
 
+ORIGINAL INTRANSITIVE REFLEXIVE STEMS
+Selected stems: 2
+Common flag count: 18
+Common flags (raw): RF, RI, RP, Rn, ST, WG, WH, WJ, cC, hh, iM, rf, ri, rp, sT, wg, wj, yt
+Unique flag count: 0
+
+Selected stem details:
+- baka -> unique flag count: 0; unique flags: (none)
+- diima -> unique flag count: 0; unique flags: (none)
+
+
+
+MODIFIED INTRANSITIVE REFLEXIVE STEMS
+Selected stems: 2
+Common flag count: 4
+Common flags (raw): RP, Sb, rp, wh
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- bake -> unique flag count: 0; unique flags: (none)
+- diime -> unique flag count: 0; unique flags: (none)
+
+
+
+
+PAST INTRANSITIVE REFLEXIVE STEMS
+Selected stems: 1
+Common flag count: 7
+Common flags (raw): RP, ST, WG, cC, rp, sT, wg
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- diimye -> unique flag count: 0; unique flags: (none)
+
+
+
+COMBINATION OF PAST TENSE INTRANSITIVE REFLEXIVE STEMS AND MODIFIED CAUSATIVE STEMS(HYBRID INTRANSITIVE REFLEXIVE STEMS)
+Selected stems: 1
+Common flag count: 11
+Common flags (raw): FR, JQ, RP, ST, Sb, WG, cC, rp, sT, wg, wh
+Unique flag count: 0
+Unique flags across selected stems: (none)
+
+Selected stem details:
+- basse -> unique flag count: 0; unique flags: (none)
 
 
 CAUSATIVE REFLEXIVE STEMS
