@@ -2,6 +2,15 @@ This document contains the flags used with transitive verbs only.
 After analyzing the type-I and type-II stems, the difference in the flags only happens in origial stems, modified stems, and past tense stems. The rest are the same. 
 Therefore, this document overrides both the type-I stems common flags (resources\Type-I stems common flags.txt) and type-II stems common flags documents (resources\Type-II stems common flags.txt). 
 
+Any verb that is compatible with flag NN and flag UU without changing the meaning is a Type-II.
+For example, the verb "okusiga"(to sow/plant) takes the flags NN and UU, but the meaning changes which makes it a Type-I stem. 
+i.e Tuzisiga(we plant them) vs. Tuzeesiga(we trust them).
+There are some verbs that are easy to identify as Type-I because they are compatible with flag NN and not compatible with flag UU. 
+e.g "okufumba"(to cook) it makes sense to say "tubifumba" (after adding flag NN) but it does not make sense to say "tubyefumba"(after adding flag UU). 
+An example of a Type-II verb is "okusiiga"(to smear/paint) it makes sense to say "Tubisiiga"(we paint them) and "Tubyesiiga"(we paint them to ourselves).
+
+
+
 1. ORIGINAL TYPE-I TRANSITIVE STEMS
 Mode: LONG
 Category: mixed
