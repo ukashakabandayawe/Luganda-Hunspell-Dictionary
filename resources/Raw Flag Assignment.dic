@@ -4687,20 +4687,19 @@ taagiddeeyooko
 taagiddeewo
 taagiddeewooko
 # ----------------------------------------------------------------------------------------- #
-# --------------------------------------- okutaba(to participate): Intransitive --------------------------------------- #
-taba/OriginalIntransitive
-tabe/ModifiedIntransitive
-tabye/PastIntransitive
-tabisa/CausativeIntransitive
-tabise/ModifiedCausativeIntransitive
-tabisizza/PastCausativeIntransitive
-tabibwa/PassiveIntransitive
-tabibwe/ModifiedPassiveIntransitive
-tabiddwa/PastPassiveIntransitive
-tabira/LocativeIntransitive
-tabire/ModifiedLocativeIntransitive
-tabidde/PastLocativeIntransitive
-omwetabi
+# --------------------------------------- okutaba(to become intensive): Deadjective --------------------------------------- #
+taba/OriginalDeadjective
+tabe/ModifiedDeadjective
+tabye/PastDeadjective
+tabisa/CausativeDeadjective
+tabise/ModifiedCausativeDeadjective
+tabisizza/PastCausativeDeadjective
+tabibwa/PassiveDeadjective
+tabibwe/ModifiedPassiveDeadjective
+tabiddwa/PastPassiveDeadjective
+tabira/LocativeDeadjective
+tabire/ModifiedLocativeDeadjective
+tabidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okutala(to move about): Intransitive --------------------------------------- #
 tala/OriginalIntransitive
@@ -4725,8 +4724,14 @@ talira/LocativeIntransitiveReflexive
 talire/ModifiedLocativeIntransitiveReflexive
 talidde/PastLocativeIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okwetaba(to participate) --------------------------------------- #
-#---------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwetaba(to participate): IntransitiveReflexive --------------------------------------- #
+taba/OriginalIntransitiveReflexive
+tabe/ModifiedIntransitiveReflexive
+taze/PastIntransitiveReflexive
+tabira/LocativeReflexive
+tabire/ModifiedLocativeReflexive
+tabidde/PastLocativeReflexive
+# ---------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okwetegereza(to pay attention): Reflexive --------------------------------------- #
 tegereza/OriginalReflexive
 tegereze/ModifiedReflexive
@@ -4815,36 +4820,36 @@ tuze/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
 eviivi
 evinnyo
-# ---------------------------------------- okuvuunika(to turn upside down) ---------------------------------------- #
-vuunika
-vuunike
-vuunise
-vuunikisa
-vuunikise
-vuunikisizza
-vuunikibwa
-vuunikibwe
-vuunikiddwa
-vuunikira
-vuunikire
-vuunikidde
-vuunisi
+# ---------------------------------------- okuvuunika(to turn upside down): Type-I Transitive ---------------------------------------- #
+vuunika/OriginalType-ITransitive
+vuunike/ModifiedType-ITransitive
+vuunise/PastType-ITransitive
+vuunikisa/CausativeTransitive
+vuunikise/ModifiedCausativeTransitive
+vuunikisizza/PastCausativeTransitive
+vuunikibwa/PassiveTransitive
+vuunikibwe/ModifiedPassiveTransitive
+vuunikiddwa/PastPassiveTransitive
+vuunikira/BenefactiveTransitive
+vuunikire/ModifiedBenefactiveTransitive
+vuunikidde/PastBenefactiveTransitive
+omuvuunisi
 # --------------------------------------------------------------------------------------------------------- #
 evviini
 evviivi
 evvu
 evvuuvuumira
 eweema
-# --------------------------------------- okuwombeeka(to humble) --------------------------------------- #
-wombeeka
-wombeeke
-wombeese
-wombeekebwa
-wombeekebwe
-wombekeddwa
-wombeekera
-wombeekere
-wombeekedde
+# --------------------------------------- okuwombeeka(to humble): Type-I Transitive --------------------------------------- #
+wombeeka/OriginalType-ITransitive
+wombeeke/ModifiedType-ITransitive
+wombeese/PastType-ITransitive
+wombeekebwa/PassiveTransitive
+wombeekebwe/ModifiedPassiveTransitive
+wombekeddwa/PastPassiveTransitive
+wombeekera/BenefactiveTransitive
+wombeekere/ModifiedBenefactiveTransitive
+wombeekedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okwewuunya(to be surprised): Reflexive --------------------------------------- #
 wuunya/OriginalReflexive
@@ -5031,35 +5036,39 @@ eza
 eza
 ezzike
 ezziga
-# --------------------------------------- okufa(to die) ----------------------------------------------------- #
-fa
-fe
-fudde
-fiisa
-fiise
-fiisizza
-fiirwa
-fiirwe
-fiiriddwa
-fiira
-fiire
-fiiridde
-fu
+# --------------------------------------- okufa(to die): Intransitive --------------------------------------- #
+fa/OriginalIntransitive
+fe/ModifiedIntransitive
+fudde/PastIntransitive
+fiisa/CausativeIntransitive
+fiise/ModifiedCausativeIntransitive
+fiisizza/PastCausativeIntransitive
+fiirwa/PassiveIntransitive
+fiirwe/ModifiedPassiveIntransitive
+fiiriddwa/PastPassiveIntransitive
+fiira/LocativeIntransitive
+fiire/ModifiedLocativeIntransitive
+fiiridde/PastLocativeIntransitive
+fiiririra/LocativeIntransitive
+fiiririre/ModifiedLocativeIntransitive
+fiiriridde/PastLocativeIntransitive
+omufu
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufaanana(similar) --------------------------------------------- #
-faanana
-faanane
-faananye
-faananya
-faananyizza
-faananyibwa
-faananyibwe
-faananyiddwa
-faananira
-faananire
-faananidde
+# --------------------------------------- okufaanana(similar): Type-I Transitive --------------------------------------------- #
+faanana/OriginalType-ITransitive
+faanane/ModifiedType-ITransitive
+faananye/PastType-ITransitive
+faananya/CausativeTransitive
+faananye/ModifiedCausativeTransitive
+faananyizza/PastCausativeTransitive
+faananibwa/PassiveTransitive
+faananibwe/ModifiedPassiveTransitive
+faananiddwa/PastPassiveTransitive
+faananira/BenefactiveTransitive
+faananire/ModifiedBenefactiveTransitive
+faananidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- faako ------------------------------------------------------------ #
+# -------------------------------------- okufaako ------------------------------------------------------------ #
 faako/RPpsnpffRnRFrfgghhrpPSDPFFRIriYTytSCscWNWGwgWHWJwjiMSTsTRRNNGGSSMMIITTkkvvxxHHttllBGBIBSBKBVBFBQBWBDBHBRBEBXEHEDFCFDEBEFFEFSFVFMFGFAEKwnWMWFwfwhFH
 feeko/NARPnfrpPSscwnwmwgwhSBWWBXFXFPEMFV
 fuddeko/NARPnprpPSNPSCwgWGwhcCiMsTLTNNGGIIBGBFBDBEBXFYEHFDEFFHFGEKEMWNwn
@@ -5069,7 +5078,7 @@ fiireko/NARPnfrpPSFFwmwhSBNNWWUUBVBXFXFPFREMwgWGwjFLJQGCGIGQHCHKHLHYIAIB
 fiiriddeko/NARPnpPSNPSCwgCCcCIMiMstLTNNGGMMIIUUVVBGBFBDBEFYFZEHEJFDFIFHFKFLEKELEMWNwnWGwhWJWHFGsc
 fiiriddeeko/NApsrfrpscWNSSBSBVBRFRwhwgWGwfWMBUFEFJFGFKFN
 # ----------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- faayo ------------------------------------------------------------ #
+# --------------------------------------- okufaayo(to care): Deadjective ------------------------------------------------------------ #
 faayo/psnpffggPSDPNFFFPPppIPipykYTSCscWNwnWMwmWFwfStstLTIM
 feeyo/NAykwmSBPTsc
 fuddeyo/NAPSyknpVPNPSCwnCCLTWN
@@ -5080,26 +5089,26 @@ fiiriddeeyo/NApsrpSCPSscWNwnSSBRFE
 # --------------------------------------------------------------------------------------------------------- #
 famire
 fayiro
-# --------------------------------------- okufeeba(to degrade) --------------------------------------- #
-feeba
-feebe
-feebya
-feebye
-febyezza
+# --------------------------------------- okufeeba(to degrade): Intransitive --------------------------------------- #
+feeba/OriginalIntransitive
+feebe/ModifiedIntransitive
+feebya/CausativeIntransitive
+feebye/HybridIntransitive
+febyezza/PastIntransitive
 # ---------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufera(to con) ----------------------------------------------- #
-fera
-fere
-feze
-fezesa
-fezese
-fezesezza
-ferebwa
-ferebwe
-fereddwa
-ferera
-ferere
-feredde
+# --------------------------------------- okufera(to con): Type-I Transitive ----------------------------------------------- #
+fera/OriginalType-ITransitive
+fere/ModifiedType-ITransitive
+feze/PastType-ITransitive
+fezesa/CausativeTransitive
+fezese/ModifiedCausativeTransitive
+fezesezza/PastCausativeTransitive
+ferebwa/PassiveTransitive
+ferebwe/ModifiedPassiveTransitive
+fereddwa/PastPassiveTransitive
+ferera/BenefactiveTransitive
+ferere/ModifiedBenefactiveTransitive
+feredde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 ffala
 ffe
@@ -5107,15 +5116,16 @@ ffena
 ffenne
 ffenne/N1
 ffiga
-# --------------------------------- okufikka(to remain) ------------------------------------------------ #
-fikka
-fikke
-fisse
-fissa
-fissizza
-fikkira
-fikkire
-fikkidde
+# --------------------------------- okufikka(to remain): Intransitive ------------------------------------------------ #
+fikka/OriginalIntransitive
+fikke/ModifiedIntransitive
+fisse/PastIntransitive
+fissa/CausativeIntransitive
+fisse/ModifiedCausativeIntransitive
+fissizza/PastCausativeIntransitive
+fikkira/LocativeIntransitive
+fikkire/ModifiedLocativeIntransitive
+fikkidde/PastLocativeIntransitive
 #
 fikkako
 fikkamu
@@ -5190,10 +5200,10 @@ fikkiddewooko
 fikkiddeengako
 # ---------------------------------------------------------------------------------------------------- #
 firimu
-# ---------------------------------- okufuba(to strive) ----------------------------------------------- #
-fuba
-fube
-fubye
+# ---------------------------------- okufuba(to strive): Intransitive ----------------------------------------------- #
+fuba/OriginalIntransitive
+fube/ModifiedIntransitive
+fubye/PastIntransitive
 #
 fubako
 fubamu
@@ -5222,18 +5232,21 @@ fubyeewo
 fubyeewooko
 fubyeengako
 # -------------------------------------------------------------------------------------------------- #
-# --------------------------------- okufubutuka (to dash out) --------------------------------------- #
-fubutuka
-fubutuke
-fubutuse
-fubutusa
-fubutusizza
-fubutulwa
-fubutulwe
-fubutuddwa
-fubutula
-fubutule
-fubutudde
+# --------------------------------- okufubutuka (to dash out): Intransitive --------------------------------------- #
+fubutuka/OriginalIntransitive
+fubutuke/ModifiedIntransitive
+fubutuse/PastIntransitive
+fubutusa/CausativeIntransitive
+fubutusizza/PastCausativeIntransitive
+fubutulwa/PassiveIntransitive
+fubutulwe/ModifiedPassiveIntransitive
+fubutuddwa/PastPassiveIntransitive
+fubutula/CausativeIntransitive
+fubutule/ModifiedCausativeIntransitive
+fubutudde/PastCausativeIntransitive
+fubutulira/LocativeIntransitive
+fubutulire/ModifiedLocativeIntransitive
+fubutulidde/PastLocativeIntransitive
 # ---------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- **okufufuggala(to become crushed): Deadjectival --------------------------------------- #
 fufuggala/OriginalDeadjective
@@ -5243,24 +5256,24 @@ fufuggaza/CausativeDeadjective
 fufuggaze/ModifiedCausativeDeadjective
 fufuggazza/PastCausativeDeadjective
 # ---------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- **okufufumya(to torture) --------------------------------------- #
-fufumya
-fufumye
-fufumiza
+# --------------------------------------- **okufufumya(to torture): Type-I Transitive --------------------------------------- #
+fufumya/OriginalType-ITransitive
+fufumye/ModifiedType-ITransitive
+fufumizza/PastType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okufuga(to rule) --------------------------------------------- #
-fuga
-fuge
-fuze
-fugibwa
-fugibwe
-fugibbwa
-fugisa
-fugise
-fugisizza
-fugira
-fugire
-fugidde
+# ------------------------------------ okufuga(to rule): Type-I Transitive --------------------------------------------- #
+fuga/OriginalType-ITransitive
+fuge/ModifiedType-ITransitive
+fuze/PastType-ITransitive
+fugibwa/PassiveTransitive
+fugibwe/ModifiedPassiveTransitive
+fugibbwa/PastPassiveTransitive
+fugisa/CausativeTransitive
+fugise/ModifiedCausativeTransitive
+fugisizza/PastCausativeTransitive
+fugira/BenefactiveTransitive
+fugire/ModifiedBenefactiveTransitive
+fugidde/PastBenefactiveTransitive
 #
 fugako
 fugamu
@@ -5370,79 +5383,88 @@ fugiddewo
 fugiddewooko
 fugiddeengako
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufuka(to pee) --------------------------------------- #
-fuka
-fuke
-fuse
-fusa
-fukisa
-fukise
-fukisizza
-fukibwa
-fukibwe
-fukiddwa
-fukira
-fukire
-fukidde
+# --------------------------------------- okwefuga(to monopolize): Reflexive --------------------------------------- #
+fuga/OriginalReflexive
+fuge/ModifiedReflexive
+fuze/PastReflexive
+fugira/LocativeReflexive
+fugire/ModifiedLocativeReflexive
+fugidde/PastLocativeReflexive
+# ----------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okufuka(to pee): Intransitive --------------------------------------- #
+fuka/OriginalIntransitive
+fuke/ModifiedIntransitive
+fuse/PastIntransitive
+fusa/CausativeIntransitive
+fukisa/CausativeIntransitive
+fukise/ModifiedCausativeIntransitive
+fukisizza/PastCausativeIntransitive
+fukibwa/PassiveIntransitive
+fukibwe/ModifiedPassiveIntransitive
+fukiddwa/PastPassiveIntransitive
+fukira/BenefactiveIntransitive
+fukire/ModifiedBenefactiveIntransitive
+fukidde/PastBenefactiveIntransitive
 # ------------------------------------------------------------------------------------------------ #
-# -------------------------------------- okufukamira(to kneel) --------------------------------------- #
-fukamira
-fukamire
-fukamidde
-fukamiza
-fukamize
-fukamizza
-fukaamirirwa
-fukaamirirwe
-fukaamiriddwa
-fukamirira
-fukamirire
-fukamiridde
+# -------------------------------------- okufukamira(to kneel): Intransitive --------------------------------------- #
+fukamira/OriginalIntransitive
+fukamire/ModifiedIntransitive
+fukamidde/PastIntransitive
+fukamiza/CausativeIntransitive
+fukamize/ModifiedCausativeIntransitive
+fukamizza/PastCausativeIntransitive
+fukaamirirwa/PassiveIntransitive
+fukaamirirwe/ModifiedPassiveIntransitive
+fukaamiriddwa/PastPassiveIntransitive
+fukamirira/BenefactiveIntransitive
+fukamirire/ModifiedBenefactiveIntransitive
+fukamiridde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufukumula(to pour out) --------------------------------------- #
-fukumula
-fukumule
-fukumudde
-fukumuza
-fukumuze
-fukumuzza
-fukumulibwa
-fukumulibwe
-fukumuliddwa
-fukumulira
-fukumulire
-fukumulidde
-fukumuka
-fukumuke
-fukumuse
+# --------------------------------------- okufukumula(to pour out): Type-I Transitive --------------------------------------- #
+fukumula/OriginalType-ITransitive
+fukumule/ModifiedType-ITransitive
+fukumudde/PastType-ITransitive
+fukumuza/CausativeTransitive
+fukumuze/ModifiedCausativeTransitive
+fukumuzza/PastCausativeTransitive
+fukumulibwa/PassiveTransitive
+fukumulibwe/ModifiedPassiveTransitive
+fukumuliddwa/PastPassiveTransitive
+fukumulira/BenefactiveTransitive
+fukumulire/ModifiedBenefactiveTransitive
+fukumulidde/PastBenefactiveTransitive
+fukumuka/OriginalDeadjective
+fukumuke/ModifiedDeadjective
+fukumuse/PastDeadjective
 # ----------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufuluma(to exit) --------------------------------------- #
-fuluma
-fulume
-fulumye
-fulumya
-fulumizza
-fulumibwa
-fulumibwe
-fulumiddwa
-fulumira
-fulumire
-fulumidde
+# --------------------------------------- okufuluma(to exit): Type-I Transitive --------------------------------------- #
+fuluma/OriginalType-ITransitive
+fulume/ModifiedType-ITransitive
+fulumye/PastType-ITransitive
+fulumya/CausativeTransitive
+fulumye/ModifiedCausativeTransitive
+fulumizza/PastCausativeTransitive
+fulumizibwa/PassiveTransitive
+fulumizibwe/ModifiedPassiveTransitive
+fulumiziddwa/PastPassiveTransitive
+fulumira/LocativeTransitive
+fulumire/ModifiedLocativeTransitive
+fulumidde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufumba(to cook) --------------------------------------- #
-fumba
-fumbe
-fumbye
-fumbibwa
-fumbibwe
-fumbiddwa
-fumbisa
-fumbise
-fumbisizza
-fumbira
-fumbire
-fumbidde
-fumbi/oo
+# --------------------------------------- okufumba(to cook): Type-I Transitive --------------------------------------- #
+fumba/OriginalType-ITransitive
+fumbe/ModifiedType-ITransitive
+fumbye/PastType-ITransitive
+fumbibwa/PassiveTransitive
+fumbibwe/ModifiedPassiveTransitive
+fumbiddwa/PastPassiveTransitive
+fumbisa/CausativeTransitive
+fumbise/ModifiedCausativeTransitive
+fumbisizza/PastCausativeTransitive
+fumbira/BenefactiveTransitive
+fumbire/ModifiedBenefactiveTransitive
+fumbidde/PastBenefactiveTransitive
+omufumbi
 #
 fumbako
 fumbamu
@@ -5552,41 +5574,41 @@ fumbiddewo
 fumbiddewooko
 fumbiddeengako
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufumbirwa(to get married) --------------------------------------- #
-fumbirwa
-fumbirwe
-fumbiddwa
-fumbiza
-fumbize
-fumbizza
-fumbo/oo
+# --------------------------------------- okufumbirwa(to get married): Type-I Transitive --------------------------------------- #
+fumbirwa/OriginalType-ITransitive
+fumbirwe/ModifiedType-ITransitive
+fumbiddwa/PastType-ITransitive
+fumbiza/CausativeTransitive
+fumbize/ModifiedCausativeTransitive
+fumbizza/PastCausativeTransitive
+omufumbo
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufumita(to stab/pierce) --------------------------------------- #
-fumita
-fumite
-fumise
-fumitibwa
-fumitibwe
-fumitiddwa
-fumitira
-fumitire
-fumitidde
-fumisi/oo
+# --------------------------------------- okufumita(to stab/pierce): Type-I Transitive --------------------------------------- #
+fumita/OriginalType-ITransitive
+fumite/ModifiedType-ITransitive
+fumise/HybridType-ITransitive
+fumitibwa/PassiveTransitive
+fumitibwe/ModifiedPassiveTransitive
+fumitiddwa/PastPassiveTransitive
+fumitira/BenefactiveTransitive
+fumitire/ModifiedBenefactiveTransitive
+fumitidde/PastBenefactiveTransitive
+omufumisi
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufuna(to get) ------------------------------------------- #
-funa
-fune
-funye
-funibwa
-funibwe
-funiddwa
-funisa
-funise
-funisizza
-funira
-funire
-funidde
-funyi
+# --------------------------------------- okufuna(to get): Type-I Transitive ------------------------------------------- #
+funa/OriginalType-ITransitive
+fune/ModifiedType-ITransitive
+funye/HybridType-ITransitive
+funibwa/PassiveTransitive
+funibwe/ModifiedPassiveTransitive
+funiddwa/PastPassiveTransitive
+funisa/CausativeTransitive
+funise/ModifiedCausativeTransitive
+funisizza/PastCausativeTransitive
+funira/BenefactiveTransitive
+funire/ModifiedBenefactiveTransitive
+funidde/PastBenefactiveTransitive
+omufunyi
 #
 funako
 funamu
@@ -5708,38 +5730,40 @@ fundidde/PastLocativeDeadjective
 funzi/oo
 # ------------------------------------------------------------------------------------------------- #
 fundi
-# --------------------------------------- okufunga(to tuck) ------------------------------------------- #
-funga
-funge
-funze
-fungisa
-fungise
-fungisizza
-fungibwa
-fungibwe
-fungiddwa
-fungibbwa
-fungira
-fungire
-fungidde
+# --------------------------------------- okufunga(to tuck): Type-I Transitive ------------------------------------------- #
+funga/OriginalType-ITransitive
+funge/ModifiedType-ITransitive
+funze/HybridType-ITransitive
+fungisa/CausativeTransitive
+fungise/ModifiedCausativeTransitive
+fungisizza/PastCausativeTransitive
+fungibwa/PassiveTransitive
+fungibwe/ModifiedPassiveTransitive
+fungiddwa/PastPassiveTransitive
+fungibbwa/PastPassiveTransitive
+fungira/BenefactiveTransitive
+fungire/ModifiedBenefactiveTransitive
+fungidde/PastBenefactiveTransitive
+omufunzi
 # ---------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- **okufunvubira (to persist/preserve) --------------------------------------- #
-funvubira
-funvubire
-funvubidde
+# --------------------------------------- **okufunvubira (to persist/preserve): Type-I Transitive --------------------------------------- #
+funvubira/OriginalType-ITransitive
+funvubire/ModifiedType-ITransitive
+funvubidde/PastType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufunya(to fold) ------------------------------------------- #
-funya
-funye
-funyizza
-funyiza
-funyize
-funyibwa
-funyibwe
-funyiddwa
-funyira
-funyire
-funyidde
+# --------------------------------------- okufunya(to fold): Type-I Transitive ------------------------------------------- #
+funya/OriginalType-ITransitive
+funye/ModifiedType-ITransitive
+funyizza/PastType-ITransitive
+funyiza/BenefactiveTransitive
+funyize/ModifiedBenefactiveTransitive
+funyilizza/PastBenefactiveTransitive
+funyibwa/PassiveTransitive
+funyibwe/ModifiedPassiveTransitive
+funyiddwa/PastPassiveTransitive
+funyira/LocativeTransitive
+funyire/ModifiedLocativeTransitive
+funyidde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okufuuka(to become): Deadjectival ------------------------------------------ #
 fuuka/OriginalDeadjective
@@ -5862,59 +5886,59 @@ fuliddewo
 fuliddewooko
 fuliddeengako
 # ------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okufuuwa (to blow) ----------------------------------------- #
-fuuwa
-fuuwe
-fuuye
-fuuwisa
-fuuwise
-fuuwisizza
-fuuwibwa
-fuuwibwe
-fuuwiddwa
-fuuwira
-fuuwire
-fuuwidde
+# ----------------------------------------- okufuuwa (to blow): Type-I Transitive ----------------------------------------- #
+fuuwa/OriginalType-ITransitive
+fuuwe/ModifiedType-ITransitive
+fuuye/PastType-ITransitive
+fuuwisa/CausativeTransitive
+fuuwise/ModifiedCausativeTransitive
+fuuwisizza/PastCausativeTransitive
+fuuwibwa/PassiveTransitive
+fuuwibwe/ModifiedPassiveTransitive
+fuuwiddwa/PastPassiveTransitive
+fuuyira/BenefactiveTransitive
+fuuyire/ModifiedBenefactiveTransitive
+fuuyidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufuuweeta(to smoke ciggarette) --------------------------------------- #
-fuuweeta
-fuuweete
-fuuweese
-fuuweesa
-fuuweese
-fuuweesezza
-fuuweetebwa
-fuuweetebwa
-fuuweeteddwa
-fuuweetera
-fuuweetere
-fuuweetedde
+# --------------------------------------- okufuuweeta(to smoke ciggarette): Type-I Transitive --------------------------------------- #
+fuuweeta/OriginalType-ITransitive
+fuuweete/ModifiedType-ITransitive
+fuuweese/PastType-ITransitive
+fuuweesa/CausativeTransitive
+fuuweese/ModifiedCausativeTransitive
+fuuweesezza/PastCausativeTransitive
+fuuweetebwa/PassiveTransitive
+fuuweetebwe/ModifiedPassiveTransitive
+fuuweeteddwa/PastPassiveTransitive
+fuuweetera/BenefactiveTransitive
+fuuweetere/ModifiedBenefactiveTransitive
+fuuweetedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufuuyira(to spray) --------------------------------------- #
-fuuyira
-fuuyire
-fuuyidde
-fuuyiza
-fuuyize
-fuuyizza
-fuuyibwa
-fuuyibwe
-fuuyiddwa
-fuuyizi/oo
+# --------------------------------------- okufuuyira(to spray): Type-II Transitive --------------------------------------- #
+fuuyira/OriginalType-IITransitive
+fuuyire/ModifiedType-IITransitive
+fuuyidde/PastType-IITransitive
+fuuyiza/CausativeTransitive
+fuuyize/ModifiedCausativeTransitive
+fuuyizza/PastCausativeTransitive
+fuuyibwa/PassiveTransitive
+fuuyibwe/ModifiedPassiveTransitive
+fuuyiddwa/PastPassiveTransitive
+omufuuyizi
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okugaana(to refuse) -------------------------------------- #
-gaana
-gaane
-gaanye
-gaanibwa
-gaanibwe
-gaaniddwa
-gaanisa
-gaanise
-gaanisizza
-gaanira
-gaanire
-gaanidde
+# ---------------------------------------- okugaana(to refuse): Type-II Transitive -------------------------------------- #
+gaana/OriginalType-IITransitive
+gaane/ModifiedType-IITransitive
+gaanye/PastType-IITransitive
+gaanibwa/PassiveTransitive
+gaanibwe/ModifiedPassiveTransitive
+gaaniddwa/PastPassiveTransitive
+gaanisa/CausativeTransitive
+gaanise/ModifiedCausativeTransitive
+gaanisizza/PastCausativeTransitive
+gaanira/BenefactiveTransitive
+gaanire/ModifiedBenefactiveTransitive
+gaanidde/PastBenefactiveTransitive
 #
 gaanako
 gaanamu
@@ -6024,18 +6048,22 @@ gaaniddewo
 gaaniddewooko
 gaaniddeengako
 # ----------------------------------------------------------------------------------------------- #
-# --------------------------------- okugaaya(to chew) ------------------------------------------ #
-gaaya
-gaaye
-gaayizza
-gaayibwa
-gaayibwe
-gaayibbwa
-gaayisa
-gaayise
-gaayisizza
-gaayira
-gaayire
+# --------------------------------- okugaaya(to chew): Type-I Transitive ------------------------------------------ #
+gaaya/OriginalType-ITransitive
+gaaye/ModifiedType-ITransitive
+gaayizza/PastType-ITransitive
+gaayibwa/PassiveTransitive
+gaayibwe/ModifiedPassiveTransitive
+gaayibbwa/PastPassiveTransitive
+gaayisa/CausativeTransitive
+gaayise/ModifiedCausativeTransitive
+gaayisizza/PastCausativeTransitive
+gaayira/LocativeTransitive
+gaayire/ModifiedLocativeTransitive
+gaayidde/PastLocativeTransitive
+gaayiza/BenefactiveTransitive
+gaayize/ModifiedBenefactiveTransitive
+gaayilizza/PastBenefactiveTransitive
 #
 gaayaako
 gaayaamu
@@ -6192,20 +6220,20 @@ gaayireengayooko
 gaayireengawo
 gaayireengawooko
 # ------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okugaba(to share) ---------------------------------------------- #
-gaba
-gabe
-gabye
-gabibwa
-gabibwe
-gabiddwa
-gabisa
-gabise
-gabisizza
-gabira
-gabire
-gabidde
-gabi/oo
+# ---------------------------------- okugaba(to share): Type-I Transitive ---------------------------------------------- #
+gaba/OriginalType-ITransitive
+gabe/ModifiedType-ITransitive
+gabye/PastType-ITransitive
+gabibwa/PassiveTransitive
+gabibwe/ModifiedPassiveTransitive
+gabiddwa/PastPassiveTransitive
+gabisa/CausativeTransitive
+gabise/ModifiedCausativeTransitive
+gabisizza/PastCausativeTransitive
+gabira/BenefactiveTransitive
+gabire/ModifiedBenefactiveTransitive
+gabidde/PastBenefactiveTransitive
+omugabi
 #
 gabako
 gabamu
@@ -6381,37 +6409,39 @@ gabiddeengayooko
 gabiddeengaawo
 gabiddeengawooko
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugabana(to share) --------------------------------------- #
-gabana
-gabane
-gabanye
-gabanya
-gabanyizza
-gabanyiza
-gabanyize
-gabanibwa
-gabanibwe
-gabaniddwa
-gabanira
-gabanire
-gabanidde
+# --------------------------------------- okugabana(to share): Type-I Transitive --------------------------------------- #
+gabana/OriginalType-ITransitive
+gabane/ModifiedType-ITransitive
+gabanye/PastType-ITransitive
+gabanya/CausativeTransitive
+gabanye/ModifiedCausativeTransitive
+gabanyizza/PastCausativeTransitive
+gabanyiza/BenefactiveTransitive
+gabanyize/ModifiedBenefactiveTransitive
+gabanyilizza/PastBenefactiveTransitive
+gabanibwa/PassiveTransitive
+gabanibwe/ModifiedPassiveTransitive
+gabaniddwa/PastPassiveTransitive
+gabanira/LocativeTransitive
+gabanire/ModifiedLocativeTransitive
+gabanidde/PastLocativeTransitive
 # -------------------------------------------------------------------------------------------------- #
-# ------------------------------- okugabula(to serve) --------------------------------------- #
-gabula
-gabule
-gabudde
-gabuza
-gabuze
-gabuzza
-gabulibwa
-gabulibwe
-gabuliddwa
-gabulira
-gabulire
-gabulidde
-gabuzi/oo
+# ------------------------------- okugabula(to serve): Type-II Transitive --------------------------------------- #
+gabula/OriginalType-IITransitive
+gabule/ModifiedType-IITransitive
+gabudde/PastType-IITransitive
+gabuza/CausativeTransitive
+gabuze/ModifiedCausativeTransitive
+gabuzza/PastCausativeTransitive
+gabulibwa/PassiveTransitive
+gabulibwe/ModifiedPassiveTransitive
+gabuliddwa/PastPassiveTransitive
+gabulira/BenefactiveTransitive
+gabulire/ModifiedBenefactiveTransitive
+gabulidde/PastBenefactiveTransitive
+omugabuzi
 # --------------------------------------------------------------------------------------------------------- #
-gagga
+omugagga
 # --------------------------------------- okugaggawala(to become rich): Deadjectival --------------------------------------- #
 gaggawala/OriginalDeadjective
 gaggawale/ModifiedDeadjective
