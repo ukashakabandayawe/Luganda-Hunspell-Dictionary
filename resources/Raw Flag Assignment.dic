@@ -3786,11 +3786,11 @@ ekyoya
 ekyuma
 ely
 elya
-# --------------------------------------- okumalirira(to intend) --------------------------------------- #
-malirira
-malirire
-maliridde
-malirizi
+# --------------------------------------- okumalirira(to intend): Intrasitive --------------------------------------- #
+malirira/OriginalIntransitive
+malirire/ModifiedIntransitive
+maliridde/PastIntransitive
+omumalirizi
 # --------------------------------------------------------------------------------------------------------- #
 embaata
 embaga
@@ -4346,56 +4346,57 @@ erindaazi
 erinnya
 erinnya/N5yy
 erinnyo
-# ------------------------------------ okulondalonda(to pick here and there) ------------------------------------ #
-londalonda
-londelonde
-lonzelonze
+# ------------------------------------ okulondalonda(to pick here and there): Type-I Transitive ------------------------------------ #
+londalonda/OriginalType-ITransitive
+londelonde/ModifiedType-ITransitive
+lonzelonze/PastType-ITransitive
 # ---------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okulumika(to overhear) --------------------------------------- #
-lumika
-lumike
-lumise
-lumikibwa
-lumikibwe
-lumikiddwa
-lumikira
-lumikire
-lumikidde
+# ------------------------------------- okulumika(to overhear): Type-I Transitive --------------------------------------- #
+lumika/OriginalType-ITransitive
+lumike/ModifiedType-ITransitive
+lumise/PastType-ITransitive
+lumikibwa/PassiveTransitive
+lumikibwe/ModifiedPassiveTransitive
+lumikiddwa/PastPassiveTransitive
+lumikira/LocativeTransitive
+lumikire/ModifiedLocativeTransitive
+lumikidde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okulumya(to hurt someone) --------------------------------------- #
-lumya
-lumye
-lumizza
+# --------------------------------------- okulumya(to hurt someone): Type-I Transitive --------------------------------------- #
+lumya/OriginalType-ITransitive
+lumye/ModifiedType-ITransitive
+lumizza/PastType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
 eryanda
 eryato/N5zz
 eryenvu/N5yy
-# --------------------------------------- okusammula(to shake off) -------------------------------------- #
-sammula
-sammule
-sammudde
-sammuza
-sammuze
-sammuzza
-sammulibwa
-sammulibwe
-sammuliddwa
-sammulira
-sammulire
-sammulidde
+# --------------------------------------- okusammula(to shake off): Type-I Transitive -------------------------------------- #
+sammula/OriginalType-ITransitive
+sammule/ModifiedType-ITransitive
+sammudde/PastType-ITransitive
+sammuza/CausativeTransitive
+sammuze/ModifiedCausativeTransitive
+sammuzza/PastCausativeTransitive
+sammulibwa/PassiveTransitive
+sammulibwe/ModifiedPassiveTransitive
+sammuliddwa/PastPassiveTransitive
+sammulira/LocativeTransitive
+sammulire/ModifiedLocativeTransitive
+sammulidde/PastLocativeTransitive
+sammuliza/BenefactiveTransitive
+sammulize/ModifiedBenefactiveTransitive
+sammulizza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okusiga(to sow) --------------------------------------- #
-siga
-sige
-size
-sigibwa
-sigibwe
-sigibbwa
-sigwa
-sigwe
-sigira
-sigire
-sigidde
+# --------------------------------------- okusiga(to sow): Type-I Transitive --------------------------------------- #
+siga/OriginalType-ITransitive
+sige/ModifiedType-ITransitive
+size/PastType-ITransitive
+sigibwa/PassiveTransitive
+sigibwe/ModifiedPassiveTransitive
+sigibbwa/PastPassiveTransitive
+sigira/BenefactiveTransitive
+sigire/ModifiedBenefactiveTransitive
+sigidde/PastBenefactiveTransitive
 #
 sigako
 sigamu
@@ -4473,20 +4474,20 @@ sigiddwaayooko
 sigiddwaawo
 sigiddwaawooko
 # ----------------------------------------------------------------------------------------------------------- # 
-# --------------------------------------- okusiiga(to smear/infect) --------------------------------------- #
-siiga
-siige
-siize
-siigisa
-siigise
-siigisizza
-siigibwa
-siigibwe
-siigibbwa
-siigiddwa
-siigira
-siigire
-siigidde
+# --------------------------------------- okusiiga(to smear/infect): Type-II Transitive --------------------------------------- #
+siiga/OriginalType-IITransitive
+siige/ModifiedType-IITransitive
+siize/PastType-IITransitive
+siigisa/CausativeTransitive
+siigise/ModifiedCausativeTransitive
+siigisizza/PastCausativeTransitive
+siigibwa/PassiveTransitive
+siigibwe/ModifiedPassiveTransitive
+siigibbwa/PastPassiveTransitive
+siigiddwa/PastPassiveTransitive
+siigira/BenefactiveTransitive
+siigire/ModifiedBenefactiveTransitive
+siigidde/PastBenefactiveTransitive
 # ---------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okwesimbawo(to contest): IntransitiveReflexive ------------------------------------------ #
 simbawo/OriginalIntransitiveReflexive
@@ -4517,20 +4518,20 @@ essowani
 essubi
 essuubi
 essuula
-# --------------------------------------- okusunga(to taunt) ------------------------------------------ #
-sunga
-sunge
-sunze
-sungisa
-sungise
-sungisizza
-sungibwa
-sungibwe
-sungiddwa
-sungira
-sungire
-sungidde
-sunzi
+# --------------------------------------- okusunga(to taunt): Type-I Transitive ------------------------------------------ #
+sunga/OriginalType-IITransitive
+sunge/ModifiedType-IITransitive
+sunze/PastType-IITransitive
+sungisa/CausativeTransitive
+sungise/ModifiedCausativeTransitive
+sungisizza/PastCausativeTransitive
+sungibwa/PassiveTransitive
+sungibwe/ModifiedPassiveTransitive
+sungiddwa/PastPassiveTransitive
+sungira/LocativeTransitive
+sungire/ModifiedLocativeTransitive
+sungidde/PastLocativeTransitive
+omusunzi
 # ------------------------------------------------------------------------------------------------------ #
 esweeta
 # ----------------------------------------- okwetaaga(to need): Reflexive ----------------------------------------- #
@@ -4675,36 +4676,46 @@ taagiddeeyooko
 taagiddeewo
 taagiddeewooko
 # ----------------------------------------------------------------------------------------- #
-# --------------------------------------- okutaba(to participate) --------------------------------------- #
-taba
-tabe
-tabye
-tabisa
-tabise
-tabisizza
-tabibwa
-tabibwe
-tabiddwa
-tabira
-tabire
-tabidde
-tabi
+# --------------------------------------- okutaba(to participate): Intransitive --------------------------------------- #
+taba/OriginalIntransitive
+tabe/ModifiedIntransitive
+tabye/PastIntransitive
+tabisa/CausativeIntransitive
+tabise/ModifiedCausativeIntransitive
+tabisizza/PastCausativeIntransitive
+tabibwa/PassiveIntransitive
+tabibwe/ModifiedPassiveIntransitive
+tabiddwa/PastPassiveIntransitive
+tabira/LocativeIntransitive
+tabire/ModifiedLocativeIntransitive
+tabidde/PastLocativeIntransitive
+omwetabi
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okutala(to move about) --------------------------------------- #
-tala
-tale
-taze
-talisa
-talise
-talisizza
-talibwa
-talibwe
-taliddwa
-talira
-talire
-talidde
-tazi
+# --------------------------------------- okutala(to move about): Intransitive --------------------------------------- #
+tala/OriginalIntransitive
+tale/ModifiedIntransitive
+taze/PastIntransitive
+talisa/CausativeIntransitive
+talise/ModifiedCausativeIntransitive
+talisizza/PastCausativeIntransitive
+talibwa/PassiveIntransitive
+talibwe/ModifiedPassiveIntransitive
+taliddwa/PastPassiveIntransitive
+talira/LocativeIntransitive
+talire/ModifiedLocativeIntransitive
+talidde/PastLocativeIntransitive
+omutazi
 # --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwetala(to move about): IntransitiveReflexive --------------------------------------- #
+tala/OriginalIntransitiveReflexive
+tale/ModifiedIntransitiveReflexive
+taze/PastIntransitiveReflexive
+talira/LocativeIntransitiveReflexive
+talire/ModifiedLocativeIntransitiveReflexive
+talidde/PastLocativeIntransitiveReflexive
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okwetaba(to participate) --------------------------------------- #
+#---------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okwetegereza(to pay attention): Reflexive --------------------------------------- #
 tegereza/OriginalReflexive
 tegereze/ModifiedReflexive
