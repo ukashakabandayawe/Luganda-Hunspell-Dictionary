@@ -4524,6 +4524,7 @@ sunge/ModifiedType-IITransitive
 sunze/PastType-IITransitive
 sungisa/CausativeTransitive
 sungise/ModifiedCausativeTransitive
+<<<<<<< HEAD
 sungisizza/PastCausativeTransitive
 sungibwa/PassiveTransitive
 sungibwe/ModifiedPassiveTransitive
@@ -4532,6 +4533,16 @@ sungira/LocativeTransitive
 sungire/ModifiedLocativeTransitive
 sungidde/PastLocativeTransitive
 omusunzi
+=======
+sungisizza
+sungibwa
+sungibwe
+sungiddwa
+sungira
+sungire
+sungidde
+sunzi
+>>>>>>> b491928329bd9627d9587f8c0c19b6818fc01f9c
 # ------------------------------------------------------------------------------------------------------ #
 esweeta
 # ----------------------------------------- okwetaaga(to need): Reflexive ----------------------------------------- #
