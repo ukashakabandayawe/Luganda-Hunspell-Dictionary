@@ -9485,35 +9485,36 @@ kumire/ModifiedBenefactiveTransitive
 kumidde/PastBenefactiveTransitive
 omukumi
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukumba(to march) --------------------------------------------- #
-kumba
-kumbe
-kumbye
-kumbisa
-kumbise
-kumbisizza
-kumbibwa
-kumbibwe
-kumbiddwa
-kumbira
-kumire
-kumidde
-kumbi/oo
+# -------------------------------------------- okukumba(to march): Intransitive --------------------------------------------- #
+kumba/OriginalIntransitive
+kumbe/ModifiedIntransitive
+kumbye/PastIntransitive
+kumbisa/CausativeIntransitive
+kumbise/ModifiedCausativeIntransitive
+kumbisizza/PastCausativeIntransitive
+kumbibwa/PassiveIntransitive
+kumbibwe/ModifiedPassiveIntransitive
+kumbiddwa/PastPassiveIntransitive
+kumbira/BenefactiveIntransitive
+kumire/ModifiedBenefactiveIntransitive
+kumidde/PastBenefactiveIntransitive
+omukumbi
 # ------------------------------------------------------------------------------------------------------------- #
 kumpi
-# -------------------------------------------- okukunama(to expose oneself indescently) --------------------------------------------- #
-kunama
-kuname
-kunamye
-kunamya
-kunamizza
-kunamirwa
-kunamirwe
-kunamiddwa
-kunamira
-kunamire
-kunamidde
-kunami/oo
+# -------------------------------------------- okukunama(to expose oneself indescently): Intransitive --------------------------------------------- #
+kunama/OriginalIntransitive
+kuname/ModifiedIntransitive
+kunamye/PastIntransitive
+kunamya/CausativeIntransitive
+kunamye/ModifiedCausativeIntransitive
+kunamizza/PastCausativeIntransitive
+kunamirwa/PassiveIntransitive
+kunamirwe/ModifiedPassiveIntransitive
+kunamiddwa/PastPassiveIntransitive
+kunamira/BenefactiveIntransitive
+kunamire/ModifiedBenefactiveIntransitive
+kunamidde/PastBenefactiveIntransitive
+omukunami
 # ------------------------------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- kung'aana(to gather/collect) --------------------------------------------- #
 kung'aana
@@ -9528,116 +9529,124 @@ kung'aanira
 kung'aanire
 kung'aanidde
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukunga(to mobilize) --------------------------------------------- #  
-kunga
-kunge
-kunze
-kungisa
-kungise
-kungisizza
-kungibwa
-kungibwe
-kungiddwa
-kungira
-kungire
-kungidde
+# -------------------------------------------- okukunga(to mobilize): Type-I Transitive --------------------------------------------- #  
+kunga/OriginalType-ITransitive
+kunge/ModifiedType-ITransitive
+kunze/PastType-ITransitive
+kungisa/CausativeTransitive
+kungise/ModifiedCausativeTransitive
+kungisizza/PastCausativeTransitive
+kungibwa/PassiveTransitive
+kungibwe/ModifiedPassiveTransitive
+kungiddwa/PastPassiveTransitive
+kungira/BenefactiveTransitive
+kungire/ModifiedBenefactiveTransitive
+kungidde/PastBenefactiveTransitive
+omukunzi
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukungubaga(to mourn) --------------------------------------------- #
-kungubaga
-kungubage
-kungubaze
-kungubagira
-kungubagire
-kungubagidde
+# -------------------------------------------- okukungubaga(to mourn): Intransitive --------------------------------------------- #
+kungubaga/OriginalIntransitive
+kungubage/ModifiedIntransitive
+kungubaze/PastIntransitive
+kungubagirwa/PassiveIntransitive
+kungubagirwe/ModifiedPassiveIntransitive
+kungubagiddwa/PastPassiveIntransitive
+kungubagira/BenefactiveIntransitive
+kungubagire/ModifiedBenefactiveIntransitive
+kungubagidde/PastBenefactiveIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukungula(to harvest) --------------------------------------------- #
-kungula
-kungule
-kungudde
-kunguza
-kunguze
-kunguzza
-kungulwa
-kungulwe
-kunguddwa
-kungulira
-kungulire
-kungulidde
-kunguzi/oo
+# -------------------------------------------- okukungula(to harvest): Type-I Transitive --------------------------------------------- #
+kungula/OriginalType-ITransitive
+kungule/ModifiedType-ITransitive
+kungudde/PastType-ITransitive
+kunguza/CausativeTransitive
+kunguze/ModifiedCausativeTransitive
+kunguzza/PastCausativeTransitive
+kungulwa/PassiveTransitive
+kungulwe/ModifiedPassiveTransitive
+kunguddwa/PastPassiveTransitive
+kungulira/BenefactiveTransitive
+kungulire/ModifiedBenefactiveTransitive
+kungulidde/PastBenefactiveTransitive
+omukunguzi
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukunukiriza(to reach for) --------------------------------------------- #
-kunukiriza
-kunukirize
-kunukirizza
+# -------------------------------------------- okukunukiriza(to reach for): : Type-I Transitive --------------------------------------------- #
+kunukiriza/OriginalType-ITransitive
+kunukirize/ModifiedType-ITransitive
+kunukirizza/PastType-ITransitive
 # ------------------------------------------------------------------------------------------------------------- #
 kw
 kwa
 kwafu
-# -------------------------------------------- okukwana(to befriend) --------------------------------------------- #
-kwana
-kwane
-kwanye
-kwanisa
-kwanise
-kwanisizza
-kwanibwa
-kwanibwe
-kwaniddwa
-kwanira
-kwanire
-kwanidde
-kwanyi/oo
+# -------------------------------------------- okukwana(to befriend): Type-I Transitive --------------------------------------------- #
+kwana/OriginalType-ITransitive
+kwane/ModifiedType-ITransitive
+kwanye/PastType-ITransitive
+kwanisa/CausativeTransitive
+kwanise/ModifiedCausativeTransitive
+kwanisizza/PastCausativeTransitive
+kwanibwa/PassiveTransitive
+kwanibwe/ModifiedPassiveTransitive
+kwaniddwa/PastPassiveTransitive
+kwanira/BenefactiveTransitive
+kwanire/ModifiedBenefactiveTransitive
+kwanidde/PastBenefactiveTransitive
+omukwanyi
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukwanaganya(to mediate) --------------------------------------------- #
-kwanaganya
-kwanaganye
-kwanaganyizza
+# -------------------------------------------- okukwanaganya(to mediate): Type-I Transitive --------------------------------------------- #
+kwanaganya/OriginalType-ITransitive
+kwanaganye/ModifiedType-ITransitive
+kwanaganyizza/PastType-ITransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukwatirira(to touch here and there) --------------------------------------------- #
-kwatirira
-kwatirire
-kwatiridde
-kwatirirwa
-kwatirirwe
-kwatiriddwa
+# -------------------------------------------- okukwatirira(to touch here and there): Type-I Transitive --------------------------------------------- #
+kwatirira/OriginalType-ITransitive
+kwatirire/ModifiedType-ITransitive
+kwatiridde/PastType-ITransitive
+kwatirirwa/PassiveTransitive
+kwatirirwe/ModifiedPassiveTransitive
+kwatiriddwa/PastPassiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-okukwekweta
+# -------------------------------------------- okukwekweta(to do an operation): Intransitive --------------------------------------------- #
+kwekweta/OriginalIntransitive
+kwekwete/ModifiedIntransitive
+kwekwese/PastIntransitive
+# ------------------------------------------------------------------------------------------------------------- #
 ky
 obutonde
 kya
 kya
 kyaafu
-# -------------------------------------------- okukyala(to visit) --------------------------------------------- #
-kyala
-kyale
-kyadde
-kyaza
-kyaze
-kyazizza
-kyazibwa
-kyazibwe
-kyaziddwa
-kyalira
-kyalire
-kyalidde
+# -------------------------------------------- okukyala(to visit): Intransitive --------------------------------------------- #
+kyala/OriginalIntransitive
+kyale/ModifiedIntransitive
+kyadde/PastIntransitive
+kyaza/CausativeIntransitive
+kyaze/ModifiedCausativeIntransitive
+kyazizza/PastCausativeIntransitive
+kyazibwa/PassiveIntransitive
+kyazibwe/ModifiedPassiveIntransitive
+kyaziddwa/PastPassiveIntransitive
+kyalira/BenefactiveIntransitive
+kyalire/ModifiedBenefactiveIntransitive
+kyalidde/PastBenefactiveIntransitive
 # ---------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------------- okukyawa(to hate) --------------------------------------------- #
-kyawa
-kyawe
-kyaye
-kyaya
-kyayisa
-kyayise
-kyayisizza
-kyayibwa
-kyayibwe
-kyayiddwa
-kyayira
-kyayire
-kyayidde
-kyawagana
-kyawagane
-kyawaganye
+# ---------------------------------------------- okukyawa(to hate): Type-I Transitive --------------------------------------------- #
+kyawa/OriginalType-ITransitive
+kyawe/ModifiedType-ITransitive
+kyaye/PastType-ITransitive
+kyaya/CausativeTransitive
+kyayisa/CausativeTransitive
+kyayise/ModifiedCausativeTransitive
+kyayisizza/PastCausativeTransitive
+kyayibwa/PassiveTransitive
+kyayibwe/ModifiedPassiveTransitive
+kyayiddwa/PastPassiveTransitive
+kyayira/BenefactiveTransitive
+kyayire/ModifiedBenefactiveTransitive
+kyayidde/PastBenefactiveTransitive
+kyawagana/OriginalIntransitive
+kyawagane/ModifiedIntransitive
+kyawaganye/PastIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
 kyenda
 kyenvu
@@ -9645,71 +9654,77 @@ kyenyini
 kyewuunyisa
 kyokka
 kyonna
-# -------------------------------------------- okukyuka(to change) --------------------------------------------- #
-kyuka
-kyuke
-kyuse
-kyusa
-kyusizza
-kyusibwa
-kyusibwe
-kyusiddwa
-kyusiza
-kyusize
-kyusizza
+# -------------------------------------------- okukyuka(to change): Intransitive --------------------------------------------- #
+kyuka/OriginalIntransitive
+kyuke/ModifiedIntransitive
+kyuse/PastIntransitive
+kyusa/CausativeIntransitive
+kyuse/ModifiedCausativeIntransitive
+kyusizza/PastCausativeIntransitive
+kyusibwa/PassiveIntransitive
+kyusibwe/ModifiedPassiveIntransitive
+kyusiddwa/PastPassiveIntransitive
+kyusiza/BenefactiveIntransitive
+kyusize/ModifiedBenefactiveIntransitive
+kyusilizza/PastBenefactiveIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okulaajana(to cry for help) --------------------------------------------- #
-laajana
-laajane
-laajanye
-laajanya
-laajanyizza
-laajanyira
-laajanyire
-laajanyidde
+# -------------------------------------------- okulaajana(to cry for help): Intransitive --------------------------------------------- #
+laajana/OriginalIntransitive
+laajane/ModifiedIntransitive
+laajanye/PastIntransitive
+laajanya/CausativeIntransitive
+laajanye/ModifiedCausativeIntransitive
+laajanyizza/PastCausativeIntransitive
+laajanirwa/PassiveIntransitive
+laajanirwe/ModifiedPassiveIntransitive
+laajaniddwa/PastPassiveIntransitive
+laajanyira/BenefactiveIntransitive
+laajanyire/ModifiedBenefactiveIntransitive
+laajanyidde/PastBenefactiveIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okulaalaasa(to blab) --------------------------------------------- #
-laalaasa
-laalaase
-laalaasizza
-laalaasiza
-laalaasize
-laalaasibwa
-laalaasibwe
-laalaasiddwa
+# -------------------------------------------- okulaalaasa(to blab): Type-I Transitive --------------------------------------------- #
+laalaasa/OriginalType-ITransitive
+laalaase/ModifiedType-ITransitive
+laalaasizza/PastType-ITransitive
+laalaasibwa/PassiveTransitive
+laalaasibwe/ModifiedPassiveTransitive
+laalaasiddwa/PastPassiveTransitive
+laalaasiza/BenefactiveTransitive
+laalaasize/ModifiedBenefactiveTransitive
+laalaasilizza/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------------ #
 laavu
-# -------------------------------------------- okulaawa(to castrate) --------------------------------------------- #
-laawa
-laawe
-laaye
-laawisa
-laawise 
-laawisizza
-laawibwa
-laawibwe
-laawiddwa
-laawira
-laawire
-laawidde
+# -------------------------------------------- okulaawa(to castrate): Type-I Transitive --------------------------------------------- #
+laawa/OriginalType-ITransitive
+laawe/ModifiedType-ITransitive
+laaye/PastType-ITransitive
+laawisa/CausativeTransitive
+laawise/ModifiedCausativeTransitive
+laawisizza/PastCausativeTransitive
+laawibwa/PassiveTransitive
+laawibwe/ModifiedPassiveTransitive
+laawiddwa/PastPassiveTransitive
+laawira/BenefactiveTransitive
+laawire/ModifiedBenefactiveTransitive
+laawidde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okulaba(to see) -------------------------------------------------------- #
-laba
-labe
-labye
-labibwa
-labibwe
-labiddwa
-labisa
-labise
-labisizza
-labira
-labire
-labidde
-labagana/NA
-labagane/NA
-labaganye/NA
-omulabi/oo
+# ------------------------------------------- okulaba(to see): Type-I Transitive -------------------------------------------------------- #
+laba/OriginalType-ITransitive
+labe/ModifiedType-ITransitive
+labye/PastType-ITransitive
+labibwa/PassiveTransitive
+labibwe/ModifiedPassiveTransitive
+labiddwa/PastPassiveTransitive
+labisa/CausativeTransitive
+labise/ModifiedCausativeTransitive
+labisizza/PastCausativeTransitive
+labira/BenefactiveTransitive
+labire/ModifiedBenefactiveTransitive
+labidde/PastBenefactiveTransitive
+labagana/OriginalIntransitive
+labagane/ModifiedIntransitive
+labaganye/PastIntransitive
+omulabi
 #
 labako
 labamu
@@ -9872,24 +9887,27 @@ labiddeyooko
 labiddeewo
 labiddeewooko
 # --------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okulabika(to appear) ---------------------------------------------------- #
-labika
-labike
-labise
-labikilwa
-labikilwe
-labikiddwa
-labikira
-labikire
-labikidde
+# ---------------------------------------- okulabika(to appear): Intrasitive ---------------------------------------------------- #
+labika/OriginalIntransitive
+labike/ModifiedIntransitive
+labise/PastIntransitive
+labikilwa/PassiveIntransitive
+labikilwe/ModifiedPassiveIntransitive
+labikiddwa/PastPassiveIntransitive
+labikira/BenefactiveIntransitive
+labikire/ModifiedBenefactiveIntransitive
+labikidde/PastBenefactiveIntransitive
 # -------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okulabirira(to take care of) ------------------------------------------------------- #
-labirira
-labirire
-labiridde   
-labirirwa
-labirirwe
-labiriddwa
+# -------------------------------------- okulabirira(to take care of): Type-I Transitive ------------------------------------------------------- #
+labirira/OriginalType-ITransitive
+labirire/ModifiedType-ITransitive
+labiridde/PastType-ITransitive
+labirirwa/PassiveTransitive
+labirirwe/ModifiedPassiveTransitive
+labiriddwa/PastPassiveTransitive
+labiririra/BenefactiveTransitive
+labiririre/ModifiedBenefactiveTransitive
+labiriridde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------- okulabuka(to become warned): Deadjectival ------------------------------------------------------- #
 labuka/OriginalDeadjective
