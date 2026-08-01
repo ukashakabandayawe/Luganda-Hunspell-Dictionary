@@ -7544,9 +7544,9 @@ jjiddeengayooko
 jjiddeengawo
 jjiddeengawooko
 # ----------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okuja(to fit) ---------------------------------------------------------- #
-ja
-je
+# ------------------------------- okuja(to fit): Intransitive ---------------------------------------------------------- #
+ja/OriginalIntransitive
+je/ModifiedIntransitive
 #
 jaako
 jaamu
@@ -7580,19 +7580,19 @@ jeengawooko
 # ---------------------------------------------------------------------------------------------------------- #
 jjajja
 jjajjange
-# ---------- okujjanjaba(to treat a patient) ----------- #
-jjanjaba
-jjanjabe
-jjanjabye
-jjanjabwa
-jjanjabwe
-jjanjabiddwa
-jjanjabisa
-jjanjabise
-jjanjabisizza
-jjanjabira
-jjanjabire
-jjanjabidde
+# --------------------------------- okujjanjaba(to treat a patient): Type-II Transitive ----------------------------------------- #
+jjanjaba/OriginalType-IITransitive
+jjanjabe/ModifiedType-IITransitive
+jjanjabye/PastType-IITransitive
+jjanjabwa/PassiveTransitive
+jjanjabwe/ModifiedPassiveTransitive
+jjanjabiddwa/PastPassiveTransitive
+jjanjabisa/CausativeTransitive
+jjanjabise/ModifiedCausativeTransitive
+jjanjabisizza/PastCausativeTransitive
+jjanjabira/BenefactiveTransitive
+jjanjabire/ModifiedBenefactiveTransitive
+jjanjabidde/PastBenefactiveTransitive
 #
 jjanjabako
 jjanjabamu
@@ -7713,30 +7713,33 @@ jjanjabiddewo
 jjanjabiddewooko
 # ---------------------------------------------------------------------------------------------------------- #
 jjo
-# --------------------------------------- okujjukira(to remember) ----------------------------------------------- #
-jjukira
-jjukire
-jjjukidde
-jjukiza
-jjukize
-jjukizza
-jjukirwa
-jjukirwe
-jjukiddwa
+# --------------------------------------- okujjukira(to remember): Type-I Transitive ----------------------------------------------- #
+jjukira/OriginalType-ITransitive
+jjukire/ModifiedType-ITransitive
+jjjukidde/PastType-ITransitive
+jjukiza/CausativeTransitive
+jjukize/ModifiedCausativeTransitive
+jjukizza/PastCausativeTransitive
+jjukirwa/PassiveTransitive
+jjukirwe/ModifiedPassiveTransitive
+jjukiddwa/PastPassiveTransitive
+jjukirira/BenefactiveTransitive
+jjukirire/ModifiedBenefactiveTransitive
+jjukiridde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okujjula(to fill/serve food) ----------------------------------------------- #
-jjula
-jjule
-jjudde
-jjulwa
-jjulwe
-jjuddwa
-jjuza
-jjuze
-jjuzza
-jjulira
-jjulire
-jjulidde
+# ----------------------------------- okujjula(to fill/serve food): Type-I Transitive ----------------------------------------------- #
+jjula/OriginalType-ITransitive
+jjule/ModifiedType-ITransitive
+jjudde/PastType-ITransitive
+jjulwa/PassiveTransitive
+jjulwe/ModifiedPassiveTransitive
+jjuddwa/PastPassiveTransitive
+jjuza/CausativeTransitive
+jjuze/ModifiedCausativeTransitive
+jjuzza/PastCausativeTransitive
+jjulira/BenefactiveTransitive
+jjulire/ModifiedBenefactiveTransitive
+jjulidde/PastBenefactiveTransitive
 #
 jjulako
 jjulamu
@@ -7879,45 +7882,45 @@ jjuliddeyooko
 jjuliddewo
 jjuliddewooko
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okujjumbira(to participate) ----------------------------------------------- #
-jjumbira
-jjumbire
-jjumbidde
-jjumbiza
-jjumbize
-jjumbizza
-jjumbirwa
-jjumbirwe
-jjumbiddwa
-jjumbize/oo
+# --------------------------------------- okujjumbira(to participate): Type-I Transitive ----------------------------------------------- #
+jjumbira/OriginalType-ITransitive
+jjumbire/ModifiedType-ITransitive
+jjumbidde/PastType-ITransitive
+jjumbiza/CausativeTransitive
+jjumbize/ModifiedCausativeTransitive
+jjumbizza/PastCausativeTransitive
+jjumbirwa/PassiveTransitive
+jjumbirwe/ModifiedPassiveTransitive
+jjumbiddwa/PastPassiveTransitive
+omujjumbize
 # ------------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okujolonga(to belittle) ----------------------------------------------- #
-jolonga
-jolonge
-jolonze
-jolongesa
-jolongese
-jolongesezza
-jolongebwa
-jolongebwe
-jolongeddwa
-jolongera
-jolongere
-jolongedde
+# ----------------------------------- okujolonga(to belittle): Type-I Transitive ----------------------------------------------- #
+jolonga/OriginalType-ITransitive
+jolonge/ModifiedType-ITransitive
+jolonze/PastType-ITransitive
+jolongesa/CausativeTransitive
+jolongese/ModifiedCausativeTransitive
+jolongesezza/PastCausativeTransitive
+jolongebwa/PassiveTransitive
+jolongebwe/ModifiedPassiveTransitive
+jolongeddwa/PastPassiveTransitive
+jolongera/BenefactiveTransitive
+jolongere/ModifiedBenefactiveTransitive
+jolongedde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okujooga(to tease/disrespect) -------------------------------------------------- #
-jooga
-jooge
-jooze
-joogebwa
-joogebwe
-joogeddwa
-joogesa
-joogese
-joogesezza
-joogera
-joogere
-joogedde
+# ------------------------------- okujooga(to tease/disrespect): Type-I Transitive -------------------------------------------------- #
+jooga/OriginalType-ITransitive
+jooge/ModifiedType-ITransitive
+jooze/PastType-ITransitive
+joogebwa/PassiveTransitive
+joogebwe/ModifiedPassiveTransitive
+joogeddwa/PastPassiveTransitive
+joogesa/CausativeTransitive
+joogese/ModifiedCausativeTransitive
+joogesezza/PastCausativeTransitive
+joogera/BenefactiveTransitive
+joogere/ModifiedBenefactiveTransitive
+joogedde/PastBenefactiveTransitive
 #
 joogako
 joogamu
@@ -8025,30 +8028,31 @@ joogeddeyooko
 joogeddewo
 joogeddewooko
 # ----------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okujulira(to witness) ----------------------------------------------- #
-julira
-julire
-julidde
-juliza
-julize
-julizza
-julirwa
-julirwe
-juliddwa
-julizi/oo
+# --------------------------------------- okujulira(to witness): Type-I Transitive ----------------------------------------------- #
+julira/OriginalType-ITransitive
+julire/ModifiedType-ITransitive
+julidde/PastType-ITransitive
+juliza/CausativeTransitive
+julize/ModifiedCausativeTransitive
+julizza/PastCausativeTransitive
+julirwa/PassiveTransitive
+julirwe/ModifiedPassiveTransitive
+juliddwa/PastPassiveTransitive
+omujulizi
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okukaaba(to cry) ----------------------------------------------------- #
-kaaba
-kaabe
-kaabye
-kaabya
-kaabizza
-kaabibwa
-kaabibwe
-kaabiddwa
-kaabira
-kaabire
-kaabidde
+# -------------------------------------- okukaaba(to cry): Type-I Transitive ----------------------------------------------------- #
+kaaba/OriginalType-ITransitive
+kaabe/ModifiedType-ITransitive
+kaabye/PastType-ITransitive
+kaabya/CausativeTransitive
+kaabye/ModifiedCausativeTransitive
+kaabizza/PastCausativeTransitive
+kaabibwa/PassiveTransitive
+kaabibwe/ModifiedPassiveTransitive
+kaabiddwa/PastPassiveTransitive
+kaabira/BenefactiveTransitive
+kaabire/ModifiedBenefactiveTransitive
+kaabidde/PastBenefactiveTransitive
 #
 kaabako
 kaabamu
@@ -8122,17 +8126,19 @@ kaayira/BenefactiveDeadjective
 kaayire/ModifiedBenefactiveDeadjective
 kaayidde/PastBenefactiveDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okukaayana(to argue) ----------------------------------------------- #
-kaayana
-kaayane
-kaayanye
-kaayanirwa
-kaayanirwe
-kaayanya
-kaayanyizza
-kaayanira
-kaayanire
-kaayanidde
+# ---------------------------------- okukaayana(to argue): Intransitive ----------------------------------------------- #
+kaayana/OriginalIntransitive
+kaayane/ModifiedIntransitive
+kaayanye/PastIntransitive
+kaayanirwa/PassiveIntransitive
+kaayanirwe/ModifiedPassiveIntransitive
+kaayaniddwa/PastPassiveIntransitive
+kaayanya/CausativeIntransitive
+kaayanye/ModifiedCausativeIntransitive
+kaayanyizza/PastCausativeIntransitive
+kaayanira/BenefactiveIntransitive
+kaayanire/ModifiedBenefactiveIntransitive
+kaayanidde/PastBenefactiveIntransitive
 #
 kaayanako
 kaayanamu
@@ -8258,27 +8264,30 @@ kaddiyire/ModifiedLocativeDeadjective
 kaddiyidde/PastLocativeDeadjective
 # ----------------------------------------------------------------------------------------------------- #
 kafuumuulampawu
-# -------------------------------------- okukaka(to force) -------------------------------------------------- #
-kaka
-kake
-kase
-kakibwa
-kakibwe
-kakiddwa
-kakibbwa
-kakira
-kakire
-kakidde
-kasi/oo
+# -------------------------------------- okukaka(to force): Type-I Transitive -------------------------------------------------- #
+kaka/OriginalType-ITransitive
+kake/ModifiedType-ITransitive
+kase/HybridType-ITransitive
+kakibwa/PassiveTransitive
+kakibwe/ModifiedPassiveTransitive
+kakiddwa/PastPassiveTransitive
+kakibbwa/PastPassiveTransitive
+kakira/BenefactiveTransitive
+kakire/ModifiedBenefactiveTransitive
+kakidde/PastBenefactiveTransitive
+omukasi
 # ------------------------------------------------------------------------------------------------------ #
 kakali
-# ----------------------------------- okukasa(to ensure) ----------------------------------------------- #
-kakasa
-kakase
-kakasizza
-kakasibwa
-kakasibwe
-kakasiddwa
+# ----------------------------------- okukasa(to ensure): Type-II Transitive ----------------------------------------------- #
+kakasa/OriginalType-ITransitive
+kakase/ModifiedType-ITransitive
+kakasizza/HybridType-ITransitive
+kakasibwa/PassiveTransitive
+kakasibwe/ModifiedPassiveTransitive
+kakasiddwa/PastPassiveTransitive
+kakasiza/BenefactiveTransitive
+kakasize/ModifiedBenefactiveTransitive
+kakasilizza/PastBenefactiveTransitive
 #
 kakasaako
 kakasaamu
@@ -8363,15 +8372,15 @@ kakasiddwaayooko
 kakasiddwaawo
 kakasiddwaawooko
 # ----------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okukata(to prescribe) ----------------------------------------------- #
-kakata
-kakate
-kakatibwa
-kakatibwe
-kakatiddwa
-kakatira
-kakatire
-kakatide
+# ----------------------------------- okukakata(to prescribe): Intransitive ----------------------------------------------- #
+kakata/OriginalIntransitive
+kakate/ModifiedIntransitive
+kakatibwa/PassiveIntransitive
+kakatibwe/ModifiedPassiveIntransitive
+kakatiddwa/PastPassiveIntransitive
+kakatira/LocativeIntransitive
+kakatire/ModifiedLocativeIntransitive
+kakatide/PastLocativeIntransitive
 # -------------------------------------------------------------------------------------------------------- #
 kakobe
 # ----------------------------------- okukala(to become dry): Deadjectival ----------------------------------------------- #
@@ -8384,10 +8393,10 @@ kalira/LocativeDeadjective
 kalire/ModifiedLocativeDeadjective
 kalidde/PastLocativeDeadjective
 # ----------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okukalambira(to persist) ----------------------------------------------- #
-kalambira
-kalambire
-kalambidde
+# ------------------------------------ okukalambira(to persist): Intransitive ----------------------------------------------- #
+kalambira/OriginalIntransitive
+kalambire/ModifiedIntransitive
+kalambidde/PastIntransitive
 # -------------------------------------------------------------------------------------------------------- #
 kale
 kalenda
@@ -8396,19 +8405,19 @@ kalittima
 kaloti
 kalu
 kalubo
-# ------------------------------------- okukama(to milk) ------------------------------------------------- #
-kama
-kame
-kamye
-kamisa
-kamise
-kamisizza
-kamibwa
-kamibwe
-kamiddwa
-kamira
-kamire
-kamidde
+# ------------------------------------- okukama(to milk): Type-I Transitive ------------------------------------------------- #
+kama/OriginalType-ITransitive
+kame/ModifiedType-ITransitive
+kamye/PastType-ITransitive
+kamisa/CausativeTransitive
+kamise/ModifiedCausativeTransitive
+kamisizza/PastCausativeTransitive
+kamibwa/PassiveTransitive
+kamibwe/ModifiedPassiveTransitive
+kamiddwa/PastPassiveTransitive
+kamira/BenefactiveTransitive
+kamire/ModifiedBenefactiveTransitive
+kamidde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------- #
 # ------------------------------------ okukambuwala(to become harsh): Deadjectival ----------------------------------------------- #
 kambuwala/OriginalDeadjective
@@ -8429,97 +8438,112 @@ kamuka/OriginalDeadjective
 kamuke/ModifiedDeadjective
 kamuse/PastDeadjective
 # -------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okukamula(to wring) ------------------------------------------- #
-kamula
-kamule
-kamudde
-kamuza
-kamuze
-kamuzza
-kamulwa
-kamulwe
-kamuddwa
-kamulira
-kamulire
-kamulidde
+# ---------------------------------------- okukamula(to wring): Type-I Transitive ------------------------------------------- #
+kamula/OriginalType-ITransitive
+kamule/ModifiedType-ITransitive
+kamudde/PastType-ITransitive
+kamuza/CausativeTransitive
+kamuze/ModifiedCausativeTransitive
+kamuzza/PastCausativeTransitive
+kamulwa/PassiveTransitive
+kamulwe/ModifiedPassiveTransitive
+kamuddwa/PastPassiveTransitive
+kamulira/BenefactiveTransitive
+kamulire/ModifiedBenefactiveTransitive
+kamulidde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------- #
 kandida
-# ------------------------------------------ okukangavvula(to punish) ------------------------------------ #
-kangavvula
-kangavvule
-kangavvudde
-kangavvuza
-kangavvuze
-kangavvuzza
-kangavvulwa
-kangavvulwe
-kangavvuddwa
-kangavvulira
-kangavvulire
-kangavvulidde
+# ------------------------------------------ okukangavvula(to punish): Type-I Transitive ------------------------------------ #
+kangavvula/OriginalType-ITransitive
+kangavvule/ModifiedType-ITransitive
+kangavvudde/PastType-ITransitive
+kangavvuza/CausativeTransitive
+kangavvuze/ModifiedCausativeTransitive
+kangavvuzza/PastCausativeTransitive
+kangavvulwa/PassiveTransitive
+kangavvulwe/ModifiedPassiveTransitive
+kangavvuddwa/PastPassiveTransitive
+kangavvulira/BenefactiveTransitive
+kangavvulire/ModifiedBenefactiveTransitive
+kangavvulidde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukanya(to keep on trying) --------------------------------------- #
-kanya
-kanye
-kanyizza
+# --------------------------------------- okukanya(to keep on trying): Intransitive --------------------------------------- #
+kanya/OriginalIntransitive
+kanye/ModifiedIntransitive
+kanyizza/PastIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
 kasambula
 kaseera
 kasita
 kasooli
-# ---------------------------------------- okukasuka(to throw) --------------------------------------------- #
-kasuka
-kasuke
-kasuse
-kasusa
-kasusizza
-kasukibwa
-kasukibwe
-kasukiddwa
-kasukira
-kasukire
-kasukidde
-kasusi/oo
+# ---------------------------------------- okukasuka(to throw): Type-I Transitive --------------------------------------------- #
+kasuka/OriginalType-ITransitive
+kasuke/ModifiedType-ITransitive
+kasuse/PastType-ITransitive
+kasusa/CausativeTransitive
+kasuse/ModifiedCausativeTransitive
+kasusizza/PastCausativeTransitive
+kasukibwa/PassiveTransitive
+kasukibwe/ModifiedPassiveTransitive
+kasukiddwa/PastPassiveTransitive
+kasukira/BenefactiveTransitive
+kasukire/ModifiedBenefactiveTransitive
+kasukidde/PastBenefactiveTransitive
+omukasusi
 # ------------------------------------------------------------------------------------------------------------- #
 katakketakke
 katemba
 kati
 katikkiro
 kato
-# ------------------------------------ okutonda(to create/apologize) ----------------------------------------------- #
-tonda
-tonde
-tonze
-tondesa
-tondese
-tondesezza
-tondebwa
-tondebwe
-tondeddwa
-tondera
-tondere
-tondedde
-tonzi
+# ------------------------------------ okutonda(to create): Type-I Transitive ----------------------------------------------- #
+tonda/OriginalType-ITransitive
+tonde/ModifiedType-ITransitive
+tonze/PastType-ITransitive
+tondesa/CausativeTransitive
+tondese/ModifiedCausativeTransitive
+tondesezza/PastCausativeTransitive
+tondebwa/PassiveTransitive
+tondebwe/ModifiedPassiveTransitive
+tondeddwa/PastPassiveTransitive
+tondera/BenefactiveTransitive
+tondere/ModifiedBenefactiveTransitive
+tondedde/PastBenefactiveTransitive
+omutonzi
 # -------------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------- okwetonda(to apologize): IntransitiveReflexive ----------------------------------------------------- #
+tonda/OriginalIntransitiveReflexive
+tonde/ModifiedIntransitiveReflexive
+tonze/PastIntransitiveReflexive
+tondelwa/PassiveReflexive
+tondelwe/ModifiedPassiveReflexive
+tondeddwa/PastPassiveReflexive
+tondesa/CausativeReflexive
+tondese/ModifiedCausativeReflexive
+tondesezza/PastCausativeReflexive
+tondera/BenefactiveReflexive
+tondere/ModifiedBenefactiveReflexive
+tondedde/PastBenefactiveReflexive
+# ---------------------------------------------------------------------------------------------------- #
 Katonda
 kaweefube
 kawo
 kazambi
 kazooba
 kazzi
-# ------------------------------- okukebera(to check) ---------------------------------------------- #
-kebera
-kebere
-kebedde
-keberwa
-keberwe
-kebeddwa
-kebeza
-kebeze
-kebezza
-keberera
-keberere
-keberedde
+# ------------------------------- okukebera(to check): Type-I Transitive ---------------------------------------------- #
+kebera/OriginalType-ITransitive
+kebere/ModifiedType-ITransitive
+kebedde/PastType-ITransitive
+keberwa/PassiveTransitive
+keberwe/ModifiedPassiveTransitive
+kebeddwa/PastPassiveTransitive
+kebeza/CausativeTransitive
+kebeze/ModifiedCausativeTransitive
+kebezza/PastCausativeTransitive
+keberera/BenefactiveTransitive
+keberere/ModifiedBenefactiveTransitive
+keberedde/PastBenefactiveTransitive
 #
 keberako
 keberamu
@@ -8708,19 +8732,20 @@ keereye/HybridDeadjective
 keereya/CausativeDeadjective
 keereyezza/PastCausativeDeadjective
 # -------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okukeeta(to fed up) ----------------------------------------- #
-keeta
-keete
-keese
-keesa
-keesezza
-keetebwa
-keetebwe
-keeteddwa
-keetebbwa
-keetera
-keetere
-keetedde
+# ------------------------------------ okukeeta(to fed up): Type-I Transitive ----------------------------------------- #
+keeta/OriginalType-ITransitive
+keete/ModifiedType-ITransitive
+keese/PastType-ITransitive
+keesa/CausativeTransitive
+keese/ModifiedCausativeTransitive
+keesezza/PastCausativeTransitive
+keetebwa/PassiveTransitive
+keetebwe/ModifiedPassiveTransitive
+keeteddwa/PastPassiveTransitive
+keetebbwa/PastPassiveTransitive
+keetera/LocativeTransitive
+keetere/ModifiedLocativeTransitive
+keetedde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------- #
 # ------------------------------------------ okukendeera(to become less/decrease): Deadjectival --------------------------------------------- #
 kendeera/OriginalDeadjective
@@ -8731,20 +8756,20 @@ kendeeze/ModifiedCausativeDeadjective
 kendezza/PastCausativeDeadjective
 kendeezezza/PastCausativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukenga(to perceive/notice) --------------------------------------------- #
-kenga
-kenge
-kenze
-kengesa
-kengese
-kengesezza
-kengebwa
-kengebwe
-kengeddwa
-kengera
-kengere
-kengedde
-kenzi/oo
+# --------------------------------------- okukenga(to perceive/notice): Type-I Transitive --------------------------------------------- #
+kenga/OriginalType-ITransitive
+kenge/ModifiedType-ITransitive
+kenze/PastType-ITransitive
+kengesa/CausativeTransitive
+kengese/ModifiedCausativeTransitive
+kengesezza/PastCausativeTransitive
+kengebwa/PassiveTransitive
+kengebwe/ModifiedPassiveTransitive
+kengeddwa/PastPassiveTransitive
+kengera/BenefactiveTransitive
+kengere/ModifiedBenefactiveTransitive
+kengedde/PastBenefactiveTransitive
+omukenzi
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okuketta(to spy) --------------------------------------------- #
 ketta
