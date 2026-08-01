@@ -9088,173 +9088,188 @@ koleddeeyooko
 koleddeewo
 koleddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okukolima(to curse) --------------------------------------------- #
-kolima
-kolime
-kolimye
-kolimisa
-kolimise
-kolimisizza
-kolimirwa
-kolimirwe
-kolimiddwa
-kolimira
-kolimire
-kolimidde
-kolimi/oo
+# ----------------------------------------- okukolima(to curse): Intransitive --------------------------------------------- #
+kolima/OriginalIntransitive
+kolime/ModifiedIntransitive
+kolimye/PastIntransitive
+kolimisa/CausativeIntransitive
+kolimise/ModifiedCausativeIntransitive
+kolimisizza/PastCausativeIntransitive
+kolimirwa/PassiveIntransitive
+kolimirwe/ModifiedPassiveIntransitive
+kolimiddwa/PastPassiveIntransitive
+kolimira/BenefactiveTransitive
+kolimire/ModifiedBenefactiveTransitive
+kolimidde/PastBenefactiveTransitive
+omukolimi
 # -------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okukolobola(to scratch) --------------------------------------------- #
-kolobola
-kolobole
-kolobodde
-koloboza
-koloboze
-kolobozezza
-koloboka
-koloboke
-kolobose
-kolobolwa
-kolobolwe
-koloboddwa
-kolobolera
-kolobolere
-koloboledde
-kolobozi/oo
+# ---------------------------------- okukolobola(to scratch): Type-I Transitive --------------------------------------------- #
+kolobola/OriginalType-ITransitive
+kolobole/ModifiedType-ITransitive
+kolobodde/PastType-ITransitive
+koloboza/CausativeTransitive
+koloboze/ModifiedCausativeTransitive
+kolobozezza/PastCausativeTransitive
+kolobolwa/PassiveTransitive
+kolobolwe/ModifiedPassiveTransitive
+koloboddwa/PastPassiveTransitive
+kolobolera/BenefactiveTransitive
+kolobolere/ModifiedBenefactiveTransitive
+koloboledde/PastBenefactiveTransitive
+omukolobozi
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukolokota(to scrape) --------------------------------------------- # 
-kolokota
-kolokote
-kolokose
-kolokosa
-kolokosezza
-kolokotebwa
-kolokotebwe
-kolokotedwa
-kolokotera
-kolokotere
-kolokotedde
-kolokosi/oo
+# --------------------------------------- okukoloboka(to become scratched): Deadjectival --------------------------------------------- #
+koloboka/OriginalDeadjective
+koloboke/ModifiedDeadjective
+kolobose/PastDeadjective
+koloboza/CausativeDeadjective
+koloboze/ModifiedCausativeDeadjective
+kolobozza/PastCausativeDeadjective
+kolobokera/LocativeDeadjective
+kolobokere/ModifiedLocativeDeadjective
+kolobokedde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukolola(to cough) --------------------------------------------- #
-kolola
-kolole
-kolodde
-koloza
-koloze
-kolozezza
-kololwa
-kololwe
-koloddwa
-kololera
-kololere
-kololedde
-kolozi/oo
+# --------------------------------------- okukolokota(to scrape): Type-I Transitive --------------------------------------------- # 
+kolokota/OriginalType-ITransitive
+kolokote/ModifiedType-ITransitive
+kolokose/PastType-ITransitive
+kolokosa/CausativeTransitive
+kolokose/ModifiedCausativeTransitive
+kolokosezza/PastCausativeTransitive
+kolokotebwa/PassiveTransitive
+kolokotebwe/ModifiedPassiveTransitive
+kolokoteddwa/PastPassiveTransitive
+kolokotera/BenefactiveTransitive
+kolokotere/ModifiedBenefactiveTransitive
+kolokotedde/PastBenefactiveTransitive
+omukolokosi
 # ------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okukoma(to cease/stop) --------------------------------------------- #
-koma
-kome
-komye
-komya
-komezza
+# --------------------------------------- okukolola(to cough): Type-I Transitive --------------------------------------------- #
+kolola/OriginalType-ITransitive
+kolole/ModifiedType-ITransitive
+kolodde/PastType-ITransitive
+koloza/CausativeTransitive
+koloze/ModifiedCausativeTransitive
+kolozza/PastCausativeTransitive
+kololwa/PassiveTransitive
+kololwe/ModifiedPassiveTransitive
+koloddwa/PastPassiveTransitive
+kololera/BenefactiveTransitive
+kololere/ModifiedBenefactiveTransitive
+kololedde/PastBenefactiveTransitive
+omukolozi
+# ------------------------------------------------------------------------------------------------------------- #
+# ------------------------------------- okukoma(to cease/stop): Intransitive --------------------------------------------- #
+koma/OriginalIntransitive
+kome/ModifiedIntransitive
+komye/PastIntransitive
+komya/CausativeIntransitive
+komye/ModifiedCausativeIntransitive
+komezza/PastCausativeIntransitive
 # ---------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okukomawo(to come back) --------------------------------------------- #
-komawo
-komewo
-komyeewo
-komyaawo
-komezzaawo
-komerawo
-komerewo
-komeddewo
+# -------------------------------------- okukomawo(to come back): Intransitive --------------------------------------------- #
+komawo/OriginalIntransitive
+komewo/ModifiedIntransitive
+komyeewo/PastIntransitive
+komyaawo/CausativeIntransitive
+komyeewo/ModifiedCausativeIntransitive
+komezzaawo/PastCausativeIntransitive
+komerawo/BenefactiveIntransitive
+komerewo/ModifiedBenefactiveIntransitive
+komeddewo/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okukomba(to lick) --------------------------------------------- #
-komba
-kombe
-kombye
-kombesa
-kombese
-kombesezza
-kombebwa
-kombebwe
-kombeddwa
-kombera
-kombere
-kombedde
-kombi/oo
+# ---------------------------------------- okukomba(to lick): Type-I Transitive --------------------------------------------- #
+komba/OriginalType-ITransitive
+kombe/ModifiedType-ITransitive
+kombye/PastType-ITransitive
+kombesa/CausativeTransitive
+kombese/ModifiedCausativeTransitive
+kombesezza/PastCausativeTransitive
+kombebwa/PassiveTransitive
+kombebwe/ModifiedPassiveTransitive
+kombeddwa/PastPassiveTransitive
+kombera/BenefactiveTransitive
+kombere/ModifiedBenefactiveTransitive
+kombedde/PastBenefactiveTransitive
+omukombi
 # ------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okukomera(to fence in) ----------------------------------------- #
-komera
+# ---------------------------------------- okukomera(to fence in): Intransitive ----------------------------------------- #
+komera/OriginalIntransitive
+komere/ModifiedIntransitive
+komedde/PastIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukomola(to trim) --------------------------------------------- #
-komola
-komole
-komodde
-komoza
-komoze
-komozza
-komolwa
-komolwe
-komoddwa
-komolera
-komolere
-komoledde
-komozi/oo
+# --------------------------------------- okukomola(to trim): Type-I Transitive --------------------------------------------- #
+komola/OriginalType-ITransitive
+komole/ModifiedType-ITransitive
+komodde/PastType-ITransitive
+komoza/CausativeTransitive
+komoze/ModifiedCausativeTransitive
+komozza/PastCausativeTransitive
+komolwa/PassiveTransitive
+komolwe/ModifiedPassiveTransitive
+komoddwa/PastPassiveTransitive
+komolera/BenefactiveTransitive
+komolere/ModifiedBenefactiveTransitive
+komoledde/PastBenefactiveTransitive
+omukomozi
 # ------------------------------------------------------------------------------------------------------------- #
 kompyuuta
-# --------------------------------------- okukongojja(to hop on one foot) --------------------------------------------- #
-kongojja
-kongojje
-kongojjezza
-kongojjesa
-kongojjese
-kongojjesezza
-kongojjebwa
-kongojjebwe
-kongojjeddwa
-kongojjera
-kongojere
-kongojedde
-kongozzi/oo
+# --------------------------------------- okukongojja(to hop on one foot): Intransitive --------------------------------------------- #
+kongojja/OriginalIntransitive
+kongojje/ModifiedIntransitive
+kongojjezza/PastIntransitive
+kongojjesa/CausativeIntransitive
+kongojjese/ModifiedCausativeIntransitive
+kongojjesezza/PastCausativeIntransitive
+kongojjebwa/PassiveIntransitive
+kongojjebwe/ModifiedPassiveIntransitive
+kongojjeddwa/PastPassiveIntransitive
+kongojjera/LocativeIntransitive
+kongojere/ModifiedLocativeIntransitive
+kongojedde/PastLocativeIntransitive
+omukongozzi
 # ------------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okukongoola(to mock) --------------------------------------------- #
-kongoola
-kongoole
-kongoodde
-kongooza
-kongooze
-kongoozezza
-kongoolwa
-kongoolwe
-kongooddwa
-kongoolera
-kongoolere
-kongooledde
-kongoozi/oo
+# ----------------------------------------- okukongoola(to mock): Type-I Transitive --------------------------------------------- #
+kongoola/OriginalType-ITransitive
+kongoole/ModifiedType-ITransitive
+kongoodde/PastType-ITransitive
+kongooza/CausativeTransitive
+kongooze/ModifiedCausativeTransitive
+kongoozezza/PastCausativeTransitive
+kongoolwa/PassiveTransitive
+kongoolwe/ModifiedPassiveTransitive
+kongooddwa/PastPassiveTransitive
+kongoolera/BenefactiveTransitive
+kongoolere/ModifiedBenefactiveTransitive
+kongooledde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukonkomala(to abject) --------------------------------------------- #
-konkomala
-konkomale
-konkomadde
-konkomaza
-konkomaze
-konkomazza
-konkomalira
-konkomalire
-konkomalidde
+# --------------------------------------- okukonkomala(to abject): Intransitive --------------------------------------------- #
+konkomala/OriginalIntransitive
+konkomale/ModifiedIntransitive
+konkomadde/PastIntransitive
+konkomaza/CausativeIntransitive
+konkomaze/ModifiedCausativeIntransitive
+konkomazza/PastCausativeIntransitive
+konkomalira/LocativeIntransitive
+konkomalire/ModifiedLocativeIntransitive
+konkomalidde/PastLocativeIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukonkona(to knock) --------------------------------------------- #
-konkona
-konkone
-konkonye
-konkonya
-konkonyezza
-konkonwa
-konkonwe
-konkoneddwa
-konkonera
-konkonere
-konkonedde
-konkonyi/oo
+# --------------------------------------- okukonkona(to knock): Type-I Transitive --------------------------------------------- #
+konkona/OriginalType-ITransitive
+konkone/ModifiedType-ITransitive
+konkonye/PastType-ITransitive
+konkonya/CausativeTransitive
+konkonye/ModifiedCausativeTransitive
+konkonyezza/PastCausativeTransitive
+konkonebwa/PassiveTransitive
+konkonebwe/ModifiedPassiveTransitive
+konkonwa/PassiveTransitive
+konkonwe/ModifiedPassiveTransitive
+konkoneddwa/PastPassiveTransitive
+konkonera/LocativeTransitive
+konkonere/ModifiedLocativeTransitive
+konkonedde/PastLocativeTransitive
+omukonkonyi
 # -------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okukonziba(to become emaciated): Deadjectival --------------------------------------------- #
 konziba/OriginalDeadjective
@@ -9267,33 +9282,33 @@ konzibire/ModifiedLocativeDeadjective
 konzibidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
 kookolo
-# --------------------------------------- okukookoonya(to tantalize) --------------------------------------------- #
-kookoonya
-kookoonye
-kookoonyezza
-kookoonyeza
-kookoonyeze
-kookoonyebwa
-kookoonyebwe
-kookoonyeddwa
-kookoonyera
-kookoonyere
-kookoonyedde
+# --------------------------------------- okukookoonya(to tantalize): Type-I Transitive --------------------------------------------- #
+kookoonya/OriginalType-ITransitive
+kookoonye/ModifiedType-ITransitive
+kookoonyezza/PastType-ITransitive
+kookoonyesa/CausativeTransitive
+kookoonyese/ModifiedCausativeTransitive
+kookoonyebwa/PassiveTransitive
+kookoonyebwe/ModifiedPassiveTransitive
+kookoonyeddwa/PastPassiveTransitive
+kookoonyeza/BenefactiveTransitive
+kookoonyeze/ModifiedBenefactiveTransitive
+kookoonyelezza/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukoona(to hit) --------------------------------------------------- #
-koona
-koone
-koonye
-koonesa
-koonese
-koonesezza
-koonebwa
-koonebwe
-kooneddwa
-koonera
-koonere
-koonedde
-koonyi/oo
+# --------------------------------------- okukoona(to hit): Type-I Transitive --------------------------------------------------- #
+koona/OriginalType-ITransitive
+koone/ModifiedType-ITransitive
+koonye/PastType-ITransitive
+koonesa/CausativeTransitive
+koonese/ModifiedCausativeTransitive
+koonesezza/PastCausativeTransitive
+koonebwa/PassiveTransitive
+koonebwe/ModifiedPassiveTransitive
+kooneddwa/PastPassiveTransitive
+koonera/BenefactiveTransitive
+koonere/ModifiedBenefactiveTransitive
+koonedde/PastBenefactiveTransitive
+omukoonyi
 koonakoona
 koonekoone
 koonyekoonye
@@ -9315,54 +9330,60 @@ koowere/ModifiedLocativeDeadjective
 koowedde/PastLocativeDeadjective
 koowu/oo
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukotoggera(to hinder) --------------------------------------------- #
-kotoggera
-kotoggere
-kotoggedde
-kotoggesa
-kotoggese
-kotoggesezza
-kotoggelwa
-kotoggelwe
-kotoggeddwa
-kotoggera
-kotogere
-kotogedde
+# --------------------------------------- okukotoggera(to hinder): Type-I Transitive --------------------------------------------- #
+kotoggera/OriginalType-ITransitive
+kotoggere/ModifiedType-ITransitive
+kotoggedde/PastType-ITransitive
+kotoggesa/CausativeTransitive
+kotoggese/ModifiedCausativeTransitive
+kotoggesezza/PastCausativeTransitive
+kotoggelwa/PassiveTransitive
+kotoggelwe/ModifiedPassiveTransitive
+kotoggeddwa/PastPassiveTransitive
+kotoggerera/BenefactiveTransitive
+kotogerere/ModifiedBenefactiveTransitive
+kotogeredde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 kovvu
 kristu
 ku
-# ------------------------------------------- okukuba(to beat) --------------------------------------------- #
-kuba
-kube
-kubye
-kubisa
-kubiseo
-kubisizza
-kubibwa
-kubibwe
-kubiddwa
-kubira
-kubire
-kubidde
-kubi
+# ------------------------------------------- okukuba(to beat): Type-II Transitive --------------------------------------------- #
+kuba/OriginalType-IITransitive
+kube/ModifiedType-IITransitive
+kubye/PastType-IITransitive
+kubisa/CausativeTransitive
+kubise/ModifiedCausativeTransitive
+kubisizza/PastCausativeTransitive
+kubibwa/PassiveTransitive
+kubibwe/ModifiedPassiveTransitive
+kubiddwa/PastPassiveTransitive
+kubira/BenefactiveTransitive
+kubire/ModifiedBenefactiveTransitive
+kubidde/PastBenefactiveTransitive
+omukubi
 # ---------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukubagiza(to console) --------------------------------------------- #
-kubagiza
-kubagize
-kubagizza
-kubagizibwa
-kubagizibwe
-kubagiziddwa
+# -------------------------------------------- okukubagiza(to console): Type-I Transitive --------------------------------------------- #
+kubagiza/OriginalType-ITransitive
+kubagize/ModifiedType-ITransitive
+kubagizza/PastType-ITransitive
+kubagizibwa/PassiveTransitive
+kubagizibwe/ModifiedPassiveTransitive
+kubagiziddwa/PastPassiveTransitive
+kubagiririza/BenefactiveTransitive
+kubagiririze/ModifiedBenefactiveTransitive
+kubagiririzza/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------------- #
 kubanga
-# -------------------------------------------- okukubiriza(to urge) --------------------------------------------- #
-kubiriza
-kubirize
-kubirizza
-kubirizibwa
-kubirizibwe
-kubiriziddwa
+# -------------------------------------------- okukubiriza(to urge): Type-I Transitive --------------------------------------------- #
+kubiriza/OriginalType-ITransitive
+kubirize/ModifiedType-ITransitive
+kubirizza/PastType-ITransitive
+kubirizibwa/PassiveTransitive
+kubirizibwe/ModifiedPassiveTransitive
+kubiriziddwa/PastPassiveTransitive
+kubiririza/BenefactiveTransitive
+kubiririze/ModifiedBenefactiveTransitive
+kubiririzza/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- okukuguka(to become an expert): Deadjectival --------------------------------------------- #
 kuguka/OriginalDeadjective
@@ -9374,16 +9395,16 @@ kugukira/LocativeDeadjective
 kugukire/ModifiedLocativeDeadjective
 kugukidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukukusa(to smuggle) --------------------------------------------- #
-kukusa
-kukuse
-kukusizza
-kukusiza
-kukusize
-kukusizza
-kukusibwa
-kukusibwe
-kukusiddwa
+# -------------------------------------------- okukukusa(to smuggle): Type-I Transitive --------------------------------------------- #
+kukusa/OriginalType-ITransitive
+kukuse/ModifiedType-ITransitive
+kukusizza/PastType-ITransitive
+kukusibwa/PassiveTransitive
+kukusibwe/ModifiedPassiveTransitive
+kukusiddwa/PastPassiveTransitive
+kukusiza/BenefactiveTransitive
+kukusize/ModifiedBenefactiveTransitive
+kukusilizza/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- okukula(to become grown): Deadjectival --------------------------------------------- #
 kula/OriginalDeadjective
@@ -9408,61 +9429,61 @@ kulaakulanira/LocativeDeadjective
 kulaakulanire/ModifiedLocativeDeadjective
 kulaakulanidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukulembera(to lead) --------------------------------------------- #
-kulembera
-kulembere
-kulembedde
-kulembeza
-kulembeze
-kulembezza
-kulemberwa
-kulemberwe
-kulembeddwa
-kulemberera
-kulemberere
-kulemberedde
+# -------------------------------------------- okukulembera(to lead): Type-I Transitive --------------------------------------------- #
+kulembera/OriginalType-ITransitive
+kulembere/ModifiedType-ITransitive
+kulembedde/PastType-ITransitive
+kulembeza/CausativeTransitive
+kulembeze/ModifiedCausativeTransitive
+kulembezza/PastCausativeTransitive
+kulemberwa/PassiveTransitive
+kulemberwe/ModifiedPassiveTransitive
+kulembeddwa/PastPassiveTransitive
+kulemberera/BenefactiveTransitive
+kulemberere/ModifiedBenefactiveTransitive
+kulemberedde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 kuliko
 kulu
-# -------------------------------------------- okukulukuta(to flow) --------------------------------------------- #
-kulukuta
-kulukute
-kulukuse
-kulukusa
-kulukusizza
-kulukusibwa
-kulukusibwe
-kulukusiddwa
-kulukutira
-kulukutire
-kulukutidde
+# -------------------------------------------- okukulukuta(to flow): intransitive --------------------------------------------- #
+kulukuta/OriginalIntransitive
+kulukute/ModifiedIntransitive
+kulukuse/HybridIntransitive
+kulukusa/CausativeIntransitive
+kulukusizza/PastCausativeIntransitive
+kulukusibwa/PassiveIntransitive
+kulukusibwe/ModifiedPassiveIntransitive
+kulukusiddwa/PastPassiveIntransitive
+kulukutira/LocativeIntransitive
+kulukutire/ModifiedLocativeIntransitive
+kulukutidde/PastLocativeIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukuluusana(to work hard) --------------------------------------------- #
-kuluusana
-kuluusane
-kuluusanye
-kuluusanya
-kuluusanyizza
-kuluusanibwa
-kuluusanibwe
-kuluusaniddwa
+# -------------------------------------------- okukuluusana(to work hard): Intransitive --------------------------------------------- #
+kuluusana/OriginalIntransitive
+kuluusane/ModifiedIntransitive
+kuluusanye/HybridIntransitive
+kuluusanya/CausativeIntransitive
+kuluusanyizza/PastCausativeIntransitive
+kuluusanibwa/PassiveIntransitive
+kuluusanibwe/ModifiedPassiveIntransitive
+kuluusaniddwa/PastPassiveIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
 kulwa
 kulwaaki
-# -------------------------------------------- okukuma(to ignite) --------------------------------------------- #
-kuma
-kume
-kumye
-kumisa
-kumise
-kumisizza
-kumibwa
-kumibwe
-kumiddwa
-kumira
-kumire
-kumidde
-kumi/oo
+# -------------------------------------------- okukuma(to ignite): Type-I Transitive --------------------------------------------- #
+kuma/OriginalType-ITransitive
+kume/ModifiedType-ITransitive
+kumye/PastType-ITransitive
+kumisa/CausativeTransitive
+kumise/ModifiedCausativeTransitive
+kumisizza/PastCausativeTransitive
+kumibwa/PassiveTransitive
+kumibwe/ModifiedPassiveTransitive
+kumiddwa/PastPassiveTransitive
+kumira/BenefactiveTransitive
+kumire/ModifiedBenefactiveTransitive
+kumidde/PastBenefactiveTransitive
+omukumi
 # ------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------------- okukumba(to march) --------------------------------------------- #
 kumba
