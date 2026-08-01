@@ -9917,33 +9917,33 @@ labukira/LocativeDeadjective
 labukire/ModifiedLocativeDeadjective
 labukidde/PastLocativeDeadjective
 # -------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okulabula(to warn) ------------------------------------------------------- #
-labula
-labule
-labudde
-labuza
-labuze
-labuzze
-labulwa
-labulwe
-labuddwa
-labulira
-labulire
-labulidde
+# -------------------------------------- okulabula(to warn): Type-I Transitive ------------------------------------------------------- #
+labula/OriginalType-ITransitive
+labule/ModifiedType-ITransitive
+labudde/PastType-ITransitive
+labuza/CausativeTransitive
+labuze/ModifiedCausativeTransitive
+labuzze/PastCausativeTransitive
+labulwa/PassiveTransitive
+labulwe/ModifiedPassiveTransitive
+labuddwa/PastPassiveTransitive
+labulira/BenefactiveTransitive
+labulire/ModifiedBenefactiveTransitive
+labulidde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okulaga(to show) ------------------------------------------------------- #
-laga
-lage
-laze
-lagibwa
-lagibwe
-lagibbwa
-lagisa
-lagise
-lagisizza
-lagira
-lagire
-lagidde
+# -------------------------------------- okulaga(to show): Type-II Transitive ------------------------------------------------------- #
+laga/OriginalType-IITransitive
+lage/ModifiedType-IITransitive
+laze/PastType-IITransitive
+lagibwa/PassiveTransitive
+lagibwe/ModifiedPassiveTransitive
+lagibbwa/PastPassiveTransitive
+lagisa/CausativeTransitive
+lagise/ModifiedCausativeTransitive
+lagisizza/PastCausativeTransitive
+lagira/BenefactiveTransitive
+lagire/ModifiedBenefactiveTransitive
+lagidde/PastBenefactiveTransitive
 #
 lagako
 lagamu
@@ -10097,65 +10097,65 @@ lagiddeeyooko
 lagiddeewo
 lagiddeewooko
 # ----------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okulagaana(to agree) --------------------------------------------- #
-lagaana
-lagaane
-lagaanye
-lagaanisa
-lagaanise
-lagaanisizza
-lagaanibwa
-lagaanibwe
-lagaaniddwa
-lagaanira
-lagaanire
-lagaanidde
+# ------------------------------------------- okulagaana(to agree): Intransitive --------------------------------------------- #
+lagaana/OriginalIntransitive
+lagaane/ModifiedIntransitive
+lagaanye/PastIntransitive
+lagaanisa/CausativeIntransitive
+lagaanise/ModifiedCausativeIntransitive
+lagaanisizza/PastCausativeIntransitive
+lagaanibwa/PassiveIntransitive
+lagaanibwe/ModifiedPassiveIntransitive
+lagaaniddwa/PastPassiveIntransitive
+lagaanira/LocativeIntransitive
+lagaanire/ModifiedLocativeIntransitive
+lagaanidde/PastLocativeIntransitive
 # ----------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okulagajjala(to neglect) --------------------------------------------- #
-lagajjala
-lagajjale
-lagajjadde
-lagajjaza
-lagajjaze
-lagajjazza
-lagajjalilwa
-lagajjalilwe
-lagajjaliddwa
-lagajjalira
-lagajjalire
-lagajjalidde
-lagajjavu/oo
+# ------------------------------------------- okulagajjala(to neglect): Deadjectival --------------------------------------------- #
+lagajjala/OriginalDeadjective
+lagajjale/ModifiedDeadjective
+lagajjadde/PastDeadjective
+lagajjaza/CausativeDeadjective
+lagajjaze/ModifiedCausativeDeadjective
+lagajjazza/PastCausativeDeadjective
+lagajjalilwa/PassiveDeadjective
+lagajjalilwe/ModifiedPassiveDeadjective
+lagajjaliddwa/PastPassiveDeadjective
+lagajjalira/BenefactiveDeadjective
+lagajjalire/ModifiedBenefactiveDeadjective
+lagajjalidde/PastBenefactiveDeadjective
+omulagajjavu
 # ----------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okulagira(to command) --------------------------------------------- #
-lagira
-lagire
-lagidde
-lagiza
-lagize
-lagizza
-lagilwa
-lagilwe
-lagiddwa
+# ------------------------------------------- okulagira(to command): Type-II Transitive --------------------------------------------- #
+lagira/OriginalType-IITransitive
+lagire/ModifiedType-IITransitive
+lagidde/PastType-IITransitive
+lagiza/CausativeTransitive
+lagize/ModifiedCausativeTransitive
+lagizza/PastCausativeTransitive
+lagilwa/PassiveTransitive
+lagilwe/ModifiedPassiveTransitive
+lagiddwa/PastPassiveTransitive
 # ----------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okulagula(to foretell) --------------------------------------------- #
-lagula
-lagule
-lagudde
-laguza
-laguze
-laguzza
-lagulwa
-lagulwe
-laguddwa
-lagulira
-lagulire
-lagulidde
+# ------------------------------------------- okulagula(to foretell): Type-I Transitive --------------------------------------------- #
+lagula/OriginalType-ITransitive
+lagule/ModifiedType-ITransitive
+lagudde/PastType-ITransitive
+laguza/CausativeTransitive
+laguze/ModifiedCausativeTransitive
+laguzza/PastCausativeTransitive
+lagulwa/PassiveTransitive
+lagulwe/ModifiedPassiveTransitive
+laguddwa/PastPassiveTransitive
+lagulira/BenefactiveTransitive
+lagulire/ModifiedBenefactiveTransitive
+lagulidde/PastBenefactiveTransitive
 # ----------------------------------------------------------------------------------------------------------------- #
 laguzi
-# ---------------------------------- okulakasira(to remain longing for something) ----------------------------------- #
-lakasira
-lakasire
-lakasidde
+# ---------------------------------- okulakasira(to remain longing for something): Intransitive ----------------------------------- #
+lakasira/OriginalIntransitive
+lakasire/ModifiedIntransitive
+lakasidde/PastIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
 lala
 lalu
@@ -10173,29 +10173,30 @@ lalukira/BenefactiveDeadjective
 lalukire/ModifiedBenefactiveDeadjective
 lalukidde/PastBenefactiveDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okulamaga(to do pilgrimage) --------------------------------------------- #
-lamaga
-lamage
-lamaze
-lamaza
-lamazizza
-lamagira
-lamagire
-lamagidde
+# ---------------------------------- okulamaga(to do pilgrimage): Intransitive --------------------------------------------- #
+lamaga/OriginalIntransitive
+lamage/ModifiedIntransitive
+lamaze/PastIntransitive
+lamaza/CausativeIntransitive
+lamaze/ModifiedCausativeIntransitive
+lamazizza/PastCausativeIntransitive
+lamagira/BenefactiveIntransitive
+lamagire/ModifiedBenefactiveIntransitive
+lamagidde/PastBenefactiveIntransitive
 # -------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okulamba(to brand) --------------------------------------------- #
-lamba
-lambe
-lambye
-lambisa
-lambise
-lambisizza
-lambibwa
-lambibwe
-lambiddwa
-lambira
-lambire
-lambidde
+# ---------------------------------- okulamba(to brand): Type-I Transitive --------------------------------------------- #
+lamba/OriginalType-ITransitive
+lambe/ModifiedType-ITransitive
+lambye/PastType-ITransitive
+lambisa/CausativeTransitive
+lambise/ModifiedCausativeTransitive
+lambisizza/PastCausativeTransitive
+lambibwa/PassiveTransitive
+lambibwe/ModifiedPassiveTransitive
+lambiddwa/PastPassiveTransitive
+lambira/BenefactiveTransitive
+lambire/ModifiedBenefactiveTransitive
+lambidde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------- okulambika(to portray) --------------------------------------------- #
 lambika
