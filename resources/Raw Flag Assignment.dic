@@ -10339,43 +10339,44 @@ leetera/BenefactiveTransitive
 leetere/ModifiedBenefactiveTransitive
 leetedde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuleka(to leave) --------------------------------------------- #
-leka
-leke
-lesse
-lesa
-lese
-lesezza
-lekebwa
-lekebwe
-lekeddwa
-lekera
-lekere
-lekedde
+# ---------------------------------------- okuleka(to leave): Type-I Transitive --------------------------------------------- #
+leka/OriginalType-ITransitive
+leke/ModifiedType-ITransitive
+lesse/PastType-ITransitive
+lesa/CausativeTransitive
+lese/ModifiedCausativeTransitive
+lesezza/PastCausativeTransitive
+lekebwa/PassiveTransitive
+lekebwe/ModifiedPassiveTransitive
+lekeddwa/PastPassiveTransitive
+lekera/BenefactiveTransitive
+lekere/ModifiedBenefactiveTransitive
+lekedde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okulekulira(to resign) --------------------------------------------- #
-lekulira
-lekulire
-lekulidde
-lekuliza
-lekulize
-lekulizza
-lekulirwa
-lekulirwe
-lekuliddwa
+# ---------------------------------------- okulekulira(to resign): Type-I Transitive --------------------------------------------- #
+lekulira/OriginalType-ITransitive
+lekulire/ModifiedType-ITransitive
+lekulidde/PastType-ITransitive
+lekuliza/CausativeTransitive
+lekulize/ModifiedCausativeTransitive
+lekulizza/PastCausativeTransitive
+lekulirwa/PassiveTransitive
+lekulirwe/ModifiedPassiveTransitive
+lekuliddwa/PastPassiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 omulema
-# ---------------------------------------- okulema(to fail) --------------------------------------------- #
-lema
-leme
-lemye
-lemya
-lemwa
-lemwe
-lemeddwa
-lemera
-lemere
-lemedde
+# ---------------------------------------- okulema(to fail): Type-I Transitive --------------------------------------------- #
+lema/OriginalType-ITransitive
+leme/ModifiedType-ITransitive
+lemye/PastType-ITransitive
+lemya/CausativeTransitive
+lemye/ModifiedCausativeTransitive
+lemwa/PassiveTransitive
+lemwe/ModifiedPassiveTransitive
+lemeddwa/PastPassiveTransitive
+lemera/BenefactiveTransitive
+lemere/ModifiedBenefactiveTransitive
+lemedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------------- okulemala(to become crippled): Deadjectival ------------------------------------- #
 lemala/OriginalDeadjective
@@ -10387,193 +10388,200 @@ lemazza/PastCausativeDeadjective
 lemalira/LocativeDeadjective
 lemalire/ModifiedLocativeDeadjective
 lemalidde/PastLocativeDeadjective
+omulema
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------- okulemesa(to hinder; to block; to sabotage; to frustrate) ----------------------- #
-lemesa
-lemese
-lemesezza
-lemesebwa
-lemesebwe
-lemeseddwa
-lemeseza
-lemeseze
+# ----------------------- okulemesa(to hinder; to block; to sabotage; to frustrate): Type-I Transitive ----------------------- #
+lemesa/OriginalType-ITransitive
+lemese/ModifiedType-ITransitive
+lemesezza/PastType-ITransitive
+lemesebwa/PassiveTransitive
+lemesebwe/ModifiedPassiveTransitive
+lemeseddwa/PastPassiveTransitive
+lemeseza/BenefactiveTransitive
+lemeseze/ModifiedBenefactiveTransitive
+lemeselezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-lidde/SSrpNNGGQQNP
 liigi
 liisa
-liisa/RPgghh
-liisizza/RP
 likodi
-# ------------------------ okulima(to dig; to dug; to cultivate; to grow (plants)) ------------------------ #
-lima
-lime
-limye
-limisa
-limise
-limisizza
-limibwa
-limibwe
-limiddwa
-limira
-limire
-limidde
+# ------------------------ okulima(to dig; to dug; to cultivate; to grow (plants)): Type-I Transitive ------------------------ #
+lima/OriginalType-ITransitive
+lime/ModifiedType-ITransitive
+limye/PastType-ITransitive
+limisa/CausativeTransitive
+limise/ModifiedCausativeTransitive
+limisizza/PastCausativeTransitive
+limibwa/PassiveTransitive
+limibwe/ModifiedPassiveTransitive
+limiddwa/PastPassiveTransitive
+limira/BenefactiveTransitive
+limire/ModifiedBenefactiveTransitive
+limidde/PastBenefactiveTransitive
+omulimi
 # --------------------------------------------------------------------------------------------------------- #
 limandi
-# -------------------------------- okulimba(to lie; to deceive; to cheat) --------------------------------- #
-limba
-limbe
-limbye
-limbisa
-limbise
-limbisizza
-limbibwa
-limbibwe
-limbiddwa
-limbira
-limbire
-limbidde
+# -------------------------------- okulimba(to lie; to deceive; to cheat): Type-I Transitive --------------------------------- #
+limba/OriginalType-ITransitive
+limbe/ModifiedType-ITransitive
+limbye/PastType-ITransitive
+limbisa/CausativeTransitive
+limbise/ModifiedCausativeTransitive
+limbisizza/PastCausativeTransitive
+limbibwa/PassiveTransitive
+limbibwe/ModifiedPassiveTransitive
+limbiddwa/PastPassiveTransitive
+limbira/BenefactiveTransitive
+limbire/ModifiedBenefactiveTransitive
+limbidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- **okulina(to have) ------------------------------------------ #
-lina
+# ------------------------------------------- **okulina(to have): Type-I Transitive ------------------------------------------ #
+lina/OriginalType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okulinda(to wait) ------------------------------------------- #
-linda
-linde
-linze
-lindisa
-lindise
-lindisizza
-lindibwa
-lindibwe
-lindiddwa
-lindira
-lindire
-lindidde
+# ------------------------------------------- okulinda(to wait): Type-I Transitive ------------------------------------------- #
+linda/OriginalType-ITransitive
+linde/ModifiedType-ITransitive
+linze/PastType-ITransitive
+lindisa/CausativeTransitive
+lindise/ModifiedCausativeTransitive
+lindisizza/PastCausativeTransitive
+lindibwa/PassiveTransitive
+lindibwe/ModifiedPassiveTransitive
+lindiddwa/PastPassiveTransitive
+lindira/BenefactiveTransitive
+lindire/ModifiedBenefactiveTransitive
+lindidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okulinga(to spy out; to look for) ----------------------------------- #
-linga
-linge
+# ----------------------------------- okulinga(to spy out; to look for): Type-I Transitive ----------------------------------- #
+linga/OriginalType-ITransitive
+linge/ModifiedType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------- okulingiriza(to be nosy; to peep at): Type-I Transitive ---------------------------------- #
-lingiriza
-lingirize
-lingirizza
-lingirizibwa
-lingirizibwe
-lingiriziddwa
+lingiriza/OriginalType-ITransitive
+lingirize/ModifiedType-ITransitive
+lingirizza/PastType-ITransitive
+lingirizibwa/PassiveTransitive
+lingirizibwe/ModifiedPassiveTransitive
+lingiriziddwa/PastPassiveTransitive
+lingiririza/BenefactiveTransitive
+lingiririze/ModifiedBenefactiveTransitive
+lingiririzza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okulinnya(to climb; to board; to step on) ------------------------------- #
-linnya
-linnye
-linnyisa
-linnyise
-linnyisizza
-linnyibwa
-linnyibwe
-linnyiddwa
-linnyira
-linnyire
-linnyidde
+# ------------------------------- okulinnya(to climb; to board; to step on): Type-I Transitive ------------------------------- #
+linnya/OriginalType-ITransitive
+linnye/ModifiedType-ITransitive
+linnye/PastType-ITransitive
+linnyisa/CausativeTransitive
+linnyise/ModifiedCausativeTransitive
+linnyisizza/PastCausativeTransitive
+linnyibwa/PassiveTransitive
+linnyibwe/ModifiedPassiveTransitive
+linnyiddwa/PastPassiveTransitive
+linnyira/BenefactiveTransitive
+linnyire/ModifiedBenefactiveTransitive
+linnyidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 lipoota
 # -------------------------- okuliraana(to neighbor; to adjoin; to be adjacent): Type-I Transitive --------------------------- #
-liraana
-liraane
-liraanye
-liraanya
-liraanyizza
-liraanisa
-liraanise
-liraanisizza
-liraanibwa
-liraanibwe
-liraaniddwa
-liraanira
-liraanire
-liraanidde
+liraana/OriginalType-ITransitive
+liraane/ModifiedType-ITransitive
+liraanye/PastType-ITransitive
+liraanya/CausativeTransitive
+liraanye/ModifiedCausativeTransitive
+liraanyizza/PastCausativeTransitive
+liraanisa/CausativeTransitive
+liraanise/ModifiedCausativeTransitive
+liraanisizza/PastCausativeTransitive
+liraanwa/PassiveTransitive
+liraanwe/ModifiedPassiveTransitive
+liraaniddwa/PastPassiveTransitive
+liraanira/BenefactiveTransitive
+liraanire/ModifiedBenefactiveTransitive
+liraanidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 lisiiti
-# ------------------------------------------ okuloga(to bewitch) ------------------------------------------ #
-loga
-loge
-loze
-logesa
-logese
-logesezza
-logebwa
-logebwe
-logeddwa
-logera
-logere
-logedde
+# ------------------------------------------ okuloga(to bewitch): Type-I Transitive ------------------------------------------ #
+loga/OriginalType-ITransitive
+loge/ModifiedType-ITransitive
+loze/PastType-ITransitive
+logesa/CausativeTransitive
+logese/ModifiedCausativeTransitive
+logesezza/PastCausativeTransitive
+logebwa/PassiveTransitive
+logebwe/ModifiedPassiveTransitive
+logeddwa/PastPassiveTransitive
+logera/BenefactiveTransitive
+logere/ModifiedBenefactiveTransitive
+logedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okulojja(to tell; to narrate) ------------------------------------- #
-lojja
-lojje
-lojjezza
-lojjesa
-lojjese
-lojjessezza
-lojjebwa
-lojjebwe
-lojjeddwa
-lojjera
-lojjere
-lojjedde
+# ------------------------------------- okulojja(to tell; to narrate): Type-I Transitive ------------------------------------- #
+lojja/OriginalType-ITransitive
+lojje/ModifiedType-ITransitive
+lojjezza/PastType-ITransitive
+lojjesa/CausativeTransitive
+lojjese/ModifiedCausativeTransitive
+lojjessezza/PastCausativeTransitive
+lojjebwa/PassiveTransitive
+lojjebwe/ModifiedPassiveTransitive
+lojjeddwa/PastPassiveTransitive
+lojjera/BenefactiveTransitive
+lojjere/ModifiedBenefactiveTransitive
+lojjedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okuloka(to put up shoots; to sprout) ---------------------------------- #
-loka
-loke
-lose
-losa
-losezza
-lokera
-lokere
-lokedde
+# --------------------------------- okuloka(to put up shoots; to sprout): Intransitive ---------------------------------- #
+loka/OriginalIntransitive
+loke/ModifiedIntransitive
+lose/PastIntransitive
+losa/CausativeIntransitive
+lose/ModifiedCausativeIntransitive
+losezza/PastCausativeIntransitive
+lokera/LocativeIntransitive
+lokere/ModifiedLocativeIntransitive
+lokedde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------- okulokoka(to save; to get saved (religious)) ------------------------------ #
-lokoka
-lokoke
-lokose
-lokosa
-lokosezza
-lokola
-lokole
-lokodde
-lokolwa
-lokolwe
-lokoddwa
-lokolera
-lokolere
-lokoledde
+# ----------------------------- okulokoka(to save; to get saved (religious)): Intransitive ------------------------------ #
+lokoka/OriginalIntransitive
+lokoke/ModifiedIntransitive
+lokose/PastIntransitive
+lokosa/CausativeIntransitive
+lokose/ModifiedCausativeIntransitive
+lokosezza/PastCausativeIntransitive
+lokola/CausativeIntransitive
+lokole/ModifiedCausativeIntransitive
+lokodde/PastCausativeIntransitive
+lokolwa/PassiveIntransitive
+lokolwe/ModifiedPassiveIntransitive
+lokoddwa/PastPassiveIntransitive
+lokolera/BenefactiveIntransitive
+lokolere/ModifiedBenefactiveIntransitive
+lokoledde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------- okulonda(to elect; to choose; to find; to stumble upon; to vote; to select; to pick) ---------- #
-londa
-londe
-lonze
-londesa
-londese
-londesezza
-londebwa
-londebwe
-londeddwa
-londera
-londere
-londedde
+# --------- okulonda(to elect; to choose; to find; to stumble upon; to vote; to select; to pick): Type-I Transitive ---------- #
+londa/OriginalType-ITransitive
+londe/ModifiedType-ITransitive
+lonze/PastType-ITransitive
+londesa/CausativeTransitive
+londese/ModifiedCausativeTransitive
+londesezza/PastCausativeTransitive
+londebwa/PassiveTransitive
+londebwe/ModifiedPassiveTransitive
+londeddwa/PastPassiveTransitive
+londera/BenefactiveTransitive
+londere/ModifiedBenefactiveTransitive
+londedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------ okulondoola(to stalk; to monitor; to track; to follow) ------------------------- #
-londoola
-londoole
-londodde
-londooza
-londooze
-londozza
-londoolwa
-londoolwe
-londoddwa
-londoolera
-londoolere
-londooledde
+# ------------------------ okulondoola(to stalk; to monitor; to track; to follow): Type-I Transitive ------------------------- #
+londoola/OriginalType-ITransitive
+londoole/ModifiedType-ITransitive
+londodde/PastType-ITransitive
+londooza/CausativeTransitive
+londooze/ModifiedCausativeTransitive
+londozza/PastCausativeTransitive
+londoolwa/PassiveTransitive
+londoolwe/ModifiedPassiveTransitive
+londoddwa/PastPassiveTransitive
+londoolera/BenefactiveTransitive
+londoolere/ModifiedBenefactiveTransitive
+londooledde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # --------------- okulongooka(to become straightened out; to improve; to become clean;): Deadjectival ------------------- #
 longooka/OriginalDeadjective
@@ -10583,88 +10591,91 @@ longookera/LocativeDeadjective
 longookere/ModifiedLocativeDeadjective
 longookedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ----------- okulongoosa(to clean; to straighten; to correct; to operate; to perform surgery) ------------ #
-longoosa
-longoose
-longoosezza
-longoosebwa
-longoosebwe
-longooseddwa
-longooseza
-longooseze
-longooselezza
+# ----------- okulongoosa(to clean; to straighten; to correct; to operate; to perform surgery): Type-I Transitive ------------ #
+longoosa/OriginalType-ITransitive
+longoose/ModifiedType-ITransitive
+longoosezza/PastType-ITransitive
+longoosebwa/PassiveTransitive
+longoosebwe/ModifiedPassiveTransitive
+longooseddwa/PastPassiveTransitive
+longooseza/BenefactiveTransitive
+longooseze/ModifiedBenefactiveTransitive
+longooselezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 loole
-# ------------------------------- okuloopa(to report; to accuse; to expose) ------------------------------- #
-loopa
-loope
-loopye
-loopya
-loopesezza
-loopebwa
-loopebwe
-loopeddwa
-loopera
-loopere
-loopedde
+# ------------------------------- okuloopa(to report; to accuse; to expose): Type-I Transitive ------------------------------- #
+loopa/OriginalType-ITransitive
+loope/ModifiedType-ITransitive
+loopye/PastType-ITransitive
+loopesa/CausativeTransitive
+loopese/ModifiedCausativeTransitive
+loopesezza/PastCausativeTransitive
+loopebwa/PassiveTransitive
+loopebwe/ModifiedPassiveTransitive
+loopeddwa/PastPassiveTransitive
+loopera/BenefactiveTransitive
+loopere/ModifiedBenefactiveTransitive
+loopedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okuloota(to dream) ------------------------------------------- #
-loota
-loote
-loose
-loosa
-loosezza
-lootebwa
-lootebwe
-looteddwa
-lootera
-lootere
-lootedde
+# ------------------------------------------ okuloota(to dream): Type-I Transitive ------------------------------------------- #
+loota/OriginalType-ITransitive
+loote/ModifiedType-ITransitive
+loose/ModifiedType-ITransitive
+loosa/CausativeTransitive
+loose/ModifiedCausativeTransitive
+loosezza/PastCausativeTransitive
+lootebwa/PassiveTransitive
+lootebwe/ModifiedPassiveTransitive
+looteddwa/PastPassiveTransitive
+lootera/BenefactiveTransitive
+lootere/ModifiedBenefactiveTransitive
+lootedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 looya
-# ----------------------------------------- okulowooza(to think) ------------------------------------------ #
-lowooza
-lowooze
-lowoozezza
-lowoozesa
-lowoozese
-lowoozesezza
-lowoozebwa
-lowoozebwe
-lowoozeddwa
-lowooreza
-lowooreze
+# ----------------------------------------- okulowooza(to think): Type-I Transitive ------------------------------------------ #
+lowooza/OriginalType-ITransitive
+lowooze/ModifiedType-ITransitive
+lowoozezza/PastType-ITransitive
+lowoozesa/CausativeTransitive
+lowoozese/ModifiedCausativeTransitive
+lowoozesezza/PastCausativeTransitive
+lowoozebwa/PassiveTransitive
+lowoozebwe/ModifiedPassiveTransitive
+lowoozeddwa/PastPassiveTransitive
+lowooreza/BenefactiveTransitive
+lowooreze/ModifiedBenefactiveTransitive
+lowoorezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 lubaale
 lujuuju
-# -------------------------------------- okuluka(to weave; to plait) -------------------------------------- #
-luka
-luke
-luse
-lukisa
-lukise
-lukisizza
-lukibwa
-lukibwe
-lukiddwa
-lukira
-lukire
-lukidde
+# -------------------------------------- okuluka(to weave; to plait): Type-I Transitive -------------------------------------- #
+luka/OriginalType-ITransitive
+luke/ModifiedType-ITransitive
+luse/PastType-ITransitive
+lukisa/CausativeTransitive
+lukise/ModifiedCausativeTransitive
+lukisizza/PastCausativeTransitive
+lukibwa/PassiveTransitive
+lukibwe/ModifiedPassiveTransitive
+lukiddwa/PastPassiveTransitive
+lukira/BenefactiveTransitive
+lukire/ModifiedBenefactiveTransitive
+lukidde/PastBenefactiveTransitive
 omulusi
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okuluma(to bite) ------------------------------------------------- #
-luma
-lume
-lumye
-lumibwa
-lumibwe
-lumiddwa
-lumisa
-lumise
-lumisizza
-lumira
-lumire
-lumidde
+# -------------------------------------- okuluma(to bite): Type-I Transitive ------------------------------------------------- #
+luma/OriginalType-ITransitive
+lume/ModifiedType-ITransitive
+lumye/PastType-ITransitive
+lumibwa/PassiveTransitive
+lumibwe/ModifiedPassiveTransitive
+lumiddwa/PastPassiveTransitive
+lumisa/CausativeTransitive
+lumise/ModifiedCausativeTransitive
+lumisizza/PastCausativeTransitive
+lumira/BenefactiveTransitive
+lumire/ModifiedBenefactiveTransitive
+lumidde/PastBenefactiveTransitive
 #
 lumako
 lumamu
@@ -10819,35 +10830,36 @@ lumiddeeyooko
 lumiddeewo
 lumiddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okulumba(to attack; to assault) ------------------------------------ #
-lumba
-lumbe
-lumbye
-lumbisa
-lumbise
-lumbisizza
-lumbibwa
-lumbibwe
-lumbiddwa
-lumbira
-lumbire
-lumbidde
+# ------------------------------------ okulumba(to attack; to assault): Type-I Transitive ------------------------------------ #
+lumba/OriginalType-ITransitive
+lumbe/ModifiedType-ITransitive
+lumbye/PastType-ITransitive
+lumbisa/CausativeTransitive
+lumbise/ModifiedCausativeTransitive
+lumbisizza/PastCausativeTransitive
+lumbibwa/PassiveTransitive
+lumbibwe/ModifiedPassiveTransitive
+lumbiddwa/PastPassiveTransitive
+lumbira/BenefactiveTransitive
+lumbire/ModifiedBenefactiveTransitive
+lumbidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 nnume
 lumonde
-# ---------------------------------- okulunda(to keep animals; to herd) ----------------------------------- #
-lunda
-lunde
-lunze
-lundisa
-lundise
-lundisizza
-lundibwa
-lundibwe
-lundiddwa
-lundira
-lundire
-lundidde
+# ---------------------------------- okulunda(to keep animals; to herd): Type-I Transitive ----------------------------------- #
+lunda/OriginalType-ITransitive
+lunde/ModifiedType-ITransitive
+lunze/PastType-ITransitive
+lundisa/CausativeTransitive
+lundise/ModifiedCausativeTransitive
+lundisizza/PastCausativeTransitive
+lundibwa/PassiveTransitive
+lundibwe/ModifiedPassiveTransitive
+lundiddwa/PastPassiveTransitive
+lundira/BenefactiveTransitive
+lundire/ModifiedBenefactiveTransitive
+lundidde/PastBenefactiveTransitive
+omulunzi
 # --------------------------------------------------------------------------------------------------------- #
 lungi
 # --------------------------------- Adj. okulungiwa(to become beautiful): Deadjectival ---------------------------------- #
@@ -10975,10 +10987,10 @@ lungiyiddeewo
 lungiyiddeewooko
 # ------------------------------------------------------------------------------------- #
 lutaggwa
-# ------------------------ okuluubiragana(to compete with one another) ------------------------------------ #
-luubiragana
-luubiragane
-luubiraganye
+# ------------------------ okuluubiragana(to compete with one another): Intransitive ------------------------------------ #
+luubiragana/OriginalIntransitive
+luubiragane/ModifiedIntransitive
+luubiraganye/PastIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------ okuluubirira(to aim at; to try hard; to exert oneself) ------------------------- #
 luubirira
