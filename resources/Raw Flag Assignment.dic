@@ -8771,57 +8771,58 @@ kengere/ModifiedBenefactiveTransitive
 kengedde/PastBenefactiveTransitive
 omukenzi
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuketta(to spy) --------------------------------------------- #
-ketta
-kette
-kesse
-kettesa
-kettese
-kettesezza
-kettebwa
-kettebwe
-ketteddwa
-kettera
-kettere
-kettedde
-kessi/oo
+# --------------------------------------- okuketta(to spy): Type-I Transitive --------------------------------------------- #
+ketta/OriginalType-ITransitive
+kette/ModifiedType-ITransitive
+kesse/PastType-ITransitive
+kettesa/CausativeTransitive
+kettese/ModifiedCausativeTransitive
+kettesezza/PastCausativeTransitive
+kettebwa/PassiveTransitive
+kettebwe/ModifiedPassiveTransitive
+ketteddwa/PastPassiveTransitive
+kettera/BenefactiveTransitive
+kettere/ModifiedBenefactiveTransitive
+kettedde/PastBenefactiveTransitive
+omukessi
 # ------------------------------------------------------------------------------------------------------------- #
 ki
 kidedde
 kiggala
 kiki
-# --------------------------------- okukkiriza(to believe/agree) --------------------------------------------- #
-kkiriza
-kkirize
-kkirizza
-kkirizisa
-kkirizise
-kkirizisizza
-kkirizibwa
-kkirizibwe
-kkiriziddwa
-kkiririza
-kkiririze
-kkiririzza
-kkiriziganya
-kkiriziganye
+# --------------------------------- okukkiriza(to believe/agree): Type-I Transitive --------------------------------------------- #
+kkiriza/OriginalType-ITransitive
+kkirize/ModifiedType-ITransitive
+kkirizza/PastType-ITransitive
+kkirizisa/CausativeTransitive
+kkirizise/ModifiedCausativeTransitive
+kkirizisizza/PastCausativeTransitive
+kkirizibwa/PassiveTransitive
+kkirizibwe/ModifiedPassiveTransitive
+kkiriziddwa/PastPassiveTransitive
+kkiririza/BenefactiveTransitive
+kkiririze/ModifiedBenefactiveTransitive
+kkiririzza/PastBenefactiveTransitive
+kkiriziganya/OriginalType-ITransitive
+kkiriziganye/ModifiedType-ITransitive
+kkiriziganyizza/PastType-ITransitive
 # ---------------------------------------------------------------------------------------------------------- #
 kikyo
 kikye
-# ---------------------------------- okukima(to fetch) --------------------------------------------- #
-kima
-kime
-kimye
-kimisa
-kimise
-kimisizza
-kimibwa
-kimibwe
-kimiddwa
-kimira
-kimire
-kimidde
-kimi/oo
+# ---------------------------------- okukima(to fetch): Type-I Transitive --------------------------------------------- #
+kima/OriginalType-ITransitive
+kime/ModifiedType-ITransitive
+kimye/PastType-ITransitive
+kimisa/CausativeTransitive
+kimise/ModifiedCausativeTransitive
+kimisizza/PastCausativeTransitive
+kimibwa/PassiveTransitive
+kimibwe/ModifiedPassiveTransitive
+kimiddwa/PastPassiveTransitive
+kimira/BenefactiveTransitive
+kimire/ModifiedBenefactiveTransitive
+kimidde/PastBenefactiveTransitive
+omukimi
 # ------------------------------------------------------------------------------------------------------------- #
 kimu
 kinaana
@@ -8833,46 +8834,50 @@ kiri
 kitaka
 kitange
 kiwanuka
-# ---------------------------------------- okukka(to descend) --------------------------------------------- #
-kka
-kke
-sse
-ssa
-ssizza
-ssibwa
-ssibwe
-ssiddwa
-kkira
-kkire
-kkidde
+# ---------------------------------------- okukka(to descend): Intransitive --------------------------------------------- #
+kka/OriginalIntransitive
+kke/ModifiedIntransitive
+sse/PastIntransitive
+ssa/CausativeIntransitive
+sse/ModifiedCausativeIntransitive
+ssizza/PastCausativeIntransitive
+ssibwa/PassiveIntransitive
+ssibwe/ModifiedPassiveIntransitive
+ssiddwa/PastPassiveIntransitive
+kkira/BenefactiveIntransitive
+kkire/ModifiedBenefactiveIntransitive
+kkidde/PastBenefactiveIntransitive
 # -------------------------------------------------------------------------------------------------------- #
 kkaansa
-# ---------------------------------------- okukkaanya(to agree) --------------------------------------------- #
-kkaanya
-kkaanye
-kkaanyizza
-kkaanyisa
-kkaanyise
-kkaanyisizza
+# ---------------------------------------- okukkaanya(to agree): Intransitive --------------------------------------------- #
+kkaanya/OriginalIntransitive
+kkaanye/ModifiedIntransitive
+kkaanyizza/PastIntransitive
+kkaanyisa/CausativeIntransitive
+kkaanyise/ModifiedCausativeIntransitive
+kkaanyisizza/PastCausativeIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
 kkakkamu
-# --------------------------------------- okukkakkana(to calm down) --------------------------------------------- #
-kkakkana
-kkakkane
-kkakkanye
-kkakkanya
-kkakkanye
-kkakkanyizza
-kkakkanira
-kkakkanire
-kkakkanidde
+# --------------------------------------- okukkakkana(to calm down): Intransitive --------------------------------------------- #
+kkakkana/OriginalIntransitive
+kkakkane/ModifiedIntransitive
+kkakkanye/ModifiedIntransitive
+kkakkanya/OriginalIntransitive
+kkakkanye/ModifiedIntransitive
+kkakkanyizza/PastIntransitive
+kkakkanira/LocativeIntransitive
+kkakkanire/ModifiedLocativeIntransitive
+kkakkanidde/PastLocativeIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
 kkampuni
 kkapa
-# --------------------------------------- okukkirira(to slope down) --------------------------------------------- #
-kkirira
-kkirire
-kkiridde
+# --------------------------------------- okukkirira(to slope down): Type-I Transitive --------------------------------------------- #
+kkirira/OriginalType-ITransitive
+kkirire/ModifiedType-ITransitive
+kkiridde/PastType-ITransitive
+kkiririra/BenefactiveTransitive
+kkiririre/ModifiedBenefactiveTransitive
+kkiriridde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 kkono
 kkoosi
@@ -8903,26 +8908,26 @@ koggesezza/PastCausativeDeadjective
 koggera/LocativeDeadjective
 koggere/ModifiedLocativeDeadjective
 koggedde/PastLocativeDeadjective
-kovvu
+omukovvu
 # ------------------------------------------------------------------------------------------------------------ #
 kojja
-# ---------------------------------------- okukola(to work) ---------------------------------------------- #
-kola
-kole
-koze
-kolebwa
-kolebwe
-kolebbwa
-koleddwa
-kozesa
-kozese
-kozesezza
-kolera 
-kolere
-koledde
-kolagana
-kolagane
-kolaganye
+# ---------------------------------------- okukola(to work): Type-II Transitive ---------------------------------------------- #
+kola/OriginalType-IITransitive
+kole/ModifiedType-IITransitive
+koze/PastType-IITransitive
+kolebwa/PassiveTransitive
+kolebwe/ModifiedPassiveTransitive
+kolebbwa/PastPassiveTransitive
+koleddwa/PastPassiveTransitive
+kozesa/CausativeTransitive
+kozese/ModifiedCausativeTransitive
+kozesezza/PastCausativeTransitive
+kolera/BenefactiveTransitive
+kolere/ModifiedBenefactiveTransitive
+koledde/PastBenefactiveTransitive
+kolagana/OriginalIntransitive
+kolagane/ModifiedIntransitive
+kolaganye/PastIntransitive
 #
 kolako
 kolamu
