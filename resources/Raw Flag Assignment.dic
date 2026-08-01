@@ -10198,141 +10198,146 @@ lambira/BenefactiveTransitive
 lambire/ModifiedBenefactiveTransitive
 lambidde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okulambika(to portray) --------------------------------------------- #
-lambika
-lambike
-lambise
-lambikibwa
-lambikibwe
-lambikiddwa
-lambikira
-lambikire
-lambikidde
+# ---------------------------------- okulambika(to portray): Type-II Transitive --------------------------------------------- #
+lambika/OriginalType-IITransitive
+lambike/ModifiedType-IITransitive
+lambise/PastType-IITransitive
+lambikibwa/PassiveTransitive
+lambikibwe/ModifiedPassiveTransitive
+lambikiddwa/PastPassiveTransitive
+lambikira/BenefactiveTransitive
+lambikire/ModifiedBenefactiveTransitive
+lambikidde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okulambula(to tour) --------------------------------------------- #
-lambula
-lambule
-lambudde
-lambuza
-lambuze
-lambuzza
-lambulwa
-lambulwe
-lambuddwa
-lambulira
-lambulire
-lambulidde
+# ---------------------------------- okulambula(to tour): Type-I Transitive --------------------------------------------- #
+lambula/OriginalType-ITransitive
+lambule/ModifiedType-ITransitive
+lambudde/PastType-ITransitive
+lambuza/CausativeTransitive
+lambuze/ModifiedCausativeTransitive
+lambuzza/PastCausativeTransitive
+lambulwa/PassiveTransitive
+lambulwe/ModifiedPassiveTransitive
+lambuddwa/PastPassiveTransitive
+lambulira/BenefactiveTransitive
+lambulire/ModifiedBenefactiveTransitive 
+lambulidde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
 omulambuzi
 lambulukufu
-# ---------------------------------- okulambulula(to unravel) --------------------------------------------- #
-lambulula
-lambulule
-lambuludde
-lambuluza
-lambuluze
-lambuluzza
-lambululwa
-lambululwe
-lambuluddwa
-lambululira
-lambululire
-lambululidde
+# ---------------------------------- okulambulula(to unravel): Type-I Transitive --------------------------------------------- #
+lambulula/OriginalType-ITransitive
+lambulule/ModifiedType-ITransitive
+lambuludde/PastType-ITransitive
+lambuluza/CausativeTransitive
+lambuluze/ModifiedCausativeTransitive
+lambuluzza/PastCausativeTransitive
+lambululwa/PassiveTransitive
+lambululwe/ModifiedPassiveTransitive
+lambuluddwa/PastPassiveTransitive
+lambululira/BenefactiveTransitive
+lambululire/ModifiedBenefactiveTransitive
+lambululidde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
 lamu
-# ---------------------------------- okulamula(to judge) --------------------------------------------- #
-lamula
-lamule
-lamudde
-lamuza
-lamuze
-lamuzza
-lamulwa
-lamulwe
-lamuddwa
-lamulira
-lamulire
-lamulidde
+# ---------------------------------- okulamula(to judge): Type-I Transitive --------------------------------------------- #
+lamula/OriginalType-ITransitive
+lamule/ModifiedType-ITransitive
+lamudde/PastType-ITransitive
+lamuza/CausativeTransitive
+lamuze/ModifiedCausativeTransitive
+lamuzza/PastCausativeTransitive
+lamulwa/PassiveTransitive
+lamulwe/ModifiedPassiveTransitive
+lamuddwa/PastPassiveTransitive
+lamulira/BenefactiveTransitive
+lamulire/ModifiedBenefactiveTransitive
+lamulidde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okulamusa(to greet) --------------------------------------------- #
-lamusa
-lamuse
-lamusizza
-lamusiza
-lamusize
-lamusibwa
-lamusibwe
-lamusiddwa
+# ---------------------------------- okulamusa(to greet): Type-I Transitive --------------------------------------------- #
+lamusa/OriginalType-ITransitive
+lamuse/ModifiedType-ITransitive
+lamusizza/PastType-ITransitive
+lamusiza/BenefactiveTransitive
+lamusize/ModifiedBenefactiveTransitive
+lamusilizza/PastBenefactiveTransitive
+lamusibwa/PassiveTransitive
+lamusibwe/ModifiedPassiveTransitive
+lamusiddwa/PastPassiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
 omulamuzi
-# ---------------------------------- okulanda(to creep) --------------------------------------------- #
-landa
-lande
-lanze
-landisa
-landise
-landisizza
-landibwa
-landibwe
-landiddwa
-landira
-landire
-landidde
+# ---------------------------------- okulanda(to creep): Intransitive --------------------------------------------- #
+landa/OriginalIntransitive
+lande/ModifiedIntransitive
+lanze/PastIntransitive
+landisa/CausativeIntransitive
+landise/ModifiedCausativeIntransitive
+landisizza/PastCausativeIntransitive
+landibwa/PassiveIntransitive
+landibwe/ModifiedPassiveIntransitive
+landiddwa/PastPassiveIntransitive
+landira/LocativeIntransitive
+landire/ModifiedLocativeIntransitive
+landidde/PastLocativeIntransitive
 # -------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okulanga(to announce/advertise) --------------------------------------------- #
-langa
-lange
-lanze
-langisa
-langise
-langisizza
-langibwa
-langibwe
-langiddwa
-langira
-langire
-langidde
+# ---------------------------------- okulanga(to announce/advertise): Type-I Transitive --------------------------------------------- #
+langa/OriginalType-ITransitive
+lange/ModifiedType-ITransitive
+lanze/PastType-ITransitive
+langisa/CausativeTransitive
+langise/ModifiedCausativeTransitive
+langisizza/PastCausativeTransitive
+langibwa/PassiveTransitive
+langibwe/ModifiedPassiveTransitive
+langiddwa/PastPassiveTransitive
+langira/BenefactiveTransitive
+langire/ModifiedBenefactiveTransitive
+langidde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
 langi
-# ---------------------------------------- okulayira(to swear) --------------------------------------------- #
-layira
-layire
-layidde
-layiza
-layize
-layizza
-layilwa
-layilwe
-layiddwa
+# ---------------------------------------- okulayira(to swear): Intransitive --------------------------------------------- #
+layira/OriginalIntransitive
+layire/ModifiedIntransitive
+layidde/PastIntransitive
+layiza/CausativeIntransitive
+layize/ModifiedCausativeIntransitive
+layizza/PastCausativeIntransitive
+layilwa/PassiveIntransitive
+layilwe/ModifiedPassiveIntransitive
+layiddwa/PastPassiveIntransitive
+layirira/BenefactiveIntransitive
+layirire/ModifiedBenefactiveIntransitive
+layiridde/PastBenefactiveIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
 leediyo
-# ---------------------------------------- okuleekaana(to shout) --------------------------------------------- #
-leekana
-leekane
-leekanye
-leekanya
-leekanyizza
-leekanirwa
-leekanirwe
-leekanidde
-leekaanira
-leekaanire
-leekaanidde
+# ---------------------------------------- okuleekaana(to shout): Intransitive --------------------------------------------- #
+leekana/OriginalIntransitive
+leekane/ModifiedIntransitive
+leekanye/PastIntransitive
+leekanya/CausativeIntransitive
+leekanye/ModifiedCausativeIntransitive
+leekanyizza/PastCausativeIntransitive
+leekanirwa/PassiveIntransitive
+leekanirwe/ModifiedPassiveIntransitive
+leekanidde/PastPassiveIntransitive
+leekaanira/BenefactiveIntransitive
+leekaanire/ModifiedBenefactiveIntransitive
+leekaanidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------------- #
 leero
-# ---------------------------------------- okuleeta(to bring) --------------------------------------------- #
-leeta
-leete
-leese
-leetesa
-leetese
-leetesezza
-leetebwa
-leetebwe
-leeteeddwa
-leetera
-leetere
-leetedde
+# ---------------------------------------- okuleeta(to bring): Type-I Transitive --------------------------------------------- #
+leeta/OriginalType-ITransitive
+leete/ModifiedType-ITransitive
+leese/PastType-ITransitive
+leetesa/CausativeTransitive
+leetese/ModifiedCausativeTransitive
+leetesezza/PastCausativeTransitive
+leetebwa/PassiveTransitive
+leetebwe/ModifiedPassiveTransitive
+leeteddwa/PastPassiveTransitive
+leetera/BenefactiveTransitive
+leetere/ModifiedBenefactiveTransitive
+leetedde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okuleka(to leave) --------------------------------------------- #
 leka
