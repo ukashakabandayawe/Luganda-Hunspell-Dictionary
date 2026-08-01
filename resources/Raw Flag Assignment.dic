@@ -6453,43 +6453,43 @@ gaggawalira/LocativeDeadjective
 gaggawalire/ModifiedLocativeDeadjective
 gaggawalidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugajambula(to murder) --------------------------------------- #
-gajambula
-gajambule
-gajambudde
-gajambuza
-gajambuze
-gajambuzza
-gajambulibwa
-gajambulibwe
-gajambuliddwa
-gajambulira
-gajambulire
-gajambulidde
-gajambuzi/oo
+# --------------------------------------- okugajambula(to murder): Type-I Transitive --------------------------------------- #
+gajambula/OriginalType-ITransitive
+gajambule/ModifiedType-ITransitive
+gajambudde/PastType-ITransitive
+gajambuza/CausativeTransitive
+gajambuze/ModifiedCausativeTransitive
+gajambuzza/PastCausativeTransitive
+gajambulibwa/PassiveTransitive
+gajambulibwe/ModifiedPassiveTransitive
+gajambuliddwa/PastPassiveTransitive
+gajambulira/BenefactiveTransitive
+gajambulire/ModifiedBenefactiveTransitive
+gajambulidde/PastBenefactiveTransitive
+omugajambuzi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okugalamira (to lie down) ------------------------------------------ #
-galamira
-galamire
-galamidde
-galamiza
-galamize
-galamizza
+# ------------------------------------- okugalamira (to lie down): Intransive ------------------------------------------ #
+galamira/OriginalIntransitive
+galamire/ModifiedIntransitive
+galamidde/PastIntransitive
+galamiza/CausativeIntransitive
+galamize/ModifiedCausativeIntransitive
+galamizza/PastCausativeIntransitive
 # ----------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okugamba(to tell) --------------------------------------------- #
-gamba
-gambe
-gambye
-gambibwa
-gambibwe
-gambiddwa
-gambisa
-gambise
-gambisizza
-gambira
-gambire
-gambidde
-gambi/oo
+# -------------------------------------- okugamba(to tell): Type-II Transitive --------------------------------------------- #
+gamba/OriginalType-IITransitive
+gambe/ModifiedType-IITransitive
+gambye/PastType-IITransitive
+gambibwa/PassiveTransitive
+gambibwe/ModifiedPassiveTransitive
+gambiddwa/PastPassiveTransitive
+gambisa/CausativeTransitive
+gambise/ModifiedCausativeTransitive
+gambisizza/PastCausativeTransitive
+gambira/BenefactiveTransitive
+gambire/ModifiedBenefactiveTransitive
+gambidde/PastBenefactiveTransitive
+omugambi
 #
 gambako
 gambamu
@@ -6664,47 +6664,47 @@ ganyula/OriginalDeadjective
 ganyule/ModifiedDeadjective
 ganyudde/PastDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuganyulwa(to gain): Deadjectival --------------------------------------- #
-ganyulwa/PassiveDeadjective
-ganyulwe/ModifiedPassiveDeadjective
-ganyuddwa/PastPassiveDeadjective
+# --------------------------------------- okuganyulwa(to gain): Type-I Transitive --------------------------------------- #
+ganyulwa/PassiveTransitive
+ganyulwe/ModifiedPassiveTransitive
+ganyuddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuganza(to date) --------------------------------------- #
-ganza
-ganze
-ganzizza
-ganzibwa
-ganzibwe
-ganziddwa
-ganzi/oo
+# --------------------------------------- okuganza(to date): Type-I Transitive --------------------------------------- #
+ganza/OriginalType-ITransitive
+ganze/ModifiedType-ITransitive
+ganzizza/PastType-ITransitive
+ganzibwa/PassiveTransitive
+ganzibwe/ModifiedPassiveTransitive
+ganziddwa/PastPassiveTransitive
+omuganzi
 # --------------------------------------------------------------------------------------------- #
-# -------------------------------------- **okuganzika(to place something onto something) --------------------------------------- #
-ganzika
-ganzike
-ganzise
+# -------------------------------------- **okuganzika(to place something onto something): Type-I Transitive --------------------------------------- #
+ganzika/OriginalType-ITransitive
+ganzike/ModifiedType-ITransitive
+ganzise/PastType-ITransitive
 # --------------------------------------------------------------------------------------------- #
 gatonnya
-# --------------------------------------- okugatta(to add) --------------------------------------- #
-gatta
-gatte
-gasse
-gattisa
-gattise
-gattisizza
-gattibwa
-gattibwe
-gattiddwa
-gattibbwa
-gattira
-gattire
-gattidde
-gassi/oo
+# --------------------------------------- okugatta(to add): Type-I Transitive --------------------------------------- #
+gatta/OriginalType-ITransitive
+gatte/ModifiedType-ITransitive
+gasse/PastType-ITransitive
+gattisa/CausativeTransitive
+gattise/ModifiedCausativeTransitive
+gattisizza/PastCausativeTransitive
+gattibwa/PassiveTransitive
+gattibwe/ModifiedPassiveTransitive
+gattiddwa/PastPassiveTransitive
+gattibbwa/PastPassiveTransitive
+gattira/BenefactiveTransitive
+gattire/ModifiedBenefactiveTransitive
+gattidde/PastBenefactiveTransitive
+omugassi
 # --------------------------------------------------------------------------------------------- #
 gavumenti
-# --------------------------------------- okugaya(to undermine) --------------------------------------- #
-gaya
-gaye
-gayizza
+# --------------------------------------- okugaya(to undermine): Type-I Transitive --------------------------------------- #
+gaya/OriginalType-ITransitive
+gaye/ModifiedType-ITransitive
+gayizza/PastType-ITransitive
 # --------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okugayaala(to become lazy): Deadjectival ----------------------------------------- #
 gayaala/OriginalDeadjective
@@ -6716,9 +6716,9 @@ gayaazizza/PastCausativeDeadjective
 gayaalilira/LocativeDeadjective
 gayaalilire/ModifiedLocativeDeadjective
 gayaalidde/PastLocativeDeadjective
-gayaavu/oo
+omugayaavu
 # --------------------------------------------------------------------------------------------- #
-gazi
+obugazi
 # --------------------------------------- **okugaziwa(to become spacious): Deadjectival --------------------------------------- #
 gaziwa/OriginalDeadjective
 gaziwe/ModifiedDeadjective
@@ -6731,18 +6731,19 @@ gaziyira/LocativeDeadjective
 gaziyire/ModifiedLocativeDeadjective
 gaziyidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugeegeenya(to mimic) --------------------------------------- #
-geegeenya
-geegeenye
-geegeenyezza
-geegeenyeza
-geegeenyeze
-geegeenyebwa
-geegeenyebwe
-geegeenyeddwa
-geegeenyera
-geegeenyere
-geegeenyedde
+# --------------------------------------- okugeegeenya(to mimic): Type-I Transitive --------------------------------------- #
+geegeenya/OriginalType-ITransitive
+geegeenye/ModifiedType-ITransitive
+geegeenyezza/PastType-ITransitive
+geegeenyesa/CausativeTransitive
+geegeenyese/ModifiedCausativeTransitive
+geegeenyesezza/PastCausativeTransitive
+geegeenyebwa/PassiveTransitive
+geegeenyebwe/ModifiedPassiveTransitive
+geegeenyeddwa/PastPassiveTransitive
+geegeenyeza/BenefactiveTransitive
+geegeenyeze/ModifiedBenefactiveTransitive
+geegeenyelezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugejja(to become fat): Deadjectival --------------------------------------- #
 gejja/OriginalDeadjective
@@ -6757,22 +6758,22 @@ gejjera/LocativeDeadjective
 gejjere/ModifiedLocativeDeadjective
 gejjedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugenda(to go) --------------------------------------- #
-genda
-gende
-genze
-gendesa
-gendese
-gendisezza
-gendera
-gendere
-gendedde
-genzi/oo
+# --------------------------------------- okugenda(to go): Intransitive --------------------------------------- #
+genda/OriginalIntransitive
+gende/ModifiedIntransitive
+genze/PastIntransitive
+gendesa/CausativeIntransitive
+gendese/ModifiedCausativeIntransitive
+gendesezza/PastCausativeIntransitive
+gendera/BenefactiveIntransitive
+gendere/ModifiedBenefactiveIntransitive
+gendedde/PastBenefactiveIntransitive
+omugenzi
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugenderera(to intend) --------------------------------------- #
-genderera
-genderere
-genderedde
+# --------------------------------------- okugenderera(to intend): Type-I Transitive --------------------------------------- #
+genderera/OriginalType-ITransitive
+genderere/ModifiedType-ITransitive
+genderedde/PastType-ITransitive
 # ------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugenyiwa(to become a visitor): Deadjectival --------------------------------------- #
 genyiwa/OriginalDeadjective
@@ -6785,60 +6786,60 @@ genyiwala/OriginalDeadjective
 genyiwale/ModifiedDeadjective
 genyiwadde/PastDeadjective
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugeya(to backbite) --------------------------------------- #
-geya
-geye
-geyezza
-geyesa
-geyese
-geyesezza
-geyebwa
-geyebwe
-geyeddwa
-geyera
-geyere
-geyedde
-geyeza
-geyeze
+# --------------------------------------- okugeya(to backbite): Type-I Transitive --------------------------------------- #
+geya/OriginalType-ITransitive
+geye/ModifiedType-ITransitive
+geyezza/PastType-ITransitive
+geyesa/CausativeTransitive
+geyese/ModifiedCausativeTransitive
+geyesezza/PastCausativeTransitive
+geyebwa/PassiveTransitive
+geyebwe/ModifiedPassiveTransitive
+geyeddwa/PastPassiveTransitive
+geyeza/BenefactiveTransitive
+geyeze/ModifiedBenefactiveTransitive
+geyezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------- #             
 geyeena
-# --------------------------------------- okugeza(to take an example) --------------------------------------- #
-geza
-geze
-gezezza
-gezesa
-gezese
-gezesezza
-gezesebwa
-gezesebwe
-gezeseddwa
+# --------------------------------------- okugeza(to take an example): Intransitive --------------------------------------- #
+geza/OriginalIntransitive
+geze/ModifiedIntransitive
+gezezza/PastIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugezaako(to try) ---------------------------------------------- #
-gezaako
-gezeeko
-gezezaako
-gezesaako
-gezeseeko
-gezesezaako
+# --------------------------------------- okugezesa(to test): Type-I Transitive --------------------------------------- #
+gezesa/OriginalType-ITransitive
+gezese/ModifiedType-ITransitive
+gezesezza/PastType-ITransitive
+gezesebwa/PassiveTransitive
+gezesebwe/ModifiedPassiveTransitive
+gezeseddwa/PastPassiveTransitive
+gezeseza/BenefactiveTransitive
+gezeseze/ModifiedBenefactiveTransitive
+gezeselezza/PastBenefactiveTransitive
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okugezaako(to try): Type-I Transitive ---------------------------------------------- #
+gezaako/OriginalType-ITransitive
+gezeeko/ModifiedType-ITransitive
+gezezzaako/PastType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
 gezi
 ggaamu
 ggalaama
 ggalagi
-# -------------------------------------- okuggala(to close) ----------------------------------------------- #
-ggala
-ggale
-ggadde
-ggalwa
-ggalwe
-ggaddwa
-ggaza
-ggaze
-ggazza
-ggalira
-ggalire
-ggalidde
-ggazi/oo
+# -------------------------------------- okuggala(to close): Type-I Transitive ----------------------------------------------- #
+ggala/OriginalType-ITransitive
+ggale/ModifiedType-ITransitive
+ggadde/PastType-ITransitive
+ggalwa/PassiveTransitive
+ggalwe/ModifiedPassiveTransitive
+ggaddwa/PastPassiveTransitive
+ggaza/CausativeTransitive
+ggaze/ModifiedCausativeTransitive
+ggazza/PastCausativeTransitive
+ggalira/BenefactiveTransitive
+ggalire/ModifiedBenefactiveTransitive
+ggalidde/PastBenefactiveTransitive
+omuggazi
 #
 ggalaako
 ggalako
@@ -7018,13 +7019,13 @@ ggaliddeengawo
 ggaliddeengawooko
 # ---------------------------------------------------------------------------------------------------------- #
 ggalubindi
-# --------------------------------------- okuggwa(to come to an end) -------------------------------------------------- #
-ggwa
-ggwe
-wedde
-ggwera
-ggwere
-ggweredde
+# --------------------------------------- okuggwa(to come to an end): Intrasitive -------------------------------------------------- #
+ggwa/OriginalIntransitive
+ggwe/ModifiedIntransitive
+wedde/PastIntransitive
+ggwera/LocativeIntransitive
+ggwere/ModifiedLocativeIntransitive
+ggweredde/PastLocativeIntransitive
 # ----------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okuggwaamu(to become finished): Deadjectival ----------------------------------------------------- #
 ggwaamu/OriginalDeadjective
@@ -7046,112 +7047,112 @@ ggyiira/LocativeDeadjective
 ggyiire/ModifiedLocativeDeadjective
 ggyiiridde/PastLocativeDeadjective
 # ---------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuginga(to forge) ---------------------------------------------- #
-ginga
-ginge
-ginze
-gingisa
-gingise
-gingisizza
-gingibwa
-gingibwe
-gingiddwa
-gingira
-gingire
-gingidde
-ginzi/oo
+# --------------------------------------- okuginga(to forge): Type-I Transitive ---------------------------------------------- #
+ginga/OriginalType-ITransitive
+ginge/ModifiedType-ITransitive
+ginze/PastType-ITransitive
+gingisa/CausativeTransitive
+gingise/ModifiedCausativeTransitive
+gingisizza/PastCausativeTransitive
+gingibwa/PassiveTransitive
+gingibwe/ModifiedPassiveTransitive
+gingiddwa/PastPassiveTransitive
+gingira/BenefactiveTransitive
+gingire/ModifiedBenefactiveTransitive
+gingidde/PastBenefactiveTransitive
+omuginzi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okugira(to act) ---------------------------------------------- #
-gira
-gire
-gize
+# ------------------------------------------ okugira(to act): Intransitive ---------------------------------------------- #
+gira/OriginalIntransitive
+gire/ModifiedIntransitive
+gize/PastIntransitive
 # ---------------------------------------------------------------------------------------------------------- #
 Girimani
-# ------------------------------------------ okugoba(to chase) ------------------------------------------------- #
-goba
-gobe
-gobye
-gobesa
-gobese
-gobesezza
-gobebwa
-gobebwe
-gobeddwa
-gobera
-gobere
-gobedde
+# ------------------------------------------ okugoba(to chase): Type-I Transitive ------------------------------------------------- #
+goba/OriginalType-ITransitive
+gobe/ModifiedType-ITransitive
+gobye/PastType-ITransitive
+gobya/CausativeTransitive
+gobye/ModifiedCausativeTransitive
+gobezza/PastCausativeTransitive
+gobesa/CausativeTransitive
+gobese/ModifiedCausativeTransitive
+gobesezza/PastCausativeTransitive
+gobebwa/PassiveTransitive
+gobebwe/ModifiedPassiveTransitive
+gobeddwa/PastPassiveTransitive
+gobera/BenefactiveTransitive
+gobere/ModifiedBenefactiveTransitive
+gobedde/PastBenefactiveTransitive
 # ---------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugobaganya(to keep chasing off) --------------------------------------- #
-gobaganya
-gobaganye
-gobaganyizza
+# --------------------------------------- okugobaganya(to keep chasing off): Type-I Transitive --------------------------------------- #
+gobaganya/OriginalType-ITransitive
+gobaganye/ModifiedType-ITransitive
+gobaganyizza/PastType-ITransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugoberera(to follow) ------------------------------------------- #
-goberera
-goberere
-goberedde
-gobereza
-gobereze
-goberezza
-goberebwa
-goberebwe
-gobereddwa
-goberezi/oo
+# --------------------------------------- okugoberera(to follow): Type-I Transitive ------------------------------------------- #
+goberera/OriginalType-ITransitive
+goberere/ModifiedType-ITransitive
+goberedde/PastType-ITransitive
+gobereza/CausativeTransitive
+gobereze/ModifiedCausativeTransitive
+goberezza/PastCausativeTransitive
+goberelwa/PassiveTransitive
+goberelwe/ModifiedPassiveTransitive
+gobereddwa/PastPassiveTransitive
+omugoberezi
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugobola (to make a profit) --------------------------------------- #
-gobola
-gobole
-gobodde
-gobolola
-gobolole
-gobololedde
+# --------------------------------------- okugobola (to make a profit): Intransitive --------------------------------------- #
+gobola/OriginalIntransitive
+gobole/ModifiedIntransitive
+gobodde/PastIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugogola(to clear/clean up) --------------------------------------- #
-gogola
-gogole
-gogodde
-gogoza
-gogoze
-gogozza
-gogolebwa
-gogolebwe
-gogoleddwa
-gogolera
-gogolere
-gogoledde
-gogozi/oo
+# --------------------------------------- okugogola(to clear/clean up): Type-I Transitive --------------------------------------- #
+gogola/OriginalType-ITransitive
+gogole/ModifiedType-ITransitive
+gogodde/PastType-ITransitive
+gogoza/CausativeTransitive
+gogoze/ModifiedCausativeTransitive
+gogozza/PastCausativeTransitive
+gogolebwa/PassiveTransitive
+gogolebwe/ModifiedPassiveTransitive
+gogoleddwa/PastPassiveTransitive
+gogolera/BenefactiveTransitive
+gogolere/ModifiedBenefactiveTransitive
+gogoledde/PastBenefactiveTransitive
+omugogozi
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugolola(to make iron) --------------------------------------------- #
-golola
-golole
-golodde
-goloza
-goloze
-golozza
-gololebwa
-gololebwe
-gololeddwa
-gololwa
-gololwe
-goloddwa
-gololera
-gololere
-gololedde
-golozi/oo
+# --------------------------------------- okugolola(to make iron): Type-II Transitive --------------------------------------------- #
+golola/OriginalType-IITransitive
+golole/ModifiedType-IITransitive
+golodde/PastType-IITransitive
+goloza/CausativeTransitive
+goloze/ModifiedCausativeTransitive
+golozza/PastCausativeTransitive
+gololebwa/PassiveTransitive
+gololebwe/ModifiedPassiveTransitive
+gololeddwa/PastPassiveTransitive
+gololwa/PassiveTransitive
+gololwe/ModifiedPassiveTransitive
+goloddwa/PastPassiveTransitive
+gololera/BenefactiveTransitive
+gololere/ModifiedBenefactiveTransitive
+gololedde/PastBenefactiveTransitive
+omugolozi
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugomba (to apprehend) --------------------------------------- #gomba
-gomba
-gombe
-gombye
-gombebwa
-gombebwe
-gombeddwa
-gombesa
-gombese
-gombesezza
-gombera
-gombere
-gombedde
+# --------------------------------------- okugomba (to apprehend): Type-I Transitive --------------------------------------- #
+gomba/OriginalType-ITransitive
+gombe/ModifiedType-ITransitive
+gombye/PastType-ITransitive
+gombebwa/PassiveTransitive
+gombebwe/ModifiedPassiveTransitive
+gombeddwa/PastPassiveTransitive
+gombesa/CausativeTransitive
+gombese/ModifiedCausativeTransitive
+gombesezza/PastCausativeTransitive
+gombera/BenefactiveTransitive
+gombere/ModifiedBenefactiveTransitive
+gombedde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 gomesi
 # --------------------------------------- okugonda(to be soft): Deadjectival ----------------------------------------------- #
@@ -7163,41 +7164,41 @@ gonzezza/PastCausativeDeadjective
 gondera/BenefactiveDeadjective
 gondere/ModifiedBenefactiveDeadjective
 gondedde/PastBenefactiveDeadjective
-gonvu/oo
+omugonvu
 # ------------------------------------------------------------------------------------------------------------- #
 gonja
-# --------------------------------------- okugonjoola(to settle/resolve) --------------------------------------- #
-gonjoola
-gonjoole
-gonjodde
-gonjooza
-gonjooze
-gonjozza
-gonjoolebwa
-gonjoolebwe
-gonjoolebbwa
-gonjooleddwa
-gonjoolera
-gonjoolere
-gonjoledde
+# --------------------------------------- okugonjoola(to settle/resolve): Type-I Transitive --------------------------------------- #
+gonjoola/OriginalType-ITransitive
+gonjoole/ModifiedType-ITransitive
+gonjodde/PastType-ITransitive
+gonjooza/CausativeTransitive
+gonjooze/ModifiedCausativeTransitive
+gonjozza/PastCausativeTransitive
+gonjoolebwa/PassiveTransitive
+gonjoolebwe/ModifiedPassiveTransitive
+gonjoolebbwa/PastPassiveTransitive
+gonjooleddwa/PastPassiveTransitive
+gonjoolera/BenefactiveTransitive
+gonjoolere/ModifiedBenefactiveTransitive
+gonjoledde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugoya(to mingle) ------------------------------------------------ #
-goya
-goye
-goyezza
-goyesa
-goyese
-goyesezza
-goyebwa
-goyebwe
-goyeddwa
-goyebbwa
-goyera
-goyere
-goyedde
-goyeza
-goyeze
-goyerezza
+# --------------------------------------- okugoya(to mingle): Type-I Transitive ------------------------------------------------ #
+goya/OriginalType-ITransitive
+goye/ModifiedType-ITransitive
+goyezza/PastType-ITransitive
+goyesa/CausativeTransitive
+goyese/ModifiedCausativeTransitive
+goyesezza/PastCausativeTransitive
+goyebwa/PassiveTransitive
+goyebwe/ModifiedPassiveTransitive
+goyeddwa/PastPassiveTransitive
+goyebbwa/PastPassiveTransitive
+goyera/LocativeTransitive
+goyere/ModifiedLocativeTransitive
+goyedde/PastLocativeTransitive
+goyeza/BenefactiveTransitive
+goyeze/ModifiedBenefactiveTransitive
+goyerezza/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okuguba(to become stained): Deadjectival --------------------------------------- #
 guba/OriginalDeadjective
@@ -7211,20 +7212,23 @@ gubira/LocativeDeadjective
 gubire/ModifiedLocativeDeadjective
 gubidde/PastLocativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugula(to buy) ---------------------------------------------------- #
-gula
-gule
-guze
-guzisa
-guzise
-guzisizza
-gulibwa
-gulibwe
-guliddwa
-gulira
-gulire
-gulidde
-guzi/oo
+# --------------------------------------- okugula(to buy): Type-I Transitive ---------------------------------------------------- #
+gula/OriginalType-ITransitive
+gule/ModifiedType-ITransitive
+guze/PastType-ITransitive
+guza/CausativeTransitive
+guze/ModifiedCausativeTransitive
+guzizza/PastCausativeTransitive
+guzisa/CausativeTransitive
+guzise/ModifiedCausativeTransitive
+guzisizza/PastCausativeTransitive
+gulibwa/PassiveTransitive
+gulibwe/ModifiedPassiveTransitive
+guliddwa/PastPassiveTransitive
+gulira/BenefactiveTransitive
+gulire/ModifiedBenefactiveTransitive
+gulidde/PastBenefactiveTransitive
+omuguzi
 # ------------------------------------------------------------------------------------------------------------- #
 gulugulu
 # --------------------------------------- okugulumira(to be high): Deadjectival ----------------------------------------------- #
@@ -7234,7 +7238,7 @@ gulumidde/PastDeadjective
 gulumiza/CausativeDeadjective
 gulumize/ModifiedCausativeDeadjective
 gulumizza/PastCausativeDeadjective
-gulumivu/oo
+omugulumivu
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okuguma(to be strong): Deadjectival --------------------------------------- #
 guma/OriginalDeadjective
@@ -7245,67 +7249,68 @@ gumizza/PastCausativeDeadjective
 gumira/BenefactiveDeadjective
 gumire/ModifiedBenefactiveDeadjective
 gumidde/PastBenefactiveDeadjective
-gumu/oo
+omugumu
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugumiikiriza(to tolerate) --------------------------------------- #
-gumiikiriza
-gumiikirize
-gumiikirizza
-gumiikirizibwa
-gumiikirizibwe
-gumiikiriziddwa
-gumiikiririza
-gumiikirizize
-gumiikirizizza
+# --------------------------------------- okugumiikiriza(to tolerate): Type-I Transitive --------------------------------------- #
+gumiikiriza/OriginalType-ITransitive
+gumiikirize/ModifiedType-ITransitive
+gumiikirizza/PastType-ITransitive
+gumiikirizibwa/PassiveTransitive
+gumiikirizibwe/ModifiedPassiveTransitive
+gumiikiriziddwa/PastPassiveTransitive
+gumiikiririza/BenefactiveTransitive
+gumiikirizize/ModifiedBenefactiveTransitive
+gumiikirizizza/PastBenefactiveTransitive
+omugumiikiriza
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugunda(to hit) ---------------------------------------------------- #
-gunda
-gunde
-gunze
-gundisa
-gundise
-gundisizza
-gundibwa
-gundibwe
-gundiddwa
-gundira
-gundire
-gundidde
-gunzi/oo
+# --------------------------------------- okugunda(to hit): Type-II Transitive ---------------------------------------------------- #
+gunda/OriginalType-IITransitive
+gunde/ModifiedType-IITransitive
+gunze/PastType-IITransitive
+gundisa/CausativeTransitive
+gundise/ModifiedCausativeTransitive
+gundisizza/PastCausativeTransitive
+gundibwa/PassiveTransitive
+gundibwe/ModifiedPassiveTransitive
+gundiddwa/PastPassiveTransitive
+gundira/BenefactiveTransitive
+gundire/ModifiedBenefactiveTransitive
+gundidde/PastBenefactiveTransitive
+omugunzi
 # ------------------------------------------------------------------------------------------------------------- #
 gundi
 gundiivu
-# --------------------------------------- okugunjula(to discipline) --------------------------------------- #
-gunjula
-gunjule
-gunjudde
-gunjuza
-gunjuze
-gunjuzza
-gunjulibwa
-gunjulibwe
-gunjuliddwa
-gunjulira
-gunjulire
-gunjulidde
-gunjuzi/oo
+# --------------------------------------- okugunjula(to discipline): Type-I Transitive --------------------------------------- #
+gunjula/OriginalType-ITransitive
+gunjule/ModifiedType-ITransitive
+gunjudde/PastType-ITransitive
+gunjuza/CausativeTransitive
+gunjuze/ModifiedCausativeTransitive
+gunjuzza/PastCausativeTransitive
+gunjulwa/PassiveTransitive
+gunjulwe/ModifiedPassiveTransitive
+gunjuddwa/PastPassiveTransitive
+gunjulira/BenefactiveTransitive
+gunjulire/ModifiedBenefactiveTransitive
+gunjulidde/PastBenefactiveTransitive
+omugunjuzi
 # ------------------------------------------------------------------------------------------------------------- #
 gw
 gwa
-# --------------------------------------- okugwa(to fall/fail) --------------------------------------- #
-gwa
-gwe
-gudde
-gwisa
-gwise
-gwisizza
-gwirwa
-gwirwe
-gwiriddwa
-gwira
-gwire
-gwiridde
-gwi/oo
+# --------------------------------------- okugwa(to fall/fail): Type-I Transitive --------------------------------------- #
+gwa/OriginalType-ITransitive
+gwe/ModifiedType-ITransitive
+gudde/PastType-ITransitive
+gwisa/CausativeTransitive
+gwise/ModifiedCausativeTransitive
+gwisizza/PastCausativeTransitive
+gwirwa/PassiveTransitive
+gwirwe/ModifiedPassiveTransitive
+gwiriddwa/PastPassiveTransitive
+gwira/BenefactiveTransitive
+gwire/ModifiedBenefactiveTransitive
+gwiridde/PastBenefactiveTransitive
+omugwi
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okwegwanyiza(to wish for): Reflexive --------------------------------------- #
 gwanyiza/OriginalReflexive
@@ -7321,60 +7326,62 @@ gwanyisizza/PastCausativeReflexive
 gwe
 omugwira
 gy
-# ---------------------------------------- okugya(to fit) ---------------------------------------------------- #
-gya
-gyaawo
-gyaako
-gyaamu
-gyaayo
+# ---------------------------------------- okugya(to fit): Intransitive ---------------------------------------------------- #
+gya/OriginalIntransitive
+gye/ModifiedIntransitive
+gyaawo/OriginalIntransitive
+gyaako/OriginalIntransitive
+gyaamu/OriginalIntransitive
+gyaayo/OriginalIntransitive
 # ------------------------------------------------------------------------------------------------------------ #
 gye
 heedimasita
-# ------------------------------------- okujaajaamya(to misuse) ----------------------------------------- #
-jaajaamya
-jaajaamye
-jaajaamizza
-jaajaamiza
-jaajaamize
-jaajaamira
-jaajaamire
-jaajaamidde
+# ------------------------------------- okujaajaamya(to misuse): Type-I Transitive ----------------------------------------- #
+jaajaamya/OriginalType-ITransitive
+jaajaamye/ModifiedType-ITransitive
+jaajaamizza/PastType-ITransitive
+jaajaamiza/BenefactiveTransitive
+jaajaamize/ModifiedBenefactiveTransitive
+jaajaamilizza/PastBenefactiveTransitive
+jaajaamira/LocativeTransitive
+jaajaamire/ModifiedLocativeTransitive
+jaajaamidde/PastLocativeTransitive
 # -------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okujaganya(to celebrate) ---------------------------------------------- #
-jaganya
-jaganye
-jaganyizza
+# ------------------------------------------ okujaganya(to celebrate): Type-I Transitive ---------------------------------------------- #
+jaganya/OriginalType-ITransitive
+jaganye/ModifiedType-ITransitive
+jaganyizza/PastType-ITransitive
 # ------------------------------------------------------------------------------------------------------------- #
 jangu
-# --------------------------------------- okujeema(to disobey) ------------------------------------------------ #
-jeema
-jeeme
-jeemye
-jeemesa
-jeemese
-jeemesezza
-jeemebwa
-jeemebwe
-jeemeddwa
-jeemera
-jeemere
-jeemedde
-jeemu/oo
+# --------------------------------------- okujeema(to disobey): Intransitive ------------------------------------------------ #
+jeema/OriginalIntransitive
+jeeme/ModifiedIntransitive
+jeemye/PastIntransitive
+jeemesa/CausativeIntransitive
+jeemese/ModifiedCausativeIntransitive
+jeemesezza/PastCausativeIntransitive
+jeemelwa/PassiveIntransitive
+jeemelwe/ModifiedPassiveIntransitive
+jeemeddwa/PastPassiveIntransitive
+jeemera/BenefactiveIntransitive
+jeemere/ModifiedBenefactiveIntransitive
+jeemedde/PastBenefactiveIntransitive
+omujeemu
 # -------------------------------------------------------------------------------------------------------------- #
 jeemu
-# ------------------------------------- okujja(to come and to remove) ----------------------------------------- #
-jja/NAPS
-jje/SB
-zze/PS
-jjibwa
-jjibwe
-jjiddwa
-jjisa
-jjise
-jjisizza
-jjira
-jjire
-jjidde
+# ------------------------------------- okujja(to come and to remove): Intransitive ----------------------------------------- #
+jja/OriginalIntransitive
+jje/ModifiedIntransitive
+zze/PastIntransitive
+jjibwa/PassiveIntransitive
+jjibwe/ModifiedPassiveIntransitive
+jjiddwa/PastPassiveIntransitive
+jjisa/CausativeIntransitive
+jjise/ModifiedCausativeIntransitive
+jjisizza/PastCausativeIntransitive
+jjira/BenefactiveIntransitive
+jjire/ModifiedBenefactiveIntransitive
+jjidde/PastBenefactiveIntransitive
 #
 jjako
 jjamu
