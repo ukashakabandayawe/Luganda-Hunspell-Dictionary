@@ -13095,63 +13095,63 @@ nunulire/ModifiedBenefactiveTransitive
 nunulidde/PastBenefactiveTransitive
 omununuzi
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okunuuna(to suck; to lick) --------------------------------------- #
-nuuna
-nuune
-nuunye
-nuunisa
-nuunise
-nuunisizza
-nuunibwa
-nuunibwe
-nuuniddwa
-nuunira
-nuunire
-nuunidde
+# -------------------------------------- okunuuna(to suck; to lick): Type-I Transitive --------------------------------------- #
+nuuna/OriginalType-ITransitive
+nuune/ModifiedType-ITransitive
+nuunye/PastType-ITransitive
+nuunisa/CausativeTransitive
+nuunise/ModifiedCausativeTransitive
+nuunisizza/PastCausativeTransitive
+nuunibwa/PassiveTransitive
+nuunibwe/ModifiedPassiveTransitive
+nuuniddwa/PastPassiveTransitive
+nuunira/BenefactiveTransitive
+nuunire/ModifiedBenefactiveTransitive
+nuunidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okunyaga(to plunder; to rob; to steal) --------------------------------- #
-nyaga
-nyage
-nyaze
-nyagisa
-nyagise
-nyagisizza
-nyagibwa
-nyagibwe
-nyagiddwa
-nyagira
-nyagire
-nyagidde
+# -------------------------------- okunyaga(to plunder; to rob; to steal): Type-I Transitive --------------------------------- #
+nyaga/OriginalType-ITransitive
+nyage/ModifiedType-ITransitive
+nyaze/PastType-ITransitive
+nyagisa/CausativeTransitive
+nyagise/ModifiedCausativeTransitive
+nyagisizza/PastCausativeTransitive
+nyagibwa/PassiveTransitive
+nyagibwe/ModifiedPassiveTransitive
+nyagiddwa/PastPassiveTransitive
+nyagira/BenefactiveTransitive
+nyagire/ModifiedBenefactiveTransitive
+nyagidde/PastBenefactiveTransitive
 omunyazi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------- okunyakula(to steal; to rob; to seize; to plunder) -------------------------- #
-nyakula
-nyakule
-nyakudde
-nyakuza
-nyakuze
-nyakuzza
-nyakulwa
-nyakulwe
-nyakuddwa
-nyakulira
-nyakulire
-nyakulidde
+# ------------------------- okunyakula(to steal; to rob; to seize; to plunder): Type-I Transitive -------------------------- #
+nyakula/OriginalType-ITransitive
+nyakule/ModifiedType-ITransitive
+nyakudde/PastType-ITransitive
+nyakuza/CausativeTransitive
+nyakuze/ModifiedCausativeTransitive
+nyakuzza/PastCausativeTransitive
+nyakulwa/PassiveTransitive
+nyakulwe/ModifiedPassiveTransitive
+nyakuddwa/PastPassiveTransitive
+nyakulira/LocativeTransitive
+nyakulire/ModifiedLocativeTransitive
+nyakulidde/PastLocativeTransitive
 omunyakuzi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okunyiga(to press) ------------------------------------------------- #
-nyiga
-nyige
-nyize
-nyigibwa
-nyigibwe
-nyigiddwa
-nyigisa
-nyigise
-nyigisizza
-nyigira
-nyigire
-nyigidde
+# ------------------------------------ okunyiga(to press): Type-I Transitive ------------------------------------------------- #
+nyiga/OriginalType-ITransitive
+nyige/ModifiedType-ITransitive
+nyize/PastType-ITransitive
+nyigibwa/PassiveTransitive
+nyigibwe/ModifiedPassiveTransitive
+nyigiddwa/PastPassiveTransitive
+nyigisa/CausativeTransitive
+nyigise/ModifiedCausativeTransitive
+nyigisizza/PastCausativeTransitive
+nyigira/BenefactiveTransitive
+nyigire/ModifiedBenefactiveTransitive
+nyigidde/PastBenefactiveTransitive
 # 
 nyigako
 nyigamu
@@ -13350,60 +13350,61 @@ nyiririre/ModifiedBenefactiveDeadjective
 nyiriridde/PastBenefactiveDeadjective
 omunyirivu
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okunyonyogera(to tickle) ---------------------------------------- #
-nyonyogera
-nyonyogere
-nyonyogedde
-nyonyogeza
-nyonyogeze
-nyonyogezza
-nyonyogebwa
-nyonyogebwe
-nyonyogeddwa
-nyonyogerera
-nyonyogerere
-nyonyogeredde
+# --------------------------------------- okunyonyogera(to tickle): Type-I Transitive ---------------------------------------- #
+nyonyogera/OriginalType-ITransitive
+nyonyogere/ModifiedType-ITransitive
+nyonyogedde/PastType-ITransitive
+nyonyogeza/CausativeTransitive
+nyonyogeze/ModifiedCausativeTransitive
+nyonyogezza/PastCausativeTransitive
+nyonyogelwa/PassiveTransitive
+nyonyogelwe/ModifiedPassiveTransitive
+nyonyogeddwa/PastPassiveTransitive
+nyonyogerera/BenefactiveTransitive
+nyonyogerere/ModifiedBenefactiveTransitive
+nyonyogeredde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------- okunyooka(to smoke; to produces smoke; to rage; to swarm) ----------------------- #
-nyooka
-nyooke
-nyoose
-nyoosa
-nyoosezza
-nyookeza
-nyookeze
-nyookezza
-nyookera
-nyookere
-nyookedde
+# ----------------------- okunyooka(to smoke; to produces smoke; to rage; to swarm): Intransitive ----------------------- #
+nyooka/OriginalIntransitive
+nyooke/ModifiedIntransitive
+nyoose/PastIntransitive
+nyoosa/CausativeIntransitive
+nyoose/ModifiedCausativeIntransitive
+nyoosezza/PastCausativeIntransitive
+nyookeza/CausativeIntransitive
+nyookeze/ModifiedCausativeIntransitive
+nyookezza/PastCausativeIntransitive
+nyookera/LocativeIntransitive
+nyookere/ModifiedLocativeIntransitive
+nyookedde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------- okunyoola(to twist; to wind up; to mispronounce; to speak badly) -------------------- #
-nyoola
-nyoole
-nyodde
-nyooza
-nyooze
-nyoozezza
-nyoolebwa
-nyoolebwe
-nyooleddwa
-nyoolera
-nyoolere
-nyooledde
+# ------------------- okunyoola(to twist; to wind up; to mispronounce; to speak badly): Type-I Transitive -------------------- #
+nyoola/OriginalType-ITransitive
+nyoole/ModifiedType-ITransitive
+nyodde/PastType-ITransitive
+nyooza/CausativeTransitive
+nyooze/ModifiedCausativeTransitive
+nyoozezza/PastCausativeTransitive
+nyoolebwa/PassiveTransitive
+nyoolebwe/ModifiedPassiveTransitive
+nyooleddwa/PastPassiveTransitive
+nyoolera/BenefactiveTransitive
+nyoolere/ModifiedBenefactiveTransitive
+nyooledde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------ okunyooma(to underestimate; to take for granted; to despise; to belittle; to look down on) ------- #
-nyooma
-nyoome
-nyoomye
-nyoomesa
-nyoomese
-nyoomesezza
-nyoomebwa
-nyoomebwe
-nyoomeddwa
-nyoomera
-nyoomere
-nyoomedde
+# ------ okunyooma(to underestimate; to take for granted; to despise; to belittle; to look down on): Type-I Transitive ------- #
+nyooma/OriginalType-ITransitive
+nyoome/ModifiedType-ITransitive
+nyoomye/PastType-ITransitive
+nyoomesa/CausativeTransitive
+nyoomese/ModifiedCausativeTransitive
+nyoomesezza/PastCausativeTransitive
+nyoomebwa/PassiveTransitive
+nyoomebwe/ModifiedPassiveTransitive
+nyoomeddwa/PastPassiveTransitive
+nyoomera/LocativeTransitive
+nyoomere/ModifiedLocativeTransitive
+nyoomedde/PastLocativeTransitive
 omunyoomi
 # --------------------------------------------------------------------------------------------------------- #
 # ---------- okunyuma(to be enjoyable; to be pleasant; to be interesting; to be smart (fashion)): Deadjectival ---------- #
@@ -13420,16 +13421,16 @@ nyumira/BenefactiveDeadjective
 nyumire/ModifiedBenefactiveDeadjective
 nyumidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okunyumya(to chat) ----------------------------------------------- #
-nyumya
-nyumye
-nyumizza
-nyumizibwa
-nyumizibwe
-nyumiziddwa
-nyumiza
-nyumize
-nyumilizza
+# -------------------------------------- okunyumya(to chat): Type-I Transitive ----------------------------------------------- #
+nyumya/OriginalType-ITransitive
+nyumye/ModifiedType-ITransitive
+nyumizza/PastType-ITransitive
+nyumizibwa/PassiveTransitive
+nyumizibwe/ModifiedPassiveTransitive
+nyumiziddwa/PastPassiveTransitive
+nyumiza/BenefactiveTransitive
+nyumize/ModifiedBenefactiveTransitive
+nyumilizza/PastBenefactiveTransitive
 # 
 nyumyaako
 nyumyaamu
@@ -13546,33 +13547,33 @@ nyumilizzaawo
 nyumilizzaawooko
 # --------------------------------------------------------------------------------------------------------- #
 nyuvu
-# ------------------------------------------- okunywa(to drink) ------------------------------------------- #
-nywa
-nywe
-nywedde
-nywesa
-nywese
-nywesezza
-nywebwa
-nywebwe
-nywerebbwa
-nywera
-nywere
-nyweredde
+# ------------------------------------------- okunywa(to drink): Type-I Transitive ------------------------------------------- #
+nywa/OriginalType-ITransitive
+nywe/ModifiedType-ITransitive
+nywedde/PastType-ITransitive
+nywesa/CausativeTransitive
+nywese/ModifiedCausativeTransitive
+nywesezza/PastCausativeTransitive
+nywebwa/PassiveTransitive
+nywebwe/ModifiedPassiveTransitive
+nywerebbwa/PastPassiveTransitive
+nywera/LocativeTransitive
+nywere/ModifiedLocativeTransitive
+nyweredde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okunywegera(to kiss) ------------------------------------------ #
-nywegera
-nywegere
-nywegedde
-nywegesa
-nywegese
-nywegesezza
-nywegerwa
-nywegerwe
-nywegeddwa
-nywegerera
-nywegerere
-nywegeredde
+# ----------------------------------------- okunywegera(to kiss): Type-I Transitive ------------------------------------------ #
+nywegera/OriginalType-ITransitive
+nywegere/ModifiedType-ITransitive
+nywegedde/PastType-ITransitive
+nywegesa/CausativeTransitive
+nywegese/ModifiedCausativeTransitive
+nywegesezza/PastCausativeTransitive
+nywegerwa/PassiveTransitive
+nywegerwe/ModifiedPassiveTransitive
+nywegeddwa/PastPassiveTransitive
+nywegerera/LocativeTransitive
+nywegerere/ModifiedLocativeTransitive
+nywegeredde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------- okunywera(to be firm; to hold firm; to stand steady): Deadjectival -------------------------- #
 nywera/OriginalDeadjective
@@ -14381,17 +14382,17 @@ paaka
 Paapa
 paasika
 paka
-# ----------------------- okupakasa(to work hard) ---------------------------------- #
-pakasa
-pakase
-pakasizza
-pakasibwa
-pakasibwe
-pakasiddwa
-pakasiza
-pakasize
-pakasilizza
-
+# ----------------------- okupakasa(to work hard): Intransitive ---------------------------------- #
+pakasa/OriginalIntransitive
+pakase/ModifiedIntransitive
+pakasizza/PastIntransitive
+pakasibwa/PassiveIntransitive
+pakasibwe/ModifiedPassiveIntransitive
+pakasiddwa/PastPassiveIntransitive
+pakasiza/BenefactiveIntransitive
+pakasize/ModifiedBenefactiveIntransitive
+pakasilizza/PastBenefactiveIntransitive
+#
 pakasaako
 pakasaamu
 pakasaamuuko
@@ -14506,19 +14507,19 @@ pakasilizzaayooko
 pakasilizzaawo
 pakasilizzaawooko
 # ------------------------------------------------------------------------------- #
-# ---------------------------------------- okupakira(to pack) ---------------------------------- #
-pakira
-pakire
-pakidde
-pakilwa
-pakilwe
-pakiddwa
-pakiza
-pakize
-pakizza
-pakirira
-pakirire
-pakiridde
+# ---------------------------------------- okupakira(to pack): Type-I Transitive ---------------------------------- #
+pakira/OriginalType-ITransitive
+pakire/ModifiedType-ITransitive
+pakidde/PastType-ITransitive
+pakilwa/PassiveTransitive
+pakilwe/ModifiedPassiveTransitive
+pakiddwa/PastPassiveTransitive
+pakiza/CausativeTransitive
+pakize/ModifiedCausativeTransitive
+pakizza/PastCausativeTransitive
+pakirira/BenefactiveTransitive
+pakirire/ModifiedBenefactiveTransitive
+pakiridde/PastBenefactiveTransitive
 # 
 pakirako
 pakiramu
@@ -14690,19 +14691,19 @@ pakiriddeewooko
 # ------------------------------------------------------------------ #
 palamenti
 pamiti
-# ---------------------------------------- okupanga(to arrange) ---------------------------------- #
-panga
-pange
-panze
-pangibwa
-pangibwe
-pangiddwa
-pangisa
-pangise
-pangisizza
-pangira
-pangire
-pangidde
+# ---------------------------------------- okupanga(to arrange): Type-I Transitive ---------------------------------- #
+panga/OriginalType-ITransitive
+pange/ModifiedType-ITransitive
+panze/PastType-ITransitive
+pangibwa/PassiveTransitive
+pangibwe/ModifiedPassiveTransitive
+pangiddwa/PastPassiveTransitive
+pangisa/CausativeTransitive
+pangise/ModifiedCausativeTransitive
+pangisizza/PastCausativeTransitive
+pangira/BenefactiveTransitive
+pangire/ModifiedBenefactiveTransitive
+pangidde/PastBenefactiveTransitive
 #
 pangako
 pangamu
@@ -14856,18 +14857,18 @@ pangiddeeyooko
 pangiddeewo
 pangiddeewooko
 # ------------------------------------------------------------ #
-# ------------------------------- okupangisa(to rent) ---------------------------------- #
-pangisa
-pangise
-pangisizza
-pangisibwa
-pangisibwe
-pangisiddwa
-pangizisa
-pangizise
-pangisiriza
-pangisirize
-pangisirizza
+# ------------------------------- okupangisa(to rent): Type-I Transitive ---------------------------------- #
+pangisa/OriginalType-ITransitive
+pangise/ModifiedType-ITransitive
+pangisizza/PastType-ITransitive
+pangisibwa/PassiveTransitive
+pangisibwe/ModifiedPassiveTransitive
+pangisiddwa/PastPassiveTransitive
+pangizisa/BenefactiveTransitive
+pangizise/ModifiedBenefactiveTransitive
+pangisiriza/BenefactiveTransitive
+pangisirize/ModifiedBenefactiveTransitive
+pangisirizza/PastBenefactiveTransitive
 #
 pangisaako
 pangisaamu
@@ -15015,45 +15016,46 @@ pangisirizzaawooko
 # ------------------------------------------------------------------ #
 olupanka
 pasipoota
-# ------------------------- okupatana(to come to an agreement; to come to terms) -------------------------- #
-patana
-patane
-patanye
-patanya
-patanyizza
-patanyira
-patanyire
-patanyidde
+# ------------------------- okupatana(to come to an agreement; to come to terms): Type-I Transitive -------------------------- #
+patana/OriginalType-ITransitive
+patanye/ModifiedType-ITransitive
+patanye/PastType-ITransitive
+patanya/CausativeTransitive
+patanye/ModifiedCausativeTransitive
+patanyizza/PastCausativeTransitive
+patanira/LocativeTransitive
+patanire/ModifiedLocativeTransitive
+patanidde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------ okupeeka(to beg for; to push somebody to do something; to ask for persistently) ------------ #
-peeka
-peeke
-peese
-peekesa
-peekese
-peekesezza
-peekebwa
-peekebwe
-peekeddwa
-peekera
-peekere
-peekedde
+# ------------ okupeeka(to beg for; to push somebody to do something; to ask for persistently): Type-I Transitive ------------ #
+peeka/OriginalType-ITransitive
+peeke/ModifiedType-ITransitive
+peese/PastType-ITransitive
+peekesa/CausativeTransitive
+peekese/ModifiedCausativeTransitive
+peekesezza/PastCausativeTransitive
+peekebwa/PassiveTransitive
+peekebwe/ModifiedPassiveTransitive
+peekeddwa/PastPassiveTransitive
+peekera/LocativeTransitive
+peekere/ModifiedLocativeTransitive
+peekedde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
 peni
 pilo
-# --------------------------------------- okupima(to measure) --------------------------------------------- #
-pima
-pime
-pimye
-pimibwa
-pimibwe
-pimiddwa
-pimisa
-pimise
-pimisizza
-pimira
-pimire
-pimidde
+# --------------------------------------- okupima(to measure): Type-I Transitive --------------------------------------------- #
+pima/OriginalType-ITransitive
+pime/ModifiedType-ITransitive
+pimye/PastType-ITransitive
+pimibwa/PassiveTransitive
+pimibwe/ModifiedPassiveTransitive
+pimiddwa/PastPassiveTransitive
+pimisa/CausativeTransitive
+pimise/ModifiedCausativeTransitive
+pimisizza/PastCausativeTransitive
+pimira/BenefactiveTransitive
+pimire/ModifiedBenefactiveTransitive
+pimidde/PastBenefactiveTransitive
 # 
 pimako
 pimamu
@@ -15220,14 +15222,12 @@ pokya
 poliisi
 polofeesa
 # ------------------------------- okupooca(to be very ill; to be feverish): Intransitive -------------------------------- #
-pooca
-pooce
-poocezza
-pooceza
-pooceze
-poocera
-poocere
-poocedde
+pooca/OriginalIntransitive
+pooce/ModifiedIntransitive
+poocezza/PastIntransitive
+pooceza/LocativeIntransitive
+pooceze/ModifiedLocativeIntransitive
+poocerezza/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 ppikipiki
 pulani
@@ -15239,26 +15239,32 @@ pulojekiti
 pya
 rolex
 # ----------------------------------- okusaaga(to joke; to be kidding): Intransitive ------------------------------------ #
-saaga
-saage
-saaze
-saagisa
-saagise
-saagisizza
-saagira
-saagire
-saagidde
+saaga/OriginalIntransitive
+saage/ModifiedIntransitive
+saaze/PastIntransitive
+saagisa/CausativeIntransitive
+saagise/ModifiedCausativeIntransitive
+saagisizza/PastCausativeIntransitive
+saagira/LocativeIntransitive
+saagire/ModifiedLocativeIntransitive
+saagidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okusaala(to pray (of Muslims)) ------------------------------------- #
-saala
-saale
-sadde
-saaza
-saaze
-saazizza
-saalira
-saalire
-saalidde
+# ------------------------------------ okusaala(to pray (of Muslims)): Type-I Transitive ------------------------------------- #
+saala/OriginalType-ITransitive
+saale/ModifiedType-ITransitive
+sadde/PastType-ITransitive
+saaza/CausativeTransitive
+saaze/ModifiedCausativeTransitive
+saazizza/PastCausativeTransitive
+saalibwa/PassiveTransitive
+saalibwe/ModifiedPassiveTransitive
+saaliddwa/PastPassiveTransitive
+saazibwa/PassiveTransitive
+saazibwe/ModifiedPassiveTransitive
+saaziddwa/PastPassiveTransitive
+saalira/BenefactiveTransitive
+saalire/ModifiedBenefactiveTransitive
+saalidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 saamusaamu
 # --------------------------- okusaana(to be supposed to; ought; should; must): Deadjectival ---------------------------- #
