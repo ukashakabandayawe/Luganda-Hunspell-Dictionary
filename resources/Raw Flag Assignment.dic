@@ -15853,19 +15853,19 @@ sanyukira/BenefactiveDeadjective
 sanyukire/ModifiedBenefactiveDeadjective
 sanyukidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------------- okusasula(to pay) ----------------------------------------- #
-sasula
-sasule
-sasudde
-sasulibwa
-sasulibwe
-sasulibbwa
-sasuza
-sasuze
-sasuzza
-sasulira
-sasulire
-sasulidde
+# --------------------------------------------- okusasula(to pay): Type-II Transitive ----------------------------------------- #
+sasula/OriginalType-IITransitive
+sasule/ModifiedType-IITransitive
+sasudde/PastType-IITransitive
+sasulibwa/PassiveTransitive
+sasulibwe/ModifiedPassiveTransitive
+sasulibbwa/PastPassiveTransitive
+sasuza/CausativeTransitive
+sasuze/ModifiedCausativeTransitive
+sasuzza/PastCausativeTransitive
+sasulira/BenefactiveTransitive
+sasulire/ModifiedBenefactiveTransitive
+sasulidde/PastBenefactiveTransitive
 #
 sasulako
 sasulamu
@@ -16035,89 +16035,87 @@ sasuliddeeyooko
 sasuliddeewo
 sasuliddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------- okusattira(to panic; to move about restlessly) ----------------------------- #
-sattira
-sattire
-sattidde
-sattiza
-sattize
-sattizza
+# ---------------------------- okusattira(to panic; to move about restlessly): Intransitive ----------------------------- #
+sattira/OriginalIntransitive
+sattire/ModifiedIntransitive
+sattidde/PastIntransitive
+sattiza/CausativeIntransitive
+sattize/ModifiedCausativeIntransitive
+sattizza/PastCausativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------- okusattulula(to undo; to unravel; to take apart) ---------------------------- #
-sattulula
-sattulule
-sattuludde
-sattululwa
-sattululwe
-sattuluddwa
-sattululira
-sattululire
-sattululidde
+# --------------------------- okusattulula(to undo; to unravel; to take apart): Type-I Transitive ---------------------------- #
+sattulula/OriginalType-ITransitive
+sattulule/ModifiedType-ITransitive
+sattuludde/PastType-ITransitive
+sattululwa/PassiveTransitive
+sattululwe/ModifiedPassiveTransitive
+sattuluddwa/PastPassiveTransitive
+sattululira/BenefactiveTransitive
+sattululire/ModifiedBenefactiveTransitive
+sattululidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 sava
-# ----------------------------------------- okusazaamu(to cross) ------------------------------------------ #
-sazaamu
-sazeemu
-sazizaamu
-sazisaamu
-saziseemu
-sazisizaamu
-sazibwamu
-sazibwemu
-saziddwamu
-salizaamu
-salizeemu
-salizzaamu
+# ----------------------------------------- okusazaamu(to cross): Type-I Transitive ------------------------------------------ #
+sazaamu/OriginalType-ITransitive
+sazeemu/ModifiedType-ITransitive
+sazizzaamu/PastType-ITransitive
+sazisaamu/CausativeTransitive
+saziseemu/ModifiedCausativeTransitive
+sazisizaamu/PastCausativeTransitive
+sazibwamu/PassiveTransitive
+sazibwemu/ModifiedPassiveTransitive
+saziddwamu/PastPassiveTransitive
+salizaamu/BenefactiveTransitive
+salizeemu/ModifiedBenefactiveTransitive
+salizzaamu/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 seegu
-# ---------------------------------------- okuseera(to overcharge) ---------------------------------------- #
-seera
-seere
-sedde
-seeza
-seeze
-seezezza
-seerebwa
-seerebwe
-seereddwa
+# ---------------------------------------- okuseera(to overcharge): Type-I Transitive ---------------------------------------- #
+seera/OriginalType-ITransitive
+seere/ModifiedType-ITransitive
+sedde/PastType-ITransitive
+seeza/CausativeTransitive
+seeze/ModifiedCausativeTransitive
+seezezza/PastCausativeTransitive
+seerebwa/PassiveTransitive
+seerebwe/ModifiedPassiveTransitive
+seereddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okuseesa(to push forward; to advance) --------------------------------- #
-seesa
-seese
-seesezza
-seesebwa
-seesebwe
-seesebbwa
-seeseza
-seeseze
-seeserezza
+# --------------------------------- okuseesa(to push forward; to advance): Type-I Transitive --------------------------------- #
+seesa/OriginalType-ITransitive
+seese/ModifiedType-ITransitive
+seesezza/PastType-ITransitive
+seesebwa/PassiveTransitive
+seesebwe/ModifiedPassiveTransitive
+seesebbwa/PastPassiveTransitive
+seeseza/BenefactiveTransitive
+seeseze/ModifiedBenefactiveTransitive
+seeserezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okuseeyeeya(to float; to drift) ------------------------------------ #
-seeyeeya
-seeyeeye
-seeyeeyezza
-seeyeeyeza
-seeyeeyeze
-seeyeeyera
-seeyeeyere
-seeyeeyedde
+# ------------------------------------ okuseeyeeya(to float; to drift): Intransitive ------------------------------------ #
+seeyeeya/OriginalIntransitive
+seeyeeye/ModifiedIntransitive
+seeyeeyezza/PastIntransitive
+seeyeeyeza/LocativeIntransitive
+seeyeeyeze/ModifiedLocativeIntransitive
+seeyeeyerezza/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okuseka(to laugh) --------------------------------------------- #
-seka
-seke
-sese
-sekebwa
-sekebwe
-sekebbwa
-sesa
-sese
-sesezza
-sekerera
-sekerere
-sekeredde
-sekera
-sekere
-sekedde
+# ----------------------------------------- okuseka(to laugh): Intransitive --------------------------------------------- #
+seka/OriginalIntransitive
+seke/ModifiedIntransitive
+sese/PastIntransitive
+sekebwa/PassiveIntransitive
+sekebwe/ModifiedPassiveIntransitive
+sekebbwa/PastPassiveIntransitive
+sesa/CausativeIntransitive
+sese/ModifiedCausativeIntransitive
+sesezza/PastCausativeIntransitive
+sekerera/BenefactiveIntransitive
+sekerere/ModifiedBenefactiveIntransitive
+sekeredde/PastBenefactiveIntransitive
+sekera/LocativeIntransitive
+sekere/ModifiedLocativeIntransitive
+sekedde/PastLocativeIntransitive
 #
 sekako
 sekamu
@@ -16270,148 +16268,150 @@ sekereddeeyooko
 sekereddeewo
 sekereddeewooko
 # --------------------------------------------------------------------------------- #
-# --------------- okusekeeterera(to eat into; to enter slowly; to penetrate; to undermine) ---------------- #
-sekeeterera
-sekeeterere
-sekeeteredde
-sekeetereza
-sekeetereze
-sekeeterezza
+# --------------- okusekeeterera(to eat into; to enter slowly; to penetrate; to undermine): Intransitive ---------------- #
+sekeeterera/OriginalIntransitive
+sekeeterere/ModifiedIntransitive
+sekeeteredde/PastIntransitive
+sekeetereza/CausativeIntransitive
+sekeetereze/ModifiedCausativeIntransitive
+sekeeterezza/PastCausativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okusekula(to pound; to grind; to crush) -------------------------------- #
-sekula
-sekule
-sekudde
-sekuza
-sekuze
-sekuzza
-sekulwa
-sekulwe
-sekuddwa
-sekulira
-sekulire
-sekulidde
+# -------------------------------- okusekula(to pound; to grind; to crush): Type-I Transitive -------------------------------- #
+sekula/OriginalType-ITransitive
+sekule/ModifiedType-ITransitive
+sekudde/PastType-ITransitive
+sekuza/CausativeTransitive
+sekuze/ModifiedCausativeTransitive
+sekuzza/PastCausativeTransitive
+sekulwa/PassiveTransitive
+sekulwe/ModifiedPassiveTransitive
+sekuddwa/PastPassiveTransitive
+sekulira/BenefactiveTransitive
+sekulire/ModifiedBenefactiveTransitive
+sekulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------- okusemba(to be last / to recommend; to back up; to support): Type-I Transitive ---------------------- #
-semba
-sembe
-sembye
-sembya
-sembezza
-sembesa
-sembese
-sembesezza
-sembebwa
-sembebwe
-sembeddwa
+semba/OriginalType-ITransitive
+sembe/ModifiedType-ITransitive
+sembye/PastType-ITransitive
+sembya/CausativeTransitive
+sembye/ModifiedCausativeTransitive
+sembezza/ModifiedCausativeTransitive
+sembesa/CausativeTransitive
+sembese/ModifiedCausativeTransitive
+sembesezza/PastCausativeTransitive
+sembebwa/PassiveTransitive
+sembebwe/ModifiedPassiveTransitive
+sembeddwa/PastPassiveTransitive
 kisembo
+bakisembo
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okusembera(to come close; to approach) --------------------------------- #
-sembera
-sembere
-sembedde
-sembererwa
-sembererwe
-sembereddwa
-semberera
-semberere
-semberedde
+# -------------------------------- okusembera(to come close; to approach): Intransitive --------------------------------- #
+sembera/OriginalIntransitive
+sembere/ModifiedIntransitive
+sembedde/PastIntransitive
+sembererwa/PassiveIntransitive
+sembererwe/ModifiedPassiveIntransitive
+sembereddwa/PastPassiveIntransitive
+semberera/BenefactiveIntransitive
+semberere/ModifiedBenefactiveIntransitive
+semberedde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okusembeza(to bring close) --------------------------------------- #
-sembeza
-sembeze
-sembezza
-sembezesa
-sembezese
-sembezesezza
-sembezebwa
-sembezebwe
-sembezeddwa
-sembereza
-sembereze
-semberezza
+# -------------------------------------- okusembeza(to bring close): Type-I Transitive --------------------------------------- #
+sembeza/OriginalType-ITransitive
+sembeze/ModifiedType-ITransitive
+sembezza/PastType-ITransitive
+sembezesa/CausativeTransitive
+sembezese/ModifiedCausativeTransitive
+sembezesezza/PastCausativeTransitive
+sembezebwa/PassiveTransitive
+sembezebwe/ModifiedPassiveTransitive
+sembezeddwa/PastPassiveTransitive
+sembereza/BenefactiveTransitive
+sembereze/ModifiedBenefactiveTransitive
+semberezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okusena(to fetch water; to draw out) ---------------------------------- #
-sena
-sene
-senye
-senesa
-senese
-senesezza
-senebwa
-senebwe
-seneddwa
-senebbwa
-senera
-senere
-senedde
+# --------------------------------- okusena(to fetch water; to draw out): Type-I Transitive ---------------------------------- #
+sena/OriginalType-ITransitive
+sene/ModifiedType-ITransitive
+senye/PastType-ITransitive
+senesa/CausativeTransitive
+senese/ModifiedCausativeTransitive
+senesezza/PastCausativeTransitive
+senebwa/PassiveTransitive
+senebwe/ModifiedPassiveTransitive
+seneddwa/PastPassiveTransitive
+senebbwa/PastPassiveTransitive
+senera/BenefactiveTransitive
+senere/ModifiedBenefactiveTransitive
+senedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okusengejja(to filter; to strain) ----------------------------------- #
-sengejja
-sengejje
-sengejjezza
-sengejjesa
-sengejjese
-sengejjesezza
-sengejjebwa
-sengejjebwe
-sengejjeddwa
-sengejjera
-sengejjere
-sengejjedde
-sengejjeza
-sengejjeze
+# ----------------------------------- okusengejja(to filter; to strain): Type-I Transitive ----------------------------------- #
+sengejja/OriginalType-ITransitive
+sengejje/ModifiedType-ITransitive
+sengejjezza/PastType-ITransitive
+sengejjesa/CausativeTransitive
+sengejjese/ModifiedCausativeTransitive
+sengejjesezza/PastCausativeTransitive
+sengejjebwa/PassiveTransitive
+sengejjebwe/ModifiedPassiveTransitive
+sengejjeddwa/PastPassiveTransitive
+sengejjeza/BenefactiveTransitive
+sengejjeze/ModifiedBenefactiveTransitive
+sengejjerezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------- okusengeka(to align; to arrange; to put in order; to categorize) -------------------- #
-sengeka
-sengeke
-sengese
-sengesa
-sengesezza
-sengekebwa
-sengekebwe
-sengekeddwa
-sengekera
-sengekere
-sengekedde
+# ------------------- okusengeka(to align; to arrange; to put in order; to categorize): Type-I Transitive -------------------- #
+sengeka/OriginalType-ITransitive
+sengeke/ModifiedType-ITransitive
+sengese/ModifiedCausativeTransitive
+sengesa/CausativeTransitive
+sengese/ModifiedCausativeTransitive
+sengesezza/PastCausativeTransitive
+sengekebwa/PassiveTransitive
+sengekebwe/ModifiedPassiveTransitive
+sengekeddwa/PastPassiveTransitive
+sengekera/BenefactiveTransitive
+sengekere/ModifiedBenefactiveTransitive
+sengekedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okusenguka(to move) ------------------------------------------ #
-senguka
-senguke
-senguse
-sengusa
-sengukibwa
-sengukibwe
-sengukiddwa
-sengusizza
-sengukira
-sengukire
-sengukidde
+# ------------------------------------------ okusenguka(to move): Type-I Transitive ------------------------------------------ #
+senguka/OriginalType-ITransitive
+senguke/ModifiedType-ITransitive
+senguse/PastType-ITransitive
+sengusa/CausativeTransitive
+senguse/ModifiedCausativeTransitive
+sengusizza/PastCausativeTransitive
+sengukibwa/PassiveTransitive
+sengukibwe/ModifiedPassiveTransitive
+sengukiddwa/PastPassiveTransitive
+sengukira/BenefactiveTransitive
+sengukire/ModifiedBenefactiveTransitive
+sengukidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okusengula(to move) ------------------------------------------ #
-sengula
-sengule
-sengudde
-sengulwa
-sengulwe
-senguddwa
-sengulira
-sengulire
-sengulidde
+# ------------------------------------------ okusengula(to move): Type-I Transitive ------------------------------------------ #
+sengula/OriginalType-ITransitive
+sengule/ModifiedType-ITransitive
+sengudde/PastType-ITransitive
+sengulwa/PassiveTransitive
+sengulwe/ModifiedPassiveTransitive
+senguddwa/PastPassiveTransitive
+sengulira/BenefactiveTransitive
+sengulire/ModifiedBenefactiveTransitive
+sengulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okusenya(to brush teeth) --------------------------------------------- #
-senya
-senye
-senyezza
-senyesa
-senyese
-senyesezza
-senyebwa
-senyebwe
-senyeddwa
-senyera
-senyere
-senyedde
+# ---------------------------------- okusenya(to brush teeth): Type-I Transitive --------------------------------------------- #
+senya/OriginalType-ITransitive
+senye/ModifiedType-ITransitive
+senyezza/PastType-ITransitive
+senyesa/CausativeTransitive
+senyese/ModifiedCausativeTransitive
+senyesezza/PastCausativeTransitive
+senyebwa/PassiveTransitive
+senyebwe/ModifiedPassiveTransitive
+senyeddwa/PastPassiveTransitive
+senyeza/BenefactiveTransitive
+senyeze/ModifiedBenefactiveTransitive
+senyerezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------------- okusereka(to roof; to cover; to thatch) -------------------------------- #
 sereka
