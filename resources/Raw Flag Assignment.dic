@@ -10992,13 +10992,13 @@ luubiragana/OriginalIntransitive
 luubiragane/ModifiedIntransitive
 luubiraganye/PastIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------ okuluubirira(to aim at; to try hard; to exert oneself) ------------------------- #
-luubirira
-luubirire
-luubiridde
-luubirirwa
-luubirirwe
-luubiriddwa
+# ------------------------ okuluubirira(to aim at; to try hard; to exert oneself): Type-I Transitive ------------------------- #
+luubirira/OriginalType-ITransitive
+luubirire/ModifiedType-ITransitive
+luubiridde/PastType-ITransitive
+luubirirwa/PassiveTransitive
+luubirirwe/ModifiedPassiveTransitive
+luubiriddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 luula
 lw
@@ -11115,19 +11115,22 @@ lwaliddeeyooko
 lwaliddeewo
 lwaliddeewooko
 # ------------------------------------------------------------------------------------------------------ #
-# ----------------------------------- okulwana(to fight) ----------------------------------------------- #
-lwana
-lwane
-lwanye
-lwanibwa
-lwanibwe
-lwaniddwa
-lwanisa
-lwanise
-lwanisizza
-lwanira
-lwanire
-lwanidde
+# ----------------------------------- okulwana(to fight): Intransitive ----------------------------------------------- #
+lwana/OriginalIntransitive
+lwane/ModifiedIntransitive
+lwanye/PastIntransitive
+lwanibwa/PassiveIntransitive
+lwanibwe/ModifiedPassiveIntransitive
+lwaniddwa/PastPassiveIntransitive
+lwanisa/CausativeIntransitive
+lwanise/ModifiedCausativeIntransitive
+lwanisizza/CausativeIntransitive
+lwanira/LocativeIntransitive
+lwanire/ModifiedLocativeIntransitive
+lwanidde/PastLocativeIntransitive
+lwanirira/BenefactiveIntransitive
+lwanirire/ModifiedBenefactiveIntransitive
+lwaniridde/PastBenefactiveIntransitive
 #
 lwanako
 lwanamu
@@ -11289,35 +11292,38 @@ lwaniddeeyooko
 lwaniddeewo
 lwaniddeewooko
 # ------------------------------------------------------------------------------------------------------ #
-# ----------------------------------- okulwanagana(to fight each other) ----------------------------------- #
-lwanagana
-lwanagane
-lwanaganye
+# ----------------------------------- okulwanagana(to fight each other): Intransitive ----------------------------------- #
+lwanagana/OriginalIntransitive
+lwanagane/ModifiedIntransitive
+lwanaganye/PastIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okulwanyisa(to fight against) ------------------------------------- #
-lwanyisa
-lwanyise
-lwanyisizza
+# ------------------------------------- okulwanyisa(to fight against): Type-I Transitive ------------------------------------- #
+lwanyisa/OriginalType-ITransitive
+lwanyise/ModifiedType-ITransitive
+lwanyisizza/PastType-ITransitive
+lwanisibwa/PassiveTransitive
+lwanisibwe/ModifiedPassiveTransitive
+lwanisiddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 lwe
 ly
 lya # This is an impersonal possessive 
-# ------------------------------------ okulya(to eat) ----------------------------------------------------- #
-lya
-lye
-lidde
-liisa
-liise
-liisizza
-liibwa
-liibwe
-liiliddwa
-liisibwa
-liisibwe
-liisiddwa
-liira
-liire
-lidde
+# ------------------------------------ okulya(to eat): Type-I Transitive ----------------------------------------------------- #
+lya/OriginalType-ITransitive
+lye/ModifiedType-ITransitive
+lidde/PastType-ITransitive
+liisa/CausativeTransitive
+liise/ModifiedCausativeTransitive
+liisizza/PastCausativeTransitive
+liibwa/PassiveTransitive
+liibwe/ModifiedPassiveTransitive
+liiliddwa/PastPassiveTransitive
+liisibwa/PassiveTransitive
+liisibwe/ModifiedPassiveTransitive
+liisiddwa/PastPassiveTransitive
+liira/BenefactiveTransitive
+liire/ModifiedBenefactiveTransitive
+lidde/PastBenefactiveTransitive
 omuli
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- lyoka(so that) -------------------------------------------------- #
@@ -11342,19 +11348,19 @@ mabega
 makanika
 makansi
 makkati
-# -------------------------- okumala(to finish) ------------------------- #
-mala
-male
-maze
-malibwa
-malibwe
-maliddwa
-mazisa
-mazise
-mazisizza
-malira
-malire
-malidde
+# -------------------------- okumala(to finish): Type-I Transitive ------------------------- #
+mala/OriginalType-ITransitive
+male/ModifiedType-ITransitive
+maze/PastType-ITransitive
+malibwa/PassiveTransitive
+malibwe/ModifiedPassiveTransitive
+maliddwa/PastPassiveTransitive
+mazisa/CausativeTransitive
+mazise/ModifiedCausativeTransitive
+mazisizza/PastCausativeTransitive
+malira/BenefactiveTransitive
+malire/ModifiedBenefactiveTransitive
+malidde/PastBenefactiveTransitive
 #
 malaako
 malaamu
@@ -11528,31 +11534,31 @@ maliddeewooko
 malaaya
 malayika
 malirivu
-# ------------------------------------ okumaliriza(to end; to finish) ------------------------------------- #
-maliriza
-malirize
-malirizza
-malirizibwa
-malirizibwe
-maliriziddwa
+# ------------------------------------ okumaliriza(to end; to finish): Type-I Transitive ------------------------------------- #
+maliriza/OriginalType-ITransitive
+malirize/ModifiedType-ITransitive
+malirizza/PastType-ITransitive
+malirizibwa/PassiveTransitive
+malirizibwe/ModifiedPassiveTransitive
+maliriziddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 Mande
 mangadda
 mangu
 manvuuli
-# ------------------------------------ okumanya(to know) -------------------------------------------------- #
-manya
-manye
-manyibwa
-manyibwe
-manyibbwa
-manyiddwa
-manyisa
-manyise
-manyisizza
-manyira
-manyire
-manyidde
+# ------------------------------------ okumanya(to know): Type-I Transitive -------------------------------------------------- #
+manya/OriginalType-ITransitive
+manye/ModifiedType-ITransitive
+manyibwa/PassiveTransitive
+manyibwe/ModifiedPassiveTransitive
+manyibbwa/PastPassiveTransitive
+manyiddwa/PastPassiveTransitive
+manyisa/CausativeTransitive
+manyise/ModifiedCausativeTransitive
+manyisizza/PastCausativeTransitive
+manyira/LocativeTransitive
+manyire/ModifiedLocativeTransitive
+manyidde/PastLocativeTransitive
 #
 manyaako
 manyaamu
@@ -11730,15 +11736,15 @@ manyisibwe/ModifiedPassiveDeadjective
 manyisiddwa/PastPassiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okumatira(to be content): Type-I Transitive -------------------------------- #
-matira
-matire
-matidde
-matibwa
-matibwe
-matiddwa
-matiza
-matize
-matizza
+matira/OriginalType-ITransitive
+matire/ModifiedType-ITransitive
+matidde/PastType-ITransitive
+matirwa/PassiveTransitive
+matirwe/ModifiedPassiveTransitive
+matiddwa/PastPassiveTransitive
+matiza/CausativeTransitive
+matize/ModifiedCausativeTransitive
+matizza/PastCausativeTransitive
 #
 matirako
 matiramu
@@ -11868,41 +11874,42 @@ mbega
 mbi
 mbu
 meeya
-# --------------------- okumegga(to defeat; to challenge; to wrestle; to wrestle with) -------------------- #
-megga
-megge
-mezze
-meggesa
-meggese
-meggesezza
-meggebwa
-meggebwe    
-meggeddwa
-meggera
-meggere
-meggedde
+# --------------------- okumegga(to defeat; to challenge; to wrestle; to wrestle with): Type-I Transitive -------------------- #
+megga/OriginalType-ITransitive
+megge/ModifiedType-ITransitive
+mezze/PastType-ITransitive
+meggesa/CausativeTransitive
+meggese/ModifiedCausativeTransitive
+meggesezza/PastCausativeTransitive
+meggebwa/PassiveTransitive
+meggebwe/ModifiedPassiveTransitive
+meggeddwa/PastPassiveTransitive
+meggera/BenefactiveTransitive
+meggere/ModifiedBenefactiveTransitive
+meggedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------- okumeggana(to battle; to challenge; to wrestle; to wrestle with) ------------------- #
-meggana
-meggane
-megganye
-megganira
-megganire
-megganyidde
+# -------------------- okumeggana(to battle; to challenge; to wrestle; to wrestle with): Intransitive ------------------- #
+meggana/OriginalIntransitive
+meggane/ModifiedIntransitive
+megganye/PastIntransitive
+megganira/LocativeIntransitive
+megganire/ModifiedLocativeIntransitive
+megganyidde/PastLocativeIntransitive
 omumegganyi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------- okumenya(to break) ---------------------------------- #
-menya
-menye
-menyebwa
-menyebwe
-menyeddwa
-menyesa
-menyese
-menyesezza
-menyera
-menyere
-menyedde
+# ------------------------- okumenya(to break): Type-I Transitive ---------------------------------- #
+menya/OriginalType-ITransitive
+menye/ModifiedType-ITransitive
+menyezza/PastType-ITransitive
+menyebwa/PassiveTransitive
+menyebwe/ModifiedPassiveTransitive
+menyeddwa/PastPassiveTransitive
+menyesa/CausativeTransitive
+menyese/ModifiedCausativeTransitive
+menyesezza/PastCausativeTransitive
+menyera/BenefactiveTransitive
+menyere/ModifiedBenefactiveTransitive
+menyedde/PastBenefactiveTransitive
 #
 menyako
 menyamu
@@ -12067,19 +12074,19 @@ menyeddeewooko
 # -------------------------------------------------------------------------------------------------------------- #
 ministule
 minzaani
-# ---------------------------------- okumira(to swallow) ---------------------------------- #
-mira
-mire
-mize
-miribwa
-miribwe
-miriddwa
-mizisa
-mizise
-mizisizza
-mirira
-mirire
-miridde
+# ---------------------------------- okumira(to swallow): Type-I Transitive ---------------------------------- #
+mira/OriginalType-ITransitive
+mire/ModifiedType-ITransitive
+mize/ModifiedType-ITransitive
+miribwa/PassiveTransitive
+miribwe/ModifiedPassiveTransitive
+miriddwa/PastPassiveTransitive
+mizisa/CausativeTransitive
+mizise/ModifiedCausativeTransitive
+mizisizza/PastCausativeTransitive
+mirira/BenefactiveTransitive
+mirire/ModifiedBenefactiveTransitive
+miridde/PastBenefactiveTransitive
 #
 miraako
 miraamu
@@ -12250,19 +12257,19 @@ miriddeewo
 miriddeewooko
 # --------------------------------------------------------------------------------------------------------- #
 Misiri
-# ------------- **okumma(to deny somebody something; to refuse to give; to grudge; to withhold) ------------- #
-mma
-mme
-mmye
-mmisa
-mmise
-mmisizza
-mmibwa
-mmibwe
-mmiddwa
-mmira
-mmire
-mmidde
+# ------------- **okumma(to deny somebody something; to refuse to give; to grudge; to withhold): Type-I Transitive ------------- #
+mma/OriginalType-ITransitive
+mme/ModifiedType-ITransitive
+mmye/PastType-ITransitive
+mmisa/CausativeTransitive
+mmise/ModifiedCausativeTransitive
+mmisizza/PastCausativeTransitive
+mmibwa/PassiveTransitive
+mmibwe/ModifiedPassiveTransitive
+mmiddwa/PastPassiveTransitive
+mmira/BenefactiveTransitive
+mmire/ModifiedBenefactiveTransitive
+mmidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 mmange
 mmeka
@@ -12337,28 +12344,29 @@ mwattu
 mwe
 mwebale
 mwenda
-# ---------------------------------------- okumwenya(to smile) ----------------------------------------- #
-mwenya
-mwenye
-mwenyezza
-mwenyesa
-mwenyese
-mwenyesezza
-mwenyeza
-mwenyeze
+# ---------------------------------------- okumwenya(to smile): Intransitive ----------------------------------------- #
+mwenya/OriginalIntransitive
+mwenye/ModifiedIntransitive
+mwenyezza/PastIntransitive
+mwenyesa/CausativeIntransitive
+mwenyese/ModifiedCausativeIntransitive
+mwenyesezza/PastCausativeIntransitive
+mwenyeza/BenefactiveIntransitive
+mwenyeze/ModifiedBenefactiveIntransitive
+mwenyerezza/PastBenefactiveIntransitive
 # ------------------------------------------------------------------------------------------------------ #
 mweraba
 n'olwekyo
-# ------------------------- okunaaba(to bathe) ---------------------------------- #
-naaba
-naabe
-naabye
-naabisa
-naabise
-naabisizza
-naabira
-naabire
-naabidde
+# ------------------------- okunaaba(to bathe): Intransitive ---------------------------------- #
+naaba/OriginalIntransitive
+naabe/ModifiedIntransitive
+naabye/PastIntransitive
+naabisa/CausativeIntransitive
+naabise/ModifiedCausativeIntransitive
+naabisizza/PastCausativeIntransitive
+naabira/BenefactiveIntransitive
+naabire/ModifiedBenefactiveIntransitive
+naabidde/PastBenefactiveIntransitive
 #
 naabako
 naabamu
@@ -12482,19 +12490,19 @@ naabiddeeyooko
 naabiddeewo
 naabiddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------- okunaaza(to bathe someone) ---------------------------------- #
-naaza
-naaze
-naazizza
-naazibwa
-naazibwe
-naaziddwa
-naazisa
-naazise
-naazisizza
-naaliza
-naalize
-naalizza
+# ------------------------- okunaaza(to bathe someone): Type-I Transitive ---------------------------------- #
+naaza/OriginalType-ITransitive
+naaze/ModifiedType-ITransitive
+naazizza/PastType-ITransitive
+naazibwa/PassiveTransitive
+naazibwe/ModifiedPassiveTransitive
+naaziddwa/PastPassiveTransitive
+naazisa/CausativeTransitive
+naazise/ModifiedCausativeTransitive
+naazisizza/PastCausativeTransitive
+naaliza/BenefactiveTransitive
+naalize/ModifiedBenefactiveTransitive
+naalizza/PastBenefactiveTransitive
 #
 naazaako
 naazaamu
@@ -12811,20 +12819,19 @@ ne
 nedda
 neera
 nene
-# ------------------------------------------------- okunenya(to blame) ----------------------------------------- #
-nenya
-nenye
-nenyezza
-nenyebwa
-nenyebwe
-nenyeddwa
-nenyeza
-nenyeze
-nenyelezza
-nenyesezza
-nenyera
-nenyere
-nenyedde
+# ------------------------------------------------- okunenya(to blame): Type-I Transitive ----------------------------------------- #
+nenya/OriginalType-ITransitive
+nenye/ModifiedType-ITransitive
+nenyezza/PastType-ITransitive
+nenyebwa/PassiveTransitive
+nenyesa/CausativeTransitive
+nenyese/ModifiedCausativeTransitive
+nenyesezza/PastCausativeTransitive
+nenyebwe/ModifiedPassiveTransitive
+nenyeddwa/PastPassiveTransitive
+nenyeza/BenefactiveTransitive
+nenyeze/ModifiedBenefactiveTransitive
+nenyelezza/PastBenefactiveTransitive
 # 
 nenyaako
 nenyaamu
@@ -13013,58 +13020,59 @@ nnyogogera/LocativeDeadjective
 nnyogogere/ModifiedLocativeDeadjective
 nnyogogedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------- okunnyonnyola(to explain; to describe; to define) --------------------------- #
-nnyonnyola
-nnyonnyole
-nnyonnyodde
-nnyonnyoza
-nnyonnyoze
-nnyonnyozza
-nnyonnyolwa
-nnyonnyolwe
-nnyonnyoddwa
-nnyonnyolera
-nnyonnyolere
-nnyonnyoledde
+# --------------------------- okunnyonnyola(to explain; to describe; to define): Type-I Transitive --------------------------- #
+nnyonnyola/OriginalType-ITransitive
+nnyonnyole/ModifiedType-ITransitive
+nnyonnyodde/PastType-ITransitive
+nnyonnyoza/CausativeTransitive
+nnyonnyoze/ModifiedCausativeTransitive
+nnyonnyozza/PastCausativeTransitive
+nnyonnyolwa/PassiveTransitive
+nnyonnyolwe/ModifiedPassiveTransitive
+nnyonnyoddwa/PastPassiveTransitive
+nnyonnyolera/BenefactiveTransitive
+nnyonnyolere/ModifiedBenefactiveTransitive
+nnyonnyoledde/PastBenefactiveTransitive
 omunnyonnyozi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------ okunoba(to run away from one's husband; to leave) ------------------------------ #
-noba
-nobe
-nobye
-nobesa
-nobese
-nobesezza
-nobera
-nobere
-nobedde
+# ------------------------ okunoba(to run away from one's husband; to leave): Intransitive ------------------------------ #
+noba/OriginalIntransitive
+nobe/ModifiedIntransitive
+nobye/PastIntransitive
+nobesa/CausativeIntransitive
+nobese/ModifiedCausativeIntransitive
+nobesezza/PastCausativeIntransitive
+nobera/LocativeIntransitive
+nobere/ModifiedLocativeIntransitive
+nobedde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okunona(to fetch; to get; to go for) ---------------------------------- #
-nona
-none
-nonye
-nonesa
-nonese
-nonesezza
-nonebwa
-nonebwe
-noneddwa
-nonera
-nonere
-nonedde
+# --------------------------------- okunona(to fetch; to get; to go for): Type-I Transitive ---------------------------------- #
+nona/OriginalType-ITransitive
+none/ModifiedType-ITransitive
+nonye/PastType-ITransitive
+nonesa/CausativeTransitive
+nonese/ModifiedCausativeTransitive
+nonesezza/PastCausativeTransitive
+nonebwa/PassiveTransitive
+nonebwe/ModifiedPassiveTransitive
+noneddwa/PastPassiveTransitive
+nonera/BenefactiveTransitive
+nonere/ModifiedBenefactiveTransitive
+nonedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okunoonya(to search; to look for) ----------------------------------- #
-noonya
-noonye
-noonyezza
-noonyesa
-noonyese
-noonyesezza
-noonyebwa
-noonyebwe
-noonyeddwa
-noonyeza
-noonyeze
+# ----------------------------------- okunoonya(to search; to look for): Type-I Transitive ----------------------------------- #
+noonya/OriginalType-ITransitive
+noonye/ModifiedType-ITransitive
+noonyezza/PastType-ITransitive
+noonyesa/CausativeTransitive
+noonyese/ModifiedCausativeTransitive
+noonyesezza/PastCausativeTransitive
+noonyebwa/PassiveTransitive
+noonyebwe/ModifiedPassiveTransitive
+noonyeddwa/PastPassiveTransitive
+noonyeza/BenefactiveTransitive
+noonyeze/ModifiedBenefactiveTransitive
+noonyelezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 noonyereza
 nsanvu
@@ -13072,19 +13080,19 @@ nsonyiwa
 ntakeera
 ntenvu
 nti
-# ------------------------- okununula(to save; to rescue; to redeem; to recover) -------------------------- #
-nunula
-nunule
-nunudde
-nunuza
-nunuze
-nunuzza
-nunulwa
-nunulwe
-nunuddwa
-nunulira
-nunulire
-nunulidde
+# ------------------------- okununula(to save; to rescue; to redeem; to recover): Type-I Transitive -------------------------- #
+nunula/OriginalType-ITransitive
+nunule/ModifiedType-ITransitive
+nunudde/PastType-ITransitive
+nunuza/CausativeTransitive
+nunuze/ModifiedCausativeTransitive
+nunuzza/PastCausativeTransitive
+nunulwa/PassiveTransitive
+nunulwe/ModifiedPassiveTransitive
+nunuddwa/PastPassiveTransitive
+nunulira/BenefactiveTransitive
+nunulire/ModifiedBenefactiveTransitive
+nunulidde/PastBenefactiveTransitive
 omununuzi
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------------------- okunuuna(to suck; to lick) --------------------------------------- #
