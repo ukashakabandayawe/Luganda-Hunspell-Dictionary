@@ -15267,28 +15267,32 @@ saalire/ModifiedBenefactiveTransitive
 saalidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 saamusaamu
-# --------------------------- okusaana(to be supposed to; ought; should; must): Deadjectival ---------------------------- #
-saana/OriginalDeadjective
-saane/ModifiedDeadjective
-saanye/PastDeadjective
+# --------------------------- okusaana(to be supposed to; ought; should; must): Type-I Transitive ---------------------------- #
+saana/OriginalType-ITransitive
+saane/ModifiedType-ITransitive
+saanye/PastType-ITransitive
+saanira/BenefactiveTransitive
+saanire/ModifiedBenefactiveTransitive
+saanidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okusaanika(to cover; to cover up) ----------------------------------- #
-saaniika
-saaniike
-saaniise
-saaniisa
-saanisizza
-saaniikibwa
-saaniikibwe
-saaniikiddwa
-saaniikira
-saaniikire
-saaniikidde
+# ----------------------------------- okusaanika(to cover; to cover up): Type-I Transitive ----------------------------------- #
+saaniika/OriginalType-ITransitive
+saaniike/ModifiedType-ITransitive
+saaniise/PastType-ITransitive
+saaniisa/CausativeTransitive
+saaniise/ModifiedCausativeTransitive
+saanisizza/PastCausativeTransitive
+saaniikibwa/PassiveTransitive
+saaniikibwe/ModifiedPassiveTransitive
+saaniikiddwa/PastPassiveTransitive
+saaniikira/BenefactiveTransitive
+saaniikire/ModifiedBenefactiveTransitive
+saaniikidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okusaanyaawo(to destroy) ---------------------------------------- #
-saanyaawo
-saanyeewo
-saanyizzawo
+# --------------------------------------- okusaanyaawo(to destroy): Type-I Transitive ---------------------------------------- #
+saanyaawo/OriginalType-ITransitive
+saanyeewo/ModifiedType-ITransitive
+saanyizzawo/PastType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------- okusaasaana(to scatter; to be scattered; to spread; to disperse): Deadjectival -------------------- #
 saasaana/OriginalDeadjective
@@ -15303,48 +15307,48 @@ saasaanira/LocativeDeadjective
 saasaanire/ModifiedLocativeDeadjective
 saasaanidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okusaasira(to pity; to feel sorry for) --------------------------------- #
-saasira
-saasire
-saasidde
-saasiza
-saasize
-saasizza
-saasirwa
-saasirwe
-saasiddwa
-saasirira
-saasirire
-saasiridde
+# -------------------------------- okusaasira(to pity; to feel sorry for): Type-I Transitive --------------------------------- #
+saasira/OriginalType-ITransitive
+saasire/ModifiedType-ITransitive
+saasidde/PastType-ITransitive
+saasiza/CausativeTransitive
+saasize/ModifiedCausativeTransitive
+saasizza/PastCausativeTransitive
+saasirwa/PassiveTransitive
+saasirwe/ModifiedPassiveTransitive
+saasiddwa/PastPassiveTransitive
+saasirira/BenefactiveTransitive
+saasirire/ModifiedBenefactiveTransitive
+saasiridde/PastBenefactiveTransitive
 omusaasizi
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------- okusaawa(to clear; to clear away; to cut down) ----------------------------- #
-saawa
-saawe
-saaye
-saayisa
-saayise
-saayisizza
-saawibwa
-saawibwe
-saayiddwa
-saawira
-saawire
-saawidde
+# ---------------------------- okusaawa(to clear; to clear away; to cut down): Type-I Transitive ----------------------------- #
+saawa/OriginalType-ITransitive
+saawe/ModifiedType-ITransitive
+saaye/PastType-ITransitive
+saayisa/CausativeTransitive
+saayise/ModifiedCausativeTransitive
+saayisizza/PastCausativeTransitive
+saawibwa/PassiveTransitive
+saawibwe/ModifiedPassiveTransitive
+saayiddwa/PastPassiveTransitive
+saawira/BenefactiveTransitive
+saawire/ModifiedBenefactiveTransitive
+saawidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------- okusaba(to ask/request) ---------------------------------- #
-saba
-sabe
-sabye
-sabibwa
-sabibwe
-sabiddwa
-sabisa
-sabise
-sabisizza
-sabira
-sabire
-sabidde
+# --------------------------- okusaba(to ask/request): Type-II Transitive ---------------------------------- #
+saba/OriginalType-IITransitive
+sabe/ModifiedType-IITransitive
+sabye/PastType-IITransitive
+sabibwa/PassiveTransitive
+sabibwe/ModifiedPassiveTransitive
+sabiddwa/PastPassiveTransitive
+sabisa/CausativeTransitive
+sabise/ModifiedCausativeTransitive
+sabisizza/PastCausativeTransitive
+sabira/BenefactiveTransitive
+sabire/ModifiedBenefactiveTransitive
+sabidde/PastBenefactiveTransitive
 # 
 sabako
 sabamu
@@ -15506,77 +15510,79 @@ sabiddeeyooko
 sabiddeewo
 sabiddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okusabika(to wrap; to wrap up) ------------------------------------- #
-sabika
-sabike
-sabise
-sabisa
-sabisizza
-sabikibwa
-sabikibwe
-sabikiddwa
-sabikira
-sabikire
-sabikidde
+# ------------------------------------ okusabika(to wrap; to wrap up): Type-II Transitive ------------------------------------- #
+sabika/OriginalType-IITransitive
+sabike/ModifiedType-IITransitive
+sabise/PastType-IITransitive
+sabisa/CausativeTransitive
+sabise/ModifiedCausativeTransitive
+sabisizza/PastCausativeTransitive
+sabikibwa/PassiveTransitive
+sabikibwe/ModifiedPassiveTransitive
+sabikiddwa/PastPassiveTransitive
+sabikira/BenefactiveTransitive
+sabikire/ModifiedBenefactiveTransitive
+sabikidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okusabiriza(to beg) ------------------------------------------ #
-sabiriza
-sabirize
-sabirizza
-sabirizibwa
-sabirizibwe
-sabiriziddwa
+# ------------------------------------------ okusabiriza(to beg): Type-I Transitive ------------------------------------------ #
+sabiriza/OriginalType-ITransitive
+sabirize/ModifiedType-ITransitive
+sabirizza/PastType-ITransitive
+sabirizibwa/PassiveTransitive
+sabirizibwe/ModifiedPassiveTransitive
+sabiriziddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 sajja
-# ----------------------------- okusajjuka(to get out of order; to get worse) ----------------------------- #
-sajjuka
-sajjuke
-sajjusse
-sajjusa
-sajjusizza
-sajjukira
-sajjukire
-sajjukidde
+# ----------------------------- okusajjuka(to get out of order; to get worse): Intransitive ----------------------------- #
+sajjuka/OriginalIntransitive
+sajjuke/ModifiedIntransitive
+sajjusse/PastIntransitive
+sajjusa/CausativeIntransitive
+sajjuse/ModifiedCausativeIntransitive
+sajjusizza/PastCausativeIntransitive
+sajjukira/LocativeIntransitive
+sajjukire/ModifiedLocativeIntransitive
+sajjukidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------- okusala(to cut; to chop; to decide; to cross) ----------------------------- #
-sala
-sale
-saze
-sazisa
-sazise
-sazisizza
-salibwa
-salibwe
-saliddwa
-salira
-salire
-salidde
+# ----------------------------- okusala(to cut; to chop; to decide; to cross): Type-I Transitive ----------------------------- #
+sala/OriginalType-ITransitive
+sale/ModifiedType-ITransitive
+saze/PastType-ITransitive
+sazisa/CausativeTransitive
+sazise/ModifiedCausativeTransitive
+sazisizza/PastCausativeTransitive
+salibwa/PassiveTransitive
+salibwe/ModifiedPassiveTransitive
+saliddwa/PastPassiveTransitive
+salira/BenefactiveTransitive
+salire/ModifiedBenefactiveTransitive
+salidde/PastBenefactiveTransitive
 omusazi
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okusalawo(to decide) ------------------------------------------ #
-salawo
-salewo
-sazeewo
-salibwawo
-salibwewo
-saliddwaawo
-salirawo
-salirewo
-saliddewo
+# ----------------------------------------- okusalawo(to decide): Type-I Transitive ------------------------------------------ #
+salawo/OriginalType-ITransitive
+salewo/ModifiedType-ITransitive
+sazeewo/PastType-ITransitive
+salibwawo/PassiveTransitive
+salibwewo/ModifiedPassiveTransitive
+saliddwaawo/PastPassiveTransitive
+salirawo/BenefactiveTransitive
+salirewo/ModifiedBenefactiveTransitive
+saliddewo/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okusamba(to kick) ---------------------------------- #
-samba
-sambe
-sambye
-sambibwa
-sambibwe
-sambiddwa
-sambisa
-sambise
-sambisizza
-sambira
-sambire
-sambidde
+# ------------------------------------------- okusamba(to kick): Type-I Transitive ---------------------------------- #
+samba/OriginalType-ITransitive
+sambe/ModifiedType-ITransitive
+sambye/ModifiedType-ITransitive
+sambibwa/PassiveTransitive
+sambibwe/ModifiedPassiveTransitive
+sambiddwa/PastPassiveTransitive
+sambisa/CausativeTransitive
+sambise/ModifiedCausativeTransitive
+sambisizza/PastCausativeTransitive
+sambira/BenefactiveTransitive
+sambire/ModifiedBenefactiveTransitive
+sambidde/PastBenefactiveTransitive
 # 
 sambako
 sambamu
@@ -15738,19 +15744,19 @@ sambiddeeyooko
 sambiddeewo
 sambiddeewooko
 # -------------------------------------------------------------------------- #
-# -------------------------------- okusamira(to communicate with spirits) --------------------------------- #
-samira
-samire
-samidde
-samiza
-samize
-samizza
-samirwa
-samirwe
-samiddwa
-samirira
-samirire
-samiridde
+# -------------------------------- okusamira(to communicate with spirits): Intransitive --------------------------------- #
+samira/OriginalIntransitive
+samire/ModifiedIntransitive
+samidde/PastIntransitive
+samiza/CausativeIntransitive
+samize/ModifiedCausativeIntransitive
+samizza/PastCausativeIntransitive
+samirwa/PassiveIntransitive
+samirwe/ModifiedPassiveIntransitive
+samiddwa/PastPassiveIntransitive
+samirira/BenefactiveIntransitive
+samirire/ModifiedBenefactiveIntransitive
+samiridde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------- okusammuka(to be scattered; to be spilled; to come to an end (rain)): Deadjectival ------------------ #
 sammuka/OriginalDeadjective
@@ -15766,19 +15772,19 @@ sammukira/BenefactiveDeadjective
 sammukire/ModifiedBenefactiveDeadjective
 sammukidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okusanga(to meet; to find; to come upon) -------------------------------- #
-sanga
-sange
-sanze
-sangisa
-sangise
-sangisizza
-sangibwa
-sangibwe
-sangiddwa
-sangira
-sangire
-sangidde
+# ------------------------------- okusanga(to meet; to find; to come upon): Type-I Transitive -------------------------------- #
+sanga/OriginalType-ITransitive
+sange/ModifiedType-ITransitive
+sanze/PastType-ITransitive
+sangisa/CausativeTransitive
+sangise/ModifiedCausativeTransitive
+sangisizza/PastCausativeTransitive
+sangibwa/PassiveTransitive
+sangibwe/ModifiedPassiveTransitive
+sangiddwa/PastPassiveTransitive
+sangira/BenefactiveTransitive
+sangire/ModifiedBenefactiveTransitive
+sangidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------- okusanguka(to be wiped off; to be eradicated; to be eliminated): Deadjectival -------------------- #
 sanguka/OriginalDeadjective
@@ -15788,34 +15794,34 @@ sangukira/BenefactiveDeadjective
 sangukire/ModifiedBenefactiveDeadjective
 sangukidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------- okusangula(to wipe off; to erase; to eliminate) ---------------------------- #
-sangula
-sangule
-sangudde
-sanguza
-sanguze
-sanguzza
-sangulwa
-sangulwe
-sanguliddwa
-sangulira
-sangulire
-sangulidde
+# ---------------------------- okusangula(to wipe off; to erase; to eliminate): Type-I Transitive ---------------------------- #
+sangula/OriginalType-ITransitive
+sangule/ModifiedType-ITransitive
+sangudde/PastType-ITransitive
+sanguza/CausativeTransitive
+sanguze/ModifiedCausativeTransitive
+sanguzza/PastCausativeTransitive
+sangulwa/PassiveTransitive
+sangulwe/ModifiedPassiveTransitive
+sanguliddwa/PastPassiveTransitive
+sangulira/BenefactiveTransitive
+sangulire/ModifiedBenefactiveTransitive
+sangulidde/PastBenefactiveTransitive
 omusanguzi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okusanirira(to brush; to comb) ------------------------------------- #
-sanirira
-sanirire
-saniridde
-saniriza
-sanirize
-sanirizza
-saniribwa
-saniribwe
-saniriddwa
-saniririra
-saniririre
-saniriridde
+# ------------------------------------ okusanirira(to brush; to comb): Type-I Transitive ------------------------------------- #
+sanirira/OriginalType-ITransitive
+sanirire/ModifiedType-ITransitive
+saniridde/PastType-ITransitive
+saniriza/CausativeTransitive
+sanirize/ModifiedCausativeTransitive
+sanirizza/PastCausativeTransitive
+sanirilwa/PassiveTransitive
+sanirilwe/ModifiedPassiveTransitive
+saniriddwa/PastPassiveTransitive
+saniririra/BenefactiveTransitive
+saniririre/ModifiedBenefactiveTransitive
+saniriridde/PastBenefactiveTransitive
 omusanirizi
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------- okusannyalala(to be or become numb; to grow stiff; to feel paralyzed): Deadjectival ----------------- #
