@@ -4300,7 +4300,7 @@ pankiddemuuko
 pankiddeyo
 pankiddeyooko
 pankiddewo
-pankidddewooko
+pankiddewooko
 #
 pankiddeeko
 pankiddemu
@@ -16667,7 +16667,7 @@ simbulwe/ModifiedPassiveTransitive
 simbuddwa/PastPassiveTransitive
 simbulira/BenefactiveTransitive
 simbulire/ModifiedBenefactiveTransitive
-simbuliddde/PastBenefactiveTransitive
+simbulidde/PastBenefactiveTransitive
 omusimbuzi
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------------- okusimula(to kick; ): Type-I Transitive  ---------------------------------------------- #
@@ -17360,7 +17360,7 @@ sunguwaze/ModifiedCausativeDeadjective
 sunguwazza/PastCausativeDeadjective
 sunguwulira/BenefactiveDeadjective
 sunguwulire/ModifiedBenefactiveDeadjective
-sunguwuliddde/PastBenefactiveDeadjective
+sunguwulidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------- okusunsula(to pick out (winner of a contest); to sort out): Type-I Transitive  ----------------------- #
 sunsula/OriginalType-ITransitive
@@ -17420,7 +17420,7 @@ suubulwe/ModifiedPassiveTransitive
 suubuddwa/PastPassiveTransitive
 suubulira/BenefactiveTransitive
 suubulire/ModifiedBenefactiveTransitive
-suubuliddde/PastBenefactiveTransitive
+suubulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------- okusuula(to dump; to throw; to knock over; to drop; to leave behind): Type-I Transitive  ------------------ #
 suula/OriginalType-ITransitive
@@ -17851,7 +17851,7 @@ tangirwe/ModifiedPassiveTransitive
 tangiddwa/PastPassiveTransitive
 tangirira/BenefactiveTransitive
 tangirire/ModifiedBenefactiveTransitive
-tangiriddde/PastBenefactiveTransitive
+tangiridde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------- okutawaana(to disturb; to preoccupy): Intransitive ---------------------------------- #
 tawaana/OriginalIntransitive
@@ -19314,19 +19314,19 @@ viiriddeewo
 viiriddeewooko
 # ------------------------------------------------------------------------------------------------------- #
 visa
-# -------------------------------- okuvuba(to fish) ----------------------------------------------------- #
-vuba
-vube
-vubye
-vubibwa
-vibibwe
-vubiddwa
-vubisa
-vubise
-vubisizza
-vubira
-vubire
-vubidde
+# -------------------------------- okuvuba(to fish): Type-I Transitive ----------------------------------------------------- #
+vuba/OriginalType-ITransitive
+vube/ModifiedType-ITransitive
+vubye/PastType-ITransitive
+vubibwa/PassiveTransitive
+vibibwe/ModifiedPassiveTransitive
+vubiddwa/PastPassiveTransitive
+vubisa/CausativeTransitive
+vubise/ModifiedCausativeTransitive
+vubisizza/PastCausativeTransitive
+vubira/BenefactiveTransitive
+vubire/ModifiedBenefactiveTransitive
+vubidde/PastBenefactiveTransitive
 #
 vubako
 vubamu
@@ -19489,29 +19489,29 @@ vubiddeewo
 vubiddeewooko
 # ------------------------------------------------------------------------------------------------------------------ #
 vubufu
-# ------------------------------- okuvubuka(to grow up; to mature) ---------------------------------- #
-vubuka
-vubuke
-vubuse
-vubusa
-vubusizza
-vubukira    
-vubukire
-vubukidde
+# ------------------------------- okuvubuka(to grow up; to become mature): Deadjectival ---------------------------------- #
+vubuka/OriginalDeadjective
+vubuke/ModifiedDeadjective
+vubuse/HybridDeadjective
+vubusa/CausativeDeadjective
+vubusizza/PastCausativeDeadjective
+vubukira/LocativeDeadjective
+vubukire/ModifiedLocativeDeadjective
+vubukidde/PastLocativeDeadjective
 # ---------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------------------ okuvuga(to drive) ------------------------------------------- #
-vuga
-vuge
-vuze
-vugibwa
-vugibwe
-vugiddwa
-vugisa
-vugise
-vugisizza
-vugira
-vugire
-vugidde
+# ------------------------------------------------------ okuvuga(to drive): Type-I Transitive ------------------------------------------- #
+vuga/OriginalType-ITransitive
+vuge/ModifiedType-ITransitive
+vuze/PastType-ITransitive
+vugibwa/PassiveTransitive
+vugibwe/ModifiedPassiveTransitive
+vugiddwa/PastPassiveTransitive
+vugisa/CausativeTransitive
+vugise/ModifiedCausativeTransitive
+vugisizza/PastCausativeTransitive
+vugira/BenefactiveTransitive
+vugire/ModifiedBenefactiveTransitive
+vugidde/PastBenefactiveTransitive
 #
 vugako
 vugamu
@@ -19672,19 +19672,19 @@ vugiddeeyooko
 vugiddeewo
 vugiddeewooko
 # ---------------------------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------------------ okuvuma(to abuse) --------------------------------------------------------- #
-vuma
-vume
-vumye
-vumibwa
-vumibwe
-vumiddwa
-vumisa
-vumise
-vumisizza
-vumira
-vumire
-vumidde
+# ------------------------------------------------------ okuvuma(to abuse): Type-II Transitive --------------------------------------------------------- #
+vuma/OriginalType-IITransitive
+vume/ModifiedType-IITransitive
+vumye/PastType-IITransitive
+vumibwa/PassiveTransitive
+vumibwe/ModifiedPassiveTransitive
+vumiddwa/PastPassiveTransitive
+vumisa/CausativeTransitive
+vumise/ModifiedCausativeTransitive
+vumisizza/PastCausativeTransitive
+vumira/BenefactiveTransitive
+vumire/ModifiedBenefactiveTransitive
+vumidde/PastBenefactiveTransitive
 #
 vumako
 vumamu
@@ -19845,30 +19845,30 @@ vumiddeeyooko
 vumiddeewo
 vumiddeewooko
 # ----------------------------------------------------------------------------------------------- #
-# ------------------------------------ okuvumbika(to cover in ash; to cover in dust) ------------------------------------ #
-vumbika
-vumbike
-vumbise
-vumbikibwa  
-vumbikibwe
-vumbikiddwa
-vumbikira
-vumbikire
-vumbikidde
+# ------------------------------------ okuvumbika(to cover in ash; to cover in dust): Type-II Transitive ------------------------------------ #
+vumbika/OriginalType-IITransitive
+vumbike/ModifiedType-IITransitive
+vumbise/PastType-IITransitive
+vumbikibwa/PassiveTransitive
+vumbikibwe/ModifiedPassiveTransitive
+vumbikiddwa/PastPassiveTransitive
+vumbikira/BenefactiveTransitive
+vumbikire/ModifiedBenefactiveTransitive
+vumbikidde/PastBenefactiveTransitive
 # ---------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okuvumbula(to discover) ---------------------------------- #
-vumbula
-vumbule
-vumbudde
-vumbulwa
-vumbulwe
-vumbuddwa
-vumbuza
-vumbuze
-vumbuzza
-vumbulira
-vumbulire
-vumbulidde
+# ------------------------------------ okuvumbula(to discover): Type-I Transitive ---------------------------------- #
+vumbula/OriginalType-ITransitive
+vumbule/ModifiedType-ITransitive
+vumbudde/PastType-ITransitive
+vumbulwa/PassiveTransitive
+vumbulwe/ModifiedPassiveTransitive
+vumbuddwa/PastPassiveTransitive
+vumbuza/CausativeTransitive
+vumbuze/ModifiedCausativeTransitive
+vumbuzza/PastCausativeTransitive
+vumbulira/BenefactiveTransitive
+vumbulire/ModifiedBenefactiveTransitive
+vumbulidde/PastBenefactiveTransitive
 #
 vumbulako
 vumbulamu
@@ -20052,87 +20052,89 @@ vumbuliddeeyooko
 vumbuliddeewo
 vumbuliddeewooko
 # ---------------------------------------------------------------------------------- #
-# ----------------------------------------- okuvumula(to heal) ----------------------------------------- #
-vumula
-vumule
-vumudde
-vumuza
-vumuze
-vumuzza
-vumulwa
-vumulwe
-vumuddwa
-vumulira
-vumulire
-vumulide
+# ----------------------------------------- okuvumula(to heal): Type-II Transitive ----------------------------------------- #
+vumula/OriginalType-IITransitive
+vumule/ModifiedType-IITransitive
+vumudde/PastType-IITransitive
+vumuza/CausativeTransitive
+vumuzza/PastCausativeTransitive
+vumulwa/PassiveTransitive
+vumulwe/ModifiedPassiveTransitive
+vumuddwa/PastPassiveTransitive
+vumulira/BenefactiveTransitive
+vumulire/ModifiedBenefactiveTransitive
+vumulide/PastBenefactiveTransitive
 # ----------------------------------------------------------------------------------------------- #
-# -------------------------------------- okuvuuma(to vroom; to whirr) ---------------------------------- #
-vuuma
-vuume
-vuumye
-vuumya
-vuumizza
-vuumira
-vuumire
-vuumidde
+# -------------------------------------- okuvuuma(to vroom; to whirr): Intransitive ---------------------------------- #
+vuuma/OriginalIntransitive
+vuume/ModifiedIntransitive
+vuumye/HybridIntransitive
+vuumya/CausativeIntransitive
+vuumizza/PastCausativeIntransitive
+vuumira/LocativeIntransitive
+vuumire/ModifiedLocativeIntransitive
+vuumidde/PastLocativeIntransitive
+vuumiza/BenefactiveIntransitive
+vuumize/ModifiedBenefactiveIntransitive
+vuumilizza/PastBenefactiveIntransitive
 # ----------------------------------------------------------------------------------------------- #
-# -------------------------------------- okuvuuvuuma(to buzz) ---------------------------------- #
-vuuvuuma
-vuuvuume
-vuuvuumye
-vuuvuumya
-vuuvuumizza
-vuuvuumisa
-vuuvuumise
-vuuvuumisizza
-vuuvuumira
-vuuvuumire
-vuuvuumidde
+# -------------------------------------- okuvuuvuuma(to buzz): Intransitive ---------------------------------- #
+vuuvuuma/OriginalIntransitive
+vuuvuume/ModifiedIntransitive
+vuuvuumye/HybridIntransitive
+vuuvuumya/CausativeIntransitive
+vuuvuumizza/PastCausativeIntransitive
+vuuvuumisa/CausativeIntransitive
+vuuvuumise/ModifiedCausativeIntransitive
+vuuvuumisizza/PastCausativeIntransitive
+vuuvuumira/BenefactiveIntransitive
+vuuvuumire/ModifiedBenefactiveIntransitive
+vuuvuumidde/PastBenefactiveIntransitive
 # ----------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuvvoola(to blaspheme) ---------------------------------------- #
-vvoola
-vvoole
-vvodde
-vvooza
-vvooze
-vvoozezza
-vvoolwa
-vvoolwe
-vvoddwa
-vvoolebbwa
-vvoolera
-vvoolere
-vvooledde
+# ---------------------------------------- okuvvoola(to blaspheme): Type-I Transitive ---------------------------------------- #
+vvoola/OriginalType-ITransitive
+vvoole/ModifiedType-ITransitive
+vvodde/PastType-ITransitive
+vvooza/CausativeTransitive
+vvooze/ModifiedCausativeTransitive
+vvoozezza/PastCausativeTransitive
+vvoolwa/PassiveTransitive
+vvoolwe/ModifiedPassiveTransitive
+vvoddwa/PastPassiveTransitive
+vvoolebbwa/PastPassiveTransitive
+vvoolera/BenefactiveTransitive
+vvoolere/ModifiedBenefactiveTransitive
+vvooledde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okuvvuunula(to translate; to interpret) -------------------------------- #
-vvuunula
-vvuunule
-vvuunudde
-vvuunuza
-vvuunuze
-vvuunuzza
-vvuunulwa
-vvuunulwe
-vvuunuliddwa
-vvuunulira
-vvuunulire
-vvuunulidde
+# -------------------------------- okuvvuunula(to translate; to interpret): Type-I Transitive -------------------------------- #
+vvuunula/OriginalType-ITransitive
+vvuunule/ModifiedType-ITransitive
+vvuunudde/PastType-ITransitive
+vvuunuza/CausativeTransitive
+vvuunuze/ModifiedCausativeTransitive
+vvuunuzza/PastCausativeTransitive
+vvuunulwa/PassiveTransitive
+vvuunulwe/ModifiedPassiveTransitive
+vvuunuliddwa/PastPassiveTransitive
+vvuunulira/BenefactiveTransitive
+vvuunulire/ModifiedBenefactiveTransitive
+vvuunulidde/PastBenefactiveTransitive
 omuvvuunuzi
 # --------------------------------------------------------------------------------------------------------- #
-w
-# ----------------------------------- okuwa(to give) ---------------------------------- #
-wa
-we
-wadde
-weebwa
-weebwe
-weereddwa
-weesa
-weese
-weesezza
-weera
-weere
-weeredde
+w'
+# ----------------------------------- okuwa(to give): Type-II Transitive ---------------------------------- #
+wa/OriginalType-IITransitive
+we/ModifiedType-IITransitive
+wadde/PastType-IITransitive
+weebwa/PassiveTransitive
+weebwe/ModifiedPassiveTransitive
+weereddwa/PastPassiveTransitive
+weesa/CausativeTransitive
+weese/ModifiedCausativeTransitive
+weesezza/PastCausativeTransitive
+weera/BenefactiveTransitive
+weere/ModifiedBenefactiveTransitive
+weeredde/PastBenefactiveTransitive
 #
 waako
 waamu
@@ -20303,110 +20305,116 @@ weereddeewo
 weereddeewooko
 # ------------------------------------------------------------------------- #
 wa
-# ------------------------------ okuwaaba(to complain; to lodge a complaint) ------------------------------ #
-waaba
-waabe
-waabye
-waabisa
-waabise
-waabisizza
-waabwa
-waabwe
-waabiddwa
-waabirwa
-waabirwe
-waabiddwa
-waabira
-waabire
-waabidde
+# ------------------------------ okuwaaba(to complain; to lodge a complaint): Type-I Transitive ------------------------------ #
+waaba/OriginalType-ITransitive
+waabe/ModifiedType-ITransitive
+waabye/PastType-ITransitive
+waabisa/CausativeTransitive
+waabise/ModifiedCausativeTransitive
+waabisizza/PastCausativeTransitive
+waabwa/PassiveTransitive
+waabwe/ModifiedPassiveTransitive
+waabiddwa/PastPassiveTransitive
+waabirwa/PassiveTransitive
+waabirwe/ModifiedPassiveTransitive
+waabiddwa/PastPassiveTransitive
+waabira/LocativeTransitive
+waabire/ModifiedLocativeTransitive
+waabidde/PastLocativeTransitive
 omuwaabi
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okuwaata(to peel; inf.: okuwaata) ----------------------------------- #
-waata
-waate
-waase
-waatisa
-waatise
-waatisizza
-waatibwa
-waatibwe
-waatiddwa
-waatira
-waatire
-waatidde
+# ----------------------------------- okuwaata(to peel; inf.: okuwaata): Type-I Transitive ----------------------------------- #
+waata/OriginalType-ITransitive
+waate/ModifiedType-ITransitive
+waase/PastType-ITransitive
+waatisa/CausativeTransitive
+waatise/ModifiedCausativeTransitive
+waatisizza/PastCausativeTransitive
+waatibwa/PassiveTransitive
+waatibwe/ModifiedPassiveTransitive
+waatiddwa/PastPassiveTransitive
+waatira/BenefactiveTransitive
+waatire/ModifiedBenefactiveTransitive
+waatidde/PastBenefactiveTransitive
 omuwaasi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okuwabula(to correct; to inform; to warn) ------------------------------- #
-wabula
-wabule
-wabudde
-wabuza
-wabuze
-wabuzza
-wabulwa
-wabulwe
-wabuddwa
-wabulira
-wabulire
-wabulidde
+# ------------------------------- okuwabula(to correct; to inform; to warn): Type-II Transitive ------------------------------- #
+wabula/OriginalType-IITransitive
+wabule/ModifiedType-IITransitive
+wabudde/PastType-IITransitive
+wabuza/CausativeTransitive
+wabuze/ModifiedCausativeTransitive
+wabuzza/PastCausativeTransitive
+wabulwa/PassiveTransitive
+wabulwe/ModifiedPassiveTransitive
+wabuddwa/PastPassiveTransitive
+wabulira/BenefactiveTransitive
+wabulire/ModifiedBenefactiveTransitive
+wabulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 wabweru
 wadde
-# ------------------------------ okuwagira(to cheer; to encourage; to support) ------------------------------ #
-wagira
-wagire
-wagidde
-wagiza
-wagize
-wagizizza
-wagirwa
-wagirwe
-wagiddwa
+# ------------------------------ okuwagira(to cheer; to encourage; to support): Type-I Transitive ------------------------------ #
+wagira/OriginalType-ITransitive
+wagire/ModifiedType-ITransitive
+wagidde/PastType-ITransitive
+wagiza/CausativeTransitive
+wagize/ModifiedCausativeTransitive
+wagizizza/PastCausativeTransitive
+wagirwa/PassiveTransitive
+wagirwe/ModifiedPassiveTransitive
+wagiddwa/PastPassiveTransitive
+wagirira/BenefactiveTransitive
+wagirire/ModifiedBenefactiveTransitive
+wagiridde/PastBenefactiveTransitive
 omuwagizi
 # ---------------------------------------------------------------------------------------------------------- #
 wagulu
 wakabi
-# ------------------------------ okuwakana(to object; to dispute; to argue) ------------------------------- #
-wakana
-wakane
-wakanye
-wakanya
-wakanyizza
-wakanyiza
-wakanyize
-wakanibwa
-wakanibwe
-wakaniddwa
-wakanira
-wakanire    
-wakanidde
+# ------------------------------ okuwakana(to object; to dispute; to argue): Intransitive ------------------------------- #
+wakana/OriginalIntransitive
+wakane/ModifiedIntransitive
+wakanye/HybridIntransitive  
+wakanya/CausativeIntransitive
+wakanyizza/PastCausativeIntransitive
+wakanyiza/BenefactiveIntransitive
+wakanyize/ModifiedBenefactiveIntransitive
+wakanirwa/PassiveIntransitive
+wakanirwe/ModifiedPassiveIntransitive
+wakaniddwa/PastPassiveIntransitive
+wakanira/BenefactiveIntransitive
+wakanire/ModifiedBenefactiveIntransitive
+wakanidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 wakati
 wakyaalani
 wala
-# ---------------------- okuwalaggana(to have a grudge with someone; to be hostile): Type-I Transitive ----------------------- #
-walaggana
-walaggane
-walagganye
-walagganya
-walagganyizza
-walagganira
-walagganire
-walagganidde
+# ---------------------- okuwalaggana(to have a grudge with someone; to be hostile): Intransitive ----------------------- #
+walaggana/OriginalIntransitive
+walaggane/ModifiedIntransitive
+walagganye/HybridIntransitive
+walagganya/CausativeIntransitive
+walagganyizza/PastCausativeIntransitive
+walagganira/LocativeIntransitive
+walagganire/ModifiedLocativeIntransitive
+walagganidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 walagi
-# ----------------------------------- okuwalampa(to provoke; to climb) ------------------------------------ #
-walampa
-walampe
-walampye
-walampya
-walampizza
-walampwa
-walampwe
-walampiddwa
-walampira
-walampire
-walampidde
+# ----------------------------------- okuwalampa(to provoke; to climb): Type-I Transitive ------------------------------------ #
+walampa/OriginalType-ITransitive
+walampe/ModifiedType-ITransitive
+walampye/PastType-ITransitive
+walampya/CausativeTransitive
+walampye/ModifiedCausativeTransitive
+walampizza/PastCausativeTransitive
+walampwa/PassiveTransitive
+walampwe/ModifiedPassiveTransitive
+walampiddwa/PastPassiveTransitive
+walampibwa/PassiveTransitive
+walampibwe/ModifiedPassiveTransitive
+walampira/BenefactiveTransitive
+walampire/ModifiedBenefactiveTransitive
+walampidde/PastBenefactiveTransitive
 omuwalampi
 # --------------------------------------------------------------------------------------------------------- #
 waleti
@@ -20414,53 +20422,53 @@ wali
 waliriza
 waliwo
 waliyo
-# -------------------------------------- okuwalula(to drag; to pull) -------------------------------------- #
-walula
-walule
-waludde
-waluza
-waluze
-waluzza
-walulwa
-walulwe
-waluliddwa
-walulira
-walulire
-walulidde
+# -------------------------------------- okuwalula(to drag; to pull): Type-I Transitive -------------------------------------- #
+walula/OriginalType-ITransitive
+walule/ModifiedType-ITransitive
+waludde/PastType-ITransitive
+waluza/CausativeTransitive
+waluze/ModifiedCausativeTransitive
+waluzza/PastCausativeTransitive
+walulwa/PassiveTransitive
+walulwe/ModifiedPassiveTransitive
+waluliddwa/PastPassiveTransitive
+walulira/BenefactiveTransitive
+walulire/ModifiedBenefactiveTransitive
+walulidde/PastBenefactiveTransitive
 omuwaluzi
 # --------------------------------------------------------------------------------------------------------- #
 walumbe
-# ------------------------- okuwamba(to take prisoner; to capture; to confiscate) ------------------------- #
-wamba
-wambe
-wambye
-wambisa
-wambise
-wambisizza
-wambibwa
-wambibwe
-wambiddwa
-wambira
-wambire
-wambidde
+# ------------------------- okuwamba(to take prisoner; to capture; to confiscate): Type-I Transitive ------------------------- #
+wamba/OriginalType-ITransitive
+wambe/ModifiedType-ITransitive
+wambye/PastType-ITransitive
+wambisa/CausativeTransitive
+wambise/ModifiedCausativeTransitive
+wambisizza/PastCausativeTransitive
+wambibwa/PassiveTransitive
+wambibwe/ModifiedPassiveTransitive
+wambiddwa/PastPassiveTransitive
+wambira/BenefactiveTransitive
+wambire/ModifiedBenefactiveTransitive
+wambidde/PastBenefactiveTransitive
 omuwambi
 # --------------------------------------------------------------------------------------------------------- #
 wamma
 wamunyi
 wanda
-# ------------------------------------------ okuwandiika(to write) ---------------------------------------- #
-wandiika
-wandiike
-wandiise
-wandiikibwa
-wandiikibwe
-wandiikiddwa
-wandiisa
-wandiise
-wandiisizza
-wandiikira
-wandiikire
-wandiikidde
+# ------------------------------------------ okuwandiika(to write): Type-I Transitive ---------------------------------------- #
+wandiika/OriginalType-ITransitive
+wandiike/ModifiedType-ITransitive
+wandiise/ModifiedType-ITransitive
+wandiikibwa/PassiveTransitive
+wandiikibwe/ModifiedPassiveTransitive
+wandiikiddwa/PastPassiveTransitive
+wandiisa/CausativeTransitive
+wandiise/ModifiedCausativeTransitive
+wandiisizza/PastCausativeTransitive
+wandiikira/BenefactiveTransitive
+wandiikire/ModifiedBenefactiveTransitive
+wandiikidde/PastBenefactiveTransitive
 #
 wandiikako
 wandiikamu
@@ -20653,45 +20661,53 @@ wangukira/LocativeDeadjective
 wangukire/ModifiedLocativeDeadjective
 wangukidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-wangula
-wangule
-wangudde
-wanguza
-wanguze
-wanguzza
-wangulwa
-wangulwe
-wanguddwa
-wangulira
-wangulire
-wangulidde
+# ------------------------------ okuwangula(to win): Type-I Transitive ---------------------------------------------- #
+wangula/OriginalType-ITransitive
+wangule/ModifiedType-ITransitive
+wangudde/PastType-ITransitive
+wanguza/CausativeTransitive
+wanguze/ModifiedCausativeTransitive
+wanguzza/PastCausativeTransitive
+wangulwa/PassiveTransitive
+wangulwe/ModifiedPassiveTransitive
+wanguddwa/PastPassiveTransitive
+wangulira/BenefactiveTransitive
+wangulire/ModifiedBenefactiveTransitive
+wangulidde/PastBenefactiveTransitive
 omuwanguzi
-# ------------------------------- okuwanika(to hang; to hang up; to raise) -------------------------------- #
-wanika
-wanike
-wanise
-wanisa
-wanisizza
-wanikibwa
-wanikibwe
-wanikiddwa
-wanikira
-wanikire
-wanikidde
+# ------------------------------- okuwanika(to hang; to hang up; to raise): Type-I Transitive -------------------------------- #
+wanika/OriginalType-ITransitive
+wanike/ModifiedType-ITransitive
+wanise/PastType-ITransitive
+wanisa/CausativeTransitive
+wanise/ModifiedCausativeTransitive
+wanisizza/PastCausativeTransitive
+wanikibwa/PassiveTransitive
+wanikibwe/ModifiedPassiveTransitive
+wanikiddwa/PastPassiveTransitive
+wanikira/BenefactiveTransitive
+wanikire/ModifiedBenefactiveTransitive
+wanikidde/PastBenefactiveTransitive
 omuwanisi
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okuwanjagira(to appeal) ----------------------------------------------- #
-wanjagira
-wanjagire
-wanjagidde
-wanjagirwa
-wanjagirwe
-wanjagiddwa
+# --------------------------------- okuwanjagira(to appeal): Type-I Transitive ----------------------------------------------- #
+wanjagira/OriginalType-ITransitive
+wanjagire/ModifiedType-ITransitive
+wanjagidde/PastType-ITransitive
+wanjagirwa/PassiveTransitive
+wanjagirwe/ModifiedPassiveTransitive
+wanjagiddwa/PastPassiveTransitive
+wanjagirira/BenefactiveTransitive
+wanjagirire/ModifiedBenefactiveTransitive
+wanjagiridde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okuwankawanka(to falter) ----------------------------------------------- #
-wankawanka
-wankewanke
-wansewanse
+# -------------------------------- okuwankawanka(to falter): Intransitive ----------------------------------------------- #
+wankawanka/OriginalIntransitive
+wankewanke/ModifiedIntransitive
+wansewanse/PastIntransitive
+wankirawankira/BenefactiveIntransitive
+wankirawankire/ModifiedBenefactiveIntransitive
+wankirawankidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 wannamaddala
 wano
@@ -20710,123 +20726,125 @@ wanvuyira/LocativeDeadjective
 wanvuyire/ModifiedLocativeDeadjective
 wanvuyidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------- okuwasa(to marry (man to a woman); to get married) --------------------------- #
-wasa
-wase
-wasizza
-wasibwa
-wasibwe
-wasiddwa
-wasiza
-wasize
-wasiriza
+# -------------------------- okuwasa(to marry (man to a woman); to get married): Type-I Transitive --------------------------- #
+wasa/OriginalType-ITransitive
+wase/ModifiedType-ITransitive
+wasizza/PastType-ITransitive
+wasibwa/PassiveTransitive
+wasibwe/ModifiedPassiveTransitive
+wasiddwa/PastPassiveTransitive
+wasiza/BenefactiveTransitive
+wasize/ModifiedBenefactiveTransitive
+wasiriza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 wasswa
 wattima
 wattu
-# ----------------------------- okuwawaaba(to complain; to lodge a complaint) ----------------------------- #
-wawaaba
-wawaabe
-wawaabye
-wawaabisa
-wawaabise
-wawaabisizza
-wawaabirwa
-wawaabirwe
-wawaabiddwa
+# ----------------------------- okuwawaaba(to complain; to lodge a complaint): Intransitive ----------------------------- #
+wawaaba/OriginalIntransitive
+wawaabe/ModifiedIntransitive
+wawaabye/PastIntransitive
+wawaabisa/CausativeIntransitive
+wawaabise/ModifiedCausativeIntransitive
+wawaabisizza/PastCausativeIntransitive
+wawaabirwa/PassiveIntransitive
+wawaabirwe/ModifiedPassiveIntransitive
+wawaabiddwa/PastPassiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------- okuwawaabira(to accuse; to bring action against; to file a charge against) --------------- #
-wawaabira
-wawaabire
-wawaabidde
-wawaabiza
-wawaabize
-wawaabizza
+# -------------- okuwawaabira(to accuse; to bring action against; to file a charge against): Type-I Transitive --------------- #
+wawaabira/OriginalType-ITransitive
+wawaabire/ModifiedType-ITransitive
+wawaabidde/PastType-ITransitive
+wawaabiza/CausativeTransitive
+wawaabize/ModifiedCausativeTransitive
+wawaabizza/PastCausativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
 wayise
 we
 weebale
 weeraba
-# --------------------------------- okuweerera(to support(educationally)) --------------------------------- #
-weerera
-weerere
-weeredde
-weererwa
-weererwe
-weereddwa
-weererera
-weererere
-weereredde
+# --------------------------------- okuweerera(to support(educationally)): Type-I Transitive --------------------------------- #
+weerera/OriginalType-ITransitive
+weerere/ModifiedType-ITransitive
+weeredde/PastType-ITransitive
+weererwa/PassiveTransitive
+weererwe/ModifiedPassiveTransitive
+weereddwa/PastPassiveTransitive
+weererera/BenefactiveTransitive
+weererere/ModifiedBenefactiveTransitive
+weereredde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okuweereza(to serve; to work for) ------------------------------------- #
-weereza
-weereze
-weerezza
-weerezebwa
-weerezebwe
-weerezeddwa
-weerereza
-weerereze
-weerezezza
+# --------------------------------- okuweereza(to serve; to work for): Type-II Transitive ------------------------------------- #
+weereza/OriginalType-IITransitive
+weereze/ModifiedType-IITransitive
+weerezza/PastType-IITransitive
+weerezebwa/PassiveTransitive
+weerezebwe/ModifiedPassiveTransitive
+weerezeddwa/PastPassiveTransitive
+weerereza/BenefactiveTransitive
+weerereze/ModifiedBenefactiveTransitive
+weererezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-wegendereze
-# ----------- okuwembejja(to support; to hold up (a sick person); to carry in one&apos;s arms) ------------ #
-wembejja
-wembejje
-wembejjezza
-wembejjesa
-wembejjese
-wembejjesezza
-wembejjebwa
-wembejjebwe
-wembejjeddwa
-wembejjera
-wembejjere
-wembejjedde
+# ----------- okuwembejja(to support; to hold up (a sick person); to carry in one&apos;s arms): Type-I Transitive ------------ #
+wembejja/OriginalType-ITransitive
+wembejje/ModifiedType-ITransitive
+wembejjezza/PastType-ITransitive
+wembejjesa/CausativeTransitive
+wembejjese/ModifiedCausativeTransitive
+wembejjesezza/PastCausativeTransitive
+wembejjebwa/PassiveTransitive
+wembejjebwe/ModifiedPassiveTransitive
+wembejjeddwa/PastPassiveTransitive
+wembejjera/LocativeTransitive
+wembejjere/ModifiedLocativeTransitive
+wembejjedde/PastLocativeTransitive
+wembejjeza/BenefactiveTransitive
+wembejjeze/ModifiedBenefactiveTransitive
+wembejjerezza/PastBenefactiveTransitive
 omuwembezzi
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------- okuwemula(to curse; to swear; to use profane language; to be vulgar): Type-I Transitive ------------------ #
-wemula
-wemule
-wemudde
-wemuza
-wemuze
-wemuzza
-wemulwa
-wemulwe
-wemuddwa
-wemulira    
-wemulire
-wemulidde
+wemula/OriginalType-ITransitive
+wemule/ModifiedType-ITransitive
+wemudde/PastType-ITransitive
+wemuza/CausativeTransitive
+wemuze/ModifiedCausativeTransitive
+wemuzza/PastCausativeTransitive
+wemulwa/PassiveTransitive
+wemulwe/ModifiedPassiveTransitive
+wemuddwa/PastPassiveTransitive
+wemulira/BenefactiveTransitive
+wemulire/ModifiedBenefactiveTransitive
+wemulidde/PastBenefactiveTransitive
 omuwemuzi
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okuwenja(to search for; to look for) ---------------------------------- #
-wenja
-wenje
-wenjezza
-wenjesa
-wenjese
-wenjesezza
-wenjebwa
-wenjebwe
-wenjeddwa
-wenjeza
-wenjeze
-wenjerezza
+# --------------------------------- okuwenja(to search for; to look for): Type-I Transitive ---------------------------------- #
+wenja/OriginalType-ITransitive
+wenje/ModifiedType-ITransitive
+wenjezza/PastType-ITransitive
+wenjesa/CausativeTransitive
+wenjese/ModifiedCausativeTransitive
+wenjesezza/PastCausativeTransitive
+wenjebwa/PassiveTransitive
+wenjebwe/ModifiedPassiveTransitive
+wenjeddwa/PastPassiveTransitive
+wenjeza/BenefactiveTransitive
+wenjeze/ModifiedBenefactiveTransitive
+wenjerezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okuwera(to increase/ban) ---------------------------------- #
-wera
-were
-weze
-werebwa
-werebwe
-werebbwa
-weza
-weze
-wezezza
-werera
-werere
-weredde
+# -------------------------------- okuwera(to increase/ban): Type-I Transitive ---------------------------------- #
+wera/OriginalType-ITransitive
+were/ModifiedType-ITransitive
+weze/ModifiedType-ITransitive
+werebwa/PassiveTransitive
+werebwe/ModifiedPassiveTransitive
+werebbwa/PastPassiveTransitive
+weza/CausativeTransitive
+weze/ModifiedCausativeTransitive
+wezezza/PastCausativeTransitive
+werera/BenefactiveTransitive
+werere/ModifiedBenefactiveTransitive
+weredde/PastBenefactiveTransitive
 #
 werako
 weramu
@@ -20980,36 +20998,38 @@ wereddeeyooko
 wereddeewo
 wereddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okuwerekera(to accompany; to escort) ---------------------------------- #
-werekera
-werekere
-werekeredde
-werekeza
-werekeze
-werekezza
-werekerwa
-werekerwe
-werekeddwa
-werekerera
-werekerere
-werekeredde
+# --------------------------------- okuwerekera(to accompany; to escort): Type-I Transitive ---------------------------------- #
+werekera/OriginalType-ITransitive
+werekere/ModifiedType-ITransitive
+werekeredde/PastType-ITransitive
+werekeza/CausativeTransitive
+werekeze/ModifiedCausativeTransitive
+werekezza/PastCausativeTransitive
+werekerwa/PassiveTransitive
+werekerwe/ModifiedPassiveTransitive
+werekeddwa/PastPassiveTransitive
+werekerera/BenefactiveTransitive
+werekerere/ModifiedBenefactiveTransitive
+werekeredde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuweta(to bend; to turn) --------------------------------------- #
-weta
-wete
-wese
-wetesa
-wetese
-wetesezza
-wesa
-wese
-wesezza
-wetwa
-wetwe
-weteddwa
-wetera
-wetere
-wetedde
+# --------------------------------------- okuweta(to bend; to turn): Type-I Transitive --------------------------------------- #
+weta/OriginalType-ITransitive
+wete/ModifiedType-ITransitive
+wese/PastType-ITransitive
+wetesa/CausativeTransitive
+wetese/ModifiedCausativeTransitive
+wetesezza/PastCausativeTransitive
+wesa/CausativeTransitive
+wese/ModifiedCausativeTransitive
+wesezza/PastCausativeTransitive
+wetwa/PassiveTransitive
+wetwe/ModifiedPassiveTransitive
+weteddwa/PastPassiveTransitive
+wetebwa/PassiveTransitive
+wetebwe/ModifiedPassiveTransitive
+wetera/BenefactiveTransitive
+wetere/ModifiedBenefactiveTransitive
+wetedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 wewevu
 # ----------------------------------- okuweweera(to become contented): Deadjectival -------------------------------------- #
@@ -21022,105 +21042,105 @@ wewezza/PastCausativeDeadjective
 weweerwa/PassiveDeadjective
 weweerwe/ModifiedPassiveDeadjective
 weweddwa/PastPassiveDeadjective
-# ---------------------------------------- okuwewula(to lighten) ----------------------------------------- #
-wewula
-wewule
-wewudde
-wewuza
-wewuze
-wewuzza
-wewulwa
-wewulwe
-wewuddwa
-wewulira
-wewulire
-wewuliddde
-wewuka
-wewuke
-wewuse
-wewukira
-wewukire
-wewukidde
+# ---------------------------------------- okuwewula(to lighten): Type-I Transitive ----------------------------------------- #
+wewula/OriginalType-ITransitive
+wewule/ModifiedType-ITransitive
+wewudde/PastType-ITransitive
+wewuza/CausativeTransitive
+wewuze/ModifiedCausativeTransitive
+wewuzza/PastCausativeTransitive
+wewulwa/PassiveTransitive
+wewulwe/ModifiedPassiveTransitive
+wewuddwa/PastPassiveTransitive
+wewulira/BenefactiveTransitive
+wewulire/ModifiedBenefactiveTransitive
+wewulidde/PastBenefactiveTransitive
+wewuka/OriginalDeadjective
+wewuke/ModifiedDeadjective
+wewuse/PastDeadjective
+wewukira/BenefactiveDeadjective
+wewukire/ModifiedBenefactiveDeadjective
+wewukidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 weyiti
 wiigi
 wiiki
 wo
 # --------------------------------- okuwoggana(to be loud; to make noise): Intransitive --------------------------------- #
-woggana
-woggane
-wogganye
-wogganya
-wogganyizza
-wogganirwa
-wogganirwe
-wogganiddwa
-wogganira
-wogganire
-wogganidde
+woggana/OriginalIntransitive
+woggane/ModifiedIntransitive
+wogganye/HybridIntransitive
+wogganya/CausativeIntransitive
+wogganyizza/ModifiedCausativeIntransitive
+wogganirwa/PassiveIntransitive
+wogganirwe/ModifiedPassiveIntransitive
+wogganiddwa/PastPassiveIntransitive
+wogganira/BenefactiveIntransitive
+wogganire/ModifiedBenefactiveIntransitive
+wogganidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuwola(to lend (money)) ---------------------------------------- #
-wola
-wole
-woze
-wolebwa
-wolebwe
-wolebbwa
-wolwa
-wolwe
-woleddwa
-wolera
-wolere
-woledde
+# --------------------------------------- okuwola(to lend (money)): Type-II Transitive ---------------------------------------- #
+wola/OriginalType-IITransitive
+wole/ModifiedType-IITransitive
+woze/PastType-IITransitive
+wolebwa/PassiveTransitive
+wolebwe/ModifiedPassiveTransitive
+wolebbwa/PastPassiveTransitive
+wolwa/PassiveTransitive
+wolwe/ModifiedPassiveTransitive
+woleddwa/PastPassiveTransitive
+wolera/BenefactiveTransitive
+wolere/ModifiedBenefactiveTransitive
+woledde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okuwologoma(to roar) ------------------------------------------ #
-wologoma
-wologome
-wologomye
-wologomya
-wologomezza
-wologomera
-wologomere
-wologomere
-wologomedde 
+# ----------------------------------------- okuwologoma(to roar): Intransitive ------------------------------------------ #
+wologoma/OriginalIntransitive
+wologome/ModifiedIntransitive
+wologomye/HybridIntransitive
+wologomya/CausativeIntransitive
+wologomezza/PastCausativeIntransitive
+wologomera/LocativeIntransitive
+wologomere/ModifiedLocativeIntransitive
+wologomedde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 wolu
 wolutaali
 woma
 womba
 wombeefu
-# --------------------------- okuwona(to be healed; to be saved; inf.: okwona): Deadjectival ---------------------------- #
-wona/OriginalDeadjective
-wone/ModifiedDeadjective
-wonye/PastDeadjective
-wonebwa/PassiveDeadjective
-wonebwe/ModifiedPassiveDeadjective
-woneddwa/PastPassiveDeadjective
-wonera/LocativeDeadjective
-wonere/ModifiedLocativeDeadjective
-wonedde/PastLocativeDeadjective
+# --------------------------- okuwona(to be healed; to be saved; inf.: okwona): Type-I Transitive ---------------------------- #
+wona/OriginalType-ITransitive
+wone/ModifiedType-ITransitive
+wonye/PastType-ITransitive
+wonebwa/PassiveTransitive
+wonebwe/ModifiedPassiveTransitive
+woneddwa/PastPassiveTransitive
+wonera/LocativeTransitive
+wonere/ModifiedLocativeTransitive
+wonedde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
 wonna
 # ------------------------------------------- okuwonya(to heal): Type-II Transitive ------------------------------------------- #
-wonya
-wonye
-wonyezza
-wonyeza
-wonyeze
-wonyebwa
-wonyebwe
-wonyeddwa
+wonya/OriginalType-IITransitive
+wonye/ModifiedType-IITransitive
+wonyezza/PastType-IITransitive
+wonyeza/BenefactiveTransitive
+wonyeze/ModifiedBenefactiveTransitive
+wonyelezza/PastBenefactiveTransitive
+wonyebwa/PassiveTransitive
+wonyebwe/ModifiedPassiveTransitive
+wonyeddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okuwoolera(to take revenge) -------------------------------------- #
-woolera
-woolere
-wooledde
-wooleza
-wooleze
-woolezza
-woolerwa
-woolerwe
-wooleddwa
+# -------------------------------------- okuwoolera(to take revenge): Intransitive -------------------------------------- #
+woolera/OriginalIntransitive
+woolere/ModifiedIntransitive
+wooledde/PastIntransitive
+wooleza/CausativeIntransitive
+wooleze/ModifiedCausativeIntransitive
+woolezza/PastCausativeIntransitive
+woolerwa/LocativeIntransitive
+woolerwe/ModifiedLocativeIntransitive
+wooleddwa/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------------------------- okuwooma(to be delicious): Deadjectival ------------------------------------------- #
 wooma/OriginalDeadjective
@@ -21310,100 +21330,100 @@ woomereddwa/PastPassiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 wootameroni
 wooteri
-# ----------------------------------- okuwoowa(marry (used by Muslims)) ----------------------------------- #
-woowa
-woowe
-wooye
-woowesa
-woowese
-woowesezza
-woowebwa
-woowebwe
-wooweddwa
-woowera
-woowere
-woowedde
+# ----------------------------------- okuwoowa(marry (used by Muslims)): Type-I Transitive ----------------------------------- #
+woowa/OriginalType-ITransitive
+woowe/ModifiedType-ITransitive
+wooye/PastType-ITransitive
+woowesa/CausativeTransitive
+woowese/ModifiedCausativeTransitive
+woowesezza/PastCausativeTransitive
+woowebwa/PassiveTransitive
+woowebwe/ModifiedPassiveTransitive
+wooweddwa/PastPassiveTransitive
+woowera/BenefactiveTransitive
+woowere/ModifiedBenefactiveTransitive
+woowedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okuwoowoola(to cry; to cry out) ------------------------------------ #
-woowoola
-woowoole
-woowodde
-woowooza
-woowooze
-woowoozza
-woowoolwa
-woowoolwe
-woowoddwa
-woowolera
-woowolere
-woowoledde
+# ------------------------------------ okuwoowoola(to cry; to cry out): Intransitive ------------------------------------ #
+woowoola/OriginalIntransitive
+woowoole/ModifiedIntransitive
+woowodde/PastIntransitive
+woowooza/CausativeIntransitive
+woowooze/ModifiedCausativeIntransitive
+woowoozza/PastCausativeIntransitive
+woowoolwa/PassiveIntransitive
+woowoolwe/ModifiedPassiveIntransitive
+woowoddwa/PastPassiveIntransitive
+woowolera/BenefactiveIntransitive
+woowolere/ModifiedBenefactiveIntransitive
+woowoledde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ okuwowoggana(to shout; to cry out in alarm) ------------------------------ #
-wowoggana
-wowoggane
-wowogganye
-wowogganya
-wowogganyizza
-wowogganirwa
-wowogganirwe
-wowogganiddwa
-wowogganira
-wowogganire
-wowogganidde
+# ------------------------------ okuwowoggana(to shout; to cry out in alarm): Intransitive ------------------------------ #
+wowoggana/OriginalIntransitive
+wowoggane/ModifiedIntransitive
+wowogganye/PastIntransitive
+wowogganya/CausativeIntransitive
+wowogganyizza/ModifiedCausativeIntransitive
+wowogganirwa/PassiveIntransitive
+wowogganirwe/ModifiedPassiveIntransitive
+wowogganiddwa/PastPassiveIntransitive
+wowogganira/BenefactiveIntransitive
+wowogganire/ModifiedBenefactiveIntransitive
+wowogganidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okuwoza(to plead; to recount; to tell) --------------------------------- #
-woza
-woze
-wozezza
-wozesa
-wozese
-wozesezza
-wozebwa
-wozebwe
-wozeddwa
-woleza
-woleze
-wolezza
+# -------------------------------- okuwoza(to plead; to recount; to tell): Type-I Transitive --------------------------------- #
+woza/OriginalType-ITransitive
+woze/ModifiedType-ITransitive
+wozezza/PastType-ITransitive
+wozesa/CausativeTransitive
+wozese/ModifiedCausativeTransitive
+wozesezza/PastCausativeTransitive
+wozebwa/PassiveTransitive
+wozebwe/ModifiedPassiveTransitive
+wozeddwa/PastPassiveTransitive
+woleza/BenefactiveTransitive
+woleze/ModifiedBenefactiveTransitive
+wolezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okuwuga(to swim) -------------------------------------------- #
-wuga
-wuge
-wuzze
-wugisa
-wugise
-wugisizza
-wugibwa
-wugibwe
-wugiddwa
-wugira
-wugire
-wugidde
+# ------------------------------------------- okuwuga(to swim): Intransitive -------------------------------------------- #
+wuga/OriginalIntransitive
+wuge/ModifiedIntransitive
+wuzze/PastIntransitive
+wugisa/CausativeIntransitive
+wugise/ModifiedCausativeIntransitive
+wugisizza/PastCausativeIntransitive
+wugibwa/PassiveIntransitive
+wugibwe/ModifiedPassiveIntransitive
+wugiddwa/PastPassiveIntransitive
+wugira/LocativeIntransitive
+wugire/ModifiedLocativeIntransitive
+wugidde/PastLocativeIntransitive
 omuwuzi
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okuwujjaala(to rest; to take a nap) ---------------------------------- #
-wujjaala
-wujjaale
-wujjadde
-wujjaaza
-wujjaaze
-wujjazza
-wujjaalira
-wujjaalire
-wujjaalidde
+# ---------------------------------- okuwujjaala(to rest; to take a nap): Intransitive ---------------------------------- #
+wujjaala/OriginalIntransitive
+wujjaale/ModifiedIntransitive
+wujjadde/PastIntransitive
+wujjaaza/CausativeIntransitive
+wujjaaze/ModifiedCausativeIntransitive
+wujjazza/PastCausativeIntransitive
+wujjaalira/LocativeIntransitive
+wujjaalire/ModifiedLocativeIntransitive
+wujjaalidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okuwulira(to hear) ---------------------------------- #
-wulira
-wulire
-wulidde
-wulibwa
-wulibwe
-wuliddwa
-wuliza
-wulize
-wulizza
-wulilira
-wulilire
-wulilidde
+# -------------------------------- okuwulira(to hear): Type-I Transitive ---------------------------------- #
+wulira/OriginalType-ITransitive
+wulire/ModifiedType-ITransitive
+wulidde/PastType-ITransitive
+wulilwa/PassiveTransitive
+wulilwe/ModifiedPassiveTransitive
+wuliddwa/PastPassiveTransitive
+wuliza/CausativeTransitive
+wulize/ModifiedCausativeTransitive
+wulizza/PastCausativeTransitive
+wulilira/BenefactiveTransitive
+wulilire/ModifiedBenefactiveTransitive
+wulilidde/PastBenefactiveTransitive
 #
 wulirako
 wuliramu
@@ -21571,13 +21591,16 @@ wuliliddeeyooko
 wuliliddeewo
 wuliliddeewooko
 # ----------------------------------------------------------------------------------- #
-# ---------------------------- okuwuliriza(to listen to; to listen carefully) ----------------------------- #
-wuliriza
-wulirize
-wulirizza
-wulirizibwa
-wulirizibwe
-wuliriziddwa
+# ---------------------------- okuwuliriza(to listen to; to listen carefully): Type-I Transitive ----------------------------- #
+wuliriza/OriginalType-ITransitive
+wulirize/ModifiedType-ITransitive
+wulirizza/PastType-ITransitive
+wulizisa/CausativeTransitive
+wulizise/ModifiedCausativeTransitive
+wulizisizza/PastCausativeTransitive
+wulirizibwa/PassiveTransitive
+wulirizibwe/ModifiedPassiveTransitive
+wuliriziddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 wummula
 wummuza
@@ -21592,55 +21615,57 @@ wuniikirirwa/PassiveDeadjective
 wuniikirirwe/ModifiedPassiveDeadjective
 wuniikiriddwa/PastPassiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okuwunya(to smell) -------------------------------------------- #
-wunya
-wunye
-wunyizza
-wunyisa
-wunyise
-wunyisizza
-wunyira
-wunyire
-wunyidde
-wunyirirwa
-wunyirirwe
-wunyiriddwa
-wunyirira
-wunyirire
-wunyiridde
-wunyiriza
-wunyirize
-wunyirizza
+# ----------------------------------------- okuwunya(to smell): Deadjectival -------------------------------------------- #
+wunya/OriginalDeadjective
+wunye/ModifiedDeadjective
+wunyizza/PastDeadjective
+wunyisa/CausativeDeadjective
+wunyise/ModifiedCausativeDeadjective
+wunyisizza/PastCausativeDeadjective
+wunyira/LocativeDeadjective
+wunyire/ModifiedLocativeDeadjective
+wunyidde/PastLocativeDeadjective
+wunyirirwa/PassiveDeadjective
+wunyirirwe/ModifiedPassiveDeadjective
+wunyiriddwa/PastPassiveDeadjective
+wunyirira/BenefactiveDeadjective
+wunyirire/ModifiedBenefactiveDeadjective
+wunyiridde/PastBenefactiveDeadjective
+wunyiriza/CausativeDeadjective
+wunyirize/ModifiedCausativeDeadjective
+wunyirizza/PastCausativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------- okuwunzika(to conclude; to slant; t incline to one side) ------------------------ #
-wunzika
-wunzike
-wunzise
-wunzisa
-wunzisizza
-wunzikibwa
-wunzikibwe
-wunzikiddwa
-wunzikira
-wunzikire
-wunzikidde
+# ----------------------- okuwunzika(to conclude; to slant; t incline to one side): Type-I Transitive ------------------------ #
+wunzika/OriginalType-ITransitive
+wunzike/ModifiedType-ITransitive
+wunzise/PastType-ITransitive
+wunzisa/CausativeTransitive
+wunzise/ModifiedCausativeTransitive
+wunzisizza/PastCausativeTransitive
+wunzikibwa/PassiveTransitive
+wunzikibwe/ModifiedPassiveTransitive
+wunzikiddwa/PastPassiveTransitive
+wunzikira/BenefactiveTransitive
+wunzikire/ModifiedBenefactiveTransitive
+wunzikidde/PastBenefactiveTransitive
 omuwunzisi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okuwuuba(to wave) ------------------------------------------- #
-wuuba
-wuube
-wuubye
-wuubya
-wuubizza
-wuubisa
-wuubise
-wuubisizza
-wuubwa
-wuubwe
-wuubiddwa
-wuubira
-wuubire
-wuubidde
+# ------------------------------------------- okuwuuba(to wave): Type-I Transitive ------------------------------------------- #
+wuuba/OriginalType-ITransitive
+wuube/ModifiedType-ITransitive
+wuubye/PastType-ITransitive
+wuubya/CausativeTransitive
+wuubye/ModifiedCausativeTransitive
+wuubizza/PastCausativeTransitive
+wuubisa/CausativeTransitive
+wuubise/ModifiedCausativeTransitive
+wuubisizza/PastCausativeTransitive
+wuubwa/PassiveTransitive
+wuubwe/ModifiedPassiveTransitive
+wuubiddwa/PastPassiveTransitive
+wuubira/BenefactiveTransitive
+wuubire/ModifiedBenefactiveTransitive
+wuubidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okuwuubaala(to be bored; to be lonesome): Deadjectival -------------------------------- #
 wuubaala/OriginalDeadjective
@@ -21653,33 +21678,33 @@ wuubaalira/LocativeDeadjective
 wuubaalire/ModifiedLocativeDeadjective
 wuubaalidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ okuwuuma(to hiss; to make a buzzing noise) ------------------------------- #
-wuuma
-wuume
-wuumye
-wuumya
-wuumizza
-wuumisa
-wuumise
-wuumisizza
-wuumira
-wuumire
-wuumidde
+# ------------------------------ okuwuuma(to hiss; to make a buzzing noise): Intransitive ------------------------------- #
+wuuma/OriginalIntransitive
+wuume/ModifiedIntransitive
+wuumye/HybridIntransitive
+wuumya/CausativeIntransitive
+wuumizza/PastCausativeIntransitive
+wuumisa/CausativeIntransitive
+wuumise/ModifiedCausativeIntransitive
+wuumisizza/PastCausativeIntransitive
+wuumira/BenefactiveIntransitive
+wuumire/ModifiedBenefactiveIntransitive
+wuumidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 y
 ya
-# ---------------------------- okuyaayaana(to long for; to desire; to crave) ---------------------------- #
-yaayaana
-yaayaane
-yaayaanye
-yaayaanya
-yaayaanyizza
-yaayaanirwa
-yaayaanirwe
-yaayaaniddwa
-yaayaanira
-yaayaanire
-yaayaanidde
+# ---------------------------- okuyaayaana(to long for; to desire; to crave): Intransitive ---------------------------- #
+yaayaana/OriginalIntransitive
+yaayaane/ModifiedIntransitive
+yaayaanye/HybridIntransitive
+yaayaanya/CausativeIntransitive   
+yaayaanyizza/PastCausativeIntransitive
+yaayaanirwa/PassiveIntransitive
+yaayaanirwe/ModifiedPassiveIntransitive
+yaayaaniddwa/PastPassiveIntransitive
+yaayaanira/BenefactiveIntransitive
+yaayaanire/ModifiedBenefactiveIntransitive
+yaayaanidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------- okuyaba(finish the funeral rights; carry out the &apos;olumbe&apos;) ------------------ #
 yaba
@@ -22186,7 +22211,7 @@ yawulwe
 yawuddwa
 yawulira
 yawulire
-yawuliddde
+yawulidde
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------------- okuyayuuya(to yawn; inf: okwayuuya) ------------------------------------ #
 yayuuya
