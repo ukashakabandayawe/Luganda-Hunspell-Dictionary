@@ -23136,22 +23136,22 @@ zaakira/LocativeDeadjective
 zaakire/ModifiedLocativeDeadjective
 zaakidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okuzaala(to give birth) ---------------------------------- #
-zaala
-zaale
-zadde
-zaalibwa
-zaalibwe
-zaaliddwa
-zaalisa
-zaalise
-zaalisizza
-zaaza
-zaaze
-zaazizza
-zaalira
-zaalire
-zaalidde
+# ---------------------------------- okuzaala(to give birth): Type-I Transitive ---------------------------------- #
+zaala/OriginalType-ITransitive
+zaale/ModifiedType-ITransitive
+zadde/PastType-ITransitive
+zaalibwa/PassiveTransitive
+zaalibwe/ModifiedPassiveTransitive
+zaaliddwa/PastPassiveTransitive
+zaalisa/CausativeTransitive
+zaalise/ModifiedCausativeTransitive
+zaalisizza/PastCausativeTransitive
+zaaza/CausativeTransitive
+zaaze/ModifiedCausativeTransitive
+zaazizza/PastCausativeTransitive
+zaalira/BenefactiveTransitive
+zaalire/ModifiedBenefactiveTransitive
+zaalidde/PastBenefactiveTransitive
 #
 zaalako
 zaalamu
@@ -23320,18 +23320,18 @@ zaaliddeeyooko
 zaaliddeewo
 zaaliddeewooko
 # ----------------------------------------------------------------------------------- #
-# ---------------------------------- okuzannya(to play) ---------------------------------- #
-zannya
-zannye
-zannyibwa
-zannyibwe
-zannyiddwa
-zannyisa
-zannyise
-zannyisizza
-zannyira
-zannyire
-zannyidde
+# ---------------------------------- okuzannya(to play): Type-I Transitive ---------------------------------- #
+zannya/OriginalType-ITransitive
+zannye/ModifiedType-ITransitive
+zannyibwa/PassiveTransitive
+zannyibwe/ModifiedPassiveTransitive
+zannyiddwa/PastPassiveTransitive
+zannyisa/CausativeTransitive
+zannyise/ModifiedCausativeTransitive
+zannyisizza/PastCausativeTransitive
+zannyira/BenefactiveTransitive
+zannyire/ModifiedBenefactiveTransitive
+zannyidde/PastBenefactiveTransitive
 #
 zannyako
 zannyamu
@@ -23484,20 +23484,20 @@ zannyiddeeyooko
 zannyiddeewo
 zannyiddeewooko
 # --------------------------------------------------------------------------------------- #
-# ---------------------------------- okuziba(to block) ---------------------------------- #
-ziba
-zibe
-zibye
-zibibwa
-zibibwe
-zibiddwa
-zibya
-zibisa
-zibise
-zibisizza
-zibira
-zibire
-zibidde
+# ---------------------------------- okuziba(to block): Type-I Transitive ---------------------------------- #
+ziba/OriginalType-ITransitive
+zibe/ModifiedType-ITransitive
+zibye/PastType-ITransitive
+zibibwa/PassiveTransitive
+zibibwe/ModifiedPassiveTransitive
+zibiddwa/PastPassiveTransitive
+zibya/CausativeTransitive
+zibisa/CausativeTransitive
+zibise/ModifiedCausativeTransitive
+zibisizza/PastCausativeTransitive
+zibira/BenefactiveTransitive
+zibire/ModifiedBenefactiveTransitive
+zibidde/PastBenefactiveTransitive
 #
 zibako
 zibamu
@@ -23862,110 +23862,114 @@ zibuwaliddeeyooko
 zibuwaliddeewo
 zibuwaliddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okuziika(to burry) ------------------------------------------- #
-ziika
-ziike
-ziise
-ziikisa
-ziikise
-ziikisizza
-ziikibwa
-ziikibwe
-ziikiddwa
-ziikira
-ziikire
-ziikidde
+# ------------------------------------------ okuziika(to burry): Type-I Transitive ------------------------------------------- #
+ziika/OriginalType-ITransitive
+ziike/ModifiedType-ITransitive
+ziise/PastType-ITransitive
+ziikisa/CausativeTransitive
+ziikise/ModifiedCausativeTransitive
+ziikisizza/PastCausativeTransitive
+ziikibwa/PassiveTransitive
+ziikibwe/ModifiedPassiveTransitive
+ziikiddwa/PastPassiveTransitive
+ziikira/BenefactiveTransitive
+ziikire/ModifiedBenefactiveTransitive
+ziikidde/PastBenefactiveTransitive
 omuziisi
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okuziikula(to exhume) ----------------------------------------- #
-ziikula
-ziikule
-ziikudde
-ziikuza
-ziikuze
-ziikuzza
-ziikulwa
-ziikulwe
-ziikuddwa
-ziikira
-ziikire
-ziikidde
+# ----------------------------------------- okuziikula(to exhume): Type-I Transitive ----------------------------------------- #
+ziikula/OriginalType-ITransitive
+ziikule/ModifiedType-ITransitive
+ziikudde/PastType-ITransitive
+ziikuza/CausativeTransitive
+ziikuze/ModifiedCausativeTransitive
+ziikuzza/PastCausativeTransitive
+ziikulwa/PassiveTransitive
+ziikulwe/ModifiedPassiveTransitive
+ziikuddwa/PastPassiveTransitive
+ziikira/BenefactiveTransitive
+ziikire/ModifiedBenefactiveTransitive
+ziikidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 ziipu
-# ----------------------------------- okuzimba(to build; to construct) ------------------------------------ #
-zimba
-zimbe
-zimbye
-zimbisa
-zimbise
-zimbisizza
-zimbibwa
-zimbibwe
-zimbiddwa
-zimbira
-zimbire
-zimbidde
+# ----------------------------------- okuzimba(to build; to construct): Type-I Transitive ------------------------------------ #
+zimba/OriginalType-ITransitive
+zimbe/ModifiedType-ITransitive
+zimbye/PastType-ITransitive
+zimbisa/CausativeTransitive
+zimbise/ModifiedCausativeTransitive
+zimbisizza/PastCausativeTransitive
+zimbibwa/PassiveTransitive
+zimbibwe/ModifiedPassiveTransitive
+zimbiddwa/PastPassiveTransitive
+zimbira/BenefactiveTransitive
+zimbire/ModifiedBenefactiveTransitive
+zimbidde/PastBenefactiveTransitive
 omuzimbi
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------- okuzina(to dance; derived meaning: to have sex) ---------------------------- #
-zina
-zine
-zinye
-zinisa
-zinise
-zinisizza
-zinibwa
-zinibwe
-ziniddwa
-zinisa
-zinise
-zinisizza
+# ---------------------------- okuzina(to dance; derived meaning: to have sex): Type-I Transitive ---------------------------- #
+zina/OriginalType-ITransitive
+zine/ModifiedType-ITransitive
+zinye/PastType-ITransitive
+zinisa/CausativeTransitive
+zinise/ModifiedCausativeTransitive
+zinisizza/PastCausativeTransitive
+zinibwa/PassiveTransitive
+zinibwe/ModifiedPassiveTransitive
+ziniddwa/PastPassiveTransitive
+zinira/BenefactiveTransitive
+zinire/ModifiedBenefactiveTransitive
+zinidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okuzinga(to fold; to wrap) --------------------------------------- #
-zinga
-zinge
-zinze
-zingisa
-zingise
-zingisizza
-zingibwa
-zingibwe
-zingiddwa
-zingira
-zingire
-zingidde
+# -------------------------------------- okuzinga(to fold; to wrap): Type-I Transitive --------------------------------------- #
+zinga/OriginalType-ITransitive
+zinge/ModifiedType-ITransitive
+zinze/PastType-ITransitive
+zingisa/CausativeTransitive
+zingise/ModifiedCausativeTransitive
+zingisizza/PastCausativeTransitive
+zingibwa/PassiveTransitive
+zingibwe/ModifiedPassiveTransitive
+zingiddwa/PastPassiveTransitive
+zingira/BenefactiveTransitive
+zingire/ModifiedBenefactiveTransitive
+zingidde/PastBenefactiveTransitive
 omuzinzi
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okuzingiza(to encircle; to surround) ---------------------------------- #
-zingiza
-zingize
-zingizze
+# --------------------------------- okuzingiza(to encircle; to surround): Type-I Transitive ---------------------------------- #
+zingiza/OriginalType-ITransitive
+zingize/ModifiedType-ITransitive
+zingizze/PastType-ITransitive
+zingizibwa/PassiveTransitive
+zingizibwe/ModifiedPassiveTransitive
+zingiziddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------- okuzira(to ignore; to forbid; to scorn; to refuse) --------------------------- #
-zira
-zire
-zize
-ziza
-zizizza
-ziribwa
-ziribwe
-ziriddwa
+# -------------------------- okuzira(to ignore; to forbid; to scorn; to refuse): Type-I Transitive --------------------------- #
+zira/OriginalType-ITransitive
+zire/ModifiedType-ITransitive
+zize/PastType-ITransitive
+ziza/CausativeTransitive
+zizizza/PastCausativeTransitive
+ziribwa/PassiveTransitive
+ziribwe/ModifiedPassiveTransitive
+ziriddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------- okuzirika(to faint; intransitive) ------------------------------------------ #
-zirika
-zirike
-zirise
-zirisa
-zirisizza
-zirisibwa
-zirisibwe
-zirisiddwa
-zirisiza
-zirisize
-zirisizza
-zirikira
-zirikire
-zirikidde
+# ---------------------------- okuzirika(to faint; intransitive): Intransitive ------------------------------------------ #
+zirika/OriginalIntransitive
+zirike/ModifiedIntransitive
+zirise/PastIntransitive
+zirisa/CausativeIntransitive
+zirise/ModifiedCausativeIntransitive
+zirisizza/PastCausativeIntransitive
+zirisibwa/PassiveIntransitive
+zirisibwe/ModifiedPassiveIntransitive
+zirisiddwa/PastPassiveIntransitive
+zirisiza/BenefactiveIntransitive
+zirisize/ModifiedBenefactiveIntransitive
+zirisizza/PastBenefactiveIntransitive
+zirikira/BenefactiveIntransitive
+zirikire/ModifiedBenefactiveIntransitive
+zirikidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 zito
 # ------------------------------------------------------- okuzitowa (to be heavy): Deadjectival ------------------------------------------------------- #
@@ -24077,55 +24081,56 @@ ziyirira/LocativeDeadjective
 ziyirire/ModifiedLocativeDeadjective
 ziyiridde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------ okuziyiza(to prevent; to hinder; to block; to obstruct) ------------------------ #
-ziyiza
-ziyize
-ziyizza
-ziyizibwa
-ziyizibwe
-ziyiziddwa
+# ------------------------ okuziyiza(to prevent; to hinder; to block; to obstruct): Type-II Transitive ------------------------ #
+ziyiza/OriginalType-IITransitive
+ziyize/ModifiedType-IITransitive
+ziyizza/PastType-IITransitive
+ziyizibwa/PassiveTransitive
+ziyizibwe/ModifiedPassiveTransitive
+ziyiziddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------- okuzuukira(to resurrect; to rise from the dead) ---------------------------- #
-zuukira
-zuukire
-zuukidde
-zuukiza
-zuukize
-zuukizza
-zuukizibwa
-zuukizibwe
-zuukiziddwa
-zuukirira
-zuukirire
-zuukiridde
+# ---------------------------- okuzuukira(to resurrect; to rise from the dead): Intransitive ---------------------------- #
+zuukira/OriginalIntransitive
+zuukire/ModifiedIntransitive
+zuukidde/PastIntransitive
+zuukiza/CausativeIntransitive
+zuukize/ModifiedCausativeIntransitive
+zuukizza/PastCausativeIntransitive
+zuukizibwa/PassiveIntransitive
+zuukizibwe/ModifiedPassiveIntransitive
+zuukiziddwa/PastPassiveIntransitive
+zuukirira/LocativeIntransitive
+zuukirire/ModifiedLocativeIntransitive
+zuukiridde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuzuukuka(to wake up) ----------------------------------------- #
-zuukuka
-zuukuke
-zuukuse
-zuukusa
-zuukusizza
-zuukusibwa
-zuukusibwe
-zuukusiddwa
-zuukusiza
-zuukusize
-zuukusirizza
-zuukukira
-zuukukire
-zuukukidde
+# ---------------------------------------- okuzuukuka(to wake up): Intransitive ----------------------------------------- #
+zuukuka/OriginalIntransitive
+zuukuke/ModifiedIntransitive
+zuukuse/PastIntransitive
+zuukusa/CausativeIntransitive
+zuukuse/ModifiedCausativeIntransitive
+zuukusizza/PastCausativeIntransitive
+zuukusibwa/PassiveIntransitive
+zuukusibwe/ModifiedPassiveIntransitive
+zuukusiddwa/PastPassiveIntransitive
+zuukusiza/BenefactiveIntransitive
+zuukusize/ModifiedBenefactiveIntransitive
+zuukusirizza/PastBenefactiveIntransitive
+zuukukira/LocativeIntransitive
+zuukukire/ModifiedLocativeIntransitive
+zuukukidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okuzuula(to find (after searching)) ---------------------------------- #
-zuula
-zuule
-zudde
-zuulisa
-zuulise
-zuulisizza
-zuulibwa
-zuulibwe
-zuuliddwa
-zuulira
-zuulire
-zuulidde
+# ---------------------------------- okuzuula(to find (after searching)): Type-I Transitive ---------------------------------- #
+zuula/OriginalType-ITransitive
+zuule/ModifiedType-ITransitive
+zudde/PastType-ITransitive
+zuulisa/CausativeTransitive
+zuulise/ModifiedCausativeTransitive
+zuulisizza/PastCausativeTransitive
+zuulibwa/PassiveTransitive
+zuulibwe/ModifiedPassiveTransitive
+zuuliddwa/PastPassiveTransitive
+zuulira/BenefactiveTransitive
+zuulire/ModifiedBenefactiveTransitive
+zuulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
