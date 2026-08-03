@@ -17485,67 +17485,68 @@ swakiirire/ModifiedLocativeIntransitive
 swakiiridde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okuswala(to be ashamed): Intrasitive ---------------------------------------- #
-swala
-swale
-swadde
-swaza
-swaze
-swazizza
-swazibwa
-swazibwe
-swaziddwa
-swalira
-swalire
-swalidde
+swala/OriginalIntransitive
+swale/ModifiedIntransitive
+swadde/PastIntransitive
+swaza/CausativeIntransitive
+swaze/ModifiedCausativeIntransitive
+swazizza/PastCausativeIntransitive
+swazibwa/PassiveIntransitive
+swazibwe/ModifiedPassiveIntransitive
+swaziddwa/PastPassiveIntransitive
+swalira/LocativeIntransitive
+swalire/ModifiedLocativeIntransitive
+swalidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------- okuswankula(to eat noisily; to chew noisily) ------------------------------ #
-swankula
-swankule
-swankudde
-swankuza
-swankuze
-swankuzza
-swankulwa
-swankulwe
-swankuddwa
-swankulira
-swankulire
-swankulidde
+# ----------------------------- okuswankula(to eat noisily; to chew noisily): Type-I Transitive  ------------------------------ #
+swankula/OriginalType-ITransitive
+swankule/ModifiedType-ITransitive
+swankudde/PastType-ITransitive
+swankuza/CausativeTransitive
+swankuze/ModifiedCausativeTransitive
+swankuzza/PastCausativeTransitive
+swankulwa/PassiveTransitive
+swankulwe/ModifiedPassiveTransitive
+swankuddwa/PastPassiveTransitive
+swankulira/BenefactiveTransitive
+swankulire/ModifiedBenefactiveTransitive
+swankulidde/PastBenefactiveTransitive
 omuswankuzi
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------- okuta(to release; to let go of; to set free) ------------------------------ #
-ta
-te
-tadde
-teebwa
-teebwe
-teereddwa
-teera
-teere
-teeredde
+# ----------------------------- okuta(to release; to let go of; to set free): Type-I Transitive  ------------------------------ #
+ta/OriginalType-ITransitive
+te/ModifiedType-ITransitive
+tadde/PastType-ITransitive
+teebwa/PassiveTransitive
+teebwe/ModifiedPassiveTransitive
+teereddwa/PastPassiveTransitive
+teera/BenefactiveTransitive
+teere/ModifiedBenefactiveTransitive
+teeredde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 taaba
-# ------------------------------------ okutaasa(to protect; to defend) ------------------------------------ #
-taasa
-taase
-taasizza
-taasibwa
-taasibwe
-taasiddwa
-taasiza
-taasize
-taasizza
+# ------------------------------------ okutaasa(to protect; to defend): Type-I Transitive  ------------------------------------ #
+taasa/OriginalType-ITransitive
+taase/ModifiedType-ITransitive
+taasizza/PastType-ITransitive
+taasibwa/PassiveTransitive
+taasibwe/ModifiedPassiveTransitive
+taasiddwa/PastPassiveTransitive
+taasiza/BenefactiveTransitive
+taasize/ModifiedBenefactiveTransitive
+taasizza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 taata/N1
-# --------------------------- okutaataaganya(to agitate; to disturb; to upset) ---------------------------- #
-taataaganya
-taataaganye
-taataaganyizza
-taataaganibwa
-taataaganibwe
-taataaganiddwa
-taataaganyiza
-taataaganyize
+# --------------------------- okutaataaganya(to agitate; to disturb; to upset): Type-I Transitive  ---------------------------- #
+taataaganya/OriginalType-ITransitive
+taataaganye/ModifiedType-ITransitive
+taataaganyizza/PastType-ITransitive
+taataaganyizibwa/PassiveTransitive
+taataaganyizibwe/ModifiedPassiveTransitive
+taataaganyiziddwa/PastPassiveTransitive
+taataaganyiza/BenefactiveTransitive
+taataaganyize/ModifiedBenefactiveTransitive
+taataaganyilizza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------ okutabuka(to be mixed; to be stirred; to be disturbed): Deadjectival ------------------------- #
 tabuka/OriginalDeadjective
@@ -17560,67 +17561,69 @@ tabukira/BenefactiveDeadjective
 tabukire/ModifiedBenefactiveDeadjective
 tabukidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okutabula(to mix; to stir; to stir up) --------------------------------- #
-tabula
-tabule
-tabudde
-tabuza
-tabuze
-tabuzza
-tabulwa
-tabulwe
-tabuddwa
-tabulira
-tabulire
-tabulidde
+# -------------------------------- okutabula(to mix; to stir; to stir up): Type-I Transitive  --------------------------------- #
+tabula/OriginalType-ITransitive
+tabule/ModifiedType-ITransitive
+tabudde/PastType-ITransitive
+tabuza/CausativeTransitive
+tabuze/ModifiedCausativeTransitive
+tabuzza/PastCausativeTransitive
+tabulwa/PassiveTransitive
+tabulwe/ModifiedPassiveTransitive
+tabuddwa/PastPassiveTransitive
+tabulira/BenefactiveTransitive
+tabulire/ModifiedBenefactiveTransitive
+tabulidde/PastBenefactiveTransitive
 omutabuzi
 # --------------------------------------------------------------------------------------------------------- #
 takisi
-# -------------------------- okutalaaga(to surround; to encircle; to go around) --------------------------- #
-talaaga
-talaage
-talaaze
-talaagisa
-talaagise
-talaagisizza
-talaaza
-talaazizza
-talaagibwa
-talaagibwe
-talaagiddwa
-talaagira
-talaagire
-talaagidde
+# -------------------------- okutalaaga(to surround; to encircle; to go around): Type-I Transitive  --------------------------- #
+talaaga/OriginalType-ITransitive
+talaage/ModifiedType-ITransitive
+talaaze/PastType-ITransitive
+talaagisa/CausativeTransitive
+talaagise/ModifiedCausativeTransitive
+talaagisizza/PastCausativeTransitive
+talaaza/CausativeTransitive
+talaaze/ModifiedCausativeTransitive
+talaazizza/PastCausativeTransitive
+talaagibwa/PassiveTransitive
+talaagibwe/ModifiedPassiveTransitive
+talaagiddwa/PastPassiveTransitive
+talaagira/LocativeTransitive
+talaagire/ModifiedLocativeTransitive
+talaagidde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --- okutama(To fed somebody up; to make somebody pissed; to piss somebody off; to disgust; to sicken) --- #
-tama
-tame
-tamye
-tamya
-tamizza
-tamisa
-tamise
-tamisizza
-tamwa
-tamwe
-tamiddwa
-tamira
-tamire
-tamidde
+# --- okutama(To fed somebody up; to make somebody pissed; to piss somebody off; to disgust; to sicken): Type-I Transitive  --- #
+tama/OriginalType-ITransitive
+tame/ModifiedType-ITransitive
+tamye/PastType-ITransitive
+tamya/CausativeTransitive
+tamye/ModifiedCausativeTransitive
+tamizza/PastCausativeTransitive
+tamisa/CausativeTransitive
+tamise/ModifiedCausativeTransitive
+tamisizza/PastCausativeTransitive
+tamwa/PassiveTransitive
+tamwe/ModifiedPassiveTransitive
+tamiddwa/PastPassiveTransitive
+tamira/LocativeTransitive
+tamire/ModifiedLocativeTransitive
+tamidde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okutambula(to walk) ----------------------------------------- #
-tambula
-tambule
-tambudde
-tambulibwa
-tambulibwe
-tambuliddwa
-tambuza
-tambuze
-tambuzza
-tambulira
-tambulire
-tambulidde
+# ------------------------------------------- okutambula(to walk): Intransitive ----------------------------------------- #
+tambula/OriginalIntransitive
+tambule/ModifiedIntransitive
+tambudde/PastIntransitive
+tambulibwa/PassiveIntransitive
+tambulibwe/ModifiedPassiveIntransitive
+tambuliddwa/PastPassiveIntransitive
+tambuza/CausativeIntransitive
+tambuze/ModifiedCausativeIntransitive
+tambuzza/PastCausativeIntransitive
+tambulira/BenefactiveIntransitive
+tambulire/ModifiedBenefactiveIntransitive
+tambulidde/PastBenefactiveIntransitive
 #
 tambulako
 tambulamu
@@ -17789,32 +17792,36 @@ tambuliddeeyooko
 tambuliddeewo
 tambuliddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okutamiira(to get drunk) ---------------------------------------- #
-tamiira
-tamiire
-tamidde
-tamiiza
-tamiize
-tamizza
-tamiizibwa
-tamiizibwe
-tamiiziddwa
-tamiirira
-tamiirire
-tamiiridde
+# --------------------------------------- okutamiira(to get drunk): Type-I Transitive  ---------------------------------------- #
+tamiira/OriginalType-ITransitive
+tamiire/ModifiedType-ITransitive
+tamidde/PastType-ITransitive
+tamiiza/CausativeTransitive
+tamiize/ModifiedCausativeTransitive
+tamizza/PastCausativeTransitive
+tamiizibwa/PassiveTransitive
+tamiizibwe/ModifiedPassiveTransitive
+tamiiziddwa/PastPassiveTransitive
+tamiirira/LocativeTransitive
+tamiirire/ModifiedLocativeTransitive
+tamiiridde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ okutandika(to start; to begin; to commence) ------------------------------ #
-tandika
-tandike
-tandise
-tandisa
-tandisizza
-tandikibwa
-tandikibwe
-tandikiddwa
-tandikira
-tandikire
-tandikidde
+# ------------------------------ okutandika(to start; to begin; to commence): Type-I Transitive  ------------------------------ #
+tandika/OriginalType-ITransitive
+tandike/ModifiedType-ITransitive
+tandise/PastType-ITransitive
+tandisa/CausativeTransitive
+tandise/ModifiedCausativeTransitive
+tandisizza/PastCausativeTransitive
+tandikibwa/PassiveTransitive
+tandikibwe/ModifiedPassiveTransitive
+tandikiddwa/PastPassiveTransitive
+tandisibwa/PassiveTransitive
+tandisibwe/ModifiedPassiveTransitive
+tandisiddwa/PastPassiveTransitive
+tandikira/BenefactiveTransitive
+tandikire/ModifiedBenefactiveTransitive
+tandikidde/PastBenefactiveTransitive
 omutandisi
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------------- okutangaala(to be bright; to be light): Deadjectival --------------------------------- #
@@ -17832,32 +17839,33 @@ tangaalire/ModifiedBenefactiveDeadjective
 tangaalidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tangaavu
-# --------------------------- okutangira(to prevent; to restrain; to hold back) --------------------------- #
-tangira
-tangire
-tangidde
-tangiza
-tangize
-tangizza
-tangirwa
-tangirwe
-tangiddwa
-tangirira
-tangirire
-tangiriddde
+# --------------------------- okutangira(to prevent; to restrain; to hold back): Type-I Transitive  --------------------------- #
+tangira/OriginalType-ITransitive
+tangire/ModifiedType-ITransitive
+tangidde/PastType-ITransitive
+tangiza/CausativeTransitive
+tangize/ModifiedCausativeTransitive
+tangizza/PastCausativeTransitive
+tangirwa/PassiveTransitive
+tangirwe/ModifiedPassiveTransitive
+tangiddwa/PastPassiveTransitive
+tangirira/BenefactiveTransitive
+tangirire/ModifiedBenefactiveTransitive
+tangiriddde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okutawaana(to disturb; to preoccupy) ---------------------------------- #
-tawaana
-tawaane
-tawaanye
-tawaanya
-tawaanyizza
-tawaanyibwa
-tawaanyibwe
-tawaanyiddwa
-tawaanyiza
-tawaanyize
-tawaanyizza
+# --------------------------------- okutawaana(to disturb; to preoccupy): Intransitive ---------------------------------- #
+tawaana/OriginalIntransitive
+tawaane/ModifiedIntransitive
+tawaanye/PastIntransitive
+tawaanya/CausativeIntransitive
+tawaanye/ModifiedCausativeIntransitive
+tawaanyizza/PastCausativeIntransitive
+tawaanyibwa/PassiveIntransitive
+tawaanyibwe/ModifiedPassiveIntransitive
+tawaanyiddwa/PastPassiveIntransitive
+tawaanyiza/BenefactiveIntransitive
+tawaanyize/ModifiedBenefactiveIntransitive
+tawaanyizza/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 tayipu
 # ------------------- okutebenkera(to become calm; to become peaceful; to settle down): Deadjectival -------------------- #
@@ -17872,27 +17880,30 @@ tebenkerere/ModifiedLocativeDeadjective
 tebenkeredde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tebenkevu
-# ------- okuteebereza(to guess; to estimate; to approximate; to suspect; to speculate; to imagine) ------- #
-teebereza
-teebereze
-teeberezza
-teeberezebwa
-teeberezebwe
-teeberezeddwa
+# ------- okuteebereza(to guess; to estimate; to approximate; to suspect; to speculate; to imagine): Type-I Transitive  ------- #
+teebereza/OriginalType-ITransitive
+teebereze/ModifiedType-ITransitive
+teeberezza/PastType-ITransitive
+teeberezebwa/PassiveTransitive
+teeberezebwe/ModifiedPassiveTransitive
+teeberezeddwa/PastPassiveTransitive
+teeberereza/BenefactiveTransitive
+teeberereze/ModifiedBenefactiveTransitive
+teebererezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okuteeka(to put) --------------------------------------------- #
-teeka
-teeke
-teese
-teekebwa
-teekebwe
-teekeddwa
-teekesa
-teekese
-teekesezza
-teekera
-teekere
-teekedde
+# ------------------------------------------ okuteeka(to put): Intransitive --------------------------------------------- #
+teeka/OriginalIntransitive
+teeke/ModifiedIntransitive
+teese/PastIntransitive
+teekebwa/PassiveIntransitive
+teekebwe/ModifiedPassiveIntransitive
+teekeddwa/PastPassiveIntransitive
+teekesa/CausativeIntransitive
+teekese/ModifiedCausativeIntransitive
+teekesezza/PastCausativeIntransitive
+teekera/BenefactiveIntransitive
+teekere/ModifiedBenefactiveIntransitive
+teekedde/PastBenefactiveIntransitive
 #
 teekako
 teekamu
@@ -18053,69 +18064,71 @@ teekeddeeyooko
 teekeddeewo
 teekeddeewooko
 # --------------------------------------------------------------------------------- #
-# --------------------------------- okuteekateeka(to plan; to make ready) --------------------------------- #
-teekateeka
-teeketeeke
-teeseteese
-teekebwateekebwa
-teekebweteekebwe
-teeketekeddwa
-teekerateekera
-teekereteekere
-teekeddeteekedde
+# --------------------------------- okuteekateeka(to plan; to make ready): Type-I Transitive  --------------------------------- #
+teekateeka/OriginalType-ITransitive
+teeketeeke/ModifiedType-ITransitive
+teeseteese/PastType-ITransitive
+teekebwateekebwa/PassiveTransitive
+teekebweteekebwe/ModifiedPassiveTransitive
+teeketekeddwa/PastPassiveTransitive
+teekerateekera/BenefactiveTransitive
+teekereteekere/ModifiedBenefactiveTransitive
+teekeddeteekedde/PastBenefactiveTransitive
 omuteesiteesi
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------- okuteesa(to negotiate; to suggest; to discuss; to settle) ----------------------- #
-teesa
-teese
-teesezza
-teesebwa
-teesebwe
-teeseddwa
-teeseza
-teeseze
+# ----------------------- okuteesa(to negotiate; to suggest; to discuss; to settle): Type-I Transitive  ----------------------- #
+teesa/OriginalType-ITransitive
+teese/ModifiedType-ITransitive
+teesezza/PastType-ITransitive
+teesebwa/PassiveTransitive
+teesebwe/ModifiedPassiveTransitive
+teeseddwa/PastPassiveTransitive
+teeseza/BenefactiveTransitive
+teeseze/ModifiedBenefactiveTransitive
+teeselezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------- okutega(to stretch; to strain; to set (a trap); to trap) ------------------------ #
-tega
-tege
-teze
-tegesa
-tegese
-tegesezza
-tegebwa
-tegebwe
-tegeddwa
-tegera
-tegere
-tegedde
+# ----------------------- okutega(to stretch; to strain; to set (a trap); to trap): Type-II Transitive  ------------------------ #
+tega/OriginalType-IITransitive
+tege/ModifiedType-IITransitive
+teze/PastType-IITransitive
+tegesa/CausativeTransitive
+tegese/ModifiedCausativeTransitive
+tegesezza/PastCausativeTransitive
+tegebwa/PassiveTransitive
+tegebwe/ModifiedPassiveTransitive
+tegeddwa/PastPassiveTransitive
+tegera/BenefactiveTransitive
+tegere/ModifiedBenefactiveTransitive
+tegedde/PastBenefactiveTransitive
 omutezi
 # --------------------------------------------------------------------------------------------------------- #
 # --- okutegana(to trouble oneself; to make an effort; to take pains; to be bothered; to be disturbed): Intrasitive ---- #
-tegana
-tegane
-teganye
-teganya
-teganyizza
-teganyizibwa
-teganyizibwe
-teganyiziddwa
-teganira
-teganire
-teganidde
+tegana/OriginalIntransitive
+tegane/ModifiedIntransitive
+teganye/PastIntransitive
+teganya/CausativeIntransitive
+teganye/ModifiedCausativeIntransitive
+teganyizza/PastCausativeIntransitive
+teganyizibwa/PassiveIntransitive
+teganyizibwe/ModifiedPassiveIntransitive
+teganyiziddwa/PastPassiveIntransitive
+teganira/LocativeIntransitive
+teganire/ModifiedLocativeIntransitive
+teganidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------- okutegeera(to understand; to recognize; to notice) --------------------------- #
-tegeera
-tegeere
-tegedde
-tegeeza
-tegeeze
-tegeezezza
-tegeezebwa
-tegeezebwe
-tegeezeddwa
-tegeereza
-tegeereze
-tegeerezza
+# -------------------------- okutegeera(to understand; to recognize; to notice): Type-I Transitive  --------------------------- #
+tegeera/OriginalType-ITransitive
+tegeere/ModifiedType-ITransitive
+tegedde/PastType-ITransitive
+tegeeza/CausativeTransitive
+tegeeze/ModifiedCausativeTransitive
+tegeezezza/PastCausativeTransitive
+tegeezebwa/PassiveTransitive
+tegeezebwe/ModifiedPassiveTransitive
+tegeezeddwa/PastPassiveTransitive
+tegeereza/BenefactiveTransitive
+tegeereze/ModifiedBenefactiveTransitive
+tegeerezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------------- okutegeerekeka(to be understandable): Deadjectival ----------------------------------- #
 tegeerekeka/OriginalDeadjective
@@ -18123,112 +18136,113 @@ tegeerekeke/ModifiedDeadjective
 tegeerekese/PastDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tegeeza
-# ------------------------------ okutegeka(to prepare; to arrange; to set up) ----------------------------- #
-tegeka
-tegeke
-tegese
-tegesa
-tegesezza
-tegekebwa
-tegekebwe
-tegekeddwa
-tegekera
-tegekere
-tegekedde
+# ------------------------------ okutegeka(to prepare; to arrange; to set up): Type-I Transitive  ----------------------------- #
+tegeka/OriginalType-ITransitive
+tegeke/ModifiedType-ITransitive
+tegese/PastType-ITransitive
+tegesa/CausativeTransitive
+tegese/ModifiedCausativeTransitive
+tegesezza/PastCausativeTransitive
+tegekebwa/PassiveTransitive
+tegekebwe/ModifiedPassiveTransitive
+tegekeddwa/PastPassiveTransitive
+tegekera/BenefactiveTransitive
+tegekere/ModifiedBenefactiveTransitive
+tegekedde/PastBenefactiveTransitive
 omutegesi
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------------- okutakula(to scratch) ----------------------------------------- #
-takula
-takule
-takudde
-takuza
-takuze
-takuzza
-takulwa
-takulwe
-takuddwa
-takulira
-takulire
-takulidde
+# ----------------------------------------- okutakula(to scratch): Type-I Transitive  ----------------------------------------- #
+takula/OriginalType-ITransitive
+takule/ModifiedType-ITransitive
+takudde/PastType-ITransitive
+takuza/CausativeTransitive
+takuze/ModifiedCausativeTransitive
+takuzza/PastCausativeTransitive
+takulwa/PassiveTransitive
+takulwe/ModifiedPassiveTransitive
+takuddwa/PastPassiveTransitive
+takulira/BenefactiveTransitive
+takulire/ModifiedBenefactiveTransitive
+takulidde/PastBenefactiveTransitive
 omutakuzi
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okutema(to cut; to chop) ---------------------------------------- #
-tema
-teme
-temye
-temesa
-temese
-temesezza
-temebwa
-temebwe
-temeddwa
-temera
-temere
-temedde
+# --------------------------------------- okutema(to cut; to chop): Type-I Transitive  ---------------------------------------- #
+tema/OriginalType-ITransitive
+teme/ModifiedType-ITransitive
+temye/PastType-ITransitive
+temesa/CausativeTransitive
+temese/ModifiedCausativeTransitive
+temesezza/PastCausativeTransitive
+temebwa/PassiveTransitive
+temebwe/ModifiedPassiveTransitive
+temeddwa/PastPassiveTransitive
+temera/BenefactiveTransitive
+temere/ModifiedBenefactiveTransitive
+temedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------- okutemula(To murder; to kill; to assassinate) ----------------------------- #
-temula
-temule
-temudde
-temuza
-temuze
-temuzza
-temulwa
-temulwe
-temuddwa
-temulira
-temulire
-temulidde
+# ----------------------------- okutemula(To murder; to kill; to assassinate): Type-I Transitive  ----------------------------- #
+temula/OriginalType-ITransitive
+temule/ModifiedType-ITransitive
+temudde/PastType-ITransitive
+temuza/CausativeTransitive
+temuze/ModifiedCausativeTransitive
+temuzza/PastCausativeTransitive
+temulwa/PassiveTransitive
+temulwe/ModifiedPassiveTransitive
+temuddwa/PastPassiveTransitive
+temulira/BenefactiveTransitive
+temulire/ModifiedBenefactiveTransitive
+temulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okutemya(to blink) ------------------------------------------- #
-temya
-temye
-temezza
+# ------------------------------------------ okutemya(to blink): Intransitive ------------------------------------------- #
+temya/Intransitive
+temye/ModifiedIntransitive
+temezza/PastIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okutemyako(to alert; to give a hint) ---------------------------------- #
-temyako
-temyeko
-temezzaako
-temezaako
-temezeeko
+# --------------------------------- okutemyako(to alert; to give a hint): Type-I Transitive  ---------------------------------- #
+temyako/Type-ITransitive
+temyeko/ModifiedType-ITransitive
+temezzaako/PastType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okutenda(to praise; to speak well of) --------------------------------- #
-tenda
-tende
-tenze
-tenza
-tendesa
-tendebwa
-tendebwe
-tendeddwa
-tendera
-tendere
-tendedde
+# --------------------------------- okutenda(to praise; to speak well of): Type-I Transitive  --------------------------------- #
+tenda/OriginalType-ITransitive
+tende/ModifiedType-ITransitive
+tenze/PastType-ITransitive
+tenza/CausativeTransitive
+tenze/ModifiedCausativeTransitive
+tendesa/CausativeTransitive
+tendebwa/PassiveTransitive
+tendebwe/ModifiedPassiveTransitive
+tendeddwa/PastPassiveTransitive
+tendera/BenefactiveTransitive
+tendere/ModifiedBenefactiveTransitive
+tendedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okutendeka(to train; to educate) ------------------------------------ #
-tendeka
+# ----------------------------------- okutendeka(to train; to educate): Type-II Transitive  ------------------------------------ #
+tendeka/OriginalType-IITransitive
+tendeke/ModifiedType-IITransitive
+tendese/PastType-IITransitive
+tendesa/CausativeTransitive
+tendese/ModifiedCausativeTransitive
+tendesezza/PastCausativeTransitive
+tendekebwa/PassiveTransitive
+tendekebwe/ModifiedPassiveTransitive
+tendekeddwa/PastPassiveTransitive
+tendekera/BenefactiveTransitive
+tendekere/ModifiedBenefactiveTransitive
+tendekedde/PastBenefactiveTransitive
+# --------------------------------------------------------------------------------------------------------- #
 tendeke
-tendese
-tendesa
-tendesezza
-tendekebwa
-tendekebwe
-tendekeddwa
-tendekera
-tendekere
-tendekedde
-# --------------------------------------------------------------------------------------------------------- #
-tendeke
-# ------------------------------ okutendereza(to glorify; to praise highly) ------------------------------- #
-tendereza
-tendereze
-tenderezza
-tenderezebwa
-tenderezebwe
-tenderezeddwa
-tenderereza
-tenderereze
-tendererezza
+# ------------------------------ okutendereza(to glorify; to praise highly): Type-I Transitive  ------------------------------- #
+tendereza/OriginalType-ITransitive
+tendereze/ModifiedType-ITransitive
+tenderezza/PastType-ITransitive
+tenderezebwa/PassiveTransitive
+tenderezebwe/ModifiedPassiveTransitive
+tenderezeddwa/PastPassiveTransitive
+tenderereza/BenefactiveTransitive
+tenderereze/ModifiedBenefactiveTransitive
+tendererezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 tera
 # ------------------------ okutereera(to get well; to be straight; to be balanced): Deadjectival ------------------------ #
@@ -18249,24 +18263,25 @@ tereereze/ModifiedBenefactiveDeadjective
 tereerezza/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tereevu
-# ---------------------- okutereka(to put away; to put aside; to store; to reserve) ----------------------- #
-tereka
-tereke
-teresse
-teresa
-teresezza
-terekebwa
-terekebwe
-terekeddwa
-terekera
-terekere
-terekedde
+# ---------------------- okutereka(to put away; to put aside; to store; to reserve): Type-I Transitive  ----------------------- #
+tereka/OriginalType-ITransitive
+tereke/ModifiedType-ITransitive
+teresse/PastType-ITransitive
+teresa/CausativeTransitive
+terese/ModifiedCausativeTransitive
+teresezza/ModifiedCausativeTransitive
+terekebwa/PassiveTransitive
+terekebwe/ModifiedPassiveTransitive
+terekeddwa/PastPassiveTransitive
+terekera/BenefactiveTransitive
+terekere/ModifiedBenefactiveTransitive
+terekedde/PastBenefactiveTransitive
 omuteresi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okuteta(to burn; to burn down) ------------------------------------- #
-teta
-tete
-tese
+# ------------------------------------ okuteta(to burn; to burn down): Intransitive ------------------------------------- #
+teta/OriginalIntransitive
+tete/ModifiedIntransitive
+tese/PastIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 tewali
 # ---------------------------------------- bwebati -------------------------------------------------------- #
@@ -18274,16 +18289,16 @@ ti/NALT
 tyo
 # --------------------------------------------------------------------------------------------------------- #
 tiimu
-# --------------------------------------- okutiisa(to scare) ---------------------------------- #
-tiisa
-tiise
-tiisizza
-tiisibwa
-tiisibwe
-tiisibbwa
-tiisiza
-tiisize
-tiisilizza
+# --------------------------------------- okutiisa(to scare): Type-I Transitive  ---------------------------------- #
+tiisa/OriginalType-ITransitive
+tiise/ModifiedType-ITransitive
+tiisizza/ModifiedType-ITransitive
+tiisibwa/PassiveTransitive
+tiisibwe/ModifiedPassiveTransitive
+tiisibbwa/PastPassiveTransitive
+tiisiza/BenefactiveTransitive
+tiisize/ModifiedBenefactiveTransitive
+tiisilizza/PastBenefactiveTransitive
 #
 tiisaako
 tiisaamu
@@ -18400,89 +18415,89 @@ tisilizzaawo
 tisilizzaawooko
 # --------------------------------------------------------------------------------------------------------- #
 tiketi
-# --------------------- okutikka(to load (on somebody&apos;s head); to put; to lift) ---------------------- #
-tikka
-tikke
-tisse
-tikkisa
-tikkise
-tikkisizza
-tikkibwa
-tikkibwe
-tikkiddwa
-tikkirwa
-tikkirwe
-tikkira
-tikkire
-tikkidde
+# --------------------- okutikka(to load (on somebody&apos;s head); to put; to lift): Type-II Transitive  ---------------------- #
+tikka/OriginalType-IITransitive
+tikke/ModifiedType-IITransitive
+tisse/PastType-IITransitive
+tikkisa/CausativeTransitive
+tikkise/ModifiedCausativeTransitive
+tikkisizza/PastCausativeTransitive
+tikkibwa/PassiveTransitive
+tikkibwe/ModifiedPassiveTransitive
+tikkiddwa/PastPassiveTransitive
+tikkirwa/BenefactiveTransitive
+tikkirwe/ModifiedBenefactiveTransitive
+tikkira/BenefactiveTransitive
+tikkire/ModifiedBenefactiveTransitive
+tikkidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------ okutikkula(to unload; to take off somebody&apos;s head) ------------------------ #
-tikkula
-tikkule
-tikkudde
-tikkuza
-tikkuze
-tikkuzza
-tikkulwa
-tikkulwe
-tikkuddwa
-tikkulira
-tikkulire
-tikkulidde
+# ------------------------ okutikkula(to unload; to take off somebody&apos;s head): Type-II Transitive  ------------------------ #
+tikkula/OriginalType-IITransitive
+tikkule/ModifiedType-IITransitive
+tikkudde/PastType-IITransitive
+tikkuza/CausativeTransitive
+tikkuze/ModifiedCausativeTransitive
+tikkuzza/PastCausativeTransitive
+tikkulwa/PassiveTransitive
+tikkulwe/ModifiedPassiveTransitive
+tikkuddwa/PastPassiveTransitive
+tikkulira/BenefactiveTransitive
+tikkulire/ModifiedBenefactiveTransitive
+tikkulidde/PastBenefactiveTransitive
 omutikkuzi
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------- okutimba(to decorate; to hang; to bind; to lash) ---------------------------- #
-timba
-timbe
-timbye
-timbisa
-timbise
-timbisizza
-timbibwa
-timbibwe
-timbiddwa
-timbira
-timbire
-timbidde
+# --------------------------- okutimba(to decorate; to hang; to bind; to lash): Type-II Transitive  ---------------------------- #
+timba/OriginalType-IITransitive
+timbe/ModifiedType-IITransitive
+timbye/PastType-IITransitive
+timbisa/CausativeTransitive
+timbise/ModifiedCausativeTransitive
+timbisizza/PastCausativeTransitive
+timbibwa/PassiveTransitive
+timbibwe/ModifiedPassiveTransitive
+timbiddwa/PastPassiveTransitive
+timbira/BenefactiveTransitive
+timbire/ModifiedBenefactiveTransitive
+timbidde/PastBenefactiveTransitive
 omutimbi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ okutinda(to make a bridge over; to bridge) ------------------------------- #
-tinda
-tinde
-tinze
-tindisa
-tindise
-tindisizza
-tindibwa
-tindibwe
-tindiddwa
-tindira
-tindire
-tindidde
+# ------------------------------ okutinda(to make a bridge over; to bridge): Intransitive ------------------------------- #
+tinda/OriginalIntransitive
+tinde/ModifiedIntransitive
+tinze/PastIntransitive
+tindisa/CausativeIntransitive
+tindise/ModifiedCausativeIntransitive
+tindisizza/PastCausativeIntransitive
+tindibwa/PassiveIntransitive
+tindibwe/ModifiedPassiveIntransitive
+tindiddwa/PastPassiveIntransitive
+tindira/LocativeIntransitive
+tindire/ModifiedLocativeIntransitive
+tindidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------- okutingidda(to walk quickly; to rush; to hurry) ---------------------------- #
-tingidda
-tingidde
-tingiza
-tingize
-tingizza
-tingira
-tingire
-tingidde
+# ---------------------------- okutingidda(to walk quickly; to rush; to hurry): Intransitive ---------------------------- #
+tingidda/OriginalIntransitive
+tingidde/ModifiedIntransitive
+tingiza/CausativeIntransitive
+tingize/ModifiedCausativeIntransitive
+tingizza/PastCausativeIntransitive
+tingira/LocativeIntransitive
+tingire/ModifiedLocativeIntransitive
+tingidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okutinta(to flourish; to prosper) ----------------------------------- #
-tinta
-tinte
-tinse
-tintiza
-tintize
-tintizizza
-tintibwa
-tintibwe
-tintiddwa
-tintira
-tintire
-tintidde
+# ----------------------------------- okutinta(to flourish; to prosper): Intransitive ----------------------------------- #
+tinta/OriginalIntransitive
+tinte/ModifiedIntransitive
+tinse/PastIntransitive
+tintiza/CausativeIntransitive
+tintize/ModifiedCausativeIntransitive
+tintizizza/PastCausativeIntransitive
+tintibwa/PassiveIntransitive
+tintibwe/ModifiedPassiveIntransitive
+tintiddwa/PastPassiveIntransitive
+tintira/LocativeIntransitive
+tintire/ModifiedLocativeIntransitive
+tintidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 muto
 # ---------------------------------- okutoba(to become wet/ to struggle): Deadjectival ---------------------------------- #
@@ -18601,92 +18616,98 @@ tobeddeeyooko
 tobeddeewo
 tobeddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okutokota(to boil) ------------------------------------------- #
-tokota
-tokote
-tokosa
-tokose
-tokosezza
-tokosebwa
-tokosebwe
-tokoseddwa
-tokoseza
-tokoseze
-tokosezza
+# ------------------------------------------ okutokota(to boil): Intransitive ------------------------------------------- #
+tokota/OriginalIntransitive
+tokote/ModifiedIntransitive
+tokose/PastIntransitive
+tokosa/CausativeIntransitive
+tokose/ModifiedCausativeIntransitive
+tokosezza/PastCausativeIntransitive
+tokosebwa/PassiveIntransitive
+tokosebwe/ModifiedPassiveIntransitive
+tokoseddwa/PastPassiveIntransitive
+tokoseza/BenefactiveIntransitive
+tokoseze/ModifiedBenefactiveIntransitive
+tokoselezza/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ okutoloka(to escape; to run away; to flee) ------------------------------- #
-toloka
-toloke
-tolose
-tolosa
-tolosezza
-tolosebwa
-tolosebwe
-toloseddwa
-toloseza
-toloseze
-tolokera
-tolokere
-tolokedde
+# ------------------------------ okutoloka(to escape; to run away; to flee): Intransitive ------------------------------- #
+toloka/OriginalIntransitive
+toloke/ModifiedIntransitive
+tolose/PastIntransitive
+tolosa/CausativeIntransitive
+tolose/ModifiedCausativeIntransitive
+tolosezza/PastCausativeIntransitive
+tolosebwa/PassiveIntransitive
+tolosebwe/ModifiedPassiveIntransitive
+toloseddwa/PastPassiveIntransitive
+toloseza/BenefactiveIntransitive
+toloseze/ModifiedBenefactiveIntransitive
+toloselezza/PastBenefactiveIntransitive
+tolokera/LocativeIntransitive
+tolokere/ModifiedLocativeIntransitive
+tolokedde/PastLocativeIntransitive
 omutolosi
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------- okutolotooma(to murmur; to complain; to grumble; to mutter) ---------------------- #
-tolotooma
-tolotoome
-tolotoomye
-tolotoomya
-tolotoomezza
-tolotoomera
-tolotoomere
-tolotoomedde
+# ---------------------- okutolotooma(to murmur; to complain; to grumble; to mutter): Intransitive ---------------------- #
+tolotooma/OriginalIntransitive
+tolotoome/ModifiedIntransitive
+tolotoomye/HybridIntransitive
+tolotoomya/CausativeIntransitive
+tolotoomezza/PastCausativeIntransitive
+tolotoomera/BenefactiveIntransitive
+tolotoomere/ModifiedBenefactiveIntransitive
+tolotoomedde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------- okutomera(to knock into; to knock down; to crash; to bump into) -------------------- #
-tomera
-tomere
-tomedde
-tomeza
-tomeze
-tomezza
-tomerwa
-tomerwe
-tomeddwa
-tomelera
-tomelere
-tomeledde
+# -------------------- okutomera(to knock into; to knock down; to crash; to bump into): Type-I Transitive  -------------------- #
+tomera/OriginalType-ITransitive
+tomere/ModifiedType-ITransitive
+tomedde/PastType-ITransitive
+tomeza/CausativeTransitive
+tomeze/ModifiedCausativeTransitive
+tomezza/PastCausativeTransitive
+tomerwa/PassiveTransitive
+tomerwe/ModifiedPassiveTransitive
+tomeddwa/PastPassiveTransitive
+tomelera/BenefactiveTransitive
+tomelere/ModifiedBenefactiveTransitive
+tomeledde/PastBenefactiveTransitive
 omutomezi
-tomeregana
-tomeregane
-tomereganye
+tomeregana/OriginalType-ITransitive
+tomeregane/ModifiedType-ITransitive
+tomereganye/PastType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ okutongola(to establish; to make official) ------------------------------- #
-tongola
-tongole
-tongodde
-tongoza
-tongoze
-tongozza
-tongolwa
-tongolwe
-tongoddwa
-tongozebwa
-tongozebwe
-tongozeddwa
+# ------------------------------ okutongola(to establish; to make official): Type-I Transitive  ------------------------------- #
+tongola/OriginalType-ITransitive
+tongole/ModifiedType-ITransitive
+tongodde/PastType-ITransitive
+tongoza/CausativeTransitive
+tongoze/ModifiedCausativeTransitive
+tongozza/PastCausativeTransitive
+tongolwa/PassiveTransitive
+tongolwe/ModifiedPassiveTransitive
+tongoddwa/PastPassiveTransitive
+tongozebwa/PassiveTransitive
+tongozebwe/ModifiedPassiveTransitive
+tongozeddwa/PastPassiveTransitive
+tongolera/BenefactiveTransitive
+tongolere/ModifiedBenefactiveTransitive
+tongoledde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------ okutonnya(to drizzle; to rain) ------------------------------------- #
-tonnya
-tonnye
-tonnyesa
-tonnyese
-tonnyesezza
-tonnyesebwa
-tonnyesebwe
-tonnyeseddwa
-tonnyeseza
-tonnyeseze
-tonnyesezza
-tonnyera
-tonnyere
-tonnyedde
+# ------------------------------------ okutonnya(to drizzle; to rain): Intransitive ------------------------------------- #
+tonnya/OriginalIntransitive
+tonnye/ModifiedIntransitive
+tonnyesa/CausativeIntransitive
+tonnyese/ModifiedCausativeIntransitive
+tonnyesezza/PastCausativeIntransitive
+tonnyesebwa/PassiveIntransitive
+tonnyesebwe/ModifiedPassiveIntransitive
+tonnyeseddwa/PastPassiveIntransitive
+tonnyeseza/BenefactiveIntransitive
+tonnyeseze/ModifiedBenefactiveIntransitive
+tonnyeselezza/PastBenefactiveIntransitive
+tonnyera/BenefactiveIntransitive
+tonnyere/ModifiedBenefactiveIntransitive
+tonnyedde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 tono
 toola
@@ -18700,89 +18721,91 @@ towolokera/LocativeDeadjective
 towolokere/ModifiedLocativeDeadjective
 towolokedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okutta(to kill; to murder; to destroy) --------------------------------- #
-tta
-tte
-sse
-ttisa
-ttise
-ttisizza
-ttibwa
-ttibwe
-ttiddwa
-ttira
-ttire
-ttidde
+# -------------------------------- okutta(to kill; to murder; to destroy): Type-I Transitive  --------------------------------- #
+tta/OriginalType-ITransitive
+tte/ModifiedType-ITransitive
+sse/PastType-ITransitive
+ttisa/CausativeTransitive
+ttise/ModifiedCausativeTransitive
+ttisizza/PastCausativeTransitive
+ttibwa/PassiveTransitive
+ttibwe/ModifiedPassiveTransitive
+ttiddwa/PastPassiveTransitive
+ttira/BenefactiveTransitive
+ttire/ModifiedBenefactiveTransitive
+ttidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 ttaabu
 ttaano
 ttena
 ttimba
-# ------------------------------------ okuttingana(to kill each other) ------------------------------------ #
-ttingana
-ttingane
-ttinganye
-ttinganya
-ttinganyizza
-ttinganira
-ttinganire
-ttinganidde
+# ------------------------------------ okuttingana(to kill each other): Intransitive ------------------------------------ #
+ttingana/OriginalIntransitive
+ttingane/ModifiedIntransitive
+ttinganye/HybridIntransitive
+ttinganya/CausativeIntransitive
+ttinganye/ModifiedCausativeIntransitive
+ttinganyizza/PastCausativeIntransitive
+ttinganira/LocativeIntransitive
+ttinganire/ModifiedLocativeIntransitive
+ttinganidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 ttivvi
 ttoggo
-# ---------------------------- okuttottola(to narrate; to clarify; to reveal) ----------------------------- #
-ttottola
-ttottole
-ttottodde
-ttottoza
-ttottoze
-ttottozza
-ttottolwa
-ttottolwe
-ttottoddwa
-ttottolera
-ttottolere
-ttottoledde
+# ---------------------------- okuttottola(to narrate; to clarify; to reveal): Type-I Transitive ----------------------------- #
+ttottola/OriginalType-ITransitive
+ttottole/ModifiedType-ITransitive
+ttottodde/PastType-ITransitive
+ttottoza/CausativeTransitive
+ttottoze/ModifiedCausativeTransitive
+ttottozza/PastCausativeTransitive
+ttottolwa/PassiveTransitive
+ttottolwe/ModifiedPassiveTransitive
+ttottoddwa/PastPassiveTransitive
+ttottolera/BenefactiveTransitive
+ttottolere/ModifiedBenefactiveTransitive
+ttottoledde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuttunka(to compete) ----------------------------------------- #
-ttunka
-ttunke
-ttunse
-ttunsa
-ttunsizza
-ttunkibwa
-ttunkibwe
-ttunkiddwa
-ttunkira
-ttunkire
-ttunkidde
+# ---------------------------------------- okuttunka(to compete): Intransitive ----------------------------------------- #
+ttunka/OriginalIntransitive
+ttunke/ModifiedIntransitive
+ttunse/HybridIntransitive
+ttunsa/CausativeIntransitive
+ttunsizza/PastCausativeIntransitive
+ttunkibwa/PassiveIntransitive
+ttunkibwe/ModifiedPassiveIntransitive
+ttunkiddwa/PastPassiveIntransitive
+ttunkira/LocativeIntransitive
+ttunkire/ModifiedLocativeIntransitive
+ttunkidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okutubira(to get stuck) ---------------------------------------- #
-tubira
-tubire
-tubidde
-tubiza
-tubize
-tubizza
-tubirwa
-tubirwe
-tubiddwa
+# ---------------------------------------- okutubira(to get stuck): Intransitive ---------------------------------------- #
+tubira/OriginalIntransitive
+tubire/ModifiedIntransitive
+tubidde/PastIntransitive
+tubiza/CausativeIntransitive
+tubize/ModifiedCausativeIntransitive
+tubizza/PastCausativeIntransitive
+tubirwa/PassiveIntransitive
+tubirwe/ModifiedPassiveIntransitive
+tubiddwa/PastPassiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------- okutuga(to choke; to strangle / to hang; to choke; to strangle) -------------------- #
-tuga
-tuge
-tuze
-tugisa
-tugise
-tugisizza
-tuza
-tuze
-tugibwa
-tugibwe
-tugiddwa
-tugira
-tugire
-tugidde
+# -------------------- okutuga(to choke; to strangle / to hang; to choke; to strangle): Type-I Transitive -------------------- #
+tuga/OriginalType-ITransitive
+tuge/ModifiedType-ITransitive
+tuze/PastType-ITransitive
+tugisa/CausativeTransitive
+tugise/ModifiedCausativeTransitive
+tugisizza/PastCausativeTransitive
+tuza/CausativeTransitive
+tuze/ModifiedCausativeTransitive
+tuzizza/PastCausativeTransitive
+tugibwa/PassiveTransitive
+tugibwe/ModifiedPassiveTransitive
+tugiddwa/PastPassiveTransitive
+tugira/BenefactiveTransitive
+tugire/ModifiedBenefactiveTransitive
+tugidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------ tukula(to become clean; to become pure): Deadjectival ---------------------------------- #
 tukula/OriginalDeadjective
@@ -18797,97 +18820,98 @@ tukulidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 tukuvu
 tuli
-# ------------------------ okutulika(to burst; to explode; to burst out laughing) ------------------------- #
-tulika
-tulike
-tulise
-tulisa
-tulisizza
-tulisibwa
-tulisibwe
-tulisibbwa
-tulisiza
-tulisize
-tulisizza
-tulikira
-tulikire
-tulikidde
+# ------------------------ okutulika(to burst; to explode; to burst out laughing): Intransitive ------------------------- #
+tulika/OriginalIntransitive
+tulike/ModifiedIntransitive
+tulise/HybridIntransitive
+tulisa/CausativeIntransitive
+tulisizza/PastCausativeIntransitive
+tulisibwa/PassiveIntransitive
+tulisibwe/ModifiedPassiveIntransitive
+tulisibbwa/PastPassiveIntransitive
+tulisiza/BenefactiveIntransitive
+tulisize/ModifiedBenefactiveIntransitive
+tulisizza/PastBenefactiveIntransitive
+tulikira/LocativeIntransitive
+tulikire/ModifiedLocativeIntransitive
+tulikidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------- okutulugunya(To harass; to treat harshly; to fasten; to bind) --------------------- #
-tulugunya
-tulugunye
-tulugunyizza
-tulugunyizibwa
-tulugunyizibwe
-tulugunyiziddwa
+# --------------------- okutulugunya(To harass; to treat harshly; to fasten; to bind): Type-I Transitive --------------------- #
+tulugunya/OriginalType-ITransitive
+tulugunye/ModifiedType-ITransitive
+tulugunyizza/PastType-ITransitive
+tulugunyizibwa/PassiveTransitive
+tulugunyizibwe/ModifiedPassiveTransitive
+tulugunyiziddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okutuma(to send; to assign) -------------------------------------- #
-tuma
-tume
-tumye
-tumya
-tumizza
-tumisa
-tumise
-tumisizza
-tumibwa
-tumibwe
-tumiddwa
-tumira
-tumire
-tumidde
+# -------------------------------------- okutuma(to send; to assign): Type-II Transitive -------------------------------------- #
+tuma/OriginalType-IITransitive
+tume/ModifiedType-IITransitive
+tumye/PastType-IITransitive
+tumya/CausativeTransitive
+tumye/ModifiedCausativeTransitive
+tumizza/PastCausativeTransitive
+tumisa/CausativeTransitive
+tumise/ModifiedCausativeTransitive
+tumisizza/PastCausativeTransitive
+tumibwa/PassiveTransitive
+tumibwe/ModifiedPassiveTransitive
+tumiddwa/PastPassiveTransitive
+tumira/BenefactiveTransitive
+tumire/ModifiedBenefactiveTransitive
+tumidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ okutumbuka(to swell; to spread; to expand) ------------------------------- #
-tumbuka
-tumbuke
-tumbuse
-tumbukira
-tumbukire
-tumbukidde
+# ------------------------------ okutumbuka(to swell; to spread; to expand): Intransitive ------------------------------- #
+tumbuka/OriginalIntransitive
+tumbuke/ModifiedIntransitive
+tumbuse/PastIntransitive
+tumbukira/LocativeIntransitive
+tumbukire/ModifiedLocativeIntransitive
+tumbukidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------- okutumbula(to increase; to swell; to spread; to promote; to develop) ------------------ #
-tumbula
-tumbule
-tumbudde
-tumbuza
-tumbuze
-tumbuzza
-tumbulwa
-tumbulwe
-tumbuddwa
-tumbulira
-tumbulire
-tumbulidde
+# ----------------- okutumbula(to increase; to swell; to spread; to promote; to develop): Type-I Transitive ------------------ #
+tumbula/OriginalType-ITransitive
+tumbule/ModifiedType-ITransitive
+tumbudde/PastType-ITransitive
+tumbuza/CausativeTransitive
+tumbuze/ModifiedCausativeTransitive
+tumbuzza/PastCausativeTransitive
+tumbulwa/PassiveTransitive
+tumbulwe/ModifiedPassiveTransitive
+tumbuddwa/PastPassiveTransitive
+tumbulira/BenefactiveTransitive
+tumbulire/ModifiedBenefactiveTransitive
+tumbulidde/PastBenefactiveTransitive
 tumbuzi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okutunda(to sell; to betray) -------------------------------------- #
-tunda
-tunde
-tunze
-tundisa
-tundise
-tundisizza
-tundibwa
-tundibwe
-tundiddwa
-tundira
-tundire
-tundidde
+# ------------------------------------- okutunda(to sell; to betray): Type-I Transitive -------------------------------------- #
+tunda/OriginalType-ITransitive
+tunde/ModifiedType-ITransitive
+tunze/PastType-ITransitive
+tundisa/CausativeTransitive
+tundise/ModifiedCausativeTransitive
+tundisizza/PastCausativeTransitive
+tundibwa/PassiveTransitive
+tundibwe/ModifiedPassiveTransitive
+tundiddwa/PastPassiveTransitive
+tundira/BenefactiveTransitive
+tundire/ModifiedBenefactiveTransitive
+tundidde/PastBenefactiveTransitive
 omutunzi
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okutunga(to repair; to stich; to sew) --------------------------------- #
-tunga
-tunge
-tunze
-tungisa
-tungise
-tungisizza
-tungibwa
-tungibwe
-tungiddwa
-tungira
-tungire
-tungidde
+# --------------------------------- okutunga(to repair; to stich; to sew): Type-II Transitive --------------------------------- #
+tunga/OriginalType-IITransitive
+tunge/ModifiedType-IITransitive
+tunze/PastType-IITransitive
+tungisa/CausativeTransitive
+tungise/ModifiedCausativeTransitive
+tungisizza/PastCausativeTransitive
+tungibwa/PassiveTransitive
+tungibwe/ModifiedPassiveTransitive
+tungiddwa/PastPassiveTransitive
+tungira/BenefactiveTransitive
+tungire/ModifiedBenefactiveTransitive
+tungidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------------ okutunula(to be awake; to look): Deadjectival ------------------------------------ #
 tunula/OriginalDeadjective
@@ -18911,35 +18935,35 @@ tutumukira/LocativeDeadjective
 tutumukire/ModifiedLocativeDeadjective
 tutumukidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------- okututumula(to make famous; to promote; to elevate; to uplift) --------------------- #
-tutumula
-tutumule
-tutumudde
-tutumuza
-tutumuze
-tutumuzza
-tutumulwa
-tutumulwe
-tutumuddwa
-tutumulira
-tutumulire
-tutumulidde
+# -------------------- okututumula(to make famous; to promote; to elevate; to uplift): Type-I Transitive --------------------- #
+tutumula/OriginalType-ITransitive
+tutumule/ModifiedType-ITransitive
+tutumudde/PastType-ITransitive
+tutumuza/CausativeTransitive
+tutumuze/ModifiedCausativeTransitive
+tutumuzza/PastCausativeTransitive
+tutumulwa/PassiveTransitive
+tutumulwe/ModifiedPassiveTransitive
+tutumuddwa/PastPassiveTransitive
+tutumulira/BenefactiveTransitive
+tutumulire/ModifiedBenefactiveTransitive
+tutumulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 tuufu
 tuuka
-# ------------------------------------------- okutuula(to sit) ---------------------------------- # 
-tuula
-tuule
-tudde
-tuulibwa
-tuulibwe
-tuuliddwa
-tuuza
-tuuze
-tuuzizza
-tuulira
-tuulire
-tuulidde
+# ------------------------------------------- okutuula(to sit): Type-I Transitive ---------------------------------- # 
+tuula/OriginalType-ITransitive
+tuule/ModifiedType-ITransitive
+tudde/PastType-ITransitive
+tuulibwa/PassiveTransitive
+tuulibwe/ModifiedPassiveTransitive
+tuuliddwa/PastPassiveTransitive
+tuuza/CausativeTransitive
+tuuze/ModifiedCausativeTransitive
+tuuzizza/PastCausativeTransitive
+tuulira/BenefactiveTransitive
+tuulire/ModifiedBenefactiveTransitive
+tuulidde/PastBenefactiveTransitive
 #
 tuulako
 tuulamu
@@ -19107,95 +19131,95 @@ tuliddeeyooko
 tuliddeewo
 tuliddeewooko
 # ----------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okutuuma(to name) ---------------------------------------------- #
-tuuma
-tuume
-tuumye
-tuumisa
-tuumise
-tuumisizza
-tuumibwa
-tuumibwe
-tuumiddwa
-tuumira
-tuumire
-tuumidde
+# ------------------------------------------ okutuuma(to name): Type-II Transitive ---------------------------------------------- #
+tuuma/OriginalType-IITransitive
+tuume/ModifiedType-IITransitive
+tuumye/PastType-IITransitive
+tuumisa/CausativeTransitive
+tuumise/ModifiedCausativeTransitive
+tuumisizza/PastCausativeTransitive
+tuumibwa/PassiveTransitive
+tuumibwe/ModifiedPassiveTransitive
+tuumiddwa/PastPassiveTransitive
+tuumira/BenefactiveTransitive
+tuumire/ModifiedBenefactiveTransitive
+tuumidde/PastBenefactiveTransitive
 omutuumi
 # ----------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okutuuka(to arrive; intransitive) --------------------------------------- #
-tuuka
-tuuke
-tuuse
-tuusa
-tuusizza
-tuusibwa
-tuusibwe
-tuusiddwa
-tuukira
-tuukire
-tuukidde
+# --------------------------------- okutuuka(to arrive; intransitive): Intransitive --------------------------------------- #
+tuuka/OriginalIntransitive
+tuuke/ModifiedIntransitive
+tuuse/HybridIntransitive
+tuusa/CausativeIntransitive
+tuusizza/PastCausativeIntransitive
+tuusibwa/PassiveIntransitive
+tuusibwe/ModifiedPassiveIntransitive
+tuusiddwa/PastPassiveIntransitive
+tuukira/LocativeIntransitive
+tuukire/ModifiedLocativeIntransitive
+tuukidde/PastLocativeIntransitive
 # ----------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okutuuyana(to sweat) ------------------------------------------- #
-tuuyana
-tuuyane
-tuuyanye
-tuuyanya
-tuuyanyizza
-tuuyanyiza
-tuuyanyize
-tuuyanira
-tuuyanire
-tuuyanidde
+# ------------------------------------------ okutuuyana(to sweat): Intransitive ------------------------------------------- #
+tuuyana/OriginalIntransitive
+tuuyane/ModifiedIntransitive
+tuuyanye/HybridIntransitive
+tuuyanya/CausativeIntransitive
+tuuyanyizza/PastCausativeIntransitive
+tuuyanyiza/BenefactiveIntransitive
+tuuyanyize/ModifiedBenefactiveIntransitive
+tuuyanira/LocativeIntransitive
+tuuyanire/ModifiedLocativeIntransitive
+tuuyanidde/PastLocativeIntransitive
 # ----------------------------------------------------------------------------------------------------------- #
 tw
 twa
-# ---------------------------------------------- okutwala(to take) ---------------------------------------------- #
-twala
-twale
-tutte
-twaza
-twaze
-twazizza
-twalibwa
-twalibwe
-twaliddwa
-twalira
-twalire
-twalidde
+# ---------------------------------------------- okutwala(to take): Type-I Transitive ---------------------------------------------- #
+twala/OriginalType-ITransitive
+twale/ModifiedType-ITransitive
+tutte/PastType-ITransitive
+twaza/CausativeTransitive
+twaze/ModifiedCausativeTransitive
+twazizza/PastCausativeTransitive
+twalibwa/PassiveTransitive
+twalibwe/ModifiedPassiveTransitive
+twaliddwa/PastPassiveTransitive
+twalira/BenefactiveTransitive
+twalire/ModifiedBenefactiveTransitive
+twalidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------------- #
 # ----------------------------------------------- okutya (to fear; to be afraid): Type-I Transitive ----------------------------------------- #
-tya
-tye
-tidde
-tiibwa
-tiibwe
-tiiriddwa
-tiira
-tiire
-tiiridde
+tya/OriginalType-ITransitive
+tye/ModifiedType-ITransitive
+tidde/PastType-ITransitive
+tiibwa/PassiveTransitive
+tiibwe/ModifiedPassiveTransitive
+tiiriddwa/PastPassiveTransitive
+tiira/BenefactiveTransitive
+tiire/ModifiedBenefactiveTransitive
+tiiridde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------------ #
-# ------------------------------ okutyoboola(to abuse; to oppress; to mistreat) ------------------------------------- #
-tyoboola
-tyoboole
-tyobodde
-tyobooza
-tyobooze
-tyoboozza
-tyoboolwa
-tyoboolwe
-tyoboddwa
-tyoboolera
-tyoboolere
-tyoboolidde
+# ------------------------------ okutyoboola(to abuse; to oppress; to mistreat): Type-I Transitive ------------------------------------- #
+tyoboola/OriginalType-ITransitive
+tyoboole/ModifiedType-ITransitive
+tyobodde/PastType-ITransitive
+tyobooza/CausativeTransitive
+tyobooze/ModifiedCausativeTransitive
+tyoboozza/PastCausativeTransitive
+tyoboolwa/PassiveTransitive
+tyoboolwe/ModifiedPassiveTransitive
+tyoboddwa/PastPassiveTransitive
+tyoboolera/BenefactiveTransitive
+tyoboolere/ModifiedBenefactiveTransitive
+tyoboolidde/PastBenefactiveTransitive
 omutyoboozi
 # ------------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------------ okuva(from) ----------------------------------------------- #
-va
-ve
-vudde
-viira
-viire
-viiridde
+# ------------------------------------------------ okuva(from): Intransitive ----------------------------------------------- #
+va/OriginalIntransitive
+ve/ModifiedIntransitive
+vudde/PastIntransitive
+viira/BenefactiveIntransitive
+viire/ModifiedBenefactiveIntransitive
+viiridde/PastBenefactiveIntransitive
 #
 vaako
 vaamu
