@@ -21706,7 +21706,7 @@ yaayaanira/BenefactiveIntransitive
 yaayaanire/ModifiedBenefactiveIntransitive
 yaayaanidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------- okuyaba(finish the funeral rights; carry out the &apos;olumbe&apos;) ------------------ #
+# ----------------- okuyaba(finish the funeral rights; carry out the; olumbe; :.okwabya) ------------------ #
 yaba
 yabe
 yabye
@@ -21718,7 +21718,7 @@ yabisizza
 yabiza
 yabize
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okuyabika(burst; to break apart) ------------------------------------ #
+# ----------------------------------- okuyabika(burst; to break apart; :.okwabika) ------------------------------------ #
 yabika
 yabike
 yabise
@@ -21752,7 +21752,7 @@ yagaliriza
 yagalirize
 yagalirizza
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okuyaka(to shine; to burn; to light up) -------------------------------- #
+# -------------------------------- okuyaka(to shine; to burn; to light up inf.: okwaka) -------------------------------- #
 yaka
 yake
 yase
@@ -21780,19 +21780,19 @@ yalira
 yalire
 yalidde
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okuyamba(to help) -------------------------------------------- #
-yamba
-yambe
-yambye
-yambibwa
-yambibwe
-yambiddwa
-yambisa
-yambise
-yambisizza
-yambira
-yambire
-yambidde
+# ------------------------------------------ okuyamba(to help): Type-I Transitive -------------------------------------------- #
+yamba/OriginalType-ITransitive
+yambe/ModifiedType-ITransitive
+yambye/PastType-ITransitive
+yambibwa/PassiveTransitive
+yambibwe/ModifiedPassiveTransitive
+yambiddwa/PastPassiveTransitive
+yambisa/CausativeTransitive
+yambise/ModifiedCausativeTransitive
+yambisizza/PastCausativeTransitive
+yambira/BenefactiveTransitive
+yambire/ModifiedBenefactiveTransitive
+yambidde/PastBenefactiveTransitive
 #
 yambako
 yambamu
@@ -21953,29 +21953,29 @@ yambiddeeyooko
 yambiddeewo
 yambiddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okuyambagana(to help one another) ----------------------------------- #
-yambagana
-yambagane
-yambaganye
-yambaganya
-yambaganyizza
-yambaganira
-yambaganire
-yambaganidde
+# ----------------------------------- okuyambagana(to help one another): Intransitive ----------------------------------- #
+yambagana/OriginalIntransitive
+yambagane/ModifiedIntransitive
+yambaganye/HybridIntransitive
+yambaganya/CausativeIntransitive
+yambaganyizza/PastCausativeIntransitive
+yambaganira/LocativeIntransitive
+yambaganire/ModifiedLocativeIntransitive
+yambaganidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuyambala(to dress; inf: okwambala) ------------------------------------------- #
-yambala
-yambale
-yambadde
-yambalwa
-yambalwe
-yambaddwa
-yambaza
-yambaze
-yambazza
-yambalira
-yambalire
-yambalidde
+# ---------------------------------------- okuyambala(to dress; inf: okwambala): Type-I Transitive ------------------------------------------- #
+yambala/OriginalType-ITransitive
+yambale/ModifiedType-ITransitive
+yambadde/PastType-ITransitive
+yambalwa/PassiveTransitive
+yambalwe/ModifiedPassiveTransitive
+yambaddwa/PastPassiveTransitive
+yambaza/CausativeTransitive
+yambaze/ModifiedCausativeTransitive
+yambazza/PastCausativeTransitive
+yambalira/BenefactiveTransitive
+yambalire/ModifiedBenefactiveTransitive
+yambalidde/PastBenefactiveTransitive
 #
 yambalako
 yambalamu
@@ -22146,37 +22146,37 @@ yambaliddeewo
 yambaliddeewooko
 # --------------------------------------------------------------------------------------------------------- #
 yangu
-# --------------------- okuyanguwa(to hurry; to hasten; to hurry up; inf.:okwanguwa) --------------------- #
-yanguwa
-yanguwe
-yanguye
-yanguya
-yanguyizza
-yanguyirwa
-yanguyirwe
-yanguyiddwa
-yanguyira
-yanguyire
-yanguyidde
+# --------------------- okuyanguwa(to hurry; to hasten; to hurry up; inf.:okwanguwa): Intransitive --------------------- #
+yanguwa/OriginalIntransitive
+yanguwe/ModifiedIntransitive
+yanguye/HybridIntransitive
+yanguya/CausativeIntransitive
+yanguyizza/PastCausativeIntransitive
+yanguyirwa/PassiveIntransitive
+yanguyirwe/ModifiedPassiveIntransitive
+yanguyiddwa/PastPassiveIntransitive
+yanguyira/BenefactiveIntransitive
+yanguyire/ModifiedBenefactiveIntransitive
+yanguyidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okuyasa(to burn up; to make shine) ----------------------------------- #
-yasa
-yase
-yasizza
-yasibwa
-yasibwe
-yasiddwa
-yasiza
-yasize
-yasirizza
+# ---------------------------------- okuyasa(to burn up; to make shine inf.: okwasa): Type-I Transitive ----------------------------------- #
+yasa/OriginalType-ITransitive
+yase/ModifiedType-ITransitive
+yasizza/PastType-ITransitive
+yasibwa/PassiveTransitive
+yasibwe/ModifiedPassiveTransitive
+yasiddwa/PastPassiveTransitive
+yasiza/BenefactiveTransitive
+yasize/ModifiedBenefactiveTransitive
+yasirizza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okuyatika(to split) ------------------------------------------ #
-yatika
-yatike
-yatise
-yatikira
-yatikire
-yatikidde
+# ------------------------------------------ okuyatika(to split inf.: okwatika): Intransitive ------------------------------------------ #
+yatika/OriginalIntransitive
+yatike/ModifiedIntransitive
+yatise/PastIntransitive
+yatikira/LocativeIntransitive
+yatikire/ModifiedLocativeIntransitive
+yatikidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 yavu
 # ------------------------ okuyawuka(to be different): Deadjectival ----------------------------------------- #
@@ -22187,70 +22187,72 @@ yawukira/LocativeDeadjective
 yawukire/ModifiedLocativeDeadjective
 yawukidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okuyawukana(to be different; inf: okwawukana)------------------------- #
-yawukana
-yawukane
-yawukanye
-yawukanya
-yawukanyizza
-yawukanyiza
-yawukanyize
-yawukanira
-yawukanire
-yawukanidde
+# ---------------------------------- okuyawukana(to be different; inf: okwawukana): Intransitive ------------------------- #
+yawukana/OriginalIntransitive
+yawukane/ModifiedIntransitive
+yawukanye/HybridIntransitive
+yawukanya/CausativeIntransitive
+yawukanyizza/PastCausativeIntransitive
+yawukanyiza/BenefactiveIntransitive
+yawukanyize/ModifiedBenefactiveIntransitive
+yawukanyilizza/PastBenefactiveIntransitive
+yawukanira/LocativeIntransitive
+yawukanire/ModifiedLocativeIntransitive
+yawukanidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ okuyawula(to separate; inf: okwawula) ------------------------------------ #
-yawula
-yawule
-yawudde
-yawuza
-yawuze
-yawuzza
-yawulwa
-yawulwe
-yawuddwa
-yawulira
-yawulire
-yawulidde
+# ------------------------------ okuyawula(to separate; inf: okwawula): Type-I Transitive ------------------------------------ #
+yawula/OriginalType-ITransitive
+yawule/ModifiedType-ITransitive
+yawudde/PastType-ITransitive
+yawuza/CausativeTransitive
+yawuze/ModifiedCausativeTransitive
+yawuzza/PastCausativeTransitive
+yawulwa/PassiveTransitive
+yawulwe/ModifiedPassiveTransitive
+yawuddwa/PastPassiveTransitive
+yawulira/BenefactiveTransitive
+yawulire/ModifiedBenefactiveTransitive
+yawulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okuyayuuya(to yawn; inf: okwayuuya) ------------------------------------ #
-yayuuya
-yayuuye
-yayuuyizza
-yayuuyisa
-yayuuyise
-yayuuyisizza
-yayuuyiza
-yayuuyize
-yayuuyirizza
+# -------------------------------- okuyayuuya(to yawn; inf: okwayuuya): Intransitive ------------------------------------ #
+yayuuya/OriginalIntransitive
+yayuuye/ModifiedIntransitive
+yayuuyizza/PastIntransitive
+yayuuyisa/CausativeIntransitive
+yayuuyise/ModifiedCausativeIntransitive
+yayuuyisizza/PastCausativeIntransitive
+yayuuyiza/BenefactiveIntransitive
+yayuuyize/ModifiedBenefactiveIntransitive
+yayuuyirizza/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------- okuyaza(to multiply; inf: okwaza) ------------------------------------------ #
-yaza
-yaze
-yazizza
-yazibwa
-yazibwe
-yaziddwa
-yaliza
-yalize
+# ---------------------------- okuyaza(to multiply; inf: okwaza): Type-I Transitive ------------------------------------------ #
+yaza/OriginalType-ITransitive
+yaze/ModifiedType-ITransitive
+yazizza/PastType-ITransitive
+yazibwa/PassiveTransitive
+yazibwe/ModifiedPassiveTransitive
+yaziddwa/PastPassiveTransitive
+yaliza/BenefactiveTransitive
+yalize/ModifiedBenefactiveTransitive
+yazirizza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 ye
 yee
 yenkana
 yennyini
-# --------------------------------------------------- okuyera(to sweep) ----------------------------------- #
-yera
-yere
-yeze
-yerebwa
-yerebwe
-yereddwa
-yezesa
-yezese
-yezesezza
-yerera
-yerere
-yeredde
+# --------------------------------------------------- okuyera(to sweep; inf: okwera): Type-I Transitive ----------------------------------- #
+yera/OriginalType-ITransitive
+yere/ModifiedType-ITransitive
+yeze/PastType-ITransitive
+yerebwa/PassiveTransitive
+yerebwe/ModifiedPassiveTransitive
+yereddwa/PastPassiveTransitive
+yezesa/CausativeTransitive
+yezese/ModifiedCausativeTransitive
+yezesezza/PastCausativeTransitive
+yerera/BenefactiveTransitive
+yerere/ModifiedBenefactiveTransitive
+yeredde/PastBenefactiveTransitive
 #
 yerako
 yeramu
@@ -22409,19 +22411,22 @@ yereere
 yeru
 yesu
 yezu
-# ------------------------------------------ okuyiga(to learn) -------------------------------------------- #
-yiga
-yige
-yize
-yigibwa
-yigibwe
-yigiddwa
-yigiriza
-yigirize
-yigirizza
-yigira
-yigire
-yigidde
+# ------------------------------------------ okuyiga(to learn): Type-I Transitive -------------------------------------------- #
+yiga/OriginalType-ITransitive
+yige/ModifiedType-ITransitive
+yize/PastType-ITransitive
+yigibwa/PassiveTransitive
+yigibwe/ModifiedPassiveTransitive
+yigiddwa/PastPassiveTransitive
+yigiriza/CausativeTransitive
+yigirize/ModifiedCausativeTransitive
+yigirizza/PastCausativeTransitive
+yigirizibwa/PassiveTransitive
+yigirizibwe/ModifiedPassiveTransitive
+yigiriziddwa/PastPassiveTransitive
+yigira/LocativeTransitive
+yigire/ModifiedLocativeTransitive
+yigidde/PastLocativeTransitive
 #
 yigako
 yigamu
@@ -22582,143 +22587,148 @@ yigiddeeyooko
 yigiddeewo
 yigiddeewooko
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuyigga(to hunt) ----------------------------------------------- #
-yigga
-yigge
-yizze
-yiggisa
-yiggise
-yiggisizza
-yiggibwa
-yiggibwe
-yiggiddwa
-yiggira
-yiggire
-yiggidde
+# --------------------------------------- okuyigga(to hunt): Type-I Transitive ----------------------------------------------- #
+yigga/OriginalType-ITransitive
+yigge/ModifiedType-ITransitive
+yizze/PastType-ITransitive
+yiggisa/CausativeTransitive
+yiggise/ModifiedCausativeTransitive
+yiggisizza/PastCausativeTransitive
+yiggibwa/PassiveTransitive
+yiggibwe/ModifiedPassiveTransitive
+yiggiddwa/PastPassiveTransitive
+yiggira/BenefactiveTransitive
+yiggire/ModifiedBenefactiveTransitive
+yiggidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuyiika(to pour; intransitive) ----------------------------------------- #
-yiika
-yiike
-yiise
-yiikira
-yiikire
-yiikidde
+# ---------------------------------------- okuyiika(to pour; intransitive): Intransitive ----------------------------------------- #
+yiika/OriginalIntransitive
+yiike/ModifiedIntransitive
+yiise/PastIntransitive
+yiwa/CausativeIntransitive
+yiwe/ModifiedCausativeIntransitive
+yiye/PastCausativeIntransitive
+yiikira/LocativeIntransitive
+yiikire/ModifiedLocativeIntransitive
+yiikidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okuyiikiriza(to provoke) ----------------------------------------- #
-yiikiriza
-yiikirize
-yiikirizza
-yiikirizibwa
-yiikirizibwe
-yiikirizibbwa
-yiikiririza
-yiikiririze
+# -------------------------------------- okuyiikiriza(to provoke): Type-I Transitive ----------------------------------------- #
+yiikiriza/OriginalType-ITransitive
+yiikirize/ModifiedType-ITransitive
+yiikirizza/PastType-ITransitive
+yiikirizibwa/PassiveTransitive
+yiikirizibwe/ModifiedPassiveTransitive
+yiikirizibbwa/PastPassiveTransitive
+yiikiririza/BenefactiveTransitive
+yiikiririze/ModifiedBenefactiveTransitive
+yiikiririzza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okuyiiya(to invent) ---------------------------------------------- #
-yiiya
-yiiye
-yiiyizza
-yiiyisa
-yiiyise
-yiiyisizza
-yiiyibwa
-yiiyibwe
-yiiyiddwa
-yiiyiza
-yiiyize
+# -------------------------------------- okuyiiya(to invent): Type-I Transitive ---------------------------------------------- #
+yiiya/OriginalType-ITransitive
+yiiye/ModifiedType-ITransitive
+yiiyizza/PastType-ITransitive
+yiiyisa/CausativeTransitive
+yiiyise/ModifiedCausativeTransitive
+yiiyisizza/PastCausativeTransitive
+yiiyibwa/PassiveTransitive
+yiiyibwe/ModifiedPassiveTransitive
+yiiyiddwa/PastPassiveTransitive
+yiiyiza/BenefactiveTransitive
+yiiyize/ModifiedBenefactiveTransitive
+yiiyirizza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuyimba(to sing) --------------------------------------------- #
-yimba
-yimbe
-yimbye
-yimbya
-yimbizza
-yimbisa
-yimbise
-yimbisizza
-yimbibwa
-yimbibwe
-yimbiddwa
-yimbira
-yimbire
-yimbidde
+# ---------------------------------------- okuyimba(to sing): Type-I Transitive --------------------------------------------- #
+yimba/OriginalType-ITransitive
+yimbe/ModifiedType-ITransitive
+yimbye/PastType-ITransitive
+yimbisa/CausativeTransitive
+yimbise/ModifiedCausativeTransitive
+yimbisizza/PastCausativeTransitive
+yimbibwa/PassiveTransitive
+yimbibwe/ModifiedPassiveTransitive
+yimbiddwa/PastPassiveTransitive
+yimbira/BenefactiveTransitive
+yimbire/ModifiedBenefactiveTransitive
+yimbidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuyimbula(to release) ----------------------------------------- #
-yimbula
-yimbule
-yimbudde
-yimbuza
-yimbuze
-yimbuzza
-yimbulwa
-yimbulwe
-yimbuddwa
-yimbulira
-yimbulire
-yimbulidde
+# ---------------------------------------- okuyimbula(to release): Type-I Transitive ----------------------------------------- #
+yimbula/OriginalType-ITransitive
+yimbule/ModifiedType-ITransitive
+yimbudde/PastType-ITransitive
+yimbuza/CausativeTransitive
+yimbuze/ModifiedCausativeTransitive
+yimbuzza/PastCausativeTransitive
+yimbulwa/PassiveTransitive
+yimbulwe/ModifiedPassiveTransitive
+yimbuddwa/PastPassiveTransitive
+yimbulira/BenefactiveTransitive
+yimbulire/ModifiedBenefactiveTransitive
+yimbulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okuyimirira(to stand) ---------------------------------------- #
-yimirira
-yimirire
-yimiridde
-yimiriza
-yimirize
-yimirizza
-yimirirwa
-yimirirwe
-yimiriddwa
-yimiririra
-yimiririre
-yimiriridde
+# ---------------------------------------- okuyimirira(to stand): Intransitive ---------------------------------------- #
+yimirira/OriginalIntransitive
+yimirire/ModifiedIntransitive
+yimiridde/PastIntransitive
+yimiriza/CausativeIntransitive
+yimirize/ModifiedCausativeIntransitive
+yimirizza/PastCausativeIntransitive
+yimirizibwa/PassiveIntransitive
+yimirizibwe/ModifiedPassiveIntransitive
+yimiriziddwa/PastPassiveIntransitive
+yimiririra/BenefactiveIntransitive
+yimiririre/ModifiedBenefactiveIntransitive
+yimiriridde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------- okuyimuka(to stand; intransitive) ----------------------------------------- #
-yimuka
-yimuke
-yimuse
-yimusa
-yimusizza
-yimusibwa
-yimusibwe
-yimusiddwa
-yimusiza
-yimusize
-yimusirizza
-yimukira
-yimukire
-yimukidde
+# ----------------------------- okuyimuka(to stand; intransitive): Intransitive ----------------------------------------- #
+yimuka/OriginalIntransitive
+yimuke/ModifiedIntransitive
+yimuse/PastIntransitive
+yimusa/CausativeIntransitive
+yimuse/ModifiedCausativeIntransitive
+yimusizza/PastCausativeIntransitive
+yimusibwa/PassiveIntransitive
+yimusibwe/ModifiedPassiveIntransitive
+yimusiddwa/PastPassiveIntransitive
+yimusiza/BenefactiveIntransitive
+yimusize/ModifiedBenefactiveIntransitive
+yimusirizza/PastBenefactiveIntransitive
+yimukira/BenefactiveIntransitive
+yimukire/ModifiedBenefactiveIntransitive
+yimukidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 yinginiya
-# ----------------------------------------- okuyingira(to enter) ------------------------------------------ #
-yingira
-yingire
-yingidde
-yingiza 
-yingize
-yingizza
-yingizibwa
-yingizibwe
-yingiziddwa
-yingilwa
-yingilwe
-yingiddwa
-yingirira
-yingirire
-yingiridde
+# ----------------------------------------- okuyingira(to enter): Type-I Transitive ------------------------------------------ #
+yingira/OriginalType-ITransitive
+yingire/ModifiedType-ITransitive
+yingidde/PastType-ITransitive
+yingiza/CausativeTransitive
+yingize/ModifiedCausativeTransitive
+yingizza/PastCausativeTransitive
+yingizibwa/PassiveTransitive
+yingizibwe/ModifiedPassiveTransitive
+yingiziddwa/PastPassiveTransitive
+yingilwa/PassiveTransitive
+yingilwe/ModifiedPassiveTransitive
+yingiddwa/PastPassiveTransitive
+yingirira/BenefactiveTransitive
+yingirire/ModifiedBenefactiveTransitive
+yingiridde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 yinsuwa
 yisirayiri
-# -------------------------------- okuyita(to pass/call) ---------------------------------- #
-yita
-yite
-yise
-yitibwa
-yitibwe
-yitiddwa
-yisa
-yisizza
-yitira
-yitire
-yitidde
+# -------------------------------- okuyita(to pass/call): Type-II Transitive ---------------------------------- #
+yita/OriginalType-IITransitive
+yite/ModifiedType-IITransitive
+yise/PastType-IITransitive
+yitibwa/PassiveTransitive
+yitibwe/ModifiedPassiveTransitive
+yitiddwa/PastPassiveTransitive
+yisa/CausativeTransitive
+yise/ModifiedCausativeTransitive
+yisizza/PastCausativeTransitive
+yitira/BenefactiveTransitive
+yitire/ModifiedBenefactiveTransitive
+yitidde/PastBenefactiveTransitive
 #
 yitako
 yitamu
@@ -22871,116 +22881,118 @@ yitiddeeyooko
 yitiddeewo
 yitiddeewooko
 # --------------------------------------------------------------------------------------------------------- #    
-# ------------------------------ okuyitaayita(to get around; to move around) ------------------------------ #
-yitaayita
-yiteeyite
-yiseeyise
+# ------------------------------ okuyitaayita(to get around; to move around): Intransitive ------------------------------ #
+yitaayita/OriginalIntransitive
+yiteeyite/ModifiedIntransitive
+yiseeyise/PastIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 Yitale
 yitirivu
 yo
-# -------------------------- okuyogera(to talk; to speak; to say; inf.: okwogera) ------------------------- #
-yogera
-yogere
-yogedde
-yogeza
-yogeze
-yogezza
-yogerwa
-yogerwe
-yogeddwa
-yogerera
-yogerere
-yogeredde
+# -------------------------- okuyogera(to talk; to speak; to say; inf.: okwogera): Type-I Transitive ------------------------- #
+yogera/OriginalType-ITransitive
+yogere/ModifiedType-ITransitive
+yogedde/PastType-ITransitive
+yogeza/CausativeTransitive
+yogeze/ModifiedCausativeTransitive
+yogezza/PastCausativeTransitive
+yogerwa/PassiveTransitive
+yogerwe/ModifiedPassiveTransitive
+yogeddwa/PastPassiveTransitive
+yogerera/BenefactiveTransitive
+yogerere/ModifiedBenefactiveTransitive
+yogeredde/PastBenefactiveTransitive
 omwogezi
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------- okuyokya(to be hot; to burn; to melt; to grill; inf.:okwokya) ---------------------- #
-yokya
-yokye
-yokyezza
-yokyesa
-yokyese
-yokyesezza
-yokyebwa
-yokyebwe
-yokyebbwa
-yokyera
-yokyere
-yokyedde
-yokyeza
-yokyeze
+# -------------------- okuyokya(to be hot; to burn; to melt; to grill; inf.:okwokya): Type-I Transitive ---------------------- #
+yokya/OriginalType-ITransitive
+yokye/ModifiedType-ITransitive
+yokyezza/PastType-ITransitive
+yokyesa/CausativeTransitive
+yokyese/ModifiedCausativeTransitive
+yokyesezza/PastCausativeTransitive
+yokyebwa/PassiveTransitive
+yokyebwe/ModifiedPassiveTransitive
+yokyebbwa/PastPassiveTransitive
+yokyera/BenefactiveTransitive
+yokyere/ModifiedBenefactiveTransitive
+yokyedde/PastBenefactiveTransitive
+yokyeza/BenefactiveTransitive
+yokyeze/ModifiedBenefactiveTransitive
+yokyerezza/PastBenefactiveTransitive
 omwokyi
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------- okuyoleka(to show; to point out; to exhibit; inf.: okwoleka) ---------------------- #
-yoleka
-yoleke
-yolese
-yolesa
-yolese
-yolesezza
-yolekebwa
-yolekebwe
-yolekeddwa
-yolekera
-yolekere
-yolekedde
+# --------------------- okuyoleka(to show; to point out; to exhibit; inf.: okwoleka): Type-II Transitive ---------------------- #
+yoleka/OriginalType-IITransitive
+yoleke/ModifiedType-IITransitive
+yolese/PastType-IITransitive
+yolesa/CausativeTransitive
+yolese/ModifiedCausativeTransitive
+yolesezza/PastCausativeTransitive
+yolekebwa/PassiveTransitive
+yolekebwe/ModifiedPassiveTransitive
+yolekeddwa/PastPassiveTransitive
+yolekera/BenefactiveTransitive
+yolekere/ModifiedBenefactiveTransitive
+yolekedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okuyomba(To quarrel; to speak angrily) --------------------------------- #
-yomba
-yombe
-yombye
-yombya
-yombezza
-yombesa
-yombese
-yombesezza
-yombesebwa
-yombesebwe
-yombesebbwa
-yombera
-yombere
-yombedde
+# -------------------------------- okuyomba(To quarrel; to speak angrily): Intransitive --------------------------------- #
+yomba/OriginalIntransitive
+yombe/ModifiedIntransitive
+yombye/PastIntransitive
+yombya/CausativeIntransitive
+yombye/ModifiedCausativeIntransitive
+yombezza/PastCausativeIntransitive
+yombesa/CausativeIntransitive
+yombese/ModifiedCausativeIntransitive
+yombesezza/PastCausativeIntransitive
+yombesebwa/PassiveIntransitive
+yombesebwe/ModifiedPassiveIntransitive
+yombesebbwa/PastPassiveIntransitive
+yombera/LocativeIntransitive
+yombere/ModifiedLocativeIntransitive
+yombedde/PastLocativeIntransitive
 omuyombi
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------- okuyonja(to clean; to make neat; to smarten up; inf.: okuyonja) -------------------- #
-yonja
-yonje
-yonjezza
-yonjesa
-yonjese
-yonjesezza
-yonjebwa
-yonjebwe
-yonjeddwa
-yonjeza
-yonjeze
-yonjezza
+# -------------------- okuyonja(to clean; to make neat; to smarten up; inf.: okuyonja): Type-I Transitive -------------------- #
+yonja/OriginalType-ITransitive
+yonje/ModifiedType-ITransitive
+yonjezza/PastType-ITransitive
+yonjesa/CausativeTransitive
+yonjese/ModifiedCausativeTransitive
+yonjesezza/PastCausativeTransitive
+yonjebwa/PassiveTransitive
+yonjebwe/ModifiedPassiveTransitive
+yonjeddwa/PastPassiveTransitive
+yonjeza/BenefactiveTransitive
+yonjeze/ModifiedBenefactiveTransitive
+yonjezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 yonjo
-# --------------- okuyonka(to draw liquid (especially mother&apos;s milk); inf.:okuyonka) ----------------- #
-yonka
-yonke
-yonse
-yonkebwa
-yonkebwe
-yonkebbwa
-yonkera
-yonkere
-yonkedde
+# --------------- okuyonka(to draw liquid (especially mother&apos;s milk); inf.:okuyonka): Type-I Transitive ----------------- #
+yonka/OriginalType-ITransitive
+yonke/ModifiedType-ITransitive
+yonse/PastType-ITransitive
+yonkebwa/PassiveTransitive
+yonkebwe/ModifiedPassiveTransitive
+yonkebbwa/PastPassiveTransitive
+yonkera/BenefactiveTransitive
+yonkere/ModifiedBenefactiveTransitive
+yonkedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------- okuyonoona(to spoil; to ruin; to damage; to sin; / to waste; inf.: okwonoona) --------------- #
-yonoona
-yonoone
-yonoonye
-yonoonesa
-yonoonese
-yonoonesezza
-yonoonebwa
-yonoonebwe
-yonoonebbwa
-yonoonera
-yonoonere
-yonoonedde
+# ----------- okuyonoona(to spoil; to ruin; to damage; to sin; / to waste; inf.: okwonoona): Type-I Transitive --------------- #
+yonoona/OriginalType-ITransitive
+yonoone/ModifiedType-ITransitive
+yonoonye/PastType-ITransitive
+yonoonesa/CausativeTransitive
+yonoonese/ModifiedCausativeTransitive
+yonoonesezza/PastCausativeTransitive
+yonoonebwa/PassiveTransitive
+yonoonebwe/ModifiedPassiveTransitive
+yonoonebbwa/PastPassiveTransitive
+yonoonera/BenefactiveTransitive
+yonoonere/ModifiedBenefactiveTransitive
+yonoonedde/PastBenefactiveTransitive
 omwonoonyi
 # --------------------------------------------------------------------------------------------------------- #
 yonoonefu
@@ -22992,124 +23004,127 @@ yonoonekera/LocativeDeadjective
 yonoonekere/ModifiedLocativeDeadjective
 yonoonekedde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okuyonsa(to breastfeed; to cause to suck) ------------------------------- #
-yonsa
-yonse
-yonsezza
-yonsebwa
-yonsebwe
-yonsebbwa
-yonseza
-yonseze
+# ------------------------------- okuyonsa(to breastfeed; to cause to suck): Type-I Transitive ------------------------------- #
+yonsa/OriginalType-ITransitive
+yonse/ModifiedType-ITransitive
+yonsezza/PastType-ITransitive
+yonsebwa/PassiveTransitive
+yonsebwe/ModifiedPassiveTransitive
+yonsebbwa/PastPassiveTransitive
+yonseza/BenefactiveTransitive
+yonseze/ModifiedBenefactiveTransitive
+yonserezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------ okuyoola(to collect; to gather; to pick up) ------------------------------ #
-yoola
-yoole
-yodde
-yooza
-yooze
-yoozezza
-yoolwa
-yoolwe
-yooleddwa
-yoolebwa
-yoolebwe
-yoolebbwa
-yoolera
-yoolere
-yooledde
+# ------------------------------ okuyoola(to collect; to gather; to pick up): Type-I Transitive ------------------------------ #
+yoola/OriginalType-ITransitive
+yoole/ModifiedType-ITransitive
+yodde/PastType-ITransitive
+yooza/CausativeTransitive
+yooze/ModifiedCausativeTransitive
+yoozezza/PastCausativeTransitive
+yoolwa/PassiveTransitive
+yoolwe/ModifiedPassiveTransitive
+yooleddwa/PastPassiveTransitive
+yoolebwa/PassiveTransitive
+yoolebwe/ModifiedPassiveTransitive
+yoolebbwa/PastPassiveTransitive
+yoolera/BenefactiveTransitive
+yoolere/ModifiedBenefactiveTransitive
+yooledde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------- okuyoyoota(to make/do/perform extremely well) ----------------------------- #
-yoyoota
-yoyoote
-yoyoose
-yoyoosa
-yoyoosezza
-yoyootebwa
-yoyootebwe
-yoyootebbwa
-yoyootera
-yoyootere
-yoyootedde
+# ----------------------------- okuyoyoota(to make/do/perform extremely well): Type-I Transitive ----------------------------- #
+yoyoota/OriginalType-ITransitive
+yoyoote/ModifiedType-ITransitive
+yoyoose/PastType-ITransitive
+yoyoosa/CausativeTransitive
+yoyoose/ModifiedCausativeTransitive
+yoyoosezza/PastCausativeTransitive
+yoyootebwa/PassiveTransitive
+yoyootebwe/ModifiedPassiveTransitive
+yoyootebbwa/PastPassiveTransitive
+yoyootera/BenefactiveTransitive
+yoyootere/ModifiedBenefactiveTransitive
+yoyootedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 yoyoofu
-# ---------------------------- okuyoza(to wash (clothes, things, not persons)) ---------------------------- #
-yoza
-yoze
-yozezza
-yozesa
-yozese
-yozesezza
-yozebwa
-yozebwe
-yozeddwa
-yoleza
-yoleze
-yolezza
+# ---------------------------- okuyoza(to wash (clothes, things, not persons)): Type-I Transitive ---------------------------- #
+yoza/OriginalType-ITransitive
+yoze/ModifiedType-ITransitive
+yozezza/PastType-ITransitive
+yozesa/CausativeTransitive
+yozese/ModifiedCausativeTransitive
+yozesezza/PastCausativeTransitive
+yozebwa/PassiveTransitive
+yozebwe/ModifiedPassiveTransitive
+yozeddwa/PastPassiveTransitive
+yoleza/BenefactiveTransitive
+yoleze/ModifiedBenefactiveTransitive
+yolezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okuyozaayoza(to congratulate) ------------------------------------- #
-yozaayoza
-yozeeyoze
-yozaayozezza
-yozaayozebwa
-yozaayozebwe
-yozaayozebbwa
+# ------------------------------------- okuyozaayoza(to congratulate): Type-I Transitive ------------------------------------- #
+yozaayoza/OriginalType-ITransitive
+yozeeyoze/ModifiedType-ITransitive
+yozaayozezza/PastType-ITransitive
+yozaayozebwa/PassiveTransitive
+yozaayozebwe/ModifiedPassiveTransitive
+yozaayozebbwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okuyunga(to join; to connect) ------------------------------------- #
-yunga
-yunge
-yunze
-yungisa
-yungise
-yungisizza
-yungibwa
-yungibwe
-yungiddwa
-yungira
-yungire
-yungidde
+# ------------------------------------- okuyunga(to join; to connect): Type-I Transitive ------------------------------------- #
+yunga/OriginalType-ITransitive
+yunge/ModifiedType-ITransitive
+yunze/PastType-ITransitive
+yungisa/CausativeTransitive
+yungise/ModifiedCausativeTransitive
+yungisizza/PastCausativeTransitive
+yungibwa/PassiveTransitive
+yungibwe/ModifiedPassiveTransitive
+yungiddwa/PastPassiveTransitive
+yungira/BenefactiveTransitive
+yungire/ModifiedBenefactiveTransitive
+yungidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------ okuyungula(to disconnect; to detach; to choose; to select; to assign; to sort) ------------- #
-yungula
-yungule
-yungudde
-yunguza
-yunguze
-yunguzza
-yungulwa
-yungulwe
-yunguddwa
-yungulira
-yungulire
-yungulidde
+# ------------ okuyungula(to disconnect; to detach; to choose; to select; to assign; to sort): Type-I Transitive ------------- #
+yungula/OriginalType-ITransitive
+yungule/ModifiedType-ITransitive
+yungudde/PastType-ITransitive
+yunguza/CausativeTransitive
+yunguze/ModifiedCausativeTransitive
+yunguzza/PastCausativeTransitive
+yungulwa/PassiveTransitive
+yungulwe/ModifiedPassiveTransitive
+yunguddwa/PastPassiveTransitive
+yungulira/BenefactiveTransitive
+yungulire/ModifiedBenefactiveTransitive
+yungulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 yunivasite
-# ------------ okuyuuguuma(to shake; to sway; to move irregularly to and fro; intrasitive) ---------------- #
-yuuguuma
-yuuguume
-yuuguumye
-yuuguumya
-yuuguumizza
-yuuguumira
-yuuguumire
-yuuguumidde
+# ------------ okuyuuguuma(to shake; to sway; to move irregularly to and fro; intrasitive): Intransitive ---------------- #
+yuuguuma/OriginalIntransitive
+yuuguume/ModifiedIntransitive
+yuuguumye/PastIntransitive
+yuuguumya/CausativeIntransitive
+yuuguumye/ModifiedCausativeIntransitive
+yuuguumizza/PastCausativeIntransitive
+yuuguumira/BenefactiveIntransitive
+yuuguumire/ModifiedBenefactiveIntransitive
+yuuguumidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuyuza(to tear; to rend) --------------------------------------- #
-yuza
-yuze
-yuzizza
-yuzisa
-yuzise
-yuzisizza
-yuzibwa
-yuzibwe
-yuziddwa
-yuriza
-yurize
-yurizza
+# --------------------------------------- okuyuza(to tear; to rend): Type-I Transitive --------------------------------------- #
+yuza/OriginalType-ITransitive
+yuze/ModifiedType-ITransitive
+yuzizza/PastType-ITransitive
+yuzisa/CausativeTransitive
+yuzise/ModifiedCausativeTransitive
+yuzisizza/PastCausativeTransitive
+yuzibwa/PassiveTransitive
+yuzibwe/ModifiedPassiveTransitive
+yuziddwa/PastPassiveTransitive
+yuriza/BenefactiveTransitive
+yurize/ModifiedBenefactiveTransitive
+yurizza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 z
-z
+z'
 za
 za
 zaabu
