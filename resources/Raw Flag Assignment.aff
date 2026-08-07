@@ -175,7 +175,27 @@ COMPOUNDRULE 2
 COMPOUNDRULE (C1)(C2)
 COMPOUNDRULE (C3)(C4)
 
-CHECKCOMPOUNDPATTERN 2
+CHECKCOMPOUNDPATTERN 22
+CHECKCOMPOUNDPATTERN ' b
+CHECKCOMPOUNDPATTERN ' c
+CHECKCOMPOUNDPATTERN ' d
+CHECKCOMPOUNDPATTERN ' f
+CHECKCOMPOUNDPATTERN ' g
+CHECKCOMPOUNDPATTERN ' h
+CHECKCOMPOUNDPATTERN ' j
+CHECKCOMPOUNDPATTERN ' k
+CHECKCOMPOUNDPATTERN ' l
+CHECKCOMPOUNDPATTERN ' m
+CHECKCOMPOUNDPATTERN ' n
+CHECKCOMPOUNDPATTERN ' p
+CHECKCOMPOUNDPATTERN ' ŋ
+CHECKCOMPOUNDPATTERN ' r
+CHECKCOMPOUNDPATTERN ' s
+CHECKCOMPOUNDPATTERN ' t
+CHECKCOMPOUNDPATTERN ' v
+CHECKCOMPOUNDPATTERN ' w
+CHECKCOMPOUNDPATTERN ' y
+CHECKCOMPOUNDPATTERN ' z
 CHECKCOMPOUNDPATTERN ' ngako
 CHECKCOMPOUNDPATTERN ' ngamu
 
@@ -4823,7 +4843,7 @@ PFX N4 eky bw eky
 
 # Class V nouns 
 # Was using flag s and now uses flag Ne
-PFX N5 Y 47
+PFX N5 Y 52
 PFX N5 e   0    ebb
 PFX N5 e   0    edd
 PFX N5 e   0    eff
@@ -4859,16 +4879,21 @@ PFX N5 ev  ama  evv # evviivi-->amaviivi
 PFX N5 ev  ma   evv
 PFX N5 ez  ama  ezz # Ezziga-->amaziga
 PFX N5 ez  ma   ezz                      # Commented out # PFX N5 e   ama  e[^r] # eggi # PFX N5 e   ma   e[^r]
-PFX N5 eri ama  er # erinnyo
-PFX N5 eri ma   e
+PFX N5 eri ama  eri[^i] # erinnyo 
+PFX N5 eri ma   eri[^i]
+PFX N5 erii amaa  erii # eriiso 
+PFX N5 erii maa   erii
 PFX N5 ejj ama  ejj # ejjuuni
 PFX N5 ejj ma   ejj
 PFX N5 ery am   ery[^a] # eryenvu 
 PFX N5 ery m    ery[^a]
 PFX N5 er  l    erye # lyenvu 
-PFX N5 ery ama  erya # eryato-->amaato
-PFX N5 ery ma   erya
-PFX N5 ery lya  er   # eryato-->lyaato
+PFX N5 ery ama  eryato # eryato-->amaato
+PFX N5 ery ma   eryato
+PFX N5 ery am   eryanda # eryanda-->amanda
+PFX N5 ery m   eryanda
+PFX N5 ery lya  eryato   # eryato-->lyaato
+PFX N5 ery ly   eryanda
 PFX N5 ery aka  erya # eryato-->akaato
 PFX N5 ery ka   erya
 
@@ -4876,7 +4901,7 @@ PFX N5 ery ka   erya
 # Was using flag t and now uses N6
 PFX N6 Y 13
 PFX N6 a   0    ak
-PFX N6 aka obu/CP .
+PFX N6 aka obu/CP aka[^mnaeiou]
 PFX N6 aka bu aka[^mnaeiou]
 PFX N6 aka obwa/CP akamb
 PFX N6 aka bwa akamb
@@ -4972,7 +4997,7 @@ PFX yy 0 otw' [aeiou]
 # Prefixes of nouns based on size e.g akaana, obwaana, ebyaana
 # This rule is explosive, so I missed some words, knowingly and unknowingly
 # Was using flag z but now uses zz
-PFX zz Y 393
+PFX zz Y 457
 PFX zz omu otu omu # omusajja-->otusajja
 PFX zz omu tu  omu
 PFX zz omu obu omu # omusajja-->obusajja
@@ -5245,6 +5270,22 @@ PFX zz ery ekya erya
 PFX zz ery kya  erya
 PFX zz ery ebya erya
 PFX zz ery bya  erya
+PFX zz ery otw  erya
+PFX zz ery tw   erya
+PFX zz ery obw  erya
+PFX zz ery bw   erya
+PFX zz ery olw  erya
+PFX zz ery lw   erya
+PFX zz ery ak   erya
+PFX zz ery k    erya
+PFX zz ery ogw  erya
+PFX zz ery gw   erya
+PFX zz ery ag   erya
+PFX zz ery g    erya
+PFX zz ery eky  erya
+PFX zz ery ky   erya
+PFX zz ery eby  erya
+PFX zz ery by   erya
 PFX zz ery otw ery[^a]
 PFX zz ery tw  ery[^a]
 PFX zz ery obw ery[^a]
@@ -5262,21 +5303,37 @@ PFX zz ery ky  ery[^a]
 PFX zz ery eby ery[^a]
 PFX zz ery by  ery[^a]
 PFX zz eri otu eri
+PFX zz eri tu  eri
 PFX zz eri obu eri
+PFX zz eri bu  eri
 PFX zz eri olu eri
+PFX zz eri lu  eri
 PFX zz eri aka eri
+PFX zz eri ka  eri
 PFX zz eri ogu eri
+PFX zz eri gu  eri
 PFX zz eri aga eri
+PFX zz eri ga  eri
 PFX zz eri eki eri
+PFX zz eri ki  eri
 PFX zz eri ebi eri
+PFX zz eri bi  eri
 PFX zz erii otuu erii
+PFX zz erii tuu  erii
 PFX zz erii obuu erii
+PFX zz erii buu  erii
 PFX zz erii oluu erii
+PFX zz erii luu  erii
 PFX zz erii akaa erii
+PFX zz erii kaa  erii
 PFX zz erii oguu erii
+PFX zz erii guu  erii
 PFX zz erii agaa erii
+PFX zz erii gaa  erii
 PFX zz erii ekii erii
+PFX zz erii kii  erii
 PFX zz erii ebii erii
+PFX zz erii bii  erii
 PFX zz eb otu eb
 PFX zz eb obu eb
 PFX zz eb olu eb
@@ -5285,6 +5342,14 @@ PFX zz eb ogu eb
 PFX zz eb aga eb
 PFX zz eb eki eb
 PFX zz eb ebi eb
+PFX zz eb tu  eb
+PFX zz eb bu  eb
+PFX zz eb lu  eb
+PFX zz eb ka  eb
+PFX zz eb gu  eb
+PFX zz eb ga  eb
+PFX zz eb ki  eb
+PFX zz eb bi  eb
 PFX zz edd otul edd[^i]
 PFX zz edd obul edd[^i]
 PFX zz edd olul edd[^i]
@@ -5293,6 +5358,14 @@ PFX zz edd ogul edd[^i]
 PFX zz edd agal edd[^i]
 PFX zz edd ekil edd[^i]
 PFX zz edd ebil edd[^i]
+PFX zz edd tul  edd[^i]
+PFX zz edd bul  edd[^i]
+PFX zz edd lul  edd[^i]
+PFX zz edd kal  edd[^i]
+PFX zz edd gul  edd[^i]
+PFX zz edd gal  edd[^i]
+PFX zz edd kil  edd[^i]
+PFX zz edd bil  edd[^i]
 PFX zz ed otu edd[i]
 PFX zz ed obu edd[i]
 PFX zz ed olu edd[i]
@@ -5301,6 +5374,14 @@ PFX zz ed ogu edd[i]
 PFX zz ed aga edd[i]
 PFX zz ed eki edd[i]
 PFX zz ed ebi edd[i]
+PFX zz ed tu  edd[i]
+PFX zz ed bu  edd[i]
+PFX zz ed lu  edd[i]
+PFX zz ed ka  edd[i]
+PFX zz ed gu  edd[i]
+PFX zz ed ga  edd[i]
+PFX zz ed ki  edd[i]
+PFX zz ed bi  edd[i]
 PFX zz ejj otuy ejj
 PFX zz ejj obuy ejj
 PFX zz ejj oluy ejj
@@ -5308,7 +5389,15 @@ PFX zz ejj akay ejj
 PFX zz ejj oguy ejj
 PFX zz ejj agay ejj
 PFX zz ejj ekiy ejj
-PFX zz ejj ebiy ejj # Class VI below
+PFX zz ejj ebiy ejj 
+PFX zz ejj tuy  ejj
+PFX zz ejj buy  ejj
+PFX zz ejj luy  ejj
+PFX zz ejj kay  ejj
+PFX zz ejj guy  ejj
+PFX zz ejj gay  ejj
+PFX zz ejj kiy  ejj
+PFX zz ejj biy  ejj # Class VI below
 PFX zz aka en  aka
 PFX zz aka n   aka
 PFX zz aka otu aka
