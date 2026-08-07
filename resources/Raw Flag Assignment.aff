@@ -175,8 +175,9 @@ COMPOUNDRULE 2
 COMPOUNDRULE (C1)(C2)
 COMPOUNDRULE (C3)(C4)
 
-CHECKCOMPOUNDPATTERN 1
-CHECKCOMPOUNDPATTERN /A1 /A2
+CHECKCOMPOUNDPATTERN 2
+CHECKCOMPOUNDPATTERN ' ngako
+CHECKCOMPOUNDPATTERN ' ngamu
 
 
 ONLYINCOMPOUND OC
@@ -202,6 +203,12 @@ PFX ea Y 3
 PFX ea a 0/OC [aeiou]
 PFX ea e 0/OC [aeiou]
 PFX ea o 0/OC [aeiou]
+
+# vowels at the end of possesives 
+SFX ae Y 3
+SFX ae a '/OCCP [aeiou]
+SFX ae e '/OCCP [aeiou]
+SFX ae o '/OCCP [aeiou]
 
 # Optional vowels at the begining of words e.g. akajanja-->kajanja 
 PFX ov Y 3
@@ -231,12 +238,6 @@ SFX yo 0 yo [aeiou]
 # suffix "wo" e.g. tunulawo
 SFX wo Y 1
 SFX wo 0 wo [aeiou]
-
-# vowels at the end of possesives 
-SFX ae Y 3
-SFX ae a '/OCCP [aeiou]
-SFX ae e '/OCCP [aeiou]
-SFX ae o '/OCCP [aeiou]
 
 # vowels at the end of possesive determiners
 SFX pd Y 4
