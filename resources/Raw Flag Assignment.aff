@@ -240,8 +240,7 @@ SFX wo Y 1
 SFX wo 0 wo [aeiou]
 
 # vowels at the end of possesive determiners
-SFX pd Y 4
-SFX pd o a .
+SFX pd Y 3
 SFX pd o e .
 SFX pd o ange .
 SFX pd o abwe .
