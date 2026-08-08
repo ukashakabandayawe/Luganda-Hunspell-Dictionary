@@ -1,4 +1,4 @@
-21548
+21547
 #
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -27,23 +27,23 @@
 #
 #
 # ----------------------------------------------- possesive pronouns ----------------------------------------------- #
-owa/CBeaae
-aba/CBeaae
-ogwa/CBeaae
-egya/CBeaae
-eya/CBeaae
-eza/CBeaae
-ekya/CBeaae
-ebya/CBeaae 
-elya/CBeaae 
-aga/CBeaae
-aka/CBeaae
-obwa/CBeaae
-olwa/CBeaae
-eza/CBeaae
-okwa/CBeaae
-aga/CBeaae
-otwa/CBeaae
+owa/eaae
+aba/eaae
+ogwa/eaae
+egya/eaae
+eya/eaae
+eza/eaae
+ekya/eaae
+ebya/eaae 
+elya/eaae 
+aga/eaae
+aka/eaae
+obwa/eaae
+olwa/eaae
+eza/eaae
+okwa/eaae
+aga/eaae
+otwa/eaae
 # ------------------------------------------------------------------------------------------------------------------ #
 # ----------------------------------------------- demonstratives --------------------------------------------------- #
 oyo
@@ -99,29 +99,29 @@ kwo/pd
 two/pd
 # -------------------------------------------------------------------------------------------------------------------------- #
 # ------------------------------------------- numbers ---------------------------------------------------------------------- #
-mu/No 
-biri/No
+mu/CENo 
+biri/CENo
 bili
-satu/No
-ennya/ov
-na/No
-taano/No
-omukaaga/ov
-omusanvu/ov
-omunaana/ov
-omwenda/ov
-ekkumi/ov
-amakumi/ov
-ekikumi/ov
-ebikumu/ov
-olukumi/ov
-enkumi/ov
-omutwalo/ov
-emitwalo/ov
-akakadde/ov
-obukadde/ov
-akawumbi/ov
-obuwumbi/ov
+satu/CENo
+ennya/CEov
+na/CENo
+taano/CENo
+omukaaga/CEov
+omusanvu/CEov
+omunaana/CEov
+omwenda/CEov
+ekkumi/CEov
+amakumi/CEov
+ekikumi/CEov
+ebikumu/CEov
+olukumi/CEov
+enkumi/CEov
+omutwalo/CEov
+emitwalo/CEov
+akakadde/CEov
+obukadde/CEov
+akawumbi/CEov
+obuwumbi/CEov
 # -------------------------------------------------------------------------------------------------------------------------- #
 akaayo/N6CE
 akabakko/N6CE
@@ -345,21 +345,20 @@ ekitoomi/N4CE
 ekitundu/N4CEzz
 woomerera/CEAd
 ebugwanjuba/CEov
-ebula
-wabula # Days remaining
+ebula  # remaining time
+wabula # remaining time
 ebuvanjuba/CEov
 ebweru/CEov
 ekyafaayo/N4CE
 ekyenda/N4CE
 eccupa/CEov
-edda
 eddaala/N5CEzz
 eddaame/CEov
 eddagala/N5CEzz
 eddakiika/CEovzz
 eddembe/CEov
-eddiba
-eddiini
+eddiba/N5CEzz
+eddiini/N5CEzz
 eddinisa
 eddira
 eddiro
