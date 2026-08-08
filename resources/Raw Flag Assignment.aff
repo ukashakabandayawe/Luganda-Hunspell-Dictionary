@@ -391,11 +391,16 @@ PFX RP 0 agee .
 PFX RP 0 twe .
 PFX RP 0 otwe .
 
+# The adverb "never"
+# Example silyangako, sikubangako 
+SFX nk Y 1
+SFX nk 0 ngako/ps [aeiou]
+
 # present simple tense and very near past tense negative subject marker
 # It also handles imperative negative e.g togenda!
 # Was using flag sd but  now uses ps
 PFX ps Y 34
-PFX ps 0 si/CP .
+PFX ps 0 si .
 PFX ps 0 to .
 PFX ps 0 ta .
 PFX ps 0 ata .
