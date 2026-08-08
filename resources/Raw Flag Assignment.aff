@@ -220,15 +220,15 @@ FORBIDWARN
 
 # Optional vowels at the begining of words 
 PFX ea Y 3
-PFX ea a 0/OC [aeiou]
-PFX ea e 0/OC [aeiou]
-PFX ea o 0/OC [aeiou]
+PFX ea a 0/OCCB [aeiou]
+PFX ea e 0/OCCB [aeiou]
+PFX ea o 0/OCCB [aeiou]
 
 # vowels at the end of possesives 
 SFX ae Y 3
-SFX ae a '/OCCP [aeiou]
-SFX ae e '/OCCP [aeiou]
-SFX ae o '/OCCP [aeiou]
+SFX ae a '/OCCPCB [aeiou]
+SFX ae e '/OCCPCB [aeiou]
+SFX ae o '/OCCPCB [aeiou]
 
 # Optional vowels at the begining of words e.g. akajanja-->kajanja 
 PFX ov Y 3
@@ -266,7 +266,7 @@ SFX pd o ange .
 SFX pd o abwe .
 
 # Numbers
-PFX No Y 26
+PFX No Y 27
 PFX No 0 ba . bili-->babili
 PFX No 0 aba .
 PFX No 0 e  . satu-->esatu
@@ -275,6 +275,7 @@ PFX No 0 bi . tano-->bitano
 PFX No 0 ebi .
 PFX No 0 bu . 
 PFX No 0 obu .
+PFX No 0 o  mu
 PFX No 0 gu  mu  emu-->gumu
 PFX No 0 ki  mu  emu-->kimu
 PFX No 0 li mu  emu-->limu
@@ -4882,7 +4883,7 @@ PFX N4 eky bw eky
 
 # Class V nouns 
 # Was using flag s and now uses flag Ne
-PFX N5 Y 52
+PFX N5 Y 53
 PFX N5 e   0    ebb
 PFX N5 e   0    edd
 PFX N5 e   0    eff
@@ -4895,9 +4896,10 @@ PFX N5 e   0    evv
 PFX N5 e   0    ezz
 PFX N5 eb  ama  ebb
 PFX N5 eb  ma   ebb
-PFX N5 ed  ama  edd[i] #eddiini --> amadiini
-PFX N5 ed  ma   edd[i]
-PFX N5 edd amal edd[^i] #eddwaliro --> amalwaliro
+PFX N5 ed  ama  edd[ai][ain] #eddiini --> amadiini
+PFX N5 ed  ma   edd[ai][ain]
+PFX N5 edd amal edd[uwi][nsab] #eddwaliro --> amalwaliro
+PFX N5 edd mal edd[uwi][nsab]
 PFX N5 ef  ama  eff
 PFX N5 ef  ma   eff
 PFX N5 eg  ama  egg
@@ -5389,38 +5391,38 @@ PFX zz eb gu  eb
 PFX zz eb ga  eb
 PFX zz eb ki  eb
 PFX zz eb bi  eb
-PFX zz edd otul edd[^i]
-PFX zz edd obul edd[^i]
-PFX zz edd olul edd[^i]
-PFX zz edd akal edd[^i]
-PFX zz edd ogul edd[^i]
-PFX zz edd agal edd[^i]
-PFX zz edd ekil edd[^i]
-PFX zz edd ebil edd[^i]
-PFX zz edd tul  edd[^i]
-PFX zz edd bul  edd[^i]
-PFX zz edd lul  edd[^i]
-PFX zz edd kal  edd[^i]
-PFX zz edd gul  edd[^i]
-PFX zz edd gal  edd[^i]
-PFX zz edd kil  edd[^i]
-PFX zz edd bil  edd[^i]
-PFX zz ed otu edd[i]
-PFX zz ed obu edd[i]
-PFX zz ed olu edd[i]
-PFX zz ed aka edd[i]
-PFX zz ed ogu edd[i]
-PFX zz ed aga edd[i]
-PFX zz ed eki edd[i]
-PFX zz ed ebi edd[i]
-PFX zz ed tu  edd[i]
-PFX zz ed bu  edd[i]
-PFX zz ed lu  edd[i]
-PFX zz ed ka  edd[i]
-PFX zz ed gu  edd[i]
-PFX zz ed ga  edd[i]
-PFX zz ed ki  edd[i]
-PFX zz ed bi  edd[i]
+PFX zz edd otud edd[aiu][aiun]
+PFX zz edd obud edd[aiu][aiun]
+PFX zz edd olud edd[aiu][aiun]
+PFX zz edd akad edd[aiu][aiun]
+PFX zz edd ogud edd[aiu][aiun]
+PFX zz edd agad edd[aiu][aiun]
+PFX zz edd ekid edd[aiu][aiun]
+PFX zz edd ebid edd[aiu][aiun]
+PFX zz edd tud  edd[aiu][aiun]
+PFX zz edd bud  edd[aiu][aiun]
+PFX zz edd lud  edd[aiu][aiun]
+PFX zz edd kad  edd[aiu][aiun]
+PFX zz edd gud  edd[aiu][aiun]
+PFX zz edd gad  edd[aiu][aiun]
+PFX zz edd kid  edd[aiu][aiun]
+PFX zz edd bid  edd[aiu][aiun]
+PFX zz edd otul edd[uwi][nsab]
+PFX zz edd obul edd[uwi][nsab]
+PFX zz edd olul edd[uwi][nsab]
+PFX zz edd akal edd[uwi][nsab]
+PFX zz edd ogul edd[uwi][nsab]
+PFX zz edd agal edd[uwi][nsab]
+PFX zz edd ekil edd[uwi][nsab]
+PFX zz edd ebil edd[uwi][nsab]
+PFX zz edd tul  edd[uwi][nsab]
+PFX zz edd bul  edd[uwi][nsab]
+PFX zz edd lul  edd[uwi][nsab]
+PFX zz edd kal  edd[uwi][nsab]
+PFX zz edd gul  edd[uwi][nsab]
+PFX zz edd gal  edd[uwi][nsab]
+PFX zz edd kil  edd[uwi][nsab]
+PFX zz edd bil  edd[uwi][nsab]
 PFX zz ejj otuy ejj
 PFX zz ejj obuy ejj
 PFX zz ejj oluy ejj
