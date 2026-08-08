@@ -4883,7 +4883,7 @@ PFX N4 eky bw eky
 
 # Class V nouns 
 # Was using flag s and now uses flag Ne
-PFX N5 Y 53
+PFX N5 Y 55
 PFX N5 e   0    ebb
 PFX N5 e   0    edd
 PFX N5 e   0    eff
@@ -4896,20 +4896,22 @@ PFX N5 e   0    evv
 PFX N5 e   0    ezz
 PFX N5 eb  ama  ebb
 PFX N5 eb  ma   ebb
-PFX N5 ed  ama  edd[ai][ain] #eddiini --> amadiini
-PFX N5 ed  ma   edd[ai][ain]
-PFX N5 edd amal edd[uwi][nsab] #eddwaliro --> amalwaliro
-PFX N5 edd mal edd[uwi][nsab]
+PFX N5 ed  ama  edd[aiu][ainu] #eddiini --> amadiini
+PFX N5 ed  ma   edd[aiu][ainu]
+PFX N5 edd amal edd[uwio][nsabg] #eddwaliro --> amalwaliro
+PFX N5 edd mal edd[uwio][nsabg]
 PFX N5 ef  ama  eff
 PFX N5 ef  ma   eff
 PFX N5 eg  ama  egg
 PFX N5 eg  ma   egg
 PFX N5 egg ama  eggw #eggwanga--amawanga
 PFX N5 egg ma   eggw
-PFX N5 ejj amay ejj.[n] # ejjanzi-->amayanzi,ejjinja
-PFX N5 ejj may  ejj.[n]
-PFX N5 ej  ama  ejj.[^n] # ejjambiya-->amajambiya
-PFX N5 ej  ma   ejj.[^n]
+PFX N5 ejj amay ejj.[mn] # ejjanzi-->amayanzi,ejjinja
+PFX N5 ejj may  ejj.[mn]
+PFX N5 ejj amay ejj..[mn] # ejjuuni
+PFX N5 ejj may  ejj..[mn]
+PFX N5 ej  ama  ejj.[^mn] # ejjambiya-->amajambiya
+PFX N5 ej  ma   ejj.[^mn]
 PFX N5 ek  ama  ekk # ekkubo-->amakubo
 PFX N5 ek  ma   ekk
 PFX N5 es  ama  ess # essasi-->amasasi
@@ -5183,38 +5185,38 @@ PFX zz eg  eki egg
 PFX zz eg  ki  egg
 PFX zz eg  ebi egg
 PFX zz eg  bi  egg
-PFX zz ej  otu ejj.[^n]
-PFX zz ej  tu  ejj.[^n]
-PFX zz ej  obu ejj.[^n]
-PFX zz ej  bu  ejj.[^n]
-PFX zz ej  olu ejj.[^n]
-PFX zz ej  lu  ejj.[^n]
-PFX zz ej  aka ejj.[^n]
-PFX zz ej  ka  ejj.[^n]
-PFX zz ej  ogu ejj.[^n]
-PFX zz ej  gu  ejj.[^n]
-PFX zz ej  aga ejj.[^n]
-PFX zz ej  ga  ejj.[^n]
-PFX zz ej  eki ejj.[^n]
-PFX zz ej  ki  ejj.[^n]
-PFX zz ej  ebi ejj.[^n]
-PFX zz ej  bi  ejj.[^n]
-PFX zz ejj otuy ejj.[n]
-PFX zz ejj tuy  ejj.[n]
-PFX zz ejj obuy ejj.[n]
-PFX zz ejj buy  ejj.[n]
-PFX zz ejj oluy ejj.[n]
-PFX zz ejj luy  ejj.[n]
-PFX zz ejj akay ejj.[n]
-PFX zz ejj kay  ejj.[n]
-PFX zz ejj oguy ejj.[n]
-PFX zz ejj guy  ejj.[n]
-PFX zz ejj agay ejj.[n]
-PFX zz ejj gay  ejj.[n]
-PFX zz ejj ekiy ejj.[n]
-PFX zz ejj kiy  ejj.[n]
-PFX zz ejj ebiy ejj.[n]
-PFX zz ejj biy  ejj.[n]
+PFX zz ej  otu ejj.[^mn]
+PFX zz ej  tu  ejj.[^mn]
+PFX zz ej  obu ejj.[^mn]
+PFX zz ej  bu  ejj.[^mn]
+PFX zz ej  olu ejj.[^mn]
+PFX zz ej  lu  ejj.[^mn]
+PFX zz ej  aka ejj.[^mn]
+PFX zz ej  ka  ejj.[^mn]
+PFX zz ej  ogu ejj.[^mn]
+PFX zz ej  gu  ejj.[^mn]
+PFX zz ej  aga ejj.[^mn]
+PFX zz ej  ga  ejj.[^mn]
+PFX zz ej  eki ejj.[^mn]
+PFX zz ej  ki  ejj.[^mn]
+PFX zz ej  ebi ejj.[^mn]
+PFX zz ej  bi  ejj.[^mn]
+PFX zz ejj otuy ejj.[mn]
+PFX zz ejj tuy  ejj.[mn]
+PFX zz ejj obuy ejj.[mn]
+PFX zz ejj buy  ejj.[mn]
+PFX zz ejj oluy ejj.[mn]
+PFX zz ejj luy  ejj.[mn]
+PFX zz ejj akay ejj.[mn]
+PFX zz ejj kay  ejj.[mn]
+PFX zz ejj oguy ejj.[mn]
+PFX zz ejj guy  ejj.[mn]
+PFX zz ejj agay ejj.[mn]
+PFX zz ejj gay  ejj.[mn]
+PFX zz ejj ekiy ejj.[mn]
+PFX zz ejj kiy  ejj.[mn]
+PFX zz ejj ebiy ejj.[mn]
+PFX zz ejj biy  ejj.[mn]
 PFX zz ek  otu ekk
 PFX zz ek  tu  ekk
 PFX zz ek  obu ekk
@@ -5407,22 +5409,22 @@ PFX zz edd gud  edd[aiu][aiun]
 PFX zz edd gad  edd[aiu][aiun]
 PFX zz edd kid  edd[aiu][aiun]
 PFX zz edd bid  edd[aiu][aiun]
-PFX zz edd otul edd[uwi][nsab]
-PFX zz edd obul edd[uwi][nsab]
-PFX zz edd olul edd[uwi][nsab]
-PFX zz edd akal edd[uwi][nsab]
-PFX zz edd ogul edd[uwi][nsab]
-PFX zz edd agal edd[uwi][nsab]
-PFX zz edd ekil edd[uwi][nsab]
-PFX zz edd ebil edd[uwi][nsab]
-PFX zz edd tul  edd[uwi][nsab]
-PFX zz edd bul  edd[uwi][nsab]
-PFX zz edd lul  edd[uwi][nsab]
-PFX zz edd kal  edd[uwi][nsab]
-PFX zz edd gul  edd[uwi][nsab]
-PFX zz edd gal  edd[uwi][nsab]
-PFX zz edd kil  edd[uwi][nsab]
-PFX zz edd bil  edd[uwi][nsab]
+PFX zz edd otul edd[uwio][nsab]
+PFX zz edd obul edd[uwio][nsab]
+PFX zz edd olul edd[uwio][nsab]
+PFX zz edd akal edd[uwio][nsab]
+PFX zz edd ogul edd[uwio][nsab]
+PFX zz edd agal edd[uwio][nsab]
+PFX zz edd ekil edd[uwio][nsab]
+PFX zz edd ebil edd[uwio][nsab]
+PFX zz edd tul  edd[uwio][nsab]
+PFX zz edd bul  edd[uwio][nsab]
+PFX zz edd lul  edd[uwio][nsab]
+PFX zz edd kal  edd[uwio][nsab]
+PFX zz edd gul  edd[uwio][nsab]
+PFX zz edd gal  edd[uwio][nsab]
+PFX zz edd kil  edd[uwio][nsab]
+PFX zz edd bil  edd[uwio][nsab]
 PFX zz ejj otuy ejj
 PFX zz ejj obuy ejj
 PFX zz ejj oluy ejj
