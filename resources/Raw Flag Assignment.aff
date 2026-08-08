@@ -294,6 +294,16 @@ PFX No 0 ogu mu  ogumu
 PFX No 0 otu mu  otumu
 PFX No 0 ezi mu
 
+# All, both, three of them
+PFX bt Y 6
+PFX bt b gy .
+PFX bt b g .
+PFX bt b by .
+PFX bt b bw .
+PFX bt b z .
+PFX bt b tw .
+
+
 # A person who does an act e.g. omuli, omukubi, omwambazi
 # It can also be used like the Luganda equivalent of English's "just"
 # e.g. okulaba obulabi, kulya buli
@@ -4464,7 +4474,7 @@ PFX iM 0 kwandye .
 PFX iM 0 gandye .
 PFX iM 0 twandye .
 
-# object markersea
+# object markers
 # Formally used F but now using Ob
 PFX Ob Y 19
 PFX Ob 0 n  [^lmnbp]
