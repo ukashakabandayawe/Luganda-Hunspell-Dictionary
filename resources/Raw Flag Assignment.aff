@@ -4883,8 +4883,9 @@ PFX N4 eky bw eky
 
 # Class V nouns 
 # Was using flag s and now uses flag Ne
-PFX N5 Y 55
+PFX N5 Y 58
 PFX N5 e   0    ebb
+PFX N5 e   0    ecc
 PFX N5 e   0    edd
 PFX N5 e   0    eff
 PFX N5 e   0    egg
@@ -4896,6 +4897,8 @@ PFX N5 e   0    evv
 PFX N5 e   0    ezz
 PFX N5 eb  ama  ebb
 PFX N5 eb  ma   ebb
+PFX N5 ec  ama  ecc
+PFX N5 ec  ma   ecc
 PFX N5 ed  ama  edd[aiu][ainu] #eddiini --> amadiini
 PFX N5 ed  ma   edd[aiu][ainu]
 PFX N5 edd amal edd[uwio][nsabg] #eddwaliro --> amalwaliro
@@ -5040,7 +5043,7 @@ PFX yy 0 otw' [aeiou]
 # Prefixes of nouns based on size e.g akaana, obwaana, ebyaana
 # This rule is explosive, so I missed some words, knowingly and unknowingly
 # Was using flag z but now uses zz
-PFX zz Y 457
+PFX zz Y 473
 PFX zz omu otu omu # omusajja-->otusajja
 PFX zz omu tu  omu
 PFX zz omu obu omu # omusajja-->obusajja
@@ -5153,6 +5156,22 @@ PFX zz eki eki eki
 PFX zz eki ki  eki
 PFX zz eki ebi  eki
 PFX zz eki bi eki # Class V below
+PFX zz ec otu ecc
+PFX zz ec tu  ecc
+PFX zz ec obu ecc
+PFX zz ec bu  ecc
+PFX zz ec olu ecc
+PFX zz ec lu  ecc
+PFX zz ec aka ecc
+PFX zz ec ka  ecc
+PFX zz ec ogu ecc
+PFX zz ec gu  ecc
+PFX zz ec aga ecc
+PFX zz ec ga  ecc
+PFX zz ec eki ecc
+PFX zz ec ki  ecc
+PFX zz ec ebi ecc
+PFX zz ec bi  ecc
 PFX zz ef  otu eff
 PFX zz ef  tu  eff
 PFX zz ef  obu eff
