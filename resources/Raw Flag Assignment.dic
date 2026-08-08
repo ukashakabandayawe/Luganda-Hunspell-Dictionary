@@ -26,103 +26,6 @@
 # So, it's better to use this file to assign flags to verbs in the dictionary instead of using the dictionary itself.
 #
 #
-# ----------------------------------------------- possesive pronouns ----------------------------------------------- #
-owa/eaae
-aba/eaae
-ogwa/eaae
-egya/eaae
-eya/eaae
-eza/eaae
-ekya/eaae
-ebya/eaae 
-elya/eaae 
-aga/eaae
-aka/eaae
-obwa/eaae
-olwa/eaae
-eza/eaae
-okwa/eaae
-aga/eaae
-otwa/eaae
-# ------------------------------------------------------------------------------------------------------------------ #
-# ----------------------------------------------- demonstratives --------------------------------------------------- #
-oyo
-abo
-ogwo
-egyo
-eyo
-ezo
-ekyo
-ebyo 
-elyo 
-ago
-ako
-obwo
-olwo
-ezo
-okwo
-ago
-otwo
-wuuyo
-baabo
-gugwo
-gigyo
-yiiyo
-ziizo
-kiikyo
-biibyo 
-liilyo 
-gaago
-kaako
-buubwo
-luulwo
-ziizo
-kuukwo
-gaago
-tuutwo
-# ------------------------------------------------------------------------------------------------------------------ #
-# ------------------------------------- possesive determiners(your, his/her, their) --------------------------------------- #
-wo/pd
-bo/pd
-gwo/pd
-yo/pd
-zo/pd
-gyo/pd
-kyo/pd
-byo/pd 
-lyo/pd 
-go/pd
-ko/pd
-bwo/pd
-lwo/pd
-kwo/pd
-two/pd
-# -------------------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- numbers ---------------------------------------------------------------------- #
-mu/CENo 
-biri/CENo
-bili
-satu/CENo
-ennya/CEov
-na/CENo
-taano/CENo
-omukaaga/CEov
-omusanvu/CEov
-omunaana/CEov
-omwenda/CEov
-ekkumi/CEov
-amakumi/CEov
-ekikumi/CEov
-ebikumu/CEov
-olukumi/CEov
-enkumi/CEov
-omutwalo/CEov
-emitwalo/CEov
-akakadde/CEov
-obukadde/CEov
-akawumbi/CEov
-obuwumbi/CEov
-# -------------------------------------------------------------------------------------------------------------------------- #
 akaayo/N6CE
 akabakko/N6CE
 akabalagala/N6CE
@@ -199,9 +102,7 @@ amadinda/CEov
 amafuta/CEov
 amagatte/ov
 amagenda/CEov
-eggezi/N5CE
 amaguzi/CEov
-eggye/N5CE
 amajaani/CEov
 amaka/CEov
 amakoloni/CEov
@@ -209,9 +110,7 @@ amakulu/CEov
 amakungula/CEov
 amakya/CEov
 amalaalo/CEov
-eddusu/N5CE
 amambuka/CEov
-eryanda/N5CEzz
 amanzaali/CEov
 amasanginzira/CEov
 amasannyalaze/CEovzz
@@ -222,6 +121,9 @@ amasira/CEov
 amata/CEov
 amataba/CEov
 amatigga/ov
+amawolu/CEov
+amawuggwe/CEov
+amawulire/CEov
 amawulire/CEov
 amazaalibwa/CEov
 amazima/CEov
@@ -239,7 +141,6 @@ bagiya
 balagavu/CENAAd
 balansi
 bambi
-nnange/Ob
 bbalaza
 bbiri
 bbo
@@ -250,16 +151,18 @@ bbululu
 bendera
 bi
 biici
-ki/Ob
 bisi/CENAAd
 bisibisi/CENAAd
 bisikwiti
 bizinensi
+bombi/bt
+bombiriri/bt
+bonna/bt
+bonsatule/bt
 Bubirigi
 budalasini
 buddo
 Bufalansa
-obufofoofo/ov
 Buganda
 Bulaaya
 bulaaza
@@ -270,39 +173,18 @@ bulyomu
 buzaabuzaa
 bwino
 byendo
-bombi/bt
-bonsatule/bt
-bombiriri/bt
-bonna/bt
 caayi
 camufu/CENAAd
 cokoleeti
-edda/CEov
 ddala
 ddensite
-eddi/ov
 ddugavu/CENAAd
 ddumbi
 ddyo
-eddiguli/N5CE
 disitulikiti
 doodo
 doola
 duulu
-# ------------------------------------------------ okuduumira(to command): Intransitive ------------------------------------- #
-duumira/OriginalIntransitive
-duumire/ModifiedIntransitive
-duumidde/PastIntransitive
-duumirwa/PassiveIntransitive
-duumirwe/ModifiedPassiveIntransitive
-duumiddwa/PastPassiveIntransitive
-duumiza/CausativeIntransitive
-duumize/ModifiedCausativeIntransitive
-duumizza/PastCausativeIntransitive
-duumirira/BenefactiveIntransitive
-duumirire/ModifiedBenefactiveIntransitive
-duumiridde/PastBenefactiveIntransitive
-# --------------------------------------------------------------------------------------------------------------------------- #
 e
 ebbaasa/N5CEzz
 ebbago/N5CE
@@ -326,50 +208,30 @@ ebbujje/N5CE
 ebbumba/CEov
 ebbumbiro/CEov
 ebbwa/N5CEzz
-ekibikka/N4CEzz
-ekijanjaalo/N4CE
-ekikomo/N4CEzz
-ekikonde/N4CEzz
-ekikunta/N4CEzz
-kyaafu/CEAd
-ekinyeebwa/N4CEzz
-ekinzaali/N4CEzz
-ekisale/N4CE
 ebisasiro/CEov
-ekiseera/N4CE
-sesa/CEAd
 ebisesemye/CEov
-ekisolo/N4CEzz
-ekisooto/N4CEzz
-ekitoomi/N4CE
-ekitundu/N4CEzz
-woomerera/CEAd
 ebugwanjuba/CEov
 ebula  # remaining time
-wabula # remaining time
 ebuvanjuba/CEov
 ebweru/CEov
-ekyafaayo/N4CE
-ekyenda/N4CE
 eccupa/CEov
+edda/CEov
 eddaala/N5CEzz
 eddaame/CEov
 eddagala/N5CEzz
 eddakiika/CEovzz
 eddembe/CEov
+eddi/ov
 eddiba/N5CEzz
+eddiguli/N5CE
 eddiini/N5CEzz
-eddinisa/N5CEzz
-# --------------------------------------------- okweddira(to adopt a totem): Reflexive ---------------------------------------------- #
-ddira/OriginalReflexive
-ddire/ModifiedReflexive
-ddirwa/PassiveReflexive
-# ----------------------------------------------------------------------------------------------------------------------------------- #
 eddiiro
+eddinisa/N5CEzz
 eddoboozi/N5CEzz
 eddogo/N5CE
 eddundiro/N5CE
 eddungu/N5CE
+eddusu/N5CE
 eddusu/N5CE
 edduuka/N5CEzz
 edduyiro/ov
@@ -383,26 +245,20 @@ effumbiro/N5CEzz
 effumu/N5CEzz
 eggaali/N5CEzz
 eggego/N5CE
+eggezi/N5CE
 eggolu/CEov
-amawolu/CEov
 eggombolola/N5CE
 eggonjebwa/CEov
 eggoonya/CEov
 egguggwe/CEov
-amawuggwe/CEov
 eggulire/CEov
-amawulire/CEov
 eggulu/CEov
 eggumba/N5CEzz
 eggwanga/N5CEov
 eggwanika/N5CEzz
 eggwolu/N5CE
+eggye/N5CE
 ejjambiya/N5CEzz
-# --------------------------------------------- okwejjeerera(to be found innocent): IntransitiveReflexive ---------------------------------------------- #
-jjeerera/OriginalIntransitiveReflexive
-jjeerere/ModifiedIntransitiveReflexive
-jjeeredde/PastIntransitiveReflexive
-# ----------------------------------------------------------------------------------------------------------------------------------- #
 ejjembe/N5CE
 ejjiiko/N5CEzz
 ejjinja/N5CEzz
@@ -425,6 +281,7 @@ ekibe/N4CEzz
 ekibegaabega/N4CEzz
 ekibi/N4CEzz
 ekibiina/N4CEzz
+ekibikka/N4CEzz
 ekibinja/N4CEzz
 ekibira/N4CEzz
 ekibiriiti/N4CEzz
@@ -456,6 +313,7 @@ ekigoma
 ekigongo
 ekigwo
 ekijambiya
+ekijanjaalo/N4CE
 ekijiiko
 ekijjukizo
 ekijjulo
@@ -476,13 +334,16 @@ ekikololo
 ekikolwa
 ekikomando
 ekikomera
+ekikomo/N4CEzz
 ekikomo
+ekikonde/N4CEzz
 ekikonde
 ekikoola
 ekikoosi
 ekikooyi
 ekikopo
 ekikumi
+ekikunta/N4CEzz
 ekikunta
 ekikuubo
 ekikwekweto
@@ -500,8 +361,10 @@ ekinusu
 ekinuuna
 ekinya
 ekinyebwa
+ekinyeebwa/N4CEzz
 ekinyolo
 ekinyonyi
+ekinzaali/N4CEzz
 ekipande
 ekipimo
 ekiraalo
@@ -529,11 +392,13 @@ ekisaasaazi
 ekisaawe
 ekisago
 ekisaka
+ekisale/N4CE
 ekisale
 ekisambi
 ekisanirizo
 ekisanja
 ekisanyi
+ekiseera/N4CE
 ekiseera
 ekiseke
 ekisenge
@@ -547,8 +412,10 @@ ekiso
 ekisobyo
 ekisodde
 ekisoko
+ekisolo/N4CEzz
 ekisolo
 ekisooka
+ekisooto/N4CEzz
 ekissi
 ekisu
 ekisubi/N4zz
@@ -576,8 +443,10 @@ ekitongole
 ekitontome
 ekitoogo
 ekitooke
+ekitoomi/N4CE
 ekittabantu
 ekituli
+ekitundu/N4CEzz
 ekitundu
 ekituufu
 ekivu
@@ -629,6 +498,7 @@ ekyaabwe
 ekyaalo/N4
 ekyaama/N4
 ekyaasa
+ekyafaayo/N4CE
 ekyaffe
 ekyalaani
 ekyamaguzi
@@ -649,6 +519,7 @@ ekyejo
 ekyekiro
 ekyekwaso
 ekyemisana
+ekyenda/N4CE
 ekyenda
 ekyenkya
 ekyensuti
@@ -920,6 +791,7 @@ erindaazi
 erinnya
 erinnya/N5CEov
 erinnyo/N5CEov
+eryanda/N5CEzz
 eryanyi/N5CEov
 eryato/N5zz
 eryenvu/N5yy
@@ -1046,6 +918,7 @@ kazambi
 kazooba
 kazzi
 keeki
+ki/Ob
 ki
 kidedde
 kiggala
@@ -1084,6 +957,7 @@ kulwa
 kulwaaki
 kumpi
 kwafu
+kyaafu/CEAd
 kyaafu
 kyenda
 kyenvu
@@ -1233,6 +1107,7 @@ nnakyemalira
 nnamung'oona
 nnamuwandu
 nnamuziga
+nnange/Ob
 nnannyini
 nnansi
 nnawolovu
@@ -1268,6 +1143,7 @@ obuddu
 obuddukiro
 obudongo
 obufere
+obufofoofo/ov
 obufumbo
 obufuzi
 obugaayavu
@@ -1911,9 +1787,9 @@ otwenge/Nxyy
 ovaceddo
 ow'eggonjebwa
 ow'ejoogo
+ow'empisa
 ow'endali
 ow'ettulu
-ow'empisa
 owange
 oyo
 paaka
@@ -1943,6 +1819,7 @@ sajja
 sanyufu
 sava
 seegu
+sesa/CEAd
 si
 sikaala
 sikaati
@@ -2027,6 +1904,7 @@ tuufu
 tuuka
 visa
 vubufu
+wabula # remaining time
 wabweru
 wadde
 wagulu
@@ -2068,6 +1946,7 @@ woma
 womba
 wombeefu
 wonna
+woomerera/CEAd
 wootameroni
 wooteri
 wummula
@@ -2502,6 +2381,42 @@ akapuusi
 ti/NALT
 tyo
 # --------------------------------------------------------------------------------------------------------- #
+# ----------------------------------------------- demonstratives --------------------------------------------------- #
+oyo
+abo
+ogwo
+egyo
+eyo
+ezo
+ekyo
+ebyo 
+elyo 
+ago
+ako
+obwo
+olwo
+ezo
+okwo
+ago
+otwo
+wuuyo
+baabo
+gugwo
+gigyo
+yiiyo
+ziizo
+kiikyo
+biibyo 
+liilyo 
+gaago
+kaako
+buubwo
+luulwo
+ziizo
+kuukwo
+gaago
+tuutwo
+# ------------------------------------------------------------------------------------------------------------------ #
 # -------------------------------------- eggi(egg) ----------------------------------------------------- #
 eggi/N5
 egi/NAzz
@@ -2546,6 +2461,31 @@ maamirwa
 maamirwe
 maamiddwa
 # ---------------------------------------------------------------------------------------------------------- #
+# ------------------------------------------- numbers ---------------------------------------------------------------------- #
+mu/CENo 
+biri/CENo
+bili
+satu/CENo
+ennya/CEov
+na/CENo
+taano/CENo
+omukaaga/CEov
+omusanvu/CEov
+omunaana/CEov
+omwenda/CEov
+ekkumi/CEov
+amakumi/CEov
+ekikumi/CEov
+ebikumu/CEov
+olukumi/CEov
+enkumi/CEov
+omutwalo/CEov
+emitwalo/CEov
+akakadde/CEov
+obukadde/CEov
+akawumbi/CEov
+obuwumbi/CEov
+# -------------------------------------------------------------------------------------------------------------------------- #
 # --------------------------------- okuba(to be) ------------------------------------------------- #
 li/NApsnpRFrfggPSDPSCscWNwnStstLT
 liko/NAnpRPPSDPWNwnStstSTsTNNGGBGBFBDBEBXEDEBEFEMFDFGwgWGWFSC
@@ -4456,6 +4396,20 @@ dibiddewo
 dibiddewooko
 dibiddeengako
 # ----------------------------------------------------------------------------------------- #
+# ------------------------------------------------ okuduumira(to command): Intransitive ------------------------------------- #
+duumira/OriginalIntransitive
+duumire/ModifiedIntransitive
+duumidde/PastIntransitive
+duumirwa/PassiveIntransitive
+duumirwe/ModifiedPassiveIntransitive
+duumiddwa/PastPassiveIntransitive
+duumiza/CausativeIntransitive
+duumize/ModifiedCausativeIntransitive
+duumizza/PastCausativeIntransitive
+duumirira/BenefactiveIntransitive
+duumirire/ModifiedBenefactiveIntransitive
+duumiridde/PastBenefactiveIntransitive
+# --------------------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okufa(to die): Intransitive --------------------------------------- #
 fa/OriginalIntransitive
 fe/ModifiedIntransitive
@@ -22850,6 +22804,11 @@ bungululira/BenefactiveReflexive
 bungululire/ModifiedBenefactiveReflexive
 bungululidde/PastBenefactiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------------- okweddira(to adopt a totem): Reflexive ---------------------------------------------- #
+ddira/OriginalReflexive
+ddire/ModifiedReflexive
+ddirwa/PassiveReflexive
+# ----------------------------------------------------------------------------------------------------------------------------------- #
 # ----------------------------------------- okwediima(to refuse): Intrasitive-Reflexive ----------------------------------------- #
 diima/OriginalIntransitiveReflexive
 diime/ModifiedIntransitiveReflexive
@@ -23268,6 +23227,11 @@ gwanyisa/CausativeReflexive
 gwanyise/ModifiedCausativeReflexive
 gwanyisizza/PastCausativeReflexive
 # ------------------------------------------------------------------------------------------------------------- #
+# --------------------------------------------- okwejjeerera(to be found innocent): IntransitiveReflexive ---------------------------------------------- #
+jjeerera/OriginalIntransitiveReflexive
+jjeerere/ModifiedIntransitiveReflexive
+jjeeredde/PastIntransitiveReflexive
+# ----------------------------------------------------------------------------------------------------------------------------------- #
 # ------------------------------------ okwejjusa(to regret): Reflexive ------------------------------------ #
 jjusa/OriginalReflexive
 jjuse/ModifiedReflexive
@@ -24134,6 +24098,42 @@ yunira/BenefactiveReflexive
 yunire/ModifiedBenefactiveReflexive
 yunidde/PastBenefactiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
+# ------------------------------------- possesive determiners(your, his/her, their) --------------------------------------- #
+wo/pd
+bo/pd
+gwo/pd
+yo/pd
+zo/pd
+gyo/pd
+kyo/pd
+byo/pd 
+lyo/pd 
+go/pd
+ko/pd
+bwo/pd
+lwo/pd
+kwo/pd
+two/pd
+# -------------------------------------------------------------------------------------------------------------------------- #
+# ----------------------------------------------- possesive pronouns ----------------------------------------------- #
+owa/eaae
+aba/eaae
+ogwa/eaae
+egya/eaae
+eya/eaae
+eza/eaae
+ekya/eaae
+ebya/eaae 
+elya/eaae 
+aga/eaae
+aka/eaae
+obwa/eaae
+olwa/eaae
+eza/eaae
+okwa/eaae
+aga/eaae
+otwa/eaae
+# ------------------------------------------------------------------------------------------------------------------ #
 # ------------------------------------------- sooka(first): Type-II Transitive  ------------------------------------------------ #
 sook'ojje
 sooka/OriginalType-IITransitive
