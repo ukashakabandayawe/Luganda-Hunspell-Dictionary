@@ -265,6 +265,35 @@ SFX pd o e .
 SFX pd o ange .
 SFX pd o abwe .
 
+# Numbers
+PFX No Y 26
+PFX No 0 ba . bili-->babili
+PFX No 0 aba .
+PFX No 0 e  . satu-->esatu
+PFX No 0 a  . na-->ana
+PFX No 0 bi . tano-->bitano
+PFX No 0 ebi .
+PFX No 0 bu . 
+PFX No 0 obu .
+PFX No 0 gu  mu  emu-->gumu
+PFX No 0 ki  mu  emu-->kimu
+PFX No 0 li mu  emu-->limu
+PFX No 0 ka mu  kamu
+PFX No 0 lu mu  lumu
+PFX No 0 ku mu  kumu
+PFX No 0 gu mu  gumu
+PFX No 0 tu mu  tumu
+PFX No 0 zi mu
+PFX No 0 egu mu  emu-->gumu
+PFX No 0 eki mu  emu-->kimu
+PFX No 0 eli mu  emu-->limu
+PFX No 0 aka mu  akamu
+PFX No 0 elu mu  elumu
+PFX No 0 oku mu  okumu
+PFX No 0 ogu mu  ogumu
+PFX No 0 otu mu  otumu
+PFX No 0 ezi mu
+
 # A person who does an act e.g. omuli, omukubi, omwambazi
 # It can also be used like the Luganda equivalent of English's "just"
 # e.g. okulaba obulabi, kulya buli
@@ -4435,7 +4464,7 @@ PFX iM 0 kwandye .
 PFX iM 0 gandye .
 PFX iM 0 twandye .
 
-# object markers
+# object markersea
 # Formally used F but now using Ob
 PFX Ob Y 19
 PFX Ob 0 n  [^lmnbp]
