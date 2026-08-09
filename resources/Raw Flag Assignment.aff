@@ -171,6 +171,8 @@ ICONV  ’ '
 
 NEEDAFFIX NA
 
+KEEPCASE KC
+
 COMPOUNDRULE 2
 COMPOUNDRULE (C1)(C2)
 COMPOUNDRULE (C3)(C4)
@@ -267,14 +269,14 @@ SFX pd o abwe .
 
 # Numbers
 PFX No Y 27
-PFX No 0 ba . bili-->babili
-PFX No 0 aba .
-PFX No 0 e  . satu-->esatu
-PFX No 0 a  . na-->ana
-PFX No 0 bi . tano-->bitano
-PFX No 0 ebi .
-PFX No 0 bu . 
-PFX No 0 obu .
+PFX No 0 ba [^aeiou] bili-->babili
+PFX No 0 aba [^aeiou] ababili-->abababili
+PFX No 0 e  [^aeiou] satu-->esatu
+PFX No 0 a  [^aeiou] na-->ana
+PFX No 0 bi [^aeiou] tano-->bitano
+PFX No 0 ebi [^aeiou] .
+PFX No 0 bu [^aeiou] 
+PFX No 0 obu [^aeiou] .
 PFX No 0 o  mu
 PFX No 0 gu  [ms][uo]  emu-->gumu
 PFX No 0 ki  [ms][uo]  emu-->kimu
@@ -355,7 +357,7 @@ PFX oo om otu [^aeiou]
 # I think these can also work for the very near past, near and distant past tenses e.g beezimbira, beezimbidde
 # Was using flag RD but now uses RP
 PFX RP Y 35
-PFX RP 0 nee/B1 .
+PFX RP 0 nee .
 PFX RP 0 wee .
 PFX RP 0 yee .
 PFX RP 0 twe .
@@ -4547,9 +4549,9 @@ PFX ob 0 ge [^aeiou]
 PFX ob 0 twe [^aeiou]
 
 # Adjectives
-PFX Ad Y 69
-PFX Ad 0 n [^jbnmlhprxq] # funda-->nfunda
-PFX Ad 0 en [^jbnmlhprxq]
+PFX Ad Y 71
+PFX Ad 0 n [^jbnmlhprxq][^k] # funda-->nfunda
+PFX Ad 0 en [^jbnmlhprxq][^k]
 PFX Ad 0 m b # bi-->mbi
 PFX Ad 0 em b
 PFX Ad l nd l.[^mn] #  lalu-->ndalu
@@ -4558,6 +4560,8 @@ PFX Ad l nn l.[mn] #  lungi-->nnungi
 PFX Ad l enn l.[mn]
 PFX Ad w mp w # e.g. wanvu-->mpanvu
 PFX Ad w emp w
+PFX Ad 0 enny [mn] # ennyimpi, ennyingi
+PFX Ad 0 ny [mn]  
 PFX Ad 0 nj [aeiou] # e.g. eru-->njeru
 PFX Ad 0 ma .
 PFX Ad 0 ama .
@@ -4579,8 +4583,8 @@ PFX Ad 0 gi .
 PFX Ad 0 egi .
 PFX Ad l dd l
 PFX Ad l edd l
-PFX Ad 0 zi .
-PFX Ad 0 ezi .
+PFX Ad 0 nzi kk
+PFX Ad 0 enzi kk
 PFX Ad 0 ki .
 PFX Ad 0 eki .
 PFX Ad 0 ky  [^aeiou] #eru-->kyeru
@@ -4852,6 +4856,10 @@ PFX N3 em  0   emm # e.g emmayiro
 PFX N3 enn ama ennyumba
 PFX N3 enn ma  ennyumba
 
+# plural of class III loan words
+PFX n3 Y 1
+PFX n3 0 zi .
+
 # Handles class III nouns like ennyumba, ennyimba, ennyondo 
 # without disrupting enyonyi, ennamba
 PFX nc Y 16
@@ -5011,6 +5019,18 @@ PFX N9 oku ma oku # okugulu --> magulu
 # Was using flag x and now uses Nx
 PFX Nx Y 1
 PFX Nx o 0 ot[uw]
+
+# size of nouns like kkapa
+PFX sz Y   8
+PFX sz 0 tu  [^aeiou]
+PFX sz 0 bu  [^aeiou]
+PFX sz 0 lu  [^aeiou]
+PFX sz 0 ka  [^aeiou]
+PFX sz 0 gu  [^aeiou]
+PFX sz 0 ga  [^aeiou]
+PFX sz 0 ki  [^aeiou]
+PFX sz 0 bi  [^aeiou]
+
 
 # The personal possessive prefix
 # Was using flag y but now uses yy
@@ -5272,39 +5292,7 @@ PFX zz emp gaw  emp
 PFX zz emp ekiw emp
 PFX zz emp kiw  emp
 PFX zz emp ebiw emp
-PFX zz emp biw  emp
-PFX zz et otu et
-PFX zz et tu  et
-PFX zz et obu et
-PFX zz et bu  et
-PFX zz et olu et
-PFX zz et lu  et
-PFX zz et aka et
-PFX zz et ka  et
-PFX zz et ogu et
-PFX zz et gu  et
-PFX zz et aga et
-PFX zz et ga  et
-PFX zz et eki et
-PFX zz et ki  et
-PFX zz et ebi et
-PFX zz et bi  et
-PFX zz ep otu ep
-PFX zz ep tu  ep
-PFX zz ep obu ep
-PFX zz ep bu  ep
-PFX zz ep olu ep
-PFX zz ep lu  ep
-PFX zz ep aka ep
-PFX zz ep ka  ep
-PFX zz ep ogu ep
-PFX zz ep gu  ep
-PFX zz ep aga ep
-PFX zz ep ga  ep
-PFX zz ep eki ep
-PFX zz ep ki  ep
-PFX zz ep ebi ep
-PFX zz ep bi  ep # Class IV below
+PFX zz emp biw  emp # Class IV below
 PFX zz em  ebi em
 PFX zz em  bi  em
 PFX zz eky otw eky
@@ -5435,6 +5423,38 @@ PFX zz ek  eki ekk
 PFX zz ek  ki  ekk
 PFX zz ek  ebi ekk
 PFX zz ek  bi  ekk
+PFX zz et otu et
+PFX zz et tu  et
+PFX zz et obu et
+PFX zz et bu  et
+PFX zz et olu et
+PFX zz et lu  et
+PFX zz et aka et
+PFX zz et ka  et
+PFX zz et ogu et
+PFX zz et gu  et
+PFX zz et aga et
+PFX zz et ga  et
+PFX zz et eki et
+PFX zz et ki  et
+PFX zz et ebi et
+PFX zz et bi  et
+PFX zz ep otu ep
+PFX zz ep tu  ep
+PFX zz ep obu ep
+PFX zz ep bu  ep
+PFX zz ep olu ep
+PFX zz ep lu  ep
+PFX zz ep aka ep
+PFX zz ep ka  ep
+PFX zz ep ogu ep
+PFX zz ep gu  ep
+PFX zz ep aga ep
+PFX zz ep ga  ep
+PFX zz ep eki ep
+PFX zz ep ki  ep
+PFX zz ep ebi ep
+PFX zz ep bi  ep 
 PFX zz es  otu ess
 PFX zz es  tu  ess
 PFX zz es  obu ess
