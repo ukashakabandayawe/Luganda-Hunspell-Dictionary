@@ -1,4 +1,4 @@
-21572
+21597
 #
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -262,6 +262,7 @@ ejjambiya/CEov
 ejjembe/N5CE
 ejjiiko/N5CEzz
 ejjinja/N5CEzz
+ejjo/CEov
 ejjobyo/CEov
 ejjoogo/CEov
 ejjovu/CEov
@@ -294,10 +295,13 @@ ekibuyaga/CEov
 ekicupuli/N4CEzz
 ekiddukano/N4CE
 ekide/N4CEzz
+ekidedde/CEov
 ekidiba/N4CEzz
 ekidomola/N4CEzz
+ekidongo/N4CEzz
 ekiduula/N4CE
 ekifaananyi/N4CEzz
+ekifo/N4CEzz
 ekifo/N4CEzz
 ekifuba/N4CEzz
 ekifulukwa/N4CEzz
@@ -338,7 +342,6 @@ ekikopo/N4CEzz
 ekikunta/N4CEzz
 ekikuubo/N4CEzz
 ekikwekweto/N4CE
-kyamu/CENAAd
 ekimera/N4CEzz
 ekimuli/N4CEzz
 ekimyanso/N4CEzz
@@ -354,8 +357,10 @@ ekinya/N4CEzz
 ekinyebwa/N4CEzz
 ekinyolo/N4CEzz
 ekinyonyi/N4CEzz
+ekinyonyi/N4CEzz
 ekinzaali/N4CEzz
 ekipande/N4CEzz
+ekipayoppayo/CEov
 ekipimo/N4CE
 ekiraalo/N4CE
 ekiraamo/N4CE
@@ -434,7 +439,6 @@ ekitoomi/N4CE
 ekittabantu/CEov
 ekituli/N4CEzz
 ekitundu/N4CEzz
-tuufu/CENAAd
 ekivu/N4CE
 ekivundu/N4CEzz
 ekivvulu/N4CEzz
@@ -458,13 +462,13 @@ ekiyumba/N4CEzz
 ekiyungu/N4CEzz
 ekizaalaggumba/CEov
 ekizibu/N4CEzz
-zibu/CENAAd
 ekizigo/N4CEzz
 ekizikiriza/N4CE
 ekizimba/N4CEzz
 ekizimbe/N4CEzz
 ekizinga/N4CEzz
 ekkalaamu/N3CEzz
+ekkampuni/N5CE
 ekkanisa/N5CEzz
 ekkanzu/N5CEzz
 ekkerenda/N5CEzz
@@ -595,7 +599,6 @@ endiima/N3CE
 endogoyi/N3CEzz
 endoko/N3CE
 endokwa/N3CEzz
-ekidongo/N4CEzz
 endongo/N3CE
 endowooza/N3CE
 enduula/N3CE
@@ -606,10 +609,8 @@ enfa/N3CE
 enfaana/N3CE
 enfaanana/N3CE
 enfo/N3CE
-ekifo/N4CEzz
 enfudu/N3CEzz      
 enfuna/N3CE
-funda/CENAAd
 enfuufu/N3CEdm
 eng'aali/N3CE
 eng'aano/N3CE
@@ -785,9 +786,9 @@ essafaali/ov
 essanga/N5CE
 essanyu/N5CE
 essasi/N5CE
-essaza/N5CE
 essavu/N5CEzz
 essawa/N5CEzz
+essaza/N5CE
 essigiri/N5CEzz
 essimu/N5CEzz
 essira/CEov
@@ -819,9 +820,9 @@ ettungulu/CEov
 ettuntu/CEov
 ettutumu/N3CE
 ettwale/N5CE
-evvinnyo/CEov
 evviini/CEov
 evviivi/N5CE
+evvinnyo/CEov
 evvu/CEov
 evvuuvuumira/CEov
 eweema/CEov
@@ -834,26 +835,10 @@ fayiro
 ffala
 ffe
 ffenna
-# ----------------------------------------- All of ---------------------------------------------------- #
-bonna
-zonna
-byonna
-mwenna
-kyonna
-konna
-lwonna
-yonna
-gwonna
-gyonna
-yenna
-lyonna
-gonna
-bwonna
-twonna
-# ------------------------------------------------------------------------------------------------------- #
 ffenne
 ffiga/n3
 firimu
+funda/CENAAd
 fundi/N1CE
 gatonnya
 gavumenti/n3
@@ -875,7 +860,6 @@ jangu
 jeemu/CENAAd
 jjajja/N1
 jjajjange/N1
-ejjo/CEov
 kaabuvubuka
 kaabuyonjo
 kaakati
@@ -916,20 +900,16 @@ kazooba
 kazzi/CENAAd
 keeki
 ki/Ob
-ekidedde/CEov
 kiggala/N1
 kiki
 kikye
 kikyo
-ekinyonyi/N4CEzz
-ekipayoppayo/CEov
 kiragala
 kitaka
 kitange/N1
 kiwanuka
 kkaansa
 kkakkamu/CENAAd
-ekkampuni/N5CE
 kkapa/sz
 kkono
 kkoosi
@@ -949,41 +929,9 @@ kulwaaki
 kumpi
 kwafu/CENAAd
 kyaafu/CENAAd
+kyamu/CENAAd
 kyenvu
-mwenyini
-benyini
-kyenyini
-byenyini
-lyenyini
-zenyini
-genyini
-kenyini
-gwenyini
-gyenyini
-lwenyini
-bwenyini
-yenyini
-kwenyini
-twenyini
-# ----------------------------------------- only ---------------------------------------------------- #
-bokka
-zokka
-byokka
-mwekka
-kyokka
-kokka
-lwokka
-yokka
-gwokka
-gyokka
-yekka
-lyokka
-gokka
-bwokka
-twokka
-# --------------------------------------------------------------------------------------------- #
 laavu
-omulaguzi/N1CE
 lala/CENAAd
 lalu/CENAAd
 lambulukufu/CENAAd
@@ -1586,6 +1534,7 @@ omulaalo
 omulaawe
 omulabe
 omulabirizi
+omulaguzi/N1CE
 omulaka
 omulamazi
 omulambo
@@ -1916,6 +1865,7 @@ ttivvi
 ttoggo
 tukuvu
 tuli
+tuufu/CENAAd
 tuufu
 tuuka
 visa
@@ -1990,6 +1940,7 @@ yunivasite
 za
 za
 zaabu
+zibu/CENAAd
 zibu
 zibula
 ziipu
@@ -2393,6 +2344,23 @@ akappussi/NAN6zz
 akappuusi/NAN6
 akapuusi
 # ---------------- #
+# ----------------------------------------- All of ---------------------------------------------------- #
+bonna
+zonna
+byonna
+mwenna
+kyonna
+konna
+lwonna
+yonna
+gwonna
+gyonna
+yenna
+lyonna
+gonna
+bwonna
+twonna
+# ------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- bwebati -------------------------------------------------------- #
 ti/NALT
 tyo
@@ -24146,6 +24114,23 @@ yunira/BenefactiveReflexive
 yunire/ModifiedBenefactiveReflexive
 yunidde/PastBenefactiveReflexive
 # --------------------------------------------------------------------------------------------------------- #
+# ----------------------------------------- only ---------------------------------------------------- #
+bokka
+zokka
+byokka
+mwekka
+kyokka
+kokka
+lwokka
+yokka
+gwokka
+gyokka
+yekka
+lyokka
+gokka
+bwokka
+twokka
+# --------------------------------------------------------------------------------------------- #
 # ------------------------------------- possesive determiners(your, his/her, their) --------------------------------------- #
 wo/pd
 bo/pd
@@ -24200,6 +24185,23 @@ sookera/BenefactiveTransitive
 sookere/ModifiedBenefactiveTransitive
 sookedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
+# ----------------------------------------- the very one ---------------------------------------------------- #
+mwenyini
+benyini
+kyenyini
+byenyini
+lyenyini
+zenyini
+genyini
+kenyini
+gwenyini
+gyenyini
+lwenyini
+bwenyini
+yenyini
+kwenyini
+twenyini
+# ----------------------------------------------------------------------------------------------------- #
 # ------------------------------ tukula(to become clean; to become pure): Deadjectival ---------------------------------- #
 tukula/OriginalDeadjective
 tukule/ModifiedDeadjective
