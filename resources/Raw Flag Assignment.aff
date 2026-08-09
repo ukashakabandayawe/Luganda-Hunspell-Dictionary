@@ -276,24 +276,24 @@ PFX No 0 ebi .
 PFX No 0 bu . 
 PFX No 0 obu .
 PFX No 0 o  mu
-PFX No 0 gu  mu  emu-->gumu
-PFX No 0 ki  mu  emu-->kimu
-PFX No 0 li mu  emu-->limu
-PFX No 0 ka mu  kamu
-PFX No 0 lu mu  lumu
-PFX No 0 ku mu  kumu
-PFX No 0 gu mu  gumu
-PFX No 0 tu mu  tumu
-PFX No 0 zi mu
-PFX No 0 egu mu  emu-->gumu
-PFX No 0 eki mu  emu-->kimu
-PFX No 0 eli mu  emu-->limu
-PFX No 0 aka mu  akamu
-PFX No 0 elu mu  elumu
-PFX No 0 oku mu  okumu
-PFX No 0 ogu mu  ogumu
-PFX No 0 otu mu  otumu
-PFX No 0 ezi mu
+PFX No 0 gu  [ms][uo]  emu-->gumu
+PFX No 0 ki  [ms][uo]  emu-->kimu
+PFX No 0 li [ms][uo]  emu-->limu
+PFX No 0 ka [ms][uo]  kamu
+PFX No 0 lu [ms][uo]  lumu
+PFX No 0 ku [ms][uo]  kumu
+PFX No 0 gu [ms][uo]  gumu
+PFX No 0 tu [ms][uo]  tumu
+PFX No 0 zi [ms][uo]
+PFX No 0 egu [ms][uo]  emu-->gumu
+PFX No 0 eki [ms][uo]  emu-->kimu
+PFX No 0 eli [ms][uo]  emu-->limu
+PFX No 0 aka [ms][uo]  akamu
+PFX No 0 elu [ms][uo]  elumu
+PFX No 0 oku [ms][uo]  okumu
+PFX No 0 ogu [ms][uo]  ogumu
+PFX No 0 otu [ms][uo]  otumu
+PFX No 0 ezi [ms][uo]
 
 # All, both, three of them
 PFX bt Y 6
@@ -4888,7 +4888,8 @@ PFX N4 eky bw eky
 
 # Class V nouns 
 # Was using flag s and now uses flag Ne
-PFX N5 Y 58
+PFX N5 Y 61
+PFX N5 e   0     .
 PFX N5 e   0    ebb
 PFX N5 e   0    ecc
 PFX N5 e   0    edd
@@ -4928,6 +4929,8 @@ PFX N5 et  ama  ett # ettama-->amatama
 PFX N5 et  ma   ett
 PFX N5 ev  ama  evv # evviivi-->amaviivi
 PFX N5 ev  ma   evv
+PFX N5 ep  ama  epp
+PFX N5 ep  ma   epp
 PFX N5 ez  ama  ezz # Ezziga-->amaziga
 PFX N5 ez  ma   ezz                      # Commented out # PFX N5 e   ama  e[^r] # eggi # PFX N5 e   ma   e[^r]
 PFX N5 eri ama  eri[^i] # erinnyo 
@@ -5045,10 +5048,159 @@ PFX yy 0 ag' [aeiou]
 PFX yy 0 tw' [aeiou]
 PFX yy 0 otw' [aeiou]
 
+PFX dm Y 148
+PFX dm omu obu omu # omusajja-->obusajja
+PFX dm omu bu  omu
+PFX dm omu aka omu # omusajja-->akasajja
+PFX dm omu ka  omu
+PFX dm omu bi  omu
+PFX dm omw aka omw # omwana-->akaana
+PFX dm omw ka  omw
+PFX dm omw obw omw # omwana-->obwana
+PFX dm omw bw  omw 
+PFX dm omw by  omw # CLASS III is below
+PFX dm en  obu en[^d] # ente-->obute
+PFX dm en  bu  en[^d]
+PFX dm end obul en[d]
+PFX dm end bul  en[d]
+PFX dm em  obu em # embuzi-->obubuzi
+PFX dm em  bu  em
+PFX dm en  aka en[^d]
+PFX dm en  ka  en[^d]
+PFX dm end akal en[d]
+PFX dm end kal  en[d]
+PFX dm em  aka em
+PFX dm em  ka  em
+PFX dm en  bi  en[^d]
+PFX dm end bil  en[d] # Class IV below
+PFX dm em  bi  em
+PFX dm eky obw eky
+PFX dm eky bw  eky
+PFX dm eky ak  eky
+PFX dm eky bya eky
+PFX dm eki obu eki
+PFX dm eki bu  eki
+PFX dm eki aka eki
+PFX dm eki ka  eki
+PFX dm eki bi eki # Class V below
+PFX dm ec obu ecc
+PFX dm ec bu  ecc
+PFX dm ec aka ecc
+PFX dm ec ka  ecc
+PFX dm ec bi  ecc
+PFX dm ef  obu eff
+PFX dm ef  bu  eff
+PFX dm ef  aka eff
+PFX dm ef  ka  eff
+PFX dm ef  bi  eff
+PFX dm eg  obu egg
+PFX dm eg  bu  egg
+PFX dm eg  aka egg
+PFX dm eg  ka  egg
+PFX dm eg  bi  egg
+PFX dm ej  obu ejj.[^mn]
+PFX dm ej  bu  ejj.[^mn]
+PFX dm ej  aka ejj.[^mn]
+PFX dm ej  ka  ejj.[^mn]
+PFX dm ej  bi  ejj.[^mn]
+PFX dm ejj obuy ejj.[mn]
+PFX dm ejj buy  ejj.[mn]
+PFX dm ejj akay ejj.[mn]
+PFX dm ejj kay  ejj.[mn]
+PFX dm ejj biy  ejj.[mn]
+PFX dm ek  obu ekk
+PFX dm ek  bu  ekk
+PFX dm ek  aka ekk
+PFX dm ek  ka  ekk
+PFX dm ek  bi  ekk
+PFX dm es  obu ess
+PFX dm es  bu  ess
+PFX dm es  aka ess
+PFX dm es  ka  ess
+PFX dm es  bi  ess
+PFX dm et  obu ett
+PFX dm et  bu  ett
+PFX dm et  aka ett
+PFX dm et  ka  ett
+PFX dm et  bi  ett
+PFX dm ev  obu evv
+PFX dm ev  bu  evv
+PFX dm ev  aka evv
+PFX dm ev  ka  evv
+PFX dm ev  bi  evv
+PFX dm ez  obu ezz
+PFX dm ez  bu  ezz
+PFX dm ez  aka ezz
+PFX dm ez  ka  ezz
+PFX dm ez  bi  ezz
+PFX dm ep  obu epp
+PFX dm ep  bu  epp
+PFX dm ep  aka epp
+PFX dm ep  ka  epp
+PFX dm ep  bi  epp
+PFX dm ery obwa erya
+PFX dm ery bwa  erya
+PFX dm ery aka  erya
+PFX dm ery ka   erya
+PFX dm ery bya  erya
+PFX dm ery obw  erya
+PFX dm ery bw   erya
+PFX dm ery ak   erya
+PFX dm ery by   erya
+PFX dm ery obw ery[^a]
+PFX dm ery bw  ery[^a]
+PFX dm ery ak  ery[^a]
+PFX dm ery by  ery[^a]
+PFX dm eri obu eri
+PFX dm eri bu  eri
+PFX dm eri aka eri
+PFX dm eri ka  eri
+PFX dm eri bi  eri
+PFX dm erii obuu erii
+PFX dm erii buu  erii
+PFX dm erii akaa erii
+PFX dm erii kaa  erii
+PFX dm erii bii  erii
+PFX dm eb obu eb
+PFX dm eb aka eb
+PFX dm eb bu  eb
+PFX dm eb ka  eb
+PFX dm eb bi  eb
+PFX dm edd obud edd[aiu][aiun]
+PFX dm edd akad edd[aiu][aiun]
+PFX dm edd bud  edd[aiu][aiun]
+PFX dm edd kad  edd[aiu][aiun]
+PFX dm edd bid  edd[aiu][aiun]
+PFX dm edd obul edd[uwio][nsab]
+PFX dm edd akal edd[uwio][nsab]
+PFX dm edd bul  edd[uwio][nsab]
+PFX dm edd kal  edd[uwio][nsab]
+PFX dm edd bil  edd[uwio][nsab]
+PFX dm ejj obuy ejj
+PFX dm ejj akay ejj
+PFX dm ejj buy  ejj
+PFX dm ejj kay  ejj
+PFX dm ejj biy  ejj # Class VI below
+PFX dm aka obu aka
+PFX dm aka bu  aka
+PFX dm aka aka aka
+PFX dm aka ka  aka
+PFX dm aka bi  aka
+PFX dm olu obu olu
+PFX dm olu bu  olu
+PFX dm olu aka olu
+PFX dm olu ka  olu
+PFX dm olu bi  olu
+PFX dm olw obw olw
+PFX dm olw bw  olw
+PFX dm olw ak  olw
+PFX dm olw by  olw # Class IX below
+PFX dm oku obu oku
+PFX dm oku aka oku
 # Prefixes of nouns based on size e.g akaana, obwaana, ebyaana
 # This rule is explosive, so I missed some words, knowingly and unknowingly
 # Was using flag z but now uses zz
-PFX zz Y 473
+PFX zz Y 521
 PFX zz omu otu omu # omusajja-->otusajja
 PFX zz omu tu  omu
 PFX zz omu obu omu # omusajja-->obusajja
@@ -5126,7 +5278,55 @@ PFX zz em  ki  em
 PFX zz en  ebi en[^d]
 PFX zz en  bi  en[^d]
 PFX zz end ebil en[d]
-PFX zz end bil  en[d] # Class IV below
+PFX zz end bil  en[d]
+PFX zz emp otuw emp
+PFX zz emp tuw  emp
+PFX zz emp obuw emp
+PFX zz emp buw  emp
+PFX zz emp oluw emp
+PFX zz emp luw  emp
+PFX zz emp akaw emp
+PFX zz emp kaw  emp
+PFX zz emp oguw emp
+PFX zz emp guw  emp
+PFX zz emp agaw emp
+PFX zz emp gaw  emp
+PFX zz emp ekiw emp
+PFX zz emp kiw  emp
+PFX zz emp ebiw emp
+PFX zz emp biw  emp
+PFX zz et otu et
+PFX zz et tu  et
+PFX zz et obu et
+PFX zz et bu  et
+PFX zz et olu et
+PFX zz et lu  et
+PFX zz et aka et
+PFX zz et ka  et
+PFX zz et ogu et
+PFX zz et gu  et
+PFX zz et aga et
+PFX zz et ga  et
+PFX zz et eki et
+PFX zz et ki  et
+PFX zz et ebi et
+PFX zz et bi  et
+PFX zz ep otu ep
+PFX zz ep tu  ep
+PFX zz ep obu ep
+PFX zz ep bu  ep
+PFX zz ep olu ep
+PFX zz ep lu  ep
+PFX zz ep aka ep
+PFX zz ep ka  ep
+PFX zz ep ogu ep
+PFX zz ep gu  ep
+PFX zz ep aga ep
+PFX zz ep ga  ep
+PFX zz ep eki ep
+PFX zz ep ki  ep
+PFX zz ep ebi ep
+PFX zz ep bi  ep # Class IV below
 PFX zz em  ebi em
 PFX zz em  bi  em
 PFX zz eky otw eky
