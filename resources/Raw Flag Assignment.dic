@@ -947,7 +947,7 @@ lisiiti/sz
 loole/sz
 looya/N1
 lubaale
-lujuuju/N1
+lujuuju/N1sz
 lumonde/sz
 lungi/CENAAd
 taggwa/CENAAd
@@ -1084,9 +1084,14 @@ nnyabo/N1
 nnyazaala/N1
 nnyini/N1
 nnyo
-# ----------- okunoonyereza ------------ #
-noonyereza
-# ----------------------- #
+# ----------------------------------------------------------- okunoonyereza(to investigate): Intransitive ------------------------------------------------------- #
+noonyereza/OriginalIntransitive
+noonyereze/ModifiedIntransitive
+noonyerezza/PastIntransitive
+noonyerereza/BenefactiveIntransitive
+noonyerereze/ModifiedBenefactiveIntransitive
+noonyererezza/PastBenefactiveIntransitive
+# --------------------------------------------------------------------------------------------------------------------------------- #
 entakera/CEov
 ntenvu
 nti
