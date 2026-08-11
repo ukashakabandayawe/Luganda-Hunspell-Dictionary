@@ -4837,8 +4837,10 @@ PFX N1 omu aba omu
 PFX N1 omu ba omu
 PFX N1 omw aba omw
 PFX N1 omw ba omw
-PFX N1 0 ba [^om] # taata--> bataata
-PFX N1 0 bi ffenne
+PFX N1 0   ba [^om]  # taata--> bataata
+PFX N1 0   bi ffenne
+PFX N1 mw  ba mw     # mwanyinaze
+PFX N1 mu  ba mu     # musanji
 
 # Class II nouns 
 # Used flag p but now uses N2
