@@ -4831,7 +4831,7 @@ PFX LT 0 wetu .
 
 # Class I nouns 
 # formally used flag n but now uses N1
-PFX N1 Y 7
+PFX N1 Y 9
 PFX N1 o 0 om
 PFX N1 omu aba omu
 PFX N1 omu ba omu
