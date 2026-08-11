@@ -173,6 +173,8 @@ NEEDAFFIX NA
 
 KEEPCASE KC
 
+CIRCUMFIX CX
+
 COMPOUNDRULE 2
 COMPOUNDRULE (C1)(C2)
 COMPOUNDRULE (C3)(C4)
@@ -260,6 +262,11 @@ SFX yo 0 yo [aeiou]
 # suffix "wo" e.g. tunulawo
 SFX wo Y 1
 SFX wo 0 wo [aeiou]
+
+# The adverb "never"
+# Example silyangako, sikubangako 
+SFX nk Y 1
+SFX nk 0 ngako [aeiou]
 
 # vowels at the end of possesive determiners
 SFX pd Y 3
@@ -392,11 +399,6 @@ PFX RP 0 gee .
 PFX RP 0 agee .
 PFX RP 0 twe .
 PFX RP 0 otwe .
-
-# The adverb "never"
-# Example silyangako, sikubangako 
-SFX nk Y 1
-SFX nk 0 ngako/ps [aeiou]
 
 # present simple tense and very near past tense negative subject marker
 # It also handles imperative negative e.g togenda!
