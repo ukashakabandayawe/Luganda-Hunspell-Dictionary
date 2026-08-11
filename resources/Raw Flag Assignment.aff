@@ -4565,62 +4565,62 @@ PFX Ad w emp w
 PFX Ad 0 enny [mn] # ennyimpi, ennyingi
 PFX Ad 0 ny [mn]  
 PFX Ad 0 nj [aeiou] # e.g. eru-->njeru
-PFX Ad 0 ma .
-PFX Ad 0 ama .
+PFX Ad 0 ma [^eiou]
+PFX Ad 0 ama [^eiou]
 PFX Ad 0 m [aeiou]
 PFX Ad 0 am [aeiou]
-PFX Ad 0 mu . 
-PFX Ad 0 omu .
+PFX Ad 0 mu [^aeiou]
+PFX Ad 0 omu [^aeiou]
 PFX Ad 0 mw [aeiou] # eru-->mweru
 PFX Ad 0 omw [aeiou]
-PFX Ad 0 mi .
-PFX Ad 0 emi . # kulu-->emikulu
+PFX Ad 0 mi [^aeiou]
+PFX Ad 0 emi [^aeiou] # kulu-->emikulu
 PFX Ad 0 my [aeiou] # eru-->myeru
 PFX Ad 0 emy [aeiou]
-PFX Ad 0 ba . 
-PFX Ad 0 aba .
-PFX Ad 0 gu .
-PFX Ad 0 ogu .
-PFX Ad 0 gi .
-PFX Ad 0 egi .
+PFX Ad 0 ba [^eo] 
+PFX Ad 0 aba [^eo]
+PFX Ad 0 gu [^aeiou]
+PFX Ad 0 ogu [^aeiou]
+PFX Ad 0 gi [^aeiou]
+PFX Ad 0 egi [^aeiou]
 PFX Ad l dd l
 PFX Ad l edd l
 PFX Ad 0 nzi kk
 PFX Ad 0 enzi kk
-PFX Ad 0 ki .
-PFX Ad 0 eki .
+PFX Ad 0 ki [^aeiou]
+PFX Ad 0 eki [^aeiou]
 PFX Ad 0 ky  [aeiou] #eru-->kyeru
 PFX Ad 0 eky [aeiou]
-PFX Ad 0 bi .
-PFX Ad 0 ebi .
+PFX Ad 0 bi [^aeiou]
+PFX Ad 0 ebi [^aeiou]
 PFX Ad 0 by [aeiou] # eru-->byeru
 PFX Ad 0 eby [aeiou]
-PFX Ad 0 li .
-PFX Ad 0 eli .
+PFX Ad 0 li [^aeiou]
+PFX Ad 0 eli [^aeiou]
 PFX Ad 0 ly [aeiou]
 PFX Ad 0 ely [aeiou]
-PFX Ad 0 ga .
-PFX Ad 0 aga .
+PFX Ad 0 ga [^eiou]
+PFX Ad 0 aga [^eiou]
 PFX Ad 0 g [aeiou]
 PFX Ad 0 ag [aeiou]
-PFX Ad 0 ka .
-PFX Ad 0 aka .
+PFX Ad 0 ka [^eiou]
+PFX Ad 0 aka [^eiou]
 PFX Ad 0 k [aeiou]
 PFX Ad 0 ak [aeiou]
-PFX Ad 0 bu .
-PFX Ad 0 obu .
+PFX Ad 0 bu [^aeiou]
+PFX Ad 0 obu [^aeiou]
 PFX Ad 0 bw [aeiou]
 PFX Ad 0 obw [aeiou]
-PFX Ad 0 lu .
-PFX Ad 0 olu .
+PFX Ad 0 lu [^aeiou]
+PFX Ad 0 olu [^aeiou]
 PFX Ad 0 lw [aeiou]
 PFX Ad 0 olw [aeiou]
-PFX Ad 0 ku .
-PFX Ad 0 oku .
+PFX Ad 0 ku [^aeiou]
+PFX Ad 0 oku [^aeiou]
 PFX Ad 0 kw [aeiou]
 PFX Ad 0 okw [aeiou]
-PFX Ad 0 tu .
-PFX Ad 0 otu .
+PFX Ad 0 tu [^aeiou]
+PFX Ad 0 otu [^aeiou]
 PFX Ad 0 tw [aeiou]
 PFX Ad 0 otw [aeiou]
 
