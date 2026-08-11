@@ -1000,24 +1000,24 @@ omuluka/CEov
 nafu/CENAAd
 munda
 munisipaali
-munnabiikira/N1
-munnabyobufuzi/N1
+omunnabiikira/N1CE
+omunnabyobufuzi/N1CE
 omunnadiini/N1CE
 omunnafuusi/N1CE
-munnakatemba/N1
-munnakibiina/N1
-munnakibuga/N1
+omunnakatemba/N1CE
+omunnakibiina/N1CE
+omunnakibuga/N1CE
 omunnakyalo/N1CE
 munnakyemalira/N1
 nnakyemalira/N1
 munnakyewa/N1
 nnamagoye/N1
-munnamawanga/N1
-munnamagye/N1
-munnamateeka/N1
-munnamawulire/N1
-munnamukisa/N1
-munnansi/N1
+omunnamawanga/N1CE
+omunnamagye/N1CE
+omunnamateeka/N1CE
+omunnamawulire/N1CE
+omunnamukisa/N1
+omunnansi/N1
 omunnasaayansi/N1CE
 omunnayuganda/N1CE
 omupaapaali/N2CE
@@ -1025,7 +1025,7 @@ omupeera/N2CE
 musangi/N1
 museenene
 musoke
-mutabani/N1
+omutabani/N1CE
 to/CENAAd # young
 mutunda
 muwakanya
@@ -1043,6 +1043,8 @@ byattu
 gattu
 lwattu
 bwattu
+kyattu
+gwattu
 # ------------------------------------------------------------------------------------------------------------- #
 bale/OR
 mweraba
