@@ -4589,8 +4589,8 @@ PFX Ad 0 nzi kk
 PFX Ad 0 enzi kk
 PFX Ad 0 ki .
 PFX Ad 0 eki .
-PFX Ad 0 ky  [^aeiou] #eru-->kyeru
-PFX Ad 0 eky [^aeiou]
+PFX Ad 0 ky  [aeiou] #eru-->kyeru
+PFX Ad 0 eky [aeiou]
 PFX Ad 0 bi .
 PFX Ad 0 ebi .
 PFX Ad 0 by [aeiou] # eru-->byeru
