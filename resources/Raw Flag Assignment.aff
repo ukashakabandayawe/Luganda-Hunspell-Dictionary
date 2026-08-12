@@ -4551,7 +4551,7 @@ PFX ob 0 ge [^aeiou]
 PFX ob 0 twe [^aeiou]
 
 # Adjectives
-PFX Ad Y 71
+PFX Ad Y 73
 PFX Ad 0 n [^jbnmlhprxq][^k] # funda-->nfunda
 PFX Ad 0 en [^jbnmlhprxq][^k]
 PFX Ad 0 m b # bi-->mbi
@@ -4577,6 +4577,8 @@ PFX Ad 0 mi [^aeiou]
 PFX Ad 0 emi [^aeiou] # kulu-->emikulu
 PFX Ad 0 my [aeiou] # eru-->myeru
 PFX Ad 0 emy [aeiou]
+PFX Ad 0 be   e
+PFX Ad 0 abe  e
 PFX Ad 0 ba [^eo] 
 PFX Ad 0 aba [^eo]
 PFX Ad 0 gu [^aeiou]
