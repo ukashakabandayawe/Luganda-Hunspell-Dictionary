@@ -178,9 +178,9 @@ PFX sc 0 kebuta .
 PFX sc 0 keluta .
 PFX sc 0 kekuta .
 PFX sc 0 ketuta .
-PFX sc 0 oto .
-PFX sc 0 ata .
-PFX sc 0 ete ."""
+PFX sc 0 w'oto .
+PFX sc 0 w'ata .
+PFX sc 0 w'ete ."""
 
 rule_right_raw = """
 PFX OR Y 16
