@@ -298,7 +298,7 @@ PFX No 0 egu [ms][uo]  emu-->gumu
 PFX No 0 eki [ms][uo]  emu-->kimu
 PFX No 0 eli [ms][uo]  emu-->limu
 PFX No 0 aka [ms][uo]  akamu
-PFX No 0 elu [ms][uo]  elumu
+PFX No 0 olu [ms][uo]  elumu
 PFX No 0 oku [ms][uo]  okumu
 PFX No 0 ogu [ms][uo]  ogumu
 PFX No 0 otu [ms][uo]  otumu
@@ -4856,7 +4856,7 @@ PFX N2 omw my  omw
 # Class III nouns 
 # Was using flag q but now uses N3
 PFX N3 Y 5
-PFX N3 e   0   e[^n][^n]
+PFX N3 e   0   e.[^n]
 PFX N3 en  0   enn
 PFX N3 em  0   emm # e.g emmayiro
 PFX N3 enn ama ennyumba
@@ -4991,18 +4991,22 @@ PFX bu a bu a
 
 # Class VII nouns 
 # Was using flag u and now uses N7 
-PFX N7 Y 11
+PFX N7 Y 15
 PFX N7 o    0    ol[wu]
 PFX N7 olul enn  olul # olulimi-->ennimi
 PFX N7 olul n    olul
 PFX N7 olu  en   olu.[^mn]
 PFX N7 olu  n    olu.[^mn]
-PFX N7 olu  em   olu[bp] # olubuto-->embuto
-PFX N7 olu  m    olu[bp] # mpapula
-PFX N7 olu  enzi oluggi # Enziggi
-PFX N7 olu  nzi  oluggi
+PFX N7 olu  em   olu[bpm] # olubuto-->embuto
+PFX N7 olu  m    olu[bpm] # mpapula
+PFX N7 olu  enzi olugg # Enziggi
+PFX N7 olu  nzi  olugg
 PFX N7 olw  enny olwendo
 PFX N7 olw  nny  olwendo
+PFX N7 olu  en  olun    # olunaku
+PFX N7 olu  n   olun
+PFX N7 olw  enj olw  # olweyo 
+PFX N7 olw  nj  olw
 
 # Class VIII nouns (large stuff)
 # Was using flag v and now uses N8
@@ -5204,7 +5208,7 @@ PFX dm oku aka oku
 # Prefixes of nouns based on size e.g akaana, obwaana, ebyaana
 # This rule is explosive, so I missed some words, knowingly and unknowingly
 # Was using flag z but now uses zz
-PFX zz Y 537
+PFX zz Y 553
 PFX zz omu otu omu # omusajja-->otusajja
 PFX zz omu tu  omu
 PFX zz omu obu omu # omusajja-->obusajja
@@ -5283,22 +5287,38 @@ PFX zz en  ebi en[^d]
 PFX zz en  bi  en[^d]
 PFX zz end ebil en[d]
 PFX zz end bil  en[d]
-PFX zz emp otuw emp
+PFX zz emp otuy empi
+PFX zz emp tuy  empi
+PFX zz emp obuy empi
+PFX zz emp buy  empi
+PFX zz emp oluy empi
+PFX zz emp luy  empi
+PFX zz emp akay empi
+PFX zz emp kay  empi
+PFX zz emp oguy empi
+PFX zz emp guy  empi
+PFX zz emp agay empi
+PFX zz emp gay  empi
+PFX zz emp ekiy empi
+PFX zz emp kiy  empi
+PFX zz emp ebiy empi
+PFX zz emp biy  empi
+PFX zz emp otuw emp[^i][^i]
 PFX zz emp tuw  emp
-PFX zz emp obuw emp
+PFX zz emp obuw emp[^i]
 PFX zz emp buw  emp
-PFX zz emp oluw emp
+PFX zz emp oluw emp[^i]
 PFX zz emp luw  emp
-PFX zz emp akaw emp
+PFX zz emp akaw emp[^i]
 PFX zz emp kaw  emp
-PFX zz emp oguw emp
+PFX zz emp oguw emp[^i]
 PFX zz emp guw  emp
-PFX zz emp agaw emp
+PFX zz emp agaw emp[^i]
 PFX zz emp gaw  emp
-PFX zz emp ekiw emp
+PFX zz emp ekiw emp[^i]
 PFX zz emp kiw  emp
-PFX zz emp ebiw emp
-PFX zz emp biw  emp # Class IV below
+PFX zz emp ebiw emp[^i]
+PFX zz emp biw  emp[^i] # Class IV below
 PFX zz em  ebi em
 PFX zz em  bi  em
 PFX zz eky otw eky
