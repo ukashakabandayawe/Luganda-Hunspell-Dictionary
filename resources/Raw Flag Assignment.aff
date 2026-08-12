@@ -240,6 +240,21 @@ PFX ov a 0 [aeiou]
 PFX ov e 0 [aeiou]
 PFX ov o 0 [aeiou]
 
+# The following 4 rules add an optional vowel 
+PFX AE Y 3
+PFX AE 0 a [^aeiou]
+PFX AE 0 e [^aeiou]
+PFX AE 0 o [^aeiou]
+
+PFX va Y 1
+PFX va 0 a [^aeiou]
+
+PFX ve Y 1
+PFX ve 0 e [^aeiou]
+
+PFX vo Y 1
+PFX vo 0 o [^aeiou]
+
 # suffix "ko" in words like okulyako, okulabako, fumbako
 # Was using flag A but now uses ko
 SFX ko Y 1
@@ -268,11 +283,47 @@ SFX wo 0 wo [aeiou]
 SFX nk Y 1
 SFX nk 0 ngako [aeiou]
 
-# vowels at the end of possesive determiners
-SFX pd Y 3
+# Suffixes at the end of possesive determiners
+SFX pd Y 18
 SFX pd o e .
 SFX pd o ange .
-SFX pd o abwe .
+SFX pd o affe .
+SFX pd o ammwe .
+SFX pd o aabwe .
+SFX pd o aagwo .
+SFX pd o aayo  .
+SFX pd o aazo  .
+SFX pd o aagyo .
+SFX pd o aakyo .
+SFX pd o aabyo .
+SFX pd o aalyo .
+SFX pd o aago  .
+SFX pd o aako  .
+SFX pd o aabwo .
+SFX pd o aalwo .
+SFX pd o aakwo .
+SFX pd o aatwo .
+
+# Suffixes at the end of possesive determiners
+SFX pc Y 18
+SFX pc o e o
+SFX pc o ange o
+SFX pc o affe o
+SFX pc o ammwe o
+SFX pc o abwe o
+SFX pc o agwo o
+SFX pc o ayo  o
+SFX pc o azo  o
+SFX pc o agyo o
+SFX pc o akyo o
+SFX pc o abyo o
+SFX pc o alyo o
+SFX pc o ago  o
+SFX pc o ako  o
+SFX pc o abwo o
+SFX pc o alwo o
+SFX pc o akwo o
+SFX pc o atwo o
 
 # Numbers
 PFX No Y 27
