@@ -1,4 +1,4 @@
-21612
+21632
 #
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -160,6 +160,7 @@ balagavu/CENAAd
 balansi
 bale/OR
 bambi
+battima
 bbalaza
 bbo
 bbomu
@@ -689,6 +690,7 @@ enkalakkalira/N3CE
 enkalamata/N3CE
 enkali/N3CE
 enkambi/N3CE
+enkana/CENAAd
 enkanyanya/N3CE
 enkeera/N3CE
 enkejje/N3CEdm
@@ -731,6 +733,7 @@ ennyanja/N3CEzz
 ennyimba/N3CEzznc
 ennyimbe/CEovzz
 ennyindo/N3CEzznc
+ennyini/CENAAd
 ennyondo/N3CEzznc
 ennyongeza/N3CEdm
 ennyonta/N3CE
@@ -877,6 +880,7 @@ evvu/CEov
 evvuuvuumira/CEov
 eweema/CEov
 ewuzi/N3
+eyagazi/CENAAd
 eyattayimu
 ezziga/N5CEdm
 ezzike/N5CEzz
@@ -941,12 +945,10 @@ kakobe
 kale
 kalenda
 kalifuwa
-kalittima
+kalittima/N1
 kaloti
-kalu
 kalu/CENAAd
 kalubo/CENAAd
-kambwe/CENAAd
 kambwe/CENAAd
 kamera
 kammunguluze
@@ -954,13 +956,13 @@ kandida
 kasambula
 kaseera
 kasita
-kasitoma
+kasitoma/N1
 kasooli
 katakketakke
 katemba
 kati
-katikkiro
-kato
+katikkiro/N1
+kato/N1
 Katonda
 kaweefube
 kawo
@@ -1590,6 +1592,7 @@ omuyaga/N2CE
 omuyiggo/N2CE
 omuyima/N1CE
 omuyimbi/N1CEzz
+omuyisirayiri/N1CEdm
 omuyitale/N1CE
 omuyizi/N1CE
 omuyizzi/N1CE
@@ -1634,6 +1637,7 @@ omwetooloozi/N1CE
 omwezi/N2CE
 omwogezi/N1CEzz
 omwoyogwaggwanga/N2CE
+onoonefu/CENAAd
 otulo/NxCE
 otuta/NxCE
 otuzzi/NxCE
@@ -1661,6 +1665,7 @@ puliida/N1
 pulogulaamu
 pulojekiti
 pya/CENAAd
+raba/OR
 saamusaamu/CENAAd
 sanyufu/CENAAd
 sava/CENAAd
@@ -1767,7 +1772,6 @@ waliyo
 walumbe
 wamma
 wamunyi
-wanda
 wangu
 wanguzi/CENAAd
 wanji
@@ -1776,62 +1780,39 @@ wano
 wansi
 wantu
 wanvu/CENAAd
-wasswa
+wasswa/N1
 wattima
-wattu
 wayise
-we
-weebale
-weeraba
-wewevu
-weyiti
+weweevu/CENAAd
 wiigi
 wiiki
-wo
-wolu
+wolu/CENAAd
 wolutaali
-woma
-womba
 wombeefu/CENAAd
-wombeefu
-wonna
+wooma/CENAAd
 woomerera/CEAd
 wootameroni
 wooteri
 wulize/CENAAd
-wummula
-wummuza
 wuulu/CENAAd
 yadde
-yagazi
 yambi/CENAAd
-yangu
-yavu
-yenkana
-yennyini
-yerabize
-yereere
-yeru
+yangu/CENAAd
 yesu
 yezu
-yinginiya
+yinginiya/N1
 yinsuwa
 yisirayiri
 Yitale
-yitirivu
-yo
+yitirivu/CENAAd
 yonjo/CENAAd
-yonoonefu
-yoyoofu
+yoyoofu/CENAAd
 yunivasite
-za
-za
 zaabu
 zibu/CENAAd
 zibula
-ziipu
+zipu
 zito/CENAAd
-zito
 #
 # -------------------------------- **okubatiza(to baptize): Type-I Transitive --------------------------------- #
 batiza/OriginalType-ITransitive
@@ -18726,6 +18707,20 @@ wambire/ModifiedBenefactiveTransitive
 wambidde/PastBenefactiveTransitive
 omuwambi
 # --------------------------------------------------------------------------------------------------------- #
+# ------------------------------------------------------ okuwanda(to spit): Type-I Transitive ------------------------------------------------------------ #
+wanda/OriginalType-ITransitive
+wande/ModifiedType-ITransitive
+wanze/PastType-ITransitive
+wandisa/CausativeTransitive
+wandise/ModifiedCausativeTransitive
+wandisizza/PastCausativeTransitive
+wandibwa/PassiveTransitive
+wandibwe/ModifiedPassiveTransitive
+wandiddwa/PastPassiveTransitive
+wandira/BenefactiveTransitive
+wandire/ModifiedBenefactiveTransitive
+wandidde/PastBenefactiveTransitive
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- #
 # ------------------------------------------ okuwandiika(to write): Type-I Transitive ---------------------------------------- #
 wandiika/OriginalType-ITransitive
 wandiike/ModifiedType-ITransitive
@@ -18921,6 +18916,20 @@ wandiikiddeeyooko
 wandiikiddewo
 wandiikiddewooko
 # --------------------------------------------------------------------------------------------------------- #
+# ------------------------------------------------------ okuwandula(to spit): Type-I Transitive ------------------------------------------------------------ #
+wandula/OriginalType-ITransitive
+wandule/ModifiedType-ITransitive
+wandudde/PastType-ITransitive
+wanduza/CausativeTransitive
+wanduze/ModifiedCausativeTransitive
+wanduzizza/PastCausativeTransitive
+wandulirwa/PassiveTransitive
+wandulirwe/ModifiedPassiveTransitive
+wanduliddwa/PastPassiveTransitive
+wandulira/BenefactiveTransitive
+wandulire/ModifiedBenefactiveTransitive
+wandulidde/PastBenefactiveTransitive
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okuwanguka(to be defeated): Deadjectival ---------------------------------------------- #
 wanguka/OriginalDeadjective
 wanguke/ModifiedDeadjective
@@ -19354,6 +19363,11 @@ wologomera/LocativeIntransitive
 wologomere/ModifiedLocativeIntransitive
 wologomedde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
+# -------------------------------------------------------------- okuwomba(to lower one's gaze): Intransitive ------------------------------------------------------------ #
+womba/OriginalIntransitive
+wombe/ModifiedIntransitive
+wombye/PastIntransitive
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okuwombeeka(to humble): Type-I Transitive --------------------------------------- #
 wombeeka/OriginalType-ITransitive
 wombeeke/ModifiedType-ITransitive
@@ -19856,6 +19870,20 @@ wulirizibwa/PassiveTransitive
 wulirizibwe/ModifiedPassiveTransitive
 wuliriziddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
+# ------------------------------------------------------------------- okuwummula(to rest): Type-I Transitive ------------------------------------------------------------------------- # 
+wummula/OriginalType-ITransitive
+wummule/ModifiedType-ITransitive
+wummudde/PastType-ITransitive
+wummuza/CausativeTransitive
+wummuze/ModifiedCausativeTransitive
+wummuzza/PastCausativeTransitive
+wummulira/LocativeTransitive
+wummulire/ModifiedLocativeTransitive
+wummulidde/PastLocativeTransitive
+wummuliza/BenefactiveTransitive
+wummulize/ModifiedBenefactiveTransitive
+wummulizza/PastBenefactiveTransitive
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ #
 # ----------------------------------- okuwuniikirira(to be taken aback): Deadjectival ----------------------------------- #
 wuniikirira/OriginalDeadjective
 wuniikirire/ModifiedDeadjective
@@ -21185,7 +21213,7 @@ yombesebbwa/PastPassiveIntransitive
 yombera/LocativeIntransitive
 yombere/ModifiedLocativeIntransitive
 yombedde/PastLocativeIntransitive
-omuyombi
+yombi/CENAAd
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okuyongera(to increase; inf: okwongera) --------------------------------------- #
 yongera
