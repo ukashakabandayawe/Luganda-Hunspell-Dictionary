@@ -1966,7 +1966,7 @@ fufumya/OriginalType-ITransitive
 fufumye/ModifiedType-ITransitive
 fufumizza/PastType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- **okufunvubira (to persist/preserve): Type-I Transitive --------------------------------------- #
+# --------------------------------------- **okufunvubira (to persist; to preserve): Type-I Transitive --------------------------------------- #
 funvubira/OriginalType-ITransitive
 funvubire/ModifiedType-ITransitive
 funvubidde/PastType-ITransitive
@@ -2313,7 +2313,7 @@ keerera/LocativeDeadjective
 keerere/ModifiedLocativeDeadjective
 keeredde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- kung'aana(to gather/collect) --------------------------------------------- #
+# -------------------------------------------- kung'aana(to gather orcollect) --------------------------------------------- #
 kung'aana
 kung'aane
 kung'aanya
@@ -2517,7 +2517,7 @@ balukira/LocativeIntransitive
 balukire/ModifiedLocativeIntransitive
 balukidde/PastLocativeIntransitive
 # ------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okubanja(to owe/demand): Type-II Transitive ----------------------------------- #
+# ------------------------------------- okubanja(to owe or demand): Type-II Transitive ----------------------------------- #
 banja/OriginalType-IITransitive
 banje/ModifiedType-IITransitive
 banjizza/PastType-IITransitive
@@ -2619,7 +2619,7 @@ banjilizzaayooko
 banjilizzaawo
 banjilizzaawooko
 # ---------------------------------------------------------------------------------------- #
-# ------------------------------- okubaza(to time/target): Type-I Transitive ---------------------------------------- #
+# ------------------------------- okubaza(to time or target): Type-I Transitive ---------------------------------------- #
 baza/OriginalType-ITransitive
 baze/ModifiedType-ITransitive
 bazizza/PastType-ITransitive
@@ -2647,7 +2647,7 @@ bbira/BenefactiveTransitive
 bbire/ModifiedBenefactiveTransitive
 bbidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okubeera(to be/stay): Type-I Transitive ----------------------------------------- #
+# -------------------------------- okubeera(to be or stay): Type-I Transitive ----------------------------------------- #
 beera/OriginalType-ITransitive
 beere/ModifiedType-ITransitive
 badde/PastType-ITransitive
@@ -2661,7 +2661,7 @@ beerera/LocativeTransitive
 beerere/ModifiedLocativeTransitive
 beeredde/PastLocativeTransitive
 # ------------------------------------------------------------------------------------------------- #
-# ------------------------------- okubega(to spy/serve food): Type-I Transitive ------------------------------------------------- #
+# ------------------------------- okubega(to spy or serve food): Type-I Transitive ------------------------------------------------- #
 bega/OriginalType-ITransitive
 bege/ModifiedType-ITransitive
 beze/PastType-ITransitive
@@ -4827,7 +4827,7 @@ fumbize/ModifiedCausativeTransitive
 fumbizza/PastCausativeTransitive
 omufumbo
 # --------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufumita(to stab/pierce): Type-I Transitive --------------------------------------- #
+# --------------------------------------- okufumita(to stab or pierce): Type-I Transitive --------------------------------------- #
 fumita/OriginalType-ITransitive
 fumite/ModifiedType-ITransitive
 fumise/HybridType-ITransitive
@@ -6258,7 +6258,7 @@ ggaliddeengayooko
 ggaliddeengawo
 ggaliddeengawooko
 # ---------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuggata(to add/join): Type-I Transitive --------------------------------------- #
+# --------------------------------------- okuggata(to add or join): Type-I Transitive --------------------------------------- #
 gatta/OriginalType-ITransitive
 gatte/ModifiedType-ITransitive
 gasse/PastType-ITransitive
@@ -6372,7 +6372,7 @@ gobola/OriginalIntransitive
 gobole/ModifiedIntransitive
 gobodde/PastIntransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugogola(to clear/clean up): Type-I Transitive --------------------------------------- #
+# --------------------------------------- okugogola(to clear or clean up): Type-I Transitive --------------------------------------- #
 gogola/OriginalType-ITransitive
 gogole/ModifiedType-ITransitive
 gogodde/PastType-ITransitive
@@ -6430,7 +6430,7 @@ gondere/ModifiedBenefactiveDeadjective
 gondedde/PastBenefactiveDeadjective
 omugonvu
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugonjoola(to settle/resolve): Type-I Transitive --------------------------------------- #
+# --------------------------------------- okugonjoola(to settle or resolve): Type-I Transitive --------------------------------------- #
 gonjoola/OriginalType-ITransitive
 gonjoole/ModifiedType-ITransitive
 gonjodde/PastType-ITransitive
@@ -6555,7 +6555,7 @@ gunjulire/ModifiedBenefactiveTransitive
 gunjulidde/PastBenefactiveTransitive
 omugunjuzi
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okugwa(to fall/fail): Type-I Transitive --------------------------------------- #
+# --------------------------------------- okugwa(to fall or fail): Type-I Transitive --------------------------------------- #
 gwa/OriginalType-ITransitive
 gwe/ModifiedType-ITransitive
 gudde/PastType-ITransitive
@@ -6964,7 +6964,7 @@ jjukirira/BenefactiveTransitive
 jjukirire/ModifiedBenefactiveTransitive
 jjukiridde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# ----------------------------------- okujjula(to fill/serve food): Type-I Transitive ----------------------------------------------- #
+# ----------------------------------- okujjula(to fill or serve food): Type-I Transitive ----------------------------------------------- #
 jjula/OriginalType-ITransitive
 jjule/ModifiedType-ITransitive
 jjudde/PastType-ITransitive
@@ -7145,7 +7145,7 @@ jolongera/BenefactiveTransitive
 jolongere/ModifiedBenefactiveTransitive
 jolongedde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# ------------------------------- okujooga(to tease/disrespect): Type-I Transitive -------------------------------------------------- #
+# ------------------------------- okujooga(to tease or disrespect): Type-I Transitive -------------------------------------------------- #
 jooga/OriginalType-ITransitive
 jooge/ModifiedType-ITransitive
 jooze/PastType-ITransitive
@@ -7932,7 +7932,7 @@ keetera/LocativeTransitive
 keetere/ModifiedLocativeTransitive
 keetedde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------------- #
-# ------------------------------------------ okukendeera(to become less/decrease): Deadjectival --------------------------------------------- #
+# ------------------------------------------ okukendeera(to become less or decrease): Deadjectival --------------------------------------------- #
 kendeera/OriginalDeadjective
 kendeere/ModifiedDeadjective
 kendedde/PastDeadjective
@@ -7941,7 +7941,7 @@ kendeeze/ModifiedCausativeDeadjective
 kendezza/PastCausativeDeadjective
 kendeezezza/PastCausativeDeadjective
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukenga(to perceive/notice): Type-I Transitive --------------------------------------------- #
+# --------------------------------------- okukenga(to perceive or notice): Type-I Transitive --------------------------------------------- #
 kenga/OriginalType-ITransitive
 kenge/ModifiedType-ITransitive
 kenze/PastType-ITransitive
@@ -8027,7 +8027,7 @@ kkiririra/BenefactiveTransitive
 kkiririre/ModifiedBenefactiveTransitive
 kkiriridde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okukkiriza(to believe/agree): Type-I Transitive --------------------------------------------- #
+# --------------------------------- okukkiriza(to believe or agree): Type-I Transitive --------------------------------------------- #
 kkiriza/OriginalType-ITransitive
 kkirize/ModifiedType-ITransitive
 kkirizza/PastType-ITransitive
@@ -8318,7 +8318,7 @@ kololere/ModifiedBenefactiveTransitive
 kololedde/PastBenefactiveTransitive
 omukolozi
 # ------------------------------------------------------------------------------------------------------------- #
-# ------------------------------------- okukoma(to cease/stop): Intransitive --------------------------------------------- #
+# ------------------------------------- okukoma(to cease or stop): Intransitive --------------------------------------------- #
 koma/OriginalIntransitive
 kome/ModifiedIntransitive
 komye/PastIntransitive
@@ -8724,7 +8724,7 @@ kuumira/BenefactiveTransitive
 kuumire/ModifiedBenefactiveTransitive
 kuumidde/PastBenefactiveTransitive
 # ----------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okukuuta(to rub/relate:if its in passive form): Type-I Transitive ---------------------------------------- #
+# ---------------------------------------- okukuuta(to rub or relate:if its in passive form): Type-I Transitive ---------------------------------------- #
 kuuta/OriginalType-ITransitive
 kuute/ModifiedType-ITransitive
 kuuse/PastType-ITransitive
@@ -8763,7 +8763,7 @@ kwanaganya/OriginalType-ITransitive
 kwanaganye/ModifiedType-ITransitive
 kwanaganyizza/PastType-ITransitive
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukwata(to hold/arrest): Type-II Transitive ---------------------------------------------- #
+# --------------------------------------- okukwata(to hold or arrest): Type-II Transitive ---------------------------------------------- #
 kwata/OriginalType-IITransitive
 kwate/ModifiedType-IITransitive
 kwase/PastType-IITransitive
@@ -9490,7 +9490,7 @@ landira/LocativeIntransitive
 landire/ModifiedLocativeIntransitive
 landidde/PastLocativeIntransitive
 # -------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okulanga(to announce/advertise): Type-I Transitive --------------------------------------------- #
+# ---------------------------------- okulanga(to announce or advertise): Type-I Transitive --------------------------------------------- #
 langa/OriginalType-ITransitive
 lange/ModifiedType-ITransitive
 lanze/PastType-ITransitive
@@ -13458,7 +13458,7 @@ saawira/BenefactiveTransitive
 saawire/ModifiedBenefactiveTransitive
 saawidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------- okusaba(to ask/request): Type-II Transitive ---------------------------------- #
+# --------------------------- okusaba(to ask or request): Type-II Transitive ---------------------------------- #
 saba/OriginalType-IITransitive
 sabe/ModifiedType-IITransitive
 sabye/PastType-IITransitive
@@ -14431,7 +14431,7 @@ sekulira/BenefactiveTransitive
 sekulire/ModifiedBenefactiveTransitive
 sekulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------- okusemba(to be last / to recommend; to back up; to support): Type-I Transitive ---------------------- #
+# ---------------------- okusemba(to be last or to recommend; to back up; to support): Type-I Transitive ---------------------- #
 semba/OriginalType-ITransitive
 sembe/ModifiedType-ITransitive
 sembye/PastType-ITransitive
@@ -14721,7 +14721,7 @@ siibulira/BenefactiveTransitive
 siibulire/ModifiedBenefactiveTransitive
 siibulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okusiiga(to smear/infect): Type-II Transitive --------------------------------------- #
+# --------------------------------------- okusiiga(to smear or infect): Type-II Transitive --------------------------------------- #
 siiga/OriginalType-IITransitive
 siige/ModifiedType-IITransitive
 siize/PastType-IITransitive
@@ -14800,7 +14800,7 @@ siiya/OriginalType-ITransitive
 siiye/ModifiedType-ITransitive
 siiyizza/PastType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------- okusika(to pull; to stretch / to inherit; to be an heir): Type-I Transitive ------------------------ #
+# ----------------------- okusika(to pull; to stretch or inherit; to be an heir): Type-I Transitive ------------------------ #
 sika/OriginalType-ITransitive
 sike/ModifiedType-ITransitive
 sise/PastType-ITransitive
@@ -14894,7 +14894,7 @@ simbukira/LocativeIntransitive
 simbukire/ModifiedLocativeIntransitive
 simbukidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------- okusimbula(to take off; to go off / to uproot): Type-I Transitive  ----------------------------- #
+# ---------------------------- okusimbula(to take off; to go off or to uproot): Type-I Transitive  ----------------------------- #
 simbula/OriginalType-ITransitive
 simbule/ModifiedType-ITransitive
 simbudde/PastType-ITransitive
@@ -15030,7 +15030,7 @@ situlire/ModifiedBenefactiveTransitive
 situlidde/PastBenefactiveTransitive
 omusituzi
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------- okusitunkana(to be restless/fidgety/uneasy; to keep moving about): Intrasitive ------------------- #
+# ------------------- okusitunkana(to be restless; fidgety; uneasy; to keep moving about): Intrasitive ------------------- #
 situnkana/OriginalIntransitive
 situnkane/ModifiedIntransitive
 situnkanye/PastIntransitive
@@ -15041,7 +15041,7 @@ situnkanira/LocativeIntransitive
 situnkanire/ModifiedLocativeIntransitive
 situnkanidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------ okusiyagguka(to go/walk a long distance; to travel far): Intransitive ------------------------ #
+# ------------------------ okusiyagguka(to go; to walk a long distance; to travel far): Intransitive ------------------------ #
 siyagguka/OriginalIntransitive
 siyagguke/ModifiedIntransitive
 siyagguse/PastIntransitive
@@ -16742,7 +16742,7 @@ tintira/LocativeIntransitive
 tintire/ModifiedLocativeIntransitive
 tintidde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ---------------------------------- okutoba(to become wet/ to struggle): Deadjectival ---------------------------------- #
+# ---------------------------------- okutoba(to become wet or to struggle): Deadjectival ---------------------------------- #
 toba/OriginalDeadjective
 tobe/ModifiedDeadjective
 tobye/HybridDeadjective
@@ -17056,7 +17056,7 @@ tubirwa/PassiveIntransitive
 tubirwe/ModifiedPassiveIntransitive
 tubiddwa/PastPassiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------- okutuga(to choke; to strangle / to hang; to choke; to strangle): Type-I Transitive -------------------- #
+# -------------------- okutuga(to choke; to strangle or to hang; to choke; to strangle): Type-I Transitive -------------------- #
 tuga/OriginalType-ITransitive
 tuge/ModifiedType-ITransitive
 tuze/PastType-ITransitive
@@ -17180,7 +17180,7 @@ tunulira/BenefactiveDeadjective
 tunulire/ModifiedBenefactiveDeadjective
 tunulidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------- okututumuka(to become famous/renowned; to become well-known): Deadjectival ---------------------- #
+# --------------------- okututumuka(to become famous or renowned; to become well-known): Deadjectival ---------------------- #
 tutumuka/OriginalDeadjective
 tutumuke/ModifiedDeadjective
 tutumuse/PastDeadjective
@@ -18986,7 +18986,7 @@ wankirawankira/BenefactiveIntransitive
 wankirawankire/ModifiedBenefactiveIntransitive
 wankirawankidde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okuwanvuwa(to become tall/high/long): Deadjectival ---------------------------------- #
+# --------------------------------- okuwanvuwa(to become tall or high or long): Deadjectival ---------------------------------- #
 wanvuwa/OriginalDeadjective
 wanvuwe/ModifiedDeadjective
 wanvuye/HybridDeadjective
@@ -19097,7 +19097,7 @@ wenjeza/BenefactiveTransitive
 wenjeze/ModifiedBenefactiveTransitive
 wenjerezza/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okuwera(to increase/ban): Type-I Transitive ---------------------------------- #
+# -------------------------------- okuwera(to increase or ban): Type-I Transitive ---------------------------------- #
 wera/OriginalType-ITransitive
 were/ModifiedType-ITransitive
 weze/ModifiedType-ITransitive
@@ -20980,7 +20980,7 @@ yingirira/BenefactiveTransitive
 yingirire/ModifiedBenefactiveTransitive
 yingiridde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------- okuyita(to pass/call): Type-II Transitive ---------------------------------- #
+# -------------------------------- okuyita(to pass or to call): Type-II Transitive ---------------------------------- #
 yita/OriginalType-IITransitive
 yite/ModifiedType-IITransitive
 yise/PastType-IITransitive
@@ -21248,7 +21248,7 @@ yonkera/BenefactiveTransitive
 yonkere/ModifiedBenefactiveTransitive
 yonkedde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------- okuyonoona(to spoil; to ruin; to damage; to sin; / to waste; inf.: okwonoona): Type-I Transitive --------------- #
+# ----------- okuyonoona(to spoil; to ruin; to damage; to sin; or to waste; inf.: okwonoona): Type-I Transitive --------------- #
 yonoona/OriginalType-ITransitive
 yonoone/ModifiedType-ITransitive
 yonoonye/PastType-ITransitive
@@ -21299,7 +21299,7 @@ yoolera/BenefactiveTransitive
 yoolere/ModifiedBenefactiveTransitive
 yooledde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ----------------------------- okuyoyoota(to make/do/perform extremely well): Type-I Transitive ----------------------------- #
+# ----------------------------- okuyoyoota(to make or do or perform extremely well): Type-I Transitive ----------------------------- #
 yoyoota/OriginalType-ITransitive
 yoyoote/ModifiedType-ITransitive
 yoyoose/PastType-ITransitive
@@ -24162,7 +24162,7 @@ gokka
 bwokka
 twokka
 # --------------------------------------------------------------------------------------------- #
-# ------------------------------------- possesive determiners(your, his/her, their) --------------------------------------- #
+# ------------------------------------- possesive determiners(your, his or her, their) --------------------------------------- #
 wo/pd
 bo/pd
 gwo/pc
