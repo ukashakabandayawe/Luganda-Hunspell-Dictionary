@@ -352,13 +352,18 @@ PFX No 0 otu [ms][uo]  otumu
 PFX No 0 ezi [ms][uo]
 
 # All, both, three of them
-PFX bt Y 6
+PFX bt Y 11
 PFX bt b gy .
 PFX bt b g .
 PFX bt b by .
 PFX bt b bw .
 PFX bt b z .
 PFX bt b tw .
+PFX bt b k bonna
+PFX bt b w bonna
+PFX bt b ky bonna
+PFX bt b lw bonna
+PFX bt bo ffe bonna
 
 
 # A person who does an act e.g. omuli, omukubi, omwambazi
@@ -4598,9 +4603,11 @@ PFX ob 0 ge [^aeiou]
 PFX ob 0 twe [^aeiou]
 
 # Adjectives
-PFX Ad Y 73
-PFX Ad 0 n [^jbnmlhprxq][^k] # funda-->nfunda
-PFX Ad 0 en [^jbnmlhprxq][^k]
+PFX Ad Y 75
+PFX Ad 0 n [^jbnmlhprxqaeo][^k] # funda-->nfunda
+PFX Ad 0 en [^jbnmlhprxqaeo][^k]
+PFX Ad 0 enn y
+PFX Ad 0 nn  y
 PFX Ad 0 m b # bi-->mbi
 PFX Ad 0 em b
 PFX Ad l nd l.[^mn] #  lalu-->ndalu
