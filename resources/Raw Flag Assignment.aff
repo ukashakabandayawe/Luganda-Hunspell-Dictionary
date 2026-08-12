@@ -218,15 +218,11 @@ COMPOUNDMIN 1
 
 FORBIDDENWORD fw
 
-WARN NR
-FORBIDWARN
-
-
 # Optional vowels at the begining of words 
 PFX ea Y 3
-PFX ea a 0/OCCB [aeiou]
-PFX ea e 0/OCCB [aeiou]
-PFX ea o 0/OCCB [aeiou]
+PFX ea a 0 [aeiou]
+PFX ea e 0 [aeiou]
+PFX ea o 0 [aeiou]
 
 # vowels at the end of possesives 
 SFX ae Y 3
