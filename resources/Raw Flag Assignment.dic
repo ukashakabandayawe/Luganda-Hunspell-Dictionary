@@ -1,4 +1,4 @@
-21592
+21612
 #
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -91,7 +91,6 @@ akatimatima/N6CEzz
 akatimba/N6CEzz
 akatogo/N6CE
 akatonnyeze/N6CE
-akatono/N6CEzz
 akatto/N6CEzz
 akatulututtu/N6CEzz
 akatunda/N6CEzz
@@ -113,11 +112,11 @@ akeediimo/N6CE
 akeetalo/N6CE
 amaalo/CEov
 amaanyi/CEov
-amadda/ov
+amadda/CEov
 amaddu/CEov
 amadinda/CEov
 amafuta/CEov
-amagatte/ov
+amagatte/CEov
 amagenda/CEov
 amaguzi/CEov
 amajaani/CEov
@@ -132,12 +131,12 @@ amambuka/CEov
 amanzaali/CEov
 amasanginzira/CEov
 amasannyalaze/CEovzz
-amasekati/ov
-amaserengeta/ov
+amasekati/CEov
+amaserengeta/CEov
 amasira/CEov
 amata/CEov
 amataba/CEov
-amatigga/ov
+amatigga/CEov
 amawolu/CEov
 amawuggwe/CEov
 amawulire/CEov
@@ -152,9 +151,9 @@ ani
 anti
 ate
 avu/CENAAd
-awaka/ov
+awaka/CEov
 awo
-baaba
+baaba/N1
 baasi
 bagiya
 balagavu/CENAAd
@@ -162,7 +161,6 @@ balansi
 bale/OR
 bambi
 bbalaza
-bbiri
 bbo
 bbomu
 bbongo
@@ -518,6 +516,7 @@ ekkuumiro/N5CE
 eky'okunywa/N4CE
 eky'omu/ov
 ekyaabwe/N4CE
+ekyaalani/N4CE
 ekyaalo/N4CEzz
 ekyaama/N4CEzz
 ekyaasa/N4CE
@@ -826,10 +825,12 @@ esigwa/CENAAd
 esimbu/CENAAd
 essaala/N3CE
 essaati/N5CEzz
+essaawa/N5CEzz
 essabbiiti/ov
 essabbuuni/ov
 essabo/N5CE
 essafaali/ov
+essanduuko/CEov
 essanga/N5CE
 essanyu/N5CE
 essasi/N5CE
@@ -1560,6 +1561,7 @@ omutindo/N2CE
 omuto/N2CEzz
 omutongole/N1CE
 omutonzi/N1CEzz
+omutoozi/N1CE
 omutto/N2CEzz
 omutuba/N2CEdm
 omutujju/N1CEzz
@@ -1637,6 +1639,7 @@ otuta/NxCE
 otuzzi/NxCE
 otwenge/NxCE
 ovaceddo
+owakabi/CENAAd
 paaka
 paapa/N1
 paasika
@@ -1669,6 +1672,7 @@ sibe/CENAAd
 sikaala
 sikaati
 sim-sim
+singa
 sipensulo
 sirifu/CENAAd
 siriimu
@@ -1690,39 +1694,33 @@ ssaabasajja
 ssaabawandiisi
 ssaako
 ssaalongo/N1
-ssaamu
-ssaawa
-ssalongo
+ssalongo/N1
 Ssande
-ssanduuko
 ssapatu
-ssatiza
-ssatu
-ssebo
+ssebo/N1
 ssedume
 sseebaaseka
 sseggwanga
 ssekkokko
 ssekukkulu
-ssemaka
+ssemaka/N1
 ssemateeka
 ssemazinga
 sseminti
 ssemutundu
-ssemuwandu
-ssenga
-ssengange
+ssemuwandu/N1
+ssenga/N1
+ssengange/N1
 ssennyiga
 ssente
-ssentebe
-ssezaala
+ssentebe/N1
+ssezaala/N1
 ssigala
-ssinga
 ssiringi
 sso
 ssonga
 ssukaali
-suffu
+suffu/CENAAd
 supu
 swavu/CENAAd
 taaba
@@ -1730,32 +1728,27 @@ taata/N1
 tabufu/CENAAd
 taggwa/CENAAd
 takisi
-tangaavu
+tangaavu/CENAAd
 tayipu
 tebenkevu/CENAAd
-tegeeza
 tendeke
 tera
-tereevu
+tereevu/CENAAd
 tewali
 tiimu
 tiitiizi/CENAAd
 tiketi
 to/CENAAd # young
-tono
-toola
+tono/CENAAd
 ttaabu
-ttaano
 ttena
 ttimba
 ttivvi
 ttoggo
 tujju/CENAAd
-tukuvu
+tukuvu/CENAAd
 tuli
 tuufu/CENAAd
-tuufu
-tuuka
 visa
 vubufu
 vumu/CENAAd
@@ -1764,14 +1757,11 @@ wabula # remaining time
 wabweru
 wadde
 wagulu
-wakabi
 wakati
-wakyaalani
 wala
 walagi
 waleti
 wali
-waliriza
 waliwo
 waliyo
 walumbe
@@ -1812,6 +1802,7 @@ wulize/CENAAd
 wummula
 wummuza
 wuulu/CENAAd
+yadde
 yagazi
 yambi/CENAAd
 yangu
@@ -2373,11 +2364,13 @@ maamiddwa
 # ------------------------------------------- numbers and positions ---------------------------------------------------------------------- #
 mu/CENo 
 biri/CENo
+bbiri
 bili
 satu/CENo
 ennya/CEov
 na/CENo
 taano/CENo
+ettaano/CEov
 omukaaga/CEov
 enkaaga/CEov
 olukaaga/CEov
@@ -14201,10 +14194,16 @@ sasuliddeewooko
 # ---------------------------- okusattira(to panic; to move about restlessly): Intransitive ----------------------------- #
 sattira/OriginalIntransitive
 sattire/ModifiedIntransitive
-sattidde/PastIntransitive
-sattiza/CausativeIntransitive
-sattize/ModifiedCausativeIntransitive
-sattizza/PastCausativeIntransitive
+ssattidde/PastIntransitive
+ssattiza/CausativeIntransitive
+ssattize/ModifiedCausativeIntransitive
+ssatizza/PastCausativeIntransitive
+ssattizibwa/PassiveIntransitive
+ssattizibwe/ModifiedPassiveIntransitive
+ssattiziddwa/PastPassiveIntransitive
+ssattirira/LocativeIntransitive
+ssattirire/ModifiedLocativeIntransitive
+ssattiridde/PastLocativeIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------- okusattulula(to undo; to unravel; to take apart): Type-I Transitive ---------------------------- #
 sattulula/OriginalType-ITransitive
@@ -16986,6 +16985,23 @@ tonnyera/BenefactiveIntransitive
 tonnyere/ModifiedBenefactiveIntransitive
 tonnyedde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------------------- #
+# ------------------------------------------------------------ okutoola (to subtract): Type-I Transitive ------------------------------------------------------------ #
+toola/OriginalType-ITransitive
+toole/ModifiedType-ITransitive
+todde/PastType-ITransitive
+tooza/CausativeTransitive
+tooze/ModifiedCausativeTransitive
+toozezza/PastCausativeTransitive
+toozesa/CausativeTransitive
+toozese/ModifiedCausativeTransitive
+toozesezza/PastCausativeTransitive
+toolebwa/PassiveTransitive
+toolebwe/ModifiedPassiveTransitive
+tooleddwa/PastPassiveTransitive
+toolera/BenefactiveTransitive
+toolere/ModifiedBenefactiveTransitive
+tooledde/PastBenefactiveTransitive
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------- #
 # ---------------------- okutowolokoka(to feel free; to be relieved; to feel relief): Deadjectival ---------------------- #
 towolokoka/OriginalDeadjective
 towolokoke/ModifiedDeadjective
@@ -18672,6 +18688,14 @@ walampire/ModifiedBenefactiveTransitive
 walampidde/PastBenefactiveTransitive
 omuwalampi
 # --------------------------------------------------------------------------------------------------------- #
+# --------------------------------------------------------- okuwaliriza (to force): Type-I Transitive --------------------------------- #
+waliriza/OriginalType-ITransitive
+walirize/ModifiedType-ITransitive
+walirizza/PastType-ITransitive
+walirizibwa/PassiveTransitive
+walirizibwe/ModifiedPassiveTransitive
+waliriziddwa/PastPassiveTransitive
+# ------------------------------------------------------------------------------------------------------------------------------------- #
 # -------------------------------------- okuwalula(to drag; to pull): Type-I Transitive -------------------------------------- #
 walula/OriginalType-ITransitive
 walule/ModifiedType-ITransitive
