@@ -1,4 +1,4 @@
-21582
+21567
 #
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -26,6 +26,7 @@
 # So, it's better to use this file to assign flags to verbs in the dictionary instead of using the dictionary itself.
 #
 #
+agazi/CENAAd
 akaayo/N6CE
 akabaani/N6CEzz
 akabakko/N6CE
@@ -99,8 +100,10 @@ akaveera/N6CEzz
 akawale/N6CEzz
 akawale/N6CEzz
 akawandiisi/N6CEzz
+akawoowo/N6CE
 akawumbi/N6CE
 akawundo/N6CE
+akawunga/N6CE
 akawunga/N6CE
 akawungeezi/N6CE
 akayozi/N6CE #Kangaroo rat
@@ -143,9 +146,11 @@ amazima/CEov
 amazina/CEov
 amazuukira/CEov
 amazzi/CEov
+angu/CENAAd
 ani
 anti
 ate
+avu/CENAAd
 awaka/ov
 awo
 baaba
@@ -188,6 +193,8 @@ bulyomu
 Bungereza
 busuuli # Syria
 butuluuki
+buyindi
+buyonaani
 buzaabuzaa
 bwino
 byendo
@@ -262,6 +269,8 @@ effujjo/CEov
 effumbe/CEov
 effumbiro/N5CEzz
 effumu/N5CEzz
+egassi/CENAAd
+egendereza/CENAAd
 eggaali/N5CEzz
 eggego/N5CE
 eggezi/N5CE
@@ -777,6 +786,7 @@ enva/N3CEzz
 enviiri/N3CEzz
 envubu/N3CE
 envuma/N3CE
+enzi/CENAAd
 enzijanjaba/N3CE
 enzikkiriza/N3CE
 enzikkiriziganya/N3CE
@@ -788,6 +798,9 @@ eppamba/ov
 eppeera/N3CEzz
 eppeesa/N3CEzz
 era
+erabize/CENAAd
+eraliikirivu/CENAAd
+ereere/CENAAd
 eri
 eriggwa/N5CEzz
 eriiso/N5CEzz
@@ -798,6 +811,7 @@ eryanda/N5CEzz
 eryanyi/N5CE
 eryato/N5CEzz
 eryenvu/N5CEzz
+esigwa/CENAAd
 esimbu/CENAAd
 essaala/N3CE
 essaati/N5CEzz
@@ -820,6 +834,7 @@ essubi/CEov
 essuubi/CEov
 essuula/CEov
 esweeta/N5CEzz
+etaavu/CENAAd
 ettaala/N5CEzz
 ettaayi/N5CE
 ettabi/N5CEzz
@@ -1051,14 +1066,13 @@ mutunda
 muwakanya
 mwannyinaze/N1
 mweraba
-n'olwekyo
 naddala
 nafu/CENAAd
 nange
 naye
 ndi
 ndiizi
-ne
+ne/ae
 nedda
 neera
 nene/CENAAd
@@ -1076,6 +1090,7 @@ nnakanyama
 nnakati
 nnakinku/N1
 nnakyemalira/N1
+nnalukalala/N1
 nnamagoye/N1
 nnamung'oona
 nnamuziga
@@ -1163,67 +1178,22 @@ obuuji/CEov
 obuvunaanyizibwa/CEov
 obuwagizi/CEov
 obuwangwa/CEov
-obuwanvu
-obuwombeefu
-obuwoowo
-obuwulize
-obuwunga
-obuwuulu
-obuyambi
-Obuyindi
-obuyinike
-obuyinza
-obuyizzi
-Obuyonaani
-obuyonjo
-obuyozayoza
-obuyunzi
-obuzibu
-obuzigu
-obuzito
-obuzzi
-obw'omunda
-obwagazi
-obwakabaka
-obwamalaaya
-obwangu
-obwannakyemalira
-obwannalukalala
-obwannannyini
-obwavu
+obuyinike/CEov
+obuyinza/CEov
+obuzigu/CEov
+obuzzi/CEov
+obwakabaka/CEov
+obwamalaaya/CEov
+obwannakyemalira/CEov
+obwannalukalala/CEov
+obwannannyini/CEov
 obwedda
-obwegassi
-obwegendereza
-obwenzi
-obwerabize
-obweraliikirivu
-obwereere
-obwesige
-obwesigwa
-obwetaavu
-obwogi
-obwomu
-obwongo
+obwesige/CEov
+obwomu/CEov
+obwongo/CEov
 odii
-ogwekumi
-ogwekumin'ebiri
-ogwekumin'ogumu
-ogwokubiri
-ogwokuna
-ogwokusatu
-ogwokutano
-ogwomukaaga
-ogwomunaana
-ogwomusanvu
-ogwomwenda
-ogwosooka
-okubaka
-okubala
-okugeza
-okuggyako
-okugulu
-okugwa
-okukukusa
+ogi/CENAAd
+okugulu/N9CEzz
 okulabikirwa
 okulambula
 okuli
@@ -1336,6 +1306,7 @@ olwala
 olwanvu
 olwazi
 olweggulo
+olwekyo/CEov
 olwendo
 olweyo
 olwokubiri
@@ -1506,6 +1477,7 @@ omumwa
 omunaala
 omunakuwavu
 omunazi
+omunda/CEOC
 omungereza
 omunnabi
 omunnabi
@@ -1643,8 +1615,10 @@ omuyima
 omuyimbi
 omuyitale
 omuyizi
+omuyizzi/N1CE
 omuyonaani
 omuyudaaya
+omuyunzi/N1CE
 omuyunzi
 omuzaalise
 omuzabbibu
@@ -1852,6 +1826,7 @@ wannamaddala
 wano
 wansi
 wantu
+wanvu/CENAAd
 wasswa
 wattima
 wattu
@@ -1868,14 +1843,18 @@ wolu
 wolutaali
 woma
 womba
+wombeefu/CENAAd
 wombeefu
 wonna
 woomerera/CEAd
 wootameroni
 wooteri
+wulize/CENAAd
 wummula
 wummuza
+wuulu/CENAAd
 yagazi
+yambi/CENAAd
 yangu
 yavu
 yenkana
@@ -1891,7 +1870,7 @@ yisirayiri
 Yitale
 yitirivu
 yo
-yonjo
+yonjo/CENAAd
 yonoonefu
 yoyoofu
 yunivasite
@@ -1899,9 +1878,9 @@ za
 za
 zaabu
 zibu/CENAAd
-zibu
 zibula
 ziipu
+zito/CENAAd
 zito
 #
 # -------------------------------- **okubatiza(to baptize): Type-I Transitive --------------------------------- #
@@ -2574,7 +2553,7 @@ balira/BenefactiveTransitive
 balire/ModifiedBenefactiveTransitive
 balidde/PastBenefactiveTransitive
 # ------------------------------------------------------------------------------------------------ #
-# --------------------------------- okubalaga(to be itchy): Deadjectival --------------------------------------- #
+# --------------------------------- okubalagala(to be itchy): Deadjectival --------------------------------------- #
 balagala/OriginalDeadjective
 balagale/ModifiedDeadjective
 balagadde/PastDeadjective
@@ -6387,6 +6366,20 @@ ggyiira/LocativeDeadjective
 ggyiire/ModifiedLocativeDeadjective
 ggyiiridde/PastLocativeDeadjective
 # ---------------------------------------------------------------------------------------------------------- #
+# ----------------------------------------------------- okuggyako(to turn off): Type-II Transitive ----------------------------------------------------- #
+ggyako/OriginalType-IITransitive
+ggyeko/ModifiedType-IITransitive
+ggyeeko/PastType-IITransitive
+ggisaako/CausativeTransitive
+ggiseeko/ModifiedCausativeTransitive
+ggisizzaako/PastCausativeTransitive
+ggibwaako/PassiveTransitive
+ggibweeko/ModifiedPassiveTransitive
+ggiddwako/PastPassiveTransitive
+ggirako/BenefactiveTransitive
+ggirekko/ModifiedBenefactiveTransitive
+ggiddeko/PastBenefactiveTransitive
+# ------------------------------------------------------------------------------------------------------------------------------------------------------ #
 # --------------------------------------- okuginga(to forge): Type-I Transitive ---------------------------------------------- #
 ginga/OriginalType-ITransitive
 ginge/ModifiedType-ITransitive
