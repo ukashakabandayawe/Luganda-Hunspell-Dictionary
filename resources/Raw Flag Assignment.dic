@@ -1,4 +1,4 @@
-21632
+21631
 #
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -20,7 +20,7 @@
 #
 # !!!!! This file is not the dictionary itself, but rather
 # a raw flag assignment file that uses human language instead of the actual flags.
-# It shows the flags assigned to verbs in the dictionary.  
+# It shows the flags assigned to verbs in the dictionary.
 # It makes flag assignment easy.
 # It also has corrections for some verbs that were incorrectly typed in the dictionary.
 # So, it's better to use this file to assign flags to verbs in the dictionary instead of using the dictionary itself.
@@ -106,7 +106,7 @@ akawundo/N6CE
 akawunga/N6CE
 akawunga/N6CE
 akawungeezi/N6CE
-akayozi/N6CE [po:noun(Kangaroo rat)]
+akayozi/N6CE
 akayuuguumo/N6CE
 akeediimo/N6CE
 akeetalo/N6CE
@@ -169,7 +169,6 @@ bbugubugu
 bbululu
 bendera
 bi/CENAAd
-bi/CENAAd 
 biici
 bisi/CENAAd
 bisibisi/CENAAd
@@ -191,7 +190,7 @@ bulawuzi
 bulijjo
 bulyomu
 Bungereza
-busuuli [po:noun(Syria)]
+busuuli
 butuluuki
 buyindi
 buyonaani
@@ -237,7 +236,7 @@ ebbwa/N5CEzz
 ebisasiro/CEov
 ebisesemye/CEov
 ebugwanjuba/CEov
-ebula  [# remaining time]
+ebula
 ebuvanjuba/CEov
 ebweru/CEov
 eccupa/N5CEzz
@@ -622,11 +621,11 @@ emundu/N3CEzz
 enda/ov
 endaawe/N3CEzz
 endaawo/N3CEzz
-endabirwamu/N3CEdm 
-endagaano/N3CE 
+endabirwamu/N3CEdm
+endagaano/N3CE
 endagala/CEov
 endagiriro/N3CE
-endali/N3CE 
+endali/N3CE
 endasi/N3CE
 endere/N3CE
 endiba/N3CEzz
@@ -646,7 +645,7 @@ enfa/N3CE
 enfaana/N3CE
 enfaanana/N3CE
 enfo/N3CE
-enfudu/N3CEzz      
+enfudu/N3CEzz
 enfuna/N3CE
 enfuufu/N3CEdm
 eng'aali/N3CE
@@ -1743,7 +1742,7 @@ tewali
 tiimu
 tiitiizi/CENAAd
 tiketi
-to/CENAAd [# young]
+to/CENAAd
 tono/CENAAd
 ttaabu
 ttena
@@ -1758,7 +1757,7 @@ visa
 vubufu
 vumu/CENAAd
 vvoozi/CENAAd
-wabula [# remaining time]
+wabula
 wabweru
 wadde
 wagulu
@@ -2257,8 +2256,8 @@ egyo
 eyo
 ezo
 ekyo
-ebyo 
-elyo 
+ebyo
+elyo
 ago
 ako
 obwo
@@ -2289,8 +2288,8 @@ gigyo
 yiiyo
 ziizo
 kiikyo
-biibyo 
-liilyo 
+biibyo
+liilyo
 gaago
 kaako
 buubwo
@@ -2345,7 +2344,7 @@ maamirwe
 maamiddwa
 # ---------------------------------------------------------------------------------------------------------- #
 # ------------------------------------------- numbers and positions ---------------------------------------------------------------------- #
-mu/CENo 
+mu/CENo
 biri/CENo
 bbiri
 bili
@@ -4075,8 +4074,8 @@ ddugazibwaamuuko
 ddugazibwaayo
 ddugazibwaayooko
 ddugazibwaawo
-ddugazibwaawooko 
-ddugazibwanga  
+ddugazibwaawooko
+ddugazibwanga
 ddugazibwangako
 #
 ddugazibweeko
@@ -4139,7 +4138,7 @@ ddugalirawooko
 ddugaliranga
 ddugalirangako
 #
-ddugalireko 
+ddugalireko
 ddugaliremu
 ddugaliremuuko
 ddugalireyo
@@ -6046,7 +6045,7 @@ geyeddwa/PastPassiveTransitive
 geyeza/BenefactiveTransitive
 geyeze/ModifiedBenefactiveTransitive
 geyezza/PastBenefactiveTransitive
-# --------------------------------------------------------------------------------------------------- #             
+# --------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugeza(to take an example): Intransitive --------------------------------------- #
 geza/OriginalIntransitive
 geze/ModifiedIntransitive
@@ -7239,7 +7238,7 @@ joogesezzaayo
 joogesezzaayooko
 joogesezzaawo
 joogesezzaawooko
-joogesezzangako 
+joogesezzangako
 #
 joogerako
 joogeramu
@@ -8217,7 +8216,7 @@ kolerangamuuko
 kolerangayo
 kolerangayooko
 kolerangawo
-kolerangawooko  
+kolerangawooko
 #
 kolereko
 koleremu
@@ -8290,7 +8289,7 @@ kolobolere/ModifiedBenefactiveTransitive
 koloboledde/PastBenefactiveTransitive
 omukolobozi/N1CEzz
 # ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okukolokota(to scrape): Type-I Transitive --------------------------------------------- # 
+# --------------------------------------- okukolokota(to scrape): Type-I Transitive --------------------------------------------- #
 kolokota/OriginalType-ITransitive
 kolokote/ModifiedType-ITransitive
 kolokose/PastType-ITransitive
@@ -8666,7 +8665,7 @@ kunamire/ModifiedBenefactiveIntransitive
 kunamidde/PastBenefactiveIntransitive
 omukunami/N1CEzz
 # ------------------------------------------------------------------------------------------------------------------------------------- #
-# -------------------------------------------- okukunga(to mobilize): Type-I Transitive --------------------------------------------- #  
+# -------------------------------------------- okukunga(to mobilize): Type-I Transitive --------------------------------------------- #
 kunga/OriginalType-ITransitive
 kunge/ModifiedType-ITransitive
 kunze/PastType-ITransitive
@@ -9436,7 +9435,7 @@ lambulwa/PassiveTransitive
 lambulwe/ModifiedPassiveTransitive
 lambuddwa/PastPassiveTransitive
 lambulira/BenefactiveTransitive
-lambulire/ModifiedBenefactiveTransitive 
+lambulire/ModifiedBenefactiveTransitive
 lambulidde/PastBenefactiveTransitive
 # -------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------- okulambulula(to unravel): Type-I Transitive --------------------------------------------- #
@@ -11797,7 +11796,7 @@ nenyeddwa/PastPassiveTransitive
 nenyeza/BenefactiveTransitive
 nenyeze/ModifiedBenefactiveTransitive
 nenyelezza/PastBenefactiveTransitive
-# 
+#
 nenyaako
 nenyaamu
 nenyaamuuko
@@ -11812,7 +11811,7 @@ nenyangayo
 nenyangayooko
 nenyangawo
 nenyangawooko
-# 
+#
 nenyeeko
 nenyeemu
 nenyeemuuko
@@ -11827,7 +11826,7 @@ nenyeengayo
 nenyeengayooko
 nenyeengawo
 nenyeengawooko
-# 
+#
 nenyezzaako
 nenyezzaamu
 nenyezzaamuuko
@@ -11850,7 +11849,7 @@ nenyebwaangayo
 nenyebwaangayooko
 nenyebwangawo
 nenyebwaangawooko
-# 
+#
 nenyebweeko
 nenyebweemu
 nenyebweemuuko
@@ -11865,7 +11864,7 @@ nenyebwengayo
 nenyebwengayooko
 nenyebwengawo
 nenyebwengawooko
-# 
+#
 nenyeddwaako
 nenyeddwaamu
 nenyeddwaamuuko
@@ -11873,7 +11872,7 @@ nenyeddwayo
 nenyeddwayooko
 nenyeddwaawo
 nenyeddwaawooko
-# 
+#
 nenyezaako
 nenyezaamu
 nenyezaamuuko
@@ -11888,7 +11887,7 @@ nenyezangayo
 nenyezangayooko
 nenyezangawo
 nenyezangawooko
-# 
+#
 nenyezeeko
 nenyezeemu
 nenyezeemuuko
@@ -11903,7 +11902,7 @@ nenyezeengayo
 nenyezeengayooko
 nenyezeengawo
 nenyezeengawooko
-#   
+#
 nenyerako
 nenyeramu
 nenyeramuuko
@@ -11918,7 +11917,7 @@ nenyerangayo
 nenyerangayooko
 nenyerangawo
 nenyerangawooko
-# 
+#
 nenyereko
 nenyeremu
 nenyeremuuko
@@ -12090,7 +12089,7 @@ nyigisizza/PastCausativeTransitive
 nyigira/BenefactiveTransitive
 nyigire/ModifiedBenefactiveTransitive
 nyigidde/PastBenefactiveTransitive
-# 
+#
 nyigako
 nyigamu
 nyigamuuko
@@ -12105,7 +12104,7 @@ nyigangayo
 nyigangayooko
 nyigangawo
 nyigangawooko
-# 
+#
 nyigeko
 nyigemu
 nyigemuuko
@@ -12120,7 +12119,7 @@ nyigeengayo
 nyigeengayooko
 nyigeengawo
 nyigeengawooko
-# 
+#
 nyizeeko
 nyizeemu
 nyizeemuuko
@@ -12135,7 +12134,7 @@ nyizeengayo
 nyizeengayooko
 nyizeengawo
 nyizeengawooko
-# 
+#
 nyigibwaako
 nyigibwaamu
 nyigibwaamuuko
@@ -12150,7 +12149,7 @@ nyigibwangayo
 nyigibwangayooko
 nyigibwangawo
 nyigibwangawooko
-# 
+#
 Nyigibweko
 nyigibwemu
 nyigibwemuuko
@@ -12165,7 +12164,7 @@ nyigibwengayo
 nyigibwengayooko
 nyigibwengawo
 nyigibwengawooko
-# 
+#
 nyigiddwaako
 nyigiddwaamu
 nyigiddwaamuuko
@@ -12173,7 +12172,7 @@ nyigiddwaayo
 nyigiddwaayooko
 nyigiddwaawo
 nyigiddwaawooko
-# 
+#
 nyigisaako
 nyigisaamu
 nyigisaamuuko
@@ -12181,7 +12180,7 @@ nyigisayo
 nyigisayooko
 nyigisaawo
 nyigisaawooko
-# 
+#
 nyigiseeko
 nyigiseemu
 nyigiseemuuko
@@ -12196,7 +12195,7 @@ nyigiseengayo
 nyigiseengayooko
 nyigiseengawo
 nyigiseengawooko
-# 
+#
 nyigisizzaako
 nyigisizzaamu
 nyigisizzaamuuko
@@ -12204,7 +12203,7 @@ nyigisizzaayo
 nyigisizzaayooko
 nyigisizzaawo
 nyigisizzaawooko
-# 
+#
 nyigirako
 nyigiramu
 nyigiramuuko
@@ -12234,7 +12233,7 @@ nyigireengayo
 nyigireengayooko
 nyigireengawo
 nyigireengawooko
-# 
+#
 nyigiddeko
 nyigiddemu
 nyigiddemuuko
@@ -12242,7 +12241,7 @@ nyigiddeyo
 nyigiddeyooko
 nyigiddewo
 nyigiddewooko
-# 
+#
 nyigiddeeko
 nyigiddeemu
 nyigiddeemuuko
@@ -12368,7 +12367,7 @@ nyumiziddwa/PastPassiveTransitive
 nyumiza/BenefactiveTransitive
 nyumize/ModifiedBenefactiveTransitive
 nyumilizza/PastBenefactiveTransitive
-# 
+#
 nyumyaako
 nyumyaamu
 nyumyaamuuko
@@ -12383,7 +12382,7 @@ nyumyangayo
 nyumyangayooko
 nyumyangawo
 nyumyangawooko
-# 
+#
 nyumeeko
 nyumeemu
 nyumeemuuko
@@ -12398,7 +12397,7 @@ nyumeengayo
 nyumeengayooko
 nyumeengawo
 nyumeengawooko
-# 
+#
 nyumizzaako
 nyumizzaamu
 nyumizzaamuuko
@@ -12406,7 +12405,7 @@ nyumizzaayo
 nyumizzaayooko
 nyumizzaawo
 nyumizzaawooko
-# 
+#
 nyumizibwaako
 nyumizibwaamu
 nyumizibwaamuuko
@@ -12421,7 +12420,7 @@ nyumizibwangayo
 nyumizibwangayooko
 nyumizibwangawo
 nyumizibwangawooko
-# 
+#
 nyumizibweko
 nyumizibwemu
 nyumizibwemuuko
@@ -12436,7 +12435,7 @@ nyumizibwengayo
 nyumizibwengayooko
 nyumizibwengawo
 nyumizibwengawooko
-# 
+#
 nyumiziddwaako
 nyumiziddwaamu
 nyumiziddwaamuuko
@@ -12459,7 +12458,7 @@ nyumizangayo
 nyumizangayooko
 nyumizangawo
 nyumizangawooko
-# 
+#
 nyumizeeko
 nyumizeemu
 nyumizeemuuko
@@ -12474,7 +12473,7 @@ nyumizeengayo
 nyumizeengayooko
 nyumizeengawo
 nyumizeengawooko
-# 
+#
 nyumilizzaako
 nyumilizzaamu
 nyumilizzaamuuko
@@ -12574,7 +12573,7 @@ pakasizzaayo
 pakasizzaayooko
 pakasizzaawo
 pakasizzaawooko
-# 
+#
 pakasibwaako
 pakasibwaamu
 pakasibwaamuuko
@@ -12589,7 +12588,7 @@ pakasibwangayo
 pakasibwangayooko
 pakasibwangawo
 pakasibwangawooko
-# 
+#
 pakasibweko
 pakasibwemu
 pakasibwemuuko
@@ -12604,7 +12603,7 @@ pakasibwengayo
 pakasibwengayooko
 pakasibwengawo
 pakasibwengawooko
-# 
+#
 pakasiddwaako
 pakasiddwaamu
 pakasiddwaamuuko
@@ -12612,7 +12611,7 @@ pakasiddwaayo
 pakasiddwaayooko
 pakasiddwaawo
 pakasiddwaawooko
-# 
+#
 pakasizaako
 pakasizaamu
 pakasizaamuuko
@@ -12627,7 +12626,7 @@ pakasizangayo
 pakasizangayooko
 pakasizangawo
 pakasizangawooko
-# 
+#
 pakasizeeko
 pakasizeemu
 pakasizeemuuko
@@ -12642,7 +12641,7 @@ pakasizeengayo
 pakasizeengayooko
 pakasizeengawo
 pakasizeengawooko
-# 
+#
 pakasilizzaako
 pakasilizzaamu
 pakasilizzaamuuko
@@ -12664,7 +12663,7 @@ pakizza/PastCausativeTransitive
 pakirira/BenefactiveTransitive
 pakirire/ModifiedBenefactiveTransitive
 pakiridde/PastBenefactiveTransitive
-# 
+#
 pakirako
 pakiramu
 pakiramuuko
@@ -12679,7 +12678,7 @@ pakirangayo
 pakirangayooko
 pakirangawo
 pakirangawooko
-# 
+#
 pakireko
 pakiremu
 pakiremuuko
@@ -12702,7 +12701,7 @@ pakiddeyo
 pakiddeyooko
 pakiddewo
 pakiddewooko
-# 
+#
 pakiddeeko
 pakiddeemu
 pakiddeemuuko
@@ -12710,7 +12709,7 @@ pakiddeeyo
 pakiddeeyooko
 pakiddeewo
 pakiddeewooko
-# 
+#
 pakilwaako
 pakilwaamu
 pakilwaamuuko
@@ -12725,7 +12724,7 @@ pakilwangayo
 pakilwangayooko
 pakilwangawo
 pakilwangawooko
-# 
+#
 pakilweeko
 pakilweemu
 pakilweemuuko
@@ -12740,7 +12739,7 @@ pakilweengayo
 pakilweengayooko
 pakilweengawo
 pakilweengawooko
-# 
+#
 pakiddwaako
 pakiddwaamu
 pakiddwaamuuko
@@ -12748,7 +12747,7 @@ pakiddwaayo
 pakiddwaayooko
 pakiddwaawo
 pakiddwaawooko
-# 
+#
 pakizaako
 pakizaamu
 pakizaamuuko
@@ -12763,7 +12762,7 @@ pakizangayo
 pakizangayooko
 pakizangawo
 pakizangawooko
-# 
+#
 pakizeeko
 pakizeemu
 pakizeemuuko
@@ -12786,7 +12785,7 @@ pakizzaayo
 pakizzaayooko
 pakizzaawo
 pakizzaawooko
-# 
+#
 pakirirako
 pakiriramu
 pakiriramuuko
@@ -12801,7 +12800,7 @@ pakirirangayo
 pakirirangayooko
 pakirirangawo
 pakirirangawooko
-# 
+#
 pakirireko
 pakiriremu
 pakiriremuuko
@@ -12816,7 +12815,7 @@ pakirireengayo
 pakirireengayooko
 pakirireengawo
 pakirireengawooko
-# 
+#
 pakiriddeko
 pakiriddemu
 pakiriddemuuko
@@ -12824,10 +12823,10 @@ pakiriddeyo
 pakiriddeyooko
 pakiriddewo
 pakiriddewooko
-# 
+#
 pakiriddeeko
 pakiriddeemu
-pakiriddeemuuko 
+pakiriddeemuuko
 pakiriddeeyo
 pakiriddeeyooko
 pakiriddeewo
@@ -12876,7 +12875,7 @@ pangengayo
 pangengayooko
 pangengawo
 pangengawooko
-# 
+#
 pangibwaako
 pangibwaamu
 pangibwaamuuko
@@ -12891,7 +12890,7 @@ pangibwangayo
 pangibwangayooko
 pangibwangawo
 pangibwangawooko
-# 
+#
 pangibweko
 pangibwemu
 pangibwemuuko
@@ -13026,7 +13025,7 @@ pangisangayo
 pangisangayooko
 pangisangawo
 pangisangawooko
-# 
+#
 pangiseeko
 pangiseemu
 pangiseemuuko
@@ -13049,7 +13048,7 @@ pangisizzaayo
 pangisizzaayooko
 pangisizzaawo
 pangisizzaawooko
-# 
+#
 pangisibwaako
 pangisibwaamu
 pangisibwaamuuko
@@ -13064,7 +13063,7 @@ pangisibwangayo
 pangisibwangayooko
 pangisibwangawo
 pangisibwangawooko
-# 
+#
 pangisibweko
 pangisibwemu
 pangisibwemuuko
@@ -13079,7 +13078,7 @@ pangisibwengayo
 pangisibwengayooko
 pangisibwengawo
 pangisibwengawooko
-# 
+#
 pangisiddwaako
 pangisiddwaamu
 pangisiddwaamuuko
@@ -13087,7 +13086,7 @@ pangisiddwaayo
 pangisiddwaayooko
 pangisiddwaawo
 pangisiddwaawooko
-# 
+#
 pangizisaako
 pangizisaamu
 pangizisaamuuko
@@ -13102,7 +13101,7 @@ pangizisangayo
 pangizisangayooko
 pangizisangawo
 pangizisangawooko
-# 
+#
 pangiziseeko
 pangiziseemu
 pangiziseemuuko
@@ -13132,7 +13131,7 @@ pangisirizangayo
 pangisirizangayooko
 pangisirizangawo
 pangisirizangawooko
-# 
+#
 pangisirizeeko
 pangisirizeemu
 pangisirizeemuuko
@@ -13194,11 +13193,11 @@ pimisizza/PastCausativeTransitive
 pimira/BenefactiveTransitive
 pimire/ModifiedBenefactiveTransitive
 pimidde/PastBenefactiveTransitive
-# 
+#
 pimako
 pimamu
 pimamuuko
-pimayo  
+pimayo
 pimayooko
 pimawo
 pimawooko
@@ -13209,7 +13208,7 @@ pimangayo
 pimangayooko
 pimangawo
 pimangawooko
-# 
+#
 pimeko
 pimemu
 pimemuuko
@@ -13232,7 +13231,7 @@ pimyeeyo
 pimyeeyooko
 pimyeewo
 pimyeewooko
-# 
+#
 pimibwaako
 pimibwaamu
 pimibwaamuuko
@@ -13270,7 +13269,7 @@ pimiddwaayo
 pimiddwaayooko
 pimiddwaawo
 pimiddwaawooko
-# 
+#
 pimisaako
 pimisaamu
 pimisaamuuko
@@ -13285,7 +13284,7 @@ pimisangayo
 pimisangayooko
 pimisangawo
 pimisangawooko
-# 
+#
 pimiseeko
 pimiseemu
 pimiseemuuko
@@ -13308,7 +13307,7 @@ pimisizzaayo
 pimisizzaayooko
 pimisizzaawo
 pimisizzaawooko
-# 
+#
 pimirako
 pimiramu
 pimiramuuko
@@ -13323,7 +13322,7 @@ pimirangayo
 pimirangayooko
 pimirangawo
 pimirangawooko
-# 
+#
 pimireko
 pimiremu
 pimiremuuko
@@ -13338,7 +13337,7 @@ pimireengayo
 pimireengayooko
 pimireengawo
 pimireengawooko
-# 
+#
 pimiddeko
 pimiddemu
 pimiddemuuko
@@ -13346,7 +13345,7 @@ pimiddeyo
 pimiddeyooko
 pimiddewo
 pimiddewooko
-# 
+#
 pimiddeeko
 pimiddeemu
 pimiddeemuuko
@@ -13425,7 +13424,7 @@ saasaanye/HybridDeadjective
 saasaanya/CausativeDeadjective
 saasaanyizza/PastCausativeDeadjective
 saasaanyiza/BenefactiveDeadjective
-saasaanyize/ModifiedBenefactiveDeadjective 
+saasaanyize/ModifiedBenefactiveDeadjective
 saasaanyirizza/PastBenefactiveDeadjective
 saasaanira/LocativeDeadjective
 saasaanire/ModifiedLocativeDeadjective
@@ -13473,7 +13472,7 @@ sabisizza/PastCausativeTransitive
 sabira/BenefactiveTransitive
 sabire/ModifiedBenefactiveTransitive
 sabidde/PastBenefactiveTransitive
-# 
+#
 sabako
 sabamu
 sabamuuko
@@ -13488,7 +13487,7 @@ sabangayo
 sabangayooko
 sabangawo
 sabangawooko
-# 
+#
 sabeko
 sabemu
 sabemuuko
@@ -13503,7 +13502,7 @@ sabeengayo
 sabeengayooko
 sabeengawo
 sabeengawooko
-# 
+#
 sabyeeko
 sabyeemu
 sabyeemuuko
@@ -13511,7 +13510,7 @@ sabyeeyo
 sabyeeyooko
 sabyeewo
 sabyeewooko
-# 
+#
 sabibwaako
 sabibwaamu
 sabibwaamuuko
@@ -13706,7 +13705,7 @@ sambisizza/PastCausativeTransitive
 sambira/BenefactiveTransitive
 sambire/ModifiedBenefactiveTransitive
 sambidde/PastBenefactiveTransitive
-# 
+#
 sambako
 sambamu
 sambamuuko
@@ -14130,7 +14129,7 @@ sasuzzaawooko
 #
 sasulirako
 sasuliramu
-sasuliramuuko   
+sasuliramuuko
 sasulirayo
 sasulirayooko
 sasulirawo
@@ -14638,7 +14637,7 @@ sigangawo
 sigangawooko
 #
 sigeko
-sigemu  
+sigemu
 sigemuuko
 sigeyo
 sigeyooko
@@ -14697,7 +14696,7 @@ sigiddwaayo
 sigiddwaayooko
 sigiddwaawo
 sigiddwaawooko
-# ----------------------------------------------------------------------------------------------------------- # 
+# ----------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okusigala(to stay; to remain; to be left): Intransitive ------------------------------- #
 sigala/OriginalIntransitive
 sigale/ModifiedIntransitive
@@ -15381,7 +15380,7 @@ suzeeyooko
 suzeewo
 suzeewooko
 #
-sulibwaako  
+sulibwaako
 sulibwaamu
 sulibwaamuuko
 sulibwayo
@@ -15498,7 +15497,7 @@ suliddeeko
 suliddeemu
 suliddeemuuko
 suliddeeyo
-suliddeeyooko   
+suliddeeyooko
 suliddeewo
 suliddeewooko
 # --------------------------------------------------------------------------------------------------------- #
@@ -16316,7 +16315,7 @@ teekeddeeko
 teekeddeemu
 teekeddeemuuko
 teekeddeeyo
-teekeddeeyooko  
+teekeddeeyooko
 teekeddeewo
 teekeddeewooko
 # --------------------------------------------------------------------------------- #
@@ -16587,7 +16586,7 @@ tiisibwangayo
 tiisibwangayooko
 tiisibwangawo
 tiisibwangawooko
-# 
+#
 tiisibweeko
 tiisibwemu
 tiisibwemuuko
@@ -17206,7 +17205,7 @@ tuukira/LocativeIntransitive
 tuukire/ModifiedLocativeIntransitive
 tuukidde/PastLocativeIntransitive
 # ----------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------- okutuula(to sit): Type-I Transitive ---------------------------------- # 
+# ------------------------------------------- okutuula(to sit): Type-I Transitive ---------------------------------- #
 tuula/OriginalType-ITransitive
 tuule/ModifiedType-ITransitive
 tudde/PastType-ITransitive
@@ -18075,7 +18074,7 @@ vumideyooko
 vumidewo
 vumiddewooko
 #
-vumiddeeko  
+vumiddeeko
 vumiddeemu
 vumiddeemuuko
 vumiddeeyo
@@ -18266,7 +18265,7 @@ vumbuliremuuko
 vumbulireyooko
 vumbulirewo
 vumbulirewooko
-vumbulirengako  
+vumbulirengako
 vumbulirengamu
 vumbulirengamuuko
 vumbulirengayo
@@ -18621,7 +18620,7 @@ omuwagizi/N1CEzz/N1CEzz
 # ------------------------------ okuwakana(to object; to dispute; to argue): Intransitive ------------------------------- #
 wakana/OriginalIntransitive
 wakane/ModifiedIntransitive
-wakanye/HybridIntransitive  
+wakanye/HybridIntransitive
 wakanya/CausativeIntransitive
 wakanyizza/PastCausativeIntransitive
 wakanyiza/BenefactiveIntransitive
@@ -19861,7 +19860,7 @@ wulirizibwa/PassiveTransitive
 wulirizibwe/ModifiedPassiveTransitive
 wuliriziddwa/PastPassiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
-# ------------------------------------------------------------------- okuwummula(to rest): Type-I Transitive ------------------------------------------------------------------------- # 
+# ------------------------------------------------------------------- okuwummula(to rest): Type-I Transitive ------------------------------------------------------------------------- #
 wummula/OriginalType-ITransitive
 wummule/ModifiedType-ITransitive
 wummudde/PastType-ITransitive
@@ -19966,7 +19965,7 @@ wuumidde/PastBenefactiveIntransitive
 yaayaana/OriginalIntransitive
 yaayaane/ModifiedIntransitive
 yaayaanye/HybridIntransitive
-yaayaanya/CausativeIntransitive   
+yaayaanya/CausativeIntransitive
 yaayaanyizza/PastCausativeIntransitive
 yaayaanirwa/PassiveIntransitive
 yaayaanirwe/ModifiedPassiveIntransitive
@@ -20574,7 +20573,7 @@ yerebwengamu
 yerebwengamuuko
 yerebwengayo
 yerebwengayooko
-yerebwengawo 
+yerebwengawo
 yerebwengawooko
 #
 yereddwaako
@@ -20803,7 +20802,7 @@ yigirako
 yigiramu
 yigiramuuko
 yigirayo
-yigirayooko 
+yigirayooko
 yigirawo
 yigirawooko
 yigirangako
@@ -21135,7 +21134,7 @@ yitiddeeyo
 yitiddeeyooko
 yitiddeewo
 yitiddeewooko
-# --------------------------------------------------------------------------------------------------------- #    
+# --------------------------------------------------------------------------------------------------------- #
 # ------------------------------ okuyitaayita(to get around; to move around): Intransitive ------------------------------ #
 yitaayita/OriginalIntransitive
 yiteeyite/ModifiedIntransitive
@@ -21561,7 +21560,7 @@ zaaliddemuuko
 zaaliddeyo
 zaaliddeyooko
 zaaliddewo
-zaaliddewooko   
+zaaliddewooko
 #
 zaaliddeeko
 zaaliddeemu
@@ -21658,7 +21657,7 @@ zannyisaayo
 zannyisaayooko
 zannyisaawo
 zannyisaawooko
-zannyisangako   
+zannyisangako
 zannyisangamu
 zannyisangamuuko
 zannyisangayo
@@ -21690,7 +21689,7 @@ zannyisizzaawo
 zannyisizzaawooko
 #
 zannyirako
-zannyiramu  
+zannyiramu
 zannyiramuuko
 zannyirayo
 zannyirayooko
@@ -21778,7 +21777,7 @@ zibengamuuko
 zibengayo
 zibengayooko
 zibengawo
-zibengawooko    
+zibengawooko
 #
 zibyeeko
 zibyeemu
@@ -22395,7 +22394,7 @@ yagalibwa
 yagalibwe
 yagaliddwa
 yagilira
-yagilire    
+yagilire
 yagilidde
 omwagazi/N1CEzz
 omwagalwa/N1CEzz
@@ -23058,7 +23057,7 @@ ggamirewo
 ggamirewooko
 ggamirengako
 ggamirengamu
-ggamirengamuuko    
+ggamirengamuuko
 ggamirengayo
 ggamirengayooko
 ggamirengawo
@@ -23111,7 +23110,7 @@ gombangawooko
 #
 gombeko
 gombemu
-gombemuuko  
+gombemuuko
 gombeyo
 gombeyooko
 gombewo
@@ -23125,7 +23124,7 @@ gombengawo
 gombengawooko
 #
 gombyeeko
-gombyeemu   
+gombyeemu
 gombyeemuuko
 gombyeeyo
 gombyeeyooko
@@ -23303,7 +23302,7 @@ jjuseewooko
 jjusengako
 jjusengamu
 jjusengamuuko
-jjusengayo  
+jjusengayo
 jjusengayooko
 jjusengawo
 jjusengawooko
@@ -23410,7 +23409,7 @@ kalakaasizangawooko
 kalakaasizeeko
 kalakaasizeemu
 kalakaasizeemuuko
-kalakaasizeeyo  
+kalakaasizeeyo
 kalakaasizeeyooko
 kalakaasizeewo
 kalakaasizeewooko
@@ -23629,7 +23628,7 @@ pankamu
 pankamuuko
 pankayo
 pankayooko
-pankaawo    
+pankaawo
 pankawooko
 pankangako
 pankangamu
@@ -23659,7 +23658,7 @@ panseemu
 panseemuuko
 panseeyo
 panseeyooko
-panseewo    
+panseewo
 panseewooko
 pansengako
 pansengamu
@@ -24049,7 +24048,7 @@ yanzangamuuko
 yanzangayo
 yanzangayooko
 yanzangawo
-yanzangawooko   
+yanzangawooko
 #
 yanzeeko
 yanzeemu
@@ -24161,8 +24160,8 @@ yo/pd
 zo/pd
 gyo/pc
 kyo/pc
-byo/pc 
-lyo/pc 
+byo/pc
+lyo/pc
 go/pd
 ko/pd
 bwo/pc
@@ -24176,8 +24175,8 @@ eyo/NApd
 ezo/NApd
 egyo/NApc
 ekyo/NApc
-ebyo/NApc 
-elyo/NApc 
+ebyo/NApc
+elyo/NApc
 ago/NApd
 ako/NApd
 obwo/NApc
@@ -24191,8 +24190,8 @@ yiyo
 zizo
 gigyo
 kikyo
-bibyo 
-lilyo 
+bibyo
+lilyo
 gago
 kako
 bubwo
@@ -24208,8 +24207,8 @@ egya/eaae
 eya/eaae
 eza/eaae
 ekya/eaae
-ebya/eaae 
-elya/eaae 
+ebya/eaae
+elya/eaae
 aga/eaae
 aka/eaae
 obwa/eaae
