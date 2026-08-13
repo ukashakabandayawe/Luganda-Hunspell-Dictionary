@@ -1875,18 +1875,19 @@ bugumira/LocativeDeadjective
 bugumire/ModifiedLocativeDeadjective
 bugumidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------- #
-# ------------------------------- **okubula(to get lost): Deadjectival ----------------------------------------- #
-bula/OriginalDeadjective
-bule/ModifiedDeadjective
-buze/HybridDeadjective
-buza/CausativeDeadjective
-buzizza/PastCausativeDeadjective
-bulwa/PassiveDeadjective
-bulwe/ModifiedPassiveDeadjective
-buliddwa/PastPassiveDeadjective
-bulira/LocativeDeadjective
-bulire/ModifiedLocativeDeadjective
-bulidde/PastLocativeDeadjective
+# ------------------------------- **okubula(to get lost): Type-I Transitive ----------------------------------------- #
+bula/OriginalType-ITransitive
+bule/ModifiedType-ITransitive
+buze/PastType-ITransitive
+buza/CausativeTransitive
+buze/ModifiedCausativeTransitive
+buzizza/PastCausativeTransitive
+bulwa/PassiveTransitive
+bulwe/ModifiedPassiveTransitive
+buliddwa/PastPassiveTransitive
+bulira/LocativeTransitive
+bulire/ModifiedLocativeTransitive
+bulidde/PastLocativeTransitive
 # --------------------------------------------------------------------------------------------- #
 # ------------------------------- **okubumba(to model): Type-I Transitive ----------------------------------------- #
 bumba/OriginalType-ITransitive
@@ -1984,6 +1985,7 @@ gaziya/CausativeDeadjective
 gaziyizza/PastCausativeDeadjective
 gaziyiza/BenefactiveDeadjective
 gaziyize/ModifiedBenefactiveDeadjective
+gaziyilizza/PastBenefactiveDeadjective
 gaziyira/LocativeDeadjective
 gaziyire/ModifiedLocativeDeadjective
 gaziyidde/PastLocativeDeadjective
@@ -13928,9 +13930,9 @@ sangidde/PastBenefactiveTransitive
 sanguka/OriginalDeadjective
 sanguke/ModifiedDeadjective
 sanguse/PastDeadjective
-sangukira/BenefactiveDeadjective
-sangukire/ModifiedBenefactiveDeadjective
-sangukidde/PastBenefactiveDeadjective
+sangukira/LocativeDeadjective
+sangukire/ModifiedLocativeDeadjective
+sangukidde/PastLocativeDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------------- okusangula(to wipe off; to erase; to eliminate): Type-I Transitive ---------------------------- #
 sangula/OriginalType-ITransitive
