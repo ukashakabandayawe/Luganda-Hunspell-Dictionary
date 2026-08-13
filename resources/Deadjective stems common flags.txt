@@ -16,7 +16,6 @@ MODIFIED DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 4
 Common flags (raw): mu, NA, PS, SB, nf, wm
-Common flags (tokens): NA, PS, SB, nf, wm
 Unique flag count: 0
 
 Selected stem details:
@@ -75,7 +74,6 @@ CAUSATIVE DEADJECTIVE STEMS
 Selected stems: 3
 Common flag count: 88
 Common flags (raw): aw, ay, BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, cC, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
-Common flags (tokens): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, cC, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
 Unique flag count: 0
 
 Selected stem details:
@@ -146,7 +144,6 @@ MODIFIED BENEFACTIVE DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 18
 Common flags (raw): NA, ak, BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
-Common flags (tokens): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
 Unique flag count: 0
 
 Selected stem details:
@@ -177,7 +174,6 @@ LOCATIVE DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 87
 Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
-Common flags (tokens): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
 Unique flag count: 0
 
 Selected stem details:
