@@ -871,7 +871,7 @@ PFX rF 0 tutalye .
 
 # Creating the infinitive from stems non-reflexive verbs e.g oku+lya, obuta+lya
 PFX gg Y 4
-PFX gg 0 oku/CECP   .
+PFX gg 0 oku   .
 PFX gg 0 ku    .
 PFX gg 0 obuta .
 PFX gg 0 buta  .
@@ -5054,17 +5054,17 @@ PFX N5 ery ka   erya
 # Was using flag t and now uses N6
 PFX N6 Y 13
 PFX N6 a   0    ak
-PFX N6 aka obu/CP aka[^mnaeiou]
+PFX N6 aka obu aka[^mnaeiou]
 PFX N6 aka bu aka[^mnaeiou]
-PFX N6 aka obwa/CP akamb
+PFX N6 aka obwa akamb
 PFX N6 aka bwa akamb
-PFX N6 aka obwa/CP akan[aeiou]
+PFX N6 aka obwa akan[aeiou]
 PFX N6 aka bwa akan[aeiou]
-PFX N6 aka obu/CP akam[^b]
+PFX N6 aka obu akam[^b]
 PFX N6 aka bu akam[^b]
-PFX N6 aka obu/CP akan[^aeiou]
+PFX N6 aka obu akan[^aeiou]
 PFX N6 aka bu akan[^aeiou]
-PFX N6 ak  obw/CP akee
+PFX N6 ak  obw akee
 PFX N6 ak  bw akee
 
 # Special class VI nouns e.g. bukamunye

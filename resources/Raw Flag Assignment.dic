@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
-# This program is free software: you can redistribute it and/or modify
+# This program is free software: you can redistribute it and or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
@@ -13,7 +13,7 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# along with this program.  If not, see www.gnu.org.
 #
 # Note: The double asterisks (**) in the comments indicate that the following section or the verb contains irregular verb forms that do not follow the standard conjugation patterns.
 # So such verbs should be handled with special attention.
@@ -18257,7 +18257,7 @@ vuunikiddwa/PastPassiveTransitive
 vuunikira/BenefactiveTransitive
 vuunikire/ModifiedBenefactiveTransitive
 vuunikidde/PastBenefactiveTransitive
-omuvuunisi/N1CEzz/N1CE
+omuvuunisi/N1CEzz
 # --------------------------------------------------------------------------------------------------------- #
 # -------------------------------------- okuvuuvuuma(to buzz): Intransitive ---------------------------------- #
 vuuvuuma/OriginalIntransitive
@@ -18300,7 +18300,7 @@ vvuunuliddwa/PastPassiveTransitive
 vvuunulira/BenefactiveTransitive
 vvuunulire/ModifiedBenefactiveTransitive
 vvuunulidde/PastBenefactiveTransitive
-omuvvuunuzi/N1CEzz/N1CEzz
+omuvvuunuzi/N1CEzz
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------------------------- okuwa(to give): Type-II Transitive ---------------------------------- #
 wa/OriginalType-IITransitive
@@ -18500,7 +18500,7 @@ waabiddwa/PastPassiveTransitive
 waabira/LocativeTransitive
 waabire/ModifiedLocativeTransitive
 waabidde/PastLocativeTransitive
-omuwaabi/N1CEzz/N1CE
+omuwaabi/N1CEzz
 # --------------------------------------------------------------------------------------------------------- #
 # ----------------------------------- okuwaata(to peel; inf.: okuwaata): Type-I Transitive ----------------------------------- #
 waata/OriginalType-ITransitive
@@ -18515,7 +18515,7 @@ waatiddwa/PastPassiveTransitive
 waatira/BenefactiveTransitive
 waatire/ModifiedBenefactiveTransitive
 waatidde/PastBenefactiveTransitive
-omuwaasi/N1CEzz/N1CE
+omuwaasi/N1CEzz
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------- okuwabula(to correct; to inform; to warn): Type-II Transitive ------------------------------- #
 wabula/OriginalType-IITransitive
@@ -18544,7 +18544,7 @@ wagiddwa/PastPassiveTransitive
 wagirira/BenefactiveTransitive
 wagirire/ModifiedBenefactiveTransitive
 wagiridde/PastBenefactiveTransitive
-omuwagizi/N1CEzz/N1CEzz
+omuwagizi/N1CEzz
 # ---------------------------------------------------------------------------------------------------------- #
 # ------------------------------ okuwakana(to object; to dispute; to argue): Intransitive ------------------------------- #
 wakana/OriginalIntransitive
@@ -18586,7 +18586,7 @@ walampibwe/ModifiedPassiveTransitive
 walampira/BenefactiveTransitive
 walampire/ModifiedBenefactiveTransitive
 walampidde/PastBenefactiveTransitive
-omuwalampi/N1CEzz/N1CEzz
+omuwalampi/N1CEzz
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------------------------- okuwaliriza (to force): Type-I Transitive --------------------------------- #
 waliriza/OriginalType-ITransitive
@@ -18609,7 +18609,7 @@ waluliddwa/PastPassiveTransitive
 walulira/BenefactiveTransitive
 walulire/ModifiedBenefactiveTransitive
 walulidde/PastBenefactiveTransitive
-omuwaluzi/N1CEzz/N1CEzz
+omuwaluzi/N1CEzz
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------- okuwamba(to take prisoner; to capture; to confiscate): Type-I Transitive ------------------------- #
 wamba/OriginalType-ITransitive
