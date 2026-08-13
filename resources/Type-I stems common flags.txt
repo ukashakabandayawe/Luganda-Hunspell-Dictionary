@@ -187,6 +187,7 @@ Selected stem details:
 
 PAST BENEFACTIVE  TYPE-I STEMS
 Selected stems: 4
+common flag count: 54
 Common flags: BD, BE, BF, BG, BM, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, UU, VV, WG, WN, XX, cC, sT, em, np, ps, rp, sc, st, wg, wn
 
 Selected stem details:
