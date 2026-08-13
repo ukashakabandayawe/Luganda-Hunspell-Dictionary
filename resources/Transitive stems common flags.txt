@@ -180,9 +180,28 @@ Flag count: 55
 Flags: BD, BE, BF, BG, BM, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, St, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
 
 
+16. LOCATIVE TRANSITIVE STEMS
+Common flag count: 28
+Common flags (raw): DP, FF, IM, IP, LT, NF, NP, PP, PS, PT, SC, St, WF, WM, WN, YT, ff, gg, ip, jj, np, pp, ps, sc, st, wf, wm, wn
+
+Analyzed stem details:
+- bajjira -> unique flag count: 0; unique flags: (none)
 
 
+17. MODIFIED LOCATIVE TRANSITIVE STEMS
+Common flag count: 4
+Common flags (raw): PS, SB, nf, wm
 
+Analyzed stem details:
+- bajjire -> unique flag count: 0; unique flags: (none)
+
+
+18. PAST LOCATIVE TRANSITIVE STEMS
+Common flag count: 13
+Common flags (raw): CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
+
+Analyzed stem details:
+- bajjidde -> unique flag count: 0; unique flags: (none)
 
 
 

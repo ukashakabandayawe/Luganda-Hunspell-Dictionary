@@ -172,3 +172,33 @@ Selected stem details:
 - sekeredde -> unique flag count: 0; unique flags: (none)
 - yiikidde -> unique flag count: 0; unique flags: (none)
 
+
+
+LOCATIVE INTRASITIVE STEMS
+Selected stems: 1
+Common flag count: 26
+Common flags (raw): DP, FF, IM, IP, JJ, LT, NF, NP, PP, PS, PT, SC, St, WF, WM, WN, YT, ff, gg, ip, np, pp, ps, st, wf, wn
+
+Analyzed stem details:
+- balukira -> unique flag count: 0; unique flags: (none)
+
+
+
+MODIFIED LOCATIVE INTRASITIVE STEMS
+Selected stems: 1
+Common flag count: 4
+Common flags (raw): PS, SB, nf, wm
+
+Analyzed stem details:
+- balukire -> unique flag count: 0; unique flags: (none)
+
+
+
+PAST LOCATIVE INTRASITIVE STEMS
+Selected stems: 1
+Common flag count: 13
+Common flags (raw): CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
+
+Analyzed stem details:
+- balukidde -> unique flag count: 0; unique flags: (none)
+
