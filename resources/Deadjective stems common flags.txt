@@ -1,7 +1,7 @@
 ORIGINAL DEADJECTIVE STEMS
 Selected stems: 3
 Common flag count: 28
-Common flags (raw): DP, FF, IM, IP, JJ, LT, NF, NP, PP, PS, PT, SC, St, WF, WM, WN, YT, ff, gg, ip, jj, np, pp, ps, sc, st, wf, wn
+Common flags (raw): mu, DP, FF, IM, IP, JJ, LT, NF, NP, PP, PS, PT, SC, St, WF, WM, WN, YT, ff, gg, ip, jj, np, pp, ps, sc, st, wf, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -15,8 +15,8 @@ Selected stem details:
 MODIFIED DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 4
-Common flags (raw): PS, SB, nf, wm
-Common flags (tokens): PS, SB, nf, wm
+Common flags (raw): mu, NA, PS, SB, nf, wm
+Common flags (tokens): NA, PS, SB, nf, wm
 Unique flag count: 0
 
 Selected stem details:
@@ -29,7 +29,7 @@ Selected stem details:
 PAST TENSE DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 13
-Common flags (raw): CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
+Common flags (raw): NA, CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -40,7 +40,7 @@ Selected stem details:
 PASSIVE DEADJECTIVE STEMS
 Selected stems: 1
 Common flag count: 66
-Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, FY, GG, HH, II, IM, IP, JJ, LT, NF, NN, NP, PP, PS, PT, QQ, RR, SC, SS, St, TT, WF, WM, WN, YT, ff, gg, ip, jj, kk, ll, np, pp, ps, sc, st, wf, wn
+Common flags (raw): NA, ko, BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, FY, GG, HH, II, IM, IP, JJ, LT, NF, NN, NP, PP, PS, PT, QQ, RR, SC, SS, St, TT, WF, WM, WN, YT, ff, gg, ip, jj, kk, ll, np, pp, ps, sc, st, wf, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -52,7 +52,7 @@ Selected stem details:
 MODIFIED PASSIVE DEADJECTIVE STEMS
 Selected stems: 1
 Common flag count: 7
-Common flags (raw): BV, EM, NN, PS, SB, nf, wm
+Common flags (raw): NA, ko, BV, EM, NN, PS, SB, nf, wm
 Unique flag count: 0
 
 Selected stem details:
@@ -63,7 +63,7 @@ Selected stem details:
 PAST PASSIVE DEADJECTIVE STEMS
 Selected stems: 1
 Common flag count: 14
-Common flags (raw): CC, DP, LT, NP, PS, PT, SC, St, WN, np, ps, sc, st, wn
+Common flags (raw): NA, ko, CC, DP, LT, NP, PS, PT, SC, St, WN, np, ps, sc, st, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -74,7 +74,7 @@ Selected stem details:
 CAUSATIVE DEADJECTIVE STEMS
 Selected stems: 3
 Common flag count: 88
-Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, cC, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
+Common flags (raw): aw, ay, BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, cC, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
 Common flags (tokens): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, cC, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
 Unique flag count: 0
 
@@ -89,7 +89,7 @@ Selected stem details:
 MODIFIED CAUSATIVE DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 17
-Common flags (raw): BV, EM, FP, FX, NN, PS, PT, RP, SB, Sb, WW, nf, rp, wg, wh, wm, wn
+Common flags (raw): NA, aw, ay, BV, EM, FP, FX, NN, PS, PT, RP, SB, Sb, WW, nf, rp, wg, wh, wm, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -102,7 +102,7 @@ Selected stem details:
 PAST CAUSATIVE DEADJECTIVE STEMS
 Selected stems: 3
 Common flag count: 41
-Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, St, WG, WN, cC, em, np, ps, rp, sT, sc, st, wg, wn
+Common flags (raw): NA, aw, ay, BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, St, WG, WN, cC, em, np, ps, rp, sT, sc, st, wg, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -120,7 +120,7 @@ Note: There is a case where for some verbs, the past tense stem is the same as t
 
 Selected stems: 2
 Common flag count: 27
-Common flags (raw): BV, CC, DP, EM, FP, FX, LT, NN, NP, PS, PT, RP, SB, SC, WN, WW, Sb, nf, np, ps, rp, sc, st, wg, wh, wm, wn
+Common flags (raw): NA, am, BV, CC, DP, EM, FP, FX, LT, NN, NP, PS, PT, RP, SB, SC, WN, WW, Sb, nf, np, ps, rp, sc, st, wg, wh, wm, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -133,7 +133,7 @@ Selected stem details:
 BENEFACTIVE DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 116
-Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
+Common flags (raw): ak, BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
 Unique flag count: 0
 
 Selected stem details:
@@ -145,7 +145,7 @@ Selected stem details:
 MODIFIED BENEFACTIVE DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 18
-Common flags (raw): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
+Common flags (raw): NA, ak, BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
 Common flags (tokens): BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
 Unique flag count: 0
 
@@ -159,7 +159,17 @@ PAST BENEFACTIVE DEADJECTIVE STEMS
 #
 # I forgot to analyze the past benefactive deadjective stems for common flags. 
 # But they exist in reality e.g. wanvuyilizza, gaziyilizza, etc.
-#
+# I just improvised by pasting the common flags for the past locative deadjective stems.
+Category: mixed
+Selected stems: 2
+Common flag count: 38
+Common flags (raw): NA, BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, WG, WN, cC, em, np, ps, rp, sc, st, wg, wn
+Unique flag count: 0
+
+Selected stem details:
+- gaziyidde -> unique flag count: 0; unique flags: (none)
+- wanvuyidde -> unique flag count: 0; unique flags: (none)
+
 
 
 
@@ -180,7 +190,7 @@ Selected stem details:
 MODIFIED LOCATIVE DEADJECTIVE STEMS
 Selected stems: 2
 Common flag count: 14
-Common flags (raw): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
+Common flags (raw): NA, BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
 Unique flag count: 0
 
 Selected stem details:
@@ -193,7 +203,7 @@ PAST LOCATIVE DEADJECTIVE STEMS
 Category: mixed
 Selected stems: 2
 Common flag count: 38
-Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, WG, WN, cC, em, np, ps, rp, sc, st, wg, wn
+Common flags (raw): NA, BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, WG, WN, cC, em, np, ps, rp, sc, st, wg, wn
 Unique flag count: 0
 
 Selected stem details:

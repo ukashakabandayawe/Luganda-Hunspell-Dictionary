@@ -3,7 +3,7 @@ This Document contains the flags used with intrasitive verbs only.
 ORIGINAL INTRASITIVE STEMS
 Selected stems: 3
 Common flag count: 28
-Common flags (raw): DP, FF, IM, IP, JJ, LT, NF, NP, PP, PS, PT, SC, St, WF, WM, WN, YT, ff, gg, ip, jj, np, pp, ps, sc, st, wf, wn
+Common flags (raw): ko, mu, DP, FF, IM, IP, JJ, LT, NF, NP, PP, PS, PT, SC, St, WF, WM, WN, YT, ff, gg, ip, jj, np, pp, ps, sc, st, wf, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -17,7 +17,7 @@ Selected stem details:
 MODIFIED INTRASITIVE STEMS
 Selected stems: 3
 Common flag count: 4
-Common flags (raw): PS, SB, nf, wm
+Common flags (raw): NA, ko, mu, PS, SB, nf, wm
 Unique flag count: 0
 
 Selected stem details:
@@ -31,7 +31,7 @@ Selected stem details:
 PAST TENSE INTRASITIVE STEMS
 Selected stems: 2
 Common flag count: 12
-Common flags (raw): CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
+Common flags (raw): NA, ak, CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -45,7 +45,7 @@ Note: There is a case where for some verbs, the past tense stem is the same as t
 
 Selected stems: 3
 Common flag count: 28
-Common flags (raw): BV, CC, DP, EM, FH, FP, FX, LT, NN, NP, PS, PT, RP, SB, SC, Sb, WN, WW, nf, np, ps, rp, sc, st, wg, wh, wm, wn
+Common flags (raw): NA, ak, am, aw, BV, CC, DP, EM, FH, FP, FX, LT, NN, NP, PS, PT, RP, SB, SC, Sb, WN, WW, nf, np, ps, rp, sc, st, wg, wh, wm, wn
 Unique flag count: 2
 
 Selected stem details:
@@ -59,7 +59,7 @@ Selected stem details:
 CAUSATIVE INTRASITIVE STEMS
 Selected stems: 3
 Common flag count: 88
-Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, cC, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wj, wf, wg, wn, xx, yt
+Common flags (raw): am, ak, BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, cC, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, vv, wj, wf, wg, wn, xx, yt
 Unique flag count: 0
 
 Selected stem details:
@@ -71,7 +71,7 @@ Selected stem details:
 MODIFIED CAUSATIVE INTRASITIVE STEMS
 Selected stems: 4
 Common flag count: 14
-Common flags (raw): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
+Common flags (raw): am, ak, NA, BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
 Common flags (tokens): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
 Unique flag count: 0
 Unique flags across selected stems: (none)
@@ -88,7 +88,7 @@ Selected stem details:
 PAST CAUSATIVE INTRASITIVE STEMS
 Selected stems: 3
 Common flag count: 40
-Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, St, WG, WN, cC, em, np, ps, rp, sT, sc, st, wg, wn
+Common flags (raw): NA, ak, am, BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, St, WG, WN, cC, em, np, ps, rp, sT, sc, st, wg, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -102,7 +102,7 @@ Selected stem details:
 PASSIVE INTRASITIVE STEMS
 Selected stems: 1
 Common flag count: 31
-Common flags (raw): DP, FF, IM, IP, JJ, LT, NF, NP, PP, PS, PT, SC, St, TT, WF, WM, WN, YT, ff, gg, ip, jj, kk, ll, np, pp, ps, sc, st, wf, wn
+Common flags (raw): NA, DP, FF, IM, IP, JJ, LT, NF, NP, PP, PS, PT, SC, St, TT, WF, WM, WN, YT, ff, gg, ip, jj, kk, ll, np, pp, ps, sc, st, wf, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -115,7 +115,7 @@ Selected stem details:
 MODIFIED PASSIVE INTRASITIVE STEMS
 Selected stems: 1
 Common flag count: 4
-Common flags (raw): PS, SB, nf, wm
+Common flags (raw): NA, PS, SB, nf, wm
 Unique flag count: 0
 
 Selected stem details:
@@ -127,7 +127,7 @@ Selected stem details:
 PAST PASSIVE INTRASITIVE STEMS
 Selected stems: 1
 Common flag count: 14
-Common flags (raw): CC, DP, LT, NP, PS, PT, SC, St, WN, np, ps, sc, st, wn
+Common flags (raw): NA, CC, DP, LT, NP, PS, PT, SC, St, WN, np, ps, sc, st, wn
 Unique flag count: 0
 
 Selected stem details:
@@ -138,7 +138,7 @@ Selected stem details:
 BENEFACTIVE INTRASITIVE STEMS
 Selected stems: 4
 Common flag count: 87
-Common flags (raw): BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, rp, ri, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
+Common flags (raw): ko, BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, WF, WG, WH, WJ, WM, WN, YT, em, ff, gg, hh, iM, ip, jj, kk, ll, np, pp, ps, rf, rp, ri, sT, sc, st, tt, vv, wf, wg, wj, wn, xx, yt
 
 Selected stem details:
 - sekerera -> unique flag count: 0; unique flags: (none)
@@ -152,7 +152,7 @@ Selected stem details:
 MODIFIED BENEFACTIVE INTRASITIVE STEMS
 Selected stems: 3
 Common flag count: 14
-Common flags (raw): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
+Common flags (raw): NA, ko, BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
 Unique flag count: 0
 
 Selected stem details:
@@ -166,7 +166,7 @@ Selected stem details:
 PAST BENEFACTIVE INTRASITIVE STEMS
 Selected stems: 2
 Common flag count: 41
-Common flags (raw): BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, WG, WN, cC, em, np, ps, rp, sT, sc, st, wg, wn
+Common flags (raw): NA, ko, BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, WG, WN, cC, em, np, ps, rp, sT, sc, st, wg, wn
 
 Selected stem details:
 - sekeredde -> unique flag count: 0; unique flags: (none)
@@ -187,7 +187,7 @@ Analyzed stem details:
 MODIFIED LOCATIVE INTRASITIVE STEMS
 Selected stems: 1
 Common flag count: 4
-Common flags (raw): PS, SB, nf, wm
+Common flags (raw): NA, PS, SB, nf, wm
 
 Analyzed stem details:
 - balukire -> unique flag count: 0; unique flags: (none)
@@ -197,7 +197,7 @@ Analyzed stem details:
 PAST LOCATIVE INTRASITIVE STEMS
 Selected stems: 1
 Common flag count: 13
-Common flags (raw): CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
+Common flags (raw): NA, CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
 
 Analyzed stem details:
 - balukidde -> unique flag count: 0; unique flags: (none)

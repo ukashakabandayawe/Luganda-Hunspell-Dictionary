@@ -1,7 +1,7 @@
 ORIGINAL REFLEXIVE STEMS
 Selected stems: 4
 Common flag count: 42
-Common flags (raw): BL, BM, BN, BP, BT, BU, EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, FZ, KK, LL, RF, RI, RP, Rn, ST, WG, WH, WJ, cc, hh, iM, ii, rf, ri, rp, sT, uu, wg, wj, ww, yt
+Common flags (raw): NA, ko, mu, BL, BM, BN, BP, BT, BU, EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, FZ, KK, LL, RF, RI, RP, Rn, ST, WG, WH, WJ, cc, hh, iM, ii, rf, ri, rp, sT, uu, wg, wj, ww, yt
 Unique flag count: 0
 
 Selected stem details:
@@ -15,7 +15,7 @@ Selected stem details:
 MODIFIED REFLEXIVE STEMS
 Selected stems: 4
 Common flag count: 5
-Common flags (raw): FR, JQ, RP, Sb, wh
+Common flags (raw): NA, ko, mu, FR, JQ, RP, Sb, wh
 Unique flag count: 0
 
 Selected stem details:
@@ -30,7 +30,7 @@ Selected stem details:
 PAST REFLEXIVE STEMS
 Selected stems: 4
 Common flag count: 14
-Common flags (raw): BM, BU, EC, EG, EJ, FI, FJ, FK, FL, FZ, RP, WG, ST, cC, rp, sT, wg
+Common flags (raw): NA, ko, mu, BM, BU, EC, EG, EJ, FI, FJ, FK, FL, FZ, RP, WG, ST, cC, rp, sT, wg
 Unique flag count: 0
 
 Selected stem details:
@@ -43,11 +43,11 @@ Selected stem details:
 ORIGINAL INTRANSITIVE REFLEXIVE STEMS
 Selected stems: 2
 Common flag count: 18
-Common flags (raw): RF, RI, RP, Rn, ST, WG, WH, WJ, cC, hh, iM, rf, ri, rp, sT, wg, wj, yt
+Common flags (raw): NA, ko, mu, RF, RI, RP, Rn, ST, WG, WH, WJ, cC, hh, iM, rf, ri, rp, sT, wg, wj, yt
 Unique flag count: 0
 
 Selected stem details:
-- baka -> unique flag count: 0; unique flags: (none)
+- baka as in okwebaka -> unique flag count: 0; unique flags: (none) 
 - diima -> unique flag count: 0; unique flags: (none)
 
 
@@ -55,7 +55,7 @@ Selected stem details:
 MODIFIED INTRANSITIVE REFLEXIVE STEMS
 Selected stems: 2
 Common flag count: 4
-Common flags (raw): RP, Sb, rp, wh
+Common flags (raw): NA, ko, mu, RP, Sb, rp, wh
 Unique flag count: 0
 Unique flags across selected stems: (none)
 
@@ -69,7 +69,7 @@ Selected stem details:
 PAST INTRANSITIVE REFLEXIVE STEMS
 Selected stems: 1
 Common flag count: 7
-Common flags (raw): RP, ST, WG, cC, rp, sT, wg
+Common flags (raw): NA, ak, am, RP, ST, WG, cC, rp, sT, wg
 Unique flag count: 0
 Unique flags across selected stems: (none)
 
@@ -81,7 +81,7 @@ Selected stem details:
 COMBINATION OF PAST TENSE INTRANSITIVE REFLEXIVE STEMS AND MODIFIED CAUSATIVE STEMS(HYBRID INTRANSITIVE REFLEXIVE STEMS)
 Selected stems: 1
 Common flag count: 11
-Common flags (raw): FR, JQ, RP, ST, Sb, WG, cC, rp, sT, wg, wh
+Common flags (raw): NA, ak, am, FR, JQ, RP, ST, Sb, WG, cC, rp, sT, wg, wh
 Unique flag count: 0
 Unique flags across selected stems: (none)
 
@@ -92,7 +92,7 @@ Selected stem details:
 CAUSATIVE REFLEXIVE STEMS
 Selected stems: 3
 Common flag count: 40
-Common flags (raw): BL, BM, BN, BP, BT, BU, EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, KK, LL, RF, RI, RP, Rn, ST, WG, WH, WJ, cc, hh, iM, ii, rf, ri, rp, sT, uu, wg, wj, ww, yt
+Common flags (raw): NA, ak, am, BL, BM, BN, BP, BT, BU, EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, KK, LL, RF, RI, RP, Rn, ST, WG, WH, WJ, cc, hh, iM, ii, rf, ri, rp, sT, uu, wg, wj, ww, yt
 Unique flag count: 0
 
 Selected stem details:
@@ -107,7 +107,7 @@ Selected stem details:
 MODIFIED CAUSATIVE REFLEXIVE STEMS
 Selected stems: 3
 Common flag count: 5
-Common flags (raw): FR, JQ, RP, Sb, rp, wh
+Common flags (raw): NA, ak, am, FR, JQ, RP, Sb, rp, wh
 Unique flag count: 0
 Unique flags across selected stems: (none)
 
@@ -123,7 +123,7 @@ Selected stem details:
 PAST CAUSATIVE REFLEXIVE STEMS
 Selected stems: 2
 Common flag count: 17
-Common flags (raw): BM, BU, EC, EG, EJ, FI, FJ, FK, FL, FZ, RP, ST WG, cC, rp, wg, sT
+Common flags (raw): NA, ak, am, BM, BU, EC, EG, EJ, FI, FJ, FK, FL, FZ, RP, ST WG, cC, rp, wg, sT
 Unique flag count: 0
 
 Selected stem details:
@@ -137,7 +137,7 @@ Selected stem details:
 PASSIVE REFLEXIVE STEMS
 Selected stems: 2
 Common flag count: 41
-Common flags (raw): BL, BM, BN, BP, BT, BU, EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, KK, LL, RF, RI, RP, Rn, ST, WG, WH, WJ, cc, hh, iM, ii, rf, ri, rp, sT, uu, wg, wj, ww, yt
+Common flags (raw): NA, ak, BL, BM, BN, BP, BT, BU, EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, KK, LL, RF, RI, RP, Rn, ST, WG, WH, WJ, cc, hh, iM, ii, rf, ri, rp, sT, uu, wg, wj, ww, yt
 Unique flag count: 0
 
 Selected stem details:
@@ -151,7 +151,7 @@ Selected stem details:
 MODIFIED PASSIVE REFLEXIVE STEMS
 Selected stems: 3
 Common flag count: 5
-Common flags (raw): FR, JQ, RP, Sb, wh
+Common flags (raw): NA, ko, FR, JQ, RP, Sb, wh
 Unique flag count: 0
 
 Selected stem details:
@@ -166,7 +166,7 @@ Selected stem details:
 PAST PASSIVE REFLEXIVE STEMS
 Selected stems: 3
 Common flag count: 18
-Common flags (raw): BL, BM, BU, EC, EG, EJ, FI, FK, FK, FL, FZ, RP, ST, WG, cC, rp, sT, wg
+Common flags (raw): NA, ak, BL, BM, BU, EC, EG, EJ, FI, FK, FK, FL, FZ, RP, ST, WG, cC, rp, sT, wg
 Unique flag count: 0
 
 Selected stem details:
@@ -181,7 +181,7 @@ Selected stem details:
 BENEFACTIVE REFLEXIVE STEMS
 Selected stems: 2
 Common flag count: 41
-Common flags (raw): BL, BM, BN, BP, BT, BU, EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, KK, LL, RF, RI, RP, Rn, ST, WG, WH, WJ, cc, hh, ii, iM, rf, ri, rp, sT, uu, wg, wj, ww, yt
+Common flags (raw): NA, ko, mu, BL, BM, BN, BP, BT, BU, EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, KK, LL, RF, RI, RP, Rn, ST, WG, WH, WJ, cc, hh, ii, iM, rf, ri, rp, sT, uu, wg, wj, ww, yt
 Unique flag count: 0
 
 Selected stem details:
@@ -195,7 +195,7 @@ Selected stem details:
 MODIFIED BENEFACTIVE REFLEXIVE STEMS
 Selected stems: 2
 Common flag count: 4
-Common flags (raw): FR, JQ, RP, Sb, wh, rp
+Common flags (raw): NA, FR, JQ, RP, Sb, wh, rp
 Unique flag count: 0
 
 Selected stem details:
@@ -208,7 +208,7 @@ Selected stem details:
 PAST BENEFACTIVE REFLEXIVE STEMS
 Selected stems: 2
 Common flag count: 18
-Common flags (raw): BM, BN, BU, EC, EG, EJ, FI, FJ, FK, FL, FZ, RP, ST, WG, cC, rp, sT, wg
+Common flags (raw): NA, ak, ko, BM, BN, BU, EC, EG, EJ, FI, FJ, FK, FL, FZ, RP, ST, WG, cC, rp, sT, wg
 Unique flag count: 0
 
 Selected stem details:
@@ -220,7 +220,7 @@ Selected stem details:
 LOCATIVE REFLEXIVE STEMS
 Selected stems: 1
 Common flag count: 21
-Common flags (raw): BL, BM, BN, RF, RI, RP, Rn, ST, WG, WH, WJ, cC, hh, iM, rf, ri, rp, sT, wg, wj, yt
+Common flags (raw): NA, ko, yo, BL, BM, BN, RF, RI, RP, Rn, ST, WG, WH, WJ, cC, hh, iM, rf, ri, rp, sT, wg, wj, yt
 Unique flag count: 0
 
 Selected stem details:
@@ -231,7 +231,7 @@ Selected stem details:
 MODIFIED LOCATIVE REFLEXIVE STEMS
 Selected stems: 1
 Common flag count: 4
-Common flags (raw): Rn, Sb, rp, wh
+Common flags (raw): NA, ko, yo, Rn, Sb, rp, wh
 Unique flag count: 0
 
 Selected stem details:
@@ -242,7 +242,7 @@ Selected stem details:
 PAST LOCATIVE REFLEXIVE STEMS
 Selected stems: 1
 Common flag count: 7
-Common flags (raw): RP, ST, WG, cC, rp, sT, wg
+Common flags (raw): NA, yo, ko, RP, ST, WG, cC, rp, sT, wg
 Unique flag count: 0
 Unique flags across selected stems: (none)
 
