@@ -663,7 +663,7 @@ engeye/N3CE
 engiri/N3CE
 engo/N3CE
 engoba/N3CE
-engoma//N3CEzz
+engoma/N3CEzz
 engombe/N3CEzz
 engoye/N3CEzz
 engule/N3CE
@@ -1349,6 +1349,7 @@ omuganzi/N1CEzz
 omugaso/N2CE
 omugejjo/N2CE
 omugenyi/N1CE
+omugenzi/N1CE
 omugenzi/N1CE
 omugga/N2zz
 omuggo/N2zz
@@ -2208,11 +2209,11 @@ lungiyiddeeyooko
 lungiyiddeewo
 lungiyiddeewooko
 # ------------------------------------------------------------------------------------- #
-# --- akapuusi --- #
+# ---------------------------------------- akapuusi ---------------------------------------------------- #
 akappussi/NAN6zz
 akappuusi/NAN6
 akapuusi
-# ---------------- #
+# ------------------------------------------------------------------------------------------------------ #
 # ----------------------------------------- All of ---------------------------------------------------- #
 bonna
 zonna
@@ -2300,7 +2301,7 @@ gaago
 tuutwo
 # ------------------------------------------------------------------------------------------------------------------ #
 # -------------------------------------- eggi(egg) ----------------------------------------------------- #
-eggi/N5
+eggi/N5CE
 egi/NAzz
 # -------------------------------------------------------------------------------------------------------- #
 # ------------------------------------ keera(to be early): Deadjectival ------------------------------------------ #
@@ -2387,61 +2388,6 @@ okusatu/CEOC
 okuna/CEOC
 okutaano/CEOC
 # -------------------------------------------------------------------------------------------------------------------------- #
-# --------------------------------- okuba(to be) ------------------------------------------------- #
-li/NApsnpRFrfggPSDPSCscWNwnStstLT
-liko/NAnpRPPSDPWNwnStstSTsTNNGGBGBFBDBEBXEDEBEFEMFDFGwgWGWFSC
-liiko/NApsrpSSIIBRSCscFGFHwfwgwhFE
-limu/NAnpPSVPDPSCWNwnStstLTNNGGMMBGBFBDBEBXEHEDEBEFFGEMFD
-liimu/NApsrpWNSSIIBRFGFHscFE
-liwo/NAnpPSDPSCWNwnStstLTBG
-liiwo/NApsscWN
-limuuko/NAnpPSDPSCWNwmwnStstLTNNGGBGBFBDBXEBFEFGFHFP
-liwooko/NAnpPSDPSCWNwnwmStstLTBG
-liiwooko/NApssc
-liyo/NAnpPSDPSCWNwnStstLT
-liiyo/NApsscWN
-liyooko/NAnpPSDPSCWNwnStstLT
-liiyooko/NApssc
-ba/NApsffggPSDPNFFFIPipYTSCscWNwnWMWFwfIMstStLTBIBGBDBHBEFC
-baawo/psnpggPSDPNFFFIPipYTSCscWNwnWMWFwfIMStstLT
-beewo/NAnfPTwmSB
-baawooko/psnpffggPSDPNFFFIPipYTSCscWNwnWMWFwfCCIMStstLT
-beewooko/NAnfPTwmSB
-baayo/psnpffggPSDPNFFFIPipYTSCscWNwnWMWFwfCCStstLT
-beeyo/NAnfPTwmSB
-baako/RPpsnpffRnRFrfgghhrpPSDPNFFFIPRIriYTytSCscWNwnWMWFwfWGwgWHwhWJwjCCcCStstSTsTLTNNGGQQRRSSMMIITTxxvvBGBIBSBKBFBDBHBRBEBXFYEHFCFDEBEFFEFSFVFMFGFHFAEKEM
-beeko/NARPnfPTwmWGwgWHNNWWBVBRBXFXFMFPEM
-baayooko/psnpffggPSDPNFFFIPipYTSCscWNwnWMWFwfCCStstLT
-beeyooko/NAnfPTwmSB
-beemuuko/NAnfPTwmwgWHSBNNWWBVBXEM
-baamuuko/psnpffRnRFgghhrpPSDPNFFFIPipRIriYTytSCscWNwnWMWFwfCCStstLTNNGGQQRRSSMMIIWWvvxxBGBIBSBKBFBDBHBRBEBXFYEHEDFCFDEBFEFSFVFMFGFHEKEM
-baamu/
-beemu/NA
-badde/NA
-baddeko/NA
-bangako/
-bengako/NA
-bangawooko/
-bengawooko/NA
-bangayooko/
-bengayooko/NA
-bangamuuko/
-bengamuuko/NA
-baddeyooko/NA
-baddeeyooko/NA
-baddemuuko/NA
-baddeemuuko/NA
-baddewooko/NA
-baddeewooko/NA
-beera
-beeza
-beerako
-beeramu
-beerawooko
-beeramuuko
-beerayooko
-beerayo
-# --------------------------------------------------------------------------------------------- #
 # -------------------------------- okubajja(to do furniture): Type-I Transitive ----------------------------------- #
 bajja/OriginalType-ITransitive
 bajje/ModifiedType-ITransitive
@@ -4329,16 +4275,6 @@ fiiririre/ModifiedLocativeIntransitive
 fiiriridde/PastLocativeIntransitive
 omufu/N1CEzz
 # --------------------------------------------------------------------------------------------------------- #
-# -------------------------------------- okufaako ------------------------------------------------------------ #
-faako/RPpsnpffRnRFrfgghhrpPSDPFFRIriYTytSCscWNWGwgWHWJwjiMSTsTRRNNGGSSMMIITTkkvvxxHHttllBGBIBSBKBVBFBQBWBDBHBRBEBXEHEDFCFDEBEFFEFSFVFMFGFAEKwnWMWFwfwhFH
-feeko/NARPnfrpPSscwnwmwgwhSBWWBXFXFPEMFV
-fuddeko/NARPnprpPSNPSCwgWGwhcCiMsTLTNNGGIIBGBFBDBEBXFYEHFDEFFHFGEKEMWNwn
-fuddeeko/NApsrpWGwgFEFMFGscWNFP
-fiirako/NAgghhPSNPFFNFDPYTSCscWNwnWMWFwfWGwgWHwhWJIMiMStstSTLTNNGGRRSSMMIITTQQvvxxBGBIBSBKBFBDBHBRBPBLBNBUBEBXFYFZEHEDEJFCFDFIFJEBEFFEFSFVFMFWFTFPFNFRFGFHFAFBEKELEMwjFKFL
-fiireko/NARPnfrpPSFFwmwhSBNNWWUUBVBXFXFPFREMwgWGwjFLJQGCGIGQHCHKHLHYIAIB
-fiiriddeko/NARPnpPSNPSCwgCCcCIMiMstLTNNGGMMIIUUVVBGBFBDBEFYFZEHEJFDFIFHFKFLEKELEMWNwnWGwhWJWHFGsc
-fiiriddeeko/NApsrfrpscWNSSBSBVBRFRwhwgWGwfWMBUFEFJFGFKFN
-# ----------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okufaanana(similar): Type-I Transitive --------------------------------------------- #
 faanana/OriginalType-ITransitive
 faanane/ModifiedType-ITransitive
@@ -4352,15 +4288,6 @@ faananiddwa/PastPassiveTransitive
 faananira/BenefactiveTransitive
 faananire/ModifiedBenefactiveTransitive
 faananidde/PastBenefactiveTransitive
-# --------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okufaayo(to care): Intransitive ------------------------------------------------------------ #
-faayo/psnpffggPSDPNFFFPPppIPipykYTSCscWNwnWMwmWFwfStstLTIM
-feeyo/NAykwmSBPTsc
-fuddeyo/NAPSyknpVPNPSCwnCCLTWN
-fuddeeyo/NAykpsscWNWM
-fiirayo/NARPpsnpffRnRFrfgghhrpPSVPDPNFFFPPppJJjjIPipRIYTytSCscWNWMWFwgWGWHWJwjIMStstSTsTLTwnwfwhwmiMEMFDFEFGFHFMFSFV
-fiiriddeyo/NARPnprpPSDPipSCwnWGwgWFwhWNCCcCIMiMStstSTsTLTNNGGIIBGBXFYEHEDFDEBEFEKEMFH
-fiiriddeeyo/NApsrpSCPSscWNwnSSBRFE
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okufeeba(to degrade): Intransitive --------------------------------------- #
 feeba/OriginalIntransitive
@@ -4831,7 +4758,10 @@ omufumbo/N1CE
 # --------------------------------------- okufumita(to stab or pierce): Type-I Transitive --------------------------------------- #
 fumita/OriginalType-ITransitive
 fumite/ModifiedType-ITransitive
-fumise/HybridType-ITransitive
+fumise/PastType-ITransitive
+fumisa/CausativeTransitive
+fumise/ModifiedCausativeTransitive
+fumisizza/PastCausativeTransitive
 fumitibwa/PassiveTransitive
 fumitibwe/ModifiedPassiveTransitive
 fumitiddwa/PastPassiveTransitive
@@ -4843,7 +4773,7 @@ omufumisi/N1CEzz
 # --------------------------------------- okufuna(to get): Type-I Transitive ------------------------------------------- #
 funa/OriginalType-ITransitive
 fune/ModifiedType-ITransitive
-funye/HybridType-ITransitive
+funye/PastType-ITransitive
 funibwa/PassiveTransitive
 funibwe/ModifiedPassiveTransitive
 funiddwa/PastPassiveTransitive
@@ -4972,12 +4902,12 @@ funzizza/PastCausativeDeadjective
 fundira/LocativeDeadjective
 fundire/ModifiedLocativeDeadjective
 fundidde/PastLocativeDeadjective
-funzi/oo
+omufunzi/N1CEzz
 # ------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okufunga(to tuck): Type-I Transitive ------------------------------------------- #
 funga/OriginalType-ITransitive
 funge/ModifiedType-ITransitive
-funze/HybridType-ITransitive
+funze/PastType-ITransitive
 fungisa/CausativeTransitive
 fungise/ModifiedCausativeTransitive
 fungisizza/PastCausativeTransitive
@@ -6015,7 +5945,6 @@ gendera/BenefactiveIntransitive
 gendere/ModifiedBenefactiveIntransitive
 gendedde/PastBenefactiveIntransitive
 # --------------------------------------------------------------------------------------------- #
-omugenzi/N1CE
 # --------------------------------------- okugenderera(to intend): Type-I Transitive --------------------------------------- #
 genderera/OriginalType-ITransitive
 genderere/ModifiedType-ITransitive
@@ -6273,6 +6202,21 @@ gattira/BenefactiveTransitive
 gattire/ModifiedBenefactiveTransitive
 gattidde/PastBenefactiveTransitive
 # ----------------------------------------------------------------------------------------------------- #
+# --------------------------------------- okuggunda(to hit): Type-II Transitive ---------------------------------------------------- #
+ggunda/OriginalType-IITransitive
+ggunde/ModifiedType-IITransitive
+ggunze/PastType-IITransitive
+ggundisa/CausativeTransitive
+ggundise/ModifiedCausativeTransitive
+ggundisizza/PastCausativeTransitive
+ggundibwa/PassiveTransitive
+ggundibwe/ModifiedPassiveTransitive
+ggundiddwa/PastPassiveTransitive
+ggundira/BenefactiveTransitive
+ggundire/ModifiedBenefactiveTransitive
+ggundidde/PastBenefactiveTransitive
+omuggunzi/N1CEzz
+# ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okuggwa(to come to an end): Intrasitive -------------------------------------------------- #
 ggwa/OriginalIntransitive
 ggwe/ModifiedIntransitive
@@ -6525,21 +6469,6 @@ gumiikiririza/BenefactiveTransitive
 gumiikirizize/ModifiedBenefactiveTransitive
 gumiikirizizza/PastBenefactiveTransitive
 omugumiikiriza/N1CEzz
-# ------------------------------------------------------------------------------------------------------------- #
-# --------------------------------------- okuggunda(to hit): Type-II Transitive ---------------------------------------------------- #
-ggunda/OriginalType-IITransitive
-ggunde/ModifiedType-IITransitive
-ggunze/PastType-IITransitive
-ggundisa/CausativeTransitive
-ggundise/ModifiedCausativeTransitive
-ggundisizza/PastCausativeTransitive
-ggundibwa/PassiveTransitive
-ggundibwe/ModifiedPassiveTransitive
-ggundiddwa/PastPassiveTransitive
-ggundira/BenefactiveTransitive
-ggundire/ModifiedBenefactiveTransitive
-ggundidde/PastBenefactiveTransitive
-omuggunzi/N1CEzz
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okugunjula(to discipline): Type-I Transitive --------------------------------------- #
 gunjula/OriginalType-ITransitive
@@ -7495,7 +7424,7 @@ kaddiyidde/PastLocativeDeadjective
 # -------------------------------------- okukaka(to force): Type-I Transitive -------------------------------------------------- #
 kaka/OriginalType-ITransitive
 kake/ModifiedType-ITransitive
-kase/HybridType-ITransitive
+kase/PastType-ITransitive
 kakibwa/PassiveTransitive
 kakibwe/ModifiedPassiveTransitive
 kakiddwa/PastPassiveTransitive
@@ -7623,7 +7552,7 @@ kanyizza/PastIntransitive
 # ----------------------------------- okukasa(to ensure): Type-II Transitive ----------------------------------------------- #
 kakasa/OriginalType-ITransitive
 kakase/ModifiedType-ITransitive
-kakasizza/HybridType-ITransitive
+kakasizza/PastType-ITransitive
 kakasibwa/PassiveTransitive
 kakasibwe/ModifiedPassiveTransitive
 kakasiddwa/PastPassiveTransitive
@@ -8486,7 +8415,7 @@ koowebbwa/PastPassiveDeadjective
 koowera/LocativeDeadjective
 koowere/ModifiedLocativeDeadjective
 koowedde/PastLocativeDeadjective
-koowu/oo
+omukoowu/N1CEzz
 # ------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okukotoggera(to hinder): Type-I Transitive --------------------------------------------- #
 kotoggera/OriginalType-ITransitive
@@ -24263,4 +24192,78 @@ tukuzza/PastCausativeDeadjective
 tukulira/LocativeDeadjective
 tukulire/ModifiedLocativeDeadjective
 tukulidde/PastLocativeDeadjective
+# --------------------------------------------------------------------------------------------------------- #
+# --------------------------------- zz okuba(to be) ------------------------------------------------- #
+li/NApsnpRFrfggPSDPSCscWNwnStstLT
+liko/NAnpRPPSDPWNwnStstSTsTNNGGBGBFBDBEBXEDEBEFEMFDFGwgWGWFSC
+liiko/NApsrpSSIIBRSCscFGFHwfwgwhFE
+limu/NAnpPSVPDPSCWNwnStstLTNNGGMMBGBFBDBEBXEHEDEBEFFGEMFD
+liimu/NApsrpWNSSIIBRFGFHscFE
+liwo/NAnpPSDPSCWNwnStstLTBG
+liiwo/NApsscWN
+limuuko/NAnpPSDPSCWNwmwnStstLTNNGGBGBFBDBXEBFEFGFHFP
+liwooko/NAnpPSDPSCWNwnwmStstLTBG
+liiwooko/NApssc
+liyo/NAnpPSDPSCWNwnStstLT
+liiyo/NApsscWN
+liyooko/NAnpPSDPSCWNwnStstLT
+liiyooko/NApssc
+ba/NApsffggPSDPNFFFIPipYTSCscWNwnWMWFwfIMstStLTBIBGBDBHBEFC
+baawo/psnpggPSDPNFFFIPipYTSCscWNwnWMWFwfIMStstLT
+beewo/NAnfPTwmSB
+baawooko/psnpffggPSDPNFFFIPipYTSCscWNwnWMWFwfCCIMStstLT
+beewooko/NAnfPTwmSB
+baayo/psnpffggPSDPNFFFIPipYTSCscWNwnWMWFwfCCStstLT
+beeyo/NAnfPTwmSB
+baako/RPpsnpffRnRFrfgghhrpPSDPNFFFIPRIriYTytSCscWNwnWMWFwfWGwgWHwhWJwjCCcCStstSTsTLTNNGGQQRRSSMMIITTxxvvBGBIBSBKBFBDBHBRBEBXFYEHFCFDEBEFFEFSFVFMFGFHFAEKEM
+beeko/NARPnfPTwmWGwgWHNNWWBVBRBXFXFMFPEM
+baayooko/psnpffggPSDPNFFFIPipYTSCscWNwnWMWFwfCCStstLT
+beeyooko/NAnfPTwmSB
+beemuuko/NAnfPTwmwgWHSBNNWWBVBXEM
+baamuuko/psnpffRnRFgghhrpPSDPNFFFIPipRIriYTytSCscWNwnWMWFwfCCStstLTNNGGQQRRSSMMIIWWvvxxBGBIBSBKBFBDBHBRBEBXFYEHEDFCFDEBFEFSFVFMFGFHEKEM
+baamu
+beemu/NA
+badde/NA
+baddeko/NA
+bangako
+bengako/NA
+bangawooko
+bengawooko/NA
+bangayooko
+bengayooko/NA
+bangamuuko
+bengamuuko/NA
+baddeyooko/NA
+baddeeyooko/NA
+baddemuuko/NA
+baddeemuuko/NA
+baddewooko/NA
+baddeewooko/NA
+beera
+beeza
+beerako
+beeramu
+beerawooko
+beeramuuko
+beerayooko
+beerayo
+# --------------------------------------------------------------------------------------------- #
+# -------------------------------------- zz okufaako ------------------------------------------------------------ #
+faako/RPpsnpffRnRFrfgghhrpPSDPFFRIriYTytSCscWNWGwgWHWJwjiMSTsTRRNNGGSSMMIITTkkvvxxHHttllBGBIBSBKBVBFBQBWBDBHBRBEBXEHEDFCFDEBEFFEFSFVFMFGFAEKwnWMWFwfwhFH
+feeko/NARPnfrpPSscwnwmwgwhSBWWBXFXFPEMFV
+fuddeko/NARPnprpPSNPSCwgWGwhcCiMsTLTNNGGIIBGBFBDBEBXFYEHFDEFFHFGEKEMWNwn
+fuddeeko/NApsrpWGwgFEFMFGscWNFP
+fiirako/NAgghhPSNPFFNFDPYTSCscWNwnWMWFwfWGwgWHwhWJIMiMStstSTLTNNGGRRSSMMIITTQQvvxxBGBIBSBKBFBDBHBRBPBLBNBUBEBXFYFZEHEDEJFCFDFIFJEBEFFEFSFVFMFWFTFPFNFRFGFHFAFBEKELEMwjFKFL
+fiireko/NARPnfrpPSFFwmwhSBNNWWUUBVBXFXFPFREMwgWGwjFLJQGCGIGQHCHKHLHYIAIB
+fiiriddeko/NARPnpPSNPSCwgCCcCIMiMstLTNNGGMMIIUUVVBGBFBDBEFYFZEHEJFDFIFHFKFLEKELEMWNwnWGwhWJWHFGsc
+fiiriddeeko/NApsrfrpscWNSSBSBVBRFRwhwgWGwfWMBUFEFJFGFKFN
+# ----------------------------------------------------------------------------------------------------------- #
+# --------------------------------------- zz okufaayo(to care): Intransitive ------------------------------------------------------------ #
+faayo/psnpffggPSDPNFFFPPppIPipykYTSCscWNwnWMwmWFwfStstLTIM
+feeyo/NAykwmSBPTsc
+fuddeyo/NAPSyknpVPNPSCwnCCLTWN
+fuddeeyo/NAykpsscWNWM
+fiirayo/NARPpsnpffRnRFrfgghhrpPSVPDPNFFFPPppJJjjIPipRIYTytSCscWNWMWFwgWGWHWJwjIMStstSTsTLTwnwfwhwmiMEMFDFEFGFHFMFSFV
+fiiriddeyo/NARPnprpPSDPipSCwnWGwgWFwhWNCCcCIMiMStstSTsTLTNNGGIIBGBXFYEHEDFDEBEFEKEMFH
+fiiriddeeyo/NApsrpSCPSscWNwnSSBRFE
 # --------------------------------------------------------------------------------------------------------- #
