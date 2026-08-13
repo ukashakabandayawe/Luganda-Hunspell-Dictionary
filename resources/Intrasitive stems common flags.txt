@@ -72,7 +72,6 @@ MODIFIED CAUSATIVE INTRASITIVE STEMS
 Selected stems: 4
 Common flag count: 14
 Common flags (raw): am, ak, NA, BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
-Common flags (tokens): BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh, wm
 Unique flag count: 0
 Unique flags across selected stems: (none)
 
