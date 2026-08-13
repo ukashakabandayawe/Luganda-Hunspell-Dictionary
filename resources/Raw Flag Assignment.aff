@@ -253,13 +253,26 @@ PFX vo 0 o [^aeiou]
 
 # suffix "ko" in words like okulyako, okulabako, fumbako
 # Was using flag A but now uses ko
-SFX ko Y 1
-SFX ko 0 ko [aeiou]
+SFX ko Y 2
+SFX ko 0 ko [^z][^z][ae]
+SFX ko 0 ako [ae]
+
+# suffix "ako" and "eko" in words like okulisaako, okulabisaako, fumbisaako, katutuuzeeko
+SFX ak Y 2
+SFX ak 0 ako a
+SFX ak 0 eko e
+
 
 # suffix "mu" in words like tunulamu
 # Was using flag O but now uses mu
-SFX mu Y 1
-SFX mu 0 mu [aeiou]
+SFX mu Y 2
+SFX mu 0 mu [^z][^z][aeiou]
+SFX mu 0 amu zza
+
+# suffix "amu" and "emu" in words like tugaziyaamu, batunuzeemu
+SFX am Y 2
+SFX am 0 amu a 
+SFX am 0 emu e
 
 # suffix "yooko" e.g. tunulayooko
 SFX yk Y 2
@@ -267,17 +280,33 @@ SFX yk 0 yooko ^yo
 SFX yk yo yooko yo # faayo-->faayooko
 
 # suffix "yo" e.g. gendayo
-SFX yo Y 1
-SFX yo 0 yo [aeiou]
+SFX yo Y 2
+SFX yo 0 yo [^z][^z][ae]
+SFX yo 0 ay zza
+
+# suffix "ayo" e.g. twagayiyaawo
+SFX ay Y 2
+SFX ay 0 ayo a
+SFX ay 0 eyo e
 
 # suffix "wo" e.g. tunulawo
-SFX wo Y 1
-SFX wo 0 wo [aeiou]
+SFX wo Y 2
+SFX wo 0 wo [^z][^z][ae]
+SFX wo 0 awo zza
+
+# suffix "awo" e.g. tunuzaawo
+SFX aw Y 2
+SFX aw 0 awo a
+SFX aw 0 ewo e
 
 # The adverb "never"
 # Example silyangako, sikubangako 
 SFX nk Y 1
 SFX nk 0 ngako [aeiou]
+
+# suffix "nga" e.g. sikilabanga
+SFX ng Y 1
+SFX ng 0 nga [aeiou]
 
 # Suffixes at the end of possesive determiners
 SFX pd Y 18
