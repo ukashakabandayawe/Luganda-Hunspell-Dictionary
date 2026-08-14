@@ -1057,6 +1057,7 @@ mbega/N1
 mbu
 meeya/N1
 ministule
+minisita/N1
 minzaani
 Misiri
 mmange
@@ -1846,8 +1847,8 @@ bonereza/OriginalType-ITransitive
 bonereze/ModifiedType-ITransitive
 bonerezza/PastType-ITransitive
 bonerezebwa/PassiveTransitive
-bonerezebwe/ModifiedPassiveTTransitive
-bonerezzeddwa/PastPassiveTTransitive
+bonerezebwe/ModifiedPassiveTransitive
+bonerezzeddwa/PastPassiveTransitive
 # ------------------------------------------------------------------------------------------------------------- #
 # ------------------------------- **okuboola(to segregate): Type-I Transitive --------------------------------- #
 boola/OriginalType-ITransitive
@@ -16363,12 +16364,12 @@ temulire/ModifiedBenefactiveTransitive
 temulidde/PastBenefactiveTransitive
 # --------------------------------------------------------------------------------------------------------- #
 # ------------------------------------------ okutemya(to blink): Intransitive ------------------------------------------- #
-temya/Intransitive
+temya/OriginalIntransitive
 temye/ModifiedIntransitive
 temezza/PastIntransitive
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------- okutemyako(to alert; to give a hint): Type-I Transitive  ---------------------------------- #
-temyako/Type-ITransitive
+temyako/OriginalType-ITransitive
 temyeko/ModifiedType-ITransitive
 temezzaako/PastType-ITransitive
 # --------------------------------------------------------------------------------------------------------- #
@@ -23404,7 +23405,7 @@ ndedde/PastLocativeReflexive
 # ------------------------------------ okwenkana(to be equal): Reflexive ------------------------------------ #
 nkana/OriginalReflexive
 nkane/ModifiedReflexive
-nkanye/HybridReflexive
+nkanye/PastReflexive
 nkanya/CausativeReflexive
 nkanyizza/PastReflexive
 nkanika/OriginalReflexive
@@ -23831,9 +23832,9 @@ tabidde/PastLocativeReflexive
 tala/OriginalIntransitiveReflexive
 tale/ModifiedIntransitiveReflexive
 taze/PastIntransitiveReflexive
-talira/LocativeIntransitiveReflexive
-talire/ModifiedLocativeIntransitiveReflexive
-talidde/PastLocativeIntransitiveReflexive
+talira/LocativeReflexive
+talire/ModifiedLocativeReflexive
+talidde/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------- #
 # --------------------------------------- okwetegereza(to pay attention): Reflexive --------------------------------------- #
 tegereza/OriginalReflexive
