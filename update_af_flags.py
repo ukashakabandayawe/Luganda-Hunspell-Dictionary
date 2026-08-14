@@ -50,7 +50,7 @@ HEADER_ALIASES = {
     "PAST TENSE TYPE II TRANSITIVE STEMS": ["PastType-IITransitive"],
 
     "ORIGINAL INTRANSITIVE STEMS": ["OriginalIntrasitive", "OriginalIntransitive"],
-    "MODIFIED INTRANSITIVE STEMS": ["ModifiedIntrasitive"],
+    "MODIFIED INTRANSITIVE STEMS": ["ModifiedIntransitive", "ModifiedIntrasitive"],
     "PAST TENSE INTRANSITIVE STEMS": ["PastIntransitive"],
     "CAUSATIVE INTRANSITIVE STEMS": ["CausativeIntransitive"],
     "MODIFIED CAUSATIVE INTRANSITIVE STEMS": ["ModifiedCausativeIntransitive"],
@@ -86,9 +86,9 @@ HEADER_ALIASES = {
     "ORIGINAL REFLEXIVE STEMS": ["OriginalReflexive"],
     "MODIFIED REFLEXIVE STEMS": ["ModifiedReflexive"],
     "PAST REFLEXIVE STEMS": ["PastReflexive"],
-    "ORIGINAL INTRANSITIVE REFLEXIVE STEMS": ["OriginalIntrasitiveReflexive", "OriginalIntransitiveReflexive"],
-    "MODIFIED INTRANSITIVE REFLEXIVE STEMS": ["ModifiedIntrasitiveReflexive"],
-    "PAST INTRANSITIVE REFLEXIVE STEMS": ["PastIntransitiveReflexive"],
+    "ORIGINAL INTRANSITIVE REFLEXIVE STEMS": ["OriginalIntransitiveReflexive", "OriginalIntrasitiveReflexive"],
+    "MODIFIED INTRANSITIVE REFLEXIVE STEMS": ["ModifiedIntransitiveReflexive", "ModifiedIntrasitiveReflexive"],
+    "PAST INTRANSITIVE REFLEXIVE STEMS": ["PastIntransitiveReflexive", "PastIntrasitiveReflexive"],
     "COMBINATION OF PAST TENSE INTRANSITIVE REFLEXIVE STEMS AND MODIFIED CAUSATIVE STEMS HYBRID INTRANSITIVE REFLEXIVE STEMS": ["HybridIntransitiveReflexive"],
     "CAUSATIVE REFLEXIVE STEMS": ["CausativeReflexive"],
     "MODIFIED CAUSATIVE REFLEXIVE STEMS": ["ModifiedCausativeReflexive"],
@@ -122,9 +122,9 @@ def collect_document_map() -> dict[str, str]:
             line = raw_line.strip()
             if not line:
                 continue
-            if line.lower().startswith("common flags (raw):"):
+            if re.match(r"^(common flags|flags)\b", line, flags=re.IGNORECASE):
                 if current_heading is not None:
-                    value = line.split(":", 1)[1].strip()
+                    value = line.split(":", 1)[1].strip() if ":" in line else line.strip()
                     for af_name in HEADER_ALIASES.get(current_heading, []):
                         result[af_name] = value
                 current_heading = None
