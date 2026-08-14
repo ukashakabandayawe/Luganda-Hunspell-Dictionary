@@ -11,7 +11,7 @@ An example of a Type-II verb is "okusiiga"(to smear/paint) it makes sense to say
 
 
 
-1. ORIGINAL TYPE-I TRANSITIVE STEMS
+ORIGINAL TYPE-I TRANSITIVE STEMS
 Mode: LONG
 Category: mixed
 Selected stems: 5
@@ -31,7 +31,7 @@ Suggested common group flags: BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR
 
 The common flags here can be applied to any original present tense stem.
 
-2. MODIFIED TYPE-I TRANSITIVE STEMS
+MODIFIED TYPE-I TRANSITIVE STEMS
 
 Selected stems: 4
 Common flag count: 14
@@ -49,7 +49,7 @@ Suggested common group flags: BV, EM, FP, FX, NN, PS, RP, SB, Sb, WW, nf, rp, wh
 
 
 
-3. PAST TENSE TYPE-I TRANSITIVE STEMS
+PAST TENSE TYPE-I TRANSITIVE STEMS
 Selected stems: 4
 Common flag count: 41
 Common flags (raw): NA, ak, am, ay, aw, BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, WG, WN, cC, sT, em, np, ps, rp, sc, st, wg, wn
@@ -67,7 +67,7 @@ Suggested common group flags: BD, BE, BF, BG, BR, BX, CC, DP, EB, ED, EF, EH, EM
 
 
 
-4. ORIGINAL TYPE-II TRANSITIVE STEMS
+ORIGINAL TYPE-II TRANSITIVE STEMS
 Mode: LONG
 Category: mixed
 Selected stems: 3
@@ -89,7 +89,7 @@ EC, EG, EJ, EL, FB, FI, FJ, FK, FL, FN, FT, FW, KK, LL, UU, VV, XX, YY, ZZ, cc, 
 
 
 
-5. MODIFIED TYPE-II TRANSITIVE STEMS
+MODIFIED TYPE-II TRANSITIVE STEMS
 Selected stems: 3
 Common flag count: 17
 Common flags (raw):  ko, mu, wo, yo, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
@@ -106,7 +106,7 @@ Suggested common group flags: BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW
 
 
 
-6. PAST TENSE TYPE-II TRANSITIVE STEMS
+PAST TENSE TYPE-II TRANSITIVE STEMS
 Selected stems: 2
 Common flag count: 55
 Common flags (raw): NA, ak, am, aw, ay,BD, BE, BF, BG, BM, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
@@ -121,61 +121,61 @@ Selected stem details:
 
 
 
-7. CAUSATIVE TRANSITIVE STEMS
+CAUSATIVE TRANSITIVE STEMS
 Flag count: 117
 Flags: ko, mu, wo, yo, BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cC, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
 
 
 
-8. MODIFIED CAUSATIVE TRANSITIVE STEMS
+MODIFIED CAUSATIVE TRANSITIVE STEMS
 Flag count: 18
 Flags: NA, ak, am, aw, ay, BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
 
 
 
-9. PAST CAUSATIVE TRANSITIVE STEMS
+PAST CAUSATIVE TRANSITIVE STEMS
 Flag count: 55
 Flags: NA, ak, am, aw, ay, BD, BE, BF, BG, BM, BN, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, St, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
 
 
 
 
-10. PASSIVE TRANSITIVE STEMS
+PASSIVE TRANSITIVE STEMS
 Flag count: 72
 Flags: ak, am, aw, ay, BD, BE, BF, BG, BH, BI, BK, BQ, BR, BS, BW, BX, CC, DP, EB, ED, EF, EH, EK, EM, FA, FC, FD, FE, FF, FG, FH, FM, FS, FV, FY, GG, HH, II, IM, IP, JJ, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RR, SC, SS, St, TT, WF, WM, WN, YT, em, ff, gg, ip, jj, kk, ll, np, pp, ps, sc, st, tt, vv, wf, wn, xx
 
 
 
-11. MODIFIED PASSIVE TRANSITIVE STEMS
+MODIFIED PASSIVE TRANSITIVE STEMS
 Flag count: 10
 Flags: NA, ak, am, aw, ay, BV, EM, FP, FX, NN, PS, SB, WW, nf, wm
 
 
 
-12. PAST PASSIVE TRANSITIVE STEMS
+PAST PASSIVE TRANSITIVE STEMS
 Flag count: 31
 Flags: NA, ak, am, aw, ay, BD, BE, BF, BG, BR, BX, CC, DP, ED, EH, EM, FD, FE, FG, FH, FY, GG, II, LT, NN, NP, PS, PT, SC, SS, WN, em, np, ps, sc, wn
 
 
 
-13. BENEFACTIVE TRANSITIVE STEMS
+BENEFACTIVE TRANSITIVE STEMS
 Flag count: 118
 Flags: ko, mu, wo, yo, BD, BE, BF, BG, BH, BI, BK, BL, BM, BN, BP, BQ, BR, BS, BT, BU, BW, BX, DP, EB, EC, ED, EF, EG, EH, EJ, EK, EL, EM, FA, FB, FC, FD, FE, FF, FG, FH, FI, FJ, FK, FL, FM, FN, FS, FT, FV, FW, FY, FZ, GG, HH, II, IM, IP, JJ, KK, LL, LT, MM, NF, NN, NP, PP, PS, PT, QQ, RF, RI, RP, RR, Rn, SC, SS, ST, St, TT, UU, VV, WF, WG, WH, WJ, WM, WN, XX, YT, YY, ZZ, cc, em, ff, gg, hh, iM, ii, ip, jj, kk, ll, np, pp, ps, rf, ri, rp, sT, sc, st, tt, uu, vv, wf, wg, wj, wn, ww, xx, yt
 
 
 
-14. MODIFIED BENEFACTIVE TRANSITIVE STEMS
+MODIFIED BENEFACTIVE TRANSITIVE STEMS
 Flag count: 18
 Flags: NA, ko, mu, wo, yo, BU, BV, EM, FP, FR, FX, JQ, NN, PS, RP, SB, Sb, UU, WW, nf, rp, wh, wm
 
 
 
-15. PAST BENEFACTIVE TRANSITIVE STEMS
+PAST BENEFACTIVE TRANSITIVE STEMS
 Flag count: 55
 Flags: NA, ko, mu, wo, yo, BD, BE, BF, BG, BM, BR, BU, BX, CC, DP, EB, EC, ED, EF, EG, EH, EJ, EM, FD, FE, FG, FH, FI, FJ, FK, FL, FY, FZ, GG, II, LT, NN, NP, PS, PT, RP, SC, SS, ST, St, UU, VV, WG, WN, XX, cC, em, np, ps, rp, sT, sc, st, wg, wn
 
 
-16. LOCATIVE TRANSITIVE STEMS
+LOCATIVE TRANSITIVE STEMS
 Common flag count: 28
 Common flags (raw):  ko, mu, wo, yo, DP, FF, IM, IP, LT, NF, NP, PP, PS, PT, SC, St, WF, WM, WN, YT, ff, gg, ip, jj, np, pp, ps, sc, st, wf, wm, wn
 
@@ -183,7 +183,7 @@ Analyzed stem details:
 - bajjira -> unique flag count: 0; unique flags: (none)
 
 
-17. MODIFIED LOCATIVE TRANSITIVE STEMS
+MODIFIED LOCATIVE TRANSITIVE STEMS
 Common flag count: 4
 Common flags (raw):  ko, mu, wo, yo, NA, PS, SB, nf, wm
 
@@ -191,7 +191,7 @@ Analyzed stem details:
 - bajjire -> unique flag count: 0; unique flags: (none)
 
 
-18. PAST LOCATIVE TRANSITIVE STEMS
+PAST LOCATIVE TRANSITIVE STEMS
 Common flag count: 13
 Common flags (raw):  ko, mu, wo, yo, NA, CC, DP, LT, NP, PS, PT, SC, WN, np, ps, sc, st, wn
 
