@@ -13,6 +13,151 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
+#
+#
+#
+################# DESCRIPTION OF FLAGS ##########################
+#
+# This file uses Hunspell flags: flags are case-sensitive.
+# In the .dic file, a word/lemma uses flags like:
+#   lemma/PSOb   (multiple flags are concatenated; no spaces)
+# Example:
+#   lya/PS      -> present/very-near-past subject markers (affirmative)
+#
+# ------------------------- VERBS (building blocks) -------------------------
+# PS = Subject markers (affirmative): present simple + very near past
+# NP = Subject markers (affirmative): near past
+# DP = Subject markers (affirmative): distant past
+# NF = Subject markers (affirmative): near future
+# FF = Subject markers (affirmative): far future
+#
+# Ob = Object markers (basic)
+# OR = Special reflexive object markers used in constructions like "-mwe-", "-gwe-", etc.
+#
+# RP = Reflexive verb form subject markers: present simple tense (also usable for some past forms)
+# Rn = Reflexive verb form subject markers: near future
+# RF = Reflexive verb form subject markers: far future
+#
+# ps = Negative subject markers: present simple + very near past
+# np = Negative subject markers: near + distant past
+# nf = Negative subject markers: near future
+# ff = Negative subject markers: far future
+#
+# rp = Negation for reflexive verb forms in present/very-near past (e.g. seetaaga/te-...)
+# rf = Reflexive negative subject markers: far future
+#
+# gg = Infinitive prefix for non-reflexive verbs (oku-/ku- plus agreement variants)
+# hh = Infinitive prefix for reflexive verbs (okwee-/kwee- plus agreement variants)
+#
+# ---------------------- VERBS (generated cross-products) -------------------
+# These are pre-generated “subject+object chaining” prefixes to avoid multi-step chaining.
+# (They are produced by scripts; see the nearby “Cross product ...” blocks.)
+#
+# NN = Cross product PS x Ob (present/very-near-past subject + basic object)
+# GG = Cross product NP x Ob (near-past subject + basic object)
+# QQ = Cross product NF x Ob (near-future subject + basic object)
+# RR = Cross product FF x Ob (far-future subject + basic object)
+#
+# SS = Cross product ps x Ob (present/very-near-past negative subject + basic object)
+# II = Cross product np x Ob (past negative subject + basic object)
+# WW = Cross product nf x Ob (near-future negative subject + basic object)
+# TT = Cross product ff x Ob (far-future negative subject + basic object)
+#
+# MM = Cross product gg x Ob (infinitive + basic object)
+#
+# UU = Cross product PS x OR (present/very-near-past subject + special reflexive object)
+# VV = Cross product NP x OR (near-past subject + special reflexive object)
+# XX = Cross product DP x OR (distant-past subject + special reflexive object)
+# YY = Cross product NF x OR (near-future subject + special reflexive object)
+# ZZ = Cross product FF x OR (far-future subject + special reflexive object)
+#
+# --------------------------- NOUNS (noun classes) --------------------------
+# N1 = Class I noun prefixes
+# N2 = Class II noun prefixes
+# N3 = Class III noun prefixes
+# N4 = Class IV noun prefixes
+# N5 = Class V noun prefixes
+# N6 = Class VI noun prefixes
+# N7 = Class VII noun prefixes
+# N8 = Class VIII noun prefixes (large stuff)
+# N9 = Class IX noun prefixes
+# Nx = Class X noun prefixes
+#
+# yy = Impersonal possessive prefix
+# zz = Size-based noun prefixes (aka-/obu-/ebya-/etc.)
+# ------------------------------ QUICK EXAMPLES -----------------------------
+# Example .dic entries (illustrative):
+#   NOTE: these examples assume the stem exists in your .dic and matches the rule conditions.
+#   NOTE: avoid mixing tense flags on one entry; use separate entries per tense.
+#
+# VERBS (affirmative, subject-only):
+#   lya/PS      -> present tense subject prefixes + lya (e.g. ndya, olya, alya, tulya, mulya, balya, ...)
+#   lidde/PS    -> very-near-past tense subject prefixes + lidde (e.g. ndidde, olidde, alidde, tulidde, mulidde, balidde, ...)
+#   lidde/NP    -> near-past subject prefixes + lidde (e.g. nna+lidde, wa+lidde, ya+lidde, baa+lidde, ...)
+#   lya/DP      -> distant-past subject prefixes + lya (e.g. nna+lya, wa+lya, ya+lya, baa+lya, ...)
+#   lya/NF      -> near-future subject prefixes + lya (e.g. naa+lya, munaa+lya, onaa+lya, banaa+lya, ...)
+#   lya/FF      -> far-future subject prefixes + lya (e.g. ndi+lya, oli+lya, ali+lya, tuli+lya, muli+lya, bali+lya, ...)
+#
+# VERBS (negative, subject-only):
+#   lya/ps      -> present/very-near-past negatives (e.g. si+lya, to+lya, ta+lya, tetu+lya, temu+lya, teba+lya, ...)
+#   lidde/ps    -> present/very-near-past negatives (e.g. si+lidde, to+lidde, ta+lidde, tetu+lidde, temu+lidde, teba+lidde, ...)
+#   lya/np      -> near+distant past negatives (e.g. saalya, tewalya, teyalya, tetwalya, temwalya, tebaalya, ...)
+#   lidde/np    -> near past negatives (e.g. saalidde, tewalidde, teyalidde, tetwalidde, temwalidde, tebaalidde, ...)
+#   lye/nf      -> near-future negatives (e.g. siilye, temuulye, toolye, taalye, tetuulye, temuulye, tebaalye, ...)
+#   lya/ff      -> far-future negatives (e.g. sililya, tolilya, talilya, tetulilya, temulilya, tebalilya, ...)
+#
+# VERBS (infinitives):
+#   lya/gg      -> infinitive forms (oku+lya, ku+lya, and possessives like ow'oku+lya, ...)
+#   naaza/hh    -> reflexive infinitive forms (okwee+naaza, kwee+naaza, and possessives like ow'okwee+naaza, ...)
+#
+# VERBS (subject+object chaining):
+#   Use the generated cross-product flags when you want subject+object without relying on multi-step prefix chaining.
+#   lya/NN               -> present/very-near-past subject+basic-object (PS x Ob) e.g. mbilya, tuzilya, zitulya, abilidde, zibilidde
+#   lidde/GG             -> near-past subject+basic-object (NP x Ob) e.g.  wabilidde, nnakilidde, gwaakilidde
+#   lya/QQ               -> near-future subject+basic-object (NF x Ob) e.g. munaakilya, onaakilya, abanakilya
+#   lya/RR               -> far-future subject+basic-object (FF x Ob) e.g. olikalya, mulibilya, balikalya
+#   lya/SS or lidde/SS   -> present/very-near-past negative subject+basic-object (ps x Ob) e.g. obutagulya, sibilidde
+#   lya/MM               -> infinitive+basic-object (gg x Ob) e.g. okuzilya, okubulya
+#
+# VERBS (special reflexive object markers like -mwe-/-gwe-):
+#   kutte/UU or liisa     -> present/very-near-past subject + special reflexive object (PS x OR) e.g. ngwekutte, nzeeliisa, olwekutte
+#   kwata/VV or kutte     -> near-past and far past subject + special reflexive object (NP x OR) e.g. nnabeekwata, nnabeekutte
+#   liisa/ZZ                -> far-future subject + special reflexive object (FF x OR) e.g ndikeeliisa, olikeeliisa
+#
+# NOUNS:
+#   taata/N1    -> noun-class prefixes (e.g. pluralization like ba+taata depending on the noun class rules)
+# N1 = Class I noun prefixes (omu-/omw- → aba-/ba-, plus some bare stems → ba-)
+#      e.g. omuntu → abantu; omwana → abaana; taata → bataata
+# N2 = Class II noun prefixes (omu-/omw- → emi-/mi-)
+#      e.g. omuti → emiti; omwezi → emyezi
+# N3 = Class III noun prefixes (e-/em-)
+#      e.g. mayiro → emmayiro
+# N4 = Class IV noun prefixes (eki-/eky- → ebi-/eby-)
+#      e.g. ekitabo → ebitabo; ekyuma → ebyuma
+# N5 = Class V noun prefixes (e-, eri-, ejj-, ery- → ama-/ma-)
+#      e.g. eggi → amagi; erinnyo → amannyo
+# N6 = Class VI noun prefixes (aka- → obu-/bu-)
+#      e.g. akatabo → obutabo
+# N7 = Class VII noun prefixes (olu-/olul-/olw- → en-/em-/enn-/enny- etc.)
+#      e.g. olulimi → ennimi; olubuto → embuto; olwendo → ennyendo; oluggi → enziggi
+# N8 = Class VIII noun prefixes (large stuff: omu-/omw- → ogu-/ogw-; some variants → aga-)
+#      e.g. omuntu → oguntu
+# N9 = Class IX noun prefixes (oku- nouns: oku- may drop, or pluralize with ama-/ma-)
+#      e.g. okutu → kutu; okutu → amatu; okugulu → magulu
+# Nx = Class X noun prefixes (otw-/otu- nouns; this rule encodes the allowed alternation)
+#      e.g. otulo → tulo
+# yy = Impersonal possessive prefix (e.g. ekitabo ky'abaana, eby'abaana)
+# zz = Size-based noun prefixes (e.g. akamotoka, obumotoka, olwana)
+#
+# NOTE: For each word, you have to include the original stem
+# and its respective modified stems in the .dic file and apply only the applicable flags
+# For example for the verb "lya" the entries might be:
+# lya/PS      (apply PS subject markers for present tense)
+# lya/NP      (apply NP subject markers for near past)
+# lya/NN      (apply pre-generated PS x Ob cross product for subject+object)
+# lidde/PS    (alternative stem form with PS markers)
+# liisa/UU    (alternative stem form with special reflexive objects)
+################# END OF DESCRIPTION OF FLAGS ##########################
 
 SET UTF-8
 FLAG long
@@ -74,7 +219,7 @@ COMPOUNDMIN 1
 FORBIDDENWORD fw
 
 # Optional vowels at the begining of words
-AF 176
+AF 168
 AF CENAAd # 1
 AF N6CE # 2
 AF N6CEzz # 3
@@ -126,11 +271,11 @@ AF CEAd # 48
 AF komuwoyoBDBEBFBGBHBIBKBLBMBNBPBQBRBSBTBUBWBXDPEBEDEFEHEKEMFAFCFDFEFFFGFHFMFSFVGGHHIIIMIPJJLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTWFWGWHWJWMWNYTemffgghhiMipjjkkllnppppsrfrirpsTscstttvvwfwgwjwnxxyt # 49
 AF NAkomuwoyoBVEMFPFXNNPSRPSBSbWWnfrpwhwm # 50
 AF NAakamayawBDBEBFBGBRBXCCDPEBEDEFEHEMFDFEFGFHFYGGIILTNNNPPSPTRPSCSSSTWGWNcCsTemnppsrpscstwgwn # 51
-AF PassiveTransitive # 52
-AF ModifiedPassiveTransitive # 53
-AF PastPassiveTransitive # 54
+AF akamawayBDBEBFBGBHBIBKBQBRBSBWBXCCDPEBEDEFEHEKEMFAFCFDFEFFFGFHFMFSFVFYGGHHIIIMIPJJLTMMNFNNNPPPPSPTQQRRSCSSStTTWFWMWNYTemffggipjjkkllnppppsscstttvvwfwnxx # 52
+AF NAakamawayBVEMFPFXNNPSSBWWnfwm # 53
+AF NAakamawayBDBEBFBGBRBXCCDPEDEHEMFDFEFGFHFYGGIILTNNNPPSPTSCSSWNemnppsscwn # 54
 AF komuDPFFIMIPJJLTNFNPPPPSPTSCStWFWMWNYTffggipjjnppppsscstwfwn # 55
-AF ModifiedIntransitive # 56
+AF NAkomuPSSBnfwm # 56
 AF NAakCCDPLTNPPSPTSCWNnppsscstwn # 57
 AF amakBDBEBFBGBHBIBKBQBRBSBWBXDPEBEDEFEHEKEMFAFCFDFEFFFGFHFMFSFVGGHHIIIMIPJJLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTWFWGWHWJWMWNYTcCemffgghhiMipjjkkllnppppsrfrirpsTscstttvvwjwfwgwnxxyt # 58
 AF amakNABVEMFPFXNNPSRPSBSbWWnfrpwhwm # 59
@@ -144,113 +289,105 @@ AF NACCDPLTNPPSPTSCWNnppsscstwn # 66
 AF BDBEBFBGBHBIBKBQBRBSBWBXDPEBEDEFEHEKEMFAFCFDFEFFFGFHFMFSFVGGHHIIIMIPJJLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTWFWGWHWJWMWNYTemffgghhiMipjjkkllnppppsrfrirpsTscstttvvwfwgwjwnxxyt # 67
 AF NABVEMFPFXNNPSRPSBSbWWnfrpwhwm # 68
 AF NABDBEBFBGBRBXCCDPEBEDEFEHEMFDFEFGFHFYGGIILTNNNPPSPTRPSCSSSTWGWNcCemnppsrpscstwgwn # 69
-AF ModifiedPassiveTTransitive # 70
-AF PastPassiveTTransitive # 71
-AF NAamBVCCDPEMFPFXLTNNNPPSPTRPSBSCWNWWSbnfnppsrpscstwgwhwmwn # 72
-AF awayBDBEBFBGBHBIBKBQBRBSBWBXDPEBEDEFEHEKEMFAFCFDFEFFFGFHFMFSFVGGHHIIIMIPJJLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTWFWGWHWJWMWNYTcCemffgghhiMipjjkkllnppppsrfrirpsTscstttvvwfwgwjwnxxyt # 73
-AF NAawayBDBEBFBGBRBXCCDPEBEDEFEHEMFDFEFGFHFYGGIILTNNNPPSPTRPSCSSStWGWNcCemnppsrpsTscstwgwn # 74
-AF NAkoBDBEBFBGBHBIBKBQBRBSBWBXDPEBEDEFEHEKEMFAFCFDFEFFFGFHFMFSFVFYGGHHIIIMIPJJLTNFNNNPPPPSPTQQRRSCSSStTTWFWMWNYTffggipjjkkllnppppsscstwfwn # 75
-AF NAkoBVEMNNPSSBnfwm # 76
-AF NAkoCCDPLTNPPSPTSCStWNnppsscstwn # 77
-AF CausativeTransitive # 78
-AF ModifiedCausativeTransitive # 79
-AF PastCausativeTransitive # 80
-AF komuwoyoDPFFIMIPLTNFNPPPPSPTSCStWFWMWNYTffggipjjnppppsscstwfwmwn # 81
-AF komuwoyoNAPSSBnfwm # 82
-AF komuwoyoNACCDPLTNPPSPTSCWNnppsscstwn # 83
-AF BenefactiveTransitive # 84
-AF ModifiedBenefactiveTransitive # 85
-AF PastBenefactiveTransitive # 86
-AF komuwoyoBDBEBFBGBHBIBKBLBMBNBPBQBRBSBTBUBWBXDPEBECEDEFEGEHEJEKELEMFAFBFCFDFEFFFGFHFIFJFKFLFMFNFSFTFVFWGGHHIIIMIPJJKKLLLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTUUVVWFWGWHWJWMWNXXYTYYZZccemffgghhiMiiipjjkkllnppppsrfrirpsTscstttuuvvwfwgwjwnwwxxyt # 87
-AF komuwoyoBVEMFPFRFXJQNNPSRPSBSbUUWWnfrpwhwm # 88
-AF NAakamaway,BDBEBFBGBMBRBUBXCCDPEBECEDEFEGEHEJEKELEMFDFEFGFHFIFJFKFLFYFZGGIILTNNNPPSPTRPSCSSUUVVWGWNXXcCemnppsrpsTscstwgwn # 89
-AF NAawayBVEMFPFXNNPSPTRPSBSbWWnfrpwgwhwmwn # 90
-AF akBDBEBFBGBHBIBKBLBMBNBPBQBRBSBTBUBWBXDPEBECEDEFEGEHEJEKELEMFAFBFCFDFEFFFGFHFIFJFKFLFMFNFSFTFVFWGGHHIIIMIPJJKKLLLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTUUVVWFWGWHWJWMWNXXYTYYZZccemffgghhiMiiipjjkkllnppppsrfrirpsTscstttuuvvwfwgwjwnwwxxyt # 91
-AF NAakBUBVEMFPFRFXJQNNPSRPSBSbUUWWnfrpwhwm # 92
-AF NABDBEBFBGBRBXCCDPEBEDEFEHEMFDFEFGFHFYGGIILTNNNPPSPTRPSCSSSTWGWNcCemnppsrpscstwgwn # 93
-AF NAkomuBLBMBNBPBTBUECEGEJELFBFIFJFKFLFNFTFWFZKKLLRFRIRPRnSTWGWHWJcchhiMiirfrirpsTuuwgwjwwyt # 94
-AF NAkomuFRJQRPSbwh # 95
-AF NAkomuBMBUECEGEJFIFJFKFLFZRPWGSTcCrpsTwg # 96
-AF NAkomuRFRIRPRnSTWGWHWJcChhiMrfrirpsTwgwjyt # 97
-AF ModifiedIntransitiveReflexive # 98
-AF NAakamRPSTWGcCrpsTwg # 99
-AF NAakamBLBMBNBPBTBUECEGEJELFBFIFJFKFLFNFTFWKKLLRFRIRPRnSTWGWHWJcchhiMiirfrirpsTuuwgwjwwyt # 100
-AF NAakamFRJQRPSbrpwh # 101
-AF NAakamBMBUECEGEJFIFJFKFLFZRPST WGcCrpwgsT # 102
-AF NAakBLBMBNBPBTBUECEGEJELFBFIFJFKFLFNFTFWKKLLRFRIRPRnSTWGWHWJcchhiMiirfrirpsTuuwgwjwwyt # 103
-AF NAkoFRJQRPSbwh # 104
-AF NAakBLBMBUECEGEJFIFKFKFLFZRPSTWGcCrpsTwg # 105
-AF NAkoyoBLBMBNRFRIRPRnSTWGWHWJcChhiMrfrirpsTwgwjyt # 106
-AF NAkoyoRnSbrpwh # 107
-AF NAyokoRPSTWGcCrpsTwg # 108
-AF NAkomuBLBMBNBPBTBUECEGEJELFBFIFJFKFLFNFTFWKKLLRFRIRPRnSTWGWHWJcchhiiiMrfrirpsTuuwgwjwwyt # 109
-AF NAFRJQRPSbwhrp # 110
-AF NAakkoBMBNBUECEGEJFIFJFKFLFZRPSTWGcCrpsTwg # 111
-AF NAN6zz # 112
-AF NAN6 # 113
-AF NALT # 114
-AF PS # 115
-AF NAzz # 116
-AF CENo # 117
-AF CEOC # 118
-AF NADPFFIMIPJJLTNFNPPPPSPTSCStTTWFWMWNYTffggipjjkkllnppppsscstwfwn # 119
-AF NAPSSBnfwm # 120
-AF NACCDPLTNPPSPTSCStWNnppsscstwn # 121
-AF DPFFIMIPJJLTNFNPPPPSPTSCStWFWMWNYTffggipnppppsstwfwn # 122
-AF NAPSSBnfwm # 123
-AF NACCDPLTNPPSPTSCWNnppsscstwn # 124
-AF NAakamawBVCCDPEMFHFPFXLTNNNPPSPTRPSBSCSbWNWWnfnppsrpscstwgwhwmwn # 125
-AF komuDPFFIMIPJJLTNFNPPPPSPTSCStWFWMWNYTffggipjjnppppsscstwfwn # 126
-AF Intransitive # 127
-AF Type-ITransitive # 128
-AF NAkomuRFRIRPRnSTWGWHWJcChhiMrfrirpsTwgwjyt # 129
-AF NAakamFRJQRPSTSbWGcCrpsTwgwh # 130
-AF HybridReflexive # 131
-AF LocativeIntransitiveReflexive # 132
-AF ModifiedLocativeIntransitiveReflexive # 133
-AF PastLocativeIntransitiveReflexive # 134
-AF pd # 135
-AF pc # 136
-AF NApd # 137
-AF NApc # 138
-AF eaae # 139
-AF NApsnpRFrfggPSDPSCscWNwnStstLT # 140
-AF NAnpRPPSDPWNwnStstSTsTNNGGBGBFBDBEBXEDEBEFEMFDFGwgWGWFSC # 141
-AF NApsrpSSIIBRSCscFGFHwfwgwhFE # 142
-AF NAnpPSVPDPSCWNwnStstLTNNGGMMBGBFBDBEBXEHEDEBEFFGEMFD # 143
-AF NApsrpWNSSIIBRFGFHscFE # 144
-AF NAnpPSDPSCWNwnStstLTBG # 145
-AF NApsscWN # 146
-AF NAnpPSDPSCWNwmwnStstLTNNGGBGBFBDBXEBFEFGFHFP # 147
-AF NAnpPSDPSCWNwnwmStstLTBG # 148
-AF NApssc # 149
-AF NAnpPSDPSCWNwnStstLT # 150
-AF NApsffggPSDPNFFFIPipYTSCscWNwnWMWFwfIMstStLTBIBGBDBHBEFC # 151
-AF psnpggPSDPNFFFIPipYTSCscWNwnWMWFwfIMStstLT # 152
-AF NAnfPTwmSB # 153
-AF psnpffggPSDPNFFFIPipYTSCscWNwnWMWFwfCCIMStstLT # 154
-AF psnpffggPSDPNFFFIPipYTSCscWNwnWMWFwfCCStstLT # 155
-AF RPpsnpffRnRFrfgghhrpPSDPNFFFIPRIriYTytSCscWNwnWMWFwfWGwgWHwhWJwjCCcCStstSTsTLTNNGGQQRRSSMMIITTxxvvBGBIBSBKBFBDBHBRBEBXFYEHFCFDEBEFFEFSFVFMFGFHFAEKEM # 156
-AF NARPnfPTwmWGwgWHNNWWBVBRBXFXFMFPEM # 157
-AF NAnfPTwmwgWHSBNNWWBVBXEM # 158
-AF psnpffRnRFgghhrpPSDPNFFFIPipRIriYTytSCscWNwnWMWFwfCCStstLTNNGGQQRRSSMMIIWWvvxxBGBIBSBKBFBDBHBRBEBXFYEHEDFCFDEBFEFSFVFMFGFHEKEM # 159
-AF NA # 160
-AF RPpsnpffRnRFrfgghhrpPSDPFFRIriYTytSCscWNWGwgWHWJwjiMSTsTRRNNGGSSMMIITTkkvvxxHHttllBGBIBSBKBVBFBQBWBDBHBRBEBXEHEDFCFDEBEFFEFSFVFMFGFAEKwnWMWFwfwhFH # 161
-AF NARPnfrpPSscwnwmwgwhSBWWBXFXFPEMFV # 162
-AF NARPnprpPSNPSCwgWGwhcCiMsTLTNNGGIIBGBFBDBEBXFYEHFDEFFHFGEKEMWNwn # 163
-AF NApsrpWGwgFEFMFGscWNFP # 164
-AF NAgghhPSNPFFNFDPYTSCscWNwnWMWFwfWGwgWHwhWJIMiMStstSTLTNNGGRRSSMMIITTQQvvxxBGBIBSBKBFBDBHBRBPBLBNBUBEBXFYFZEHEDEJFCFDFIFJEBEFFEFSFVFMFWFTFPFNFRFGFHFAFBEKELEMwjFKFL # 165
-AF NARPnfrpPSFFwmwhSBNNWWUUBVBXFXFPFREMwgWGwjFLJQGCGIGQHCHKHLHYIAIB # 166
-AF NARPnpPSNPSCwgCCcCIMiMstLTNNGGMMIIUUVVBGBFBDBEFYFZEHEJFDFIFHFKFLEKELEMWNwnWGwhWJWHFGsc # 167
-AF NApsrfrpscWNSSBSBVBRFRwhwgWGwfWMBUFEFJFGFKFN # 168
-AF psnpffggPSDPNFFFPPppIPipykYTSCscWNwnWMwmWFwfStstLTIM # 169
-AF NAykwmSBPTsc # 170
-AF NAPSyknpVPNPSCwnCCLTWN # 171
-AF NAykpsscWNWM # 172
-AF NARPpsnpffRnRFrfgghhrpPSVPDPNFFFPPppJJjjIPipRIYTytSCscWNWMWFwgWGWHWJwjIMStstSTsTLTwnwfwhwmiMEMFDFEFGFHFMFSFV # 173
-AF NARPnprpPSDPipSCwnWGwgWFwhWNCCcCIMiMStstSTsTLTNNGGIIBGBXFYEHEDFDEBEFEKEMFH # 174
-AF NApsrpSCPSscWNwnSSBRFE # 175
-AF OCCPCB # 176
+AF NAamBVCCDPEMFPFXLTNNNPPSPTRPSBSCWNWWSbnfnppsrpscstwgwhwmwn # 70
+AF awayBDBEBFBGBHBIBKBQBRBSBWBXDPEBEDEFEHEKEMFAFCFDFEFFFGFHFMFSFVGGHHIIIMIPJJLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTWFWGWHWJWMWNYTcCemffgghhiMipjjkkllnppppsrfrirpsTscstttvvwfwgwjwnxxyt # 71
+AF NAawayBDBEBFBGBRBXCCDPEBEDEFEHEMFDFEFGFHFYGGIILTNNNPPSPTRPSCSSStWGWNcCemnppsrpsTscstwgwn # 72
+AF NAkoBDBEBFBGBHBIBKBQBRBSBWBXDPEBEDEFEHEKEMFAFCFDFEFFFGFHFMFSFVFYGGHHIIIMIPJJLTNFNNNPPPPSPTQQRRSCSSStTTWFWMWNYTffggipjjkkllnppppsscstwfwn # 73
+AF NAkoBVEMNNPSSBnfwm # 74
+AF NAkoCCDPLTNPPSPTSCStWNnppsscstwn # 75
+AF komuwoyoBDBEBFBGBHBIBKBLBMBNBPBQBRBSBTBUBWBXDPEBECEDEFEGEHEJEKELEMFAFBFCFDFEFFFGFHFIFJFKFLFMFNFSFTFVFWGGHHIIIMIPJJKKLLLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTUUVVWFWGWHWJWMWNXXYTYYZZcCccemffgghhiMiiipjjkkllnppppsrfrirpsTscstttuuvvwfwgwjwnwwxxyt # 76
+AF NAakamawayBUBVEMFPFRFXJQNNPSRPSBSbUUWWnfrpwhwm # 77
+AF NAakamawayBDBEBFBGBMBNBRBUBXCCDPEBECEDEFEGEHEJEMFDFEFGFHFIFJFKFLFYFZGGIILTNNNPPSPTRPSCSSStUUVVWGWNXXcCemnppsrpsTscstwgwn # 78
+AF komuwoyoDPFFIMIPLTNFNPPPPSPTSCStWFWMWNYTffggipjjnppppsscstwfwmwn # 79
+AF komuwoyoNAPSSBnfwm # 80
+AF komuwoyoNACCDPLTNPPSPTSCWNnppsscstwn # 81
+AF komuwoyoBDBEBFBGBHBIBKBLBMBNBPBQBRBSBTBUBWBXDPEBECEDEFEGEHEJEKELEMFAFBFCFDFEFFFGFHFIFJFKFLFMFNFSFTFVFWFYFZGGHHIIIMIPJJKKLLLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTUUVVWFWGWHWJWMWNXXYTYYZZccemffgghhiMiiipjjkkllnppppsrfrirpsTscstttuuvvwfwgwjwnwwxxyt # 82
+AF NAkomuwoyoBUBVEMFPFRFXJQNNPSRPSBSbUUWWnfrpwhwm # 83
+AF NAkomuwoyoBDBEBFBGBMBRBUBXCCDPEBECEDEFEGEHEJEMFDFEFGFHFIFJFKFLFYFZGGIILTNNNPPSPTRPSCSSSTStUUVVWGWNXXcCemnppsrpsTscstwgwn # 84
+AF komuwoyoBDBEBFBGBHBIBKBLBMBNBPBQBRBSBTBUBWBXDPEBECEDEFEGEHEJEKELEMFAFBFCFDFEFFFGFHFIFJFKFLFMFNFSFTFVFWGGHHIIIMIPJJKKLLLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTUUVVWFWGWHWJWMWNXXYTYYZZccemffgghhiMiiipjjkkllnppppsrfrirpsTscstttuuvvwfwgwjwnwwxxyt # 85
+AF komuwoyoBVEMFPFRFXJQNNPSRPSBSbUUWWnfrpwhwm # 86
+AF NAakamaway,BDBEBFBGBMBRBUBXCCDPEBECEDEFEGEHEJEKELEMFDFEFGFHFIFJFKFLFYFZGGIILTNNNPPSPTRPSCSSUUVVWGWNXXcCemnppsrpsTscstwgwn # 87
+AF NAawayBVEMFPFXNNPSPTRPSBSbWWnfrpwgwhwmwn # 88
+AF akBDBEBFBGBHBIBKBLBMBNBPBQBRBSBTBUBWBXDPEBECEDEFEGEHEJEKELEMFAFBFCFDFEFFFGFHFIFJFKFLFMFNFSFTFVFWGGHHIIIMIPJJKKLLLTMMNFNNNPPPPSPTQQRFRIRPRRRnSCSSSTStTTUUVVWFWGWHWJWMWNXXYTYYZZccemffgghhiMiiipjjkkllnppppsrfrirpsTscstttuuvvwfwgwjwnwwxxyt # 89
+AF NAakBUBVEMFPFRFXJQNNPSRPSBSbUUWWnfrpwhwm # 90
+AF NABDBEBFBGBRBXCCDPEBEDEFEHEMFDFEFGFHFYGGIILTNNNPPSPTRPSCSSSTWGWNcCemnppsrpscstwgwn # 91
+AF NAkomuBLBMBNBPBTBUECEGEJELFBFIFJFKFLFNFTFWFZKKLLRFRIRPRnSTWGWHWJcchhiMiirfrirpsTuuwgwjwwyt # 92
+AF NAkomuFRJQRPSbwh # 93
+AF NAkomuBMBUECEGEJFIFJFKFLFZRPWGSTcCrpsTwg # 94
+AF NAkomuRFRIRPRnSTWGWHWJcChhiMrfrirpsTwgwjyt # 95
+AF NAkomuRPSbrpwh # 96
+AF NAakamRPSTWGcCrpsTwg # 97
+AF NAakamBLBMBNBPBTBUECEGEJELFBFIFJFKFLFNFTFWKKLLRFRIRPRnSTWGWHWJcchhiMiirfrirpsTuuwgwjwwyt # 98
+AF NAakamFRJQRPSbrpwh # 99
+AF NAakamBMBUECEGEJFIFJFKFLFZRPST WGcCrpwgsT # 100
+AF NAakBLBMBNBPBTBUECEGEJELFBFIFJFKFLFNFTFWKKLLRFRIRPRnSTWGWHWJcchhiMiirfrirpsTuuwgwjwwyt # 101
+AF NAkoFRJQRPSbwh # 102
+AF NAakBLBMBUECEGEJFIFKFKFLFZRPSTWGcCrpsTwg # 103
+AF NAkoyoBLBMBNRFRIRPRnSTWGWHWJcChhiMrfrirpsTwgwjyt # 104
+AF NAkoyoRnSbrpwh # 105
+AF NAyokoRPSTWGcCrpsTwg # 106
+AF NAkomuBLBMBNBPBTBUECEGEJELFBFIFJFKFLFNFTFWKKLLRFRIRPRnSTWGWHWJcchhiiiMrfrirpsTuuwgwjwwyt # 107
+AF NAFRJQRPSbwhrp # 108
+AF NAakkoBMBNBUECEGEJFIFJFKFLFZRPSTWGcCrpsTwg # 109
+AF NAN6zz # 110
+AF NAN6 # 111
+AF NALT # 112
+AF PS # 113
+AF NAzz # 114
+AF CENo # 115
+AF CEOC # 116
+AF NADPFFIMIPJJLTNFNPPPPSPTSCStTTWFWMWNYTffggipjjkkllnppppsscstwfwn # 117
+AF NAPSSBnfwm # 118
+AF NACCDPLTNPPSPTSCStWNnppsscstwn # 119
+AF DPFFIMIPJJLTNFNPPPPSPTSCStWFWMWNYTffggipnppppsstwfwn # 120
+AF NAPSSBnfwm # 121
+AF NACCDPLTNPPSPTSCWNnppsscstwn # 122
+AF NAakamawBVCCDPEMFHFPFXLTNNNPPSPTRPSBSCSbWNWWnfnppsrpscstwgwhwmwn # 123
+AF komuDPFFIMIPJJLTNFNPPPPSPTSCStWFWMWNYTffggipjjnppppsscstwfwn # 124
+AF NAkomuRFRIRPRnSTWGWHWJcChhiMrfrirpsTwgwjyt # 125
+AF NAakamFRJQRPSTSbWGcCrpsTwgwh # 126
+AF pd # 127
+AF pc # 128
+AF NApd # 129
+AF NApc # 130
+AF eaae # 131
+AF NApsnpRFrfggPSDPSCscWNwnStstLT # 132
+AF NAnpRPPSDPWNwnStstSTsTNNGGBGBFBDBEBXEDEBEFEMFDFGwgWGWFSC # 133
+AF NApsrpSSIIBRSCscFGFHwfwgwhFE # 134
+AF NAnpPSVPDPSCWNwnStstLTNNGGMMBGBFBDBEBXEHEDEBEFFGEMFD # 135
+AF NApsrpWNSSIIBRFGFHscFE # 136
+AF NAnpPSDPSCWNwnStstLTBG # 137
+AF NApsscWN # 138
+AF NAnpPSDPSCWNwmwnStstLTNNGGBGBFBDBXEBFEFGFHFP # 139
+AF NAnpPSDPSCWNwnwmStstLTBG # 140
+AF NApssc # 141
+AF NAnpPSDPSCWNwnStstLT # 142
+AF NApsffggPSDPNFFFIPipYTSCscWNwnWMWFwfIMstStLTBIBGBDBHBEFC # 143
+AF psnpggPSDPNFFFIPipYTSCscWNwnWMWFwfIMStstLT # 144
+AF NAnfPTwmSB # 145
+AF psnpffggPSDPNFFFIPipYTSCscWNwnWMWFwfCCIMStstLT # 146
+AF psnpffggPSDPNFFFIPipYTSCscWNwnWMWFwfCCStstLT # 147
+AF RPpsnpffRnRFrfgghhrpPSDPNFFFIPRIriYTytSCscWNwnWMWFwfWGwgWHwhWJwjCCcCStstSTsTLTNNGGQQRRSSMMIITTxxvvBGBIBSBKBFBDBHBRBEBXFYEHFCFDEBEFFEFSFVFMFGFHFAEKEM # 148
+AF NARPnfPTwmWGwgWHNNWWBVBRBXFXFMFPEM # 149
+AF NAnfPTwmwgWHSBNNWWBVBXEM # 150
+AF psnpffRnRFgghhrpPSDPNFFFIPipRIriYTytSCscWNwnWMWFwfCCStstLTNNGGQQRRSSMMIIWWvvxxBGBIBSBKBFBDBHBRBEBXFYEHEDFCFDEBFEFSFVFMFGFHEKEM # 151
+AF NA # 152
+AF RPpsnpffRnRFrfgghhrpPSDPFFRIriYTytSCscWNWGwgWHWJwjiMSTsTRRNNGGSSMMIITTkkvvxxHHttllBGBIBSBKBVBFBQBWBDBHBRBEBXEHEDFCFDEBEFFEFSFVFMFGFAEKwnWMWFwfwhFH # 153
+AF NARPnfrpPSscwnwmwgwhSBWWBXFXFPEMFV # 154
+AF NARPnprpPSNPSCwgWGwhcCiMsTLTNNGGIIBGBFBDBEBXFYEHFDEFFHFGEKEMWNwn # 155
+AF NApsrpWGwgFEFMFGscWNFP # 156
+AF NAgghhPSNPFFNFDPYTSCscWNwnWMWFwfWGwgWHwhWJIMiMStstSTLTNNGGRRSSMMIITTQQvvxxBGBIBSBKBFBDBHBRBPBLBNBUBEBXFYFZEHEDEJFCFDFIFJEBEFFEFSFVFMFWFTFPFNFRFGFHFAFBEKELEMwjFKFL # 157
+AF NARPnfrpPSFFwmwhSBNNWWUUBVBXFXFPFREMwgWGwjFLJQGCGIGQHCHKHLHYIAIB # 158
+AF NARPnpPSNPSCwgCCcCIMiMstLTNNGGMMIIUUVVBGBFBDBEFYFZEHEJFDFIFHFKFLEKELEMWNwnWGwhWJWHFGsc # 159
+AF NApsrfrpscWNSSBSBVBRFRwhwgWGwfWMBUFEFJFGFKFN # 160
+AF psnpffggPSDPNFFFPPppIPipykYTSCscWNwnWMwmWFwfStstLTIM # 161
+AF NAykwmSBPTsc # 162
+AF NAPSyknpVPNPSCwnCCLTWN # 163
+AF NAykpsscWNWM # 164
+AF NARPpsnpffRnRFrfgghhrpPSVPDPNFFFPPppJJjjIPipRIYTytSCscWNWMWFwgWGWHWJwjIMStstSTsTLTwnwfwhwmiMEMFDFEFGFHFMFSFV # 165
+AF NARPnprpPSDPipSCwnWGwgWFwhWNCCcCIMiMStstSTsTLTNNGGIIBGBXFYEHEDFDEBEFEKEMFH # 166
+AF NApsrpSCPSscWNwnSSBRFE # 167
+AF OCCPCB # 168
 AM 147
 AM # faayo-->faayooko
 AM bili-->babili
@@ -406,9 +543,9 @@ PFX ea o 0 [aeiou]
 
 # vowels at the end of possesives
 SFX ae Y 3
-SFX ae a '/176 [aeiou]
-SFX ae e '/176 [aeiou]
-SFX ae o '/176 [aeiou]
+SFX ae a '/168 [aeiou]
+SFX ae e '/168 [aeiou]
+SFX ae o '/168 [aeiou]
 
 # Optional vowels at the begining of words e.g. akajanja-->kajanja
 PFX ov Y 3
