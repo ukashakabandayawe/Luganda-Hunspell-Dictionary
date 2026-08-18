@@ -1,7 +1,6 @@
 package com.lugandahunspelldictionary;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,7 +15,6 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
-import javafx.scene.control.SelectionMode;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -37,7 +35,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.StringJoiner;
@@ -321,6 +318,7 @@ public class CommonFlagAnalyzerApp extends Application {
     }
 
     private void renderResult(CommonFlagAnalyzer.AnalysisResult result) {
+        @SuppressWarnings("unused")
         String categoryLabel = result.getCategory().isBlank()
             ? (result.getSelectedEntries().isEmpty() ? "(unknown)" : "mixed")
             : result.getCategory();

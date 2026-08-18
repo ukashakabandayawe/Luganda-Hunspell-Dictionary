@@ -3,7 +3,6 @@ package com.lugandahunspelldictionary;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 
-import java.util.LinkedHashSet;
 import java.util.Set;
 
 public final class DicEntry {

@@ -126,10 +126,10 @@ public class LugandaGeneratorApp extends Application {
             return total > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) total;
         }
 
-        public boolean isTruncatedByIntMax() {
-            long total = (long) simpleEntries.size() + comboCount + 1L;
-            return total > Integer.MAX_VALUE;
-        }
+        // public boolean isTruncatedByIntMax() {
+        //     long total = (long) simpleEntries.size() + comboCount + 1L;
+        //     return total > Integer.MAX_VALUE;
+        // }
     }
 
     public static class Result {
@@ -162,12 +162,14 @@ public class LugandaGeneratorApp extends Application {
             this.errorStore = errorStore;
         }
 
+        @SuppressWarnings("exports")
         public static Result single(long rowKey, LugandaAffParser.AffixEntry ae, ErrorStore errorStore) {
             String affixDisplay = (ae == null || ae.affix == null || ae.affix.isEmpty()) ? "0" : ae.affix;
             String flag = ae == null ? "" : ae.flag;
             return new Result(Kind.SINGLE, rowKey, flag, affixDisplay, ae, null, null, errorStore);
         }
 
+        @SuppressWarnings("exports")
         public static Result combo(long rowKey, LugandaAffParser.AffixEntry prefix, LugandaAffParser.AffixEntry suffix, ErrorStore errorStore) {
             String pAff = (prefix == null || prefix.affix == null || prefix.affix.isEmpty()) ? "0" : prefix.affix;
             String sAff = (suffix == null || suffix.affix == null || suffix.affix.isEmpty()) ? "0" : suffix.affix;
@@ -699,6 +701,7 @@ public class LugandaGeneratorApp extends Application {
         errorStage.show();
     }
 
+    @SuppressWarnings("unused")
     private void showWordsByFlagTable(ObservableList<Result> allRows, List<String> roots) {
         Stage flagStage = new Stage();
         flagStage.setTitle("Words by Flag");
@@ -1452,6 +1455,7 @@ public class LugandaGeneratorApp extends Application {
         public String getCondition() { return condition; }
     }
 
+    @SuppressWarnings("unchecked")
     private void showRuleGenerator(ObservableList<Result> allRows, List<String> roots) {
         Stage rulesStage = new Stage();
         rulesStage.setTitle("Generate Rules from Non-Errors");
