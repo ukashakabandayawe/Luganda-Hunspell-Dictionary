@@ -5,6 +5,7 @@ import javafx.concurrent.Task;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
@@ -28,7 +29,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -38,9 +38,13 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Set;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -56,6 +60,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
         new Spinner<>(new SpinnerValueFactory.IntegerSpinnerValueFactory(2, 3, 2));
     private final Spinner<Integer> maxWordsSpinner =
         new Spinner<>(new SpinnerValueFactory.IntegerSpinnerValueFactory(1000, 2147483647, 500000));
+    private final CheckBox limitWordsCheck = new CheckBox("Limit output words");
 
     private final ProgressBar progressBar = new ProgressBar(0);
     private final Label progressLabel = new Label("Idle");
@@ -81,6 +86,8 @@ public class HunspellFiniteWordListAppfixed extends Application {
 
         maxCompoundPartsSpinner.setEditable(true);
         maxWordsSpinner.setEditable(true);
+        limitWordsCheck.setSelected(true);
+        maxWordsSpinner.disableProperty().bind(limitWordsCheck.selectedProperty().not());
 
         Button pickAffBtn = new Button("Browse .aff");
         Button pickDicBtn = new Button("Browse .dic");
@@ -114,6 +121,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
 
         HBox options = new HBox(10,
             new Label("Max compound parts:"), maxCompoundPartsSpinner,
+            limitWordsCheck,
             new Label("Max output words:"), maxWordsSpinner,
             runBtn
         );
@@ -184,18 +192,46 @@ public class HunspellFiniteWordListAppfixed extends Application {
         }
 
         int maxParts = maxCompoundPartsSpinner.getValue();
-        final int inspectorMax = 200_000;
+        final int inspectorMax = 0;
 
         Task<String> task = new Task<>() {
             @Override
             protected String call() throws Exception {
+                long inspectStart = System.currentTimeMillis();
                 updateMessage("Loading model...");
                 HunspellModel model = cache.getOrLoad(affPath, dicPath);
 
                 List<DicEntry> matching = new ArrayList<>();
+                List<Set<String>> matchingForms = new ArrayList<>();
+                LinkedHashSet<String> affixed = new LinkedHashSet<>();
+                CompoundCandidates candidates = new CompoundCandidates();
+
+                int processed = 0;
                 for (DicEntry e : model.entries) {
+                    if (isCancelled()) {
+                        return "Cancelled.";
+                    }
+
+                    Set<String> forms = generateAffixedForms(e, model);
+
                     if (e.stem.equals(stem)) {
                         matching.add(e);
+                        matchingForms.add(forms);
+                        affixed.addAll(forms);
+                    }
+
+                    for (String form : forms) {
+                        addCompoundCandidate(
+                            candidates,
+                            new WordRecord(form, e.flags),
+                            model
+                        );
+                    }
+
+                    processed++;
+                    if (processed % 200 == 0 || processed == model.entries.size()) {
+                        updateProgress(processed, Math.max(model.entries.size(), 1));
+                        updateMessage("Scanning dictionary: " + processed + "/" + model.entries.size());
                     }
                 }
 
@@ -207,11 +243,9 @@ public class HunspellFiniteWordListAppfixed extends Application {
                 sb.append("Stem: ").append(stem).append('\n');
                 sb.append("Matching DIC entries: ").append(matching.size()).append("\n\n");
 
-                LinkedHashSet<String> affixed = new LinkedHashSet<>();
-                for (DicEntry entry : matching) {
-                    Set<String> forms = generateAffixedForms(entry, model);
-                    affixed.addAll(forms);
-
+                for (int i = 0; i < matching.size(); i++) {
+                    DicEntry entry = matching.get(i);
+                    Set<String> forms = matchingForms.get(i);
                     sb.append("Entry flags: ").append(flagsToString(entry.flags)).append('\n');
                     sb.append("Affixed forms for this entry: ").append(forms.size()).append('\n');
                 }
@@ -220,36 +254,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
                 Collections.sort(affixedSorted);
 
                 sb.append("\nAll affixed forms (unique): ").append(affixedSorted.size()).append("\n");
-                appendLimited(sb, affixedSorted, 400);
-
-                /*
-                 * Build the candidate index once, but do not create the huge
-                 * allCandidates list that the original inspector used.
-                 */
-                CompoundCandidates candidates = new CompoundCandidates();
-                int processed = 0;
-                for (DicEntry entry : model.entries) {
-                    if (isCancelled()) {
-                        return "Cancelled.";
-                    }
-
-                    Set<String> forms = generateAffixedForms(entry, model);
-                    for (String form : forms) {
-                        addCompoundCandidate(
-                            candidates,
-                            new WordRecord(form, entry.flags),
-                            model
-                        );
-                    }
-
-                    processed++;
-                    if (processed % 200 == 0 || processed == model.entries.size()) {
-                        updateProgress(processed,
-                            Math.max(model.entries.size(), 1));
-                        updateMessage("Indexing compound candidates: "
-                            + processed + "/" + model.entries.size());
-                    }
-                }
+                appendAll(sb, affixedSorted);
 
                 Set<String> targetForms = new HashSet<>(affixed);
 
@@ -263,7 +268,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
                     maxParts,
                     inspectorMax,
                     involvingStem,
-                    (done, total, message) -> updateMessage(message),
+                    (done, total, message) -> updateMessage(withEta(message, done, total, inspectStart)),
                     this::isCancelled
                 );
 
@@ -272,7 +277,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
 
                 sb.append("\nCompounded forms involving this stem/forms: ")
                   .append(involvingStemSorted.size()).append("\n");
-                appendLimited(sb, involvingStemSorted, 400);
+                appendAll(sb, involvingStemSorted);
 
                 return sb.toString();
             }
@@ -336,7 +341,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
         }
 
         int maxParts = maxCompoundPartsSpinner.getValue();
-        int maxWords = maxWordsSpinner.getValue();
+        int maxWords = limitWordsCheck.isSelected() ? maxWordsSpinner.getValue() : 0;
 
         Task<Void> task = new Task<>() {
             @Override
@@ -352,55 +357,102 @@ public class HunspellFiniteWordListAppfixed extends Application {
                 try (ExternalUniqueWordStore wordStore = new ExternalUniqueWordStore();
                      ExternalCompoundCandidateStore candidateStore = new ExternalCompoundCandidateStore(model)) {
                     int total = model.entries.size();
-                    int idx = 0;
-                    boolean limitReached = false;
+                    int workerCount = Math.max(2, Math.min(Runtime.getRuntime().availableProcessors(), 4));
+                    int batchSize = Math.max(32, total / (workerCount * 16));
                     long generatedForms = 0;
-                    long lastUiUpdate = 0L;
+                    AtomicInteger processedEntries = new AtomicInteger();
+                    AtomicLong generatedFormsCount = new AtomicLong();
+                    AtomicLong lastUiUpdate = new AtomicLong(0L);
+                    AtomicBoolean limitReached = new AtomicBoolean(false);
+                    AtomicBoolean stopRequested = new AtomicBoolean(false);
 
-                    for (DicEntry entry : model.entries) {
-                        if (isCancelled()) {
-                            break;
-                        }
-                        idx++;
+                    log("Expanding affixes using " + workerCount + " worker threads, batch size " + batchSize + ".");
 
-                        Set<String> forms = generateAffixedForms(entry, model);
-                        if (!entry.hasFlag(model.onlyInCompoundFlag)) {
-                            for (String form : forms) {
-                                if (!wordStore.add(form, maxWords)) {
-                                    limitReached = true;
-                                    break;
+                    ExecutorService executor = Executors.newFixedThreadPool(workerCount);
+                    try {
+                        List<Future<?>> futures = new ArrayList<>();
+                        for (int start = 0; start < total; start += batchSize) {
+                            final int from = start;
+                            final int to = Math.min(total, start + batchSize);
+                            futures.add(executor.submit(() -> {
+                                for (int i = from; i < to; i++) {
+                                    if (stopRequested.get() || isCancelled()) {
+                                        return;
+                                    }
+
+                                    DicEntry entry = model.entries.get(i);
+                                    Set<String> forms = generateAffixedForms(entry, model);
+
+                                    if (!entry.hasFlag(model.onlyInCompoundFlag)) {
+                                        for (String form : forms) {
+                                            try {
+                                                if (!wordStore.add(form, maxWords)) {
+                                                    limitReached.set(true);
+                                                    stopRequested.set(true);
+                                                    return;
+                                                }
+                                            } catch (IOException e) {
+                                                // TODO Auto-generated catch block
+                                                e.printStackTrace();
+                                            }
+                                        }
+                                    }
+
+                                    for (String form : forms) {
+                                        if (stopRequested.get() || isCancelled()) {
+                                            return;
+                                        }
+                                        try {
+                                            candidateStore.add(form, entry.flags);
+                                        } catch (IOException e) {
+                                            // TODO Auto-generated catch block
+                                            e.printStackTrace();
+                                        }
+                                        generatedFormsCount.incrementAndGet();
+                                    }
+
+                                    int done = processedEntries.incrementAndGet();
+                                    long now = System.currentTimeMillis();
+                                    long prev = lastUiUpdate.get();
+                                    if (now - prev >= 500 || done == total) {
+                                        if (lastUiUpdate.compareAndSet(prev, now) || done == total) {
+                                            updateProgress(done, Math.max(total, 1));
+                                            updateMessage(
+                                                withEta(
+                                                    "Expanding affixes: "
+                                                        + done + "/"
+                                                        + total
+                                                        + " | forms: "
+                                                        + generatedFormsCount.get(),
+                                                    done,
+                                                    total,
+                                                    t0
+                                                )
+                                            );
+                                        }
+                                    }
                                 }
-                            }
+                            }));
                         }
 
-                        for (String form : forms) {
-                            candidateStore.add(form, entry.flags);
-                            generatedForms++;
+                        for (Future<?> future : futures) {
+                            future.get();
                         }
-
-                        long now = System.currentTimeMillis();
-                        if (now - lastUiUpdate >= 500 || idx == total) {
-                            lastUiUpdate = now;
-                            updateProgress(idx, Math.max(total, 1));
-                            updateMessage(
-                                "Expanding affixes: "
-                                    + idx + "/"
-                                    + total
-                                    + " | forms: "
-                                    + generatedForms
-                            );
-                        }
-
-                        if (limitReached) {
-                            log("Max output words reached while building affixed forms. Stopping early.");
-                            break;
-                        }
+                    } finally {
+                        executor.shutdownNow();
                     }
+
+                    generatedForms = generatedFormsCount.get();
 
                     candidateStore.finish();
 
-                    if (!limitReached && !isCancelled()) {
+                    if (limitReached.get() && maxWords > 0) {
+                        log("Max output words reached while building affixed forms. Stopping early.");
+                    }
+
+                    if ((!limitReached.get() || maxWords <= 0) && !isCancelled()) {
                         updateMessage("Building compounds...");
+                        long compoundsStart = System.currentTimeMillis();
                         generateCompounds(
                             model,
                             candidateStore,
@@ -409,7 +461,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
                             wordStore,
                             (done, ttl, message) -> {
                                 updateProgress(done, ttl);
-                                updateMessage(message);
+                                updateMessage(withEta(message, done, ttl, compoundsStart));
                             }
                         );
                     }
@@ -421,6 +473,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
                     updateProgress(1, 1);
                     updateMessage("Done");
 
+                    log("Affix forms processed: " + generatedForms);
                     log("Final words: " + wordStore.getFinalCount());
                     log("Output: " + outPath.toAbsolutePath());
                     log("Elapsed: " + dt + " ms");
@@ -451,6 +504,12 @@ public class HunspellFiniteWordListAppfixed extends Application {
         }
         if (items.size() > limit) {
             sb.append("... truncated, showing ").append(limit).append(" of ").append(items.size()).append("\n");
+        }
+    }
+
+    private static void appendAll(StringBuilder sb, List<String> items) {
+        for (String item : items) {
+            sb.append(item).append('\n');
         }
     }
 
@@ -572,6 +631,33 @@ public class HunspellFiniteWordListAppfixed extends Application {
         }
     }
 
+    private static String formatDuration(long millis) {
+        long totalSeconds = Math.max(0L, millis / 1000L);
+        long hours = totalSeconds / 3600L;
+        long minutes = (totalSeconds % 3600L) / 60L;
+        long seconds = totalSeconds % 60L;
+        if (hours > 0) {
+            return String.format(Locale.ROOT, "%dh %02dm %02ds", hours, minutes, seconds);
+        }
+        return String.format(Locale.ROOT, "%dm %02ds", minutes, seconds);
+    }
+
+    private static String withEta(String message, long done, long total, long startedAtMillis) {
+        if (done <= 0 || total <= 0 || done > total) {
+            return message;
+        }
+        long elapsed = Math.max(1L, System.currentTimeMillis() - startedAtMillis);
+        long remaining = estimateRemainingMillis(done, total, elapsed);
+        return message + " | ETA " + formatDuration(remaining);
+    }
+
+    private static long estimateRemainingMillis(long done, long total, long elapsedMillis) {
+        if (done <= 0 || total <= done) {
+            return 0L;
+        }
+        return (elapsedMillis * (total - done)) / done;
+    }
+
     private static List<WordRecord> readWordRecordChunk(Path file) throws IOException {
         List<WordRecord> out = new ArrayList<>();
         try (BufferedReader br = Files.newBufferedReader(file, StandardCharsets.UTF_8)) {
@@ -589,9 +675,9 @@ public class HunspellFiniteWordListAppfixed extends Application {
         private final Path tempDir;
         private final HunspellModel model;
 
-        private final List<WordRecord> beginBuffer = new ArrayList<>();
-        private final List<WordRecord> midBuffer = new ArrayList<>();
-        private final List<WordRecord> endBuffer = new ArrayList<>();
+        private final Set<String> beginBuffer = new LinkedHashSet<>();
+        private final Set<String> midBuffer = new LinkedHashSet<>();
+        private final Set<String> endBuffer = new LinkedHashSet<>();
 
         private final List<Path> beginChunks = new ArrayList<>();
         private final List<Path> midChunks = new ArrayList<>();
@@ -607,7 +693,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
             this.tempDir = Files.createTempDirectory("hunspell-compounds-");
         }
 
-        void add(String word, Set<String> sourceFlags) throws IOException {
+        synchronized void add(String word, Set<String> sourceFlags) throws IOException {
             if (word == null || word.isEmpty()) {
                 return;
             }
@@ -615,6 +701,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
                 return;
             }
 
+            String record = serializeWordRecord(word, sourceFlags);
             boolean onlyInCompound = sourceFlags != null && model.onlyInCompoundFlag != null && sourceFlags.contains(model.onlyInCompoundFlag);
             boolean isBegin = sourceFlags != null && (
                 (model.compoundBeginFlag != null && sourceFlags.contains(model.compoundBeginFlag)) ||
@@ -630,31 +717,34 @@ public class HunspellFiniteWordListAppfixed extends Application {
             );
 
             if (isBegin) {
-                beginBuffer.add(new WordRecord(word, sourceFlags));
-                beginCount++;
+                if (beginBuffer.add(record)) {
+                    beginCount++;
+                }
                 if (beginBuffer.size() >= CHUNK_LIMIT) {
                     flush(beginBuffer, beginChunks, "begin");
                 }
             }
 
             if (isMid) {
-                midBuffer.add(new WordRecord(word, sourceFlags));
-                midCount++;
+                if (midBuffer.add(record)) {
+                    midCount++;
+                }
                 if (midBuffer.size() >= CHUNK_LIMIT) {
                     flush(midBuffer, midChunks, "mid");
                 }
             }
 
             if (isEnd || onlyInCompound) {
-                endBuffer.add(new WordRecord(word, sourceFlags));
-                endCount++;
+                if (endBuffer.add(record)) {
+                    endCount++;
+                }
                 if (endBuffer.size() >= CHUNK_LIMIT) {
                     flush(endBuffer, endChunks, "end");
                 }
             }
         }
 
-        void finish() throws IOException {
+        synchronized void finish() throws IOException {
             if (finished) {
                 return;
             }
@@ -664,39 +754,39 @@ public class HunspellFiniteWordListAppfixed extends Application {
             finished = true;
         }
 
-        List<Path> beginChunks() {
-            return beginChunks;
+        synchronized List<Path> beginChunks() {
+            return new ArrayList<>(beginChunks);
         }
 
-        List<Path> midChunks() {
-            return midChunks;
+        synchronized List<Path> midChunks() {
+            return new ArrayList<>(midChunks);
         }
 
-        List<Path> endChunks() {
-            return endChunks;
+        synchronized List<Path> endChunks() {
+            return new ArrayList<>(endChunks);
         }
 
-        long beginCount() {
+        synchronized long beginCount() {
             return beginCount;
         }
 
-        long midCount() {
+        synchronized long midCount() {
             return midCount;
         }
 
-        long endCount() {
+        synchronized long endCount() {
             return endCount;
         }
 
-        private void flush(List<WordRecord> buffer, List<Path> chunks, String label) throws IOException {
+        private void flush(Set<String> buffer, List<Path> chunks, String label) throws IOException {
             if (buffer.isEmpty()) {
                 return;
             }
 
             Path chunk = Files.createTempFile(tempDir, label + "-", ".txt");
             try (BufferedWriter writer = Files.newBufferedWriter(chunk, StandardCharsets.UTF_8)) {
-                for (WordRecord wr : buffer) {
-                    writer.write(serializeWordRecord(wr.word, wr.sourceFlags));
+                for (String record : buffer) {
+                    writer.write(record);
                     writer.newLine();
                 }
             }
@@ -705,7 +795,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
         }
 
         @Override
-        public void close() {
+        public synchronized void close() {
             try {
                 if (Files.exists(tempDir)) {
                     try (java.util.stream.Stream<Path> stream = Files.walk(tempDir)) {
@@ -735,34 +825,34 @@ public class HunspellFiniteWordListAppfixed extends Application {
             tempDir = Files.createTempDirectory("hunspell-expand-");
         }
 
-        boolean add(String word, int maxWords) throws IOException {
+        synchronized boolean add(String word, int maxWords) throws IOException {
             if (word == null || word.isEmpty()) {
-                return uniqueCount < maxWords;
+                return true;
             }
-            if (uniqueCount >= maxWords) {
+            if (maxWords > 0 && uniqueCount >= maxWords) {
                 return false;
             }
             if (!buffer.add(word)) {
                 return true;
             }
 
-            if (buffer.size() >= CHUNK_LIMIT || uniqueCount + buffer.size() >= maxWords) {
+            if (buffer.size() >= CHUNK_LIMIT || (maxWords > 0 && uniqueCount + buffer.size() >= maxWords)) {
                 flushBuffer();
-                return uniqueCount < maxWords;
+                return maxWords <= 0 || uniqueCount < maxWords;
             }
             return true;
         }
 
-        long getFinalCount() {
+        synchronized long getFinalCount() {
             return uniqueCount + buffer.size();
         }
 
-        void finishTo(Path outPath) throws IOException {
+        synchronized void finishTo(Path outPath) throws IOException {
             flushBuffer();
             writeWordListFromSortedFile(outPath, sortedFile, uniqueCount);
         }
 
-        private void flushBuffer() throws IOException {
+        private synchronized void flushBuffer() throws IOException {
             if (buffer.isEmpty()) {
                 return;
             }
@@ -785,7 +875,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
         }
 
         @Override
-        public void close() {
+        public synchronized void close() {
             try {
                 if (sortedFile != null) {
                     Files.deleteIfExists(sortedFile);
@@ -969,7 +1059,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
             ProgressReporter progressOrNull,
             BooleanSupplier cancelled) {
 
-        if (maxWords <= 0 || candidates.isEmpty()) {
+        if (candidates.isEmpty()) {
             return;
         }
 
@@ -1023,7 +1113,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
 
                 if (output.add(c2)) {
                     added++;
-                    if (added >= maxWords) {
+                    if (maxWords > 0 && added >= maxWords) {
                         return;
                     }
                 }
@@ -1075,7 +1165,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
 
                         if (output.add(c3)) {
                             added++;
-                            if (added >= maxWords) {
+                            if (maxWords > 0 && added >= maxWords) {
                                 return;
                             }
                         }
@@ -1102,30 +1192,29 @@ public class HunspellFiniteWordListAppfixed extends Application {
             ProgressReporter progressOrNull,
             BooleanSupplier cancelled) {
 
-        if (maxWords <= 0 || targetWords.isEmpty()) {
+        if (targetWords.isEmpty()) {
             return;
         }
 
         int added = 0;
+        List<WordRecord> targetBegins = filterTargetCandidates(candidates.begin, targetWords);
+        List<WordRecord> targetMids = filterTargetCandidates(candidates.mid, targetWords);
+        List<WordRecord> targetEnds = filterTargetCandidates(candidates.end, targetWords);
 
         // Two-part: target as beginning.
-        for (WordRecord b : candidates.begin) {
-            if (!targetWords.contains(b.word)) {
-                continue;
-            }
-
+        for (WordRecord b : targetBegins) {
             for (WordRecord e : candidates.end) {
                 if (cancelled != null && cancelled.getAsBoolean()) {
                     return;
                 }
 
-                if (!matchesCompoundRule(model, List.of(b, e))) {
+                if (!matchesCompoundRule(model, b, e)) {
                     continue;
                 }
 
                 String c = b.word + e.word;
 
-                if (isLegalCompound(model, List.of(b.word, e.word), c)
+                if (isLegalCompound(model, b.word, e.word, c)
                         && output.add(c)) {
 
                     added++;
@@ -1136,7 +1225,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
                         );
                     }
 
-                    if (added >= maxWords) {
+                    if (maxWords > 0 && added >= maxWords) {
                         return;
                     }
                 }
@@ -1145,26 +1234,22 @@ public class HunspellFiniteWordListAppfixed extends Application {
 
         // Two-part: target as ending.
         for (WordRecord b : candidates.begin) {
-            for (WordRecord e : candidates.end) {
+            for (WordRecord e : targetEnds) {
                 if (cancelled != null && cancelled.getAsBoolean()) {
                     return;
                 }
 
-                if (!targetWords.contains(e.word)) {
-                    continue;
-                }
-
-                if (!matchesCompoundRule(model, List.of(b, e))) {
+                if (!matchesCompoundRule(model, b, e)) {
                     continue;
                 }
 
                 String c = b.word + e.word;
 
-                if (isLegalCompound(model, List.of(b.word, e.word), c)
+                if (isLegalCompound(model, b.word, e.word, c)
                         && output.add(c)) {
 
                     added++;
-                    if (added >= maxWords) {
+                    if (maxWords > 0 && added >= maxWords) {
                         return;
                     }
                 }
@@ -1176,31 +1261,24 @@ public class HunspellFiniteWordListAppfixed extends Application {
         }
 
         // Three-part: target as beginning.
-        for (WordRecord b : candidates.begin) {
-            if (!targetWords.contains(b.word)) {
-                continue;
-            }
-
+        for (WordRecord b : targetBegins) {
             for (WordRecord m : candidates.mid) {
                 for (WordRecord e : candidates.end) {
                     if (cancelled != null && cancelled.getAsBoolean()) {
                         return;
                     }
 
-                    if (!matchesCompoundRule(model, List.of(b, m, e))) {
+                    if (!matchesCompoundRule(model, b, m, e)) {
                         continue;
                     }
 
                     String c = b.word + m.word + e.word;
 
-                    if (isLegalCompound(
-                            model,
-                            List.of(b.word, m.word, e.word),
-                            c)
+                    if (isLegalCompound(model, b.word, m.word, e.word, c)
                             && output.add(c)) {
 
                         added++;
-                        if (added >= maxWords) {
+                        if (maxWords > 0 && added >= maxWords) {
                             return;
                         }
                     }
@@ -1210,30 +1288,23 @@ public class HunspellFiniteWordListAppfixed extends Application {
 
         // Three-part: target as middle.
         for (WordRecord b : candidates.begin) {
-            for (WordRecord m : candidates.mid) {
-                if (!targetWords.contains(m.word)) {
-                    continue;
-                }
-
+            for (WordRecord m : targetMids) {
                 for (WordRecord e : candidates.end) {
                     if (cancelled != null && cancelled.getAsBoolean()) {
                         return;
                     }
 
-                    if (!matchesCompoundRule(model, List.of(b, m, e))) {
+                    if (!matchesCompoundRule(model, b, m, e)) {
                         continue;
                     }
 
                     String c = b.word + m.word + e.word;
 
-                    if (isLegalCompound(
-                            model,
-                            List.of(b.word, m.word, e.word),
-                            c)
+                    if (isLegalCompound(model, b.word, m.word, e.word, c)
                             && output.add(c)) {
 
                         added++;
-                        if (added >= maxWords) {
+                        if (maxWords > 0 && added >= maxWords) {
                             return;
                         }
                     }
@@ -1244,35 +1315,41 @@ public class HunspellFiniteWordListAppfixed extends Application {
         // Three-part: target as ending.
         for (WordRecord b : candidates.begin) {
             for (WordRecord m : candidates.mid) {
-                for (WordRecord e : candidates.end) {
+                for (WordRecord e : targetEnds) {
                     if (cancelled != null && cancelled.getAsBoolean()) {
                         return;
                     }
 
-                    if (!targetWords.contains(e.word)) {
-                        continue;
-                    }
-
-                    if (!matchesCompoundRule(model, List.of(b, m, e))) {
+                    if (!matchesCompoundRule(model, b, m, e)) {
                         continue;
                     }
 
                     String c = b.word + m.word + e.word;
 
-                    if (isLegalCompound(
-                            model,
-                            List.of(b.word, m.word, e.word),
-                            c)
+                    if (isLegalCompound(model, b.word, m.word, e.word, c)
                             && output.add(c)) {
 
                         added++;
-                        if (added >= maxWords) {
+                        if (maxWords > 0 && added >= maxWords) {
                             return;
                         }
                     }
                 }
             }
         }
+    }
+
+    private static List<WordRecord> filterTargetCandidates(List<WordRecord> source, Set<String> targetWords) {
+        if (source.isEmpty() || targetWords.isEmpty()) {
+            return Collections.emptyList();
+        }
+        List<WordRecord> out = new ArrayList<>();
+        for (WordRecord wr : source) {
+            if (wr.word != null && targetWords.contains(wr.word)) {
+                out.add(wr);
+            }
+        }
+        return out;
     }
 
     private static boolean isLegalCompound(HunspellModel model, List<String> parts, String fullWord) {
@@ -1304,6 +1381,58 @@ public class HunspellFiniteWordListAppfixed extends Application {
         return true;
     }
 
+    private static boolean isLegalCompound(HunspellModel model, String left, String right, String fullWord) {
+        if (fullWord == null || fullWord.isEmpty()) {
+            return false;
+        }
+        if (model.forbiddenWords.contains(fullWord)) {
+            return false;
+        }
+        if (countWordChars(left, model.wordChars) < model.compoundMin) {
+            return false;
+        }
+        if (countWordChars(right, model.wordChars) < model.compoundMin) {
+            return false;
+        }
+        for (CheckCompoundPattern p : model.checkCompoundPatterns) {
+            if (p.blocks(left, right)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean isLegalCompound(HunspellModel model, String left, String middle, String right, String fullWord) {
+        if (fullWord == null || fullWord.isEmpty()) {
+            return false;
+        }
+        if (model.forbiddenWords.contains(fullWord)) {
+            return false;
+        }
+        if (countWordChars(left, model.wordChars) < model.compoundMin) {
+            return false;
+        }
+        if (countWordChars(middle, model.wordChars) < model.compoundMin) {
+            return false;
+        }
+        if (countWordChars(right, model.wordChars) < model.compoundMin) {
+            return false;
+        }
+        if (isBlockedByPatterns(model, left, middle) || isBlockedByPatterns(model, middle, right)) {
+            return false;
+        }
+        return true;
+    }
+
+    private static boolean isBlockedByPatterns(HunspellModel model, String left, String right) {
+        for (CheckCompoundPattern p : model.checkCompoundPatterns) {
+            if (p.blocks(left, right)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private static boolean matchesCompoundRule(HunspellModel model, List<WordRecord> parts) {
         if (model.compoundRules.isEmpty()) {
             return true;
@@ -1321,6 +1450,33 @@ public class HunspellFiniteWordListAppfixed extends Application {
                 }
             }
             if (ok) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean matchesCompoundRule(HunspellModel model, WordRecord a, WordRecord b) {
+        if (model.compoundRules.isEmpty()) {
+            return true;
+        }
+        for (List<String> rule : model.compoundRules) {
+            if (rule.size() == 2 && a.hasFlag(rule.get(0)) && b.hasFlag(rule.get(1))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean matchesCompoundRule(HunspellModel model, WordRecord a, WordRecord b, WordRecord c) {
+        if (model.compoundRules.isEmpty()) {
+            return true;
+        }
+        for (List<String> rule : model.compoundRules) {
+            if (rule.size() == 3
+                && a.hasFlag(rule.get(0))
+                && b.hasFlag(rule.get(1))
+                && c.hasFlag(rule.get(2))) {
                 return true;
             }
         }
@@ -2002,10 +2158,6 @@ public class HunspellFiniteWordListAppfixed extends Application {
         ExternalUniqueWordStore output,
         ProgressReporter progressOrNull
     ) throws IOException {
-        if (maxWords <= 0) {
-            return;
-        }
-
         boolean hasCompoundDirectives =
             model.compoundFlag != null || model.compoundBeginFlag != null || model.compoundEndFlag != null;
         if (!hasCompoundDirectives) {
