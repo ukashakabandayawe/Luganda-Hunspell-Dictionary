@@ -18,12 +18,14 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -39,6 +41,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -54,6 +57,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
     private final TextField affField = new TextField();
     private final TextField dicField = new TextField();
     private final TextField outField = new TextField();
+    private final TextField tempField = new TextField();
     private final TextField stemField = new TextField();
 
     private final Spinner<Integer> maxCompoundPartsSpinner =
@@ -82,6 +86,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
         affField.setPromptText("Path to .aff");
         dicField.setPromptText("Path to .dic");
         outField.setPromptText("Path to output .txt");
+        tempField.setPromptText("Temp folder (optional)");
         stemField.setPromptText("Type root/stem from dictionary");
 
         maxCompoundPartsSpinner.setEditable(true);
@@ -92,12 +97,14 @@ public class HunspellFiniteWordListAppfixed extends Application {
         Button pickAffBtn = new Button("Browse .aff");
         Button pickDicBtn = new Button("Browse .dic");
         Button pickOutBtn = new Button("Browse output");
+        Button pickTempBtn = new Button("Browse temp");
         Button runBtn = new Button("Expand to TXT");
         Button inspectBtn = new Button("Inspect Stem");
 
         pickAffBtn.setOnAction(e -> chooseFile(stage, affField, "AFF Files", "*.aff"));
         pickDicBtn.setOnAction(e -> chooseFile(stage, dicField, "DIC Files", "*.dic"));
         pickOutBtn.setOnAction(e -> chooseSave(stage));
+        pickTempBtn.setOnAction(e -> chooseDirectory(stage, tempField));
 
         runBtn.setOnAction(e -> runExpansion());
         inspectBtn.setOnAction(e -> inspectStem());
@@ -114,10 +121,14 @@ public class HunspellFiniteWordListAppfixed extends Application {
         fileGrid.add(new Label("Output TXT"), 0, 2);
         fileGrid.add(outField, 1, 2);
         fileGrid.add(pickOutBtn, 2, 2);
+        fileGrid.add(new Label("Temp Dir"), 0, 3);
+        fileGrid.add(tempField, 1, 3);
+        fileGrid.add(pickTempBtn, 2, 3);
 
         GridPane.setHgrow(affField, Priority.ALWAYS);
         GridPane.setHgrow(dicField, Priority.ALWAYS);
         GridPane.setHgrow(outField, Priority.ALWAYS);
+        GridPane.setHgrow(tempField, Priority.ALWAYS);
 
         HBox options = new HBox(10,
             new Label("Max compound parts:"), maxCompoundPartsSpinner,
@@ -167,6 +178,9 @@ public class HunspellFiniteWordListAppfixed extends Application {
         }
         if (outField.getText().isBlank()) {
             outField.setText(cwd.resolve("expanded_words.txt").toString());
+        }
+        if (tempField.getText().isBlank()) {
+            tempField.setText(Paths.get(System.getProperty("java.io.tmpdir")).toAbsolutePath().toString());
         }
     }
 
@@ -324,6 +338,62 @@ public class HunspellFiniteWordListAppfixed extends Application {
         }
     }
 
+    private void chooseDirectory(Stage stage, TextField target) {
+        DirectoryChooser chooser = new DirectoryChooser();
+        if (!target.getText().isBlank()) {
+            Path p = safePath(target.getText());
+            if (p != null && Files.exists(p) && Files.isDirectory(p)) {
+                chooser.setInitialDirectory(p.toFile());
+            }
+        }
+        java.io.File f = chooser.showDialog(stage);
+        if (f != null) {
+            target.setText(f.toPath().toAbsolutePath().toString());
+        }
+    }
+
+    private static Path resolveTempRoot(String raw) {
+        if (raw == null || raw.isBlank()) {
+            return Paths.get(System.getProperty("java.io.tmpdir")).toAbsolutePath().normalize();
+        }
+        Path p = safePath(raw);
+        return p == null ? null : p.toAbsolutePath().normalize();
+    }
+
+    private static boolean ensureWritableDirectory(Path dir) {
+        if (dir == null) {
+            return false;
+        }
+        try {
+            Files.createDirectories(dir);
+            Path probe = Files.createTempFile(dir, "probe-", ".tmp");
+            Files.deleteIfExists(probe);
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
+    private void logSpace(String label, Path dir) {
+        try {
+            long usable = Files.getFileStore(dir).getUsableSpace();
+            log(label + " usable space: " + humanBytes(usable));
+        } catch (IOException e) {
+            log(label + " usable space: unavailable");
+        }
+    }
+
+    private static String humanBytes(long bytes) {
+        double value = bytes;
+        String[] units = {"B", "KB", "MB", "GB", "TB"};
+        int unit = 0;
+        while (value >= 1024.0 && unit < units.length - 1) {
+            value /= 1024.0;
+            unit++;
+        }
+        return String.format(Locale.ROOT, "%.1f %s", value, units[unit]);
+    }
+
     private void runExpansion() {
         if (!busy.compareAndSet(false, true)) {
             showWarn("A task is already running.");
@@ -333,11 +403,30 @@ public class HunspellFiniteWordListAppfixed extends Application {
         Path affPath = safePath(affField.getText());
         Path dicPath = safePath(dicField.getText());
         Path outPath = safePath(outField.getText());
+        Path tempRoot = resolveTempRoot(tempField.getText());
 
-        if (affPath == null || dicPath == null || outPath == null) {
+        if (affPath == null || dicPath == null || outPath == null || tempRoot == null) {
             busy.set(false);
-            showWarn("Please provide valid AFF, DIC and output paths.");
+            showWarn("Please provide valid AFF, DIC, temp and output paths.");
             return;
+        }
+
+        if (!ensureWritableDirectory(tempRoot)) {
+            busy.set(false);
+            showError("Temp folder is not writable: " + tempRoot);
+            return;
+        }
+
+        Path outParent = outPath.toAbsolutePath().getParent();
+        if (outParent != null && !ensureWritableDirectory(outParent)) {
+            busy.set(false);
+            showError("Output folder is not writable: " + outParent);
+            return;
+        }
+
+        logSpace("Temp", tempRoot);
+        if (outParent != null) {
+            logSpace("Output", outParent);
         }
 
         int maxParts = maxCompoundPartsSpinner.getValue();
@@ -354,8 +443,8 @@ public class HunspellFiniteWordListAppfixed extends Application {
                 log("Loaded AFF rules: " + model.affixRulesByFlag.size() + " flags");
                 log("Loaded DIC entries: " + model.entries.size());
 
-                try (ExternalUniqueWordStore wordStore = new ExternalUniqueWordStore();
-                     ExternalCompoundCandidateStore candidateStore = new ExternalCompoundCandidateStore(model)) {
+                try (ExternalUniqueWordStore wordStore = new ExternalUniqueWordStore(tempRoot);
+                     ExternalCompoundCandidateStore candidateStore = new ExternalCompoundCandidateStore(model, tempRoot)) {
                     int total = model.entries.size();
                     int workerCount = Math.max(2, Math.min(Runtime.getRuntime().availableProcessors(), 4));
                     int batchSize = Math.max(32, total / (workerCount * 16));
@@ -392,8 +481,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
                                                     return;
                                                 }
                                             } catch (IOException e) {
-                                                // TODO Auto-generated catch block
-                                                e.printStackTrace();
+                                                throw new UncheckedIOException(e);
                                             }
                                         }
                                     }
@@ -405,8 +493,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
                                         try {
                                             candidateStore.add(form, entry.flags);
                                         } catch (IOException e) {
-                                            // TODO Auto-generated catch block
-                                            e.printStackTrace();
+                                            throw new UncheckedIOException(e);
                                         }
                                         generatedFormsCount.incrementAndGet();
                                     }
@@ -487,8 +574,9 @@ public class HunspellFiniteWordListAppfixed extends Application {
         task.setOnFailed(e -> {
             busy.set(false);
             Throwable ex = task.getException();
-            log("ERROR: " + (ex == null ? "Unknown" : ex.getMessage()));
-            showError(ex == null ? "Unknown error" : ex.toString());
+            String message = formatTaskFailure(ex, tempRoot, outParent);
+            log("ERROR: " + message);
+            showError(message);
         });
         task.setOnCancelled(e -> busy.set(false));
 
@@ -688,9 +776,9 @@ public class HunspellFiniteWordListAppfixed extends Application {
         private long endCount;
         private boolean finished;
 
-        ExternalCompoundCandidateStore(HunspellModel model) throws IOException {
+        ExternalCompoundCandidateStore(HunspellModel model, Path tempRoot) throws IOException {
             this.model = model;
-            this.tempDir = Files.createTempDirectory("hunspell-compounds-");
+            this.tempDir = Files.createTempDirectory(tempRoot, "hunspell-compounds-");
         }
 
         synchronized void add(String word, Set<String> sourceFlags) throws IOException {
@@ -821,8 +909,8 @@ public class HunspellFiniteWordListAppfixed extends Application {
         private Path sortedFile;
         private long uniqueCount;
 
-        ExternalUniqueWordStore() throws IOException {
-            tempDir = Files.createTempDirectory("hunspell-expand-");
+        ExternalUniqueWordStore(Path tempRoot) throws IOException {
+            tempDir = Files.createTempDirectory(tempRoot, "hunspell-expand-");
         }
 
         synchronized boolean add(String word, int maxWords) throws IOException {
@@ -936,6 +1024,46 @@ public class HunspellFiniteWordListAppfixed extends Application {
         Alert alert = new Alert(Alert.AlertType.ERROR, msg, ButtonType.OK);
         alert.setHeaderText(null);
         alert.showAndWait();
+    }
+
+    private static String formatTaskFailure(Throwable ex, Path tempRoot, Path outParent) {
+        if (ex == null) {
+            return "Unknown error";
+        }
+
+        if (isStorageExhaustion(ex)) {
+            StringBuilder sb = new StringBuilder();
+            sb.append("Storage ran out while expanding the dictionary.");
+            if (tempRoot != null) {
+                sb.append(" Temp folder: ").append(tempRoot);
+            }
+            if (outParent != null) {
+                sb.append(" Output folder: ").append(outParent);
+            }
+            sb.append(" Please move temp and/or output to a drive with more free space.");
+            return sb.toString();
+        }
+
+        return ex.getMessage() == null ? ex.toString() : ex.getMessage();
+    }
+
+    private static boolean isStorageExhaustion(Throwable ex) {
+        Throwable cur = ex;
+        while (cur != null) {
+            String msg = cur.getMessage();
+            if (msg != null) {
+                String lower = msg.toLowerCase(Locale.ROOT);
+                if (lower.contains("no space left")
+                    || lower.contains("not enough space on the disk")
+                    || lower.contains("there is not enough space")
+                    || lower.contains("disk full")
+                    || lower.contains("space on the device")) {
+                    return true;
+                }
+            }
+            cur = cur.getCause();
+        }
+        return false;
     }
 
     private static Path safePath(String raw) {
