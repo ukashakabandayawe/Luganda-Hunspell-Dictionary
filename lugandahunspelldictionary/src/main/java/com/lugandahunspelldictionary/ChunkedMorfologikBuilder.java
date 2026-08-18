@@ -11,7 +11,6 @@ import java.util.*;
 public class ChunkedMorfologikBuilder {
 
     // 2 million lines per chunk.
-    // Start conservatively because the PC has 16 GB RAM.
     private static final int CHUNK_SIZE = 2_000_000;
 
     // Number of files merged at once.
@@ -22,19 +21,9 @@ public class ChunkedMorfologikBuilder {
 
     public static void main(String[] args) throws Exception {
 
-        if (args.length != 3) {
-            System.err.println(
-                "Usage:"
-            );
-            System.err.println(
-                "java ChunkedMorfologikBuilder <input> <output> <tempDir>"
-            );
-            System.exit(1);
-        }
-
-        Path input = Paths.get(args[0]);
-        Path output = Paths.get(args[1]);
-        Path tempDir = Paths.get(args[2]);
+        Path input = resolvePathArg(args, 0, "input");
+        Path output = resolvePathArg(args, 1, "output");
+        Path tempDir = resolvePathArg(args, 2, "tempDir");
 
         Files.createDirectories(tempDir);
 
@@ -122,6 +111,55 @@ public class ChunkedMorfologikBuilder {
 
             throw t;
         }
+    }
+
+    private static Path resolvePathArg(
+            String[] args,
+            int index,
+            String label) {
+
+        if (index < args.length && !args[index].isBlank()) {
+            return Paths.get(args[index]);
+        }
+
+        Console console = System.console();
+        String prompt = "Enter " + label + " path: ";
+
+        if (console != null) {
+            while (true) {
+                String value = console.readLine(prompt);
+                if (value != null && !value.isBlank()) {
+                    return Paths.get(value.trim());
+                }
+                console.printf("Please enter a non-empty %s path.%n", label);
+            }
+        }
+
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print(prompt);
+            System.out.flush();
+
+            if (!scanner.hasNextLine()) {
+                break;
+            }
+
+            String value = scanner.nextLine();
+            if (!value.isBlank()) {
+                return Paths.get(value.trim());
+            }
+
+            System.out.printf(
+                Locale.ROOT,
+                "Please enter a non-empty %s path.%n",
+                label
+            );
+        }
+
+        throw new IllegalArgumentException(
+            "Missing required path argument: " + label
+        );
     }
 
     private static List<Path> createChunks(
