@@ -40,7 +40,6 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.TreeSet;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.*;
 import java.util.regex.Matcher;
@@ -145,7 +144,7 @@ public class HunspellFiniteWordListAppfixed extends Application {
         VBox.setVgrow(logArea, Priority.ALWAYS);
         VBox.setVgrow(inspectArea, Priority.ALWAYS);
 
-        stage.setScene(new Scene(root, 1100, 760));
+        stage.setScene(new Scene(root, 800, 600));
         stage.show();
 
         // Convenient default paths if user opens from this repo root.
@@ -350,64 +349,83 @@ public class HunspellFiniteWordListAppfixed extends Application {
                 log("Loaded AFF rules: " + model.affixRulesByFlag.size() + " flags");
                 log("Loaded DIC entries: " + model.entries.size());
 
-                LinkedHashSet<String> words = new LinkedHashSet<>();
-                List<WordRecord> candidatesForCompounds = new ArrayList<>();
+                try (ExternalUniqueWordStore wordStore = new ExternalUniqueWordStore();
+                     ExternalCompoundCandidateStore candidateStore = new ExternalCompoundCandidateStore(model)) {
+                    int total = model.entries.size();
+                    int idx = 0;
+                    boolean limitReached = false;
+                    long generatedForms = 0;
+                    long lastUiUpdate = 0L;
 
-                int total = model.entries.size();
-                int idx = 0;
-                for (DicEntry entry : model.entries) {
-                    if (isCancelled()) {
-                        break;
-                    }
-                    idx++;
+                    for (DicEntry entry : model.entries) {
+                        if (isCancelled()) {
+                            break;
+                        }
+                        idx++;
 
-                    Set<String> forms = generateAffixedForms(entry, model);
-                    if (!entry.hasFlag(model.onlyInCompoundFlag)) {
-                        words.addAll(forms);
+                        Set<String> forms = generateAffixedForms(entry, model);
+                        if (!entry.hasFlag(model.onlyInCompoundFlag)) {
+                            for (String form : forms) {
+                                if (!wordStore.add(form, maxWords)) {
+                                    limitReached = true;
+                                    break;
+                                }
+                            }
+                        }
+
+                        for (String form : forms) {
+                            candidateStore.add(form, entry.flags);
+                            generatedForms++;
+                        }
+
+                        long now = System.currentTimeMillis();
+                        if (now - lastUiUpdate >= 500 || idx == total) {
+                            lastUiUpdate = now;
+                            updateProgress(idx, Math.max(total, 1));
+                            updateMessage(
+                                "Expanding affixes: "
+                                    + idx + "/"
+                                    + total
+                                    + " | forms: "
+                                    + generatedForms
+                            );
+                        }
+
+                        if (limitReached) {
+                            log("Max output words reached while building affixed forms. Stopping early.");
+                            break;
+                        }
                     }
 
-                    for (String form : forms) {
-                        candidatesForCompounds.add(new WordRecord(form, entry.flags));
+                    candidateStore.finish();
+
+                    if (!limitReached && !isCancelled()) {
+                        updateMessage("Building compounds...");
+                        generateCompounds(
+                            model,
+                            candidateStore,
+                            maxParts,
+                            maxWords,
+                            wordStore,
+                            (done, ttl, message) -> {
+                                updateProgress(done, ttl);
+                                updateMessage(message);
+                            }
+                        );
                     }
 
-                    if (idx % 200 == 0 || idx == total) {
-                        updateProgress(idx, Math.max(total, 1));
-                        updateMessage("Expanding affixes: " + idx + "/" + total);
-                    }
+                    updateMessage("Sorting and writing output...");
+                    wordStore.finishTo(outPath);
 
-                    if (words.size() >= maxWords) {
-                        log("Max output words reached while building affixed forms. Stopping early.");
-                        break;
-                    }
+                    long dt = System.currentTimeMillis() - t0;
+                    updateProgress(1, 1);
+                    updateMessage("Done");
+
+                    log("Final words: " + wordStore.getFinalCount());
+                    log("Output: " + outPath.toAbsolutePath());
+                    log("Elapsed: " + dt + " ms");
+                    return null;
                 }
-
-                updateMessage("Building compounds...");
-                Set<String> compounds = generateCompounds(
-                    model,
-                    candidatesForCompounds,
-                    maxParts,
-                    maxWords - words.size(),
-                    (done, ttl, message) -> {
-                        updateProgress(done, total);
-                        updateMessage(message);
-                    }
-                );
-                words.addAll(compounds);
-
-                updateMessage("Sorting and writing output...");
-                List<String> sorted = new ArrayList<>(words);
-                sorted.sort(Comparator.naturalOrder());
-
-                writeWordList(outPath, sorted);
-
-                long dt = System.currentTimeMillis() - t0;
-                updateProgress(1, 1);
-                updateMessage("Done");
-
-                log("Final words: " + sorted.size());
-                log("Output: " + outPath.toAbsolutePath());
-                log("Elapsed: " + dt + " ms");
-                return null;
             }
         };
 
@@ -426,29 +444,6 @@ public class HunspellFiniteWordListAppfixed extends Application {
         thread.start();
     }
 
-    private static void writeWordList(Path outPath, List<String> words) throws IOException {
-        if (outPath.getParent() != null) {
-            Files.createDirectories(outPath.getParent());
-        }
-
-        try (BufferedWriter bw = Files.newBufferedWriter(
-                outPath, StandardCharsets.UTF_8)) {
-            bw.write(Integer.toString(words.size()));
-            bw.newLine();
-
-            for (String w : words) {
-                bw.write(w);
-                bw.newLine();
-            }
-        }
-    }
-
-    private static List<String> sortedWords(Set<String> words) {
-        List<String> sorted = new ArrayList<>(words);
-        sorted.sort(Comparator.naturalOrder());
-        return sorted;
-    }
-
     private static void appendLimited(StringBuilder sb, List<String> items, int limit) {
         int n = Math.min(items.size(), limit);
         for (int i = 0; i < n; i++) {
@@ -456,6 +451,361 @@ public class HunspellFiniteWordListAppfixed extends Application {
         }
         if (items.size() > limit) {
             sb.append("... truncated, showing ").append(limit).append(" of ").append(items.size()).append("\n");
+        }
+    }
+
+    private static String serializeWordRecord(String word, Set<String> sourceFlags) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(word == null ? "" : word);
+        sb.append('\t');
+
+        if (sourceFlags != null && !sourceFlags.isEmpty()) {
+            List<String> flags = new ArrayList<>(sourceFlags);
+            Collections.sort(flags);
+            for (int i = 0; i < flags.size(); i++) {
+                if (i > 0) {
+                    sb.append(',');
+                }
+                sb.append(flags.get(i));
+            }
+        }
+        return sb.toString();
+    }
+
+    private static WordRecord deserializeWordRecord(String line) {
+        if (line == null) {
+            return new WordRecord("", Collections.emptySet());
+        }
+
+        int tab = line.indexOf('\t');
+        String word = tab >= 0 ? line.substring(0, tab) : line;
+        String flagsRaw = tab >= 0 ? line.substring(tab + 1) : "";
+
+        if (flagsRaw.isBlank()) {
+            return new WordRecord(word, Collections.emptySet());
+        }
+
+        LinkedHashSet<String> flags = new LinkedHashSet<>();
+        for (String part : flagsRaw.split(",")) {
+            String flag = part.trim();
+            if (!flag.isEmpty()) {
+                flags.add(flag);
+            }
+        }
+        return new WordRecord(word, flags);
+    }
+
+    private static void writeWordListFromSortedFile(Path outPath, Path sortedWordsFile, long count)
+            throws IOException {
+        if (outPath.getParent() != null) {
+            Files.createDirectories(outPath.getParent());
+        }
+
+        try (BufferedWriter bw = Files.newBufferedWriter(outPath, StandardCharsets.UTF_8);
+             BufferedReader br = sortedWordsFile == null ? null : Files.newBufferedReader(sortedWordsFile, StandardCharsets.UTF_8)) {
+            bw.write(Long.toString(count));
+            bw.newLine();
+
+            if (br == null) {
+                return;
+            }
+
+            String line;
+            while ((line = br.readLine()) != null) {
+                bw.write(line);
+                bw.newLine();
+            }
+        }
+    }
+
+    private static long writeSortedUniqueChunk(Set<String> words, Path file) throws IOException {
+        List<String> sorted = new ArrayList<>(words);
+        sorted.sort(Comparator.naturalOrder());
+
+        long unique = 0;
+        try (BufferedWriter writer = Files.newBufferedWriter(file, StandardCharsets.UTF_8)) {
+            String previous = null;
+            for (String word : sorted) {
+                if (!word.equals(previous)) {
+                    writer.write(word);
+                    writer.newLine();
+                    previous = word;
+                    unique++;
+                }
+            }
+        }
+        return unique;
+    }
+
+    private static long mergeSortedUniqueFiles(Path left, Path right, Path output) throws IOException {
+        try (BufferedReader leftReader = Files.newBufferedReader(left, StandardCharsets.UTF_8);
+             BufferedReader rightReader = Files.newBufferedReader(right, StandardCharsets.UTF_8);
+             BufferedWriter writer = Files.newBufferedWriter(output, StandardCharsets.UTF_8)) {
+
+            String leftWord = leftReader.readLine();
+            String rightWord = rightReader.readLine();
+            String previous = null;
+            long count = 0;
+
+            while (leftWord != null || rightWord != null) {
+                String nextWord;
+                if (rightWord == null || (leftWord != null && leftWord.compareTo(rightWord) <= 0)) {
+                    nextWord = leftWord;
+                    leftWord = leftReader.readLine();
+                    if (rightWord != null && nextWord.equals(rightWord)) {
+                        rightWord = rightReader.readLine();
+                    }
+                } else {
+                    nextWord = rightWord;
+                    rightWord = rightReader.readLine();
+                }
+
+                if (!nextWord.equals(previous)) {
+                    writer.write(nextWord);
+                    writer.newLine();
+                    previous = nextWord;
+                    count++;
+                }
+            }
+
+            return count;
+        }
+    }
+
+    private static List<WordRecord> readWordRecordChunk(Path file) throws IOException {
+        List<WordRecord> out = new ArrayList<>();
+        try (BufferedReader br = Files.newBufferedReader(file, StandardCharsets.UTF_8)) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                out.add(deserializeWordRecord(line));
+            }
+        }
+        return out;
+    }
+
+    private static final class ExternalCompoundCandidateStore implements AutoCloseable {
+        private static final int CHUNK_LIMIT = 50_000;
+
+        private final Path tempDir;
+        private final HunspellModel model;
+
+        private final List<WordRecord> beginBuffer = new ArrayList<>();
+        private final List<WordRecord> midBuffer = new ArrayList<>();
+        private final List<WordRecord> endBuffer = new ArrayList<>();
+
+        private final List<Path> beginChunks = new ArrayList<>();
+        private final List<Path> midChunks = new ArrayList<>();
+        private final List<Path> endChunks = new ArrayList<>();
+
+        private long beginCount;
+        private long midCount;
+        private long endCount;
+        private boolean finished;
+
+        ExternalCompoundCandidateStore(HunspellModel model) throws IOException {
+            this.model = model;
+            this.tempDir = Files.createTempDirectory("hunspell-compounds-");
+        }
+
+        void add(String word, Set<String> sourceFlags) throws IOException {
+            if (word == null || word.isEmpty()) {
+                return;
+            }
+            if (countWordChars(word, model.wordChars) < model.compoundMin) {
+                return;
+            }
+
+            boolean onlyInCompound = sourceFlags != null && model.onlyInCompoundFlag != null && sourceFlags.contains(model.onlyInCompoundFlag);
+            boolean isBegin = sourceFlags != null && (
+                (model.compoundBeginFlag != null && sourceFlags.contains(model.compoundBeginFlag)) ||
+                (model.compoundFlag != null && sourceFlags.contains(model.compoundFlag))
+            );
+            boolean isEnd = sourceFlags != null && (
+                (model.compoundEndFlag != null && sourceFlags.contains(model.compoundEndFlag)) ||
+                (model.compoundFlag != null && sourceFlags.contains(model.compoundFlag))
+            );
+            boolean isMid = sourceFlags != null && (
+                (model.compoundFlag != null && sourceFlags.contains(model.compoundFlag)) ||
+                (model.compoundPermitFlag != null && sourceFlags.contains(model.compoundPermitFlag))
+            );
+
+            if (isBegin) {
+                beginBuffer.add(new WordRecord(word, sourceFlags));
+                beginCount++;
+                if (beginBuffer.size() >= CHUNK_LIMIT) {
+                    flush(beginBuffer, beginChunks, "begin");
+                }
+            }
+
+            if (isMid) {
+                midBuffer.add(new WordRecord(word, sourceFlags));
+                midCount++;
+                if (midBuffer.size() >= CHUNK_LIMIT) {
+                    flush(midBuffer, midChunks, "mid");
+                }
+            }
+
+            if (isEnd || onlyInCompound) {
+                endBuffer.add(new WordRecord(word, sourceFlags));
+                endCount++;
+                if (endBuffer.size() >= CHUNK_LIMIT) {
+                    flush(endBuffer, endChunks, "end");
+                }
+            }
+        }
+
+        void finish() throws IOException {
+            if (finished) {
+                return;
+            }
+            flush(beginBuffer, beginChunks, "begin");
+            flush(midBuffer, midChunks, "mid");
+            flush(endBuffer, endChunks, "end");
+            finished = true;
+        }
+
+        List<Path> beginChunks() {
+            return beginChunks;
+        }
+
+        List<Path> midChunks() {
+            return midChunks;
+        }
+
+        List<Path> endChunks() {
+            return endChunks;
+        }
+
+        long beginCount() {
+            return beginCount;
+        }
+
+        long midCount() {
+            return midCount;
+        }
+
+        long endCount() {
+            return endCount;
+        }
+
+        private void flush(List<WordRecord> buffer, List<Path> chunks, String label) throws IOException {
+            if (buffer.isEmpty()) {
+                return;
+            }
+
+            Path chunk = Files.createTempFile(tempDir, label + "-", ".txt");
+            try (BufferedWriter writer = Files.newBufferedWriter(chunk, StandardCharsets.UTF_8)) {
+                for (WordRecord wr : buffer) {
+                    writer.write(serializeWordRecord(wr.word, wr.sourceFlags));
+                    writer.newLine();
+                }
+            }
+            chunks.add(chunk);
+            buffer.clear();
+        }
+
+        @Override
+        public void close() {
+            try {
+                if (Files.exists(tempDir)) {
+                    try (java.util.stream.Stream<Path> stream = Files.walk(tempDir)) {
+                        stream.sorted(Comparator.reverseOrder()).forEach(path -> {
+                            try {
+                                Files.deleteIfExists(path);
+                            } catch (IOException ignored) {
+                            }
+                        });
+                    }
+                }
+            } catch (IOException ignored) {
+            }
+        }
+    }
+
+    private static final class ExternalUniqueWordStore implements AutoCloseable {
+        private static final int CHUNK_LIMIT = 50_000;
+
+        private final Path tempDir;
+        private final Set<String> buffer = new LinkedHashSet<>();
+
+        private Path sortedFile;
+        private long uniqueCount;
+
+        ExternalUniqueWordStore() throws IOException {
+            tempDir = Files.createTempDirectory("hunspell-expand-");
+        }
+
+        boolean add(String word, int maxWords) throws IOException {
+            if (word == null || word.isEmpty()) {
+                return uniqueCount < maxWords;
+            }
+            if (uniqueCount >= maxWords) {
+                return false;
+            }
+            if (!buffer.add(word)) {
+                return true;
+            }
+
+            if (buffer.size() >= CHUNK_LIMIT || uniqueCount + buffer.size() >= maxWords) {
+                flushBuffer();
+                return uniqueCount < maxWords;
+            }
+            return true;
+        }
+
+        long getFinalCount() {
+            return uniqueCount + buffer.size();
+        }
+
+        void finishTo(Path outPath) throws IOException {
+            flushBuffer();
+            writeWordListFromSortedFile(outPath, sortedFile, uniqueCount);
+        }
+
+        private void flushBuffer() throws IOException {
+            if (buffer.isEmpty()) {
+                return;
+            }
+
+            Path chunk = Files.createTempFile(tempDir, "chunk-", ".txt");
+            long chunkUnique = writeSortedUniqueChunk(buffer, chunk);
+            buffer.clear();
+
+            if (sortedFile == null) {
+                sortedFile = chunk;
+                uniqueCount = chunkUnique;
+                return;
+            }
+
+            Path merged = Files.createTempFile(tempDir, "merge-", ".txt");
+            uniqueCount = mergeSortedUniqueFiles(sortedFile, chunk, merged);
+            Files.deleteIfExists(sortedFile);
+            Files.deleteIfExists(chunk);
+            sortedFile = merged;
+        }
+
+        @Override
+        public void close() {
+            try {
+                if (sortedFile != null) {
+                    Files.deleteIfExists(sortedFile);
+                }
+            } catch (IOException ignored) {
+            }
+
+            try {
+                if (Files.exists(tempDir)) {
+                    try (java.util.stream.Stream<Path> stream = Files.walk(tempDir)) {
+                        stream.sorted(Comparator.reverseOrder()).forEach(path -> {
+                            try {
+                                Files.deleteIfExists(path);
+                            } catch (IOException ignored) {
+                            }
+                        });
+                    }
+                }
+            } catch (IOException ignored) {
+            }
         }
     }
 
@@ -1644,88 +1994,47 @@ public class HunspellFiniteWordListAppfixed extends Application {
         String t = s.trim();
         return "0".equals(t) ? "" : t;
     }
-    private static Set<String> generateCompounds(
+    private static void generateCompounds(
         HunspellModel model,
-        List<WordRecord> forms,
+        ExternalCompoundCandidateStore forms,
         int maxParts,
         int maxWords,
+        ExternalUniqueWordStore output,
         ProgressReporter progressOrNull
-    ) {
+    ) throws IOException {
         if (maxWords <= 0) {
-            return Collections.emptySet();
+            return;
         }
 
         boolean hasCompoundDirectives =
             model.compoundFlag != null || model.compoundBeginFlag != null || model.compoundEndFlag != null;
         if (!hasCompoundDirectives) {
-            return Collections.emptySet();
+            return;
         }
 
-        List<WordRecord> begin = new ArrayList<>();
-        List<WordRecord> mid = new ArrayList<>();
-        List<WordRecord> end = new ArrayList<>();
+        List<Path> beginChunks = forms.beginChunks();
+        List<Path> midChunks = forms.midChunks();
+        List<Path> endChunks = forms.endChunks();
 
-        for (WordRecord wr : forms) {
-            if (wr.word == null || wr.word.isEmpty()) {
-                continue;
-            }
-            if (countWordChars(wr.word, model.wordChars) < model.compoundMin) {
-                continue;
-            }
-            boolean onlyInCompound = wr.hasFlag(model.onlyInCompoundFlag);
-
-            boolean isBegin = wr.hasFlag(model.compoundBeginFlag) || wr.hasFlag(model.compoundFlag);
-            boolean isEnd = wr.hasFlag(model.compoundEndFlag) || wr.hasFlag(model.compoundFlag);
-            boolean isMid = wr.hasFlag(model.compoundFlag) || wr.hasFlag(model.compoundPermitFlag);
-
-            if (isBegin) {
-                begin.add(wr);
-            }
-            if (isMid) {
-                mid.add(wr);
-            }
-            if (isEnd || onlyInCompound) {
-                end.add(wr);
-            }
-        }
-
-        LinkedHashSet<String> compounds = new LinkedHashSet<>();
-        long totalPairs = (long) begin.size() * Math.max(1, end.size());
+        long totalPairs = forms.beginCount() * Math.max(1L, forms.endCount());
         long done = 0;
 
-        for (WordRecord b : begin) {
-            for (WordRecord e : end) {
-                done++;
-                if (progressOrNull != null && (done % 20000 == 0 || done == totalPairs)) {
-                    progressOrNull.report(done, Math.max(totalPairs, 1), "Compounding (2-part): " + done + "/" + totalPairs);
-                }
+        for (Path beginChunk : beginChunks) {
+            List<WordRecord> begin = readWordRecordChunk(beginChunk);
+            for (Path endChunk : endChunks) {
+                List<WordRecord> end = readWordRecordChunk(endChunk);
 
-                String c2 = b.word + e.word;
-                if (matchesCompoundRule(model, List.of(b, e)) && isLegalCompound(model, List.of(b.word, e.word), c2)) {
-                    compounds.add(c2);
-                    if (compounds.size() >= maxWords) {
-                        return compounds;
-                    }
-                }
-            }
-        }
-
-        if (maxParts >= 3 && !mid.isEmpty()) {
-            long totalTriples = (long) begin.size() * mid.size() * Math.max(1, end.size());
-            long d3 = 0;
-            for (WordRecord b : begin) {
-                for (WordRecord m : mid) {
+                for (WordRecord b : begin) {
                     for (WordRecord e : end) {
-                        d3++;
-                        if (progressOrNull != null && (d3 % 50000 == 0 || d3 == totalTriples)) {
-                            progressOrNull.report(d3, Math.max(totalTriples, 1), "Compounding (3-part): " + d3 + "/" + totalTriples);
+                        done++;
+                        if (progressOrNull != null && (done % 20000 == 0 || done == totalPairs)) {
+                            progressOrNull.report(done, Math.max(totalPairs, 1), "Compounding (2-part): " + done + "/" + totalPairs);
                         }
 
-                        String c3 = b.word + m.word + e.word;
-                        if (matchesCompoundRule(model, List.of(b, m, e)) && isLegalCompound(model, List.of(b.word, m.word, e.word), c3)) {
-                            compounds.add(c3);
-                            if (compounds.size() >= maxWords) {
-                                return compounds;
+                        String c2 = b.word + e.word;
+                        if (matchesCompoundRule(model, List.of(b, e)) && isLegalCompound(model, List.of(b.word, e.word), c2)) {
+                            if (!output.add(c2, maxWords)) {
+                                return;
                             }
                         }
                     }
@@ -1733,7 +2042,37 @@ public class HunspellFiniteWordListAppfixed extends Application {
             }
         }
 
-        return compounds;
+        if (maxParts >= 3 && !midChunks.isEmpty()) {
+            long totalTriples = forms.beginCount() * forms.midCount() * Math.max(1L, forms.endCount());
+            long d3 = 0;
+            for (Path beginChunk : beginChunks) {
+                List<WordRecord> begin = readWordRecordChunk(beginChunk);
+                for (Path midChunk : midChunks) {
+                    List<WordRecord> mid = readWordRecordChunk(midChunk);
+                    for (Path endChunk : endChunks) {
+                        List<WordRecord> end = readWordRecordChunk(endChunk);
+
+                        for (WordRecord b : begin) {
+                            for (WordRecord m : mid) {
+                                for (WordRecord e : end) {
+                                    d3++;
+                                    if (progressOrNull != null && (d3 % 50000 == 0 || d3 == totalTriples)) {
+                                        progressOrNull.report(d3, Math.max(totalTriples, 1), "Compounding (3-part): " + d3 + "/" + totalTriples);
+                                    }
+
+                                    String c3 = b.word + m.word + e.word;
+                                    if (matchesCompoundRule(model, List.of(b, m, e)) && isLegalCompound(model, List.of(b.word, m.word, e.word), c3)) {
+                                        if (!output.add(c3, maxWords)) {
+                                            return;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 }
