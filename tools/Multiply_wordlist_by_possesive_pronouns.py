@@ -3,6 +3,8 @@
 import os
 import sys
 import time
+import shutil
+
 
 # ============================================================
 # DESCRIPTION
@@ -44,12 +46,21 @@ PREFIXES = (
     "kw'",
     "g'",
     "tw'",
-    "n'"
+    "n'",
+    "ew'"
 )
 
 VOWELS = "aeiouAEIOU"
 
-BUFFER_SIZE = 1024 * 1024 * 16   # 16 MB
+# 16 MB file buffers
+BUFFER_SIZE = 1024 * 1024 * 16
+
+# Stop when less than this amount of free space remains.
+# 5 GB = 5 * 1024^3
+MIN_FREE_SPACE = 5 * 1024 * 1024 * 1024
+
+# How often to check disk space.
+DISK_CHECK_INTERVAL = 2.0
 
 
 # ============================================================
@@ -62,6 +73,7 @@ def format_number(n):
 
 def format_bytes(n):
     units = ("B", "KB", "MB", "GB", "TB")
+
     value = float(n)
 
     for unit in units:
@@ -69,6 +81,8 @@ def format_bytes(n):
             return f"{value:.2f} {unit}"
 
         value /= 1024
+
+    return f"{value:.2f} TB"
 
 
 def format_time(seconds):
@@ -88,12 +102,28 @@ def format_time(seconds):
 def same_file(path1, path2):
     try:
         return os.path.samefile(path1, path2)
+
     except (FileNotFoundError, OSError):
         return os.path.abspath(path1) == os.path.abspath(path2)
 
 
+def get_free_space(path):
+    """
+    Return free space in bytes on the filesystem containing path.
+    """
+    return shutil.disk_usage(path).free
+
+
+def clear_terminal_line():
+    """
+    Move to the beginning of the current terminal line and
+    clear the entire line.
+    """
+    print("\r\033[K", end="")
+
+
 # ============================================================
-# COUNT LINES
+# COUNT INPUT LINES
 # ============================================================
 
 def count_lines(path):
@@ -135,7 +165,8 @@ def count_lines(path):
                 )
 
                 print(
-                    f"\rCounting: {percent:6.2f}% | "
+                    f"\r\033[K"
+                    f"Counting: {percent:6.2f}% | "
                     f"{format_bytes(processed_bytes)} / "
                     f"{format_bytes(size)} | "
                     f"{format_number(total)} lines",
@@ -145,7 +176,7 @@ def count_lines(path):
 
                 last_display = now
 
-    # Account for a final line without a newline.
+    # Handle a final line without a newline.
     if size > 0:
 
         with open(path, "rb") as f:
@@ -157,7 +188,7 @@ def count_lines(path):
 
     elapsed = time.monotonic() - start
 
-    print()
+    clear_terminal_line()
 
     print(
         f"Total input lines: {format_number(total)} "
@@ -168,7 +199,49 @@ def count_lines(path):
 
 
 # ============================================================
-# MAIN PROCESSING
+# STATUS DISPLAY
+# ============================================================
+
+def display_status(
+    processed_lines,
+    total_lines,
+    generated_words,
+    current_word,
+    free_space,
+    start_time
+):
+
+    elapsed = time.monotonic() - start_time
+
+    if elapsed > 0:
+        speed = processed_lines / elapsed
+    else:
+        speed = 0
+
+    if total_lines:
+        percent = processed_lines / total_lines * 100
+    else:
+        percent = 100
+
+    status = (
+        f"Progress: {percent:6.2f}% | "
+        f"Lines: {format_number(processed_lines)} / "
+        f"{format_number(total_lines)} | "
+        f"Generated: {format_number(generated_words)} | "
+        f"Speed: {format_number(int(speed))} lines/s | "
+        f"Free: {format_bytes(free_space)} | "
+        f"Current: {current_word}"
+    )
+
+    print(
+        "\r\033[K" + status,
+        end="",
+        flush=True
+    )
+
+
+# ============================================================
+# PROCESSING
 # ============================================================
 
 def process(input_path, output_path, total_lines):
@@ -181,170 +254,332 @@ def process(input_path, output_path, total_lines):
 
     start_time = time.monotonic()
     last_display = start_time
+    last_disk_check = start_time
 
     current_word = ""
+
+    # Track whether we successfully reached the end.
+    completed = False
 
     print()
     print("Second pass: generating word list...")
     print(f"Prefixes: {len(PREFIXES)}")
     print(f"Input:    {input_path}")
     print(f"Output:   {output_path}")
+    print(f"Safety margin: {format_bytes(MIN_FREE_SPACE)}")
     print()
 
-    with open(
-        input_path,
-        "r",
-        encoding="utf-8",
-        errors="replace",
-        buffering=BUFFER_SIZE
-    ) as inp, open(
-        output_path,
-        "w",
-        encoding="utf-8",
-        buffering=BUFFER_SIZE
-    ) as out:
+    output_file = None
 
-        for line in inp:
+    try:
 
-            word = line.rstrip("\r\n")
+        with open(
+            input_path,
+            "r",
+            encoding="utf-8",
+            errors="replace",
+            buffering=BUFFER_SIZE
+        ) as inp, open(
+            output_path,
+            "w",
+            encoding="utf-8",
+            buffering=BUFFER_SIZE
+        ) as out:
 
-            processed_lines += 1
-            original_words += 1
+            output_file = out
 
-            # Preserve original word.
-            out.write(word)
-            out.write("\n")
+            for line in inp:
 
-            # Generate prefixed forms.
-            if word and word[0] in VOWELS:
+                word = line.rstrip("\r\n")
 
-                for prefix in PREFIXES:
+                processed_lines += 1
+                original_words += 1
 
-                    generated = prefix + word
+                # ------------------------------------------------
+                # Check disk space periodically.
+                # ------------------------------------------------
 
-                    out.write(generated)
+                now = time.monotonic()
+
+                if now - last_disk_check >= DISK_CHECK_INTERVAL:
+
+                    free_space = get_free_space(output_path)
+
+                    if free_space <= MIN_FREE_SPACE:
+
+                        # Flush anything currently held in Python's
+                        # output buffer before stopping.
+                        try:
+                            out.flush()
+                        except OSError:
+                            pass
+
+                        clear_terminal_line()
+
+                        print(
+                            "ERROR: Output storage is almost full."
+                        )
+
+                        print(
+                            f"Free space remaining: "
+                            f"{format_bytes(free_space)}"
+                        )
+
+                        print(
+                            f"Safety threshold: "
+                            f"{format_bytes(MIN_FREE_SPACE)}"
+                        )
+
+                        print(
+                            "Stopping safely before the drive "
+                            "becomes completely full."
+                        )
+
+                        return (
+                            False,
+                            processed_lines,
+                            original_words,
+                            generated_words
+                        )
+
+                    last_disk_check = now
+
+                # ------------------------------------------------
+                # Preserve original word.
+                # ------------------------------------------------
+
+                try:
+
+                    out.write(word)
                     out.write("\n")
 
-                    generated_words += 1
+                except OSError as e:
 
-                    # Update terminal immediately for the current word.
-                    now = time.monotonic()
+                    if getattr(e, "errno", None) == 28:
 
-                    if now - last_display >= 0.05:
+                        try:
+                            out.flush()
+                        except OSError:
+                            pass
 
-                        elapsed = now - start_time
+                        clear_terminal_line()
 
-                        if elapsed > 0:
-                            speed = (
-                                processed_lines / elapsed
-                            )
-                        else:
-                            speed = 0
-
-                        percent = (
-                            processed_lines / total_lines * 100
-                            if total_lines
-                            else 100
-                        )
-
-                        status = (
-                            f"Progress: {percent:6.2f}% | "
-                            f"Lines: "
-                            f"{format_number(processed_lines)} / "
-                            f"{format_number(total_lines)} | "
-                            f"Generated: "
-                            f"{format_number(generated_words)} | "
-                            f"Speed: "
-                            f"{format_number(int(speed))} lines/s | "
-                            f"Current: {generated}"
-                        )
-
-                        # \r returns to the beginning of the same line.
-                        # \033[K clears anything remaining from the
-                        # previous, longer status line.
                         print(
-                            "\r\033[K" + status,
-                            end="",
-                            flush=True
+                            "ERROR: Output storage is full."
                         )
 
-                        last_display = now
+                        return (
+                            False,
+                            processed_lines,
+                            original_words,
+                            generated_words
+                        )
 
-            # Update status for non-vowel words too.
-            now = time.monotonic()
+                    raise
 
-            if now - last_display >= 0.05:
+                # ------------------------------------------------
+                # Generate prefixed forms.
+                # ------------------------------------------------
 
-                elapsed = now - start_time
+                if word and word[0] in VOWELS:
 
-                if elapsed > 0:
-                    speed = (
-                        processed_lines / elapsed
-                    )
+                    for prefix in PREFIXES:
+
+                        generated = prefix + word
+
+                        try:
+
+                            out.write(generated)
+                            out.write("\n")
+
+                        except OSError as e:
+
+                            if getattr(e, "errno", None) == 28:
+
+                                try:
+                                    out.flush()
+                                except OSError:
+                                    pass
+
+                                clear_terminal_line()
+
+                                print(
+                                    "ERROR: Output storage is full."
+                                )
+
+                                return (
+                                    False,
+                                    processed_lines,
+                                    original_words,
+                                    generated_words
+                                )
+
+                            raise
+
+                        generated_words += 1
+
+                        current_word = generated
+
+                        # Update display frequently, but not for
+                        # every single generated word.
+                        now = time.monotonic()
+
+                        if now - last_display >= 0.05:
+
+                            free_space = get_free_space(
+                                output_path
+                            )
+
+                            display_status(
+                                processed_lines,
+                                total_lines,
+                                generated_words,
+                                current_word,
+                                free_space,
+                                start_time
+                            )
+
+                            last_display = now
+
                 else:
-                    speed = 0
 
-                percent = (
-                    processed_lines / total_lines * 100
-                    if total_lines
-                    else 100
-                )
+                    current_word = word
 
-                status = (
-                    f"Progress: {percent:6.2f}% | "
-                    f"Lines: "
-                    f"{format_number(processed_lines)} / "
-                    f"{format_number(total_lines)} | "
-                    f"Generated: "
-                    f"{format_number(generated_words)} | "
-                    f"Speed: "
-                    f"{format_number(int(speed))} lines/s | "
-                    f"Current: {word}"
-                )
+                # ------------------------------------------------
+                # Regular status update.
+                # ------------------------------------------------
 
-                print(
-                    "\r\033[K" + status,
-                    end="",
-                    flush=True
-                )
+                now = time.monotonic()
 
-                last_display = now
+                if now - last_display >= 0.05:
+
+                    free_space = get_free_space(
+                        output_path
+                    )
+
+                    display_status(
+                        processed_lines,
+                        total_lines,
+                        generated_words,
+                        current_word,
+                        free_space,
+                        start_time
+                    )
+
+                    last_display = now
+
+            # Flush the remaining output buffer.
+            out.flush()
+
+            completed = True
+
+    except OSError as e:
+
+        clear_terminal_line()
+
+        if getattr(e, "errno", None) == 28:
+
+            print(
+                "ERROR: Output storage is full."
+            )
+
+        else:
+
+            print(
+                f"ERROR: File operation failed:\n{e}"
+            )
+
+        return (
+            False,
+            processed_lines,
+            original_words,
+            generated_words
+        )
+
+    finally:
+
+        # Nothing else needed here; the with-statement closes files.
+        pass
+
+    # ============================================================
+    # FINAL REPORT
+    # ============================================================
 
     elapsed = time.monotonic() - start_time
 
-    # Move to a new line after the in-place progress display.
-    print()
+    clear_terminal_line()
 
     print()
-    print("Finished.")
-    print("-" * 60)
+
+    if completed:
+
+        print("Finished successfully.")
+
+    else:
+
+        print("Processing stopped.")
+
+    print("-" * 70)
+
     print(
         f"Original words:  "
         f"{format_number(original_words)}"
     )
+
     print(
         f"Generated words: "
         f"{format_number(generated_words)}"
     )
+
     print(
         f"Total output:    "
         f"{format_number(original_words + generated_words)}"
     )
+
     print(
         f"Input size:      "
         f"{format_bytes(input_size)}"
     )
-    print(
-        f"Output size:     "
-        f"{format_bytes(os.path.getsize(output_path))}"
-    )
+
+    # The output file should exist even if processing stopped.
+    if os.path.exists(output_path):
+
+        output_size = os.path.getsize(output_path)
+
+        print(
+            f"Output written:  "
+            f"{format_bytes(output_size)}"
+        )
+
+        free_space = get_free_space(output_path)
+
+        print(
+            f"Free space:      "
+            f"{format_bytes(free_space)}"
+        )
+
     print(
         f"Time:            "
         f"{format_time(elapsed)}"
     )
+
     print(
         f"Output:          "
         f"{output_path}"
+    )
+
+    if not completed:
+
+        print()
+        print(
+            "The partial output file has been preserved."
+        )
+
+    return (
+        completed,
+        processed_lines,
+        original_words,
+        generated_words
     )
 
 
@@ -392,11 +627,18 @@ def main():
 
     total_lines = count_lines(input_path)
 
-    process(
+    result = process(
         input_path,
         output_path,
         total_lines
     )
+
+    completed = result[0]
+
+    if completed:
+        sys.exit(0)
+    else:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
