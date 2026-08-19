@@ -24,7 +24,7 @@
 # It makes flag assignment easy.
 # It also has corrections for some verbs that were incorrectly typed in the dictionary.
 # So, it's better to use this file to assign flags to verbs in the dictionary instead of using the dictionary itself.
-#
+# !!!!! There is script that can convert this file into the actual dictionary file.
 #
 agazi/CENAAd
 akaayo/N6CE
