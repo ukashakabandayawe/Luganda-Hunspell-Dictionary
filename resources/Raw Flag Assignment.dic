@@ -1,4 +1,4 @@
-21744
+22901
 #
 # Copyright (C) 2025 Ukasha Kabanda Yawe
 #
@@ -26,6 +26,7 @@
 # So, it's better to use this file to assign flags to verbs in the dictionary instead of using the dictionary itself.
 # !!!!! There is script that can convert this file into the actual dictionary file.
 #
+Allah
 agazi/CENAAd
 akaayo/N6CE
 akabaani/N6CEzz
@@ -1814,7 +1815,43 @@ zibu/CENAAd
 zibula
 zipu
 zito/CENAAd
-#
+omulangira
+omulezi
+jjuvu/CENAAd
+ennyo
+ekyengera
+# ---------------------------------------------- okulung'amya(to guide): Type-ITransitive ------------------------------------------ #
+lung'amya
+# -------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------------- okusinza(to worship): Type-ITransitive ------------------------------------------ #
+sinza
+# -------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------------- okulera Type-ITransitive --------------------------------------------------- #
+lera/OriginalType-ITransitive
+lere/ModifiedType-ITransitive
+leze/PastType-ITransitive
+lezesa/CausativeTransitive
+lezese/ModifiedCausativeTransitive
+lezesessa/PastCausativeTransitive
+lerwa/PassiveTransitive
+lerwe/ModifiedPassiveTransitive
+lereddwa/PastPassiveTransitive
+lerebwa/PassiveTransitive
+lerebwe/ModifiedPassiveTransitive
+lerera/BenefactiveTransitive
+lerere/ModifiedBenefactiveTransitive
+leredde/PastBenefactiveTransitive
+# --------------------------------------------------------------------------------------------------------------------------- #
+# ---------------------------------------------- okubuna Intransitive ------------------------------------------------------- #
+buna/OriginalIntransitive
+bune/ModifiedIntransitive
+bunye/PastIntransitive
+bunya/CausiveIntransitive
+bunye/ModifiedCausativeIntransitive
+bunisizza/PastCausativeIntransitive
+bunisa/CausativeIntransitive
+bunise/ModifiedCausativeIntransitive
+# -------------------------------------------------------------------------------------------------------------- #
 # --------------------------------------------- 1. Places in Buganda ------------------------------------------ #
 Bbowa
 Buddu
@@ -1873,7 +1910,7 @@ Ssentema
 Ssese
 Ssingo
 Wakiso
-# ------------------------------------------------------------------------------------------------------------- #
+# -------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------- 2. Buganda clans ---------------------------------------------------------- #
 Abalangira 
 Babiito
@@ -16757,9 +16794,9 @@ sunguwadde/PastDeadjective
 sunguwaza/CausativeDeadjective
 sunguwaze/ModifiedCausativeDeadjective
 sunguwazza/PastCausativeDeadjective
-sunguwulira/BenefactiveDeadjective
-sunguwulire/ModifiedBenefactiveDeadjective
-sunguwulidde/PastBenefactiveDeadjective
+sunguwalira/BenefactiveDeadjective
+sunguwalire/ModifiedBenefactiveDeadjective
+sunguwalidde/PastBenefactiveDeadjective
 # --------------------------------------------------------------------------------------------------------- #
 # ---------------------- okusunsula(to pick out (winner of a contest); to sort out): Type-I Transitive  ----------------------- #
 sunsula/OriginalType-ITransitive
@@ -25332,6 +25369,7 @@ lyokka
 gokka
 bwokka
 twokka
+wekka
 # --------------------------------------------------------------------------------------------- #
 # ------------------------------------- possesive determiners(your, his or her, their) --------------------------------------- #
 wo/pd
