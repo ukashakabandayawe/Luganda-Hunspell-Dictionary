@@ -372,8 +372,6 @@ For questions or support:
 - **Discussions**: [Join the discussion](https://github.com/ukashakabandayawe/Luganda-Hunspell-Dictionary/discussions)
 
 ## Acknowledgments
-
-- Luganda linguistic community for feedback and contributions
 - Hunspell project for the spell-checking framework
 - LanguageTool community for integration support
 
@@ -383,3 +381,7 @@ For questions or support:
 **Status:** 🔄 Active Development  
 **Language:** Luganda (lg)  
 **Format:** Hunspell
+
+## Sources
+- [Baganda Names](https://africanculture1.blogspot.com/)
+- 
