@@ -25579,7 +25579,7 @@ baalinga/OriginalReflexive
 baalinge/ModifiedReflexive
 baalinze/PastReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
--ebafu
+bafu/OR
 # ---------------------------------------- okwebaga (to gird oneself): Reflexive -----------------------------------------#
 baga/OriginalReflexive
 bage/ModifiedReflexive
@@ -25614,9 +25614,9 @@ bagalire/ModifiedLocativeReflexive
 bagalidde/PastLocativeReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okwebagika (): Reflexive -----------------------------------------#
-bagika
-bagike
-bagise
+bagika/OriginalIntransitiveReflexive
+bagike/ModifiedIntransitiveReflexive
+bagise/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okwebagula (lift oneself): Reflexive -----------------------------------------#
 bagula/OriginalReflexive
@@ -25659,37 +25659,62 @@ bakirizza/PastIntransitiveReflexive
 bale/OR
 # --------------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okwebalababba (to try to avoid): Reflexive -----------------------------------------#
-balababba
+balababba/OriginalIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okwebalama (): Reflexive -----------------------------------------#
-balama
+# ---------------------------------------- okwebalama (to avoid): Reflexive -----------------------------------------#
+balama/OriginalReflexive
+balame/ModifiedReflexive
+balamye/PastReflexive
+balamya/CausativeReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okwebalamya (): Reflexive -----------------------------------------#
-balamya
+# ---------------------------------------- okwebalangula (to sharpen; speak with force): Intransitive, Reflexive -----------------------------------------#
+balangula/OriginalIntransitiveReflexive
+balangule/ModifiedIntransitiveReflexive
+balangudde/PastIntransitiveReflexive
+balangulwa/PassiveReflexive
+balangulwe/ModifiedPassiveReflexive
+balanguddwa/PastPassiveReflexive
+balanguza/CausativeReflexive
+balanguze/ModifiedCausativeReflexive
+balanguzza/PastCausativeReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okwebalangula (): Reflexive -----------------------------------------#
-balangula
+# ---------------------------------------- okwebalankanya (to act evasively): Intrasitive, Reflexive -----------------------------------------#
+balankanya/OriginalIntransitiveReflexive
+balankanye/ModifiedIntransitiveReflexive
+balankanyizza/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okwebalankanya (): Reflexive -----------------------------------------#
-balankanya
-# --------------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okwebaliza (to re fl): Transitive -----------------------------------------#
-baliza
+# ---------------------------------------- okwebaliza (to re fl): Reflexive -----------------------------------------#
+baliza/BenefactiveReflexive
+balize/ModifiedBenefactiveReflexive
+balizza/PastBenefactiveReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okwebamba (to extend one self): Intransitive, Reflexive -----------------------------------------#
-bamba
+bamba/OriginalIntransitiveReflexive
+bambe/ModifiedIntransitiveReflexive
+bambizza/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okwebandula (): Reflexive -----------------------------------------#
-bandula
+# ---------------------------------------- okwebandula (to make off): Intransitive, Reflexive -----------------------------------------#
+bandula/OriginalIntransitiveReflexive
+bandule/ModifiedIntransitiveReflexive
+bandudde/PastIntransitiveReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
-# ---------------------------------------- okwebangira (): Reflexive -----------------------------------------#
-bangira
+# ---------------------------------------- okwebangira (to start for oneself): Reflexive -----------------------------------------#
+bangira/OriginalReflexive
+bangire/ModifiedReflexive
+bangidde/PastReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okwebangula (to sharpen -e oneself, train oneself, improve oneself): Intransitive, Reflexive -----------------------------------------#
-bangula
+bangula/OriginalIntransitiveReflexive
+bangule/ModifiedIntransitiveReflexive
+bangudde/PastIntransitiveReflexive
+bangulira/BenefactiveReflexive
+bangulire/ModifiedBenefactiveReflexive
+bangulidde/PastBenefactiveReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okwebasa (to e to sleep, put to sleep): Transitive, Reflexive -----------------------------------------#
-basa
+basa/CausativeReflexive
+base/ModifiedCausativeReflexive
+basizza/PastCausativeReflexive
 # --------------------------------------------------------------------------------------------------------------------- #
 # ---------------------------------------- okwebba (to slip away, steal away, sneak off): Reflexive -----------------------------------------#
 bba
